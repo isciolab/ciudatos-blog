@@ -1,0 +1,164 @@
+extends ../layouts/base
+
+
+block content
+
+	ul#lang
+		li: a(href='/en')
+			small EN
+		li: a(href='/es')
+			small ES
+
+	div#index-banner
+		div.section.no-pad-bot.no-pad-top
+			div.parallax-container
+				br
+				br
+				div.container.center.rm-black-text
+					h2.intro-message.italic #{__('home.heroTitle1')}
+					h2.intro-message.titleCase #{__('home.heroTitle2')}
+				div.row.center
+					//- h5.header.col.s12.light A modern responsive front-end framework based on Material Design
+				br
+				div.parallax
+					img.parallax-img(src="img/intro-bg.jpg")
+
+	
+	// SERVICES
+	div.row.container
+		div.center
+			br
+			h2.titleCase #{__('home.services.title')}
+			br
+		div.row
+			div.col.m4.s12.center
+				.card.z-depth-0
+					.card-img.circle.rm-blue.center.circle-icon
+						img(src="img/1-data.png").circle-icon-img    
+					.card-content.rm-ligh-black-text
+						h5.title #{__('home.services.data.title')}
+						ul
+							li.italic #{__('home.services.data.bullet1')}
+							li.italic #{__('home.services.data.bullet2')} 
+							li.italic #{__('home.services.data.bullet3')}
+			div.col.m4.s12.center
+				.card.z-depth-0
+					.card-img.circle.rm-blue.center.circle-icon
+						img(src="img/2-viz.png").circle-icon-img    
+					.card-content.rm-ligh-black-text
+						h5.title #{__('home.services.viz.title')}
+						ul
+							li.italic #{__('home.services.viz.bullet1')}
+							li.italic #{__('home.services.viz.bullet2')} 
+							li.italic #{__('home.services.viz.bullet3')}          
+			div.col.m4.s12.center
+				.card.z-depth-0
+					.card-img.circle.rm-blue.center.circle-icon
+						img(src="img/3-analysis.png").circle-icon-img    
+					.card-content.rm-ligh-black-text
+						h5.title #{__('home.services.analysis.title')}
+						ul
+							li.italic #{__('home.services.analysis.bullet1')}
+							li.italic #{__('home.services.analysis.bullet2')} 
+							li.italic #{__('home.services.analysis.bullet3')}           
+
+	// PORTFOLIO
+
+	div.row.rm-light-grey
+		div.center
+			br
+			h2.titleCase #{__('home.portfolio.title')}
+			br
+		.container
+			.row
+				.col.s12.m6
+					.card.rm-yellow.z-depth-0
+						.card-content.rm-light-black-text
+							p.card-title #{__('home.portfolio.box1.title')}
+							p.card-italic #{__('home.portfolio.box1.description')}
+						//- .card-action
+							a(href="#") This is a link
+							a(href="#") This is a link
+				.col.s12.m6
+					.card.rm-yellow.z-depth-0
+						.card-ribbon.pull-right
+							//- p #{__('common.comingSoon')}
+						.card-content.rm-light-black-text
+							p.card-title #{__('home.portfolio.box2.title')}
+							p.card-italic #{__('home.portfolio.box2.description')}
+						//- .card-action
+							a(href="#") This is a link
+							a(href="#") This is a link
+			//- .row
+				.col.s12.m6
+					.card.rm-yellow
+						.card-ribbon.pull-right
+							//- p #{__('common.comingSoon')}
+						.card-content.rm-light-black-text
+							span.card-title #{__('home.portfolio.box3.title')}
+							p #{__('home.portfolio.box3.description')}
+						//- .card-action
+							a(href="#") This is a link
+							a(href="#") This is a link
+				.col.s12.m6
+					.card.rm-yellow
+						.card-ribbon.pull-right
+							//- p #{__('common.comingSoon')}
+						.card-content.rm-light-black-text
+							span.card-title #{__('home.portfolio.box4.title')}
+							p #{__('home.portfolio.box4.description')}
+						//- .card-action
+							a(href="#") This is a link
+							a(href="#") This is a link
+
+	   
+	// WHO IS USING
+	div.row
+		div.center
+			br
+			h2.titleCase #{__('home.using.title')}
+			br
+		div.row.container
+			div.col.m4.center
+				img(src="http://res.cloudinary.com/randommonkey/image/upload/v1466709855/randommonkey/home/using-macrowise.png",width="180px").circle.img-border
+			div.col.m4.center
+				img(src="http://res.cloudinary.com/randommonkey/image/upload/v1466709855/randommonkey/home/using-datasketch.png",width="180px").circle.img-border
+			div.col.m4.center
+				img(src="http://res.cloudinary.com/randommonkey/image/upload/v1466709855/randommonkey/home/using-lasillavacia.png",width="180px").circle.img-border
+
+
+	// CONTACT
+	div.row#contact.scrollspy
+		div.section.no-pad-bot.no-pad-top
+			div.parallax-container
+				div.center
+					br
+					h2.titleCase.title-white.white-text #{__('home.contactUs.title')} 
+					br
+				.container
+					div
+						div.col.m12(style="min-height:800px")
+							iframe(height="800",allowTransparency="true",frameborder="0",scrolling="no",style="width:100%;border:none",src="https://randommonkey.wufoo.com/embed/zkkx0rh1cjjj43/def/field5=#{language}")				
+				//- div.parallax
+					img.parallax-img(src="img/contact-bg.jpg")
+
+
+	script.
+		//- http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/
+		$('a[href^="#"]').on('click', function(event) {
+		    var target = $( $(this).attr('href') );
+		    if( target.length ) {
+		        event.preventDefault();
+		        $('html, body').animate({
+		            scrollTop: target.offset().top-30
+		        }, 1000);
+		    }
+		});
+
+
+
+
+
+
+
+

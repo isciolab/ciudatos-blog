@@ -1,0 +1,49 @@
+extends ../layouts/default
+
+
+mixin documentcard(document)
+	div.card.col-md-4.col-sm-4
+		.panel.panel-default
+			.panel-heading.clearfix
+				if document.image.exists
+					img(src=document._.image.fit(350,250)).img-responsive
+				//- .card-block
+			.panel-body
+				h4.panel-title #{document.title}
+				//- p= file
+				a(href="#{document.file.url}").btn.btn-default.btn-xs PDF
+			//- .list-group
+				each d in document.documents
+					.list-group-item 
+						.list-group-item-heading #{d.name}
+							.btn-toolbar
+								each file in d.files
+									a(href="#{file.url}").btn.btn-default.btn-xs #{file.format}
+			//- .document(data-ks-editable=editable(user, { list: 'Post', id: document.id }))
+			//- h4.card-title: a(href='/'+document.lang+'/blog/document/' + document.slug).documentTitle= document.title
+			//- div.documentBrief.truncate120
+			//- p!= document.content.brief
+
+block content
+
+	.container
+		.row.home-section
+			h1.text-center Informes
+		.row.home-section
+			each document,i in data.documents
+					+documentcard(document)
+			//- .row-eq-height						
+			//- 	each document,i in data.documents.slice(0, 4)
+			//- 		+documentcard(document)
+			//- .row-eq-height						
+			//- 	each document,i in data.documents.slice(4, 8)
+			//- 		+documentcard(document)
+			//- .row-eq-height						
+			//- 	each document,i in data.documents.slice(8, 12)
+			//- 		+documentcard(document)
+			//- .row-eq-height						
+			//- 	each document,i in data.documents.slice(12, 16)
+			//- 		+documentcard(document)
+				//- if i % 4 == 0
+
+

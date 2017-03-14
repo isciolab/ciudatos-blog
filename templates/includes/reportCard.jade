@@ -1,0 +1,10 @@
+div.col-sm-6.hero-feature
+	div.thumbnail
+		if report.image.exists
+			img(src=report._.image.fit(300,200)).img-responsive
+		div.caption
+			h3 
+				a(href='/report/' + report.slug)= report.title
+			p= report._.publishedDate.format('YYYY-MM-DD')
+
+

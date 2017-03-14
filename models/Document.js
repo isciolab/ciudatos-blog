@@ -1,0 +1,32 @@
+var keystone = require('keystone');
+var Types = keystone.Field.Types;
+
+/**
+ * Document Model
+ * ==========
+ */
+
+var Document = new keystone.List('Document', {
+	map: { name: 'title' },
+	autokey: { path: 'slug', from: 'title', unique: true },
+});
+
+Document.add({
+	title: { type: String, required: true },
+	state: { type: Types.Select, options: 'draft, published, archived', 
+			 default: 'draft', index: true },
+	externalAuthor: {type: String},
+	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
+	image: { type: Types.CloudinaryImage, folder: 'ciudatos/documents'},
+	content: {
+		brief: { type: Types.Html, wysiwyg: true, height: 150 }
+	},
+	file: { type: Types.S3File, s3path: 'documents',	
+		filename: function(item, filename, originalname){
+			return item._id + '-' + originalname;
+		}}
+});
+
+
+Document.defaultColumns = 'title,state|20%, author|20%, publishedDate|20%';
+Document.register();

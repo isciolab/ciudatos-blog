@@ -1,0 +1,32 @@
+extends ../layouts/default
+
+
+mixin info(page)
+	if(page == "jobs")
+		include pages/jobs
+	//- if(page == "tools")
+		include pages/tools
+	//- if(page == "services")
+		include pages/services
+	//- if(page == "external-resources")
+		include pages/external-resources
+
+
+	
+block content
+	.container
+		ul#lang
+			li: a(href='/en/info/#{data.page.key}')
+				small EN
+			li: a(href='/es/info/#{data.page.key}')
+				small ES
+		if language == "en"
+			h1.title #{data.page.labelEn}
+			p !{data.page.contentEn}
+		if language == "es"
+			h1.title #{data.page.labelEs}
+			p !{data.page.contentEs}
+		if data.page.customTemplate
+			+info(page)
+			
+

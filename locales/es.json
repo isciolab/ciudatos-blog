@@ -1,0 +1,153 @@
+{
+	"nav": {
+		"about": {
+			"title": "Sobre",
+			"link": "sobre"
+		},
+		"practice": {
+			"title": "Áreas de Práctica",
+			"link": "practica"
+		}
+	},
+	"info": {
+		"about": {
+			"history": {
+				"title": "Nuestra Historia",
+				"text": "En el año 2009, fundamos en Bogotá una Firma comprometida de forma estable en afianzar las relaciones económicas entre Italia y Colombia. A lo largo de los años, hemos representado a más de 100 entre empresas y personas naturales domiciliadas en diferentes jurisdicciones. Hoy, la Firma es reconocida por la comunidad local y el Sistema Italia como un jugador importante y bien identificado en el mercado. La Firma tiene sede en Colombia, en el norte de Bogotá y en Italia, en la ciudad de Bologna."
+			},
+			"thoughts": {
+				"title": "Lo que Pensamos",
+				"text": "Hemos concebido ideas sencillas, y hemos tenido el coraje y la constancia de realizarlas. Pensamos que no se puede acompañar eficazmente un proceso de internacionalización sin conocer con detalle el País donde el empresario quiere invertir. Por eso, hemos recorrido casi el continente entero, desde México hasta Chile, y representamos clientes de muchas nacionalidades. Pensamos que las relaciones personales entre los miembros de la Firma y entre ellos y los Clientes son la clave del éxito. Por eso, cuando nos llamarán, nuestros asistentes se presentarán por su nombre. Pensamos que el mercado sea nuestro mejor aliado. Por eso, hemos desarrollado y atacado nichos de mercado en los cuales la competencia es muy a menudo ausente."
+			},
+            "identity": {
+                "title": "Nuestra Identidad",
+                "text1": "El propósito de nuestra labor es aportar a nuestros Clientes claridad, seguridad y eficiencia con énfasis en la excelencia y personalización en cada asesoría, optimizando así el tiempo. Así mismo manejamos la mejor tecnología y normalizamos los procesos para que usted de forma ágil obtenga un propuesta económica y de sus intereses.",
+                "text2": "El derecho define nuestras labores, la cultura nuestra existencia, impulsándonos a fomentar y desarrollar un mejor trabajo para todos nuestros clientes. Ofrecemos una comunicación directa en diferentes idiomas: español, inglés y francés, con el objetivo de que el lenguaje no represente un obstáculo. De esta manera a lo lardo de los años hemos representado numerosos clientes en diferentes países con magníficos resultados, dándonos el reconocimiento en diferentes ámbitos del mercado como contratación estatal, derecho de la empresa extranjera, la ciudadanía italiana, entre otros.",
+                "text3": "Contamos con un espacio de trabajo moderno, vanguardista y no convencional que proyecta nuestra identidad y brinda a nuestros clientes la confianza y tranquilidad a la hora de trabajar con nosotros. La determinación nos hace un gran aliado.",
+                "text": "info.about.identity.text"
+            },
+            "place": {
+                "title": "Nuestro Lugar en el Mercado",
+                "text1": "La firma está diseñada para adaptarse a las exigencias del mercado, en un contexto altamente competitivo y globalizado",
+                "text2": "Representa una opción ideal para el invesrionista extranjero de cualquier nacionalidad que quiera ingresar al mercado o consolidarse en él. Con un departamento de contratación estatal de absoluta excelencia, la Firma es además un partner natural para la empresa que realice negocios con el Estado. La flexibilidad operacional y el alcance internacional han permitido a la Firma encontrar soluciones innovadoras a situaciones complejas. Hemos asisitido a alas empresas para participar en procesos de licitación o brindar apoyo en el seguiemiento contractual de una concesión, formalizar una relación de distribución con un partner extranjero o estudiar la mejor forma jurídica de ingresar al mercado.",
+                "text3": "En cuanto a las personas naturales, hemos llevado a cabo procesos de sucesión internacional, adquisición de inmuebles en otras jurisdicciones y reconocimiento de sentencias extranjeras. Un ejemplo de excelencia es el reconocimiento judicial de la ciudadanía italiana, para lo cual la Firma ha desarrollado unos productos específicos soportados por una marca registrada, que la convirtió en el leader de ese mercado. En cualquier procedimiento diseñamos la solució nque aporte valor al Cliente.",
+                "text": "info.about.place.text"
+            }
+		},
+		"practice": {
+            "assistance": {
+                "title": "Asistencia al empresario",
+                "text": "La Firma elaboró una serie de servicios especializados a favor de los inversionistas extranjeros que pretendan desarrollar business en Colombia. Los mismos permiten al empresario de concentrar su actividad en el desarrollo de su negocio, reduciendo los costos y riesgos operacionales de la gestión administrativa de la empresa. Los que se refieren a continuación son algunos de los servicios que hemos prestado a empresas de diferentes nacionalidades: | Gestión administrativa | Gestión contable y tributaria | Domiciliación | Planificación fiscal | Ingeniería de proyecto Experiencia: Grupo PROCESSOR",
+                "img_link": "areas-1-es.jpg"
+            },
+            "internationalization": {
+                "title": "Internacionalizacion",
+                "text": "Nuestra misión consiste en acompañar el empresario en un proceso formal y duradero de internacionalización. En este sentido, brindamos especial atención a la minimización de los riesgos y podemos prestar nuestra asesoría en cuatro idiomas: italiano, español, inglés y francés. Nos interesamos de empresas comerciales, y sobre todo de empresas de los diferentes sectores de la industria. Estamos convencidos de la importancia de la manufactura con valor añadido. En todas las actividades a continuación tenemos una significativa y directa experiencia profesional: | Búsqueda partner local | Estudios comerciales de sociedades locales | Estudios de mercado y perfiles sectoriales | Financiación | Derecho del comercio internacional Experiencia: TEKNE Srl",
+                "img_link": "areas-2-es.jpg"
+            },
+            "law": {
+                "title": "Derecho de la Empresa",
+                "text": "Tenemos la capacidad de ofrecer a la empresa un servicio integral, que cobija todas las necesidades ligadas al giro ordinario de una sociedad. Asistimos nuestros clientes directamente también en las eventuales fases contenciosas. Hemos asistido clientes nacionales e internacionales en las siguientes áreas: | Derecho societario | Propiedad industrial e intelectual | Derecho laboral | Derecho tributario y fiscal | Contratos nacionales e internacionales | Contencioso Experiencia: SINTOFARM Spa",
+                "img_link": "areas-3-es.jpg"
+            },
+            "government": {
+                "title": "Derecho administrativo y contratacion con el estado",
+                "text": "Nuestro propósito es poner al servicio de nuestros clientes toda la experiencia y conocimiento que hemos adquirido en el seguimiento, control y vigilancia de los contratos de infraestructura vial de derecho administrativo y otros con regímenes especiales. Para ello ofrecemos una asesoría integral en todos los temas jurídicos que se desprenden de la naturaleza de dichos contratos, que permitan garantizar su idónea y oportuna ejecución. Nuestra práctica se extiende también a la gestión predial. En particular, nuestros profesionales tienen larga experiencia en la negociación con los propietarios y la elaboración de los documentos jurídicos necesarios, tales como estudio de títulos, diagnósticos jurídicos, ofertas formales, elaboración y actuación judicial en los procesos de expropiación. Además, en los contratos en los que actuamos como interventores, adelantamos los procesos y actividades enfocadas en el control y vigilancia jurídica de la gestión que adelanta el Concesionario para la adquisición de las áreas requeridas en los proyectos  mediante la vigilancia del cumplimiento normativo y contractual en la materia y control de la gestión predial. La asesoría integral se conforma de los siguientes servicios: | Asesoría jurídica en el marco de los contratos objeto de vigilancia | Cumplimiento de los aspectos regulatorios y contractuales | Revisar, analizar y conceptuar acerca de los requerimientos de las Entidades | Asistencia a las audiencias | Adquisición predial | Seguimiento a la Gestión Predial Experiencia: INTEGRAL Ingenieros Consultores",
+                "img_link": "areas-4-es.jpg"
+            },
+            "citizenship": {
+                "title": "Ciudadanía Italiana",
+                "text": "La firma ha contribuido de forma significativa al reconocimiento de los derechos de los descendientes de ciudadanos italianos emigrados hacia el continente americano y el mundo entero. En ocaciones, para obtener el reconocimiento de la ciudadanía italiana, es necesario acudir a un tribunal italiano. Es el caso, por ejemplo, de la ascendencia materna (tatarabuela, abuela o madre) o de la filiación legítima, entre otros. En esta temática especial la Firma ostenta una posición de preeminiencia en el mercado. La firma ofrece los siguientes servicios: | Análisis del árbol genealógico | Concepcualización sobre la normativa italiana en materia de ciudadanía | Apoyo en la reconstrucción de los documentos necesarios | Acción judicial en Italia",
+                "img_link": "areas-5-es.jpg"
+            },
+            "international_law": {
+                "title": "Derecho Internacional Privado",
+                "text": "Asistimos a los clientes de varias nacionalidades en la solución de situaciones que involucran a más de una jurisdicción. Gracia a la presencia directa de nuestros asociados en Roma y Mián la Firma es especializada en toda cuestión que gire alrededor de Italia. Sin embargo, la red de relaciones profesionales permite a la Firma actuar en casi todo el territorio latinoamericano y europeo. La Firma ha tenido experincia en diferentes prácticas como: | Derecho de familia | Recaudaciónd de créditos en diferentes jurisdicciones | Sucesiones y herencias | Contencioso internacional | Derecho inmobiliario | Derecho consular",
+                "img_link": "areas-6-es.jpg"
+            }
+        },
+		"cast": {
+			"agostino": {
+				"name": "AGOSTINO SOMMA",
+				"bio": "Es Asistente Administrativo de la Firma. Tras el grado en Ciencias Políticas con la Universidad de Salerno, Italia, emprende un percorso formativo en el ámbito del proyecto Fixo-UE, en el sector de los recursos humanos con Salerno Container Terminal Spa, así como en Unimpresa en el sector de las Business Relationships.",
+				"photo": "cast-agostino-intro.jpg"
+			},
+			"alberto": {
+				"name": "ALBERTO LAMA",
+				"bio": "Es el responsable de la sede de Bologna, Italia. Nacido en Lugo di Romagna (la ciudad natal de uno de los italianos más conocidos en Colombia, Agustin Codazzi), se gradúa en derecho a Bologna. Su camino profesional es riguroso en todas las materias del derecho civil y comercial, con especial énfasis en los aspectos internacionales.",
+				"photo": "cast-alberto-intro.jpg"
+			},
+			"ana": {
+				"name": "ANA PAOLA RAMIREZ VELASQUEZ",
+				"bio": "Es Asistente Senior de la Firma. Tras empezar estudios como diseñadora industrial, se dedicó a la asistencia a 360 grados en organizaciones apicales del sector privado en Colombia, tales como despachos legales y fundaciones. Adquirió experiencia directa en todas las áreas de funcionamiento de la Firma, de la cual es una pieza clave.",
+				"photo": "cast-ana-intro.jpg"
+			},
+			"estefania": {
+				"name": "JOHANA ESTEFANIA FERNÁNDEZ MARTÍNEZ",
+				"bio": "Acompaña los profesionales de la Firma y sus Clientes en las gestiones administrativas diarias.",
+				"photo": "cast-estefania-intro.jpg"
+			},
+			"leopoldo": {
+				"name": "LEOPOLDO APERIO BELLA",
+				"bio": "Fundador de la oficina en Roma desde 1988. Tiene experiencia de más de 30 años en el ejercicio profesional, en diferenten ambitos y con especial enfasis en el derecho civil y administrativo, como consultor y abogado litigante. Tiene facultades legales para ejercer la abogacía ante las Altas Cortes italianas. Habla italiano, inglés y francés.",
+				"photo": "cast-leopoldo-intro.jpg"
+			},
+			"lina": {
+				"name": "LINA MARÍA MUÑOZ VARELA",
+				"bio": "Abogada egresada de la Pontificia Universidad Javeriana, con diplomado en conciliación y maestría en Derecho de los Negocios Internacionales de La Universidad Queen Mary de Londres. Es el leader del equipo de la Firma en asuntos societarios y corporativos. Habla español e inglés.",
+				"photo": "cast-lina-intro.jpg"
+			},
+			"massimiliano": {
+				"name": "MASSIMILIANO Ciudatos",
+				"bio": "Es el fundador y director general de la Firma. Tras el grado en derecho con la mayor calificación ante la Universidad de Bologna, Italia, donde nació, inicia una carrera dedicada al \"verdadero\" derecho internacional: aquel que se ejerce desde el extranjero.",
+				"photo": "cast-massimiliano-intro.jpg"
+			},
+			"mavi": {
+				"name": "MARIA VIRGINIA VELASCO CAMPO",
+				"bio": "É leader dello Studio nella pratica di diritto amministrativo e contrattazione statale. Dopo la laurea in giurisprudenza presso l’Universitá Sergio Arboleda di Bogotá, si interessa da subito del tema delle opere pubbliche. Vanta una specializzazione in diritto internazionale presso l’Universitá di Bologna ed altra in diritto amministrativo e contrattazione statale, conseguita in Colombia.",
+				"photo": "cast-mavi-intro.jpg"
+			}
+		}
+	},
+	"home": {
+		"section1": {
+			"cast": {
+				"title": "Cast",
+				"founder": "Founder",
+				"senior": "Senior Partner"
+			},
+			"thoughts": {
+				"title": "Lo que pensamos",
+				"text": "Hemos concebido ideas sencillas, y hemos tenido el coraje y la constancia de realizarlas."
+			},
+			"ourStory": {
+				"title": "Nuestra historia",
+				"text": "En el año 2009, fundamos en Bogotá una Firma comprometida de forma estable en afianzar las relaciones económicas entre Italia y Colombia."
+			}
+		}
+	},
+	"common": {
+		"to": "a",
+		"of": "de",
+		"by": "por",
+		"comingSoon": "common.comingSoon",
+		"readMore": "Ver más",
+		"category": "categoría",
+		"categories": "Categorías",
+		"allCategories": "Todas las Categorías",
+		"published": "Publicado el",
+		"showing": "Mostrando"
+	},
+	"pages": {
+		"jobs": {
+			"title": "Oportunidades",
+			"content": "Científico de datos junior"
+		}
+	},
+	"post": {
+		"backToBlog": "Volver al blog"
+	},
+	"footer": {
+		"rights": "Todos los Derechos Reservados"
+	}
+}

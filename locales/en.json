@@ -1,0 +1,177 @@
+{
+	"nav": {
+		"about": {
+			"title": "About",
+			"link": "about"
+		},
+		"practice": {
+			"title": "Practice Areas",
+			"link": "practice"
+		}
+	},
+	"info": {
+		"about": {
+			"history": {
+				"title": "Our Story",
+				"text": "En el año 2009, fundamos en Bogotá una Firma comprometida de forma estable en afianzar las relaciones económicas entre Italia y Colombia. A lo largo de los años, hemos representado a más de 100 entre empresas y personas naturales domiciliadas en diferentes jurisdicciones. Hoy, la Firma es reconocida por la comunidad local y el Sistema Italia como un jugador importante y bien identificado en el mercado. La Firma tiene sede en Colombia, en el norte de Bogotá y en Italia, en la ciudad de Bologna."
+			},
+			"thoughts": {
+				"title": "What we think",
+				"text": "Hemos concebido ideas sencillas, y hemos tenido el coraje y la constancia de realizarlas. Pensamos que no se puede acompañar eficazmente un proceso de internacionalización sin conocer con detalle el País donde el empresario quiere invertir. Por eso, hemos recorrido casi el continente entero, desde México hasta Chile, y representamos clientes de muchas nacionalidades. Pensamos que las relaciones personales entre los miembros de la Firma y entre ellos y los Clientes son la clave del éxito. Por eso, cuando nos llamarán, nuestros asistentes se presentarán por su nombre. Pensamos que el mercado sea nuestro mejor aliado. Por eso, hemos desarrollado y atacado nichos de mercado en los cuales la competencia es muy a menudo ausente."
+			},
+			"identity": {
+				"title": "info.about.identity.title",
+				"text1": "info.about.identity.text1",
+				"text2": "info.about.identity.text2",
+				"text3": "info.about.identity.text3"
+			},
+			"place": {
+				"title": "info.about.place.title",
+				"text1": "info.about.place.text1",
+				"text2": "info.about.place.text2",
+				"text3": "info.about.place.text3"
+			}
+		},
+		"practice": {
+			"assistance": {
+				"title": "asistencia al empresario",
+				"text": "La Firma elaboró una serie de servicios especializados a favor de los inversionistas extranjeros que pretendan desarrollar business en Colombia. Los mismos permiten al empresario de concentrar su actividad en el desarrollo de su negocio, reduciendo los costos y riesgos operacionales de la gestión administrativa de la empresa. Los que se refieren a continuación son algunos de los servicios que hemos prestado a empresas de diferentes nacionalidades: | Gestión administrativa | Gestión contable y tributaria | Domiciliación | Planificación fiscal | Ingeniería de proyecto Experiencia: Grupo PROCESSOR",
+				"img-link": "info.practice.assistance.img-link",
+				"img_link": "info.practice.assistance.img_link"
+			},
+			"internationalization": {
+				"title": "internacionalizacion",
+				"text": "Nuestra misión consiste en acompañar el empresario en un proceso formal y duradero de internacionalización. En este sentido, brindamos especial atención a la minimización de los riesgos y podemos prestar nuestra asesoría en cuatro idiomas: italiano, español, inglés y francés. Nos interesamos de empresas comerciales, y sobre todo de empresas de los diferentes sectores de la industria. Estamos convencidos de la importancia de la manufactura con valor añadido. En todas las actividades a continuación tenemos una significativa y directa experiencia profesional: | Búsqueda partner local | Estudios comerciales de sociedades locales | Estudios de mercado y perfiles sectoriales | Financiación | Derecho del comercio internacional Experiencia: TEKNE Srl",
+				"img-link": "info.practice.internationalization.img-link",
+				"img_link": "info.practice.internationalization.img_link"
+			},
+			"law": {
+				"title": "derecho de la empresa",
+				"text": "Tenemos la capacidad de ofrecer a la empresa un servicio integral, que cobija todas las necesidades ligadas al giro ordinario de una sociedad. Asistimos nuestros clientes directamente también en las eventuales fases contenciosas. Hemos asistido clientes nacionales e internacionales en las siguientes áreas: | Derecho societario | Propiedad industrial e intelectual | Derecho laboral | Derecho tributario y fiscal | Contratos nacionales e internacionales | Contencioso Experiencia: SINTOFARM Spa",
+				"img-link": "info.practice.law.img-link",
+				"img_link": "info.practice.law.img_link"
+			},
+			"government": {
+				"title": "derecho administrativo y contratacion con el estado",
+				"text": "Nuestro propósito es poner al servicio de nuestros clientes toda la experiencia y conocimiento que hemos adquirido en el seguimiento, control y vigilancia de los contratos de infraestructura vial de derecho administrativo y otros con regímenes especiales. Para ello ofrecemos una asesoría integral en todos los temas jurídicos que se desprenden de la naturaleza de dichos contratos, que permitan garantizar su idónea y oportuna ejecución. Nuestra práctica se extiende también a la gestión predial. En particular, nuestros profesionales tienen larga experiencia en la negociación con los propietarios y la elaboración de los documentos jurídicos necesarios, tales como estudio de títulos, diagnósticos jurídicos, ofertas formales, elaboración y actuación judicial en los procesos de expropiación. Además, en los contratos en los que actuamos como interventores, adelantamos los procesos y actividades enfocadas en el control y vigilancia jurídica de la gestión que adelanta el Concesionario para la adquisición de las áreas requeridas en los proyectos  mediante la vigilancia del cumplimiento normativo y contractual en la materia y control de la gestión predial. La asesoría integral se conforma de los siguientes servicios: | Asesoría jurídica en el marco de los contratos objeto de vigilancia | Cumplimiento de los aspectos regulatorios y contractuales | Revisar, analizar y conceptuar acerca de los requerimientos de las Entidades | Asistencia a las audiencias | Adquisición predial | Seguimiento a la Gestión Predial Experiencia: INTEGRAL Ingenieros Consultores",
+				"img-link": "info.practice.government.img-link",
+				"img_link": "info.practice.government.img_link"
+			},
+			"eu": {
+				"title": "union europea",
+				"text": "Nuestros asociados han sido pioneros en la enseñanza del derecho comunitario en Colombia. Las experiencias directas en Bruselas juntas a una estrecha red de relaciones profesionales e institucionales, ponen la Firma como uno de los sujetos más calificados del mercado en la materia. La Firma ofrece, entre otros, los siguientes servicios: | Consultoría sobre el derecho de la Unión Europea | Recaudación de créditos en Europa | Doble tributación fiscal | Derecho aduanero europeo | Financiación Experiencia: ICE Oficina Bogotá"
+			},
+			"natural": {
+				"title": "personas naturales",
+				"text": "La Firma asiste clientes de varias nacionalidades en temas de derecho internacional privado, con especial énfasis en las relaciones entre América del Sur e Italia. Una mención especial merece el tema de la ciudadanía italiana, en el cual la Firma ostenta una posición de preeminencia en el mercado:  www.soyitaliano.com. La Firma prestó asistencia entre otras en las siguientes áreas: | Ciudadanía italiana por vía judicial | Derecho de familia | Herencias | Contencioso internacional | Derecho inmobiliario | Derecho consular Experiencia: ANDREA GRIMINELLI"
+			},
+			"citizenship": {
+				"img-link": "info.practice.citizenship.img-link",
+				"img_link": "info.practice.citizenship.img_link"
+			},
+			"international_law": {
+				"img-link": "info.practice.international_law.img-link",
+				"img_link": "info.practice.international_law.img_link"
+			}
+		},
+		"assistance": {
+			"img-link": "info.assistance.img-link"
+		},
+		"internationalization": {
+			"img-link": "info.internationalization.img-link"
+		},
+		"law": {
+			"img-link": "info.law.img-link"
+		},
+		"government": {
+			"img-link": "info.government.img-link"
+		},
+		"citizenship": {
+			"img-link": "info.citizenship.img-link"
+		},
+		"international_law": {
+			"img-link": "info.international_law.img-link"
+		},
+		"cast": {
+			"massimiliano": {
+				"name": "info.cast.massimiliano.name",
+				"photo": "info.cast.massimiliano.photo",
+				"bio": "info.cast.massimiliano.bio"
+			},
+			"mavi": {
+				"name": "info.cast.mavi.name",
+				"photo": "info.cast.mavi.photo",
+				"bio": "info.cast.mavi.bio"
+			},
+			"agostino": {
+				"name": "info.cast.agostino.name",
+				"photo": "info.cast.agostino.photo",
+				"bio": "info.cast.agostino.bio"
+			},
+			"ana": {
+				"name": "info.cast.ana.name",
+				"photo": "info.cast.ana.photo",
+				"bio": "info.cast.ana.bio"
+			},
+			"lina": {
+				"name": "info.cast.lina.name",
+				"photo": "info.cast.lina.photo",
+				"bio": "info.cast.lina.bio"
+			},
+			"leopoldo": {
+				"name": "info.cast.leopoldo.name",
+				"photo": "info.cast.leopoldo.photo",
+				"bio": "info.cast.leopoldo.bio"
+			},
+			"alberto": {
+				"name": "info.cast.alberto.name",
+				"photo": "info.cast.alberto.photo",
+				"bio": "info.cast.alberto.bio"
+			},
+			"estefania": {
+				"name": "info.cast.estefania.name",
+				"photo": "info.cast.estefania.photo",
+				"bio": "info.cast.estefania.bio"
+			}
+		}
+	},
+	"home": {
+		"section1": {
+			"cast": {
+				"title": "Cast"
+			},
+			"thoughts": {
+				"title": "What we believe",
+				"text": "Hemos concebido ideas sencillas, y hemos tenido el coraje y la constancia de realizarlas."
+			},
+			"ourStory": {
+				"title": "Our Story",
+				"text": "En el año 2009, fundamos en Bogotá una Firma comprometida de forma estable en afianzar las relaciones económicas entre Italia y Colombia."
+			}
+		}
+	},
+	"common": {
+		"to": "to",
+		"of": "of",
+		"by": "by",
+		"comingSoon": "coming soon",
+		"readMore": "Read more",
+		"category": "category",
+		"categories": "categories",
+		"allCategories": "All Categories",
+		"published": "Posted on",
+		"showing": "Showing"
+	},
+	"pages": {
+		"jobs": {
+			"title": "Job Oportunities",
+			"content": "Data Scientist Junior"
+		}
+	},
+	"post": {
+		"backToBlog": "Back to the blog"
+	},
+	"footer": {
+		"rights": "All Rights Reserved"
+	}
+}

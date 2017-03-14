@@ -1,0 +1,144 @@
+{
+	"nav": {
+		"about": {
+			"title": "Nos",
+			"link": "nos"
+		},
+		"practice": {
+			"title": "Aree di attivita",
+			"link": "attivita"
+		}
+	},
+	"info": {
+		"about": {
+			"history": {
+				"title": "La nossa storia",
+				"text": "Nel 2009, fondiamo a Bogotá uno Studio dedicato stabilmente al rafforzamento delle relazioni economiche tra Italia e Colombia. Negli anni, abbiamo rappresentato oltre 100 tra societá e persone fisiche stabilite in diverse giurisdizioni. Oggi, lo Studio é riconosciuto dalla comunitá locale e dal Sistema Italia come un giocatore importante e ben identificato nel mercato. Lo Studio ha sede in Colombia, nel nord di Bogotá ed in Italia, nella cittá di Bologna."},
+			"thoughts": {
+				"title": "Cosa pensiamo",
+				"text": "Abbiamo avuto idee semplici, ed il coraggio e la costanza di realizzarle. Pensiamo che non si possa accompagnare efficacemente un processo di internazionalizzazione senza conoscere a fondo il Paese ove l’imprenditore intende investire. Per questo abbiamo percorso quasi l’intero continente, dal Messico al Cile, ed abbiamo clienti di ogni nazionalitá. Pensiamo che le relazioni personali tra i membri dello Studio e tra questi ed i Clienti siano la chiave del successo. Per questo quando ci chiamerete, i nostri assistenti si presenteranno per nome. Pensiamo che il mercato sia il nostro miglior alleato. Per questo abbiamo sviluppato ed attaccato nicchie di mercato nelle quali la concorrenza é molto spesso assente."},
+			"identity": {
+				"title": "Nuestra Identidad",
+				"text1": "El propósito de nuestra labor es aportar a nuestros Clientes claridad, seguridad y eficiencia con énfasis en la excelencia y personalización en cada asesoría, optimizando así el tiempo. Así mismo manejamos la mejor tecnología y normalizamos los procesos para que usted de forma ágil obtenga un propuesta económica y de sus intereses.",
+				"text2": "El derecho define nuestras labores, la cultura nuestra existencia, impulsándonos a fomentar y desarrollar un mejor trabajo para todos nuestros clientes. Ofrecemos una comunicación directa en diferentes idiomas: español, inglés y francés, con el objetivo de que el lenguaje no represente un obstáculo. De esta manera a lo lardo de los años hemos representado numerosos clientes en diferentes países con magníficos resultados, dándonos el reconocimiento en diferentes ámbitos del mercado como contratación estatal, derecho de la empresa extranjera, la ciudadanía italiana, entre otros.",
+				"text3": "Contamos con un espacio de trabajo moderno, vanguardista y no convencional que proyecta nuestra identidad y brinda a nuestros clientes la confianza y tranquilidad a la hora de trabajar con nosotros. La determinación nos hace un gran aliado."
+			},
+			"place": {
+				"title": "Nuestro Lugar en el Mercado",
+				"text1": "La firma está diseñada para adaptarse a las exigencias del mercado, en un contexto altamente competitivo y globalizado",
+				"text2": "Representa una opción ideal para el invesrionista extranjero de cualquier nacionalidad que quiera ingresar al mercado o consolidarse en él. Con un departamento de contratación estatal de absoluta excelencia, la Firma es además un partner natural para la empresa que realice negocios con el Estado. La flexibilidad operacional y el alcance internacional han permitido a la Firma encontrar soluciones innovadoras a situaciones complejas. Hemos asisitido a alas empresas para participar en procesos de licitación o brindar apoyo en el seguiemiento contractual de una concesión, formalizar una relación de distribución con un partner extranjero o estudiar la mejor forma jurídica de ingresar al mercado.",
+				"text3": "En cuanto a las personas naturales, hemos llevado a cabo procesos de sucesión internacional, adquisición de inmuebles en otras jurisdicciones y reconocimiento de sentencias extranjeras. Un ejemplo de excelencia es el reconocimiento judicial de la ciudadanía italiana, para lo cual la Firma ha desarrollado unos productos específicos soportados por una marca registrada, que la convirtió en el leader de ese mercado. En cualquier procedimiento diseñamos la solució nque aporte valor al Cliente."
+			}
+		},
+		"practice": {
+			"assistance": {
+				"title": "Assistenza all’imprenditore",
+				"text": "Lo Studio ha disegnato una serie di servizi specializzati a favore degli investitori stranieri che intendono intraprendere attività imprenditoriali in Colombia. Lo scopo principale degli stessi é quello di consentire all’imprenditore di concentrare la propria attivitá sullo sviluppo del business, riducendo i costi ed i rischi operativi della gestione amministrativa della societá. Questi sono alcuni dei servizi che abbiamo prestato a società di diverse nazionalità: | Gestione amministrativa | Gestione contabile e tributaria | Domiciliazione | Pianificazione fiscale | Ingegneria di progetto Esperienza: Grupo PROCESSOR", "img_link": "areas-1-it.jpg"
+			},
+			"internationalization": {
+				"title": "Internazionalizzazione",
+				"text": "La nostra missione principale consiste nell’accompagnare l’imprenditore in un processo formale e duraturo di internazionalizzazione. In questo senso, prestiamo speciale attenzione alla minimizzazione dei rischi e possiamo lavorare in quattro lingue: italiano, spagnolo, inglese e francese. Ci interessiamo tanto di societá commerciali, come anche e sopratutto di aziende dei differenti comparti industriali. Siamo infatti convinti dell’importanza della manifattura con valore aggiunto. In tutti i campi che seguono abbiamo una significativa e diretta esperienza professionale: | Ricerca partner locale | Studi commerciali di societá locali | Studi di mercato e profili settoriali | Finanziamenti | Diritto del commercio internazionale", "img_link": "areas-2-it.jpg"
+			},
+			"law": {
+				"title": "Diritto dell’impresa",
+				"text": "Siamo in grado di offrire all’impresa un servizio integrale, che copre tutte le necessitá legate al giro d’affari ordinario di una societá. Assistiamo i nostri clienti direttamente anche nelle eventuali fasi di contenzioso. Abbiamo assistito clienti nazionale ed internazionali nelle seguenti materie: | Diritto societario | Proprietá industriale ed intellettuale | Diritto del lavoro | Diritto tributario e fiscale | Contrattualistica d'impresa | Contenzioso Esperienza: H3R", "img_link": "areas-3-it.jpg"
+			},
+			"government": {
+				"title": "Diritto amministrativo e contrattazione con lo stato",
+				"text": "Il nostro scopo é porre al servicio dei nostri clienti tutta l’esperienza e la conoscenza che abbiamo acquisito nella gestione, controllo e vigilanza dei contratti di infrastruttura stradale di diritto amministrativo ed altri con regimi speciali. A questo fine offriamo una consulenza integrale su tutti gli aspetti giuridici che si originano dalla natura di detti contratti, che permettano garantire la loro idónea ed opportuna esecuzione. La nostra attivitá si estende anche alla gestione dei terreni. In particolare, i nostri professionisti hanno molta esperienza nella negoziazione con i proprietari e l’elaborazione dei documenti giuridici necessari, come studi sulla titolaritá dei terreni, diagnostici giuridici, offerte formali, elaborazione ed attuazione giudiziale nei processi di espropriazione. Inoltre, laddove interveniamo come Direzione Lavori, svolgiamo le attivitá necessarie al controllo e vigilanza giuridica dei procedimenti che porta avanti il Concessionario per l’acquisizione delle aree richieste nei progetti dal punto di vista normativo e contrattuale. La consulenza integrale include i seguenti servizi: | Assistenza giuridica nell’ambito dei contratti oggetto di vigilanza | Controllo sul rispetto degli aspetti regolatori e contrattuali | Revisione, analisi e pareristica sulle richeiste degli Enti pubblici | Assistenza alle udienze e riunioni | Acquisizioni dei terreni | Accompagnamento alla gestione immobiliaria dei progetti", "img_link": "areas-4-it.jpg"
+			},
+			"citizenship": {
+				"title": "Cittadinanza Italiana",
+				"text": "La Società ha contribuito significativamente nel riconoscimento della Cittadinanza italiana a favore dei discendenti di cittadini italiani emigrati sia nel continente americano come nel resto del mondo. In particolare ci occupiamo di tutti quei casi per i quali è necessario richiedere un procedimento giudiziario in italia. Alcuni dei casi più emblematici, in questo senso, si riferiscono ai discendenti di madre italiana nati prima dell’anno 1948 ed ai discendenti di figli naturali, fra gli altri. Offriamo i seguenti servizi: Analisi dell’albero Genealogico | concettualizzazione considerando la normativa italiana in materia di cittadinanza | Collaborazione e supporto nella ricostruzione dei documenti necessari | procedimento giudiziario",
+				"img_link": "areas-5-it.jpg"
+			},
+			"international_law": {
+				"title": "Diritto Internazionale Privato",
+				"text": "Prestiamo assistenza a clienti di varie nazionalita’, nel risolvere le situazioni che coinvolgono più di una giurisdizione. Grazie alla presenza diretta dei nostri partner in Roma e Milano, la Società e’ specializzata in tutte le questioni che hanno a che fare con l’italia. Tuttavia, la rete di relazioni professionali permette alla Società di operare in quasi tutto il territorio americano nonche’ europeo, avendo maturato esperienza en differenti settori come: | Diritto di Famiglia | Recupero crediti in varie giurisdizioni | Successioni ed eredita’ | Contenziosi internazionali | Diritto immobiliare | Diritto Consolare", "img_link": "areas-6-it.jpg"
+			}
+		},
+		"cast": {
+			"agostino": {
+				"name": "AGOSTINO SOMMA",
+				"bio": "É Assistente Amministrativo dello Studio. Dopo la laurea in Scienze Politiche presso l’Università degli studi di Salerno, Italia, intraprende un percorso formativo, sia nell’ambito del progetto Fixo-UE, nel settore delle risorse umane presso Salerno Container Terminal Spa, sia presso Unimpresa nel settore delle Business Relationships.",
+				"photo": "cast-agostino-intro.jpg"
+			},
+			"alberto": {
+				"name": "ALBERTO LAMA",
+				"bio": "É il responsabile della sede di Bologna, Italia. Nato a Lugo di Romagna (la cittá natale di uno degli italiani piú noti in Colombia, Agostino Codazzi), si laurea in giurisprudenza a Bologna. Il suo percorso professionale é rigoroso in tutte le materie del diritto civile e commerciale, con un enfasi evidente sugli aspetti internazionalistici.",
+				"photo": "cast-alberto-intro.jpg"
+			},
+			"ana": {
+				"name": "ANA PAOLA RAMIREZ VELASQUEZ",
+				"bio": "É Assistente Senior dello Studio. Dopo aver intrapreso gli studi di disegno industriale, si é dedicata all’assistenza a 360 gradi presso organizzazioni apicali del settore privato, quali studi legali e fondazioni. Ha acquisito esperienza diretta in tutte le aree di funzionamento dello Studio, del quale é un elemento chiave.",
+				"photo": "cast-ana-intro.jpg"
+			},
+			"estefania": {
+				"name": "JOHANA ESTEFANIA FERNÁNDEZ MARTÍNEZ",
+				"bio": "Affianca i professionisti ed i clienti della società nella gestione giornaliera delle varie pratiche.",
+				"photo": "cast-estefania-intro.jpg"
+			},
+			"leopoldo": {
+				"name": "LEOPOLDO APERIO BELLA",
+				"bio": "Fondatore dello Studio sito in Roma sin dal 1988. Ha maturato in quasi trent’anni di esercizio professionale esperienza nei diversi settori del diritto, particolarmente in ambito civile ed amministrativo, in sede contenziosa ed anche stragiudiziale. Abilitato al Patrocinio avanti alle alti corti. Parla italiano, inglese e francese.",
+				"photo": "cast-leopoldo-intro.jpg"
+			},
+			"lina": {
+				"name": "LINA MARÍA MUÑOZ VARELA",
+				"bio": "Laurea in Diritto presso la Pontificia Università Javeriana di Bogotá, Colombia. È Avvocato specializzato in conciliazione e Metodi Alternativi di Risoluzione delle Controversie. Master in International business, conseguito presso la Queen Mary University of London. Nella società ricopre il ruolo di responsabile dello Staff incaricato di seguire le pratiche di diritto societario e corporativo. Parla Spagnolo ed Inglese.",
+				"photo": "cast-lina-intro.jpg"
+			},
+			"massimiliano": {
+				"name": "MASSIMILIANO Ciudatos",
+				"bio": "É fondatore e direttore generale dello Studio. Dopo la laurea in giurisprudenza con il massimo dei voti presso l’Universitá di Bologna, Italia, dove é nato, intraprende una carriera votata al \"vero\" diritto internazionale: quello esercitato all’estero.",
+				"photo": "cast-massimiliano-intro.jpg"
+			},
+			"mavi": {
+				"name": "MARIA VIRGINIA VELASCO CAMPO",
+				"bio": "Es leader de la Firma en la práctica de derecho administrativo y contratación estatal. Abogada egresada de la Universidad Sergio Arboleda de Colombia, se interesó desde un comienzo al tema de las obras públicas. Es especialista en derecho internacional de la Universidad de Bologna y en derecho administrativo y contratación estatal, título que obtuvo en Colombia.",
+				"photo": "cast-mavi-intro.jpg"
+			}
+		}
+	},
+	"home": {
+		"section1": {
+			"cast": {
+				"title": "Cast",
+				"founder": "Founder",
+				"senior": "Senior Partner"
+			},
+			"thoughts": {
+				"title": "Cosa pensiamo",
+				"text": "Abbiamo avuto idee semplici, ed il coraggio e la costanza di realizzarle."
+			},
+			"ourStory": {
+				"title": "La nossa storia",
+				"text": "Nel 2009, fondiamo a Bogotá uno Studio dedicato stabilmente al rafforzamento delle relazioni economiche tra Italia e Colombia."
+			}
+		}
+	},
+	"common": {
+		"to": "a",
+		"of": "de",
+		"by": "por",
+		"comingSoon": "common.comingSoon",
+		"readMore": "Ver más",
+		"category": "categoría",
+		"categories": "Categorías",
+		"allCategories": "Todas las Categorías",
+		"published": "Publicado el",
+		"showing": "Mostrando"
+	},
+	"pages": {
+		"jobs": {
+			"title": "Oportunidades",
+			"content": "Científico de datos junior"
+		}
+	},
+	"post": {
+		"backToBlog": "Volver al blog"
+	},
+	"footer": {
+		"rights": "Todos los Derechos Reservados"
+	}
+}
