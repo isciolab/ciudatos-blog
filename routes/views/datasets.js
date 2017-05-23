@@ -283,19 +283,19 @@ exports = module.exports = function(req, res) {
     "datasets": [{
         "name": "Recopilación de todos los resultados de las encuestas para Santa Marta",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/subjetivos-yumbo.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/subjetivos-santamarta.xlsx",
             "format": "xlsx"
         }, {
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/subjetivos-yumbo.csv",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/subjetivos-santamarta.csv",
             "format": "csv"
         }]
     }, {
         "name": "Recopilacion de Indicadores objetivos para la ciudad de Santa Marta",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-yumbo.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-santamarta.xlsx",
             "format": "xlsx"
         }, {
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_yumbo_data.csv",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_santamarta_data.csv",
             "format": "csv"
         }]
     }]
@@ -306,19 +306,19 @@ exports = module.exports = function(req, res) {
     "datasets": [{
         "name": "Recopilación de todos los resultados de las encuestas para Yumbo",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/subjetivos-santamarta.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/subjetivos-yumbo.xlsx",
             "format": "xlsx"
         }, {
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/subjetivos-santamarta.csv",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/subjetivos-yumbo.csv",
             "format": "csv"
         }]
     }, {
         "name": "Recopilacion de Indicadores objetivos para la ciudad de Yumbo",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-santamarta.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-yumbo.xlsx",
             "format": "xlsx"
         }, {
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_santamarta_data.csv",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_yumbo_data.csv",
             "format": "csv"
         }]
     }]
