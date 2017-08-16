@@ -60,12 +60,21 @@ exports = module.exports = function(req, res) {
             "format": "csv"
         }]
     }, {
-        "name": "Recopilacion de Indicadores objetivos para la ciudad de Bogotá",
+        "name": "Recopilacion de Indicadores objetivos para la ciudad de Bogotá Totales",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-bogota.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-bogota-totales.xlsx",
             "format": "xlsx"
         }, {
             "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_bogota_data.csv",
+            "format": "csv"
+        }]
+    }, {
+        "name": "Recopilacion de Indicadores objetivos para la ciudad de Bogotá por Localidades",
+        "files": [{
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-bogota-localidades.xlsx",
+            "format": "xlsx"
+        }, {
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_bogota_localidades_data.csv",
             "format": "csv"
         }]
     }]
