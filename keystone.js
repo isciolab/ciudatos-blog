@@ -13,12 +13,12 @@ var keystone = require('keystone'),
 keystone.init({
 	'name': 'Ciudatos Blog',
 	'brand': 'Ciudatos Blog',
-	'signin logo': ['/images/logo.png', 98, 60],
+	'signin logo': ['/images/logo.png'],
 	'less': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
-	'view engine': 'jade',
+	'view engine': 'pug',
 
 	'emails': 'templates/emails',
 
@@ -90,17 +90,17 @@ keystone.set('nav', {
 });
 
 
-keystone.set('s3 config', { 
-	key: process.env.S3_KEY, 
-    secret: process.env.S3_SECRET, 
-    bucket: process.env.S3_BUCKET, 
+keystone.set('s3 config', {
+	key: process.env.S3_KEY,
+    secret: process.env.S3_SECRET,
+    bucket: process.env.S3_BUCKET,
     region: process.env.S3_REGION,
     path: '/documents',
     headers: {
       'x-amz-acl': 'public-read', // add default headers; see below for details
     }
-	// bucket: 'my-bucket', 
-	// key: 'my-key', 
+	// bucket: 'my-bucket',
+	// key: 'my-key',
 	// secret: 'my-secret',
 	// 'default headers':  {
  //    'x-amz-meta-X-Default-Header': 'Custom Default Value'

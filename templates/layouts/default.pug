@@ -11,9 +11,6 @@ html
 
 		title= title || 'Ciudatos'
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
-
-		//- Customise the stylesheet for your site by editing /public/styles/site.less
-		//- All .less files will be automatically compiled and minified in production.
 		link(href="/styles/site.min.css", rel="stylesheet")
 
 		//- This file provides the default styling for the KeystoneJS Content Editor
@@ -33,8 +30,6 @@ html
 		//- BOOTCARDS 
 		//- http://bootcards.org/
 		link(href="//cdnjs.cloudflare.com/ajax/libs/bootcards/1.0.0/css/bootcards-desktop.min.css", rel="stylesheet")
-		script(href="//cdnjs.cloudflare.com/ajax/libs/bootcards/1.0.0/js/bootcards.min.js")
-		script(href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
 
 		//- CUSTOM CSS
 		link(href="/styles/custom/index.css", rel="stylesheet")
@@ -53,10 +48,6 @@ html
 
 		//- HEADER
 		#header
-
-			//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
-			//- ... or completely change this header to suit your design.
-
 			div(role="navigation").navbar.navbar-default.navbar-color.navbar-fixed-top
 				.container-fluid
 					.navbar-header
@@ -105,19 +96,9 @@ html
 
 		//- BODY
 		#body
-
-			//- NOTE:
-			//- There is no .container wrapping class around body blocks to allow more flexibility in design.
-			//- Remember to include it in your templates when you override the intro and content blocks!
-
-			//- The Intro block appears above flash messages (used for temporary information display)
+			
 			block intro
-
-			//- Flash messages allow you to display once-off status messages to users, e.g. form
-			//- validation errors, success messages, etc.
 			+flash-messages(messages)
-
-			//- The content block should contain the body of your template's content
 			block content
 
 
@@ -144,11 +125,7 @@ html
 
 				//- a.pull-right(href="/es/page/terminos-y-condiciones") Términos de uso del sitio
 
-
-		//- JAVASCRIPT
-
-		//- GA
-
+		//- Google Analytics
 		script.
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -157,20 +134,11 @@ html
 			ga('create', 'UA-70153879-1', 'auto');
 			ga('send', 'pageview');
 
-
-
-
-		//- jQuery 1.11.3 is included by default, and required by both Bootstrap
-		//- and the KeystoneJS Content Editor. If you are not targeting IE8,
-		//- you can upgrade to 2.1.4 (also bundled) for better performance.
 		script(src='/js/jquery/jquery-1.11.3.min.js')
-
-		//- Customise which Bootstrap javascript files are served by including
-		//- them specifically here, instead of bootstrap-3.3.5.min.js
 		script(src='/js/bootstrap/bootstrap-3.3.5.min.js')
+		script(src='//cdnjs.cloudflare.com/ajax/libs/bootcards/1.0.0/js/bootcards.min.js')
 
 		//- Bootcards
-
 		script.
 			bootcards.init( {
 			  offCanvasBackdrop : true,
@@ -180,12 +148,7 @@ html
 			  disableBreakoutSelector : 'a.no-break-out'
 			});
 
-		//- The KeystoneJS Content Editor provides support for ks-editable data attributes,
-		//- which generate links to edit content for users who can access Keystone
 		if user && user.canAccessKeystone
 			script(src='/keystone/js/content/editor.js')
-
-		//- Add scripts that are globally required by your site here.
-
-		//- Include template-specific javascript files by extending the js block
+			
 		block js

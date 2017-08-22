@@ -6,6 +6,23 @@ var Types = keystone.Field.Types;
  * ==========
  */
 
+var storage = new keystone.Storage({
+	adapter: require('keystone-storage-adapter-s3'),
+	s3: {
+		key: process.env.S3_KEY,
+		secret: process.env.S3_SECRET,
+		bucket: process.env.S3_BUCKET,
+		region: process.env.S3_REGION,
+		path: '/ciudatos/documents',
+	},
+	schema: {
+		bucket: true,
+		etag: true,
+		path: true,
+		url: true,
+	}
+})
+
 var Document = new keystone.List('Document', {
 	map: { name: 'title' },
 	autokey: { path: 'slug', from: 'title', unique: true },
@@ -13,7 +30,7 @@ var Document = new keystone.List('Document', {
 
 Document.add({
 	title: { type: String, required: true },
-	state: { type: Types.Select, options: 'draft, published, archived', 
+	state: { type: Types.Select, options: 'draft, published, archived',
 			 default: 'draft', index: true },
 	externalAuthor: {type: String},
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
@@ -21,7 +38,7 @@ Document.add({
 	content: {
 		brief: { type: Types.Html, wysiwyg: true, height: 150 }
 	},
-	file: { type: Types.S3File, s3path: 'documents',	
+	file: { type: Types.File, storage: storage,
 		filename: function(item, filename, originalname){
 			return item._id + '-' + originalname;
 		}}
