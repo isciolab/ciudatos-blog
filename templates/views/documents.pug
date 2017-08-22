@@ -11,7 +11,7 @@ mixin documentcard(document)
 			.panel-body
 				h4.panel-title #{document.title}
 				//- p= file
-				a(href="#{document.file.url}").btn.btn-default.btn-xs PDF
+				a(href=`${document.file.url}`).btn.btn-default.btn-xs PDF
 			//- .list-group
 				each d in document.documents
 					.list-group-item 
@@ -45,5 +45,3 @@ block content
 			//- 	each document,i in data.documents.slice(12, 16)
 			//- 		+documentcard(document)
 				//- if i % 4 == 0
-
-

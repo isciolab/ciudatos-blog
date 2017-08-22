@@ -15,7 +15,7 @@ mixin datasetcard(dataset)
 						.list-group-item-heading #{d.name}
 							.btn-toolbar
 								each file in d.files
-									a(href="#{file.url}").btn.btn-default.btn-xs #{file.format}
+									a(href=`${file.url}`).btn.btn-default.btn-xs #{file.format}
 			//- .dataset(data-ks-editable=editable(user, { list: 'Post', id: dataset.id }))
 			//- h4.card-title: a(href='/'+dataset.lang+'/blog/dataset/' + dataset.slug).datasetTitle= dataset.title
 			//- div.datasetBrief.truncate120
@@ -27,18 +27,16 @@ block content
 		.row.home-section
 			h1.text-center Tablas de datos
 		.row.home-section
-			.row-eq-height						
+			.row-eq-height
 				each dataset,i in data.datasets.slice(0, 4)
 					+datasetcard(dataset)
-			.row-eq-height						
+			.row-eq-height
 				each dataset,i in data.datasets.slice(4, 8)
 					+datasetcard(dataset)
-			.row-eq-height						
+			.row-eq-height
 				each dataset,i in data.datasets.slice(8, 12)
 					+datasetcard(dataset)
-			.row-eq-height						
+			.row-eq-height
 				each dataset,i in data.datasets.slice(12, 16)
 					+datasetcard(dataset)
 				//- if i % 4 == 0
-
-

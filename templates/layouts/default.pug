@@ -85,7 +85,7 @@ html
 							li: a(href="/visualizacion") Visualiza
 							li: a(href="/datos") Datos
 							li: a(href="/informes") Informes
-							li: a(href="/#{__('nav.about.link')}") #{__('nav.about.title')}
+							li: a(href=`/${__('nav.about.link')}`) #{__('nav.about.title')}
 							//- if user
 								if user.canAccessKeystone
 									li: a(href='/keystone') Open Keystone
