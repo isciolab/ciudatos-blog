@@ -11,6 +11,10 @@
     "lodash": "^4.13.1",
     "pug": "^2.0.0-rc.3"
   },
+  "engines": {
+    "node": "6.11.3",
+    "npm": "3.10.10"
+  },
   "devDependencies": {
     "eslint": "^4.5.0",
     "eslint-config-keystone": "^3.0.0",
