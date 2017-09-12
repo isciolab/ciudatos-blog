@@ -39,7 +39,7 @@ exports = module.exports = function(req, res) {
     }, {
         "name": "Recopilacion de Indicadores objetivos para la ciudad de Barranquilla",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-barranquilla.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_barranquilla.xlsx",
             "format": "xlsx"
         }, {
             "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_barranquilla_data.csv",
@@ -94,7 +94,7 @@ exports = module.exports = function(req, res) {
     }, {
         "name": "Recopilacion de Indicadores objetivos para la ciudad de Bucaramanga",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-bucaramanga.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_bucaramanga.xlsx",
             "format": "xlsx"
         }, {
             "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_bucaramanga_data.csv",
@@ -117,7 +117,7 @@ exports = module.exports = function(req, res) {
     }, {
         "name": "Recopilacion de Indicadores objetivos para la ciudad de Cali",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-cali-total.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_cali_totales.xlsx",
             "format": "xlsx"
         }, {
             "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_cali_total_data.csv",
@@ -140,7 +140,7 @@ exports = module.exports = function(req, res) {
     }, {
         "name": "Recopilacion de Indicadores objetivos para la ciudad de Cartagena",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-cartagena.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_cartagena.xlsx",
             "format": "xlsx"
         }, {
             "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_cartagena_data.csv",
@@ -163,7 +163,7 @@ exports = module.exports = function(req, res) {
     }, {
         "name": "Recopilación de Indicadores objetivos comparados para la Red Cómo Vamos",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-comparada.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_comparada_totales.xlsx",
             "format": "xlsx"
         }, {
             "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_comparada_data.csv",
@@ -186,7 +186,7 @@ exports = module.exports = function(req, res) {
     }, {
         "name": "Recopilacion de Indicadores objetivos para la ciudad de Cúcuta",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-cucuta.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_cucuta.xlsx",
             "format": "xlsx"
         }, {
             "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_cucuta_data.csv",
@@ -209,7 +209,7 @@ exports = module.exports = function(req, res) {
     }, {
         "name": "Recopilacion de Indicadores objetivos para la ciudad de Ibagué",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-ibague.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_ibague.xlsx",
             "format": "xlsx"
         }, {
             "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_ibague_data.csv",
@@ -232,7 +232,7 @@ exports = module.exports = function(req, res) {
     }, {
         "name": "Recopilacion de Indicadores objetivos para la ciudad de Manizales",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-manizales-totales.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_manizales_totales.xlsx",
             "format": "xlsx"
         }, {
             "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_manizales_data.csv",
@@ -255,7 +255,7 @@ exports = module.exports = function(req, res) {
     }, {
         "name": "Recopilacion de Indicadores objetivos para la ciudad de Medellín",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-medellin-totales.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_medellin_totales.xlsx",
             "format": "xlsx"
         }, {
             "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_medellin_total_data.csv",
@@ -278,7 +278,7 @@ exports = module.exports = function(req, res) {
     }, {
         "name": "Recopilacion de Indicadores objetivos para la ciudad de Pereira",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-pereira-totales.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_pereira_totales.xlsx",
             "format": "xlsx"
         }, {
             "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_pereira_total_data.csv",
@@ -301,7 +301,7 @@ exports = module.exports = function(req, res) {
     }, {
         "name": "Recopilacion de Indicadores objetivos para la ciudad de Santa Marta",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-santamarta.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_santamarta.xlsx",
             "format": "xlsx"
         }, {
             "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_santamarta_data.csv",
@@ -324,7 +324,7 @@ exports = module.exports = function(req, res) {
     }, {
         "name": "Recopilacion de Indicadores objetivos para la ciudad de Yumbo",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos-yumbo.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_yumbo.xlsx",
             "format": "xlsx"
         }, {
             "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_yumbo_data.csv",
