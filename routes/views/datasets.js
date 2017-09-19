@@ -62,7 +62,7 @@ exports = module.exports = function(req, res) {
     }, {
         "name": "Recopilacion de Indicadores objetivos para la ciudad de Bogotá Totales",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_bogota.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_bogota_totales.xlsx",
             "format": "xlsx"
         }, {
             "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_bogota_data.csv",
@@ -209,7 +209,7 @@ exports = module.exports = function(req, res) {
     }, {
         "name": "Recopilacion de Indicadores objetivos para la ciudad de Ibagué",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_ibague.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_ibague_totales.xlsx",
             "format": "xlsx"
         }, {
             "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_ibague_data.csv",
@@ -290,18 +290,9 @@ exports = module.exports = function(req, res) {
     "description": "Datos del ¿Cómo Vamos? de la ciudad de Santa Marta",
     "img": "img/cv-santamarta.png",
     "datasets": [{
-        "name": "Recopilación de todos los resultados de las encuestas para Santa Marta",
-        "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/subjetivos-santamarta.xlsx",
-            "format": "xlsx"
-        }, {
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/subjetivos-santamarta.csv",
-            "format": "csv"
-        }]
-    }, {
         "name": "Recopilacion de Indicadores objetivos para la ciudad de Santa Marta",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_santamarta.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_santamarta_totales.xlsx",
             "format": "xlsx"
         }, {
             "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_santamarta_data.csv",
@@ -324,7 +315,7 @@ exports = module.exports = function(req, res) {
     }, {
         "name": "Recopilacion de Indicadores objetivos para la ciudad de Yumbo",
         "files": [{
-            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_yumbo.xlsx",
+            "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_yumbo_totales.xlsx",
             "format": "xlsx"
         }, {
             "url": "http://data.ciudatos.com.s3.amazonaws.com/migration/objetivos_yumbo_data.csv",
