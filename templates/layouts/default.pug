@@ -11,8 +11,6 @@ html
 
 		title= title || 'Ciudatos'
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
-		link(href="/styles/site.min.css", rel="stylesheet")
-
 		//- This file provides the default styling for the KeystoneJS Content Editor
 		if user && user.canAccessKeystone
 			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
@@ -31,9 +29,8 @@ html
 		//- http://bootcards.org/
 		link(href="//cdnjs.cloudflare.com/ajax/libs/bootcards/1.0.0/css/bootcards-desktop.min.css", rel="stylesheet")
 
-		//- CUSTOM CSS
-		link(href="/styles/custom/index.css", rel="stylesheet")
-
+		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+		link(href="/styles/site.min.css", rel="stylesheet")
 		//- SUMOME
 		//- script(src="//load.sumome.com/",data-sumo-site-id="e11e4421aaa15d86d73e3e4aa153211ba045af6a7e759175a96d400b04e42276",async="async")
 
@@ -45,86 +42,115 @@ html
 
 	//- HTML BODY
 	body
-
-		//- HEADER
-		#header
-			div(role="navigation").navbar.navbar-default.navbar-color.navbar-fixed-top
-				.container-fluid
-					.navbar-header
-						button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-							span.sr-only Toggle navigation
-							span.icon-bar
-							span.icon-bar
-							span.icon-bar
-						//- a.navbar-brand(href='/') Ciudatos
-						a.navbar-brand(href='/')
-							img(src='/images/logo.png', height="59px", style="margin-top: -1px;padding:3px")
-					.collapse.navbar-collapse
-						ul.nav.navbar-nav.navbar-left
-							//- each link in navLinks
-								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-						ul.nav.navbar-nav.navbar-right
-							//- li.dropdown
-								a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-									| Dropdown 
-									span.caret
-								ul.dropdown-menu
-									li
-										a(href='#') Action
-									li
-										a(href='#') Another action
-									li
-										a(href='#') Something else here
-									li.divider(role='separator')
-									li
-										a(href='#') Separated link
-									li.divider(role='separator')
-									li
-										a(href='#') One more separated link
-							//- li: a(href="/blog") Historias
-							li: a(href="/visualizacion") Visualiza
-							li: a(href="/datos") Datos
-							li: a(href="/informes") Informes
-							li: a(href=`/${__('nav.about.link')}`) #{__('nav.about.title')}
-							//- if user
-								if user.canAccessKeystone
-									li: a(href='/keystone') Open Keystone
-								li: a(href='/keystone/signout') Sign Out
-							//- else
-								li: a(href='/keystone/signin') Sign In
-							block lang
-
-		//- BODY
-		#body
-			
-			block intro
-			+flash-messages(messages)
-			block content
-
-
-		//- FOOTER
-		#footer
-			.container
-				//- div.col-md-6
-					h5 Más información
-					ul.list-unstyled
-						li Conoce los datos
-						li Historias
-						li Tutoriales
-						li Términos y condiciones
-				div.col-md-6
-					h5 Fundación Corona
-					ul.list-unstyled
-						li Calle 70 # 7-30 Bogotá, Colombia
-						li Tel: (57+1) 4000031
-						li Información:
-						li comunicaciones@fcorona.org
-						li Línea Ética:
-						li seamosintegrosfundacion@fcorona.org
-				p 2017	© Ciudatos
-
-				//- a.pull-right(href="/es/page/terminos-y-condiciones") Términos de uso del sitio
-
+		#wrapper
+			header
+				nav.nav-desktop.hidden-xs
+					a.nav-discover(href="#")
+						span.fa.fa-user
+						span.discover-text Descubre los datos abiertos
+					ul.nav-links
+						li: a(href="/visualizacion") Visualizar
+						li: a(href="#") Ciudades
+						li: a(href="#") Temas
+						li: a(href="#") Publicaciones
+						li: a(href="#") Blog
+						li: a(href="/sobre") Quiénes somos
+					ul.nav-social
+						li
+							a(href="#")
+								span.fa.fa-stack
+									i.fa.fa-circle.fa-stack-2x
+									i.fa.fa-facebook.fa-stack-1x.fa-inverse
+						li
+							a(href="#")
+								span.fa.fa-stack
+									i.fa.fa-circle.fa-stack-2x
+									i.fa.fa-twitter.fa-stack-1x.fa-inverse
+						li
+							a(href="#")
+								span.fa.fa-stack
+									i.fa.fa-circle.fa-stack-2x
+									i.fa.fa-linkedin.fa-stack-1x.fa-inverse
+						li
+							a(href="#")
+								span.fa.fa-stack
+									i.fa.fa-circle.fa-stack-2x
+									i.fa.fa-youtube-play.fa-stack-1x.fa-inverse
+				nav.navbar.navbar-default.visible-xs
+					.container-fluid
+						.navbar-header
+							button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false')
+								span.sr-only Toggle navigation
+								span.icon-bar
+								span.icon-bar
+								span.icon-bar
+							a.navbar-brand(href='#') Ciudatos
+						// Collect the nav links, forms, and other content for toggling
+						#navbar.collapse.navbar-collapse
+							ul.nav.navbar-nav
+								li: a(href='#') Descubre los datos abiertos
+								li: a(href='#') Visualizar
+								li: a(href='#') Ciudades
+								li: a(href='#') Temas
+								li: a(href='#') Publicaciones
+								li: a(href='#') Blog
+								li: a(href='#') Quiénes somos
+							ul.social-media-container
+								li.social-media
+									a(href="#")
+										span.fa.fa-stack
+											i.fa.fa-circle.fa-stack-2x
+											i.fa.fa-facebook.fa-stack-1x.fa-inverse
+								li.social-media
+									a(href="#")
+										span.fa.fa-stack
+											i.fa.fa-circle.fa-stack-2x
+											i.fa.fa-twitter.fa-stack-1x.fa-inverse
+								li.social-media
+									a(href="#")
+										span.fa.fa-stack
+											i.fa.fa-circle.fa-stack-2x
+											i.fa.fa-linkedin.fa-stack-1x.fa-inverse
+								li.social-media
+									a(href="#")
+										span.fa.fa-stack
+											i.fa.fa-circle.fa-stack-2x
+											i.fa.fa-youtube-play.fa-stack-1x.fa-inverse
+			main
+				block intro
+				+flash-messages(messages)
+				block content
+			footer
+				.custom-container
+					.footer-info
+						p Fundación Corona
+						p Calle 70 # 7-30 Bogotá, Colombia
+						p Tel: (57+1) 4000031
+						p Información:
+						p comunicaciones@fcorona.org
+						p Línea Ética:
+						p seamosintegrosfundacion@fcorona.org
+					ul.footer-social
+						li
+							a(href="#")
+								span.fa.fa-stack.fa-lg
+									i.fa.fa-circle.fa-stack-2x
+									i.fa.fa-facebook.fa-stack-1x.fa-inverse
+						li
+							a(href="#")
+								span.fa.fa-stack.fa-lg
+									i.fa.fa-circle.fa-stack-2x
+									i.fa.fa-twitter.fa-stack-1x.fa-inverse
+						li
+							a(href="#")
+								span.fa.fa-stack.fa-lg
+									i.fa.fa-circle.fa-stack-2x
+									i.fa.fa-linkedin.fa-stack-1x.fa-inverse
+						li
+							a(href="#")
+								span.fa.fa-stack.fa-lg
+									i.fa.fa-circle.fa-stack-2x
+									i.fa.fa-youtube-play.fa-stack-1x.fa-inverse
 		//- Google Analytics
 		script.
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
