@@ -1,12 +1,9 @@
-var keystone = require('keystone');
+const keystone = require('keystone');
 
 exports = module.exports = function (req, res) {
+	const view = new keystone.View(req, res);
+	let locals = res.locals;
 
-	var view = new keystone.View(req, res);
-	var locals = res.locals;
-
-	// locals.section is used to set the currently selected
-	// item in the header navigation.
 	locals.section = 'home';
 
 	if (req.params.lang) {
@@ -20,22 +17,16 @@ exports = module.exports = function (req, res) {
   locals.language = req.getLocale();
 
   locals.data = {
-  	posts: [],
+  	documents: [],
   };
 
-	// Load the posts
+	// Load Documents
 	view.on('init', function(next) {
-		var q = keystone.list('Post')
-					.model.find()
-	        .where('state', 'published')
-	        .sort('-publishedDate')
-	        .limit(3)
-	        .populate('authors categories sections');
-
-    q.exec(function(err, results) {
-    	locals.data.posts = results;
-      next(err);
-    });
+		const q = keystone.list('Document').model.find().where('state','published');
+		q.exec(function(err, results) {
+			locals.data.documents = results;
+			next(err);
+		});
 	});
 
 	view.render('home_es');

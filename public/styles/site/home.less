@@ -3,88 +3,132 @@
   flex-wrap: wrap;
   height: 350px;
   width: 100%;
-}
-.intro-about {
-  height: 50%;
-  width: 100%;
-  @media screen and (min-width: 992px) {
-    height: 100%; 
-    width: 40%;
-  }
-  & > div {
-    position: relative;
-    @media screen and (min-width: 992px) {
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    .about-title {
-      color: #115ea6;
-      text-transform: lowercase;
-      @media screen and (min-width: 992px) {
-        margin-top: 0;
-      }
-    }
-    .about-description {
-      border-top: 5px solid #171614;
-      border-bottom: 5px solid #171614;
-      width: 100%;
-      @media screen and (min-width: 992px) {
-        width: 90%;
-      }
-      @media screen and (min-width: 1200px) {
-        width: 80%;
-      }
-    }
-  }
-}
-.intro-visualize {
-  background: no-repeat center center;
-  background-size: cover;
-  height: 50%;
-  position: relative;
-  width: 100%;
-  @media screen and (min-width: 992px) {
-    height: 100%;
-    width: 60%;
-  }
-  .visualize-explore {
-    background: #171614;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px 5px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  .intro-about {
+    height: 50%;
     width: 100%;
     @media screen and (min-width: 992px) {
-      top: 60%;
-      transform: translateY(0);
-      width: 70%;
+      height: 100%; 
+      width: 40%;
     }
-    @media screen and (min-width: 1200px) {
-      top: 60%;
-      transform: translateY(0);
-      width: 50%;
-    }
-    span {
-      color: #ffffff;
-      margin-bottom: 10px;
-      text-align: center;
-      width: 100%;
+    & > div {
+      position: relative;
       @media screen and (min-width: 992px) {
-        padding: 0 10px;
-        text-align: left;
-        width: 60%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .about-title {
+        color: #115ea6;
+        text-transform: lowercase;
+        @media screen and (min-width: 992px) {
+          margin-top: 0;
+        }
+      }
+      .about-description {
+        border-top: 5px solid #171614;
+        border-bottom: 5px solid #171614;
+        width: 100%;
+        @media screen and (min-width: 992px) {
+          width: 90%;
+        }
+        @media screen and (min-width: 1200px) {
+          width: 80%;
+        }
       }
     }
-    a {
-      align-self: center;
-      background: #ffffff;
-      border-radius: 7px;
-      box-shadow: 0 3px 0px #eeeeee;
-      color: #e07299;
-      padding: 5px 15px;
+  }
+  .intro-visualize {
+    background: no-repeat center center;
+    background-size: cover;
+    height: 50%;
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: 992px) {
+      height: 100%;
+      width: 60%;
+    }
+    .visualize-explore {
+      background: #171614;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px 5px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      @media screen and (min-width: 992px) {
+        top: 60%;
+        transform: translateY(0);
+        width: 70%;
+      }
+      @media screen and (min-width: 1200px) {
+        top: 60%;
+        transform: translateY(0);
+        width: 50%;
+      }
+      span {
+        color: #ffffff;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+        @media screen and (min-width: 992px) {
+          padding: 0 10px;
+          text-align: left;
+          width: 60%;
+        }
+      }
+      a {
+        align-self: center;
+        background: #ffffff;
+        border-radius: 7px;
+        box-shadow: 0 3px 0px #eeeeee;
+        color: #e07299;
+        padding: 5px 15px;
+      }
+    }
+  }
+}
+.documents-section {
+  background: #f7f9fa;
+  padding: 10px;
+  h4 {
+    margin-top: 0;
+  }
+  .documents-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      justify-content: space-between;
+    }
+    .document {
+      width: 100%;
+      margin-bottom: 10px;
+      img {
+        margin: 0 auto;
+        @media screen and (min-width: 992px) {
+          margin: 0;
+        }
+      }
+      .document-info {
+        p {
+          font-size: 13px;
+        }
+        @media screen and (min-width: 992px) {
+          margin-left: 5px;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        width: 45%;
+      }
+      @media screen and (min-width: 992px) {
+        display: flex;
+        align-items: center;
+        width: 50%;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 32%;
+      }
     }
   }
 }

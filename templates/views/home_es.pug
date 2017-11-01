@@ -12,3 +12,12 @@ block content
 				.visualize-explore
 					span Explora los datos con la herramienta de visualización
 					a(href="#") Visualizar
+		.documents-section
+			h4 Publicaciones
+			.documents-container
+				each document in data.documents
+					.document
+						img.img-responsive(src=document._.image.fit(160,90))
+						.document-info
+							p: strong #{document.title}
+							a.btn.btn-default.btn-xs(href=`${document.file.url}` target="_blank") PDF
