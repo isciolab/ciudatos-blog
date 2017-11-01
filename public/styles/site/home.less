@@ -88,6 +88,57 @@
     }
   }
 }
+.body-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  .cities-section {
+    background: #d9e2e8;
+    display: flex;
+    padding: 15px 15px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      justify-content: space-around;
+    }
+    @media screen and (min-width: 992px) {
+      width: 70%;
+    }
+    .city {
+      width: 100%;
+      margin-bottom: 15px;
+      @media screen and (min-width: 768px) {
+        width: 45%;
+      }
+      @media screen and (min-width: 992px) {
+        width: 30%;
+      }
+      .city-info {
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        .city-name {
+          color: #ffffff;
+          font-size: 20px;
+          position: absolute;
+          text-align: center;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100%;
+        }
+      }
+    }
+  }
+  .topics-section {
+    background: #dccb3a;
+    width: 100%;
+    @media screen and (min-width: 992px) {
+      width: 30%;
+    }
+  }
+}
 .documents-section {
   background: #f7f9fa;
   padding: 10px;
