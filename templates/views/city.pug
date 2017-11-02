@@ -1,0 +1,103 @@
+extends ../layouts/default
+block css
+  style.
+    .navbar-default {
+      margin-bottom: 0 !important;
+    }
+    .carousel {
+      height: 300px;
+      position: relative;
+      width: 100%;
+    }
+    .carousel .carousel-indicators {
+      opacity: 0;
+    }
+    .carousel .carousel-inner {
+      background: #171614;
+      height: 100%;
+      width: 100%;
+    }
+    .carousel .item {
+      background: no-repeat center center;
+      background-size: cover;
+      height: 100%;
+      position: relative;
+      width: 100%;
+    }
+    .carousel .item span {
+      color: #ffffff;
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 25px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+block content
+  #cities-carousel.carousel.slide(data-ride="carousel")
+    ol.carousel-indicators
+      li(data-target="#cities-carousel" data-slide-to="0" class="active")
+      li(data-target="#cities-carousel" data-slide-to="1")
+      li(data-target="#cities-carousel" data-slide-to="2")
+      li(data-target="#cities-carousel" data-slide-to="3")
+      li(data-target="#cities-carousel" data-slide-to="4")
+      li(data-target="#cities-carousel" data-slide-to="5")
+
+    .carousel-inner(role="listbox")
+      .item.active(style="background-image: url(/img/slider-city.jpg)" data-city="#bogota")
+        span Bogotá
+      .item(style="background-image: url(/img/slider-city.jpg)" data-city="#medellin")
+        span Medellín
+      .item(style="background-image: url(/img/slider-city.jpg)" data-city="#cali")
+        span Cali
+      .item(style="background-image: url(/img/slider-city.jpg)" data-city="#barranquilla")
+        span Barranquilla
+      .item(style="background-image: url(/img/slider-city.jpg)" data-city="#cartagena")
+        span Cartagena
+      .item(style="background-image: url(/img/slider-city.jpg)" data-city="#manizales")
+        span Manizales
+
+    a.left.carousel-control(href="#cities-carousel" data-slide="prev" role="button")
+      span.glyphicon.glyphicon-chevron-left
+    a.right.carousel-control(href="#cities-carousel" data-slide="next" role="button")
+      span.glyphicon.glyphicon-chevron-right
+  
+  .custom-container
+    #bogota.city-profile
+      h4: strong Bogotá
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam delectus sed praesentium officiis enim voluptas eos quo dolorem, magni cum inventore earum assumenda excepturi, fuga temporibus nesciunt blanditiis aliquid maiores.
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quos officia voluptatem repellendus cupiditate assumenda debitis corporis, odio ex provident. Voluptates sequi quod natus iusto. Optio similique quaerat itaque ad.
+    #medellin.city-profile
+      h4: strong Medellín
+      p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo obcaecati quos nostrum expedita reprehenderit, nihil veritatis necessitatibus autem ipsum maiores commodi! Asperiores, esse accusamus veniam consequuntur doloribus ducimus sed quaerat?
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vero impedit culpa tenetur ratione assumenda quasi, corrupti nam ducimus! Quam ducimus dolorum repellat quidem ratione repellendus totam fugit optio dolores.
+    #cali.city-profile
+      h4: strong Cali
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, maiores! Eius temporibus laboriosam excepturi perferendis vitae nihil dignissimos quae velit earum nulla! Facilis optio, harum fuga ab veritatis nobis vel.
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, consectetur expedita itaque doloribus quod ex distinctio corrupti ea doloremque corporis sed omnis adipisci. Aperiam labore architecto ad. Eius, consequuntur ipsa.
+    #barranquilla.city-profile
+      h4: strong Barranquilla
+      p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore molestias provident illum. Accusamus sapiente tenetur, beatae dolore tempore ex excepturi maiores, impedit corporis nisi ab sed magnam nemo veritatis laudantium!
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus molestias laborum itaque, dolores qui nulla libero culpa porro. Praesentium culpa cumque quaerat, tenetur vitae repellat numquam non mollitia consequatur laudantium.
+    #cartagena.city-profile
+      h4: strong Cartagena
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia tempore architecto officia id doloremque, vitae autem ducimus obcaecati rerum esse accusamus ad recusandae libero, repellendus aliquid aspernatur. Similique, sed magni!
+      p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo consequatur totam eum beatae accusantium laborum voluptatum eos distinctio odit id veritatis dolore voluptate cumque suscipit quidem adipisci iusto, rerum cum.
+    #manizales.city-profile
+      h4: strong Manizales
+      p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo ex ab iusto neque officia cumque doloremque illo! Excepturi veniam, cum natus officia harum quod dolorem temporibus, obcaecati voluptas laudantium provident?
+      p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, aspernatur. Repudiandae nihil laudantium ullam, sapiente numquam quisquam ipsa eius sed animi in corporis a commodi porro ea repellat iusto facilis.
+block js
+  script.
+    $(document).ready(function() {
+      var actual = $('.item.active').attr('data-city');
+      $('.city-profile').hide();
+      $(actual).show();
+      $('.carousel').carousel({ interval: false })
+      $('#cities-carousel').on('slid.bs.carousel', function(event) {
+        var city = $(event.relatedTarget).attr('data-city');
+        $('.city-profile').hide();
+        $(city).fadeIn(700);
+      })
+    })

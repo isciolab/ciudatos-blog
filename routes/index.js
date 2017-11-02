@@ -42,6 +42,7 @@ exports = module.exports = function (app) {
 	app.get('/datos', routes.views.datasets);
 	app.get('/informes', routes.views.documents);
 	app.get('/blog', routes.views.blog);
+	app.get('/ciudades', routes.views.city);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
 	app.get('/gallery', routes.views.gallery);
