@@ -116,6 +116,18 @@ nav.nav-desktop {
     list-style: none;
     padding: 0;
     width: 68%;
+    .dropdown {
+      .dropdown-menu {
+        background-color: #d8e0e8;
+        border: none;
+        border-radius: 0;
+        margin-top: 15px;
+        box-shadow: none;
+        li a {
+          color: #8386c4;
+        }
+      }
+    }
     @media screen and (min-width: 992px) {
       width: 72%;
 	}
@@ -177,6 +189,10 @@ nav.nav-desktop {
     }
   }
   .navbar-collapse {
+    .dropdown #dcities {
+      background: transparent;
+      border: none;
+    }
     .social-media-container {
       display: flex;
       list-style: none;

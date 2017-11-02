@@ -50,7 +50,20 @@ html
 						span.discover-text Preguntas frecuentes
 					ul.nav-links
 						li: a(href="/visualizacion") Visualizar
-						li: a(href="#") Ciudades
+						li.dropdown
+							a#dcities-pc.dropdown-toggle(data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true" href="#")
+								| Ciudades 
+								span.caret
+							ul.dropdown-menu(aria-labelledby="dcities-pc")
+								li: a(href="#") Bogotá
+								li: a(href="#") Medellín
+								li: a(href="#") Cali
+								li: a(href="#") Bucaramanga
+								li: a(href="#") Ibagué
+								li: a(href="#") Cartagena
+								li: a(href="#") Pereira
+								li: a(href="#") Manizales
+								li: a(href="#") Barranquilla
 						li: a(href="#") Temas
 						li: a(href="#") Publicaciones
 						li: a(href="#") Blog
@@ -90,7 +103,20 @@ html
 							ul.nav.navbar-nav
 								li: a(href='#') Descubre los datos abiertos
 								li: a(href='#') Visualizar
-								li: a(href='#') Ciudades
+								li.dropdown
+									a#dcities.dropdown-toggle(data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true")
+										|Ciudades 
+										span.caret
+									ul.dropdown-menu(aria-labelledby="dcities")
+										li: a(href="#") Bogotá
+										li: a(href="#") Medellín
+										li: a(href="#") Cali
+										li: a(href="#") Bucaramanga
+										li: a(href="#") Ibagué
+										li: a(href="#") Cartagena
+										li: a(href="#") Pereira
+										li: a(href="#") Manizales
+										li: a(href="#") Barranquilla
 								li: a(href='#') Temas
 								li: a(href='#') Publicaciones
 								li: a(href='#') Blog
