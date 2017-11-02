@@ -26,6 +26,7 @@
       .about-description {
         border-top: 5px solid #171614;
         border-bottom: 5px solid #171614;
+        margin-top: 15px;
         width: 100%;
         @media screen and (min-width: 992px) {
           width: 90%;
@@ -88,16 +89,56 @@
     }
   }
 }
+.intro-about-mobile {
+  margin: 15px 0;
+  width: 100%;
+  .about-description-mobile {
+    border-top: 5px solid #171614;
+    border-bottom: 5px solid #171614;
+    margin-top: 15px;
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.intro-visualize-mobile {
+  height: 250px;
+  position: relative;
+  .visualize-explore-mobile {
+    background: #171614;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    span {
+      color: #ffffff;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    a {
+      align-self: center;
+      background: #ffffff;
+      border-radius: 7px;
+      box-shadow: 0 3px 0px #eeeeee;
+      color: #e07299;
+      padding: 5px 15px;
+    }
+  }
+}
 .body-section {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   .cities-section {
     background: #d9e2e8;
-    display: flex;
-    padding: 15px 15px 0;
-    flex-wrap: wrap;
-    justify-content: center;
+    padding: 15px;
+    position: relative;
     width: 100%;
     @media screen and (min-width: 768px) {
       justify-content: space-around;
@@ -105,15 +146,12 @@
     @media screen and (min-width: 992px) {
       width: 70%;
     }
+    h4 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
     .city {
       width: 100%;
-      margin-bottom: 15px;
-      @media screen and (min-width: 768px) {
-        width: 45%;
-      }
-      @media screen and (min-width: 992px) {
-        width: 30%;
-      }
       .city-info {
         display: inline-block;
         position: relative;
@@ -134,6 +172,11 @@
   .topics-section {
     background: #dccb3a;
     width: 100%;
+    padding: 15px;
+    h4 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
     @media screen and (min-width: 992px) {
       width: 30%;
     }
