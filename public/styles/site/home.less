@@ -184,14 +184,31 @@
 }
 .documents-section {
   background: #f7f9fa;
-  padding: 10px;
+  padding: 10px 50px;
   h4 {
     margin-top: 0;
+  }
+  .documents-anchor a {
+    background: #ffffff;
+    box-shadow: 1px 1px 1px #cacece;
+    color: #d9648d;
+    padding: 7px 10px;
+    position: relative;
+    transition: all 0.25s;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+    &:active {
+      text-decoration: none;
+      top: 2px;
+    }
   }
   .documents-container {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    margin-top: 20px;
     @media screen and (min-width: 768px) {
       justify-content: space-between;
     }
@@ -216,9 +233,11 @@
         width: 45%;
       }
       @media screen and (min-width: 992px) {
+        background: #dae3e9;
         display: flex;
         align-items: center;
-        width: 50%;
+        padding: 5px;
+        width: 48%;
       }
       @media screen and (min-width: 1200px) {
         width: 32%;

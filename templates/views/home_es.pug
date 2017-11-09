@@ -56,7 +56,8 @@ block content
 			.topics-section
 				h4.text-center Explora los datos por temas de interés
 		.documents-section
-			h4 Publicaciones
+			h4.text-center(style="color: #d9648d;") Publicaciones
+			h4.text-center Conoce que puedes hacer por tu ciudad
 			.documents-container
 				each document in data.documents
 					.document
@@ -64,6 +65,8 @@ block content
 						.document-info
 							p: strong #{document.title}
 							a.btn.btn-default.btn-xs(href=`${document.file.url}` target="_blank") PDF
+			div.text-center.documents-anchor
+				a(href="/") Ver más
 block js
 	script(src="/components/owl-carousel/dist/owl.carousel.min.js")
 	script.

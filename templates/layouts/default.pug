@@ -101,7 +101,7 @@ html
 						// Collect the nav links, forms, and other content for toggling
 						#navbar.collapse.navbar-collapse
 							ul.nav.navbar-nav
-								li: a(href='#') Descubre los datos abiertos
+								li: a.nav-discover-mobile(href='#') Descubre los datos abiertos
 								li: a(href='#') Visualizar
 								li.dropdown
 									a#dcities.dropdown-toggle(data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true")
@@ -145,6 +145,34 @@ html
 			main
 				block intro
 				+flash-messages(messages)
+				div#overlay
+					.overlay-content
+						a#close-overlay(href="#") X
+						.custom-container
+							.profile
+								.profile-icon
+									span.fa.fa-user.fa-4x
+								.profile-description
+									p.profile-description-title Ciudadano
+									p.profile-description-text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum facere animi ab eos quae corrupti culpa neque optio autem minus officiis placeat aperiam, mollitia consequuntur explicabo doloribus quo. Sapiente, suscipit.
+							.profile
+								.profile-icon
+									span.fa.fa-user.fa-4x
+								.profile-description
+									p.profile-description-title Periodista
+									p.profile-description-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, voluptates corrupti fugiat aperiam hic laudantium ab nostrum inventore, dolor, mollitia harum blanditiis provident sit qui repellendus eum? Quis, provident eaque.
+							.profile
+								.profile-icon
+									span.fa.fa-user.fa-4x
+								.profile-description
+									p.profile-description-title Analista de datos
+									p.profile-description-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fugiat ratione ipsam nam cupiditate expedita quos vero cumque facere autem pariatur, commodi quo consequatur dolores quis deleniti saepe omnis voluptate!
+							.profile
+								.profile-icon
+									span.fa.fa-user.fa-4x
+								.profile-description
+									p.profile-description-title Gobierno
+									p.profile-description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dignissimos, expedita non impedit sunt voluptatibus sapiente doloremque dicta iusto rem dolorum, soluta necessitatibus mollitia est porro voluptatum sed illo eaque!
 				block content
 			footer
 				.custom-container
@@ -199,6 +227,18 @@ html
 			  disableRubberBanding : true,
 			  disableBreakoutSelector : 'a.no-break-out'
 			});
+			
+			document.querySelector('.nav-discover').addEventListener('click', overlayContent);
+			document.querySelector('.nav-discover-mobile').addEventListener('click', overlayContent);
+			
+			document.getElementById('close-overlay').onclick = function() {
+				document.getElementById('overlay').classList.toggle('faq-open');
+			}
+
+			function overlayContent(event) {
+				document.getElementById('navbar').classList.toggle('in');
+				document.getElementById('overlay').classList.toggle('faq-open');
+			}
 
 		if user && user.canAccessKeystone
 			script(src='/keystone/js/content/editor.js')
