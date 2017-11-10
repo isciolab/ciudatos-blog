@@ -55,18 +55,36 @@ html
 								| Ciudades 
 								span.caret
 							ul.dropdown-menu(aria-labelledby="dcities-pc")
-								li: a(href="#") Bogotá
-								li: a(href="#") Medellín
-								li: a(href="#") Cali
-								li: a(href="#") Bucaramanga
-								li: a(href="#") Ibagué
-								li: a(href="#") Cartagena
-								li: a(href="#") Pereira
-								li: a(href="#") Manizales
-								li: a(href="#") Barranquilla
-						li: a(href="#") Temas
-						li: a(href="#") Publicaciones
-						li: a(href="#") Blog
+								li: a(href="/ciudades") Bogotá
+								li: a(href="/ciudades") Medellín
+								li: a(href="/ciudades") Cali
+								li: a(href="/ciudades") Bucaramanga
+								li: a(href="/ciudades") Ibagué
+								li: a(href="/ciudades") Cartagena
+								li: a(href="/ciudades") Pereira
+								li: a(href="/ciudades") Manizales
+								li: a(href="/ciudades") Barranquilla
+						li.dropdown
+							a#dtopics-pc.dropdown-toggle(data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true" href="#")
+								| Temas 
+								span.caret
+							ul.dropdown-menu(aria-labelledby="dtopics-pc")
+								li: a(href="/temas") Demografía
+								li: a(href="/temas") Habitat
+								li: a(href="/temas") Pobreza
+								li: a(href="/temas") Salud
+								li: a(href="/temas") Educación
+								li: a(href="/temas") Convivencia
+								li: a(href="/temas") Servicios públicos
+								li: a(href="/temas") Espacio público
+								li: a(href="/temas") Sostenibilidad
+						li.dropdown
+							a#dblog-pc.dropdown-toggle(data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true" href="#")
+								| Publicaciones 
+								span.caret
+							ul.dropdown-menu(aria-labelledby="dblog-pc")
+								li: a(href="#") Blog
+								li: a(href="#") Publicaciones
 						li: a(href="/sobre") Quiénes somos
 					ul.nav-social
 						li
@@ -108,18 +126,36 @@ html
 										|Ciudades 
 										span.caret
 									ul.dropdown-menu(aria-labelledby="dcities")
-										li: a(href="#") Bogotá
-										li: a(href="#") Medellín
-										li: a(href="#") Cali
-										li: a(href="#") Bucaramanga
-										li: a(href="#") Ibagué
-										li: a(href="#") Cartagena
-										li: a(href="#") Pereira
-										li: a(href="#") Manizales
-										li: a(href="#") Barranquilla
-								li: a(href='#') Temas
-								li: a(href='#') Publicaciones
-								li: a(href='#') Blog
+										li: a(href="/ciudades") Bogotá
+										li: a(href="/ciudades") Medellín
+										li: a(href="/ciudades") Cali
+										li: a(href="/ciudades") Bucaramanga
+										li: a(href="/ciudades") Ibagué
+										li: a(href="/ciudades") Cartagena
+										li: a(href="/ciudades") Pereira
+										li: a(href="/ciudades") Manizales
+										li: a(href="/ciudades") Barranquilla
+								li.dropdown
+									a#dtopics.dropdown-toggle(data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true")
+										|Temas 
+										span.caret
+									ul.dropdown-menu(aria-labelledby="dtopics")
+										li: a(href="/temas") Demografía
+										li: a(href="/temas") Habitat
+										li: a(href="/temas") Pobreza
+										li: a(href="/temas") Salud
+										li: a(href="/temas") Educación
+										li: a(href="/temas") Convivencia
+										li: a(href="/temas") Servicios públicos
+										li: a(href="/temas") Espacio público
+										li: a(href="/temas") Sostenibilidad
+								li.dropdown
+									a#dblog.dropdown-toggle(data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true")
+										|Publicaciones 
+										span.caret
+									ul.dropdown-menu(aria-labelledby="dblog")
+										li: a(href="#") Blog
+										li: a(href="#") Publicaciones
 								li: a(href='/sobre') Quiénes somos
 							ul.social-media-container
 								li.social-media
