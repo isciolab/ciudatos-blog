@@ -22,15 +22,17 @@ html
 			script(src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js")
 		//-[endif]
 
-		//- BOOTSWATCH
-		link(href="https://bootswatch.com/paper/bootstrap.css", rel="stylesheet")
-
-		//- BOOTCARDS 
-		//- http://bootcards.org/
-		link(href="//cdnjs.cloudflare.com/ajax/libs/bootcards/1.0.0/css/bootcards-desktop.min.css", rel="stylesheet")
-
 		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+		link(rel="stylesheet", href="/components/hamburger.min.css")
 		link(href="/styles/site.min.css", rel="stylesheet")
+
+		script.
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-70153879-1', 'auto');
+			ga('send', 'pageview');
 		//- SUMOME
 		//- script(src="//load.sumome.com/",data-sumo-site-id="e11e4421aaa15d86d73e3e4aa153211ba045af6a7e759175a96d400b04e42276",async="async")
 
@@ -42,241 +44,71 @@ html
 
 	//- HTML BODY
 	body
-		#wrapper
+		#wrapper.flex.flex--column
 			header
-				nav.nav-desktop.hidden-xs
-					a.nav-discover(href="#")
-						span.fa.fa-user
-						span.discover-text Preguntas frecuentes
-					ul.nav-links
-						li: a(href="/visualizacion") Visualizar
-						li.dropdown
-							a#dcities-pc.dropdown-toggle(data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true" href="#")
-								| Ciudades 
-								span.caret
-							ul.dropdown-menu(aria-labelledby="dcities-pc")
-								li: a(href="/ciudades") Bogotá
-								li: a(href="/ciudades") Medellín
-								li: a(href="/ciudades") Cali
-								li: a(href="/ciudades") Bucaramanga
-								li: a(href="/ciudades") Ibagué
-								li: a(href="/ciudades") Cartagena
-								li: a(href="/ciudades") Pereira
-								li: a(href="/ciudades") Manizales
-								li: a(href="/ciudades") Barranquilla
-						li.dropdown
-							a#dtopics-pc.dropdown-toggle(data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true" href="#")
-								| Temas 
-								span.caret
-							ul.dropdown-menu(aria-labelledby="dtopics-pc")
-								li: a(href="/temas") Demografía
-								li: a(href="/temas") Habitat
-								li: a(href="/temas") Pobreza
-								li: a(href="/temas") Salud
-								li: a(href="/temas") Educación
-								li: a(href="/temas") Convivencia
-								li: a(href="/temas") Servicios públicos
-								li: a(href="/temas") Espacio público
-								li: a(href="/temas") Sostenibilidad
-						li.dropdown
-							a#dblog-pc.dropdown-toggle(data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true" href="#")
-								| Publicaciones 
-								span.caret
-							ul.dropdown-menu(aria-labelledby="dblog-pc")
-								li: a(href="/informes") Blog
-								li: a(href="/informes") Publicaciones
-						li: a(href="/sobre") Quiénes somos
-					ul.nav-social
-						li
-							a(href="#")
-								span.fa.fa-stack
-									i.fa.fa-circle.fa-stack-2x
-									i.fa.fa-facebook.fa-stack-1x.fa-inverse
-						li
-							a(href="#")
-								span.fa.fa-stack
-									i.fa.fa-circle.fa-stack-2x
-									i.fa.fa-twitter.fa-stack-1x.fa-inverse
-						li
-							a(href="#")
-								span.fa.fa-stack
-									i.fa.fa-circle.fa-stack-2x
-									i.fa.fa-linkedin.fa-stack-1x.fa-inverse
-						li
-							a(href="#")
-								span.fa.fa-stack
-									i.fa.fa-circle.fa-stack-2x
-									i.fa.fa-youtube-play.fa-stack-1x.fa-inverse
-				nav.navbar.navbar-default.visible-xs
-					.container-fluid
-						.navbar-header
-							button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false')
-								span.sr-only Toggle navigation
-								span.icon-bar
-								span.icon-bar
-								span.icon-bar
-							a.navbar-brand(href='/'): img.img-responsive(src="/images/logo.png", alt="Ciudatos logo")
-						// Collect the nav links, forms, and other content for toggling
-						#navbar.collapse.navbar-collapse
-							ul.nav.navbar-nav
-								li: a.nav-discover-mobile(href='#') Descubre los datos abiertos
-								li: a(href='#') Visualizar
-								li.dropdown
-									a#dcities.dropdown-toggle(data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true")
-										|Ciudades 
-										span.caret
-									ul.dropdown-menu(aria-labelledby="dcities")
-										li: a(href="/ciudades") Bogotá
-										li: a(href="/ciudades") Medellín
-										li: a(href="/ciudades") Cali
-										li: a(href="/ciudades") Bucaramanga
-										li: a(href="/ciudades") Ibagué
-										li: a(href="/ciudades") Cartagena
-										li: a(href="/ciudades") Pereira
-										li: a(href="/ciudades") Manizales
-										li: a(href="/ciudades") Barranquilla
-								li.dropdown
-									a#dtopics.dropdown-toggle(data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true")
-										|Temas 
-										span.caret
-									ul.dropdown-menu(aria-labelledby="dtopics")
-										li: a(href="/temas") Demografía
-										li: a(href="/temas") Habitat
-										li: a(href="/temas") Pobreza
-										li: a(href="/temas") Salud
-										li: a(href="/temas") Educación
-										li: a(href="/temas") Convivencia
-										li: a(href="/temas") Servicios públicos
-										li: a(href="/temas") Espacio público
-										li: a(href="/temas") Sostenibilidad
-								li.dropdown
-									a#dblog.dropdown-toggle(data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true")
-										|Publicaciones 
-										span.caret
-									ul.dropdown-menu(aria-labelledby="dblog")
-										li: a(href="/informes") Blog
-										li: a(href="/informes") Publicaciones
-								li: a(href='/sobre') Quiénes somos
-							ul.social-media-container
-								li.social-media
-									a(href="#")
-										span.fa.fa-stack
-											i.fa.fa-circle.fa-stack-2x
-											i.fa.fa-facebook.fa-stack-1x.fa-inverse
-								li.social-media
-									a(href="#")
-										span.fa.fa-stack
-											i.fa.fa-circle.fa-stack-2x
-											i.fa.fa-twitter.fa-stack-1x.fa-inverse
-								li.social-media
-									a(href="#")
-										span.fa.fa-stack
-											i.fa.fa-circle.fa-stack-2x
-											i.fa.fa-linkedin.fa-stack-1x.fa-inverse
-								li.social-media
-									a(href="#")
-										span.fa.fa-stack
-											i.fa.fa-circle.fa-stack-2x
-											i.fa.fa-youtube-play.fa-stack-1x.fa-inverse
+				.container-fluid
+					.header-container
+						.hidden-xs: nav.flex.flex--space-between.flex--vertical-align.flex--wrap
+							a.anchor-white.anchor(href="/"): img(src="/images/logo.png", alt="Ciudatos logo" width="100px")
+							a.anchor-white.anchor(href="#") Visualizar
+							a.anchor-white.anchor(href="#") Ciudades
+							a.anchor-white.anchor(href="#") Temas
+							a.anchor-white.anchor(href="#") Publicaciones
+							a.anchor-white.anchor(href="#") Quiénes somos
+							a.anchor-white.anchor(href="#")
+								span.fa.fa-users
+								| Explora los datos abiertos
+						.visible-xs: nav.flex.flex--space-between.flex--vertical-align.flex--wrap
+							a.anchor-white.anchor(href="/"): img(src="/images/logo.png", alt="Ciudatos logo" width="100px")
+							button.hamburger.hamburger--squeeze(type="button")
+								span.hamburger-box: span.hamburger-inner
+					.mobile-nav.flex.flex--column
+							a.anchor-white.anchor(href="#") Visualizar
+							a.anchor-white.anchor(href="#") Ciudades
+							a.anchor-white.anchor(href="#") Temas
+							a.anchor-white.anchor(href="#") Publicaciones
+							a.anchor-white.anchor(href="#") Quiénes somos
 			main
 				block intro
 				+flash-messages(messages)
-				div#overlay
-					.overlay-content
-						a#close-overlay(href="#") X
-						.custom-container
-							.profile
-								.profile-icon
-									span.fa.fa-user.fa-4x
-								.profile-description
-									p.profile-description-title Ciudadano
-									p.profile-description-text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum facere animi ab eos quae corrupti culpa neque optio autem minus officiis placeat aperiam, mollitia consequuntur explicabo doloribus quo. Sapiente, suscipit.
-							.profile
-								.profile-icon
-									span.fa.fa-user.fa-4x
-								.profile-description
-									p.profile-description-title Periodista
-									p.profile-description-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, voluptates corrupti fugiat aperiam hic laudantium ab nostrum inventore, dolor, mollitia harum blanditiis provident sit qui repellendus eum? Quis, provident eaque.
-							.profile
-								.profile-icon
-									span.fa.fa-user.fa-4x
-								.profile-description
-									p.profile-description-title Analista de datos
-									p.profile-description-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fugiat ratione ipsam nam cupiditate expedita quos vero cumque facere autem pariatur, commodi quo consequatur dolores quis deleniti saepe omnis voluptate!
-							.profile
-								.profile-icon
-									span.fa.fa-user.fa-4x
-								.profile-description
-									p.profile-description-title Gobierno
-									p.profile-description-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dignissimos, expedita non impedit sunt voluptatibus sapiente doloremque dicta iusto rem dolorum, soluta necessitatibus mollitia est porro voluptatum sed illo eaque!
 				block content
 			footer
-				.custom-container
-					.footer-info
+				.container: .footer-container.flex.flex--space-between.flex--vertical-align
+					.footer-info.text-color-white
 						p Fundación Corona
-						p Calle 70 # 7-30 Bogotá, Colombia
-						p Tel: (57+1) 4000031
-						p Información:
+						br
+						p Calle 70 #7-30 Bogotá, Colombia
+						p Tel: (57+1)400 00 31
+						p Información
 						p comunicaciones@fcorona.org
-						p Línea Ética:
-						p seamosintegrosfundacion@fcorona.org
-					ul.footer-social
-						li
-							a(href="#")
-								span.fa.fa-stack.fa-lg
-									i.fa.fa-circle.fa-stack-2x
-									i.fa.fa-facebook.fa-stack-1x.fa-inverse
-						li
-							a(href="#")
-								span.fa.fa-stack.fa-lg
-									i.fa.fa-circle.fa-stack-2x
-									i.fa.fa-twitter.fa-stack-1x.fa-inverse
-						li
-							a(href="#")
-								span.fa.fa-stack.fa-lg
-									i.fa.fa-circle.fa-stack-2x
-									i.fa.fa-linkedin.fa-stack-1x.fa-inverse
-						li
-							a(href="#")
-								span.fa.fa-stack.fa-lg
-									i.fa.fa-circle.fa-stack-2x
-									i.fa.fa-youtube-play.fa-stack-1x.fa-inverse
-		//- Google Analytics
-		script.
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-70153879-1', 'auto');
-			ga('send', 'pageview');
+						p Línea Ética
+						p seamoosintegrosfundacion@fcorona.org
+					.footer-icons
+						a.text-color-black(href="https://www.facebook.com/FundCorona/" target="_blank" rel="noopene noreferrer")
+							span.fa-stack.fa-lg
+								i.fa.fa-circle.fa-stack-2x.fa-inverse
+								i.fa.fa-facebook.fa-stack-1x
+						a.text-color-black(href="https://twitter.com/fundcorona" target="_blank" rel="noopener noreferrer")
+							span.fa-stack.fa-lg
+								i.fa.fa-circle.fa-stack-2x.fa-inverse
+								i.fa.fa-twitter.fa-stack-1x
+						a.text-color-black(href="https://www.linkedin.com/company/6411892/" target="_blank" rel="noopener noreferrer")
+							span.fa-stack.fa-lg
+								i.fa.fa-circle.fa-stack-2x.fa-inverse
+								i.fa.fa-linkedin.fa-stack-1x
+						a.text-color-black(href="https://www.youtube.com/user/fundacioncorona" target="_blank" rel="noopener noreferrer")
+							span.fa-stack.fa-lg
+								i.fa.fa-circle.fa-stack-2x.fa-inverse
+								i.fa.fa-youtube-play.fa-stack-1x
 
 		script(src='/js/jquery/jquery-1.11.3.min.js')
 		script(src='/js/bootstrap/bootstrap-3.3.5.min.js')
-		script(src='//cdnjs.cloudflare.com/ajax/libs/bootcards/1.0.0/js/bootcards.min.js')
-
-		//- Bootcards
-		script.
-			bootcards.init( {
-			  offCanvasBackdrop : true,
-			  offCanvasHideOnMainClick : true,
-			  enableTabletPortraitMode : true,
-			  disableRubberBanding : true,
-			  disableBreakoutSelector : 'a.no-break-out'
-			});
-			
-			document.querySelector('.nav-discover').addEventListener('click', overlayContent);
-			document.querySelector('.nav-discover-mobile').addEventListener('click', overlayContent);
-			
-			document.getElementById('close-overlay').onclick = function() {
-				document.getElementById('overlay').classList.toggle('faq-open');
-			}
-
-			function overlayContent(event) {
-				document.getElementById('navbar').classList.toggle('in');
-				document.getElementById('overlay').classList.toggle('faq-open');
-			}
 
 		if user && user.canAccessKeystone
 			script(src='/keystone/js/content/editor.js')
-			
+		script.
+			$('.hamburger').click(function() {
+				$(this).toggleClass('is-active');
+				$('.mobile-nav').toggleClass('opened');
+			})
 		block js
