@@ -1,24 +1,24 @@
-var keystone = require('keystone');
+const keystone = require('keystone');
+const Document = keystone.list('Document').model;
+const _ = require('lodash');
 
 exports = module.exports = function (req, res) {
+	const view = new keystone.View(req, res);
+	const locals = res.locals;
 
-	var view = new keystone.View(req, res);
-	var locals = res.locals;
+  locals.data = {
+  	documents: [],
+  };
 
-	// locals.section is used to set the currently selected
-	// item in the header navigation.
-	locals.section = 'home';
+	view.on('init', function(next) {
+		Document.find({ state: 'published'}, (err, results) => {
+			if (err) {
+				next(err)
+			}
+			locals.data.documents = _.sampleSize(results, 3);
+			next();
+		});
+	});
 
-	if (req.params.lang) {
-    	if(["es","en","it"].indexOf(req.params.lang) > -1){
-	        req.setLocale(req.params.lang);		
-    	}
-    } else{
-        req.setLocale("es");
-    }
-
-    locals.language = req.getLocale();
-
-	// Render the view
 	view.render('home');
 };

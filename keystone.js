@@ -3,8 +3,8 @@
 require('dotenv').config();
 
 // Require keystone
-var keystone = require('keystone'),
-	i18n= require('i18n');
+const keystone = require('keystone');
+const i18n = require('i18n');
 
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
@@ -19,9 +19,7 @@ keystone.init({
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'pug',
-
 	'emails': 'templates/emails',
-
 	'auto update': true,
 	'session': true,
 	'auth': true,

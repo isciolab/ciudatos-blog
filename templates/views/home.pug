@@ -1,0 +1,85 @@
+extends ../layouts/default
+
+block css
+	link(rel="stylesheet", href="/components/owl-carousel/dist/assets/owl.carousel.min.css")
+	link(rel="stylesheet", href="/components/owl-carousel/dist/assets/owl.theme.default.min.css")
+
+block content
+	section.intro-section
+		.container-fluid: .row
+			.col-sm-6
+				.intro-info.flex.flex--column.flex--center.flex--vertical-align
+					img(src="/images/logo.png", alt="Logo Ciudatos")
+					p.text-color-white.text-center.shrink Plataforma de datos abiertos sobre ciudades y temas de Colombia para el fortalecimiento de la democracia y participación ciudadana.
+					.social-icons
+						a.facebook(href="https://www.facebook.com/FundCorona/" target="_blank" rel="noopene noreferrer")
+							span.fa-stack
+								i.fa.fa-circle.fa-stack-2x
+								i.fa.fa-facebook.fa-stack-1x.fa-inverse
+						a.twitter(href="https://twitter.com/fundcorona" target="_blank" rel="noopener noreferrer")
+							span.fa-stack
+								i.fa.fa-circle.fa-stack-2x
+								i.fa.fa-twitter.fa-stack-1x.fa-inverse
+						a.linkedin(href="https://www.linkedin.com/company/6411892/" target="_blank" rel="noopener noreferrer")
+							span.fa-stack
+								i.fa.fa-circle.fa-stack-2x
+								i.fa.fa-linkedin.fa-stack-1x.fa-inverse
+						a.youtube(href="https://www.youtube.com/user/fundacioncorona" target="_blank" rel="noopener noreferrer")
+							span.fa-stack
+								i.fa.fa-circle.fa-stack-2x
+								i.fa.fa-youtube-play.fa-stack-1x.fa-inverse
+	.section-cities
+		h1.section-title.text-center.text-color-blue: a.anchor.anchor-blue(href="/ciudades") Ciudades
+		h3.section-subtitle.text-center.text-color-blue Explora los datos por temas de interés
+		.container-fluid: .owl-carousel.owl-theme
+			a.city-item(href="/ciudades")
+				.city-info
+					img(src="/img/city.jpg", alt="Ciudad")
+					.city-name.text-size-x-large.text-color-white Medellín
+			a.city-item(href="/ciudades")
+				.city-info
+					img(src="/img/city.jpg", alt="Ciudad")
+					.city-name.text-size-x-large.text-color-white Cali
+			a.city-item(href="/ciudades")
+				.city-info
+					img(src="/img/city.jpg", alt="Ciudad")
+					.city-name.text-size-x-large.text-color-white Bucaramanga
+			a.city-item(href="/ciudades")
+				.city-info
+					img(src="/img/city.jpg", alt="Ciudad")
+					.city-name.text-size-x-large.text-color-white Ibagué
+			a.city-item(href="/ciudades")
+				.city-info
+					img(src="/img/city.jpg", alt="Ciudad")
+					.city-name.text-size-x-large.text-color-white Bogotá
+			a.city-item(href="/ciudades")
+				.city-info
+					img(src="/img/city.jpg", alt="Ciudad")
+					.city-name.text-size-x-large.text-color-white Barranquilla
+			a.city-item(href="/ciudades")
+				.city-info
+					img(src="/img/city.jpg", alt="Ciudad")
+					.city-name.text-size-x-large.text-color-white Cartagena
+			a.city-item(href="/ciudades")
+				.city-info
+					img(src="/img/city.jpg", alt="Ciudad")
+					.city-name.text-size-x-large.text-color-white Santa Marta
+	.section-topics
+		h1.section-title.text-center.text-color-blue: a.anchor.anchor-blue(href="#") Temas
+		h3.section-subtitle.text-center.text-color-blue Explora los datos por temas de interés
+	.section-documents
+		h1.section-title.text-center.text-color-blue: a.anchor.anchor-blue(href="#") Publicaciones
+		h3.section-subtitle.text-center.text-color-blue Explora los datos por temas de interés
+		.container-fluid: .row
+			each document in data.documents
+				.col-md-4.col-sm-6: .document-item
+					img.img-responsive(src="/img/post.jpg", alt="")
+					.document-info.text-size-large.text-color-white= document.title
+					a.document-url.text-size-x-large.anchor.anchor-white(href=`${document.file.url}`) PDF
+	.section-data
+		h1.section-title.text-center.text-color-blue Bases de datos
+
+block js
+	script(src="/components/owl-carousel/dist/owl.carousel.min.js")
+	script.
+		$(".owl-carousel").owlCarousel({center:!0,dots:!1,items:1,loop:!0,margin:20,slideBy:1,responsive:{768:{items:2,slideBy:2},992:{items:4,slideBy:4}}});

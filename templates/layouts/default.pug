@@ -107,8 +107,5 @@ html
 		if user && user.canAccessKeystone
 			script(src='/keystone/js/content/editor.js')
 		script.
-			$('.hamburger').click(function() {
-				$(this).toggleClass('is-active');
-				$('.mobile-nav').toggleClass('opened');
-			})
+			$(".hamburger").click(function(){$(this).toggleClass("is-active"),$(".mobile-nav").toggleClass("opened")});
 		block js

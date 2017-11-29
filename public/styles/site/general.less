@@ -36,6 +36,15 @@ a:visited {
     }
   }
 }
+.anchor-blue {
+  color: #115ea6;
+  &:hover { 
+    color: #115ea6;
+    &:before {
+      background: #115ea6;
+    }
+  }
+}
 /* ==================== */
 /*        Layout        */
 /* ==================== */
@@ -70,14 +79,23 @@ a:visited {
 .flex--space-evenly {
   justify-content: space-evenly;
 }
+.flex--item-center {
+  align-self: center;
+}
 /* ==================== */
 /*         Text         */
 /* ==================== */
+.shrink {
+  padding: 0 7vw;
+}
 .text-color-white {
   color: white;
 }
 .text-color-black {
   color: black;
+}
+.text-color-blue {
+  color: #115ea6;
 }
 .text-size-xx-small {
   font-size: xx-small;
