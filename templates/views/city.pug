@@ -3,6 +3,7 @@ block css
   style.
     main {
       background: #f0f4f6 !important;
+      padding: 0;
     }
     .navbar-default {
       margin-bottom: 0 !important;
@@ -42,14 +43,6 @@ block css
     }
 block content
   #cities-carousel.carousel.slide(data-ride="carousel")
-    ol.carousel-indicators
-      li(data-target="#cities-carousel" data-slide-to="0" class="active")
-      li(data-target="#cities-carousel" data-slide-to="1")
-      li(data-target="#cities-carousel" data-slide-to="2")
-      li(data-target="#cities-carousel" data-slide-to="3")
-      li(data-target="#cities-carousel" data-slide-to="4")
-      li(data-target="#cities-carousel" data-slide-to="5")
-
     .carousel-inner(role="listbox")
       .item.active(style="background-image: url(/img/slider-city.jpg)" data-city="#bogota")
         span Bogotá
@@ -63,6 +56,10 @@ block content
         span Cartagena
       .item(style="background-image: url(/img/slider-city.jpg)" data-city="#manizales")
         span Manizales
+      .item(style="background-image: url(/img/slider-city.jpg)" data-city="#bucaramanga")
+        span Bucaramanga
+      .item(style="background-image: url(/img/slider-city.jpg)" data-city="#ibague")
+        span Ibagué
 
     a.left.carousel-control(href="#cities-carousel" data-slide="prev" role="button")
       span.glyphicon.glyphicon-chevron-left
@@ -100,12 +97,31 @@ block content
       p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo ex ab iusto neque officia cumque doloremque illo! Excepturi veniam, cum natus officia harum quod dolorem temporibus, obcaecati voluptas laudantium provident?
       p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, aspernatur. Repudiandae nihil laudantium ullam, sapiente numquam quisquam ipsa eius sed animi in corporis a commodi porro ea repellat iusto facilis.
       img.img-responsive(src="/img/infocity.png", alt="Infografía")
+    #bucaramanga.city-profile
+      h4: strong Bucaramanga
+      p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo ex ab iusto neque officia cumque doloremque illo! Excepturi veniam, cum natus officia harum quod dolorem temporibus, obcaecati voluptas laudantium provident?
+      p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, aspernatur. Repudiandae nihil laudantium ullam, sapiente numquam quisquam ipsa eius sed animi in corporis a commodi porro ea repellat iusto facilis.
+      img.img-responsive(src="/img/infocity.png", alt="Infografía")
+    #ibague.city-profile
+      h4: strong Ibagué
+      p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo ex ab iusto neque officia cumque doloremque illo! Excepturi veniam, cum natus officia harum quod dolorem temporibus, obcaecati voluptas laudantium provident?
+      p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, aspernatur. Repudiandae nihil laudantium ullam, sapiente numquam quisquam ipsa eius sed animi in corporis a commodi porro ea repellat iusto facilis.
+      img.img-responsive(src="/img/infocity.png", alt="Infografía")
+
 block js
   script.
     $(document).ready(function() {
-      var actual = $('.item.active').attr('data-city');
-      $('.city-profile').hide();
-      $(actual).show();
+      var hash = window.location.hash;
+      if (hash) {
+        $('.item.active').removeClass('active');
+        $('div[data-city="' + hash + '"').addClass('active');
+        $('.city-profile').hide();
+        $(hash).show();
+      } else {
+        var actual = $('.item.active').attr('data-city');
+        $('.city-profile').hide();
+        $(actual).show();
+      }
       $('.carousel').carousel({ interval: false })
       $('#cities-carousel').on('slid.bs.carousel', function(event) {
         var city = $(event.relatedTarget).attr('data-city');
