@@ -49,12 +49,12 @@ html
 				.container-fluid
 					.header-container
 						.hidden-xs: nav.flex.flex--space-between.flex--vertical-align.flex--wrap
-							a.anchor-white.anchor(href="/"): img(src="/images/logo.png", alt="Ciudatos logo" width="100px")
-							a.anchor-white.anchor(href="#") Visualizar
-							a.anchor-white.anchor(href="#") Ciudades
-							a.anchor-white.anchor(href="#") Temas
+							a(href="/"): img(src="/images/logo.png", alt="Ciudatos logo" width="100px")
+							a.anchor-white.anchor(href="/visualizacion") Visualizar
+							a.anchor-white.anchor(href="/ciudades") Ciudades
+							a.anchor-white.anchor(href="/temas") Temas
 							a.anchor-white.anchor(href="#") Publicaciones
-							a.anchor-white.anchor(href="#") Quiénes somos
+							a.anchor-white.anchor(href="/about") Quiénes somos
 							a.anchor-white.anchor(href="#")
 								span.fa.fa-users
 								| Explora los datos abiertos
@@ -63,11 +63,11 @@ html
 							button.hamburger.hamburger--squeeze(type="button")
 								span.hamburger-box: span.hamburger-inner
 					.mobile-nav.flex.flex--column
-							a.anchor-white.anchor(href="#") Visualizar
-							a.anchor-white.anchor(href="#") Ciudades
-							a.anchor-white.anchor(href="#") Temas
+							a.anchor-white.anchor(href="/visualizacion") Visualizar
+							a.anchor-white.anchor(href="/ciudades") Ciudades
+							a.anchor-white.anchor(href="/temas") Temas
 							a.anchor-white.anchor(href="#") Publicaciones
-							a.anchor-white.anchor(href="#") Quiénes somos
+							a.anchor-white.anchor(href="/about") Quiénes somos
 			main
 				block intro
 				+flash-messages(messages)
