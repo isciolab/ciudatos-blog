@@ -65,6 +65,38 @@
     margin-bottom: 0;
   }
 }
+/* Topics */
+.topics-container:::-webkit-scrollbar {
+  width: 12px;
+}
+.topics-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+.topics-container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.topics-container {
+  height: 300px;
+  overflow: auto
+}
+.topic-item {
+  background: #e5d35b;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  .topic-name {
+    bottom: 10px;
+    position: absolute;
+  }
+}
 /* General for this view */
 .section-title {
   -ms-transform: translateX(-50%);
@@ -75,7 +107,7 @@
   font-weight: bold;
   left: 50%;
   margin-top: 0;
-  padding: 0 1vw;
+  padding: 0 1.5vw;
   position: relative;
   transform: translateX(-50%);
 }
