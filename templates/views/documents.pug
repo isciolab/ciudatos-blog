@@ -1,54 +1,24 @@
 extends ../layouts/default
 
 mixin documentcard(document)
-	div.col-md-4.col-sm-4
-		.card
-			.card-image
-				img(src=document._.image.lpad(200,150)).img-responsive
-			.card-body
-				p #{document.title}
-				a(href=`${document.file.url}`).btn.btn-default.btn-xs PDF
-		//- .panel.panel-default
-		//- 	.panel-heading.clearfix
-		//- 		if document.image.exists
-					
-		//- 	.panel-body
-		//- 		h4.panel-title #{document.title}
-		//- 		a(href=`${document.file.url}`).btn.btn-default.btn-xs PDF
+	.col-md-4.col-sm-6: .document-item
+		img.img-responsive(src="/img/post.jpg", alt="")
+		.document-info.text-size-large.text-color-white= document.title
+		a.document-url.text-size-x-large.anchor.anchor-white(href=`${document.file.url}` target="_blank" rel="noopener noreferrer") PDF
 
 block css
 	style.
-		.card {
-			align-items: center;
-			background: #dde5ea;
-			display: flex;
-			flex-wrap: wrap;
-			padding: 10px;
-			margin-bottom: 10px;
-			width: 100%;
+		main {
+			padding-top: 3vw;
 		}
-		.card-image {
-			width: 100%;
+		.document-item {
+			margin-bottom: 30px;
 		}
-		.card-image img {
-			margin: 0 auto;
-		}
-		.card-body {
-			text-align: center;
-			width: 100%;
-		}
-		@media (min-width: 992px) {
-			.card-image {
-				width: 150px;
-			}
-			.card-body {
-				padding: 10px;
-				text-align: left;
-				width: calc(100% - 150px);
-			}
+		.col-md-4.col-sm-6:nth-last-child(-n+1) .document-item {
+			margin-bottom: 0;
 		}
 block content
 	.container
-		.row.home-section(style="margin-top: 20px")
+		.row
 			each document,i in data.documents
-					+documentcard(document)
+				+documentcard(document)
