@@ -52,7 +52,7 @@ html
 							a(href="/"): img(src="/images/logo.png", alt="Ciudatos logo" width="100px")
 							each link in navLinks
 								a.anchor-white.anchor(href=`${link.href}` class=(section === link.key ? 'link-active':''))= link.label
-							a.anchor-white.anchor(href="#")
+							a.anchor-white.anchor#open-overlay(href="#")
 								span.fa.fa-users
 								| Explora los datos abiertos
 						.visible-xs: nav.flex.flex--space-between.flex--vertical-align.flex--wrap
@@ -65,6 +65,36 @@ html
 			main
 				block intro
 				+flash-messages(messages)
+				.main-overlay
+					.main-overlay-content
+						.flex(style="margin-bottom: 3vw")
+							div(style="flex: 1 0 auto")
+							button.close-overlay x
+						.flex.flex--column.flex--vertical-align
+							.main-overlay-item.flex.flex--vertical-align.flex--wrap
+								.item-icon
+									span.fa.fa-user
+								.item-info.flex.flex--column
+									h1.item-info-title Ciudadano
+									p.item-info-description Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsa voluptatibus eos eaque dignissimos. At velit cupiditate blanditiis sint assumenda excepturi vero magni dolorum commodi quae magnam molestiae eveniet natus cum incidunt, quas doloremque! Ullam dolore minus obcaecati placeat cum, perferendis veniam similique porro deleniti excepturi vel accusamus exercitationem optio voluptatem quae quisquam explicabo cumque autem quidem voluptatibus a soluta animi quo. Veniam doloremque sapiente fuga laboriosam id vitae? Adipisci.
+							.main-overlay-item.flex.flex--vertical-align.flex--wrap
+								.item-icon
+									span.fa.fa-user
+								.item-info.flex.flex--column
+									h1.item-info-title Periodista
+									p.item-info-description Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsa voluptatibus eos eaque dignissimos. At velit cupiditate blanditiis sint assumenda excepturi vero magni dolorum commodi quae magnam molestiae eveniet natus cum incidunt, quas doloremque! Ullam dolore minus obcaecati placeat cum, perferendis veniam similique porro deleniti excepturi vel accusamus exercitationem optio voluptatem quae quisquam explicabo cumque autem quidem voluptatibus a soluta animi quo. Veniam doloremque sapiente fuga laboriosam id vitae? Adipisci.
+							.main-overlay-item.flex.flex--vertical-align.flex--wrap
+								.item-icon
+									span.fa.fa-user
+								.item-info.flex.flex--column
+									h1.item-info-title Analista de datos
+									p.item-info-description Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsa voluptatibus eos eaque dignissimos. At velit cupiditate blanditiis sint assumenda excepturi vero magni dolorum commodi quae magnam molestiae eveniet natus cum incidunt, quas doloremque! Ullam dolore minus obcaecati placeat cum, perferendis veniam similique porro deleniti excepturi vel accusamus exercitationem optio voluptatem quae quisquam explicabo cumque autem quidem voluptatibus a soluta animi quo. Veniam doloremque sapiente fuga laboriosam id vitae? Adipisci.
+							.main-overlay-item.flex.flex--vertical-align.flex--wrap
+								.item-icon
+									span.fa.fa-user
+								.item-info.flex.flex--column
+									h1.item-info-title Gobierno
+									p.item-info-description Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsa voluptatibus eos eaque dignissimos. At velit cupiditate blanditiis sint assumenda excepturi vero magni dolorum commodi quae magnam molestiae eveniet natus cum incidunt, quas doloremque! Ullam dolore minus obcaecati placeat cum, perferendis veniam similique porro deleniti excepturi vel accusamus exercitationem optio voluptatem quae quisquam explicabo cumque autem quidem voluptatibus a soluta animi quo. Veniam doloremque sapiente fuga laboriosam id vitae? Adipisci.
 				block content
 			footer
 				.container: .footer-container.flex.flex--space-between.flex--vertical-align
@@ -102,4 +132,11 @@ html
 			script(src='/keystone/js/content/editor.js')
 		script.
 			$(".hamburger").click(function(){$(this).toggleClass("is-active"),$(".mobile-nav").toggleClass("opened")});
+			$("#open-overlay").click(function(event) {
+				event.preventDefault();
+				$('.main-overlay').toggleClass('shown');
+			})
+			$('.close-overlay').click(function() {
+				$('.main-overlay').removeClass('shown');
+			})
 		block js

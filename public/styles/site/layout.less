@@ -67,6 +67,7 @@ main {
   -webkit-box-flex: 1 0 auto;
   -webkit-flex: 1 0 auto;
   padding-bottom: 3vw;
+  position: relative;
 }
 footer {
   background-color: @footer-color;
@@ -94,4 +95,84 @@ footer {
 }
 .link-active {
   color: yellow;
+}
+.main-overlay.shown {
+  width: 100%;
+  -webkit-transition: all 800ms cubic-bezier(0.535, 0.200, 0.460, 1); /* older webkit */
+  -webkit-transition: all 800ms cubic-bezier(0.535, 0.200, 0.460, 1.170); 
+  -moz-transition: all 800ms cubic-bezier(0.535, 0.200, 0.460, 1.170); 
+  -o-transition: all 800ms cubic-bezier(0.535, 0.200, 0.460, 1.170); 
+  transition: all 800ms cubic-bezier(0.535, 0.200, 0.460, 1.170); /* custom */
+  transition-delay: 0s;
+  .main-overlay-content {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all 250ms cubic-bezier(0.895, 0.030, 0.685, 0.220) 800ms; 
+    -moz-transition: all 250ms cubic-bezier(0.895, 0.030, 0.685, 0.220) 800ms; 
+    -o-transition: all 250ms cubic-bezier(0.895, 0.030, 0.685, 0.220) 800ms; 
+    transition: all 250ms cubic-bezier(0.895, 0.030, 0.685, 0.220) 800ms; /* easeInQuart */ 
+  }
+}
+.main-overlay {
+  background-color: rgba(174, 202, 202, 0.95);
+  height: 100%;
+  right: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 0;
+  z-index: 5;
+  -webkit-transition: all 800ms cubic-bezier(0.535, 0.200, 0.460, 1); /* older webkit */
+  -webkit-transition: all 800ms cubic-bezier(0.535, 0.200, 0.460, 1.170); 
+  -moz-transition: all 800ms cubic-bezier(0.535, 0.200, 0.460, 1.170); 
+  -o-transition: all 800ms cubic-bezier(0.535, 0.200, 0.460, 1.170); 
+  transition: all 800ms cubic-bezier(0.535, 0.200, 0.460, 1.170); /* custom */
+  transition-delay: 250ms;
+  .close-overlay {
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    color: #d75057;
+  }
+  .main-overlay-content {
+    padding: 5vw;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 250ms cubic-bezier(0.895, 0.030, 0.685, 0.220); 
+    -moz-transition: all 250ms cubic-bezier(0.895, 0.030, 0.685, 0.220); 
+    -o-transition: all 250ms cubic-bezier(0.895, 0.030, 0.685, 0.220); 
+    transition: all 250ms cubic-bezier(0.895, 0.030, 0.685, 0.220);
+    transition-delay: 0s;
+  }
+  .main-overlay-item {
+    margin-bottom: 3vw;
+  }
+  .item-icon {
+    font-size: 50px;
+    width: 100%;
+    span {
+      color: #d75057;
+    }
+    @media only screen and (min-width: 768px) {
+      width: 15%;
+      font-size: 60px;
+      span {
+        color: #d75057;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+  .item-info {
+    width: 100%;
+    @media only screen and (min-width: 768px) {
+      width: 85%;
+    }
+    .item-info-title {
+      color: #d75057;
+      margin: 5px 0;
+      font-size: 25px;
+    }
+  }
 }
