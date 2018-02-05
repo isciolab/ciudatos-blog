@@ -11,7 +11,6 @@ html
 
 		title= title || 'Ciudatos'
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
-		//- This file provides the default styling for the KeystoneJS Content Editor
 		if user && user.canAccessKeystone
 			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
 
@@ -35,11 +34,7 @@ html
 			ga('send', 'pageview');
 		//- SUMOME
 		//- script(src="//load.sumome.com/",data-sumo-site-id="e11e4421aaa15d86d73e3e4aa153211ba045af6a7e759175a96d400b04e42276",async="async")
-
-		//- Include template-specific stylesheets by extending the css block
 		block css
-
-		//- Add any other template-specific HEAD tags by extending the head block
 		block head
 
 	//- HTML BODY
@@ -67,34 +62,17 @@ html
 				+flash-messages(messages)
 				.main-overlay
 					.main-overlay-content
-						.flex(style="margin-bottom: 3vw")
-							div(style="flex: 1 0 auto")
+						.flex.flex--space-between(style="margin-bottom: 20px; align-items: center")
+							h1.text-center.main-overlay-title ¿Porqué explorar y utilizar los datos abiertos?
 							button.close-overlay x
 						.flex.flex--column.flex--vertical-align
-							.main-overlay-item.flex.flex--vertical-align.flex--wrap
-								.item-icon
-									span.fa.fa-user
-								.item-info.flex.flex--column
-									h1.item-info-title Ciudadano
-									p.item-info-description Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsa voluptatibus eos eaque dignissimos. At velit cupiditate blanditiis sint assumenda excepturi vero magni dolorum commodi quae magnam molestiae eveniet natus cum incidunt, quas doloremque! Ullam dolore minus obcaecati placeat cum, perferendis veniam similique porro deleniti excepturi vel accusamus exercitationem optio voluptatem quae quisquam explicabo cumque autem quidem voluptatibus a soluta animi quo. Veniam doloremque sapiente fuga laboriosam id vitae? Adipisci.
-							.main-overlay-item.flex.flex--vertical-align.flex--wrap
-								.item-icon
-									span.fa.fa-user
-								.item-info.flex.flex--column
-									h1.item-info-title Periodista
-									p.item-info-description Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsa voluptatibus eos eaque dignissimos. At velit cupiditate blanditiis sint assumenda excepturi vero magni dolorum commodi quae magnam molestiae eveniet natus cum incidunt, quas doloremque! Ullam dolore minus obcaecati placeat cum, perferendis veniam similique porro deleniti excepturi vel accusamus exercitationem optio voluptatem quae quisquam explicabo cumque autem quidem voluptatibus a soluta animi quo. Veniam doloremque sapiente fuga laboriosam id vitae? Adipisci.
-							.main-overlay-item.flex.flex--vertical-align.flex--wrap
-								.item-icon
-									span.fa.fa-user
-								.item-info.flex.flex--column
-									h1.item-info-title Analista de datos
-									p.item-info-description Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsa voluptatibus eos eaque dignissimos. At velit cupiditate blanditiis sint assumenda excepturi vero magni dolorum commodi quae magnam molestiae eveniet natus cum incidunt, quas doloremque! Ullam dolore minus obcaecati placeat cum, perferendis veniam similique porro deleniti excepturi vel accusamus exercitationem optio voluptatem quae quisquam explicabo cumque autem quidem voluptatibus a soluta animi quo. Veniam doloremque sapiente fuga laboriosam id vitae? Adipisci.
-							.main-overlay-item.flex.flex--vertical-align.flex--wrap
-								.item-icon
-									span.fa.fa-user
-								.item-info.flex.flex--column
-									h1.item-info-title Gobierno
-									p.item-info-description Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsa voluptatibus eos eaque dignissimos. At velit cupiditate blanditiis sint assumenda excepturi vero magni dolorum commodi quae magnam molestiae eveniet natus cum incidunt, quas doloremque! Ullam dolore minus obcaecati placeat cum, perferendis veniam similique porro deleniti excepturi vel accusamus exercitationem optio voluptatem quae quisquam explicabo cumque autem quidem voluptatibus a soluta animi quo. Veniam doloremque sapiente fuga laboriosam id vitae? Adipisci.
+							each profile in profiles
+								.main-overlay-item.flex.flex--vertical-align.flex--wrap
+									.item-icon
+										span.fa.fa-user
+									.item-info.flex.flex--column
+										h1.item-info-title= profile.name
+										p.item-info-description !{profile.description}
 				block content
 			footer
 				.container: .footer-container.flex.flex--space-between.flex--vertical-align

@@ -1,6 +1,7 @@
 const keystone = require('keystone');
 const Document = keystone.list('Document').model;
-const _ = require('lodash');
+const Profile = keystone.list('Profile').model;
+const { sampleSize } = require('lodash');
 
 exports = module.exports = function (req, res) {
 	const view = new keystone.View(req, res);
@@ -17,7 +18,7 @@ exports = module.exports = function (req, res) {
 			if (err) {
 				next(err)
 			}
-			locals.data.documents = _.sampleSize(results, 3);
+			locals.data.documents = sampleSize(results, 3);
 			next();
 		});
 	});

@@ -10,7 +10,7 @@ block content
 			.col-sm-6
 				.intro-info.flex.flex--column.flex--center.flex--vertical-align
 					img(src="/images/logo.png", alt="Logo Ciudatos")
-					p.text-color-white.text-center.shrink Plataforma de datos abiertos sobre ciudades y temas de Colombia para el fortalecimiento de la democracia y participación ciudadana.
+					p.text-color-white.text-center.shrink Todos vemos, pero pocos conocemos. Ciudatos, información que empodera al servicio de todos los ciudadanos
 					.social-icons
 						a.facebook(href="https://www.facebook.com/FundCorona/" target="_blank" rel="noopene noreferrer")
 							span.fa-stack
@@ -30,7 +30,7 @@ block content
 								i.fa.fa-youtube-play.fa-stack-1x.fa-inverse
 	.section-cities
 		h1.section-title.text-center.text-color-blue: a.anchor.anchor-blue(href="/ciudades") Ciudades
-		h3.section-subtitle.text-center.text-color-blue Explora los datos por temas de interés
+		h3.section-subtitle.text-center.text-color-blue ¿Crees conocer las ciudades colombianas? Descubre cómo está su calidad de vida a profundidad
 		.container-fluid: .owl-carousel.owl-theme
 			a.city-item(href="/ciudades")
 				.city-info
@@ -66,7 +66,7 @@ block content
 					.city-name.text-size-x-large.text-color-white Manizales
 	.section-topics
 		h1.section-title.text-center.text-color-blue: a.anchor.anchor-blue(href="#") Temas
-		h3.section-subtitle.text-center.text-color-blue Explora los datos por temas de interés
+		h3.section-subtitle.text-center.text-color-blue Conoce cómo va la educación, salud, seguridad y muchos más temas que afectan tu calidad vida
 		.container-fluid
 			.topics-container.row
 				.col-md-2.col-sm-3.col-xs-6
@@ -111,7 +111,7 @@ block content
 						.topic-name.text-size-large Cultura
 	.section-documents
 		h1.section-title.text-center.text-color-blue: a.anchor.anchor-blue(href="#") Publicaciones
-		h3.section-subtitle.text-center.text-color-blue Explora los datos por temas de interés
+		h3.section-subtitle.text-center.text-color-blue Consulta los distintos informes y análisis sobre la calidad de vida de las ciudades
 		.container-fluid: .row
 			each document in data.documents
 				.col-md-4.col-sm-6: .document-item
@@ -120,6 +120,7 @@ block content
 					a.document-url.text-size-x-large.anchor.anchor-white(href=`${document.file.url}`) PDF
 	.section-data
 		h1.section-title.text-center.text-color-blue: a.anchor.anchor-blue(href="#") Bases de datos
+		h3.section-subtitle.text.center.text-color-blue Navega y explora el mundo de los datos abiertos de las ciudades colombianas
 		.container-fluid(style="margin-top: 3vw;")
 			img.img-responsive.img-center(src="/img/db.png", alt="Imagen base de datos")
 

@@ -1,22 +1,7 @@
-/**
- * This file contains the common middleware used by your routes.
- *
- * Extend or replace these functions as your application requires.
- *
- * This structure is not enforced, and just a starting point. If
- * you have more middleware you may want to group it as separate
- * modules in your project's /lib directory.
- */
-var _ = require('lodash');
+const { some } = require('lodash');
+const keystone = require('keystone');
+const Profile = keystone.list('Profile').model;
 
-
-/**
-	Initialises the standard view locals
-
-	The included layout depends on the navLinks array to generate
-	the navigation in the header, you may wish to change this array
-	or replace it with your own templates / logic.
-*/
 exports.initLocals = function (req, res, next) {
 	res.locals.navLinks = [
 		{ label: 'Visualizar', key: 'visualize', href: '/visualizacion'},
@@ -26,7 +11,11 @@ exports.initLocals = function (req, res, next) {
 		{ label: 'Quiénes somos', key: 'about', href: '/about'}
 	];
 	res.locals.user = req.user;
-	next();
+
+	Profile.find({}).sort({ order: 1 }).exec((err, profiles) => {
+		res.locals.profiles = profiles
+		next();
+	})
 };
 
 
@@ -40,7 +29,7 @@ exports.flashMessages = function (req, res, next) {
 		warning: req.flash('warning'),
 		error: req.flash('error'),
 	};
-	res.locals.messages = _.some(flashMessages, function (msgs) { return msgs.length; }) ? flashMessages : false;
+	res.locals.messages = some(flashMessages, function (msgs) { return msgs.length; }) ? flashMessages : false;
 	next();
 };
 
