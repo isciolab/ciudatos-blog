@@ -40,23 +40,7 @@ html
 	//- HTML BODY
 	body
 		#wrapper.flex.flex--column
-			header
-				.container-fluid
-					.header-container
-						.hidden-xs: nav.flex.flex--space-between.flex--vertical-align.flex--wrap
-							a(href="/"): img(src="/images/logo.png", alt="Ciudatos logo" width="100px")
-							each link in navLinks
-								a.anchor-white.anchor(href=`${link.href}` class=(section === link.key ? 'link-active':''))= link.label
-							a.anchor-white.anchor#open-overlay(href="#")
-								span.fa.fa-users
-								| Explora los datos abiertos
-						.visible-xs: nav.flex.flex--space-between.flex--vertical-align.flex--wrap
-							a.anchor-white.anchor(href="/"): img(src="/images/logo.png", alt="Ciudatos logo" width="100px")
-							button.hamburger.hamburger--squeeze(type="button")
-								span.hamburger-box: span.hamburger-inner
-					.mobile-nav.flex.flex--column
-						each link in navLinks
-							a.anchor-white.anchor(href=`${link.href}`)= link.label
+			block header
 			main
 				block intro
 				+flash-messages(messages)
@@ -75,7 +59,7 @@ html
 										p.item-info-description !{profile.description}
 				block content
 			footer
-				.container: .footer-container.flex.flex--space-between.flex--vertical-align
+				.container-large: .footer-container.flex.flex--space-between.flex--vertical-align
 					.footer-info.text-color-white
 						p Fundación Corona
 						br
