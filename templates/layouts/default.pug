@@ -40,23 +40,37 @@ html
 	//- HTML BODY
 	body
 		#wrapper.flex.flex--column
-			block header
+			header
+				.container-large
+					.header-container
+						.hidden-xs: nav.flex.flex--space-between.flex--wrap
+							.header-div.no-highlight(style="padding: 5px 0"): a(href="/"): img(src="/images/logos/logociudatosmenu.png", alt="Ciudatos logo")
+							each link in navLinks
+								.header-div: a(href=`${link.href}` class=(section === link.key ? 'link-active':''))= link.label
+							.header-div.no-highlight: a.aqua#open-overlay(href="#") Explora los datos abiertos
+						.visible-xs: nav.flex.flex--space-between.flex--vertical-align.flex--wrap
+							a(href="/"): img(src="/images/logos/logociudatosmenu.png", alt="Ciudatos logo")
+							button.hamburger.hamburger--squeeze(type="button")
+								span.hamburger-box: span.hamburger-inner
+					.mobile-nav.flex.flex--column
+						each link in navLinks
+							a(href=`${link.href}`)= link.label
 			main
 				block intro
 				+flash-messages(messages)
 				.main-overlay
-					.main-overlay-content
-						.flex.flex--space-between(style="margin-bottom: 20px; align-items: center")
-							h1.text-center.main-overlay-title ¿Porqué explorar y utilizar los datos abiertos?
+					.main-overlay-content.flex.flex--column
+						.flex.flex--space-between(style="align-items: center")
+							div
 							button.close-overlay x
 						.flex.flex--column.flex--vertical-align
 							each profile in profiles
 								.main-overlay-item.flex.flex--vertical-align.flex--wrap
 									.item-icon
-										span.fa.fa-user
+										span: img.img-responsive(src=`${profile.image ? profile.image.secure_url : ''}`, alt="", width="50%")
 									.item-info.flex.flex--column
 										h1.item-info-title= profile.name
-										p.item-info-description !{profile.description}
+										.item-info-description !{profile.description}
 				block content
 			footer
 				.container-large: .footer-container.flex.flex--space-between.flex--vertical-align
@@ -96,9 +110,17 @@ html
 			$(".hamburger").click(function(){$(this).toggleClass("is-active"),$(".mobile-nav").toggleClass("opened")});
 			$("#open-overlay").click(function(event) {
 				event.preventDefault();
+				resize()
 				$('.main-overlay').toggleClass('shown');
 			})
 			$('.close-overlay').click(function() {
 				$('.main-overlay').removeClass('shown');
+			})
+			function resize () {
+				const header = $('header').height()
+				$('.main-overlay').css('margin-top', header + 'px')
+			}
+			$(document).ready(function () {
+				resize()
 			})
 		block js

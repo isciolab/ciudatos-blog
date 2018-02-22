@@ -4,22 +4,6 @@ block css
 	link(rel="stylesheet", href="/components/owl-carousel/dist/assets/owl.carousel.min.css")
 	link(rel="stylesheet", href="/components/owl-carousel/dist/assets/owl.theme.default.min.css")
 
-block header
-	header
-		.container-large
-			.header-container
-				.hidden-xs: nav.flex.flex--space-between.flex--wrap
-					.header-div.no-highlight(style="padding: 5px 0"): a(href="/"): img(src="/images/logos/logociudatosmenu.png", alt="Ciudatos logo")
-					each link in navLinks
-						.header-div: a(href=`${link.href}` class=(section === link.key ? 'link-active':''))= link.label
-					.header-div.no-highlight: a.aqua#open-overlay(href="#") Explora los datos abiertos
-				.visible-xs: nav.flex.flex--space-between.flex--vertical-align.flex--wrap
-					a(href="/"): img(src="/images/logos/logociudatosmenu.png", alt="Ciudatos logo")
-					button.hamburger.hamburger--squeeze(type="button")
-						span.hamburger-box: span.hamburger-inner
-			.mobile-nav.flex.flex--column
-				each link in navLinks
-					a(href=`${link.href}`)= link.label
 
 block content
 	section.intro-section.half

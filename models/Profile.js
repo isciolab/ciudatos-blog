@@ -9,7 +9,8 @@ const Profile = new keystone.List('Profile', {
 Profile.add({
   name: { type: String, required: true },
   description: { type: Types.Html, wysiwyg: true, height: 300 },
-  order: { type: Number, unique: true }
+  order: { type: Number, unique: true },
+  image: { type: Types.CloudinaryImage, folder: 'ciudatos/blog' },
 });
 
 Profile.defaultColumns = 'name, order';
