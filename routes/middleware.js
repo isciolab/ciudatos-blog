@@ -4,18 +4,19 @@ const Profile = keystone.list('Profile').model;
 
 exports.initLocals = function (req, res, next) {
 	res.locals.navLinks = [
-		{ label: 'Visualizar', key: 'visualize', href: '/visualizacion'},
+		{ label: 'Visualizar', key: 'visualize', href: '/visualizacion' },
 		{ label: 'Ciudades', key: 'cities', href: '/ciudades' },
 		{ label: 'Temas', key: 'topics', href: '/temas' },
 		{ label: 'Publicaciones', key: 'documents', href: '/informes' },
-		{ label: 'Quiénes somos', key: 'about', href: '/about'}
+		{ label: 'Bases de datos', key: 'data', href: '/datos' },
+		{ label: 'Quiénes somos', key: 'about', href: '/about' },
 	];
 	res.locals.user = req.user;
 
 	Profile.find({}).sort({ order: 1 }).exec((err, profiles) => {
-		res.locals.profiles = profiles
+		res.locals.profiles = profiles;
 		next();
-	})
+	});
 };
 
 

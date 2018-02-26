@@ -46,7 +46,7 @@ html
 						.hidden-xs: nav.flex.flex--space-between.flex--wrap
 							.header-div.no-highlight(style="padding: 5px 0"): a(href="/"): img(src="/images/logos/logociudatosmenu.png", alt="Ciudatos logo")
 							each link in navLinks
-								.header-div: a(href=`${link.href}` class=(section === link.key ? 'link-active':''))= link.label
+								.header-div(class=(section === link.key ? 'link-active':'')): a(href=`${link.href}`)= link.label
 							.header-div.no-highlight: a.aqua#open-overlay(href="#") Explora los datos abiertos
 						.visible-xs: nav.flex.flex--space-between.flex--vertical-align.flex--wrap
 							a(href="/"): img(src="/images/logos/logociudatosmenu.png", alt="Ciudatos logo")

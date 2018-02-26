@@ -39,7 +39,7 @@ var routes = {
 exports = module.exports = function (app) {
 	// Views
 	app.get('/', routes.views.home);
-	app.get('/datos', routes.views.datasets);
+	app.get('/datos', routes.views.data);
 	app.get('/informes', routes.views.documents);
 	app.get('/blog', routes.views.blog);
 	app.get('/ciudades', routes.views.city);
