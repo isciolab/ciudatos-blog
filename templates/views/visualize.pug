@@ -1,6 +1,9 @@
 extends ../layouts/default
 
+block vars
+	- inner_padding = "padding: 0 15px"
+
 block content
-	iframe(src="https://randommonkey.shinyapps.io/appCiudatos/" width = "100%")
+	iframe(src="https://randommonkey.shinyapps.io/appCiudatos/" width = "100%" frameborder="0")
 block js
 	script(src="/js/resize.js")

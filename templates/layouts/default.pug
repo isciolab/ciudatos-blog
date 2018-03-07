@@ -36,13 +36,14 @@ html
 		//- script(src="//load.sumome.com/",data-sumo-site-id="e11e4421aaa15d86d73e3e4aa153211ba045af6a7e759175a96d400b04e42276",async="async")
 		block css
 		block head
+		block vars
 
 	//- HTML BODY
 	body
 		#wrapper.flex.flex--column
 			header
-				.container-large
-					.header-container
+				.container-fluid
+					.header-container(style=`${inner_padding || ''}`)
 						.hidden-xs: nav.flex.flex--space-between.flex--wrap
 							.header-div.no-highlight(style="padding: 5px 0"): a(href="/"): img(src="/images/logos/logociudatosmenu.png", alt="Ciudatos logo")
 							each link in navLinks
@@ -73,7 +74,7 @@ html
 										.item-info-description !{profile.description}
 				block content
 			footer
-				.container-large: .footer-container.flex.flex--space-between.flex--vertical-align
+				.container-fluid: .footer-container(style=`${inner_padding || ''}`).flex.flex--space-between.flex--vertical-align
 					.footer-info.text-color-white
 						p Fundación Corona
 						br

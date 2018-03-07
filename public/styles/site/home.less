@@ -20,14 +20,16 @@ pre {
 /* First banner */
 .intro-section {
   background-color: @header-color;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   position: relative;
+  .centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   img.intro-bg {
     position: absolute;
     bottom: 0;
-    right: 7.5%;
+    right: 30px;
     width: 50%;
   }
   .intro-section-left {
@@ -95,7 +97,7 @@ pre {
   h1 {
     font-size: 18pt;
   }
-  .container-large {
+  .container-fluid {
     align-items: center;
     display: flex;
     flex-direction: column;

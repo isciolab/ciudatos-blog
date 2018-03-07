@@ -4,11 +4,13 @@ block css
 	link(rel="stylesheet", href="/components/owl-carousel/dist/assets/owl.carousel.min.css")
 	link(rel="stylesheet", href="/components/owl-carousel/dist/assets/owl.theme.default.min.css")
 
+block vars
+	- inner_padding = "padding: 0 15px"
 
 block content
-	section.intro-section.half
+	section.container-fluid.intro-section
 		img.intro-bg.hidden-xs(src="/images/site/appexplora.png", alt="")
-		.container-large: .flex.flex--wrap
+		.centered.half: .flex.flex--wrap(style=`${inner_padding}`)
 			.intro-section-left.flex.flex--column(style="align-items: flex-start")
 				img(src="/images/logos/logociudatoscolor.png", alt="")
 				p.text-color-white Todos vemos, pero pocos conocemos. Ciudatos, información que empodera al servicio de todos los ciudadanos
@@ -39,7 +41,7 @@ block content
 			p.text-color-white Explora los datos por temas de inteŕes
 				
 	section.cities-section
-		.container-large
+		.container-fluid
 			h1.font-hind.section-title-blue.text-center: a.text-color-blue(href="/ciudades") Ciudades
 			pre.text-color-blue.section-subtitle.
 				¿Crees conocer las ciudades colombianas?
