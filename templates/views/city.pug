@@ -1,15 +1,9 @@
 extends ../layouts/default
+
 block css
   style.
-    main {
-      background: #f0f4f6 !important;
-      padding: 0;
-    }
-    .navbar-default {
-      margin-bottom: 0 !important;
-    }
     .carousel {
-      height: 300px;
+      height: 200px;
       position: relative;
       width: 100%;
     }
@@ -41,50 +35,72 @@ block css
     .city-profile img {
       margin: 0 auto;
     }
+
 block content
   #cities-carousel.carousel.slide(data-ride="carousel")
     .carousel-inner(role="listbox")
-      .item.active(style="background-image: url(/img/slider-city.jpg)" data-city="#bogota")
-        span Bogotá
-      .item(style="background-image: url(/img/slider-city.jpg)" data-city="#medellin")
-        span Medellín
-      .item(style="background-image: url(/img/slider-city.jpg)" data-city="#cali")
-        span Cali
-      .item(style="background-image: url(/img/slider-city.jpg)" data-city="#barranquilla")
+      .item.active(style="background-image: url(/images/site/banners/banner_aburra.png)" data-city="#aburra")
+        span Aburrá
+      .item(style="background-image: url(/images/site/banners/banner_barranquilla.png)" data-city="#barranquilla")
         span Barranquilla
-      .item(style="background-image: url(/img/slider-city.jpg)" data-city="#cartagena")
-        span Cartagena
-      .item(style="background-image: url(/img/slider-city.jpg)" data-city="#manizales")
-        span Manizales
-      .item(style="background-image: url(/img/slider-city.jpg)" data-city="#bucaramanga")
+      .item(style="background-image: url(/images/site/banners/banner_bogota.png)" data-city="#bogota")
+        span Bogotá
+      .item(style="background-image: url(/images/site/banners/banner_bucaramanga.png)" data-city="#bucaramanga")
         span Bucaramanga
-      .item(style="background-image: url(/img/slider-city.jpg)" data-city="#ibague")
+      .item(style="background-image: url(/images/site/banners/banner_cali.png)" data-city="#cali")
+        span Cali
+      .item(style="background-image: url(/images/site/banners/banner_cartagena.png)" data-city="#cartagena")
+        span Cartagena
+      .item(style="background-image: url(/images/site/banners/banner_cucuta.png)" data-city="#cucuta")
+        span Cúcuta
+      .item(style="background-image: url(/images/site/banners/banner_ibague.png)" data-city="#ibague")
         span Ibagué
+      .item(style="background-image: url(/images/site/banners/banner_manizales.png)" data-city="#manizales")
+        span Manizales
+      .item(style="background-image: url(/images/site/banners/banner_medellin.png)" data-city="#medellin")
+        span Medellín
+      .item(style="background-image: url(/images/site/banners/banner_pereira.png)" data-city="#pereira")
+        span Pereira
+      .item(style="background-image: url(/images/site/banners/banner_santa_marta.png)" data-city="#santa_marta")
+        span Santa Marta
+      .item(style="background-image: url(/images/site/banners/banner_yumbo.png)" data-city="#yumbo")
+        span Yumbo
 
     a.left.carousel-control(href="#cities-carousel" data-slide="prev" role="button")
       span.glyphicon.glyphicon-chevron-left
     a.right.carousel-control(href="#cities-carousel" data-slide="next" role="button")
       span.glyphicon.glyphicon-chevron-right
   
-  .custom-container
-    #bogota.city-profile
-      img.img-responsive(src="/img/infocity.png", alt="Infografía")
-    #medellin.city-profile
-      img.img-responsive(src="/img/infocity.png", alt="Infografía")
-    #cali.city-profile
-      img.img-responsive(src="/img/infocity.png", alt="Infografía")
+  .container-fluid
+    #aburra.city-profile
+      span Aburrá
     #barranquilla.city-profile
-      img.img-responsive(src="/img/infocity.png", alt="Infografía")
-    #cartagena.city-profile
-      img.img-responsive(src="/img/infocity.png", alt="Infografía")
-    #manizales.city-profile
-      img.img-responsive(src="/img/infocity.png", alt="Infografía")
+      span Barranquilla
+    #bogota.city-profile
+      span Bogotá
     #bucaramanga.city-profile
-      img.img-responsive(src="/img/infocity.png", alt="Infografía")
+      span Bucaramanga
+    #cali.city-profile
+      span Cali
+    #cartagena.city-profile
+      span Cartagena
+    #cucuta.city-profile
+      span Cúcuta
     #ibague.city-profile
-      img.img-responsive(src="/img/infocity.png", alt="Infografía")
+      span Ibagué
+    #manizales.city-profile
+      span Manizales
+    #medellin.city-profile
+      span Medellín
+    #pereira.city-profile
+      span Pereira
+    #santa_marta.city-profile
+      span Santa Marta
+    #yumbo.city-profile
+      span Yumbo
 
 block js
+  script(src="/js/margin.js")
   script.
     $(document).ready(function() {
       var actual = $('.item.active').attr('data-city');

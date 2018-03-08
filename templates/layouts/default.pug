@@ -2,8 +2,6 @@ include ../mixins/flash-messages
 
 doctype html
 html
-
-	//- HTML HEADER
 	head
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -11,6 +9,10 @@ html
 
 		title= title || 'Ciudatos'
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+
+		script(defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js")
+		link(href="/styles/site.min.css", rel="stylesheet")
+
 		if user && user.canAccessKeystone
 			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
 
@@ -20,108 +22,72 @@ html
 			script(src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js")
 			script(src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js")
 		//-[endif]
-
-		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
-		link(rel="stylesheet", href="/components/hamburger.min.css")
-		link(href="/styles/site.min.css", rel="stylesheet")
-
-		script.
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-70153879-1', 'auto');
-			ga('send', 'pageview');
-		//- SUMOME
-		//- script(src="//load.sumome.com/",data-sumo-site-id="e11e4421aaa15d86d73e3e4aa153211ba045af6a7e759175a96d400b04e42276",async="async")
+		block vars
 		block css
 		block head
-		block vars
 
-	//- HTML BODY
 	body
-		#wrapper.flex.flex--column
+		#wrapper.Column
 			header
+				.small-devices-menu
+					.container-fluid.small-devices-menu-container.Column.center-vertical
+						a(href="/visualizacion") Visualizar
+						a(href="/ciudades") Ciudades
+						a(href="/temas") Temas
+						a(href="/publicaciones") Publicaciones
+						a(href="/datos") Bases de datos
+						a(href="/about") Quiénes somos
+						a(href="") Explora los datos abiertos
 				.container-fluid
-					.header-container(style=`${inner_padding || ''}`)
-						.hidden-xs: nav.flex.flex--space-between.flex--wrap
-							.header-div.no-highlight(style="padding: 5px 0"): a(href="/"): img(src="/images/logos/logociudatosmenu.png", alt="Ciudatos logo")
-							each link in navLinks
-								.header-div(class=(section === link.key ? 'link-active':'')): a(href=`${link.href}`)= link.label
-							.header-div.no-highlight: a.aqua#open-overlay(href="#") Explora los datos abiertos
-						.visible-xs: nav.flex.flex--space-between.flex--vertical-align.flex--wrap
-							a(href="/"): img(src="/images/logos/logociudatosmenu.png", alt="Ciudatos logo")
-							button.hamburger.hamburger--squeeze(type="button")
-								span.hamburger-box: span.hamburger-inner
-					.mobile-nav.flex.flex--column
-						each link in navLinks
-							a(href=`${link.href}`)= link.label
+					nav.small-devices-nav
+						a.nav-logo(href="/"): img(src="/images/logos/logociudatosmenu.png", alt="Logo ciudatos")
+						.burger-box: .burger: span
+					nav.medium-devices-nav
+						a.nav-logo(href="/"): img(src="/images/logos/logociudatosmenu.png", alt="Logo ciudatos")
+						.nav-link: a(href="/visualizacion") Visualizar
+						.nav-link: a(href="/ciudades") Ciudades
+						.nav-link: a(href="/temas") Temas
+						.nav-link: a(href="/publicaciones") Publicaciones
+						.nav-link: a(href="/datos") Bases de datos
+						.nav-link: a(href="/about") Quiénes somos
+						.nav-link: a(href="") Explora los datos abiertos
 			main
-				block intro
-				+flash-messages(messages)
-				.main-overlay
-					.main-overlay-content.flex.flex--column
-						.flex.flex--space-between(style="align-items: center")
-							div
-							button.close-overlay x
-						.flex.flex--column.flex--vertical-align
-							each profile in profiles
-								.main-overlay-item.flex.flex--vertical-align.flex--wrap
-									.item-icon
-										span: img.img-responsive(src=`${profile.image ? profile.image.secure_url : ''}`, alt="", width="50%")
-									.item-info.flex.flex--column
-										h1.item-info-title= profile.name
-										.item-info-description !{profile.description}
 				block content
 			footer
-				.container-fluid: .footer-container(style=`${inner_padding || ''}`).flex.flex--space-between.flex--vertical-align
-					.footer-info.text-color-white
+				.container-fluid.Row.center-vertical
+					.footer-info
 						p Fundación Corona
 						br
-						p Calle 70 #7-30 Bogotá, Colombia
-						p Tel: (57+1)400 00 31
-						p Información
+						p Calle 70 # 7-30 Bogotá, Colombia
+						p Tel: (57 +1) 4000031
+						p Información:
 						p comunicaciones@fcorona.org
 						p Línea Ética
-						p seamoosintegrosfundacion@fcorona.org
-					.footer-icons
-						a.text-color-black(href="https://www.facebook.com/FundCorona/" target="_blank" rel="noopene noreferrer")
-							span.fa-stack.fa-lg
-								i.fa.fa-circle.fa-stack-2x.fa-inverse
-								i.fa.fa-facebook.fa-stack-1x
-						a.text-color-black(href="https://twitter.com/fundcorona" target="_blank" rel="noopener noreferrer")
-							span.fa-stack.fa-lg
-								i.fa.fa-circle.fa-stack-2x.fa-inverse
-								i.fa.fa-twitter.fa-stack-1x
-						a.text-color-black(href="https://www.linkedin.com/company/6411892/" target="_blank" rel="noopener noreferrer")
-							span.fa-stack.fa-lg
-								i.fa.fa-circle.fa-stack-2x.fa-inverse
-								i.fa.fa-linkedin.fa-stack-1x
-						a.text-color-black(href="https://www.youtube.com/user/fundacioncorona" target="_blank" rel="noopener noreferrer")
-							span.fa-stack.fa-lg
-								i.fa.fa-circle.fa-stack-2x.fa-inverse
-								i.fa.fa-youtube-play.fa-stack-1x
-
-		script(src='/js/jquery/jquery-1.11.3.min.js')
+						p seamosintregrosfundacion@fcorona.org
+					.footer-contact
+						<a class="fa-layers fa-fw fa-2x" href="https://www.facebook.com/FundCorona/" target="_blank" rel="noopener noreferrer">
+							<i class="fas fa-circle" style="color: white"></i>
+							<i class="fab fa-facebook-f" data-fa-transform="shrink-6"></i>
+						</a>
+						<a class="fa-layers fa-fw fa-2x" href="https://twitter.com/fundcorona" target="_blank" rel="noopener noreferrer">
+							<i class="fas fa-circle" style="color: white"></i>
+							<i class="fab fa-twitter" data-fa-transform="shrink-6"></i>
+						</a>
+						<a class="fa-layers fa-fw fa-2x" href="https://www.linkedin.com/company/6411892/" target="_blank" rel="noopener noreferrer">
+							<i class="fas fa-circle" style="color: white"></i>
+							<i class="fab fa-linkedin-in" data-fa-transform="shrink-6"></i>
+						</a>
+						<a class="fa-layers fa-fw fa-2x" href="https://www.youtube.com/user/fundacioncorona" target="_blank" rel="noopener noreferrer">
+							<i class="fas fa-circle" style="color: white"></i>
+							<i class="fab fa-youtube" data-fa-transform="shrink-6"></i>
+						</a>
+		script(src='/js/jquery/jquery-2.1.4.min.js')
 		script(src='/js/bootstrap/bootstrap-3.3.5.min.js')
-
 		if user && user.canAccessKeystone
 			script(src='/keystone/js/content/editor.js')
 		script.
-			$(".hamburger").click(function(){$(this).toggleClass("is-active"),$(".mobile-nav").toggleClass("opened")});
-			$("#open-overlay").click(function(event) {
-				event.preventDefault();
-				resize()
-				$('.main-overlay').toggleClass('shown');
-			})
-			$('.close-overlay').click(function() {
-				$('.main-overlay').removeClass('shown');
-			})
-			function resize () {
-				const header = $('header').height()
-				$('.main-overlay').css('margin-top', header + 'px')
-			}
-			$(document).ready(function () {
-				resize()
+			$('.burger-box').click(function (event) {
+				$(this).toggleClass('burger-open')
+				$('.small-devices-menu').toggleClass('menu-opened')
 			})
 		block js

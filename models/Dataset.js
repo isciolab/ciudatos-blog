@@ -1,11 +1,11 @@
-var keystone = require('keystone');
-var Types = keystone.Field.Types;
+const keystone = require('keystone');
+const Types = keystone.Field.Types;
 
 /**
  * Dataset Model
  * ==========
  */
-var storage = new keystone.Storage({
+const storage = new keystone.Storage({
 	adapter: require('keystone-storage-adapter-s3'),
 	s3: {
 		key: process.env.S3_KEY,
@@ -19,8 +19,8 @@ var storage = new keystone.Storage({
 		etag: true,
 		path: true,
 		url: true,
-	}
-})
+	},
+});
 
 var Dataset = new keystone.List('Dataset', {
 	map: { name: 'key' },
@@ -33,25 +33,28 @@ Dataset.add({
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	organization: { type: Types.Relationship, ref: 'Organization', index: true },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
-	image: { type: Types.CloudinaryImage, folder: 'Ciudatos/blog'},
+	image: { type: Types.CloudinaryImage, folder: 'Ciudatos/blog' },
 	content: {
-		brief: { type: Types.Html, wysiwyg: true, height: 150 }
+		brief: { type: Types.Html, wysiwyg: true, height: 150 },
 	},
 	database: { type: Types.Relationship, ref: 'Database', many: false },
 	tags: { type: Types.Relationship, ref: 'DatasetTag', many: true },
 	categories: { type: Types.Relationship, ref: 'DatasetCategory', many: true },
 	fileCSV: { type: Types.File, storage: storage,
-		filename: function(item, filename, originalname){
+		filename: function (item, filename, originalname) {
 			return item._id + '-' + originalname;
-		}},
+		},
+	},
 	fileCSVdic: { type: Types.File, storage: storage,
-		filename: function(item, filename, originalname){
+		filename: function (item, filename, originalname) {
 			return item._id + '-' + originalname;
-		}},
+		},
+	},
 	fileXLS: { type: Types.File, storage: storage,
-		filename: function(item, filename, originalname){
+		filename: function (item, filename, originalname) {
 			return item._id + '-' + originalname;
-		}}
+		},
+	},
 });
 
 

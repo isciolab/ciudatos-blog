@@ -1,28 +1,19 @@
 {
-  "name": "random-monkey",
+  "name": "ciudatos",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "async": "^2.5.0",
-    "dotenv": "^4.0.0",
-    "i18n": "^0.8.3",
-    "i18n-2": "^0.7.1",
-    "keystone": "^4.0.0-beta.5",
+    "async": "2.1.4",
+    "dotenv": "4.0.0",
+    "keystone": "4.0.0-beta.5",
     "keystone-storage-adapter-s3": "^1.1.1",
     "lodash": "^4.13.1",
-    "pug": "^2.0.0-rc.3"
-  },
-  "engines": {
-    "node": "6.11.3",
-    "npm": "3.10.10"
+    "pug": "2.0.0-beta11"
   },
   "devDependencies": {
-    "eslint": "^4.5.0",
-    "eslint-config-keystone": "^3.0.0",
-    "eslint-plugin-react": "^7.3.0",
-    "gulp": "^3.7.0",
-    "gulp-shell": "^0.6.3",
-    "gulp-watch": "^4.3.5"
+    "eslint": "3.15.0",
+    "eslint-config-keystone": "3.0.0",
+    "eslint-plugin-react": "^5.1.1"
   },
   "scripts": {
     "lint": "eslint .",

@@ -6,7 +6,7 @@ var Types = keystone.Field.Types;
  * ==========
  */
 
-var storage = new keystone.Storage({
+const storage = new keystone.Storage({
 	adapter: require('keystone-storage-adapter-s3'),
 	s3: {
 		key: process.env.S3_KEY,
@@ -20,28 +20,28 @@ var storage = new keystone.Storage({
 		etag: true,
 		path: true,
 		url: true,
-	}
-})
+	},
+});
 
-var Document = new keystone.List('Document', {
+const Document = new keystone.List('Document', {
 	map: { name: 'title' },
 	autokey: { path: 'slug', from: 'title', unique: true },
 });
 
 Document.add({
 	title: { type: String, required: true },
-	state: { type: Types.Select, options: 'draft, published, archived',
-			 default: 'draft', index: true },
-	externalAuthor: {type: String},
+	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
+	externalAuthor: { type: String },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
-	image: { type: Types.CloudinaryImage, folder: 'ciudatos/documents'},
+	image: { type: Types.CloudinaryImage, folder: 'ciudatos/documents' },
 	content: {
-		brief: { type: Types.Html, wysiwyg: true, height: 150 }
+		brief: { type: Types.Html, wysiwyg: true, height: 150 },
 	},
 	file: { type: Types.File, storage: storage,
-		filename: function(item, filename, originalname){
+		filename: function (item, filename, originalname) {
 			return item._id + '-' + originalname;
-		}}
+		},
+	},
 });
 
 

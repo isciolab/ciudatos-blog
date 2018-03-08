@@ -1,11 +1,13 @@
-const keystone = require('keystone');
-const async = require('async');
+var keystone = require('keystone');
+var async = require('async');
 
 exports = module.exports = function (req, res) {
-	const view = new keystone.View(req, res);
-	const locals = res.locals;
-	const { category } = req.params;
 
+	var view = new keystone.View(req, res);
+	var locals = res.locals;
+
+	// Init locals
+	locals.section = 'blog';
 	locals.filters = {
 		category: req.params.category,
 	};
@@ -17,9 +19,7 @@ exports = module.exports = function (req, res) {
 	// Load all categories
 	view.on('init', function (next) {
 
-		keystone.list('PostCategory').model.find()
-		// .where('lang', locals.language)
-		.sort('name').exec(function (err, results) {
+		keystone.list('PostCategory').model.find().sort('name').exec(function (err, results) {
 
 			if (err || !results.length) {
 				return next(err);
@@ -65,7 +65,6 @@ exports = module.exports = function (req, res) {
 				state: 'published',
 			},
 		})
-			// .where('lang', locals.language)
 			.sort('-publishedDate')
 			.populate('author categories');
 

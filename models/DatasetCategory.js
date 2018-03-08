@@ -1,5 +1,5 @@
-var keystone = require('keystone'),
-	Types = keystone.Field.Types;
+const keystone = require('keystone');
+const Types = keystone.Field.Types;
 
 /**
  * DatasetCategory Model
@@ -12,7 +12,7 @@ var DatasetCategory = new keystone.List('DatasetCategory', {
 
 DatasetCategory.add({
 	name: { type: String, required: true },
-	weight: { type: Types.Number,initial:true }
+	weight: { type: Types.Number, initial: true },
 });
 
 DatasetCategory.defaultColumns = 'name, weight';

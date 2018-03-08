@@ -1,5 +1,4 @@
-var keystone = require('keystone'),
-    async = require('async');
+var keystone = require('keystone');
 
 exports = module.exports = function (req, res) {
 
@@ -14,7 +13,6 @@ exports = module.exports = function (req, res) {
 	locals.data = {
 		posts: [],
 	};
-	locals.language = "es";
 
 	// Load the current post
 	view.on('init', function (next) {
@@ -26,15 +24,6 @@ exports = module.exports = function (req, res) {
 
 		q.exec(function (err, result) {
 			locals.data.post = result;
-			if(!result){
-				return res.status(404)
-				.render('errors/404',locals); // or your 404 template path
-			}
-			if(result){
-				locals.language = result.lang || "es";
-				locals.title = result.title;
-				req.setLocale(locals.language);				
-			}
 			next(err);
 		});
 

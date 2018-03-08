@@ -1,14 +1,26 @@
-var keystone = require('keystone');
+const keystone = require('keystone');
+const Document = keystone.list('Document').model;
+const { sampleSize } = require('lodash');
 
 exports = module.exports = function (req, res) {
+	const view = new keystone.View(req, res);
+	const locals = res.locals;
 
-	var view = new keystone.View(req, res);
-	var locals = res.locals;
-
-	// locals.section is used to set the currently selected
-	// item in the header navigation.
 	locals.section = 'home';
 
-	// Render the view
+	locals.data = {
+		documents: [],
+	};
+
+	view.on('init', function (next) {
+		Document.find({ state: 'published' }, (err, results) => {
+			if (err) {
+				next(err);
+			}
+			locals.data.documents = sampleSize(results, 3);
+			next();
+		});
+	});
+
 	view.render('index');
 };

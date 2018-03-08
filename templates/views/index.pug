@@ -1,0 +1,184 @@
+extends ../layouts/default
+
+block css
+  link(rel="stylesheet", href="vendors/owl.carousel.min.css")
+  link(rel="stylesheet", href="vendors/owl.theme.default.min.css")
+
+block content
+  
+  .half-height.home-first-banner.lato
+    img.banner-overlay-image(src="/images/site/explora.png", alt="")
+    .container-fluid
+      .home-fb-content
+        .home-fb-left.Column
+          img(src="/images/logos/logociudatoscolor.png", alt="")
+          p Todos vemos, pero pocos conocemos. Ciudatos, información que empodera al servicio al servicio de todos los ciudadanos
+          .home-fb-social
+            <a class="fa-layers fa-fw" href="https://www.facebook.com/FundCorona/" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-circle facebook"></i>
+              <i class="fab fa-facebook-f" data-fa-transform="shrink-6"></i>
+            </a>
+            <a class="fa-layers fa-fw" href="https://twitter.com/fundcorona" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-circle twitter"></i>
+              <i class="fab fa-twitter" data-fa-transform="shrink-6"></i>
+            </a>
+            <a class="fa-layers fa-fw" href="https://www.linkedin.com/company/6411892/" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-circle linkedin"></i>
+              <i class="fab fa-linkedin-in" data-fa-transform="shrink-6"></i>
+            </a>
+            <a class="fa-layers fa-fw" href="https://www.youtube.com/user/fundacioncorona" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-circle youtube"></i>
+              <i class="fab fa-youtube" data-fa-transform="shrink-6"></i>
+            </a>
+        .home-fb-right.Column.center-vertical.center-horizontal
+          a.hind.section-title(href="/visualizacion") Explora
+          p Explora los datos por temas de interés
+  
+  .bg-dark-blue.text-center.visible-xs.text-white.home-fb-aux
+    a.hind.section-title(href="/explora") Explora
+    p.lato Explora los datos por temas de interés
+  
+  .home-second-banner.text-center
+    .container-fluid
+      a.hind.section-title(href="/ciudades") Ciudades
+      pre.lato.
+        ¿Crees conocer las ciudades colombianas?
+        Descubre cómo está su calidad de vida a profundidad
+      .owl-carousel.karla
+        a(href="/ciudades" )
+          img(src="/images/site/cities/slide_aburra.png", alt="Ciudad")
+          span Valle de Aburrá
+        a(href="/ciudades" )
+          img(src="/images/site/cities/slide_barranquilla.png", alt="Ciudad")
+          span Barranquilla
+        a(href="/ciudades" )
+          img(src="/images/site/cities/slide_bogota.png", alt="Ciudad")
+          span Bogotá
+        a(href="/ciudades" )
+          img(src="/images/site/cities/slide_bucaramanga.png", alt="Ciudad")
+          span Bucaramanga
+        a(href="/ciudades" )
+          img(src="/images/site/cities/slide_cali.png", alt="Ciudad")
+          span Cali
+        a(href="/ciudades" )
+          img(src="/images/site/cities/slide_cartagena.png", alt="Ciudad")
+          span Cartagena
+        a(href="/ciudades" )
+          img(src="/images/site/cities/slide_cucuta.png", alt="Ciudad")
+          span Cúcuta
+        a(href="/ciudades" )
+          img(src="/images/site/cities/slide_ibague.png", alt="Ciudad")
+          span Ibagué
+        a(href="/ciudades" )
+          img(src="/images/site/cities/slide_manizales.png", alt="Ciudad")
+          span Manizales
+        a(href="/ciudades" )
+          img(src="/images/site/cities/slide_medellin.png", alt="Ciudad")
+          span Medellín
+        a(href="/ciudades" )
+          img(src="/images/site/cities/slide_pereira.png", alt="Ciudad")
+          span Pereira
+        a(href="/ciudades" )
+          img(src="/images/site/cities/slide_santa_marta.png", alt="Ciudad")
+          span Santa Marta
+        a(href="/ciudades" )
+          img(src="/images/site/cities/slide_yumbo.png", alt="Ciudad")
+          span Yumbo
+  
+  .background(style="background: url(/images/site/transicion_temas.png); height: 125px")
+  
+  .home-third-banner.text-center
+    .container-fluid
+      a.hind.section-title(href="/temas") Temas
+      pre.lato.
+        Conoce cómo va la educación, salud, seguridad
+        y muchos más temas que afectan tu calidad de vida
+      .topics-container
+        a.topic.Column.center-vertical.center-horizontal(href="")
+          img(src="/images/icons/bienestarejecutivo.png", alt="Tema")
+          pre.lato.
+            Bienestar
+            ejecutivo
+        a.topic.Column.center-vertical.center-horizontal(href="")
+          img(src="/images/icons/buengobiernoyciudadania.png", alt="Tema")
+          pre.lato.
+            Gobierno y
+            ciudadanía
+        a.topic.Column.center-vertical.center-horizontal(href="")
+          img(src="/images/icons/educacion.png", alt="Tema")
+          pre.lato.
+            Educación
+        a.topic.Column.center-vertical.center-horizontal(href="")
+          img(src="/images/icons/entornomacroeconomico.png", alt="Tema")
+          pre.lato.
+            Entorno
+            macroeconómico
+        a.topic.Column.center-vertical.center-horizontal(href="")
+          img(src="/images/icons/habitaturbano.png", alt="Tema")
+          pre.lato.
+            Hábitat
+            urbano
+        a.topic.Column.center-vertical.center-horizontal(href="")
+          img(src="/images/icons/medioambiente.png", alt="Tema")
+          pre.lato.
+            Medio
+            ambiente
+        a.topic.Column.center-vertical.center-horizontal(href="")
+          img(src="/images/icons/movilidad.png", alt="Tema")
+          pre.lato.
+            Movilidad
+        a.topic.Column.center-vertical.center-horizontal(href="")
+          img(src="/images/icons/pobrezayequidad.png", alt="Tema")
+          pre.lato.
+            Pobreza y
+            equidad
+        a.topic.Column.center-vertical.center-horizontal(href="")
+          img(src="/images/icons/salud.png", alt="Tema")
+          pre.lato.
+            Salud
+        a.topic.Column.center-vertical.center-horizontal(href="")
+          img(src="/images/icons/seguridadyconvivenciaciudadana.png", alt="Tema")
+          pre.lato.
+            Seguridad y
+            convivencia ciudadana
+  
+  .home-fourth-banner.text-center
+    .container-fluid
+      a.hind.section-title(href="/publicaciones") Publicaciones
+      pre.lato.
+        Consulta los distintos y análisis
+        sobre la calidad de vida de las ciudades
+      .row
+        each document in data.documents
+          .col-md-4.col-sm-6: .document-item
+            img.img-responsive(src="/images/site/post.jpg", alt="")
+            .document-info= document.title
+            a.document-url(href=`${document.file.url || null}`) PDF        
+
+  .background(style="background: url(/images/site/transicion_basesdedatos.png); height: 110px")
+
+  .home-fifth-banner.text-center.bg-dark-blue
+    .container-fluid
+      a.hind.section-title(href="/datos") Bases de datos
+      pre.lato.
+        Navega y explora el mundo de los
+        datos abiertos de las ciudades colombianas
+      .home-fifth-banner-body
+        .home-fifth-banner-description.Column
+          p.hind
+            span.text-light-blue Sí,
+            |  los 
+            span.text-light-blue datos
+            |  son 
+            span.text-light-blue abiertos, accede
+            |  a las bases de datos y 
+            span.text-light-blue descarga
+            |  la información en los 
+            span.text-light-blue formatos
+            |  que más te convienen
+        .home-fifth-banner-image
+          img(src="/images/site/basesdedatos.png", alt="Bases de datos")
+
+block js
+  script(src="/vendors/owl.carousel.min.js")
+  script(src="/js/home.js")

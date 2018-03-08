@@ -1,12 +1,11 @@
-var keystone = require('keystone'),
-	Types = keystone.Field.Types;
+const keystone = require('keystone');
 
 /**
  * Database Model
  * ==================
  */
 
-var Database = new keystone.List('Database', {
+const Database = new keystone.List('Database', {
 	autokey: { from: 'name', path: 'key', unique: true },
 });
 

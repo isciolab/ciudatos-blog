@@ -1,0 +1,93 @@
+.Burger(@burger-color) {
+  .burger-box {
+    cursor: pointer;
+    height: 20px;
+    width: 25px;
+    .burger {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      height: 100%;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      position: relative;
+      width: 100%;
+      &:before,
+      &:after {
+        background: @burger-color;
+        content: '';
+        height: 4px;
+        left: 0;
+        position: absolute;
+        -webkit-transition-delay: 0.3s;
+                transition-delay: 0.3s;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+      }
+      &:before {
+        top: 0;
+      }
+      &:after {
+        bottom: 0;
+      }
+      span {
+        background: @burger-color;
+        height: 4px;
+        position: relative;
+        -webkit-transition-delay: 0;
+                transition-delay: 0;
+        -webkit-transition: all 0.3s cubic-bezier(0.330, 0.065, 0.370, 1.230);
+        transition: all 0.3s cubic-bezier(0.330, 0.065, 0.370, 1.230);
+        width: 100%;
+        &:before {
+          background: @burger-color;
+          content: '';
+          height: 100%;
+          position: absolute;
+          -webkit-transition-delay: 0;
+                  transition-delay: 0;
+          -webkit-transition: all 0.3s cubic-bezier(0.330, 0.065, 0.370, 1.230);
+          transition: all 0.3s cubic-bezier(0.330, 0.065, 0.370, 1.230);
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  .burger-box.burger-open .burger {
+    &:before {
+      opacity: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      -webkit-transition-delay: 0;
+              transition-delay: 0;
+    }
+    &:after {
+      bottom: 50%;
+      opacity: 0;
+      -webkit-transform: translateY(50%);
+              transform: translateY(50%);
+      -webkit-transition-delay: 0;
+              transition-delay: 0;
+    }
+    span {
+      -webkit-transform: rotateZ(-45deg);
+              transform: rotateZ(-45deg);
+      -webkit-transition-delay: 0.3s;
+              transition-delay: 0.3s;
+      &:before {
+        -webkit-transform: rotateZ(-90deg);
+                transform: rotateZ(-90deg);
+        -webkit-transition-delay: 0.3s;
+                transition-delay: 0.3s;
+      }
+    }
+  }
+}

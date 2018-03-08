@@ -1,5 +1,4 @@
-var keystone = require('keystone'),
-	Types = keystone.Field.Types;
+const keystone = require('keystone');
 
 /**
  * DatasetTag Model
@@ -11,7 +10,7 @@ var DatasetTag = new keystone.List('DatasetTag', {
 });
 
 DatasetTag.add({
-	name: { type: String, required: true }
+	name: { type: String, required: true },
 });
 
 DatasetTag.defaultColumns = 'name';

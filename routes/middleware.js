@@ -1,22 +1,16 @@
-const { some } = require('lodash');
-const keystone = require('keystone');
-const Profile = keystone.list('Profile').model;
+var _ = require('lodash');
 
+
+/**
+	Initialises the standard view locals
+*/
 exports.initLocals = function (req, res, next) {
 	res.locals.navLinks = [
-		{ label: 'Visualizar', key: 'visualize', href: '/visualizacion' },
-		{ label: 'Ciudades', key: 'cities', href: '/ciudades' },
-		{ label: 'Temas', key: 'topics', href: '/temas' },
-		{ label: 'Publicaciones', key: 'documents', href: '/informes' },
-		{ label: 'Bases de datos', key: 'data', href: '/datos' },
-		{ label: 'Quiénes somos', key: 'about', href: '/about' },
+		{ label: 'Home', key: 'home', href: '/' },
+		{ label: 'Blog', key: 'blog', href: '/blog' },
 	];
 	res.locals.user = req.user;
-
-	Profile.find({}).sort({ order: 1 }).exec((err, profiles) => {
-		res.locals.profiles = profiles;
-		next();
-	});
+	next();
 };
 
 
@@ -30,7 +24,7 @@ exports.flashMessages = function (req, res, next) {
 		warning: req.flash('warning'),
 		error: req.flash('error'),
 	};
-	res.locals.messages = some(flashMessages, function (msgs) { return msgs.length; }) ? flashMessages : false;
+	res.locals.messages = _.some(flashMessages, function (msgs) { return msgs.length; }) ? flashMessages : false;
 	next();
 };
 
