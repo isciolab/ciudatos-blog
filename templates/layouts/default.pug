@@ -29,6 +29,18 @@ html
 	body
 		#wrapper.Column
 			header
+				.overlay-mask
+					.overlay-content
+						.overlay-nav
+							a.close-overlay(href="") Cerrar
+						.overlay-content
+							each profile in profiles
+								.overlay-profile
+									img(src=`${profile.image.secure_url}`, alt="")
+									.overlay-profile-body
+										h3.karla !{profile.name}
+										.lato.text-white!= profile.description 
+					.overlay
 				.small-devices-menu
 					.container-fluid.small-devices-menu-container.Column.center-vertical
 						a(href="/visualizacion") Visualizar
@@ -37,7 +49,7 @@ html
 						a(href="/publicaciones") Publicaciones
 						a(href="/datos") Bases de datos
 						a(href="/about") Quiénes somos
-						a(href="") Explora los datos abiertos
+						a.open-overlay(href="") Explora los datos abiertos
 				.container-fluid
 					nav.small-devices-nav
 						a.nav-logo(href="/"): img(src="/images/logos/logociudatosmenu.png", alt="Logo ciudatos")
@@ -50,7 +62,7 @@ html
 						.nav-link(class=(section === 'publicaciones' ? 'active' : null)): a(href="/publicaciones") Publicaciones
 						.nav-link(class=(section === 'base-de-datos' ? 'active' : null)): a(href="/datos") Bases de datos
 						.nav-link(class=(section === 'about' ? 'active' : null)): a(href="/about") Quiénes somos
-						.nav-link(class=(section === '' ? 'active' : null)): a(href="") Explora los datos abiertos
+						.nav-link(class=(section === '' ? 'active' : null)): a.open-overlay.text-light-blue(href="") Explora los datos abiertos
 			main
 				block content
 			footer
@@ -89,5 +101,21 @@ html
 			$('.burger-box').click(function (event) {
 				$(this).toggleClass('burger-open')
 				$('.small-devices-menu').toggleClass('menu-opened')
+			})
+
+			$('.open-overlay').click(function (event) {
+				event.preventDefault()
+				const menuOpened = $('.small-devices-menu').hasClass('menu-opened')
+				if (menuOpened) {
+					$('.small-devices-menu').removeClass('menu-opened')
+				}
+				$('body').toggleClass('no-scroll')
+				$('.overlay-mask').toggleClass('opened')
+			})
+
+			$('.close-overlay').click(function (event) {
+				event.preventDefault()
+				$('body').toggleClass('no-scroll')
+				$('.overlay-mask').toggleClass('opened')
 			})
 		block js

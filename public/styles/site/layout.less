@@ -3,10 +3,18 @@ body {
 	height: 100%;
 }
 
+body.no-scroll {
+	overflow: hidden;
+}
+
 #wrapper {
 	min-height: 100%;
 }
 
+a.open-overlay.text-light-blue:active,
+a.open-overlay.text-light-blue:visited {
+	color: @ciudatos-light-blue;
+}
 header {
 	background: @ciudatos-dark-blue;
 	font-family: 'Karla', sans-serif;
@@ -66,6 +74,7 @@ header {
 		a {
 			color: white;
 		}
+
 		&.small-devices-nav {
 			-webkit-box-align: center;
 			    -ms-flex-align: center;
@@ -131,7 +140,8 @@ header {
 main {
 	-webkit-box-flex: 1;
 	    -ms-flex: 1 0 auto;
-	        flex: 1 0 auto;
+					flex: 1 0 auto;
+	position: relative;
 }
 
 footer {
@@ -194,5 +204,61 @@ footer {
 	}
 	@media @medium {
 		margin-bottom: 0;
+	}
+}
+
+.overlay-mask {
+	background: @ciudatos-dark-blue;
+	color: @ciudatos-light-blue;
+	height: 100vh;
+	left: 0%;
+	overflow: hidden;
+	position: absolute;
+	transition: all 0.3s linear;
+	top: 100%;
+	width: 0;
+	&.opened {
+		overflow: auto;
+		width: 100%;
+	}
+	&::-webkit-scrollbar {
+		width: 5px;
+	}
+	&::-webkit-scrollbar-thumb {
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+						box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+		background: @ciudatos-yellow;
+	}
+	&::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+						box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	}
+	.overlay-content {
+		padding: 20px 40px;
+		display: flex;
+		flex-direction: column;
+		.overlay-nav {
+			text-align: right;
+			font-weight: bold;
+			font-size: 18px;
+			a {
+				color: inherit;
+			}
+		}
+		.overlay-content {
+			display: grid;
+			grid-template-columns: 1fr;
+			.overlay-profile {
+				display: grid;
+				grid-gap: 20px;
+				grid-template-columns: auto 1fr;
+				margin-bottom: 20px;
+				img {
+					align-self: center;
+					justify-self: center;
+					max-width: 60%;
+				}
+			}
+		}
 	}
 }
