@@ -6,7 +6,7 @@ exports = module.exports = function (req, res) {
 	const locals = res.locals;
 
 	locals.title = 'Publicaciones | Ciudatos';
-	locals.section = 'documents';
+	locals.section = 'publicaciones';
 
 	locals.data = {
 		documents: [],

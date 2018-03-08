@@ -44,13 +44,13 @@ html
 						.burger-box: .burger: span
 					nav.medium-devices-nav
 						a.nav-logo(href="/"): img(src="/images/logos/logociudatosmenu.png", alt="Logo ciudatos")
-						.nav-link: a(href="/visualizacion") Visualizar
-						.nav-link: a(href="/ciudades") Ciudades
-						.nav-link: a(href="/temas") Temas
-						.nav-link: a(href="/publicaciones") Publicaciones
-						.nav-link: a(href="/datos") Bases de datos
-						.nav-link: a(href="/about") Quiénes somos
-						.nav-link: a(href="") Explora los datos abiertos
+						.nav-link(class=(section === 'visualizacion' ? 'active' : null)): a(href="/visualizacion") Visualizar
+						.nav-link(class=(section === 'ciudades' ? 'active' : null)): a(href="/ciudades") Ciudades
+						.nav-link(class=(section === 'temas' ? 'active' : null)): a(href="/temas") Temas
+						.nav-link(class=(section === 'publicaciones' ? 'active' : null)): a(href="/publicaciones") Publicaciones
+						.nav-link(class=(section === 'base-de-datos' ? 'active' : null)): a(href="/datos") Bases de datos
+						.nav-link(class=(section === 'about' ? 'active' : null)): a(href="/about") Quiénes somos
+						.nav-link(class=(section === '' ? 'active' : null)): a(href="") Explora los datos abiertos
 			main
 				block content
 			footer
