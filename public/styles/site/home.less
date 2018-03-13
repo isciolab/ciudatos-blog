@@ -220,3 +220,44 @@ a + pre {
     }
   }
 }
+
+.documents__home {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  min-height: 200px;
+  .document__home {
+    background-size: cover;
+    background: no-repeat center center;
+    min-height: 250px;
+    position: relative;
+    &:before {
+      background: rgba(38, 50, 126, 0.3);
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    .document__home--info {
+      color: white;
+      font-size: 20px;
+      left: 0;
+      position: absolute;
+      text-align: left;
+      top: 10%;
+      width: 85%;
+      .document__home--info-title {
+        padding: 10px;
+        background: @ciudatos-dark-blue;
+      }
+      .document__home--info-url {
+        color: inherit;
+        font-weight: bold;
+        padding-left: 10px;
+        text-shadow: 1px 1px 1px black;
+      }
+    }
+  }
+}

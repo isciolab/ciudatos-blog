@@ -17,7 +17,7 @@ exports = module.exports = function (req, res) {
 			if (err || !results.length) {
 				return next(err);
 			}
-			locals.data.documents = results;
+			locals.data.documents = results.filter(r => r.file.url);
 			next();
 		});
 	});

@@ -5,7 +5,7 @@ block css
   link(rel="stylesheet", href="vendors/owl.theme.default.min.css")
 
 block content
-  
+
   .half-height.home-first-banner.lato
     img.banner-overlay-image(src="/images/site/explora.png", alt="")
     .container-fluid
@@ -33,11 +33,11 @@ block content
         .home-fb-right.Column.center-vertical.center-horizontal
           a.hind.section-title(href="/visualizacion") Explora
           p Explora los datos por temas de interés
-  
+
   .bg-dark-blue.text-center.visible-xs.text-white.home-fb-aux
     a.hind.section-title(href="/explora") Explora
     p.lato Explora los datos por temas de interés
-  
+
   .home-second-banner.text-center
     .container-fluid
       a.hind.section-title(href="/ciudades") Ciudades
@@ -84,9 +84,9 @@ block content
         a(href="/ciudades" )
           img(src="/images/site/cities/slide_yumbo.png", alt="Ciudad")
           span Yumbo
-  
+
   .background(style="background: url(/images/site/transicion_temas.png); height: 125px")
-  
+
   .home-third-banner.text-center
     .container-fluid
       a.hind.section-title(href="/temas") Temas
@@ -141,19 +141,19 @@ block content
           pre.lato.
             Seguridad y
             convivencia ciudadana
-  
+
   .home-fourth-banner.text-center
     .container-fluid
       a.hind.section-title(href="/publicaciones") Publicaciones
       pre.lato.
         Consulta los distintos y análisis
         sobre la calidad de vida de las ciudades
-      .row
+      .documents__home
         each document in data.documents
-          .col-md-4.col-sm-6: .document-item
-            img.img-responsive(src="/images/site/post.jpg", alt="")
-            .document-info= document.title
-            a.document-url(href=`${document.file.url || null}`) PDF        
+          .document__home(style=`background-image: url(${document.image.secure_url})`)
+            .document__home--info.hind
+              .document__home--info-title= document.title
+              a.document__home--info-url(href=`${document.file.url || '/'}` target="_blank") PDF
 
   .background(style="background: url(/images/site/transicion_basesdedatos.png); height: 110px")
 
@@ -167,13 +167,13 @@ block content
         .home-fifth-banner-description.Column
           p.hind
             span.text-light-blue Sí,
-            |  los 
+            |  los
             span.text-light-blue datos
-            |  son 
+            |  son
             span.text-light-blue abiertos, accede
-            |  a las bases de datos y 
+            |  a las bases de datos y
             span.text-light-blue descarga
-            |  la información en los 
+            |  la información en los
             span.text-light-blue formatos
             |  que más te convienen
         .home-fifth-banner-image
