@@ -10,14 +10,13 @@ document.addEventListener('keydown', function (event) {
 });
 
 owl.owlCarousel({
-	autoplay: true,
-	autoplayHoverPause: true,
-	autoplayTimeout: 2500,
 	center: true,
 	items: 2,
 	loop: true,
 	margin: 10,
-	slideBy: 2,
+	nav: true,
+	slideBy: 1,
+	navText: ['<span class="glyphicon glyphicon-chevron-left"</span>', '<span class="glyphicon glyphicon-chevron-right"</span>'],
 	responsive: {
 		576: {
 			items: 2,
@@ -25,12 +24,12 @@ owl.owlCarousel({
 		768: {
 			items: 3,
 			stagePadding: 100,
-			slideBy: 3,
+			slideBy: 2,
 		},
 		992: {
 			items: 4,
 			stagePadding: 100,
-			slideBy: 4,
+			slideBy: 3,
 		},
 	},
 });

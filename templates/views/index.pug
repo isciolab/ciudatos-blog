@@ -3,11 +3,27 @@ extends ../layouts/default
 block css
   link(rel="stylesheet", href="vendors/owl.carousel.min.css")
   link(rel="stylesheet", href="vendors/owl.theme.default.min.css")
+  style.
+    .owl-nav {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      align-items: center;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      padding: 0 10px;
+    }
+    .owl-nav .glyphicon {
+      color: white;
+      font-size: 30px;
+    }
 
 block content
 
   .half-height.home-first-banner.lato
-    img.banner-overlay-image(src="/images/site/explora.png", alt="")
+    .banner-overlay-image
+      img.img-responsive(src="/images/site/app.gif", alt="")
     .container-fluid
       .home-fb-content
         .home-fb-left.Column
@@ -161,13 +177,13 @@ block content
         .home-fifth-banner-description.Column
           p.hind
             span.text-light-blue Sí,
-            |  los
+            |  los 
             span.text-light-blue datos
-            |  son
+            |  son 
             span.text-light-blue abiertos, accede
-            |  a las bases de datos y
+            |  a las bases de datos y 
             span.text-light-blue descarga
-            |  la información en los
+            |  la información en los 
             span.text-light-blue formatos
             |  que más te convienen
         .home-fifth-banner-image
