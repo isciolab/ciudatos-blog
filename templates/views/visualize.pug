@@ -7,4 +7,9 @@ block content
 	iframe(src="https://randommonkey.shinyapps.io/appCiudatos/" width = "100%" frameborder="0")
 
 block js
-	script(src="/js/iframe.js")
+	script(src="/vendors/iframeResizer.min.js")
+	script(src="/js/margin.js")
+	script.
+		$(document).ready(function () {
+			$('iframe').iFrameResize()
+		})
