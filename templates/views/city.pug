@@ -2,6 +2,9 @@ extends ../layouts/default
 
 block css
   style.
+    body {
+      background: #f7f9f4;
+    }
     .carousel {
       height: 200px;
       position: relative;
@@ -35,74 +38,71 @@ block css
     .city-profile img {
       margin: 0 auto;
     }
+    iframe {
+      min-width: 100%;
+      min-height: 200vh;
+    }
 
 block content
   #cities-carousel.carousel.slide(data-ride="carousel")
     .carousel-inner(role="listbox")
-      .item.active(style="background-image: url(/images/site/banners/banner_aburra.png)" data-city="#aburra")
-        span Aburrá
-      .item(style="background-image: url(/images/site/banners/banner_barranquilla.png)" data-city="#barranquilla")
+      .item(class=(data.city === 'barranquilla' ? 'active' : '') style="background-image: url(/images/site/banners/banner_barranquilla.png)" data-city="#barranquilla")
         span Barranquilla
-      .item(style="background-image: url(/images/site/banners/banner_bogota.png)" data-city="#bogota")
+      .item(class=(data.city === 'bogota' ? 'active' : '') style="background-image: url(/images/site/banners/banner_bogota.png)" data-city="#bogota")
         span Bogotá
-      .item(style="background-image: url(/images/site/banners/banner_bucaramanga.png)" data-city="#bucaramanga")
+      .item(class=(data.city === 'bucaramanga' ? 'active' : '') style="background-image: url(/images/site/banners/banner_bucaramanga.png)" data-city="#bucaramanga")
         span Bucaramanga
-      .item(style="background-image: url(/images/site/banners/banner_cali.png)" data-city="#cali")
+      .item(class=(data.city === 'cali' ? 'active' : '') style="background-image: url(/images/site/banners/banner_cali.png)" data-city="#cali")
         span Cali
-      .item(style="background-image: url(/images/site/banners/banner_cartagena.png)" data-city="#cartagena")
+      .item(class=(data.city === 'cartagena' ? 'active' : '') style="background-image: url(/images/site/banners/banner_cartagena.png)" data-city="#cartagena")
         span Cartagena
-      .item(style="background-image: url(/images/site/banners/banner_cucuta.png)" data-city="#cucuta")
+      .item(class=(data.city === 'cucuta' ? 'active' : '') style="background-image: url(/images/site/banners/banner_cucuta.png)" data-city="#cucuta")
         span Cúcuta
-      .item(style="background-image: url(/images/site/banners/banner_ibague.png)" data-city="#ibague")
+      .item(class=(data.city === 'ibague' ? 'active' : '') style="background-image: url(/images/site/banners/banner_ibague.png)" data-city="#ibague")
         span Ibagué
-      .item(style="background-image: url(/images/site/banners/banner_manizales.png)" data-city="#manizales")
+      .item(class=(data.city === 'manizales' ? 'active' : '') style="background-image: url(/images/site/banners/banner_manizales.png)" data-city="#manizales")
         span Manizales
-      .item(style="background-image: url(/images/site/banners/banner_medellin.png)" data-city="#medellin")
+      .item(class=(data.city === 'medellin' ? 'active' : '') style="background-image: url(/images/site/banners/banner_medellin.png)" data-city="#medellin")
         span Medellín
-      .item(style="background-image: url(/images/site/banners/banner_pereira.png)" data-city="#pereira")
+      .item(class=(data.city === 'pereira' ? 'active' : '') style="background-image: url(/images/site/banners/banner_pereira.png)" data-city="#pereira")
         span Pereira
-      .item(style="background-image: url(/images/site/banners/banner_santa_marta.png)" data-city="#santa_marta")
+      .item(class=(data.city === 'santa-marta' ? 'active' : '') style="background-image: url(/images/site/banners/banner_santa_marta.png)" data-city="#santa_marta")
         span Santa Marta
-      .item(style="background-image: url(/images/site/banners/banner_yumbo.png)" data-city="#yumbo")
-        span Yumbo
 
     a.left.carousel-control(href="#cities-carousel" data-slide="prev" role="button")
       span.glyphicon.glyphicon-chevron-left
     a.right.carousel-control(href="#cities-carousel" data-slide="next" role="button")
       span.glyphicon.glyphicon-chevron-right
-  
-  .container-fluid
-    #aburra.city-profile
-      span Aburrá
-    #barranquilla.city-profile
-      span Barranquilla
-    #bogota.city-profile
-      span Bogotá
-    #bucaramanga.city-profile
-      span Bucaramanga
-    #cali.city-profile
-      span Cali
-    #cartagena.city-profile
-      span Cartagena
-    #cucuta.city-profile
-      span Cúcuta
-    #ibague.city-profile
-      span Ibagué
-    #manizales.city-profile
-      span Manizales
-    #medellin.city-profile
-      span Medellín
-    #pereira.city-profile
-      span Pereira
-    #santa_marta.city-profile
-      span Santa Marta
-    #yumbo.city-profile
-      span Yumbo
+  div(style="padding: 20px")
+  #barranquilla.city-profile
+    iframe(src="/statics/cities/barranquilla.html", frameborder="0")
+  #bogota.city-profile
+    iframe(src="/statics/cities/bogota.html", frameborder="0")
+  #bucaramanga.city-profile
+    iframe(src="/statics/cities/bucaramanga.html", frameborder="0")
+  #cali.city-profile
+    iframe(src="/statics/cities/cali.html", frameborder="0")
+  #cartagena.city-profile
+    iframe(src="/statics/cities/cartagena.html", frameborder="0")
+  #cucuta.city-profile
+    iframe(src="/statics/cities/cucuta.html", frameborder="0")
+  #ibague.city-profile
+    iframe(src="/statics/cities/ibague.html", frameborder="0")
+  #manizales.city-profile
+    iframe(src="/statics/cities/manizales.html", frameborder="0")
+  #medellin.city-profile
+    iframe(src="/statics/cities/medellin.html", frameborder="0")
+  #pereira.city-profile
+    iframe(src="/statics/cities/pereira.html", frameborder="0")
+  #santa_marta.city-profile
+    iframe(src="/statics/cities/santa-marta.html", frameborder="0")
 
 block js
+  script(src="/vendors/iframeResizer.min.js")
   script(src="/js/margin.js")
   script.
     $(document).ready(function() {
+      $('iframe').iFrameResize()
       var actual = $('.item.active').attr('data-city');
       $('.city-profile').hide();
       $(actual).show();
