@@ -28,7 +28,7 @@ block content
       .home-fb-content
         .home-fb-left.Column
           img(src="/images/logos/logociudatoscolor.png", alt="")
-          p Todos vemos, pero pocos conocemos. Ciudatos, información que empodera al servicio al servicio de todos los ciudadanos
+          p= data.info.description
           .home-fb-social
             <a class="fa-layers fa-fw" href="https://www.facebook.com/FundCorona/" target="_blank" rel="noopener noreferrer">
               <i class="fas fa-circle facebook"></i>
@@ -47,20 +47,20 @@ block content
               <i class="fab fa-youtube" data-fa-transform="shrink-6"></i>
             </a>
         .home-fb-right.Column.center-vertical.center-horizontal
-          a.hind.section-title(href="/visualizacion") Explora
-          p Explora los datos por temas de interés
+          a.hind.section-title(href="/visualizacion")= data.info.exploreTitle
+          p= data.info.exploreLabel
 
   .bg-dark-blue.text-center.visible-xs.text-white.home-fb-aux
-    a.hind.section-title(href="/explora") Explora
-    p.lato Explora los datos por temas de interés
+    a.hind.section-title(href="/explora")= data.info.exploreTitle
+    p.lato= data.info.exploreLabel
 
   .home-second-banner.text-center
     .container-fluid
       //- a.hind.section-title(href="/ciudades") Ciudades
-      a.hind.section-title Ciudades
+      a.hind.section-title= data.info.citiesTitle
       pre.lato.
-        ¿Crees conocer las ciudades colombianas?
-        Descubre cómo está su calidad de vida a profundidad
+        #{data.info.citiesLineOne}
+        #{data.info.citiesLineTwo}
       .owl-carousel.karla
         //- a(href="/ciudades/barranquilla" )
         a
@@ -112,10 +112,10 @@ block content
   .home-third-banner.text-center
     .container-fluid
       //- a.hind.section-title(href="/temas") Temas
-      a.hind.section-title Temas
+      a.hind.section-title= data.info.topicsTitle
       pre.lato.
-        Conoce cómo va la educación, salud, seguridad
-        y muchos más temas que afectan tu calidad de vida
+        #{data.info.topicsLineOne}
+        #{data.info.topicsLineTwo}
       .topics-container
         a.topic.Column.center-vertical.center-horizontal
           img(src="/images/icons/bienestarejecutivo.png", alt="Tema")
@@ -167,10 +167,10 @@ block content
 
   .home-fourth-banner.text-center
     .container-fluid
-      a.hind.section-title(href="/publicaciones") Publicaciones
+      a.hind.section-title(href="/publicaciones")= data.info.publicationsTitle
       pre.lato.
-        Consulta los distintos y análisis
-        sobre la calidad de vida de las ciudades
+        #{data.info.publicationsLineOne}
+        #{data.info.publicationsLineTwo}
       .documents__home
         each document in data.documents
           .document__home(style=`background-image: url(${document.image.secure_url})`)
@@ -182,10 +182,10 @@ block content
 
   .home-fifth-banner.text-center.bg-dark-blue
     .container-fluid
-      a.hind.section-title(href="/datos") Bases de datos
+      a.hind.section-title(href="/datos")= data.info.dbTitle
       pre.lato.
-        Navega y explora el mundo de los
-        datos abiertos de las ciudades colombianas
+        #{data.info.dbLineOne}
+        #{data.info.dbLineTwo}
       .home-fifth-banner-body
         .home-fifth-banner-description.Column
           p.hind

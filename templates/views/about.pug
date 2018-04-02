@@ -8,22 +8,18 @@ block css
 
 block content
 	.about-main-banner.text-dark-blue
-		h3.hind Sobre Nosotros
-		p.karla(style="margin-bottom: 0") Plataforma que almacena los datasets completos históricos de las ciudades Cómo Vamos y otros que hacen parte de la Plataforma de Datos Abiertos para su descarga en línea.
+		h3.hind= data.info.aboutTitle
+		p.karla(style="margin-bottom: 0")= data.info.aboutDescription
 	img.img-responsive(src="/images/site/transicion_temas.png", alt="Banner")
 	.about-content
 		.about-image-1.bg-yellow
 			img.img-responsive(src="/images/site/quienes_somos_1.png", alt="")
 		.about-text-what.bg-yellow.text-dark-blue
-			h3.hind ¿Qué datos tiene la plataforma?
-			p.karla La plataforma de datos de la Red de Ciudades Cómo Vamos tiene todos los datos recopilados desde el nacimiento de cada una de las 11 iniciativas. De acuerdo a la metodología utilizada por el programa, se recopilan dos tipos de datos:
-			p.karla Datos Objetivos: Indicadores recopilados por ciudad, que describen el estado de las temáticas que dan cuenta de la calidad de vida en cada ciudad. Por ejemplo, la tasa de homicidios o de mortalidad en Medellín.
-			p.karla Datos Subjetivos: Respuestas a las preguntas de la Encuesta de Percepción ciudadana aplicada anualmente en cada ciudad. La encuesta indaga sobre los temas que se incluyen en los indicadores objetivos, por ejemplo, sobre victimización, educación etc.
+			h3.hind= data.info.whatDataTitle
+			.karla !{data.info.whatDataText.html}
 		.about-text-how.text-dark-blue
-			h3.hind ¿Cómo encuentro estos datos?
-			p.karla Los datos están organizados por ciudad. Por lo que puedes acceder desde la página principal de ciudatos.
-			p.karla Los datos los puedes encontrar por año, por ciudad, o puedes entrar a ciudatos para descargar la base completa para todas las ciudades.
-			p.karla ¡Recuerda abrir el archivo de diccionario de datos al mismo tiempo que trabajes con la base de datos!
+			h3.hind= data.info.howToTitle
+			.karla !{data.info.howToText.html}
 		.about-image-2
 			img.img-resposive(src="/images/site/quienes_somos_2.png", alt="")
 
