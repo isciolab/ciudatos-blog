@@ -6,7 +6,7 @@ exports = module.exports = function (req, res) {
 	const section = req.query.data || undefined
 	locals.data = {}
 	locals.data.iframe = section ? `https://randommonkey.shinyapps.io/appDownload/?data=${section}` : `https://randommonkey.shinyapps.io/appDownload/`
-	locals.title = 'Sobre Nosotros | Ciudatos';
+	locals.title = 'Bases de datos | Ciudatos';
 	locals.section = 'base-de-datos';
 	view.render('bases-de-datos');
 };
