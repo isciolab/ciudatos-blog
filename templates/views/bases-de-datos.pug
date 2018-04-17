@@ -1,7 +1,7 @@
 extends ../layouts/default
 
 block content
-	iframe(src="https://randommonkey.shinyapps.io/appDownload/" width = "100%" frameborder="0")
+	iframe(src=`${data.iframe}` width = "100%" frameborder="0")
 block js
 	script(src="/vendors/iframeResizer.min.js")
 	script(src="/js/margin.js")
