@@ -40,7 +40,7 @@ block css
     }
     iframe:not(.sharerFacebook) {
       min-width: 100%;
-      height: 3000px
+      height: 2700px;
     }
     .social-share {
       left: 15px;
@@ -57,26 +57,26 @@ block content
   
   #cities-carousel.carousel.slide(data-ride="carousel")
     .carousel-inner(role="listbox")
-      .item(class=(data.city === 'barranquilla' ? 'active' : '') style="background-image: url(/images/site/banners/banner_barranquilla.png)" data-city="#barranquilla")
-        span Barranquilla
-      .item(class=(data.city === 'bogota' ? 'active' : '') style="background-image: url(/images/site/banners/banner_bogota.png)" data-city="#bogota")
-        span Bogotá
-      .item(class=(data.city === 'bucaramanga' ? 'active' : '') style="background-image: url(/images/site/banners/banner_bucaramanga.png)" data-city="#bucaramanga")
-        span Bucaramanga
+      //- .item(class=(data.city === 'barranquilla' ? 'active' : '') style="background-image: url(/images/site/banners/banner_barranquilla.png)" data-city="#barranquilla")
+      //-   span Barranquilla
+      //- .item(class=(data.city === 'bogota' ? 'active' : '') style="background-image: url(/images/site/banners/banner_bogota.png)" data-city="#bogota")
+      //-   span Bogotá
+      //- .item(class=(data.city === 'bucaramanga' ? 'active' : '') style="background-image: url(/images/site/banners/banner_bucaramanga.png)" data-city="#bucaramanga")
+      //-   span Bucaramanga
       .item(class=(data.city === 'cali' ? 'active' : '') style="background-image: url(/images/site/banners/banner_cali.png)" data-city="#cali")
         span Cali
       .item(class=(data.city === 'cartagena' ? 'active' : '') style="background-image: url(/images/site/banners/banner_cartagena.png)" data-city="#cartagena")
         span Cartagena
-      .item(class=(data.city === 'cucuta' ? 'active' : '') style="background-image: url(/images/site/banners/banner_cucuta.png)" data-city="#cucuta")
-        span Cúcuta
-      .item(class=(data.city === 'ibague' ? 'active' : '') style="background-image: url(/images/site/banners/banner_ibague.png)" data-city="#ibague")
-        span Ibagué
+      //- .item(class=(data.city === 'cucuta' ? 'active' : '') style="background-image: url(/images/site/banners/banner_cucuta.png)" data-city="#cucuta")
+      //-   span Cúcuta
+      //- .item(class=(data.city === 'ibague' ? 'active' : '') style="background-image: url(/images/site/banners/banner_ibague.png)" data-city="#ibague")
+      //-   span Ibagué
       .item(class=(data.city === 'manizales' ? 'active' : '') style="background-image: url(/images/site/banners/banner_manizales.png)" data-city="#manizales")
         span Manizales
       .item(class=(data.city === 'medellin' ? 'active' : '') style="background-image: url(/images/site/banners/banner_medellin.png)" data-city="#medellin")
         span Medellín
-      .item(class=(data.city === 'pereira' ? 'active' : '') style="background-image: url(/images/site/banners/banner_pereira.png)" data-city="#pereira")
-        span Pereira
+      //- .item(class=(data.city === 'pereira' ? 'active' : '') style="background-image: url(/images/site/banners/banner_pereira.png)" data-city="#pereira")
+      //-   span Pereira
       .item(class=(data.city === 'santa-marta' ? 'active' : '') style="background-image: url(/images/site/banners/banner_santa_marta.png)" data-city="#santa_marta")
         span Santa Marta
 
@@ -85,35 +85,36 @@ block content
     a.right.carousel-control(href="#cities-carousel" data-slide="next" role="button")
       span.glyphicon.glyphicon-chevron-right
   div(style="padding: 20px")
-  #barranquilla.city-profile
-    iframe(src="/statics/cities/barranquilla.html", frameborder="0")
-  #bogota.city-profile
-    iframe(src="/statics/cities/bogota.html", frameborder="0")
-  #bucaramanga.city-profile
-    iframe(src="/statics/cities/bucaramanga.html", frameborder="0")
+  //- #barranquilla.city-profile
+  //-   iframe(src="/statics/cities/barranquilla.html", frameborder="0" class="city-frame")
+  //- #bogota.city-profile
+  //-   iframe(src="/statics/cities/bogota.html", frameborder="0" class="city-frame")
+  //- #bucaramanga.city-profile
+  //-   iframe(src="/statics/cities/bucaramanga.html", frameborder="0" class="city-frame")
   #cali.city-profile
-    iframe(src="/statics/cities/cali.html", frameborder="0")
+    iframe(src="/statics/cities/cali.html", frameborder="0" class="city-frame")
   #cartagena.city-profile
-    iframe(src="/statics/cities/cartagena.html", frameborder="0")
-  #cucuta.city-profile
-    iframe(src="/statics/cities/cucuta.html", frameborder="0")
-  #ibague.city-profile
-    iframe(src="/statics/cities/ibague.html", frameborder="0")
+    iframe(src="/statics/cities/cartagena.html", frameborder="0" class="city-frame")
+  //- #cucuta.city-profile
+  //-   iframe(src="/statics/cities/cucuta.html", frameborder="0" class="city-frame")
+  //- #ibague.city-profile
+  //-   iframe(src="/statics/cities/ibague.html", frameborder="0" class="city-frame")
   #manizales.city-profile
-    iframe(src="/statics/cities/manizales.html", frameborder="0")
+    iframe(src="/statics/cities/manizales.html", frameborder="0" class="city-frame")
   #medellin.city-profile
-    iframe(src="/statics/cities/medellin.html", frameborder="0")
-  #pereira.city-profile
-    iframe(src="/statics/cities/pereira.html", frameborder="0")
+    iframe(src="/statics/cities/medellin.html", frameborder="0" class="city-frame")
+  //- #pereira.city-profile
+  //-   iframe(src="/statics/cities/pereira.html", frameborder="0" class="city-frame")
   #santa_marta.city-profile
-    iframe(src="/statics/cities/santa-marta.html", frameborder="0")
+    iframe(src="/statics/cities/santa-marta.html", frameborder="0" class="city-frame")
 
 block js
   script(src="/vendors/iframeResizer.min.js")
   script(src="/js/margin.js")
   script.
     $(document).ready(function() {
-      /*$('iframe').iFrameResize()*/
+      $('iframe.city-frame').iFrameResize()
+      $('iframe').iFrameResize()
       var actual = $('.item.active').attr('data-city');
       var fbUrl = setFacebookSharerUrl(actual)
       var twitterUrl = setTwitterSharerUrl(actual)
