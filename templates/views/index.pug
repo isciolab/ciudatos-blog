@@ -3,21 +3,6 @@ extends ../layouts/default
 block css
   link(rel="stylesheet", href="vendors/owl.carousel.min.css")
   link(rel="stylesheet", href="vendors/owl.theme.default.min.css")
-  style.
-    .owl-nav {
-      display: flex;
-      justify-content: space-between;
-      position: absolute;
-      align-items: center;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 100%;
-      padding: 0 10px;
-    }
-    .owl-nav .glyphicon {
-      color: white;
-      font-size: 30px;
-    }
 
 block content
 
@@ -56,57 +41,36 @@ block content
 
   .home-second-banner.text-center
     .container-fluid
-      //- a.hind.section-title(href="/ciudades") Ciudades
       a.hind.section-title(href="/ciudades")= data.info.citiesTitle
       pre.lato.
         #{data.info.citiesLineOne}
         #{data.info.citiesLineTwo}
       .owl-carousel.karla
-        //- a(href="/ciudades/barranquilla" )
-        //- a
-        //-   img(src="/images/site/cities/slide_barranquilla.png", alt="Ciudad")
-        //-   span Barranquilla
-        //- a(href="/ciudades/bogota" )
-        //- a
-        //-   img(src="/images/site/cities/slide_bogota.png", alt="Ciudad")
-        //-   span Bogotá
-        //- a(href="/ciudades/bucaramanga" )
-        //- a
-        //-   img(src="/images/site/cities/slide_bucaramanga.png", alt="Ciudad")
-        //-   span Bucaramanga
-        a(href="/ciudades/cali" )
-          img(src="/images/site/cities/slide_cali.png", alt="Ciudad")
-          span Cali
-        a(href="/ciudades/cartagena" )
-          img(src="/images/site/cities/slide_cartagena.png", alt="Ciudad")
-          span Cartagena
-        //- a(href="/ciudades/cucuta" )
-        //- a
-        //-   img(src="/images/site/cities/slide_cucuta.png", alt="Ciudad")
-        //-   span Cúcuta
-        //- a(href="/ciudades/ibague" )
-        //- a
-        //-   img(src="/images/site/cities/slide_ibague.png", alt="Ciudad")
-        //-   span Ibagué
-        a(href="/ciudades/manizales" )
-          img(src="/images/site/cities/slide_manizales.png", alt="Ciudad")
-          span Manizales
-        a(href="/ciudades/medellin" )
-          img(src="/images/site/cities/slide_medellin.png", alt="Ciudad")
-          span Medellín
-        //- a(href="/ciudades/pereira" )
-        //- a
-        //-   img(src="/images/site/cities/slide_pereira.png", alt="Ciudad")
-        //-   span Pereira
-        a(href="/ciudades/santa-marta" )
-          img(src="/images/site/cities/slide_santa_marta.png", alt="Ciudad")
-          span Santa Marta
+        div.carousel-item
+          a(href="/ciudades/cali")
+            img(src="/images/site/cities/slide_cali.png", alt="Ciudad")
+            span Cali
+        div.carousel-item
+          a(href="/ciudades/cartagena")
+            img(src="/images/site/cities/slide_cartagena.png", alt="Ciudad")
+            span Cartagena
+        div.carousel-item
+          a(href="/ciudades/manizales")
+            img(src="/images/site/cities/slide_manizales.png", alt="Ciudad")
+            span Manizales
+        div.carousel-item
+          a(href="/ciudades/medellin")
+            img(src="/images/site/cities/slide_medellin.png", alt="Ciudad")
+            span Medellín
+        div.carousel-item
+          a(href="/ciudades/santa-marta")
+            img(src="/images/site/cities/slide_santa_marta.png", alt="Ciudad")
+            span Santa Marta
 
   .background(style="background: url(/images/site/transicion_temas.png); height: 125px")
 
   .home-third-banner.text-center
     .container-fluid
-      //- a.hind.section-title(href="/temas") Temas
       a.hind.section-title= data.info.topicsTitle
       pre.lato.
         #{data.info.topicsLineOne}

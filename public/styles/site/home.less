@@ -138,17 +138,19 @@ a + pre {
     color: @ciudatos-dark-blue;    
   }
   .owl-carousel {
+    .carousel-item {
+      position: relative;
+    }
     a {
       color: white;
       display: block;
       font-size: 22px;
       position: relative;
       span {
-        left: 50%;
         position: absolute;
         top: 50%;
-        -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
   }
@@ -230,6 +232,27 @@ a + pre {
       width: 60%;
     }
   }
+}
+
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+.owl-nav .glyphicon {
+  color: white;
+  font-size: 30px;
+}
+.owl-prev {
+  left: 10px;
+  position: absolute;
+  transform: translateY(-50%);
+}
+.owl-next {
+  right: 10px;
+  position: absolute;
+  transform: translateY(-50%);
 }
 
 .documents__home {
