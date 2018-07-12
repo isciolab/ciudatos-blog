@@ -5,5 +5,8 @@ exports = module.exports = function (req, res) {
 	const locals = res.locals;
 	locals.title = 'Visualización de datos | Ciudatos';
 	locals.section = 'visualizacion';
+	const { section } = req.query;
+	locals.data = {};
+	locals.data.section = section;
 	view.render('visualize');
 };

@@ -21,6 +21,6 @@ exports = module.exports = function (app) {
 	app.get('/temas', routes.views.topics);
 	app.get('/publicaciones', routes.views.documents);
 	app.use((req, res, next) => {
-		res.render('errors/404')
-	})
+		res.render('errors/404');
+	});
 };

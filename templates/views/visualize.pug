@@ -4,7 +4,7 @@ block vars
 	- inner_padding = "padding: 0 15px"
 
 block content
-	iframe(src="https://randommonkey.shinyapps.io/appCiudatos/" width = "100%" frameborder="0")
+	iframe(src=(data.section ? `https://randommonkey.shinyapps.io/appCiudatos/?data=${data.section}` :"https://randommonkey.shinyapps.io/appCiudatos/") width = "100%" frameborder="0")
 
 block js
 	script(src="/vendors/iframeResizer.min.js")
