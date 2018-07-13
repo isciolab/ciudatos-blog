@@ -5,7 +5,6 @@ exports = module.exports = function (req, res, follow) {
 	const view = new keystone.View(req, res);
 	const locals = res.locals;
 	const { city } = req.params;
-	const cities = ['cali', 'cartagena', 'manizales', 'medellin', 'santa-marta'];
 
 	function capitalize (str) {
 		if (!str) return;
@@ -18,17 +17,18 @@ exports = module.exports = function (req, res, follow) {
 	};
 
 	view.on('init', async next => {
-		if (cities.includes(locals.data.city)) {
+		try {
+			locals.data.cities = await City.getPublishedCities();
+			const cities = locals.data.cities.map(city => city.slug);
+			if (!cities.includes(locals.data.city)) {
+				return follow();
+			}
 			locals.title = `Ciudades - ${capitalize(locals.data.city)} | Ciudatos`;
 			locals.section = 'ciudades';
-			try {
-				locals.data.cities = await City.getPublishedCities();
-			} catch (error) {
-				return next(error);
-			}
-			return next();
+		} catch (error) {
+			return next(error);
 		}
-		return follow();
+		return next();
 	});
 
 	view.render('city');
