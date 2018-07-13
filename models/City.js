@@ -1,10 +1,5 @@
-var keystone = require('keystone');
-var Types = keystone.Field.Types;
-
-/**
- * Document Model
- * ==========
- */
+const keystone = require('keystone');
+const { Types } = keystone.Field;
 
 const storage = new keystone.Storage({
 	adapter: require('keystone-storage-adapter-s3'),
@@ -13,7 +8,7 @@ const storage = new keystone.Storage({
 		secret: process.env.S3_SECRET,
 		bucket: process.env.S3_BUCKET,
 		region: process.env.S3_REGION,
-		path: '/ciudatos/documents',
+		path: '/cities/',
 	},
 	schema: {
 		bucket: true,
@@ -23,30 +18,32 @@ const storage = new keystone.Storage({
 	},
 });
 
-const Document = new keystone.List('Document', {
+const City = new keystone.List('City', {
 	map: { name: 'title' },
 	autokey: { path: 'slug', from: 'title', unique: true },
 });
 
-Document.add({
+City.add({
 	title: { type: String, required: true },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
-	externalAuthor: { type: String },
-	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
-	image: { type: Types.CloudinaryImage, folder: 'ciudatos/documents' },
-	content: {
-		brief: { type: Types.Html, wysiwyg: true, height: 150 },
+	image: {
+		type: Types.CloudinaryImage,
+		folder: 'ciudatos/cities',
+	},
+	thumbnail: {
+		type: Types.CloudinaryImage,
+		folder: 'ciudatos/cities',
 	},
 	file: { type: Types.File, storage: storage,
 		filename: function (item, filename, originalname) {
-			return item._id + '-' + originalname;
+			return originalname;
 		},
 	},
 });
 
-Document.schema.statics.getPublishedDocuments = async function () {
+City.schema.statics.getPublishedCities = async function () {
 	return await this.find({ state: 'published' }).exec();
 };
 
-Document.defaultColumns = 'title,state|20%, author|20%, publishedDate|20%';
-Document.register();
+City.defaultColumns = 'title,state|20%, author|20%, publishedDate|20%';
+City.register();

@@ -46,26 +46,11 @@ block content
         #{data.info.citiesLineOne}
         #{data.info.citiesLineTwo}
       .owl-carousel.karla
-        div.carousel-item
-          a(href="/ciudades/cali")
-            img(src="/images/site/cities/slide_cali.png", alt="Ciudad")
-            span Cali
-        div.carousel-item
-          a(href="/ciudades/cartagena")
-            img(src="/images/site/cities/slide_cartagena.png", alt="Ciudad")
-            span Cartagena
-        div.carousel-item
-          a(href="/ciudades/manizales")
-            img(src="/images/site/cities/slide_manizales.png", alt="Ciudad")
-            span Manizales
-        div.carousel-item
-          a(href="/ciudades/medellin")
-            img(src="/images/site/cities/slide_medellin.png", alt="Ciudad")
-            span Medellín
-        div.carousel-item
-          a(href="/ciudades/santa-marta")
-            img(src="/images/site/cities/slide_santa_marta.png", alt="Ciudad")
-            span Santa Marta
+        each city in data.cities
+          .carousel-item
+            a(href=`/ciudades/${city.slug}`)
+              img(src=city.thumbnail.secure_url, alt="")
+              span #{city.title}
 
   .background(style="background: url(/images/site/transicion_temas.png); height: 125px")
 

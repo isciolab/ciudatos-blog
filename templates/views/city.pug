@@ -54,79 +54,48 @@ block content
   .social-share
     iframe.sharerFacebook(width="99" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true")
     <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  
+
   #cities-carousel.carousel.slide(data-ride="carousel")
     .carousel-inner(role="listbox")
-      //- .item(class=(data.city === 'barranquilla' ? 'active' : '') style="background-image: url(/images/site/banners/banner_barranquilla.png)" data-city="#barranquilla")
-      //-   span Barranquilla
-      //- .item(class=(data.city === 'bogota' ? 'active' : '') style="background-image: url(/images/site/banners/banner_bogota.png)" data-city="#bogota")
-      //-   span Bogotá
-      //- .item(class=(data.city === 'bucaramanga' ? 'active' : '') style="background-image: url(/images/site/banners/banner_bucaramanga.png)" data-city="#bucaramanga")
-      //-   span Bucaramanga
-      .item(class=(data.city === 'cali' ? 'active' : '') style="background-image: url(/images/site/banners/banner_cali.png)" data-city="#cali")
-        span Cali
-      .item(class=(data.city === 'cartagena' ? 'active' : '') style="background-image: url(/images/site/banners/banner_cartagena.png)" data-city="#cartagena")
-        span Cartagena
-      //- .item(class=(data.city === 'cucuta' ? 'active' : '') style="background-image: url(/images/site/banners/banner_cucuta.png)" data-city="#cucuta")
-      //-   span Cúcuta
-      //- .item(class=(data.city === 'ibague' ? 'active' : '') style="background-image: url(/images/site/banners/banner_ibague.png)" data-city="#ibague")
-      //-   span Ibagué
-      .item(class=(data.city === 'manizales' ? 'active' : '') style="background-image: url(/images/site/banners/banner_manizales.png)" data-city="#manizales")
-        span Manizales
-      .item(class=(data.city === 'medellin' ? 'active' : '') style="background-image: url(/images/site/banners/banner_medellin.png)" data-city="#medellin")
-        span Medellín
-      //- .item(class=(data.city === 'pereira' ? 'active' : '') style="background-image: url(/images/site/banners/banner_pereira.png)" data-city="#pereira")
-      //-   span Pereira
-      .item(class=(data.city === 'santa-marta' ? 'active' : '') style="background-image: url(/images/site/banners/banner_santa_marta.png)" data-city="#santa_marta")
-        span Santa Marta
+      each city in data.cities
+        .item(
+          class=(data.city === city.slug ? 'active': ''),
+          style=`background-image: url(${city.image.secure_url})`,
+          data-city=`#${city.slug}`
+        )
+          span #{city.title}
 
     a.left.carousel-control(href="#cities-carousel" data-slide="prev" role="button")
       span.glyphicon.glyphicon-chevron-left
     a.right.carousel-control(href="#cities-carousel" data-slide="next" role="button")
       span.glyphicon.glyphicon-chevron-right
+
   div(style="padding: 20px")
-  //- #barranquilla.city-profile
-  //-   iframe(src="/statics/cities/barranquilla.html", frameborder="0" class="city-frame")
-  //- #bogota.city-profile
-  //-   iframe(src="/statics/cities/bogota.html", frameborder="0" class="city-frame")
-  //- #bucaramanga.city-profile
-  //-   iframe(src="/statics/cities/bucaramanga.html", frameborder="0" class="city-frame")
-  #cali.city-profile
-    iframe(src="/statics/cities/cali.html", frameborder="0" class="city-frame")
-  #cartagena.city-profile
-    iframe(src="/statics/cities/cartagena.html", frameborder="0" class="city-frame")
-  //- #cucuta.city-profile
-  //-   iframe(src="/statics/cities/cucuta.html", frameborder="0" class="city-frame")
-  //- #ibague.city-profile
-  //-   iframe(src="/statics/cities/ibague.html", frameborder="0" class="city-frame")
-  #manizales.city-profile
-    iframe(src="/statics/cities/manizales.html", frameborder="0" class="city-frame")
-  #medellin.city-profile
-    iframe(src="/statics/cities/medellin.html", frameborder="0" class="city-frame")
-  //- #pereira.city-profile
-  //-   iframe(src="/statics/cities/pereira.html", frameborder="0" class="city-frame")
-  #santa_marta.city-profile
-    iframe(src="/statics/cities/santa-marta.html", frameborder="0" class="city-frame")
+
+  each city in data.cities
+    .city-profile(id=city.slug)
+      iframe.city-frame(src=city.file.url, frameborder="0")
 
 block js
   script(src="/vendors/iframeResizer.min.js")
   script(src="/js/margin.js")
   script.
-    $(document).ready(function() {
-      $('iframe.city-frame').iFrameResize()
-      $('iframe').iFrameResize()
+    $('.carousel').carousel({ interval: false })
+    $('iframe.city-frame').iFrameResize({ checkOrigin: false })
+    $(document).ready(function () {
       var actual = $('.item.active').attr('data-city');
       var fbUrl = setFacebookSharerUrl(actual)
       var twitterUrl = setTwitterSharerUrl(actual)
+
       $('.sharerFacebook').attr('src', fbUrl)
       $('.twitter-share-button').attr('data-url', twitterUrl)
       $('.city-profile').hide();
       $(actual).show();
-      $('.carousel').carousel({ interval: false })
+
       $('#cities-carousel').on('slid.bs.carousel', function(event) {
         var city = $(event.relatedTarget).attr('data-city');
         fbUrl = setFacebookSharerUrl(city)
-        twitterUrl = setTwitterSharerUrl(actual)
+        twitterUrl = setTwitterSharerUrl(city)
         $('.sharerFacebook').attr('src', fbUrl)
         $('.twitter-share-button').attr('data-url', twitterUrl)
         $('.city-profile').hide();
