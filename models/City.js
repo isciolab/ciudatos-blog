@@ -21,10 +21,12 @@ const storage = new keystone.Storage({
 
   adapter: keystone.Storage.Adapters.FS,
   fs: {
-  	path: keystone.expandPath('/home/jhainey/Documentos/ciudatos/datos_sujetivos/'),
-  	publicPath: '/home/jhainey/Documentos/ciudatos/datos_sujetivos/',
+  	path: keystone.expandPath('/home/ciudatos/cities/'),
+  	publicPath: '/home/ciudatos/cities/',
   },
 
+
+	
 
 });
 

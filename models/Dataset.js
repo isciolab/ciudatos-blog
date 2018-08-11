@@ -23,8 +23,8 @@ const storage = new keystone.Storage({
 
 	adapter: keystone.Storage.Adapters.FS,
   fs: {
-  	path: keystone.expandPath('/home/jhainey/Documentos/ciudatos/datasets/'),
-  	publicPath: '/home/jhainey/Documentos/ciudatos/datasets/',
+  	path: keystone.expandPath('/home/ciudatos/datasets/'),
+  	publicPath: '/home/ciudatos/datasets/',
   },
 
 });
