@@ -7,7 +7,7 @@ var Types = keystone.Field.Types;
  */
 
 const storage = new keystone.Storage({
-	adapter: require('keystone-storage-adapter-s3'),
+	/*adapter: require('keystone-storage-adapter-s3'),
 	s3: {
 		key: process.env.S3_KEY,
 		secret: process.env.S3_SECRET,
@@ -20,7 +20,13 @@ const storage = new keystone.Storage({
 		etag: true,
 		path: true,
 		url: true,
-	},
+	},*/
+
+  adapter: keystone.Storage.Adapters.FS,
+  fs: {
+  	path: keystone.expandPath('/home/jhainey/Documentos/ciudatos/documents/'),
+  	publicPath: '/home/jhainey/Documentos/ciudatos/documents/',
+  },
 });
 
 const Document = new keystone.List('Document', {
