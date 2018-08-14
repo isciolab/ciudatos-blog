@@ -5,7 +5,7 @@ exports = module.exports = function (req, res) {
 	const locals = res.locals;
 	const section = req.query.data || undefined
 	locals.data = {}
-	locals.data.iframe = section ? `https://randommonkey.shinyapps.io/appDownload/?data=${section}` : `https://randommonkey.shinyapps.io/appDownload/`
+	locals.data.iframe = section ? `http://185.186.245.150:3838/ciudatos-app-2/appDownload/?data=${section}` : `http://185.186.245.150:3838/ciudatos-app-2/appDownload/`
 	locals.title = 'Bases de datos | Ciudatos';
 	locals.section = 'base-de-datos';
 	view.render('bases-de-datos');
