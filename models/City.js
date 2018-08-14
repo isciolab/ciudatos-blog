@@ -21,7 +21,7 @@ const storage = new keystone.Storage({
 
   adapter: keystone.Storage.Adapters.FS,
   fs: {
-  	path: keystone.expandPath('./public/ciudatos/cities/'),
+  	path: 'ciudatos/cities/',
   	publicPath: '/public/ciudatos/cities/',
   },
 
@@ -48,11 +48,7 @@ City.add({
 		type: Types.CloudinaryImage,
 		folder: 'ciudatos/cities',
 	},
-	file: { type: Types.File, storage: storage,
-		filename: function (item, filename, originalname) {
-			return originalname;
-		}
-	},
+	file: { type: Types.File, storage: storage},
 });
 
 City.schema.statics.getPublishedCities = async function () {
