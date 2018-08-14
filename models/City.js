@@ -51,7 +51,7 @@ City.add({
 	file: { type: Types.File, storage: storage,
 		filename: function (item, filename, originalname) {
 			return originalname;
-		},
+		}
 	},
 });
 
