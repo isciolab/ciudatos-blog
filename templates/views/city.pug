@@ -74,7 +74,7 @@ block content
 
   each city in data.cities
     .city-profile(id=city.slug)
-      iframe.city-frame(src="ciudatos/cities/"+city.file.filename, frameborder="0")
+      iframe.city-frame(src=city.file, frameborder="0")
 
 block js
   script(src="/vendors/iframeResizer.min.js")
