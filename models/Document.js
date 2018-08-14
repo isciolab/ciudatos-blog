@@ -24,8 +24,8 @@ const storage = new keystone.Storage({
 
   adapter: keystone.Storage.Adapters.FS,
   fs: {
-  	path: keystone.expandPath('/home/ciudatos/documents/'),
-  	publicPath: '/home/ciudatos/documents/',
+  	path: keystone.expandPath('./public/ciudatos/documents/'),
+  	publicPath: '/public/ciudatos/documents/',
   },
 });
 
