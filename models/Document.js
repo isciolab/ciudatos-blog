@@ -47,6 +47,9 @@ Document.add({
 		filename: function (item, filename, originalname) {
 			return item._id + '-' + originalname;
 		},
+        url: function (item, filename, originalname) {
+            return item._id + '-' + originalname;
+        },
 	},
 });
 
