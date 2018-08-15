@@ -4,7 +4,7 @@ mixin documentcard(document)
 	.col-md-4.col-sm-6: .document-item
 		img.img-responsive(src=`${document._.image.pad(250, 250)}`, alt="" style="margin: 0 auto")
 		.document-info.text-size-large.text-color-white.hind= document.title
-		a.document-url.text-size-x-large.anchor.anchor-white(href=`${document.file.url}` target="_blank" rel="noopener noreferrer") PDF
+		a.document-url.text-size-x-large.anchor.anchor-white(href="ciudatos/documents/"`${document.file.filename}` target="_blank" rel="noopener noreferrer") PDF
 
 block css
 	style.
