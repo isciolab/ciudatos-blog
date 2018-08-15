@@ -11,5 +11,5 @@ block js
 	script(src="/js/margin.js")
 	script.
 		$(document).ready(function () {
-			$('iframe').iFrameResize()
+			$('iframe').iFrameResize({ checkOrigin: false })
 		})
