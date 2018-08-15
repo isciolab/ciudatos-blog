@@ -52,6 +52,9 @@ City.add({
 		filename: function (item, filename, originalname) {
 			return originalname;
 		},
+        url: function (item, filename, originalname) {
+            return 'ciudatos/documents/'+item._id + '-' + originalname;
+        },
 	},
 });
 

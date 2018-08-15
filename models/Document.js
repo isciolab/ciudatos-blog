@@ -48,7 +48,7 @@ Document.add({
 			return item._id + '-' + originalname;
 		},
         url: function (item, filename, originalname) {
-            return item._id + '-' + originalname;
+            return 'ciudatos/documents/'+item._id + '-' + originalname;
         },
 	},
 });
