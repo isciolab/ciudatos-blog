@@ -1,0 +1,15 @@
+extends ../layouts/default
+
+block vars
+	- inner_padding = "padding: 0 15px"
+
+block content
+	iframe(src="http://185.186.245.150/" width = "100%" frameborder="0")
+
+block js
+	script(src="/vendors/iframeResizer.min.js")
+	script(src="/js/margin.js")
+	script.
+		$(document).ready(function () {
+			$('iframe').iFrameResize({ checkOrigin: false })
+		})
