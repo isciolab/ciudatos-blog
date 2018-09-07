@@ -16,7 +16,7 @@ exports = module.exports = function (app) {
 	app.get('/visualizacion', routes.views.visualize);
 	app.get('/ods', routes.views.ods);
 	app.get('/mock', routes.views.mock);
-	app.get('/ciudades', routes.mock.city);
+	app.get('/ciudades', routes.views.city);
 	app.get('/ciudades/:city', routes.views.city);
 	app.get('/datos', routes.views.data);
 	app.get('/about', routes.views.about);
