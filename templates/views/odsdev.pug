@@ -31,11 +31,15 @@ block js
     script(src="https://public.tableau.com/javascripts/api/tableau-2.min.js")
     script(src="/js/margin.js")
     script.
-        $(document).ready(function () {
-            $('iframe').iFrameResize({checkOrigin: false})
-            initViz();
-        })
         var viz;
+        $(document).ready(function () {
+
+            initViz();
+
+            $('iframe').iFrameResize({checkOrigin: false})
+
+        })
+
 
         function initViz() {
             var containerDiv = document.getElementById("vizContainer"),
