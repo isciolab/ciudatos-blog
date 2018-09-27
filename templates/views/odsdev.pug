@@ -13,10 +13,14 @@ block content
     <div class="col-md-12">
     <div id="vizContainer" style="width:800px; height:700px;"></div>
     <div id="controls" style="padding:20px;">
-    ODS: <select id="changeYear" onchange="odsConcatFilter(value);">
+    ODS: <select id="changeOdsConcat" onchange="odsConcatFilter(value);">
     <option value="">All</option>
     <option value="01 PONER FIN A LA POBREZA EN TODAS SUS FORMAS EN TODO EL MUNDOODS1- .">01 PONER FIN A LA POBREZA EN TODAS SUS FORMAS EN TODO EL MUNDOODS1- .</option>
-
+    </select>
+    META: <select id="changeTarget" onchange="targetFilter(value);">
+    <option value="">All</option>
+    <option value="Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día">
+    Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día</option>
     </select>
     </div>
     </div>
@@ -52,4 +56,11 @@ block js
                 sheet.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);
             }
         }
-        
+        function targetFilter(target) {
+            var sheet = viz.getWorkbook().getActiveSheet();
+            if (year === "") {
+                sheet.clearFilterAsync("Target Name");
+            } else {
+                sheet.applyFilterAsync("Target Name", target, tableau.FilterUpdateType.REPLACE);
+            }
+        }
