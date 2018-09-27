@@ -4,6 +4,7 @@ block vars
     - inner_padding = "padding: 0 15px"
 
 block content
+    <img style="width:100%" src="https://res.cloudinary.com/randommonkey/image/upload/v1531505257/ciudatos/cities/zcolwitwfetgjset3bfu.png"/>
     <ul class="nav nav-pills">
     <li role="presentation" class="active"><a href="#ODS">ODS</a></li>
     <li role="presentation"><a href="#CIUDADES">CIUDADES</a></li>
@@ -12,10 +13,10 @@ block content
     <div class="col-md-12">
     <div id="vizContainer" style="width:800px; height:700px;"></div>
     <div id="controls" style="padding:20px;">
-    Year: <select id="changeYear" onchange="yearFilter(value);">
+    ODS: <select id="changeYear" onchange="odsConcatFilter(value);">
     <option value="">All</option>
-    <option value="2013">2013</option>
-    <option value="2014">2014</option>
+    <option value="01 PONER FIN A LA POBREZA EN TODAS SUS FORMAS EN TODO EL MUNDOODS1- .">01 PONER FIN A LA POBREZA EN TODAS SUS FORMAS EN TODO EL MUNDOODS1- .</option>
+
     </select>
     </div>
     </div>
@@ -34,21 +35,21 @@ block js
 
         function initViz() {
             var containerDiv = document.getElementById("vizContainer"),
-                url = "http://public.tableau.com/views/RegionalSampleWorkbook/College",
+                url = "https://public.tableau.com/profile/jhainey.perez#!/vizhome/Ciudatos/metas",
                 options = {
-                    "Academic Year": "",
+                    "ods concat": "",
                     hideTabs: true
                 };
 
             viz = new tableau.Viz(containerDiv, url, options);
         }
 
-        function yearFilter(year) {
+        function odsConcatFilter(ods) {
             var sheet = viz.getWorkbook().getActiveSheet();
             if (year === "") {
-                sheet.clearFilterAsync("Academic Year");
+                sheet.clearFilterAsync("ods concat");
             } else {
-                sheet.applyFilterAsync("Academic Year", year, tableau.FilterUpdateType.REPLACE);
+                sheet.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);
             }
         }
-        </script>
+        
