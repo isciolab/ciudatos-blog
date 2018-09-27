@@ -1,0 +1,60 @@
+extends ../layouts/default
+
+block vars
+    - inner_padding = "padding: 0 15px"
+
+block content
+    <ul class="nav nav-pills">
+    <li role="presentation" class="active"><a href="#ODS">ODS</a></li>
+    <li role="presentation"><a href="#CIUDADES">CIUDADES</a></li>
+    </ul>
+    <div class="row">
+    <div class="col-md-12">
+
+
+
+<div id="vizContainer" style="width:800px; height:700px;"></div>
+<div id="controls" style="padding:20px;">
+Year: <select id="changeYear" onchange="yearFilter(value);">
+<option value="">All</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+</select>
+</div>
+
+
+    </div>
+    </div>
+
+
+block js
+    script(src="/vendors/iframeResizer.min.js")
+    script(src="https://public.tableau.com/javascripts/api/tableau-2.min.j")
+    script(src="/js/margin.js")
+    script.
+        $(document).ready(function () {
+            $('iframe').iFrameResize({checkOrigin: false})
+            initViz();
+        })
+        var viz;
+
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "http://public.tableau.com/views/RegionalSampleWorkbook/College",
+                options = {
+                    "Academic Year": "",
+                    hideTabs: true
+                };
+
+            viz = new tableau.Viz(containerDiv, url, options);
+        }
+
+        function yearFilter(year) {
+            var sheet = viz.getWorkbook().getActiveSheet();
+            if (year === "") {
+                sheet.clearFilterAsync("Academic Year");
+            } else {
+                sheet.applyFilterAsync("Academic Year", year, tableau.FilterUpdateType.REPLACE);
+            }
+        }
+        </script>
