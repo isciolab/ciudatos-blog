@@ -11,7 +11,8 @@ block content
     </ul>
     <div class="row">
     <div class="col-md-12">
-    <div id="vizContainer" style="width:800px; height:700px;"></div>
+
+
     <div id="controls" style="padding:20px;">
     ODS: <select id="changeOdsConcat" onchange="odsConcatFilter(value);">
     <option value="">All</option>
@@ -23,6 +24,9 @@ block content
     Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día</option>
     </select>
     </div>
+
+    <div id="vizContainer" style="width:800px; height:700px;"></div>
+
     </div>
     </div>
 
@@ -54,7 +58,7 @@ block js
 
         function odsConcatFilter(ods) {
             var sheet = viz.getWorkbook().getActiveSheet();
-            if (year === "") {
+            if (ods === "") {
                 sheet.clearFilterAsync("ods concat");
             } else {
                 sheet.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);
@@ -62,7 +66,7 @@ block js
         }
         function targetFilter(target) {
             var sheet = viz.getWorkbook().getActiveSheet();
-            if (year === "") {
+            if (target === "") {
                 sheet.clearFilterAsync("Target Name");
             } else {
                 sheet.applyFilterAsync("Target Name", target, tableau.FilterUpdateType.REPLACE);
