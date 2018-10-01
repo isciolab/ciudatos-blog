@@ -167,9 +167,12 @@ block js
         }
         function indicadorFilter(target) {
             var sheet = vizIndicadores.getWorkbook().getActiveSheet();
+            var sheet2 = vizdashboardods.getWorkbook().getActiveSheet();
             if (target === "") {
                 sheet.clearFilterAsync("Indicador");
+                sheet2.clearFilterAsync("Indicador");
             } else {
                 sheet.applyFilterAsync("Indicador", target, tableau.FilterUpdateType.REPLACE);
+                sheet2.applyFilterAsync("Indicador", target, tableau.FilterUpdateType.REPLACE);
             }
         }
