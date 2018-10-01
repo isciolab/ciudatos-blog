@@ -17,6 +17,7 @@ block content
             <div class="col-md-12">
                 <div class="tab-content clearfix">
                     <div id="ODS" class="tab-pane fade in active" >
+                        <div class="row"><div class="col-md-12">Seleccione un ODS, una meta y un indicador para ver su información</div></div>
                         <div class="row">
                             <div class="col-md-4">
                                 <label>ODS:</label>
@@ -54,6 +55,11 @@ block content
                                 <div id='indicadores'  style='position: relative; width: 300; height:100px'></div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                 <div id='dashboardods'  style='position: relative; width: auto; height:auto'></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="CIUDADES">
                             ciudades
@@ -72,12 +78,14 @@ block js
         var vizOdsName;
         var vizOdsDescription;
         var vizIndicadores;
+        var vizdashboardods;
         $(document).ready(function () {
 
             initMetas();
             initodsName();
             initOdsDescription();
             initIndicadores();
+            initdashboardods();
 
             $('iframe').iFrameResize({checkOrigin: false})
 
@@ -125,6 +133,14 @@ block js
                     hideTabs: true
                 };
             vizIndicadores = new tableau.Viz(containerDiv, url, options);
+        }
+        function initdashboardods() {
+            var containerDiv = document.getElementById("dashboardods"),
+                url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD2?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true
+                };
+            vizdashboardods = new tableau.Viz(containerDiv, url, options);
         }
 
         function odsConcatFilter(ods) {
