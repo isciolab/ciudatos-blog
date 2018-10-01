@@ -174,7 +174,7 @@ block js
         }
         function targetFilter(target) {
           //  var sheet = vizMetas.getWorkbook().getActiveSheet();
-            jQuery.each(vizdashboardods.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+            jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
                 if (target === "") {
                     sheet.clearFilterAsync("Name (Targets)");
 
@@ -186,7 +186,7 @@ block js
         }
         function indicadorFilter(target) {
             //var sheet = vizIndicadores.getWorkbook().getActiveSheet();
-            jQuery.each(vizdashboardods.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+            jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
                 if (target === "") {
                     sheet.clearFilterAsync("Indicador");
 
@@ -195,5 +195,5 @@ block js
                 }
             })
 
-          
+
         }
