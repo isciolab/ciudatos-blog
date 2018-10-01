@@ -170,6 +170,14 @@ block js
                       sheet.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);
                 }
             })
+            jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                if (indicador === "") {
+                    //sheet.clearFilterAsync("Indicador");
+
+                } else {
+                    sheet.applyFilterAsync("ods concat", indicador, tableau.FilterUpdateType.REPLACE);
+                }
+            })
 
         }
         function targetFilter(target) {
