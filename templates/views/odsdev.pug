@@ -88,7 +88,7 @@ block content
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                            <div id='dashboardodsgrupociudades'  style='position: relative; width: auto; height:auto'></div>
+                            <div id='cityprogreovsabsoluto'  style='position: relative; width: auto; height:auto'></div>
                             </div>
                         </div>
                         <div class="row">
@@ -113,19 +113,25 @@ block js
     script(src="/js/margin.js")
     script.
 
+        //ods
         var vizdashboardodsgrupociudades;
         var vizodsdashboardinfo;
         var vizdashboardodstrazador;
         var vizmapadecalorporods;
+        //city
         var vizcitidashboardinfo;
+        var vizcityprogreovsabsoluto;
         $(document).ready(function () {
 
 
+            //ods
             initodsdashboardinfo();
             initdashboardodsgrupociudades();
             initdashboardodstrazador();
             initmapadecalorporods();
+            //city
             initvizcitidashboardinfo();
+            initvizcityprogreovsabsoluto();
             $('iframe').iFrameResize({checkOrigin: false})
 
         })
@@ -133,6 +139,7 @@ block js
 
 
 
+        //ods
         function initmapadecalorporods() {
             var containerDiv = document.getElementById("mapadecalorporods"),
                 url = "https://public.tableau.com/views/Ciudatos/Mapadecalorporods?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
@@ -166,6 +173,8 @@ block js
                 };
             vizdashboardodstrazador = new tableau.Viz(containerDiv, url, options);
         }
+
+        //city
         function initvizcitidashboardinfo() {
             var containerDiv = document.getElementById("citidashboardinfo"),
                 url = "https://public.tableau.com/views/Ciudatos/CityDashboardinfo?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
@@ -174,8 +183,19 @@ block js
                 };
             vizcitidashboardinfo = new tableau.Viz(containerDiv, url, options);
         }
+        function initvizcityprogreovsabsoluto() {
+            var containerDiv = document.getElementById("cityprogreovsabsoluto"),
+                url = "https://public.tableau.com/views/Ciudatos/CityDashboardprogresovsindicador?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true
+                };
+            vizcityprogreovsabsoluto = new tableau.Viz(containerDiv, url, options);
+        }
 
 
+        //filters
+
+        //ods
         function odsConcatFilter(ods) {
 
             jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
@@ -255,9 +275,19 @@ block js
 
 
         }
+
+        //city
         function cityFilter(ciudad) {
             //var sheet = vizIndicadores.getWorkbook().getActiveSheet();
             jQuery.each(vizcitidashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                if (ciudad === "") {
+                    //sheet.clearFilterAsync("Indicador");
+
+                } else {
+                    sheet.applyFilterAsync("Ciudad", ciudad, tableau.FilterUpdateType.REPLACE);
+                }
+            })
+            jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
                 if (ciudad === "") {
                     //sheet.clearFilterAsync("Indicador");
 
