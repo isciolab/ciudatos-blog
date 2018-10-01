@@ -92,6 +92,7 @@ block js
             //initOdsDescription();
             //initIndicadores();
             initdashboardodsgrupociudades();
+            initodsdashboardinfo();
 
             $('iframe').iFrameResize({checkOrigin: false})
 
@@ -158,19 +159,8 @@ block js
         }
 
         function odsConcatFilter(ods) {
-           // var sheet = vizMetas.getWorkbook().getActiveSheet();
-           // var sheet2 = vizOdsName.getWorkbook().getActiveSheet();
-            //var sheet3 = vizOdsDescription.getWorkbook().getActiveSheet();
 
-            if (ods === "") {
-                /*sheet.clearFilterAsync("ods concat");
-                sheet2.clearFilterAsync("ods concat");
-                sheet3.clearFilterAsync("ods concat");*/
-            } else {
-                /*sheet.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);
-                sheet2.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);
-                sheet3.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);*/
-            }
+
         }
         function targetFilter(target) {
           //  var sheet = vizMetas.getWorkbook().getActiveSheet();
@@ -186,7 +176,7 @@ block js
         }
         function indicadorFilter(target) {
             //var sheet = vizIndicadores.getWorkbook().getActiveSheet();
-            jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+            jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
                 if (target === "") {
                     sheet.clearFilterAsync("Indicador");
 
