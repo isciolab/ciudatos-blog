@@ -159,10 +159,13 @@ block js
         }
         function targetFilter(target) {
             var sheet = vizMetas.getWorkbook().getActiveSheet();
+            var sheet2 = vizdashboardods.getWorkbook().getActiveSheet().getWorksheets().get("Indicador trazador de ods por grupo de ciudades");
             if (target === "") {
+                sheet2.clearFilterAsync("Name (Targets)");
                 sheet.clearFilterAsync("Name (Targets)");
             } else {
                 sheet.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
+                sheet2.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
             }
         }
         function indicadorFilter(target) {
