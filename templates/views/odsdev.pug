@@ -44,18 +44,7 @@ block content
                             </div>
                         </div>
 
-                        <!--<div class="row">
-                            <div class="col-md-4">
-                               <div  id='odsName' style='position: relative; width: 300; height: 100px'></div>
-                                 <div id='odsDescription'  style='position: relative; width: 300; height: 300px'></div>
-                            </div>
-                            <div class="col-md-4">
-                                <div id='metas'  style='position: relative; width: 300; height:100px'></div>
-                            </div>
-                            <div class="col-md-4">
-                                <div id='indicadores'  style='position: relative; width: 300; height:100px'></div>
-                            </div>
-                        </div>-->
+
                         <div class="row">
                             <div class="col-md-12">
                                  <div id='odsdashboardinfo'  style='position: relative; width: auto; height:auto'></div>
@@ -78,7 +67,40 @@ block content
                         </div>
                     </div>
                     <div class="tab-pane fade" id="CIUDADES">
-                            ciudades
+                        <div class="row">
+                            <div class="col-md-12">Seleccione una ciudad para ver su información</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-md-offset-5">
+                                <label>ODS:</label>
+                                 <select id="changeCity" class="form-control" onchange="cityFilter(value);">
+                                <option value="">All</option>
+                                <option value="Bogotá">Bogotá</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id='citidashboardinfo'  style='position: relative; width: auto; height:auto'></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                            <div id='dashboardodsgrupociudades'  style='position: relative; width: auto; height:auto'></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                            <div id='dashboardodstrazador'  style='position: relative; width: auto; height:auto'></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                            <div id='mapadecalorporods'  style='position: relative; width: auto; height:auto'></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -90,72 +112,27 @@ block js
     script(src="https://public.tableau.com/javascripts/api/tableau-2.min.js")
     script(src="/js/margin.js")
     script.
-        var vizMetas;
-        var vizOdsName;
-        var vizOdsDescription;
-        var vizIndicadores;
+
         var vizdashboardodsgrupociudades;
         var vizodsdashboardinfo;
         var vizdashboardodstrazador;
         var vizmapadecalorporods;
+        var vizcitidashboardinfo;
         $(document).ready(function () {
 
-           // initMetas();
-            //initodsName();
-            //initOdsDescription();
-            //initIndicadores();
 
             initodsdashboardinfo();
             initdashboardodsgrupociudades();
             initdashboardodstrazador();
             initmapadecalorporods();
+            initvizcitidashboardinfo();
             $('iframe').iFrameResize({checkOrigin: false})
 
         })
 
 
 
-        function initMetas() {
-            var containerDiv = document.getElementById("metas"),
-                url = "https://public.tableau.com/views/Ciudatos/metas?:embed=y&:display_count=no&publish=yes&:toolbar=no",
-                options = {
-                    "ods concat": "",
-                    hideTabs: true
-                };
 
-            vizMetas = new tableau.Viz(containerDiv, url, options);
-        }
-
-        function initodsName() {
-            var containerDiv = document.getElementById("odsName"),
-                url = "https://public.tableau.com/views/Ciudatos/odsname?:embed=y&:display_count=no&publish=yes&:toolbar=no",
-                options = {
-                   // "ods concat": "",
-                    hideTabs: true
-                };
-
-            vizOdsName = new tableau.Viz(containerDiv, url, options);
-        }
-
-        function initOdsDescription() {
-            var containerDiv = document.getElementById("odsDescription"),
-                url = "https://public.tableau.com/views/Ciudatos/odsdescription?:embed=y&:display_count=no&publish=yes&:toolbar=no",
-                options = {
-                    //"ods concat": "",
-                    hideTabs: true
-                };
-
-            vizOdsDescription = new tableau.Viz(containerDiv, url, options);
-        }
-        function initIndicadores() {
-            var containerDiv = document.getElementById("indicadores"),
-                url = "https://public.tableau.com/views/Ciudatos/indicadr?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                options = {
-                    //"Indicador": "",
-                    hideTabs: true
-                };
-            vizIndicadores = new tableau.Viz(containerDiv, url, options);
-        }
         function initmapadecalorporods() {
             var containerDiv = document.getElementById("mapadecalorporods"),
                 url = "https://public.tableau.com/views/Ciudatos/Mapadecalorporods?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
@@ -163,7 +140,7 @@ block js
                     //"Indicador": "",
                     hideTabs: true
                 };
-            vizIndicadores = new tableau.Viz(containerDiv, url, options);
+            vizmapadecalorporods = new tableau.Viz(containerDiv, url, options);
         }
         function initodsdashboardinfo() {
             var containerDiv = document.getElementById("odsdashboardinfo"),
@@ -188,6 +165,14 @@ block js
                     hideTabs: true
                 };
             vizdashboardodstrazador = new tableau.Viz(containerDiv, url, options);
+        }
+        function initvizcitidashboardinfo() {
+            var containerDiv = document.getElementById("citidashboardinfo"),
+                url = "https://public.tableau.com/views/Ciudatos/CityDashboardinfo?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true
+                };
+            vizcitidashboardinfo = new tableau.Viz(containerDiv, url, options);
         }
 
 
@@ -265,6 +250,19 @@ block js
 
                 } else {
                     sheet.applyFilterAsync("Indicador", indicador, tableau.FilterUpdateType.REPLACE);
+                }
+            })
+
+
+        }
+        function cityFilter(ciudad) {
+            //var sheet = vizIndicadores.getWorkbook().getActiveSheet();
+            jQuery.each(vizcitidashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                if (indicador === "") {
+                    //sheet.clearFilterAsync("Indicador");
+
+                } else {
+                    sheet.applyFilterAsync("Ciudad", ciudad, tableau.FilterUpdateType.REPLACE);
                 }
             })
 
