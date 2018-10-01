@@ -72,7 +72,7 @@ block content
                         </div>
                         <div class="row">
                             <div class="col-md-3 col-md-offset-5">
-                                <label>ODS:</label>
+                                <label>Ciudad:</label>
                                  <select id="changeCity" class="form-control" onchange="cityFilter(value);">
                                 <option value="">All</option>
                                 <option value="Bogotá">Bogotá</option>
@@ -258,7 +258,7 @@ block js
         function cityFilter(ciudad) {
             //var sheet = vizIndicadores.getWorkbook().getActiveSheet();
             jQuery.each(vizcitidashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-                if (indicador === "") {
+                if (ciudad === "") {
                     //sheet.clearFilterAsync("Indicador");
 
                 } else {
