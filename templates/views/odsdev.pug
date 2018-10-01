@@ -75,7 +75,7 @@ block js
 
             initMetas();
             initodsName();
-            initodsDescription();
+            initOdsDescription();
 
             $('iframe').iFrameResize({checkOrigin: false})
 
@@ -105,7 +105,7 @@ block js
             vizOdsName = new tableau.Viz(containerDiv, url, options);
         }
 
-        function odsDescription() {
+        function initOdsDescription() {
             var containerDiv = document.getElementById("odsDescription"),
                 url = "https://public.tableau.com/views/Ciudatos/odsdescription?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                 options = {
