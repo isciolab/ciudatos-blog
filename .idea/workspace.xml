@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/odsdev.pug" afterPath="$PROJECT_DIR$/templates/views/odsdev.pug" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,8 +48,8 @@
       <file leaf-file-name="odsdev.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/odsdev.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+            <state relative-caret-position="466">
+              <caret line="218" column="58" lean-forward="false" selection-start-line="218" selection-start-column="58" selection-end-line="218" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -350,21 +351,7 @@
       <workItem from="1536328669542" duration="757000" />
       <workItem from="1536343885180" duration="1556000" />
       <workItem from="1538057286617" duration="11017000" />
-      <workItem from="1538400203013" duration="14231000" />
-    </task>
-    <task id="LOCAL-00001" summary="fix keystone">
-      <created>1534282207966</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1534282207966</updated>
-    </task>
-    <task id="LOCAL-00002" summary="fix keystone">
-      <created>1534286523633</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1534286523633</updated>
+      <workItem from="1538400203013" duration="16857000" />
     </task>
     <task id="LOCAL-00003" summary="fix keystone">
       <created>1534287058634</created>
@@ -660,11 +647,60 @@
       <option name="project" value="LOCAL" />
       <updated>1538422862179</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="visualize ods">
+      <created>1538423374900</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1538423374900</updated>
+    </task>
+    <task id="LOCAL-00046" summary="visualize ods">
+      <created>1538423420150</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1538423420150</updated>
+    </task>
+    <task id="LOCAL-00047" summary="visualize ods">
+      <created>1538423844244</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1538423844244</updated>
+    </task>
+    <task id="LOCAL-00048" summary="visualize ods">
+      <created>1538424391653</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1538424391653</updated>
+    </task>
+    <task id="LOCAL-00049" summary="visualize ods">
+      <created>1538424485753</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1538424485753</updated>
+    </task>
+    <task id="LOCAL-00050" summary="visualize ods">
+      <created>1538424550075</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1538424550076</updated>
+    </task>
+    <task id="LOCAL-00051" summary="visualize ods">
+      <created>1538424891139</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1538424891139</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51593000" />
+    <option name="totallyTimeSpent" value="54219000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -734,6 +770,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1411">
           <caret line="83" column="40" lean-forward="false" selection-start-line="83" selection-start-column="40" selection-end-line="83" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -811,6 +848,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1044,6 +1082,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="62" column="17" lean-forward="false" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1065,8 +1104,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/odsdev.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+        <state relative-caret-position="466">
+          <caret line="218" column="58" lean-forward="false" selection-start-line="218" selection-start-column="58" selection-end-line="218" selection-end-column="58" />
           <folding />
         </state>
       </provider>

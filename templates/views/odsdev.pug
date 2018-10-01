@@ -66,6 +66,11 @@ block content
                                  <div id='dashboardodsgrupociudades'  style='position: relative; width: auto; height:auto'></div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                 <div id='dashboardodstrazador'  style='position: relative; width: auto; height:auto'></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="CIUDADES">
                             ciudades
@@ -86,6 +91,7 @@ block js
         var vizIndicadores;
         var vizdashboardodsgrupociudades;
         var vizodsdashboardinfo;
+        var vizdashboardodstrazador;
         $(document).ready(function () {
 
            // initMetas();
@@ -94,6 +100,7 @@ block js
             //initIndicadores();
             initdashboardodsgrupociudades();
             initodsdashboardinfo();
+            initdashboardodstrazador();
 
             $('iframe').iFrameResize({checkOrigin: false})
 
@@ -150,9 +157,17 @@ block js
                 };
             vizdashboardodsgrupociudades = new tableau.Viz(containerDiv, url, options);
         }
+        function initdashboardodstrazador() {
+            var containerDiv = document.getElementById("dashboardodstrazador"),
+                url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-grupociudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true
+                };
+            vizdashboardodsgrupociudades = new tableau.Viz(containerDiv, url, options);
+        }
         function initodsdashboardinfo() {
             var containerDiv = document.getElementById("odsdashboardinfo"),
-                url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-info?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-trazadorporgrupo?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                 options = {
                     hideTabs: true
                 };
@@ -196,11 +211,27 @@ block js
                       sheet.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
                 }
             })
+            jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                if (target === "") {
+                    //sheet.clearFilterAsync("Indicador");
+
+                } else {
+                    sheet.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
+                }
+            })
 
 
         }
         function indicadorFilter(indicador) {
             //var sheet = vizIndicadores.getWorkbook().getActiveSheet();
+            jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                if (indicador === "") {
+                    //sheet.clearFilterAsync("Indicador");
+
+                } else {
+                    sheet.applyFilterAsync("Indicador", indicador, tableau.FilterUpdateType.REPLACE);
+                }
+            })
             jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
                 if (indicador === "") {
                     //sheet.clearFilterAsync("Indicador");
