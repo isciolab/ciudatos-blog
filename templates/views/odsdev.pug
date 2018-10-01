@@ -35,9 +35,9 @@ block content
                             </div>
                             <div class="col-md-4">
                                 <label>INDICADOR:</label>
-                                <select class="form-control" id="changeTarget" onchange="">
+                                <select class="form-control" id="changeTarget" onchange="indicadorFilter(value)">
                                 <option value="">All</option>
-                                <option value=""></option>
+                                <option value="Incidencia de pobreza monetaria extrema">Incidencia de pobreza monetaria extrema</option>
                                 </select>
                             </div>
                         </div>
@@ -51,7 +51,7 @@ block content
                                 <div id='metas'  style='position: relative; width: 300; height:100px'></div>
                             </div>
                             <div class="col-md-4">
-
+                                <div id='indicadores'  style='position: relative; width: 300; height:100px'></div>
                             </div>
                         </div>
                     </div>
@@ -71,11 +71,13 @@ block js
         var vizMetas;
         var vizOdsName;
         var vizOdsDescription;
+        var vizIndicadores;
         $(document).ready(function () {
 
             initMetas();
             initodsName();
             initOdsDescription();
+            initIndicadores();
 
             $('iframe').iFrameResize({checkOrigin: false})
 
@@ -115,6 +117,15 @@ block js
 
             vizOdsDescription = new tableau.Viz(containerDiv, url, options);
         }
+        function initIndicadores() {
+            var containerDiv = document.getElementById("indicadores"),
+                url = "https://public.tableau.com/views/Ciudatos/indicadr?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    "Indicador": "",
+                    hideTabs: true
+                };
+            vizOdsDescription = new tableau.Viz(containerDiv, url, options);
+        }
 
         function odsConcatFilter(ods) {
             var sheet = vizMetas.getWorkbook().getActiveSheet();
@@ -136,5 +147,13 @@ block js
                 sheet.clearFilterAsync("Name (Targets)");
             } else {
                 sheet.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
+            }
+        }
+        function indicadorFilter(target) {
+            var sheet = vizIndicadores.getWorkbook().getActiveSheet();
+            if (target === "") {
+                sheet.clearFilterAsync("Indicador");
+            } else {
+                sheet.applyFilterAsync("Indicador", target, tableau.FilterUpdateType.REPLACE);
             }
         }
