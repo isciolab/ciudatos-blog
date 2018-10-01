@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/odsdev.pug" afterPath="$PROJECT_DIR$/templates/views/odsdev.pug" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,8 +47,8 @@
       <file leaf-file-name="odsdev.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/odsdev.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-228">
-              <caret line="151" column="17" lean-forward="false" selection-start-line="151" selection-start-column="17" selection-end-line="151" selection-end-column="17" />
+            <state relative-caret-position="144">
+              <caret line="162" column="0" lean-forward="true" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -59,7 +58,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>da</find>
       <find>?</find>
       <find>?da</find>
       <find>?dat</find>
@@ -89,6 +87,7 @@
       <find>vizdashboardods</find>
       <find>dashboardodsgrupociudades</find>
       <find>targetFilter</find>
+      <find>odsdashboardinfo</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -243,6 +242,7 @@
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog\node_modules\eslint" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -350,7 +350,7 @@
       <workItem from="1536328669542" duration="757000" />
       <workItem from="1536343885180" duration="1556000" />
       <workItem from="1538057286617" duration="11017000" />
-      <workItem from="1538400203013" duration="13719000" />
+      <workItem from="1538400203013" duration="14157000" />
     </task>
     <task id="LOCAL-00001" summary="fix keystone">
       <created>1534282207966</created>
@@ -653,15 +653,21 @@
       <option name="project" value="LOCAL" />
       <updated>1538422179932</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="visualize ods">
+      <created>1538422862179</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1538422862179</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51081000" />
+    <option name="totallyTimeSpent" value="51519000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2673716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1058,8 +1064,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/odsdev.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-228">
-          <caret line="151" column="17" lean-forward="false" selection-start-line="151" selection-start-column="17" selection-end-line="151" selection-end-column="17" />
+        <state relative-caret-position="144">
+          <caret line="162" column="0" lean-forward="true" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
           <folding />
         </state>
       </provider>

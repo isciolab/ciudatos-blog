@@ -22,14 +22,14 @@ block content
                             <div class="col-md-4">
                                 <label>ODS:</label>
                                 <select id="changeOdsConcat" class="form-control" onchange="odsConcatFilter(value);">
-                                <option value="">All</option>
+
                                 <option value="01 PONER FIN A LA POBREZA EN TODAS SUS FORMAS EN TODO EL MUNDOODS1- .">01 PONER FIN A LA POBREZA EN TODAS SUS FORMAS EN TODO EL MUNDOODS1- .</option>
                                 </select>
                             </div>
                             <div class="col-md-4">
                                 <label>META:</label>
                                 <select class="form-control" id="changeTarget" onchange="targetFilter(value);">
-                                <option value="">All</option>
+
                                 <option value="Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día">
                                 Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día</option>
                                 </select>
@@ -37,7 +37,7 @@ block content
                             <div class="col-md-4">
                                 <label>INDICADOR:</label>
                                 <select class="form-control" id="changeTarget" onchange="indicadorFilter(value)">
-                                <option value="">All</option>
+
                                 <option value="Incidencia de pobreza monetaria extrema">Incidencia de pobreza monetaria extrema</option>
                                 </select>
                             </div>
@@ -115,7 +115,7 @@ block js
             var containerDiv = document.getElementById("odsName"),
                 url = "https://public.tableau.com/views/Ciudatos/odsname?:embed=y&:display_count=no&publish=yes&:toolbar=no",
                 options = {
-                    "ods concat": "",
+                   // "ods concat": "",
                     hideTabs: true
                 };
 
@@ -126,7 +126,7 @@ block js
             var containerDiv = document.getElementById("odsDescription"),
                 url = "https://public.tableau.com/views/Ciudatos/odsdescription?:embed=y&:display_count=no&publish=yes&:toolbar=no",
                 options = {
-                    "ods concat": "",
+                    //"ods concat": "",
                     hideTabs: true
                 };
 
@@ -136,7 +136,7 @@ block js
             var containerDiv = document.getElementById("indicadores"),
                 url = "https://public.tableau.com/views/Ciudatos/indicadr?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                 options = {
-                    "Indicador": "",
+                    //"Indicador": "",
                     hideTabs: true
                 };
             vizIndicadores = new tableau.Viz(containerDiv, url, options);
@@ -165,6 +165,8 @@ block js
         function targetFilter(target) {
           //  var sheet = vizMetas.getWorkbook().getActiveSheet();
             jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                console.log(sheet);
+                console.log(target);
                 if (target === "") {
                     sheet.clearFilterAsync("Name (Targets)");
 
@@ -172,6 +174,7 @@ block js
                       sheet.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
                 }
             })
+
 
         }
         function indicadorFilter(target) {
