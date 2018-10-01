@@ -9,7 +9,6 @@ block content
 
         <div class="row">
             <div class="col-md-3 col-md-offset-5">
-                
                 <ul class="nav nav-pills">
                 <li role="presentation"  class="active"><a href="#ODS" data-toggle="tab">ODS</a></li>
                 <li role="presentation"><a href="#CIUDADES" data-toggle="tab">CIUDADES</a></li>
@@ -46,24 +45,22 @@ block content
                         <div class="row">
                             <div class="col-md-4">
                                <div  id='odsName' style='position: relative; width: 300px; height: 300px'></div>
+                                 <div id='odsDescription'  style='position: relative; width: 300px; height: 300px'></div>
                             </div>
                             <div class="col-md-4">
-                                <div id="metas" class='tableauPlaceholder' style='position: relative; width: 300px; height: 300px' ></div>
+                                <div id='metas'  style='position: relative; width: 300px; height: 300px'></div>
                             </div>
                             <div class="col-md-4">
 
                             </div>
                         </div>
-
                     </div>
                     <div class="tab-pane fade" id="CIUDADES">
-
                             ciudades
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 
 block js
@@ -73,10 +70,12 @@ block js
     script.
         var vizMetas;
         var vizOdsName;
+        var vizOdsDescription;
         $(document).ready(function () {
 
             initMetas();
             initodsName();
+            initodsDescription();
 
             $('iframe').iFrameResize({checkOrigin: false})
 
@@ -99,19 +98,36 @@ block js
             var containerDiv = document.getElementById("odsName"),
                 url = "https://public.tableau.com/views/Ciudatos/odsname?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                 options = {
-
+                    "ods concat": "",
                     hideTabs: true
                 };
 
             vizOdsName = new tableau.Viz(containerDiv, url, options);
         }
 
+        function odsDescription() {
+            var containerDiv = document.getElementById("odsDescription"),
+                url = https://public.tableau.com/views/Ciudatos/odsdescription?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    "ods concat": "",
+                    hideTabs: true
+                };
+
+            vizOdsDescription = new tableau.Viz(containerDiv, url, options);
+        }
+
         function odsConcatFilter(ods) {
             var sheet = vizMetas.getWorkbook().getActiveSheet();
+            var sheet2 = vizOdsName.getWorkbook().getActiveSheet();
+            var sheet3 = vizOdsDescription.getWorkbook().getActiveSheet();
             if (ods === "") {
                 sheet.clearFilterAsync("ods concat");
+                sheet2.clearFilterAsync("ods concat");
+                sheet3.clearFilterAsync("ods concat");
             } else {
                 sheet.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);
+                sheet2.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);
+                sheet3.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);
             }
         }
         function targetFilter(target) {
