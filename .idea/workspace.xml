@@ -47,8 +47,8 @@
       <file leaf-file-name="odsdev.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/odsdev.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="177" column="22" lean-forward="false" selection-start-line="177" selection-start-column="22" selection-end-line="177" selection-end-column="22" />
+            <state relative-caret-position="1659">
+              <caret line="197" column="10" lean-forward="false" selection-start-line="197" selection-start-column="10" selection-end-line="197" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -58,7 +58,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dat</find>
       <find>data</find>
       <find>da</find>
       <find>?</find>
@@ -88,6 +87,7 @@
       <find>mock</find>
       <find>odsName</find>
       <find>vizdashboardods</find>
+      <find>dashboardodsgrupociudades</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -349,7 +349,7 @@
       <workItem from="1536328669542" duration="757000" />
       <workItem from="1536343885180" duration="1556000" />
       <workItem from="1538057286617" duration="11017000" />
-      <workItem from="1538400203013" duration="12017000" />
+      <workItem from="1538400203013" duration="13242000" />
     </task>
     <task id="LOCAL-00001" summary="fix keystone">
       <created>1534282207966</created>
@@ -649,7 +649,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49379000" />
+    <option name="totallyTimeSpent" value="50604000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1050,8 +1050,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/odsdev.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="177" column="22" lean-forward="false" selection-start-line="177" selection-start-column="22" selection-end-line="177" selection-end-column="22" />
+        <state relative-caret-position="1659">
+          <caret line="197" column="10" lean-forward="false" selection-start-line="197" selection-start-column="10" selection-end-line="197" selection-end-column="10" />
           <folding />
         </state>
       </provider>
