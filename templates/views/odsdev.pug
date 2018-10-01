@@ -213,6 +213,16 @@ block js
                       sheet.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
                 }
             })
+            jQuery.each(vizdashboardodstrazador.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                console.log(sheet);
+                console.log(target);
+                if (target === "") {
+                    //sheet.clearFilterAsync("Name (Targets)");
+
+                } else {
+                      sheet.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
+                }
+            })
             jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
                 if (target === "") {
                     //sheet.clearFilterAsync("Indicador");
