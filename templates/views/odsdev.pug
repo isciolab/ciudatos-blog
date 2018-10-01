@@ -167,7 +167,7 @@ block js
         }
         function indicadorFilter(target) {
             var sheet = vizIndicadores.getWorkbook().getActiveSheet();
-            var sheet2 = vizdashboardods.getWorkbook().getActiveSheet();
+            var sheet2 = vizdashboardods.getWorkbook().get("Indicador trazador de ods por grupo de ciudades");
             if (target === "") {
                 sheet.clearFilterAsync("Indicador");
                 sheet2.clearFilterAsync("Indicador");
