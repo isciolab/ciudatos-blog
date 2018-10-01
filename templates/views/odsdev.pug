@@ -171,11 +171,11 @@ block js
                 }
             })
             jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-                if (indicador === "") {
+                if (ods === "") {
                     //sheet.clearFilterAsync("Indicador");
 
                 } else {
-                    sheet.applyFilterAsync("ods concat", indicador, tableau.FilterUpdateType.REPLACE);
+                    sheet.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);
                 }
             })
 
