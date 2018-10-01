@@ -57,6 +57,11 @@ block content
                         </div>-->
                         <div class="row">
                             <div class="col-md-12">
+                                 <div id='odsdashboardinfo'  style='position: relative; width: auto; height:auto'></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
                                  <div id='dashboardodsgrupociudades'  style='position: relative; width: auto; height:auto'></div>
                             </div>
                         </div>
@@ -79,9 +84,10 @@ block js
         var vizOdsDescription;
         var vizIndicadores;
         var vizdashboardodsgrupociudades;
+        var vizodsdashboardinfo;
         $(document).ready(function () {
 
-            //initMetas();
+           // initMetas();
             //initodsName();
             //initOdsDescription();
             //initIndicadores();
@@ -142,59 +148,52 @@ block js
                 };
             vizdashboardodsgrupociudades = new tableau.Viz(containerDiv, url, options);
         }
+        function initodsdashboardinfo() {
+            var containerDiv = document.getElementById("odsdashboardinfo"),
+                url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-info?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true
+                };
+            vizodsdashboardinfo = new tableau.Viz(containerDiv, url, options);
+        }
 
         function odsConcatFilter(ods) {
-            var sheet = vizMetas.getWorkbook().getActiveSheet();
-            var sheet2 = vizOdsName.getWorkbook().getActiveSheet();
-            var sheet3 = vizOdsDescription.getWorkbook().getActiveSheet();
+           // var sheet = vizMetas.getWorkbook().getActiveSheet();
+           // var sheet2 = vizOdsName.getWorkbook().getActiveSheet();
+            //var sheet3 = vizOdsDescription.getWorkbook().getActiveSheet();
 
             if (ods === "") {
-                sheet.clearFilterAsync("ods concat");
+                /*sheet.clearFilterAsync("ods concat");
                 sheet2.clearFilterAsync("ods concat");
-                sheet3.clearFilterAsync("ods concat");
+                sheet3.clearFilterAsync("ods concat");*/
             } else {
-                sheet.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);
+                /*sheet.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);
                 sheet2.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);
-                sheet3.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);
+                sheet3.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);*/
             }
         }
         function targetFilter(target) {
-            var sheet = vizMetas.getWorkbook().getActiveSheet();
-            var sheet2 = vizdashboardods.getWorkbook().getActiveSheet().getWorksheets().get("Indicador trazador de ods por grupo de ciudades");
-            var sheet3 = vizdashboardods.getWorkbook().getActiveSheet().getWorksheets().get("Indicador trazador de ods por grupo de ciudades (2)");
-            var sheet4 = vizdashboardods.getWorkbook().getActiveSheet().getWorksheets().get("Indicador trazador de ods por grupo de ciudades (3)");
-            var sheet5 = vizdashboardods.getWorkbook().getActiveSheet().getWorksheets().get("Indicador trazador de ods por grupo de ciudades (4)");
-            if (target === "") {
-                sheet2.clearFilterAsync("Name (Targets)");
-                sheet.clearFilterAsync("Name (Targets)");
-                sheet3.clearFilterAsync("Name (Targets)");
-                sheet4.clearFilterAsync("Name (Targets)");
-                sheet5.clearFilterAsync("Name (Targets)");
-            } else {
-                sheet.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
-                sheet2.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
-                sheet3.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
-                sheet4.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
-                sheet5.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
-            }
+          //  var sheet = vizMetas.getWorkbook().getActiveSheet();
+            jQuery.each(vizdashboardods.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                if (target === "") {
+                    sheet.clearFilterAsync("Name (Targets)");
+
+                } else {
+                      sheet.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
+                }
+            })
+
         }
         function indicadorFilter(target) {
-            var sheet = vizIndicadores.getWorkbook().getActiveSheet();
-            var sheet2 = vizdashboardods.getWorkbook().getActiveSheet().getWorksheets().get("Indicador trazador de ods por grupo de ciudades");
-            var sheet3 = vizdashboardods.getWorkbook().getActiveSheet().getWorksheets().get("Indicador trazador de ods por grupo de ciudades (2)");
-            var sheet4 = vizdashboardods.getWorkbook().getActiveSheet().getWorksheets().get("Indicador trazador de ods por grupo de ciudades (3)");
-            var sheet5 = vizdashboardods.getWorkbook().getActiveSheet().getWorksheets().get("Indicador trazador de ods por grupo de ciudades (4)");
-            if (target === "") {
-                sheet.clearFilterAsync("Indicador");
-                sheet2.clearFilterAsync("Indicador");
-                sheet3.clearFilterAsync("Indicador");
-                sheet4.clearFilterAsync("Indicador");
-                sheet5.clearFilterAsync("Indicador");
-            } else {
-                sheet.applyFilterAsync("Indicador", target, tableau.FilterUpdateType.REPLACE);
-                sheet2.applyFilterAsync("Indicador", target, tableau.FilterUpdateType.REPLACE);
-                sheet3.applyFilterAsync("Indicador", target, tableau.FilterUpdateType.REPLACE);
-                sheet4.applyFilterAsync("Indicador", target, tableau.FilterUpdateType.REPLACE);
-                sheet5.applyFilterAsync("Indicador", target, tableau.FilterUpdateType.REPLACE);
-            }
+            //var sheet = vizIndicadores.getWorkbook().getActiveSheet();
+            jQuery.each(vizdashboardods.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                if (target === "") {
+                    sheet.clearFilterAsync("Indicador");
+
+                } else {
+                    sheet.applyFilterAsync("Indicador", target, tableau.FilterUpdateType.REPLACE);
+                }
+            })
+
+          
         }
