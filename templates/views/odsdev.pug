@@ -71,6 +71,11 @@ block content
                                  <div id='dashboardodstrazador'  style='position: relative; width: auto; height:auto'></div>
                             </div>
                         </div>
+                        <div class="row">
+                        <div class="col-md-12">
+                        <div id='mapadecalorporods'  style='position: relative; width: auto; height:auto'></div>
+                        </div>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="CIUDADES">
                             ciudades
@@ -92,17 +97,18 @@ block js
         var vizdashboardodsgrupociudades;
         var vizodsdashboardinfo;
         var vizdashboardodstrazador;
+        var vizmapadecalorporods;
         $(document).ready(function () {
 
            // initMetas();
             //initodsName();
             //initOdsDescription();
             //initIndicadores();
+
             initodsdashboardinfo();
             initdashboardodsgrupociudades();
-
             initdashboardodstrazador();
-
+            initmapadecalorporods();
             $('iframe').iFrameResize({checkOrigin: false})
 
         })
@@ -144,6 +150,15 @@ block js
         function initIndicadores() {
             var containerDiv = document.getElementById("indicadores"),
                 url = "https://public.tableau.com/views/Ciudatos/indicadr?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    //"Indicador": "",
+                    hideTabs: true
+                };
+            vizIndicadores = new tableau.Viz(containerDiv, url, options);
+        }
+        function initmapadecalorporods() {
+            var containerDiv = document.getElementById("mapadecalorporods"),
+                url = "https://public.tableau.com/views/Ciudatos/Mapadecalorporods?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                 options = {
                     //"Indicador": "",
                     hideTabs: true
