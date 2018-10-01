@@ -160,34 +160,44 @@ block js
 
         function odsConcatFilter(ods) {
 
+            jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                console.log(sheet);
+                console.log(ods);
+                if (ods === "") {
+                    //sheet.clearFilterAsync("ods concat");
+
+                } else {
+                      sheet.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);
+                }
+            })
 
         }
         function targetFilter(target) {
           //  var sheet = vizMetas.getWorkbook().getActiveSheet();
 
-            vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets().get("Indicador de ODS por grupo de ciudades").applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
+            //vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets().get("Indicador de ODS por grupo de ciudades").applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
 
             jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
                 console.log(sheet);
                 console.log(target);
                 if (target === "") {
-                    sheet.clearFilterAsync("Name (Targets)");
+                    //sheet.clearFilterAsync("Name (Targets)");
 
                 } else {
-                      //sheet.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
+                      sheet.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
                 }
             })
 
 
         }
-        function indicadorFilter(target) {
+        function indicadorFilter(indicador) {
             //var sheet = vizIndicadores.getWorkbook().getActiveSheet();
             jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-                if (target === "") {
-                    sheet.clearFilterAsync("Indicador");
+                if (indicador === "") {
+                    //sheet.clearFilterAsync("Indicador");
 
                 } else {
-                    sheet.applyFilterAsync("Indicador", target, tableau.FilterUpdateType.REPLACE);
+                    sheet.applyFilterAsync("Indicador", indicador, tableau.FilterUpdateType.REPLACE);
                 }
             })
 
