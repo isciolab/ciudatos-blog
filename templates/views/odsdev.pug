@@ -4,34 +4,50 @@ block vars
     - inner_padding = "padding: 0 15px"
 
 block content
-    <img style="width:100%" src="https://res.cloudinary.com/randommonkey/image/upload/v1531505257/ciudatos/cities/zcolwitwfetgjset3bfu.png"/>
-    <ul class="nav nav-pills">
-    <li role="presentation" class="active"><a href="#ODS">ODS</a></li>
-    <li role="presentation"><a href="#CIUDADES">CIUDADES</a></li>
-    </ul>
+    <div class="container">
+        <img style="width:100%" src="https://res.cloudinary.com/randommonkey/image/upload/v1531505257/ciudatos/cities/zcolwitwfetgjset3bfu.png"/>
 
-    <div class="row">
-    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-pills">
+                <li role="presentation"  class="active"><a href="#ODS" data-toggle="tab">ODS</a></li>
+                <li role="presentation"><a href="#CIUDADES" data-toggle="tab">CIUDADES</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tab-content clearfix">
+                    <div id="ODS" class="tab-pane active" >
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>ODS:</label> <select id="changeOdsConcat" onchange="odsConcatFilter(value);">
+                                <option value="">All</option>
+                                <option value="01 PONER FIN A LA POBREZA EN TODAS SUS FORMAS EN TODO EL MUNDOODS1- .">01 PONER FIN A LA POBREZA EN TODAS SUS FORMAS EN TODO EL MUNDOODS1- .</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label>META:</label> <select id="changeTarget" onchange="targetFilter(value);">
+                                <option value="">All</option>
+                                <option value="Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día">
+                                Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                 <div id="vizContainer" style="width:800px; height:700px;"></div>
+                            </div>
+                        </div>
 
-    <div id="ODS">
-    <div id="controls" style="padding:20px;">
-    ODS: <select id="changeOdsConcat" onchange="odsConcatFilter(value);">
-    <option value="">All</option>
-    <option value="01 PONER FIN A LA POBREZA EN TODAS SUS FORMAS EN TODO EL MUNDOODS1- .">01 PONER FIN A LA POBREZA EN TODAS SUS FORMAS EN TODO EL MUNDOODS1- .</option>
-    </select>
-    META: <select id="changeTarget" onchange="targetFilter(value);">
-    <option value="">All</option>
-    <option value="Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día">
-    Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día</option>
-    </select>
-    </div>
-
-    <div id="vizContainer" style="width:800px; height:700px;"></div>
-
-    </div>
-    <div id="CIUDADES">
-    </div>
-    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane"  id="CIUDADES">
+                    ciudades
+                </div>
+            </div>
+        </div>
     </div>
 
 block js
