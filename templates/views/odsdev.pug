@@ -4,8 +4,8 @@ block vars
     - inner_padding = "padding: 0 15px"
 
 block content
+    <img style="width:100%" src="https://res.cloudinary.com/randommonkey/image/upload/v1531505257/ciudatos/cities/zcolwitwfetgjset3bfu.png"/>
     <div class="container">
-        <img style="width:100%" src="https://res.cloudinary.com/randommonkey/image/upload/v1531505257/ciudatos/cities/zcolwitwfetgjset3bfu.png"/>
 
         <div class="row">
             <div class="col-md-12">
@@ -27,7 +27,8 @@ block content
                                 </select>
                             </div>
                             <div class="col-md-4">
-                                <label>META:</label> <select id="changeTarget" onchange="targetFilter(value);">
+                                <label>META:</label>
+                                <select id="changeTarget" onchange="targetFilter(value);">
                                 <option value="">All</option>
                                 <option value="Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día">
                                 Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día</option>
@@ -39,15 +40,14 @@ block content
                                  <div id="vizContainer" style="width:800px; height:700px;"></div>
                             </div>
                         </div>
+                    </div>
 
-                        </div>
+                    <div class="tab-pane"  id="CIUDADES">
+                        ciudades
                     </div>
                 </div>
-                <div class="tab-pane"  id="CIUDADES">
-                    ciudades
-                </div>
             </div>
-        </div>
+         </div>
     </div>
 
 block js
