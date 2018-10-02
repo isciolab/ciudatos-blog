@@ -194,22 +194,25 @@ block js
                         vizcityprogreovsabsoluto.addEventListener('filterchange', function (event) {
                             console.log('change');
 
-                            var filter = event.getFilterAsync();
+                            var filter = event.getFilterAsync().then(function (filters) {
+
+                                console.log(filters);
+                                var filtervalue = filters.getAppliedValues();
 
 
-                            var filtervalue = filter.getAppliedValues();
+                                jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                                    console.log(sheet);
 
-                            console.log(ods);
-                            jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-                                console.log(sheet);
+                                    if (filtervalue === "") {
+                                        //sheet.clearFilterAsync("ods concat");
 
-                                if (filtervalue === "") {
-                                    //sheet.clearFilterAsync("ods concat");
+                                    } else {
+                                        sheet.applyFilterAsync("AÑO de Date From", filtervalue, tableau.FilterUpdateType.REPLACE);
+                                    }
+                                })
+                            });
 
-                                } else {
-                                    sheet.applyFilterAsync("AÑO de Date From", filtervalue, tableau.FilterUpdateType.REPLACE);
-                                }
-                            })
+
 
                         });
                     }
