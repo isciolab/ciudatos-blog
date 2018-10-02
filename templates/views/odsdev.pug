@@ -71,13 +71,13 @@ block content
                             <div class="col-md-12">Seleccione una ciudad para ver su información</div>
                         </div>
                         <div class="row">
-                            <div class="col-md-3 col-md-offset-5">
+                           <!-- <div class="col-md-3 col-md-offset-5">
                                 <label>Ciudad:</label>
                                  <select id="changeCity" class="form-control" onchange="cityFilter(value);">
                                 <option value="">All</option>
                                 <option value="Bogotá">Bogotá</option>
                                 </select>
-                            </div>
+                            </div>-->
                             <div class="col-md-12">
                             <div id='cityselectordashboard'  style='position: relative; width: auto; height:auto'></div>
                             </div>
@@ -100,7 +100,17 @@ block content
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                            <div id='mapadecalorporods'  style='position: relative; width: auto; height:auto'></div>
+                            <div id='cityprogresohistorico'  style='position: relative; width: auto; height:auto'></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                            <div id='cityindicadorestrazadores'  style='position: relative; width: auto; height:auto'></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                            <div id='citymapadecalorporciudad'  style='position: relative; width: auto; height:auto'></div>
                             </div>
                         </div>
                     </div>
@@ -125,6 +135,9 @@ block js
         var vizcitidashboardinfo;
         var vizcityprogreovsabsoluto;
         var vizcityindicadoresciudad;
+        var vizcityprogresohistorico;
+        var vizcityindicadorestrazadores;
+        var vizcitymapadecalorporciudad;
         $(document).ready(function () {
 
 
@@ -138,6 +151,9 @@ block js
             initvizcityselectordashboard();
             initvizcityprogreovsabsoluto();
             initvizcityindicadoresciudad();
+            initvizcityprogresohistorico();
+            initvizcityindicadorestrazadores();
+            initvizcitymapadecalorporciudad;
             $('iframe').iFrameResize({checkOrigin: false})
 
         })
@@ -221,6 +237,12 @@ block js
                                             sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
                                         }
                                     })
+
+                                    var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
+                                    if (filtervalue[0].value != "") {
+
+                                        sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                    }
                                 });
                             }
 
@@ -254,6 +276,13 @@ block js
                                             sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
                                         }
                                     })
+
+                                    var sheet = vizcityindicadorestrazadores.getWorkbook().getActiveSheet();
+                                    if (filtervalue[0].value != "") {
+
+                                        sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                    }
+
                                 });
                             }
 
@@ -278,6 +307,38 @@ block js
                     }
                 };
             vizcityindicadoresciudad = new tableau.Viz(containerDiv, url, options);
+        }
+
+        function initvizcityprogresohistorico() {
+            var containerDiv = document.getElementById("vizcityprogresohistorico"),
+                url = "https://public.tableau.com/views/Ciudatos/CityDashboard-progresohistorico?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+
+                    }
+                };
+            vizcityprogresohistorico = new tableau.Viz(containerDiv, url, options);
+        }
+
+        function initvizcityindicadorestrazadores() {
+            var containerDiv = document.getElementById("vizcityindicadorestrazadores"),
+                url = "https://public.tableau.com/views/Ciudatos/IndicadorestrazadoresporODS?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+
+                    }
+                };
+            vizcityindicadorestrazadores = new tableau.Viz(containerDiv, url, options);
+         }
+        function initvizcitymapadecalorporciudad() {
+        var containerDiv = document.getElementById("vizcitymapadecalorporciudad"),
+        url = "https://public.tableau.com/views/Ciudatos/Mapadecalorporciudad?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+             options = {
+            hideTabs: true
+            };
+            vizcitymapadecalorporciudad = new tableau.Viz(containerDiv, url, options);
         }
 
 
@@ -309,6 +370,7 @@ block js
         function targetFilter(target) {
           //  var sheet = vizMetas.getWorkbook().getActiveSheet();
 
+            //cuando quiero seleccinar una hoja de un dashboard
             //vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets().get("Indicador de ODS por grupo de ciudades").applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
 
             jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
@@ -343,6 +405,7 @@ block js
 
         }
         function indicadorFilter(indicador) {
+            //cuando quiero una hoja de un shet
             //var sheet = vizIndicadores.getWorkbook().getActiveSheet();
             jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
                 if (indicador === "") {
