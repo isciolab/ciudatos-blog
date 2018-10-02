@@ -189,6 +189,20 @@ block js
             var containerDiv = document.getElementById("cityprogreovsabsoluto"),
                 url = "https://public.tableau.com/views/Ciudatos/CityDashboardprogresovsindicador?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                 options = {
+                    hideTabs: true
+
+                };
+            vizcityprogreovsabsoluto = new tableau.Viz(containerDiv, url, options);
+
+
+
+
+        }
+
+        function initvizcityindicadoresciudad() {
+            var containerDiv = document.getElementById("vizcityindicadoresciudad"),
+                url = "https://public.tableau.com/views/Ciudatos/CityDashboardindicadoresporciudad?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
                     hideTabs: true,
                     onFirstInteractive: function () {
                         vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets().get("Indicador de progreso absoluto ciudad").getFiltersAsync()
@@ -201,23 +215,6 @@ block js
 
                             });
                     }
-                };
-            vizcityprogreovsabsoluto = new tableau.Viz(containerDiv, url, options);
-
-
-
-
-        }
-
-        function initvizcityindicadoresciudad() {
-
-
-
-
-            var containerDiv = document.getElementById("vizcityindicadoresciudad"),
-                url = "https://public.tableau.com/views/Ciudatos/CityDashboardindicadoresporciudad?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                options = {
-                    hideTabs: true
                 };
             vizcityindicadoresciudad = new tableau.Viz(containerDiv, url, options);
         }
