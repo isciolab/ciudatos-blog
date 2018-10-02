@@ -150,7 +150,7 @@ block js
             //initvizcityprogreovsabsoluto();
             //initvizcityindicadoresciudad();
             //initvizcityprogresohistorico();
-            initvizcityindicadorestrazadores();
+           // initvizcityindicadorestrazadores();
             initvizcitymapadecalorporciudad();
             //$('iframe').iFrameResize({checkOrigin: false})
 
@@ -334,12 +334,10 @@ block js
         function initvizcitymapadecalorporciudad() {
 
             var containerDiv = document.getElementById("citymapadecalorporciudad"),
-                url = "https://public.tableau.com/profile/jhainey.perez#!/vizhome/Ciudatos/Mapadecalorporciudad",
-                options = {
-                    //"Indicador": "",
-                    hideTabs: true
-                };
-            vizcitymapadecalorporciudad = new tableau.Viz(containerDiv, url, options);
+                url = "https://public.tableau.com/profile/jhainey.perez#!/vizhome/Ciudatos/Mapadecalorporciudad";
+
+            vizcitymapadecalorporciudad = new tableau.Viz(containerDiv, url);
+
 
         }
 
