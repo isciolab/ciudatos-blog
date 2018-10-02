@@ -192,32 +192,25 @@ block js
                     hideTabs: true,
                     onFirstInteractive: function () {
                         vizcityprogreovsabsoluto.addEventListener('filterchange', function (event) {
+                            console.log('change');
 
-                            alert("FILTER CHANGE");
-
-                            console.log(event);
-
-
-                           /* vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets().get("Indicador de progreso absoluto ciudad").getFiltersAsync()
-                                .then(function (filters) {
-
-                                    console.log('mostrando filtrs');
-                                    console.log(filters);
-                                    FilterForApples = filters[0].getAppliedValues();
-                                    FilterForOranges = filters[1].getAppliedValues();
+                            var filter = event.getFilterAsync();
 
 
-                                    jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-                                        console.log(sheet);
-                                        console.log(ods);
-                                        if (ods === "") {
-                                            //sheet.clearFilterAsync("ods concat");
+                            var filtervalue = filter.getAppliedValues();
 
-                                        } else {
-                                            sheet.applyFilterAsync("AÑO de Date From", ods, tableau.FilterUpdateType.REPLACE);
-                                        }
-                                    })
-                                });*/
+                            console.log(ods);
+                            jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                                console.log(sheet);
+
+                                if (filtervalue === "") {
+                                    //sheet.clearFilterAsync("ods concat");
+
+                                } else {
+                                    sheet.applyFilterAsync("AÑO de Date From", filtervalue, tableau.FilterUpdateType.REPLACE);
+                                }
+                            })
+
                         });
                     }
 
