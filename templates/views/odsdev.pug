@@ -334,9 +334,15 @@ block js
         function initvizcitymapadecalorporciudad() {
 
             var containerDiv = document.getElementById("citymapadecalorporciudad"),
-                url = "https://public.tableau.com/views/Ciudatos/Mapadecalorbycity?:embed=y&:display_count=yes&publish=yes&:toolbar=no";
+                url = "https://public.tableau.com/views/Ciudatos/Mapadecalorbycity?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
 
-            vizcitymapadecalorporciudad = new tableau.Viz(containerDiv, url);
+                        console.log('cargo mapa de calor ciudad');
+                    }
+                };
+            vizcitymapadecalorporciudad = new tableau.Viz(containerDiv, url, options);
 
 
         }
