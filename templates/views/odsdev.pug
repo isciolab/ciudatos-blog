@@ -61,14 +61,14 @@ block content
                             </div>
                         </div>
                         <div class="row">
-                        <div class="col-md-12">
-                        <div id='mapadecalorporods'  style='position: relative; width: auto; height:auto'></div>
-                        </div>
+                            <div class="col-md-12">
+                                <div id='mapadecalorporods'  style='position: relative; width: auto; height:auto'></div>
+                            </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="CIUDADES">
                         <div class="row" style="display:none">
-                         <div class="col-md-12">Seleccione una ciudad para ver su información</div>
+                             <div class="col-md-12">Seleccione una ciudad para ver su información</div>
                         </div>
 
                         <div class="row" style="display:none">
@@ -92,27 +92,27 @@ block content
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                            <div id='cityprogreovsabsoluto'  style='position: relative; width: auto; height:auto'></div>
+                                <div id='cityprogreovsabsoluto'  style='position: relative; width: auto; height:auto'></div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                            <div id='vizcityindicadoresciudad'  style='position: relative; width: auto; height:auto'></div>
+                                <div id='vizcityindicadoresciudad'  style='position: relative; width: auto; height:auto'></div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                            <div id='cityprogresohistorico'  style='position: relative; width: auto; height:auto'></div>
+                                <div id='cityprogresohistorico'  style='position: relative; width: auto; height:auto'></div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                            <div id='cityindicadorestrazadores'  style='position: relative; width: auto; height:auto'></div>
+                                 <div id='cityindicadorestrazadores'  style='position: relative; width: auto; height:auto'></div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                            <div id='citymapadecalorporciudad'  style='position: relative; width: auto; height:auto'></div>
+                                 <div id='citymapadecalorporciudad'  style='position: relative; width: auto; height:auto'></div>
                             </div>
                         </div>
                     </div>
@@ -335,12 +335,12 @@ block js
             vizcityindicadorestrazadores = new tableau.Viz(containerDiv, url, options);
          }
         function initvizcitymapadecalorporciudad() {
-        var containerDiv = document.getElementById("vizcitymapadecalorporciudad"),
-        url = "https://public.tableau.com/views/Ciudatos/Mapadecalorporciudad?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-             options = {
-            hideTabs: true
-            };
-            vizcitymapadecalorporciudad = new tableau.Viz(containerDiv, url, options);
+            var containerDiv = document.getElementById("vizcitymapadecalorporciudad"),
+            url = "https://public.tableau.com/views/Ciudatos/Mapadecalorporciudad?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                 options = {
+                hideTabs: true
+                };
+                vizcitymapadecalorporciudad = new tableau.Viz(containerDiv, url, options);
         }
 
 
