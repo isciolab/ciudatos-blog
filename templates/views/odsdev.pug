@@ -213,13 +213,7 @@ block js
                                             sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
                                         }
                                     })
-                                    jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                                        if (filtervalue[0].value != "") {
-
-                                            sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
-                                        }
-                                    })
                                     jQuery.each(vizcitidashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
                                         if (filtervalue[0].value != "") {
