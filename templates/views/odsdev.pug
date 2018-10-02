@@ -233,11 +233,11 @@ block js
                                         }
                                     })
 
-                                    var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
+                                   /* var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
                                     if (filtervalue[0].value != "") {
 
                                         sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
-                                    }
+                                    }*/
                                 });
                             }
 
@@ -272,11 +272,11 @@ block js
                                         }
                                     })
 
-                                    var sheet = vizcityindicadorestrazadores.getWorkbook().getActiveSheet();
+                                    /*var sheet = vizcityindicadorestrazadores.getWorkbook().getActiveSheet();
                                     if (filtervalue[0].value != "") {
 
                                         sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
-                                    }
+                                    }*/
 
                                 });
                             }
@@ -327,7 +327,7 @@ block js
 
                     }
                 };
-            vizcityindicadorestrazadores = new tableau.Viz(containerDiv, url, options);
+                vizcityindicadorestrazadores = new tableau.Viz(containerDiv, url, options);
 
          }
 
@@ -342,6 +342,7 @@ block js
                         console.log('cargo mapa de calor ciudad');
                     }
                 };
+
             vizcitymapadecalorporciudad = new tableau.Viz(containerDiv, url, options);
 
 
