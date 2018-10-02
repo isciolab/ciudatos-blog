@@ -48,8 +48,8 @@
       <file leaf-file-name="odsdev.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/odsdev.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="206" column="0" lean-forward="true" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
+            <state relative-caret-position="510">
+              <caret line="93" column="23" lean-forward="true" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -59,8 +59,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>?data</find>
-      <find>?data=</find>
       <find>ciudatos</find>
       <find>visua</find>
       <find>visualiza</find>
@@ -86,9 +84,11 @@
       <find>odsdashboardinfo</find>
       <find>initodsdashboardinfo</find>
       <find>vizdashboardodstrazador</find>
-      <find>vizmapadecalorporods</find>
       <find>cityFilter</find>
       <find>MAPA</find>
+      <find>vizcitidashboardinfo</find>
+      <find>vizcityindicadoresciudad</find>
+      <find>vizmapadecalorporods</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -352,112 +352,7 @@
       <workItem from="1536343885180" duration="1556000" />
       <workItem from="1538057286617" duration="11017000" />
       <workItem from="1538400203013" duration="21928000" />
-      <workItem from="1538499377223" duration="2358000" />
-    </task>
-    <task id="LOCAL-00012" summary="fix keystone">
-      <created>1534290175337</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1534290175337</updated>
-    </task>
-    <task id="LOCAL-00013" summary="fix keystone">
-      <created>1534290278841</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1534290278841</updated>
-    </task>
-    <task id="LOCAL-00014" summary="fix keystone">
-      <created>1534290592173</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1534290592173</updated>
-    </task>
-    <task id="LOCAL-00015" summary="fix keystone">
-      <created>1534290606935</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1534290606935</updated>
-    </task>
-    <task id="LOCAL-00016" summary="fix keystone">
-      <created>1534290708576</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1534290708576</updated>
-    </task>
-    <task id="LOCAL-00017" summary="fix keystone">
-      <created>1534291021872</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1534291021872</updated>
-    </task>
-    <task id="LOCAL-00018" summary="fix keystone">
-      <created>1534291124449</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1534291124449</updated>
-    </task>
-    <task id="LOCAL-00019" summary="fix keystone">
-      <created>1534291301041</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1534291301041</updated>
-    </task>
-    <task id="LOCAL-00020" summary="fix keystone">
-      <created>1534291783618</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1534291783618</updated>
-    </task>
-    <task id="LOCAL-00021" summary="fix keystone">
-      <created>1534291899283</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1534291899283</updated>
-    </task>
-    <task id="LOCAL-00022" summary="fix keystone">
-      <created>1534360562686</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1534360562686</updated>
-    </task>
-    <task id="LOCAL-00023" summary="fix keystone">
-      <created>1534360877995</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1534360877995</updated>
-    </task>
-    <task id="LOCAL-00024" summary="fix keystone">
-      <created>1534361169367</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1534361169367</updated>
-    </task>
-    <task id="LOCAL-00025" summary="fix keystone">
-      <created>1534361448327</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1534361448327</updated>
-    </task>
-    <task id="LOCAL-00026" summary="fix keystone">
-      <created>1534361526164</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1534361526164</updated>
+      <workItem from="1538499377223" duration="9835000" />
     </task>
     <task id="LOCAL-00027" summary="fix keystone">
       <created>1534361839794</created>
@@ -697,11 +592,116 @@
       <option name="project" value="LOCAL" />
       <updated>1538430980932</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="visualize ods">
+      <created>1538507659344</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1538507659345</updated>
+    </task>
+    <task id="LOCAL-00062" summary="visualize ods">
+      <created>1538508600357</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1538508600358</updated>
+    </task>
+    <task id="LOCAL-00063" summary="visualize ods">
+      <created>1538509512511</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1538509512512</updated>
+    </task>
+    <task id="LOCAL-00064" summary="visualize ods">
+      <created>1538510539435</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1538510539435</updated>
+    </task>
+    <task id="LOCAL-00065" summary="visualize ods">
+      <created>1538511218614</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1538511218614</updated>
+    </task>
+    <task id="LOCAL-00066" summary="visualize ods">
+      <created>1538511431051</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1538511431051</updated>
+    </task>
+    <task id="LOCAL-00067" summary="visualize ods">
+      <created>1538511536110</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1538511536110</updated>
+    </task>
+    <task id="LOCAL-00068" summary="visualize ods">
+      <created>1538511781928</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1538511781928</updated>
+    </task>
+    <task id="LOCAL-00069" summary="visualize ods">
+      <created>1538511920328</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1538511920328</updated>
+    </task>
+    <task id="LOCAL-00070" summary="visualize ods">
+      <created>1538512034420</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1538512034420</updated>
+    </task>
+    <task id="LOCAL-00071" summary="visualize ods">
+      <created>1538512546687</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1538512546687</updated>
+    </task>
+    <task id="LOCAL-00072" summary="visualize ods">
+      <created>1538513286922</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1538513286922</updated>
+    </task>
+    <task id="LOCAL-00073" summary="visualize ods">
+      <created>1538513325361</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1538513325361</updated>
+    </task>
+    <task id="LOCAL-00074" summary="visualize ods">
+      <created>1538514450931</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1538514450931</updated>
+    </task>
+    <task id="LOCAL-00075" summary="visualize ods">
+      <created>1538514544026</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1538514544026</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61648000" />
+    <option name="totallyTimeSpent" value="69125000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -709,7 +709,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2673716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -770,6 +770,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1411">
           <caret line="83" column="40" lean-forward="false" selection-start-line="83" selection-start-column="40" selection-end-line="83" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -847,6 +848,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1080,6 +1082,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="62" column="17" lean-forward="false" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1100,8 +1103,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/odsdev.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="206" column="0" lean-forward="true" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="93" column="23" lean-forward="true" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
           <folding />
         </state>
       </provider>
