@@ -189,12 +189,31 @@ block js
             var containerDiv = document.getElementById("cityprogreovsabsoluto"),
                 url = "https://public.tableau.com/views/Ciudatos/CityDashboardprogresovsindicador?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                 options = {
-                    hideTabs: true
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getFiltersAsync()
+                            .then(function (filters) {
+
+                                console.log('mostrando filtrs');
+                                console.log(filters);
+                                FilterForApples = filters[0].getAppliedValues();
+                                FilterForOranges = filters[1].getAppliedValues();
+
+                            });
+                    }
                 };
             vizcityprogreovsabsoluto = new tableau.Viz(containerDiv, url, options);
+
+
+
+
         }
 
         function initvizcityindicadoresciudad() {
+
+
+
+
             var containerDiv = document.getElementById("vizcityindicadoresciudad"),
                 url = "https://public.tableau.com/views/Ciudatos/CityDashboardindicadoresporciudad?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                 options = {
