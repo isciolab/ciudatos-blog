@@ -48,8 +48,8 @@
       <file leaf-file-name="odsdev.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/odsdev.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="93" column="23" lean-forward="true" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+            <state relative-caret-position="229">
+              <caret line="156" column="41" lean-forward="false" selection-start-line="156" selection-start-column="41" selection-end-line="156" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -59,12 +59,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ciudatos</find>
-      <find>visua</find>
-      <find>visualiza</find>
-      <find>visualizre</find>
-      <find>visualizr</find>
-      <find>visualiz</find>
       <find>visualize</find>
       <find>vi</find>
       <find>visu</find>
@@ -89,6 +83,12 @@
       <find>vizcitidashboardinfo</find>
       <find>vizcityindicadoresciudad</find>
       <find>vizmapadecalorporods</find>
+      <find>vizcitymapadecalorporciudad</find>
+      <find>initvizcitymapadecalorporciudad</find>
+      <find>cityDashboardp</find>
+      <find>CityDashboardprogresovsindicador</find>
+      <find>cityprogreovsabsoluto</find>
+      <find>initvizcityprogreovsabsoluto</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -352,49 +352,8 @@
       <workItem from="1536343885180" duration="1556000" />
       <workItem from="1538057286617" duration="11017000" />
       <workItem from="1538400203013" duration="21928000" />
-      <workItem from="1538499377223" duration="9835000" />
-    </task>
-    <task id="LOCAL-00027" summary="fix keystone">
-      <created>1534361839794</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1534361839794</updated>
-    </task>
-    <task id="LOCAL-00028" summary="visualize ods">
-      <created>1536013778047</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1536013778047</updated>
-    </task>
-    <task id="LOCAL-00029" summary="visualize ods">
-      <created>1536014243690</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1536014243690</updated>
-    </task>
-    <task id="LOCAL-00030" summary="visualize ods">
-      <created>1536014385369</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1536014385369</updated>
-    </task>
-    <task id="LOCAL-00031" summary="visualize ods">
-      <created>1536014501463</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1536014501463</updated>
-    </task>
-    <task id="LOCAL-00032" summary="visualize ods">
-      <created>1536014557149</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1536014557149</updated>
+      <workItem from="1538499377223" duration="10182000" />
+      <workItem from="1538518411967" duration="432000" />
     </task>
     <task id="LOCAL-00033" summary="visualize ods">
       <created>1536014675775</created>
@@ -697,11 +656,53 @@
       <option name="project" value="LOCAL" />
       <updated>1538514544026</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="visualize ods">
+      <created>1538514720158</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1538514720158</updated>
+    </task>
+    <task id="LOCAL-00077" summary="visualize ods">
+      <created>1538514816478</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1538514816478</updated>
+    </task>
+    <task id="LOCAL-00078" summary="visualize ods">
+      <created>1538514873913</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1538514873913</updated>
+    </task>
+    <task id="LOCAL-00079" summary="visualize ods">
+      <created>1538514936376</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1538514936376</updated>
+    </task>
+    <task id="LOCAL-00080" summary="visualize ods">
+      <created>1538518663853</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1538518663854</updated>
+    </task>
+    <task id="LOCAL-00081" summary="visualize ods">
+      <created>1538518850549</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1538518850549</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69125000" />
+    <option name="totallyTimeSpent" value="69904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -712,8 +713,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -770,7 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1411">
           <caret line="83" column="40" lean-forward="false" selection-start-line="83" selection-start-column="40" selection-end-line="83" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -848,7 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1082,7 +1081,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="62" column="17" lean-forward="false" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1103,8 +1101,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/odsdev.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="93" column="23" lean-forward="true" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+        <state relative-caret-position="229">
+          <caret line="156" column="41" lean-forward="false" selection-start-line="156" selection-start-column="41" selection-end-line="156" selection-end-column="41" />
           <folding />
         </state>
       </provider>
