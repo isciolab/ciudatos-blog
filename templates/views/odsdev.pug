@@ -122,11 +122,9 @@ block content
     </div>
 
 block js
-    script(src="/vendors/iframeResizer.min.js")
     script(src="https://public.tableau.com/javascripts/api/tableau-2.min.js")
     script(src="/js/margin.js")
     script.
-
         //ods
         var vizdashboardodsgrupociudades;
         var vizodsdashboardinfo;
@@ -141,8 +139,6 @@ block js
         var vizcityindicadorestrazadores;
         var vizcitymapadecalorporciudad;
         $(document).ready(function () {
-
-
             //ods
             initodsdashboardinfo();
             initdashboardodsgrupociudades();
@@ -159,9 +155,6 @@ block js
             //$('iframe').iFrameResize({checkOrigin: false})
 
         })
-
-
-
 
         //ods
         function initmapadecalorporods() {
@@ -327,10 +320,8 @@ block js
             var containerDiv = document.getElementById("cityindicadorestrazadores"),
                 url = "https://public.tableau.com/views/Ciudatos/IndicadorestrazadoresporODS?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                 options = {
-                    hideTabs: true,
-                    onFirstInteractive: function () {
 
-                    }
+
                 };
             vizcityindicadorestrazadores = new tableau.Viz(containerDiv, url, options);
          }
@@ -338,7 +329,7 @@ block js
             var containerDiv = document.getElementById("citymapadecalorporciudad"),
             url = "https://public.tableau.com/views/Ciudatos/Mapadecalorporciudad?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                  options = {
-                hideTabs: true
+
                 };
                 vizcitymapadecalorporciudad = new tableau.Viz(containerDiv, url, options);
         }
