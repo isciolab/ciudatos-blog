@@ -193,21 +193,20 @@ block js
                     onFirstInteractive: function () {
                         vizcityprogreovsabsoluto.addEventListener('filterchange', function (event) {
 
-
                             var fieldname = event.getFieldName();
                             console.log(fieldname);
                             if(fieldname == 'AÑO(Date From)') {
-                                event.getFilterAsync().then(function (filters) {
+                                event.getFilterAsync().then(function (field) {
 
-                                    console.log(filters);
-                                    var filtervalue = filters.getAppliedValues();
+                                    var filtervalue = field.getAppliedValues();
                                     console.log(filtervalue);
+                                    console.log(filtervalue[0].value);
 
                                     jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                                        if (filtervalue != "") {
+                                        if (filtervalue[0].value != "") {
 
-                                            sheet.applyFilterAsync(fieldname, filtervalue.value, tableau.FilterUpdateType.REPLACE);
+                                            sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
                                         }
                                     })
                                 });
