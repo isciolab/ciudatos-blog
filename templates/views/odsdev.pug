@@ -195,24 +195,24 @@ block js
                             console.log('change');
 
 
-                            console.log(event.getFieldName());
-                            event.getFilterAsync().then(function (filters) {
+                            var fieldname = event.getFieldName();
+                            if(fieldname == 'AÑO(Date From)') {
+                                event.getFilterAsync().then(function (filters) {
 
-                                console.log(filters);
-                                var filtervalue = filters.getAppliedValues();
-                                console.log(filtervalue);
+                                    console.log(filters);
+                                    var filtervalue = filters.getAppliedValues();
+                                    console.log(filtervalue);
 
-                                jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                                    jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
 
-                                    if (filtervalue === "") {
-                                        //sheet.clearFilterAsync("ods concat");
+                                        if (filtervalue != "") {
 
-                                    } else {
-                                        sheet.applyFilterAsync("AÑO(Date From)", filtervalue, tableau.FilterUpdateType.REPLACE);
-                                    }
-                                })
-                            });
+                                            sheet.applyFilterAsync(fieldname, filtervalue, tableau.FilterUpdateType.REPLACE);
+                                        }
+                                    })
+                                });
+                            }
 
 
 
