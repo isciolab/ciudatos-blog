@@ -213,6 +213,17 @@ block js
                                 FilterForApples = filters[0].getAppliedValues();
                                 FilterForOranges = filters[1].getAppliedValues();
 
+
+                                jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                                    console.log(sheet);
+                                    console.log(ods);
+                                    if (ods === "") {
+                                        //sheet.clearFilterAsync("ods concat");
+
+                                    } else {
+                                        sheet.applyFilterAsync("AÑO de Date From", ods, tableau.FilterUpdateType.REPLACE);
+                                    }
+                                })
                             });
                     }
                 };
