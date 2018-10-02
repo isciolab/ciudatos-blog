@@ -97,7 +97,7 @@ block content
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <div id='vizcityindicadoresciudad'  style='position: relative; width: auto; height:auto'></div>
+                                <div id='cityindicadoresciudad'  style='position: relative; width: auto; height:auto'></div>
                             </div>
                         </div>
                         <div class="row">
@@ -149,11 +149,10 @@ block js
             initdashboardodstrazador();
             initmapadecalorporods();
             //city
-            initvizcitidashboardinfo();
             initvizcityselectordashboard();
-
-            initvizcityindicadoresciudad();
+            initvizcitidashboardinfo();
             initvizcityprogreovsabsoluto();
+            initvizcityindicadoresciudad();
             initvizcityprogresohistorico();
             initvizcityindicadorestrazadores();
             initvizcitymapadecalorporciudad;
@@ -301,7 +300,7 @@ block js
         }
 
         function initvizcityindicadoresciudad() {
-            var containerDiv = document.getElementById("vizcityindicadoresciudad"),
+            var containerDiv = document.getElementById("cityindicadoresciudad"),
                 url = "https://public.tableau.com/views/Ciudatos/CityDashboardindicadoresporciudad?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                 options = {
                     hideTabs: true,
@@ -313,7 +312,7 @@ block js
         }
 
         function initvizcityprogresohistorico() {
-            var containerDiv = document.getElementById("vizcityprogresohistorico"),
+            var containerDiv = document.getElementById("cityprogresohistorico"),
                 url = "https://public.tableau.com/views/Ciudatos/CityDashboard-progresohistorico?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                 options = {
                     hideTabs: true,
@@ -325,7 +324,7 @@ block js
         }
 
         function initvizcityindicadorestrazadores() {
-            var containerDiv = document.getElementById("vizcityindicadorestrazadores"),
+            var containerDiv = document.getElementById("cityindicadorestrazadores"),
                 url = "https://public.tableau.com/views/Ciudatos/IndicadorestrazadoresporODS?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                 options = {
                     hideTabs: true,
@@ -336,7 +335,7 @@ block js
             vizcityindicadorestrazadores = new tableau.Viz(containerDiv, url, options);
          }
         function initvizcitymapadecalorporciudad() {
-            var containerDiv = document.getElementById("vizcitymapadecalorporciudad"),
+            var containerDiv = document.getElementById("citymapadecalorporciudad"),
             url = "https://public.tableau.com/views/Ciudatos/Mapadecalorporciudad?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                  options = {
                 hideTabs: true
