@@ -191,7 +191,7 @@ block js
                 options = {
                     hideTabs: true,
                     onFirstInteractive: function () {
-                        vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getFiltersAsync()
+                        vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets().get("Indicador de progreso absoluto ciudad").getFiltersAsync()
                             .then(function (filters) {
 
                                 console.log('mostrando filtrs');
