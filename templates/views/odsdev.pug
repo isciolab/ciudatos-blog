@@ -189,12 +189,40 @@ block js
             var containerDiv = document.getElementById("cityprogreovsabsoluto"),
                 url = "https://public.tableau.com/views/Ciudatos/CityDashboardprogresovsindicador?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                 options = {
-                    hideTabs: true
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        vizcityprogreovsabsoluto.addEventListener('filterchange', function (event) {
+
+                            alert("FILTER CHANGE");
+
+                            console.log(event);
+
+
+                           /* vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets().get("Indicador de progreso absoluto ciudad").getFiltersAsync()
+                                .then(function (filters) {
+
+                                    console.log('mostrando filtrs');
+                                    console.log(filters);
+                                    FilterForApples = filters[0].getAppliedValues();
+                                    FilterForOranges = filters[1].getAppliedValues();
+
+
+                                    jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                                        console.log(sheet);
+                                        console.log(ods);
+                                        if (ods === "") {
+                                            //sheet.clearFilterAsync("ods concat");
+
+                                        } else {
+                                            sheet.applyFilterAsync("AÑO de Date From", ods, tableau.FilterUpdateType.REPLACE);
+                                        }
+                                    })
+                                });*/
+                        });
+                    }
 
                 };
             vizcityprogreovsabsoluto = new tableau.Viz(containerDiv, url, options);
-
-
 
 
         }
@@ -205,26 +233,7 @@ block js
                 options = {
                     hideTabs: true,
                     onFirstInteractive: function () {
-                        vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets().get("Indicador de progreso absoluto ciudad").getFiltersAsync()
-                            .then(function (filters) {
 
-                                console.log('mostrando filtrs');
-                                console.log(filters);
-                                FilterForApples = filters[0].getAppliedValues();
-                                FilterForOranges = filters[1].getAppliedValues();
-
-
-                                jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-                                    console.log(sheet);
-                                    console.log(ods);
-                                    if (ods === "") {
-                                        //sheet.clearFilterAsync("ods concat");
-
-                                    } else {
-                                        sheet.applyFilterAsync("AÑO de Date From", ods, tableau.FilterUpdateType.REPLACE);
-                                    }
-                                })
-                            });
                     }
                 };
             vizcityindicadoresciudad = new tableau.Viz(containerDiv, url, options);
