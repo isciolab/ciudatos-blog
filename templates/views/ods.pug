@@ -1,187 +1,187 @@
 extends ../layouts/default
 
 block vars
-	- inner_padding = "padding: 0 15px"
+    - inner_padding = "padding: 0 15px"
 
 block content
-	<img style="width:100%" src="https://res.cloudinary.com/randommonkey/image/upload/v1531505257/ciudatos/cities/zcolwitwfetgjset3bfu.png"/>
-	<div class="container">
+    <img style="width:100%" src="https://res.cloudinary.com/randommonkey/image/upload/v1531505257/ciudatos/cities/zcolwitwfetgjset3bfu.png"/>
+    <div class="container">
 
-	<br>
-	<div class="row">
-	<div class="col-md-3 col-md-offset-5">
-	<ul class="nav nav-pills">
-	<li role="presentation"  class="active"><a href="#ODS" data-toggle="tab">ODS</a></li>
-	<li role="presentation"><a href="#CIUDADES" data-toggle="tab">CIUDADES</a></li>
-	</ul>
-	</div>
-	<div class="col-md-12">
-	<div class="tab-content clearfix">
-	<div id="ODS" class="tab-pane fade in active" >
-	<div class="row" style="display:none"><div class="col-md-12">Seleccione un ODS, una meta y un indicador para ver su información</div></div>
-	<div class="row" style="display:none">
-	<div class="col-md-4">
-	<label>ODS:</label>
-	<select id="changeOdsConcat" class="form-control" onchange="odsConcatFilter(value);">
-	<option value="">All</option>
-	<option value="01 PONER FIN A LA POBREZA EN TODAS SUS FORMAS EN TODO EL MUNDOODS1- .">01 PONER FIN A LA POBREZA EN TODAS SUS FORMAS EN TODO EL MUNDOODS1- .</option>
-	</select>
-	</div>
-	<div class="col-md-4">
-	<label>META:</label>
-	<select class="form-control" id="changeTarget" onchange="targetFilter(value);">
+    <br>
+    <div class="row">
+    <div class="col-md-3 col-md-offset-5">
+    <ul class="nav nav-pills">
+    <li role="presentation"  class="active"><a href="#ODS" data-toggle="tab">ODS</a></li>
+    <li role="presentation"><a href="#CIUDADES" data-toggle="tab">CIUDADES</a></li>
+    </ul>
+    </div>
+    <div class="col-md-12">
+    <div class="tab-content clearfix">
+    <div id="ODS" class="tab-pane fade in active" >
+    <div class="row" style="display:none"><div class="col-md-12">Seleccione un ODS, una meta y un indicador para ver su información</div></div>
+    <div class="row" style="display:none">
+    <div class="col-md-4">
+    <label>ODS:</label>
+    <select id="changeOdsConcat" class="form-control" onchange="odsConcatFilter(value);">
+    <option value="">All</option>
+    <option value="01 PONER FIN A LA POBREZA EN TODAS SUS FORMAS EN TODO EL MUNDOODS1- .">01 PONER FIN A LA POBREZA EN TODAS SUS FORMAS EN TODO EL MUNDOODS1- .</option>
+    </select>
+    </div>
+    <div class="col-md-4">
+    <label>META:</label>
+    <select class="form-control" id="changeTarget" onchange="targetFilter(value);">
 
-	<option value="">All</option>
-	<option value="Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día">Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día</option>
-	<option value="Para 2030 reducir al menos a la mitad la proporción de hombres, mujeres y niños de todas las edades que viven en la POBREZA EN TODAS SUS DIMENSIONES con arreglo a las definiciones nacionales">Para 2030 reducir al menos a la mitad la proporción de hombres, mujeres y niños de todas las edades que viven en la POBREZA EN TODAS SUS DIMENSIONES con arreglo a las definiciones nacionales</option>
-	</select>
-	</div>
-	<div class="col-md-4">
-	<label>INDICADOR:</label>
-	<select class="form-control" id="changeTarget" onchange="indicadorFilter(value)">
-	<option value="">All</option>
-	<option value="Incidencia de pobreza monetaria extrema">Incidencia de pobreza monetaria extrema</option>
-	</select>
-	</div>
-	</div>
-	<div class="row" id="" style="z-index:999">
-	<div class="col-md-3">
-	<img src="http://www.co.undp.org/content/dam/colombia/img/Pobreza/ODS%20Colombia/xundp_co_pobreza_ODSCol2.png.pagespeed.ic.mrqdFDgHxQ.webp"/>
-	</div>
-	<div class="col-md-9">
-	<h2>¿Que son los objetivos de desarrollo sostenible?</h2>
-	<p>Los ODS nos invitan a priorizar acciones con una visión de futuro ambiciosa y transformativa. Contemplamos un mundo sin pobreza, hambre, enfermedades ni privaciones, donde todas las formas de vida puedan prosperar; un mundo sin temor ni violencia; un mundo en el que la alfabetización sea universal, con acceso equitativo y universal a una educación de calidad en todos los niveles, a la atención sanitaria y la protección social, y donde esté garantizado el bienestar físico, mental y social; un mundo en el que reafirmemos nuestros compromisos al acceso al agua potable y al saneamiento, donde los alimentos sean suficientes, asequibles y nutritivos; un mundo cuyos hábitats humanos sean seguros, resilientes y sostenibles, y donde haya acceso universal a suministros de energía asequible, fiable y sostenible.
-	</p>
-	</div>
-	</div>
-	<div class="row" id="odsdashboardselectorcontainer" style="z-index:999">
-	<div class="col-md-12" style="z-index:999">
-	<div id='odsdashboardselector'  style='position: relative; width: auto; height:auto'></div>
-	</div>
-	</div>
+    <option value="">All</option>
+    <option value="Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día">Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día</option>
+    <option value="Para 2030 reducir al menos a la mitad la proporción de hombres, mujeres y niños de todas las edades que viven en la POBREZA EN TODAS SUS DIMENSIONES con arreglo a las definiciones nacionales">Para 2030 reducir al menos a la mitad la proporción de hombres, mujeres y niños de todas las edades que viven en la POBREZA EN TODAS SUS DIMENSIONES con arreglo a las definiciones nacionales</option>
+    </select>
+    </div>
+    <div class="col-md-4">
+    <label>INDICADOR:</label>
+    <select class="form-control" id="changeTarget" onchange="indicadorFilter(value)">
+    <option value="">All</option>
+    <option value="Incidencia de pobreza monetaria extrema">Incidencia de pobreza monetaria extrema</option>
+    </select>
+    </div>
+    </div>
+    <div class="row" id="" style="z-index:999">
+    <div class="col-md-3">
+    <img src="http://www.co.undp.org/content/dam/colombia/img/Pobreza/ODS%20Colombia/xundp_co_pobreza_ODSCol2.png.pagespeed.ic.mrqdFDgHxQ.webp"/>
+    </div>
+    <div class="col-md-9">
+    <h2>¿Que son los objetivos de desarrollo sostenible?</h2>
+    <p>Los ODS nos invitan a priorizar acciones con una visión de futuro ambiciosa y transformativa. Contemplamos un mundo sin pobreza, hambre, enfermedades ni privaciones, donde todas las formas de vida puedan prosperar; un mundo sin temor ni violencia; un mundo en el que la alfabetización sea universal, con acceso equitativo y universal a una educación de calidad en todos los niveles, a la atención sanitaria y la protección social, y donde esté garantizado el bienestar físico, mental y social; un mundo en el que reafirmemos nuestros compromisos al acceso al agua potable y al saneamiento, donde los alimentos sean suficientes, asequibles y nutritivos; un mundo cuyos hábitats humanos sean seguros, resilientes y sostenibles, y donde haya acceso universal a suministros de energía asequible, fiable y sostenible.
+    </p>
+    </div>
+    </div>
+    <div class="row" id="odsdashboardselectorcontainer" style="z-index:999">
+    <div class="col-md-12" style="z-index:999">
+    <div id='odsdashboardselector'  style='position: relative; width: auto; height:auto'></div>
+    </div>
+    </div>
 
-	<div class="row">
-	<div class="col-md-12">
-	<div id='odsdashboardinfo'  style='position: relative; width: auto; height:auto'></div>
-	</div>
-	</div>
+    <div class="row">
+    <div class="col-md-12">
+    <div id='odsdashboardinfo'  style='position: relative; width: auto; height:auto'></div>
+    </div>
+    </div>
 
-	<div class="row">
-	<div class="col-md-12">
-	<div id='dashboardodsgrupociudades'  style='position: relative; width: auto; height:auto'></div>
-	</div>
-	</div>
-	<div class="row">
-	<div class="col-md-12">
-	<div id='dashboardodstrazador'  style='position: relative; width: auto; height:auto'></div>
-	</div>
-	</div>
-	<div class="row">
-	<div class="col-md-12">
-	<div id='mapadecalorporods'  style='position: relative; width: auto; height:auto'></div>
-	</div>
-	</div>
-	</div>
-	<div class="tab-pane fade" id="CIUDADES">
-	<div class="row" style="display:none">
-	<div class="col-md-12">Seleccione una ciudad para ver su información</div>
-	</div>
+    <div class="row">
+    <div class="col-md-12">
+    <div id='dashboardodsgrupociudades'  style='position: relative; width: auto; height:auto'></div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12">
+    <div id='dashboardodstrazador'  style='position: relative; width: auto; height:auto'></div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12">
+    <div id='mapadecalorporods'  style='position: relative; width: auto; height:auto'></div>
+    </div>
+    </div>
+    </div>
+    <div class="tab-pane fade" id="CIUDADES">
+    <div class="row" style="display:none">
+    <div class="col-md-12">Seleccione una ciudad para ver su información</div>
+    </div>
 
-	<div class="row" style="display:none">
-	<div  class="col-md-3 col-md-offset-5">
-	<label>Ciudad:</label>
-	<select id="changeCity" class="form-control" onchange="cityFilter(value);">
-	<option value="">All</option>
-	<option value="Bogotá">Bogotá</option>
-	</select>
-	</div>
-	</div>
-	<div class="row" id="" style="z-index:999">
-	<div class="col-md-3">
-	<img src="http://www.co.undp.org/content/dam/colombia/img/Pobreza/ODS%20Colombia/xundp_co_pobreza_ODSCol2.png.pagespeed.ic.mrqdFDgHxQ.webp"/>
-	</div>
-	<div class="col-md-9">
-	<h2>¿Que son los objetivos de desarrollo sostenible?</h2>
-	<p>Los ODS nos invitan a priorizar acciones con una visión de futuro ambiciosa y transformativa. Contemplamos un mundo sin pobreza, hambre, enfermedades ni privaciones, donde todas las formas de vida puedan prosperar; un mundo sin temor ni violencia; un mundo en el que la alfabetización sea universal, con acceso equitativo y universal a una educación de calidad en todos los niveles, a la atención sanitaria y la protección social, y donde esté garantizado el bienestar físico, mental y social; un mundo en el que reafirmemos nuestros compromisos al acceso al agua potable y al saneamiento, donde los alimentos sean suficientes, asequibles y nutritivos; un mundo cuyos hábitats humanos sean seguros, resilientes y sostenibles, y donde haya acceso universal a suministros de energía asequible, fiable y sostenible.
-	</p>
-	</div>
-	</div>
-	<div class="row" style="z-index:999">
-	<div class="col-md-12" style="z-index:999">
-	<div id='cityselectordashboard'  style='position: relative; width: auto; height:auto'></div>
-	</div>
-	</div>
-	<div class="row">
-	<div class="col-md-6">
-	<img src="https://www.elheraldo.co/sites/default/files/styles/width_860/public/articulo/2016/04/18/panoramicas_de_barranquilla_5.jpg?itok=v1Md9Ykg"/>
-	</div>
-	<div class="col-md-6">
-	<div id='citydeprmentmap'  style='position: relative; width: auto; height:auto'></div>
-	</div>
-	</div>
-	<div class="row">
-	<div class="col-md-12">
-	<div id='citidashboardinfo'  style='position: relative; width: auto; height:auto'></div>
-	</div>
-	</div>
-	<div class="row" id="cityatajos" style="display:none">
-	<div class="col-md-12">
-	<nav class="navbar navbar-default">
-	<div class="container-fluid">
-	<div class="navbar-header">
+    <div class="row" style="display:none">
+    <div  class="col-md-3 col-md-offset-5">
+    <label>Ciudad:</label>
+    <select id="changeCity" class="form-control" onchange="cityFilter(value);">
+    <option value="">All</option>
+    <option value="Bogotá">Bogotá</option>
+    </select>
+    </div>
+    </div>
+    <div class="row" id="" style="z-index:999">
+    <div class="col-md-3">
+    <img src="http://www.co.undp.org/content/dam/colombia/img/Pobreza/ODS%20Colombia/xundp_co_pobreza_ODSCol2.png.pagespeed.ic.mrqdFDgHxQ.webp"/>
+    </div>
+    <div class="col-md-9">
+    <h2>¿Que son los objetivos de desarrollo sostenible?</h2>
+    <p>Los ODS nos invitan a priorizar acciones con una visión de futuro ambiciosa y transformativa. Contemplamos un mundo sin pobreza, hambre, enfermedades ni privaciones, donde todas las formas de vida puedan prosperar; un mundo sin temor ni violencia; un mundo en el que la alfabetización sea universal, con acceso equitativo y universal a una educación de calidad en todos los niveles, a la atención sanitaria y la protección social, y donde esté garantizado el bienestar físico, mental y social; un mundo en el que reafirmemos nuestros compromisos al acceso al agua potable y al saneamiento, donde los alimentos sean suficientes, asequibles y nutritivos; un mundo cuyos hábitats humanos sean seguros, resilientes y sostenibles, y donde haya acceso universal a suministros de energía asequible, fiable y sostenible.
+    </p>
+    </div>
+    </div>
+    <div class="row" style="z-index:999">
+    <div class="col-md-12" style="z-index:999">
+    <div id='cityselectordashboard'  style='position: relative; width: auto; height:auto'></div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6">
+    <img src="https://www.elheraldo.co/sites/default/files/styles/width_860/public/articulo/2016/04/18/panoramicas_de_barranquilla_5.jpg?itok=v1Md9Ykg"/>
+    </div>
+    <div class="col-md-6">
+    <div id='citydeprmentmap'  style='position: relative; width: auto; height:auto'></div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12">
+    <div id='citidashboardinfo'  style='position: relative; width: auto; height:auto'></div>
+    </div>
+    </div>
+    <div class="row" id="cityatajos" style="display:none">
+    <div class="col-md-12">
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <div class="navbar-header">
 
-	<a class="navbar-brand" href="#">Enlaces rápidos</a>
-	</div>
-	<div id="navbar" class="navbar-collapse collapse">
-	<ul class="nav navbar-nav">
-	<li class="active"><a href="#">Trazadores por ods</a></li>
-	<li><a href="#cityindicadoresciudad">Indicadores de ODS por ciudad</a></li>
-	<li><a href="#cityprogresohistorico">Histórico del indicador</a></li>
-	<li><a href="#cityindicadorestrazadores">Trazadores por ODS</a></li>
-	<li><a href="#citymapadecalorporciudad">Mapa de calor</a></li>
+    <a class="navbar-brand" href="#">Enlaces rápidos</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+    <li class="active"><a href="#">Trazadores por ods</a></li>
+    <li><a href="#cityindicadoresciudad">Indicadores de ODS por ciudad</a></li>
+    <li><a href="#cityprogresohistorico">Histórico del indicador</a></li>
+    <li><a href="#cityindicadorestrazadores">Trazadores por ODS</a></li>
+    <li><a href="#citymapadecalorporciudad">Mapa de calor</a></li>
 
-	</div><!--/.nav-collapse -->
-	</div><!--/.container-fluid -->
-	</nav>
-	</div>
-	</div>
-	<div class="row">
-	<div class="col-md-12">
-	<div id='cityprogreovsabsoluto' style='position: relative; width: auto; height:auto'></div>
-	</div>
-	</div>
-	<div class="row">
-	<div class="col-md-12">
-	<div id='cityindicadoresciudad'  style='position: relative; width: auto; height:auto'></div>
-	</div>
-	</div>
-	<div class="row">
-	<div class="col-md-12">
-	<div id='cityprogresohistorico'  style='position: relative; width: auto; height:auto'></div>
-	</div>
-	</div>
-	<div class="row">
-	<div class="col-md-12">
-	<div id='cityindicadorestrazadores' style='position: relative; width: auto; height:auto'></div>
-	</div>
-	</div>
-	<div class="row">
-	<div class="col-md-12">
-	<div id='citymapadecalorporciudad' style='position: relative; width: auto; height:auto'></div>
-	</div>
-	</div>
-	</div>
-	</div>
-	</div>
-	</div>
-	</div>
+    </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+    </nav>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12">
+    <div id='cityprogreovsabsoluto' style='position: relative; width: auto; height:auto'></div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12">
+    <div id='cityindicadoresciudad'  style='position: relative; width: auto; height:auto'></div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12">
+    <div id='cityprogresohistorico'  style='position: relative; width: auto; height:auto'></div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12">
+    <div id='cityindicadorestrazadores' style='position: relative; width: auto; height:auto'></div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12">
+    <div id='citymapadecalorporciudad' style='position: relative; width: auto; height:auto'></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
 
 block js
-	script(src="https://public.tableau.com/javascripts/api/tableau-2.min.js")
-	script(src="/js/margin.js")
-	script(src="/js/jquery.sticky.js")
-	script.
-	    //ods
+    script(src="https://public.tableau.com/javascripts/api/tableau-2.min.js")
+    script(src="/js/margin.js")
+    script(src="/js/jquery.sticky.js")
+    script.
+        //ods
         var vizodsdashboardselector;
         var vizdashboardodsgrupociudades;
         var vizodsdashboardinfo;
