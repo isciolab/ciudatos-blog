@@ -141,22 +141,30 @@ block js
         $(document).ready(function () {
             //ods
             initodsdashboardinfo();
-            initdashboardodsgrupociudades();
-            initdashboardodstrazador();
-            initmapadecalorporods();
+
             //city
             initvizcityselectordashboard();
-            initvizcitidashboardinfo();
-            initvizcityprogreovsabsoluto();
-            initvizcityindicadoresciudad();
-            initvizcityprogresohistorico();
-            initvizcityindicadorestrazadores();
-            initvizcitymapadecalorporciudad();
+
             //$('iframe').iFrameResize({checkOrigin: false})
 
         })
 
         //ods
+        function initodsdashboardinfo() {
+            var containerDiv = document.getElementById("odsdashboardinfo"),
+                url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-info?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        initdashboardodsgrupociudades();
+                        initdashboardodstrazador();
+                        initmapadecalorporods();
+                    }
+                };
+            vizodsdashboardinfo = new tableau.Viz(containerDiv, url, options);
+        }
+
+
         function initmapadecalorporods() {
             var containerDiv = document.getElementById("mapadecalorporods"),
                 url = "https://public.tableau.com/views/Ciudatos/Mapadecalorporods?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
@@ -166,14 +174,7 @@ block js
                 };
             vizmapadecalorporods = new tableau.Viz(containerDiv, url, options);
         }
-        function initodsdashboardinfo() {
-            var containerDiv = document.getElementById("odsdashboardinfo"),
-                url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-info?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                options = {
-                    hideTabs: true
-                };
-            vizodsdashboardinfo = new tableau.Viz(containerDiv, url, options);
-        }
+
         function initdashboardodsgrupociudades() {
             var containerDiv = document.getElementById("dashboardodsgrupociudades"),
                 url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-grupociudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
@@ -206,6 +207,15 @@ block js
                 options = {
                     hideTabs: true,
                     onFirstInteractive: function () {
+
+                        initvizcitidashboardinfo();
+                        initvizcityprogreovsabsoluto();
+                        initvizcityindicadoresciudad();
+                        initvizcityprogresohistorico();
+                        initvizcityindicadorestrazadores();
+                        initvizcitymapadecalorporciudad();
+
+
                         vizcityselectordashboard.addEventListener('filterchange', function (event) {
 
                             var fieldname = event.getFieldName();
@@ -213,7 +223,7 @@ block js
                             if (fieldname == 'Ciudad') {
                                 event.getFilterAsync().then(function (field) {
 
-                                    var filtervalue = field.getAppliedValues();
+                                    /* var filtervalue = field.getAppliedValues();
                                     console.log(filtervalue);
                                     console.log(filtervalue[0].value);
 
@@ -233,7 +243,7 @@ block js
                                         }
                                     })
 
-                                   /* var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
+                                   var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
                                     if (filtervalue[0].value != "") {
 
                                         sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
