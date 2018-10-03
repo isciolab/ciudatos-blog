@@ -142,8 +142,7 @@ block js
             //ods
             initodsdashboardinfo();
 
-            //city
-            initvizcityselectordashboard();
+
 
             //$('iframe').iFrameResize({checkOrigin: false})
 
@@ -169,7 +168,12 @@ block js
                 url = "https://public.tableau.com/views/Ciudatos/Mapadecalorporods?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                 options = {
                     //"Indicador": "",
-                    hideTabs: true
+                    hideTabs: true,
+                    onFirstInteractive: function(){
+                    //city
+                        console.log('iniciando ciudae');
+                          initvizcityselectordashboard();
+                    }
                 };
             vizmapadecalorporods = new tableau.Viz(containerDiv, url, options);
         }
@@ -199,18 +203,7 @@ block js
         }
 
         //city
-        function initvizcitidashboardinfo() {
-            var containerDiv = document.getElementById("citidashboardinfo"),
-                url = "https://public.tableau.com/views/Ciudatos/CityDashboardinfo?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                options = {
-                    hideTabs: true,
-                    onFirstIntercative:function(){
-                        initvizcityprogreovsabsoluto();
 
-                    }
-                };
-            vizcitidashboardinfo = new tableau.Viz(containerDiv, url, options);
-        }
         function initvizcityselectordashboard() {
             var containerDiv = document.getElementById("cityselectordashboard"),
                 url = "https://public.tableau.com/views/Ciudatos/CityDashboard-selector?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
@@ -218,8 +211,8 @@ block js
                     hideTabs: true,
                     onFirstInteractive: function () {
 
+                        console.log('ya inici ciudades');
                         initvizcitidashboardinfo();
-
 
 
                         vizcityselectordashboard.addEventListener('filterchange', function (event) {
@@ -230,30 +223,30 @@ block js
                                 event.getFilterAsync().then(function (field) {
 
                                     /* var filtervalue = field.getAppliedValues();
-                                    console.log(filtervalue);
-                                    console.log(filtervalue[0].value);
+                                     console.log(filtervalue);
+                                     console.log(filtervalue[0].value);
 
-                                    jQuery.each(vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                                     jQuery.each(vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                                        if (filtervalue[0].value != "") {
+                                     if (filtervalue[0].value != "") {
 
-                                            sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
-                                        }
-                                    })
+                                     sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                     }
+                                     })
 
-                                    jQuery.each(vizcitidashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                                     jQuery.each(vizcitidashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                                        if (filtervalue[0].value != "") {
+                                     if (filtervalue[0].value != "") {
 
-                                            sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
-                                        }
-                                    })
+                                     sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                     }
+                                     })
 
-                                   var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
-                                    if (filtervalue[0].value != "") {
+                                     var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
+                                     if (filtervalue[0].value != "") {
 
-                                        sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
-                                    }*/
+                                     sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                     }*/
                                 });
                             }
 
@@ -263,17 +256,29 @@ block js
                 };
             vizcityselectordashboard = new tableau.Viz(containerDiv, url, options);
         }
+
+
+        function initvizcitidashboardinfo() {
+            var containerDiv = document.getElementById("citidashboardinfo"),
+                url = "https://public.tableau.com/views/Ciudatos/CityDashboardinfo?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive:function(){
+                        console.log('inicio lo demas de ciuades');
+                        initvizcityprogreovsabsoluto();
+
+                    }
+                };
+            vizcitidashboardinfo = new tableau.Viz(containerDiv, url, options);
+        }
+
         function initvizcityprogreovsabsoluto() {
             var containerDiv = document.getElementById("cityprogreovsabsoluto"),
                 url = "https://public.tableau.com/views/Ciudatos/CityDashboardprogresovsindicador?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                 options = {
                     hideTabs: true,
                     onFirstInteractive: function () {
-
-
-
-
-                            initvizcityindicadoresciudad();
+                        initvizcityindicadoresciudad();
 
 
                         vizcityprogreovsabsoluto.addEventListener('filterchange', function (event) {
@@ -287,13 +292,13 @@ block js
                                     console.log(filtervalue);
                                     console.log(filtervalue[0].value);
 
-                                    jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                                    /*jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
                                         if (filtervalue[0].value != "") {
 
                                             sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
                                         }
-                                    })
+                                    })*/
 
                                     /*var sheet = vizcityindicadorestrazadores.getWorkbook().getActiveSheet();
                                     if (filtervalue[0].value != "") {
