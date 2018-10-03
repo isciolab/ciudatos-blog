@@ -50,8 +50,7 @@ block content
                             </div>
                             <div class="col-md-9">
                                 <h2>¿Que son los objetivos de desarrollo sostenible?</h2>
-                                <p>
-                                    Los ODS nos invitan a priorizar acciones con una visión de futuro ambiciosa y transformativa. Contemplamos un mundo sin pobreza, hambre, enfermedades ni privaciones, donde todas las formas de vida puedan prosperar; un mundo sin temor ni violencia; un mundo en el que la alfabetización sea universal, con acceso equitativo y universal a una educación de calidad en todos los niveles, a la atención sanitaria y la protección social, y donde esté garantizado el bienestar físico, mental y social; un mundo en el que reafirmemos nuestros compromisos al acceso al agua potable y al saneamiento, donde los alimentos sean suficientes, asequibles y nutritivos; un mundo cuyos hábitats humanos sean seguros, resilientes y sostenibles, y donde haya acceso universal a suministros de energía asequible, fiable y sostenible.
+                                <p>Los ODS nos invitan a priorizar acciones con una visión de futuro ambiciosa y transformativa. Contemplamos un mundo sin pobreza, hambre, enfermedades ni privaciones, donde todas las formas de vida puedan prosperar; un mundo sin temor ni violencia; un mundo en el que la alfabetización sea universal, con acceso equitativo y universal a una educación de calidad en todos los niveles, a la atención sanitaria y la protección social, y donde esté garantizado el bienestar físico, mental y social; un mundo en el que reafirmemos nuestros compromisos al acceso al agua potable y al saneamiento, donde los alimentos sean suficientes, asequibles y nutritivos; un mundo cuyos hábitats humanos sean seguros, resilientes y sostenibles, y donde haya acceso universal a suministros de energía asequible, fiable y sostenible.
                                 </p>
                             </div>
                         </div>
@@ -97,9 +96,27 @@ block content
                                 </select>
                             </div>
                         </div>
+                        <div class="row" id="" style="z-index:999">
+                            <div class="col-md-3">
+                                <img src="http://www.co.undp.org/content/dam/colombia/img/Pobreza/ODS%20Colombia/xundp_co_pobreza_ODSCol2.png.pagespeed.ic.mrqdFDgHxQ.webp"/>
+                                </div>
+                                <div class="col-md-9">
+                                <h2>¿Que son los objetivos de desarrollo sostenible?</h2>
+                                    <p>Los ODS nos invitan a priorizar acciones con una visión de futuro ambiciosa y transformativa. Contemplamos un mundo sin pobreza, hambre, enfermedades ni privaciones, donde todas las formas de vida puedan prosperar; un mundo sin temor ni violencia; un mundo en el que la alfabetización sea universal, con acceso equitativo y universal a una educación de calidad en todos los niveles, a la atención sanitaria y la protección social, y donde esté garantizado el bienestar físico, mental y social; un mundo en el que reafirmemos nuestros compromisos al acceso al agua potable y al saneamiento, donde los alimentos sean suficientes, asequibles y nutritivos; un mundo cuyos hábitats humanos sean seguros, resilientes y sostenibles, y donde haya acceso universal a suministros de energía asequible, fiable y sostenible.
+                                </p>
+                            </div>
+                        </div>
                         <div class="row" style="z-index:999">
                             <div class="col-md-12" style="z-index:999">
                                     <div id='cityselectordashboard'  style='position: relative; width: auto; height:auto'></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                 <img src="https://www.elheraldo.co/sites/default/files/styles/width_860/public/articulo/2016/04/18/panoramicas_de_barranquilla_5.jpg?itok=v1Md9Ykg"/>
+                            </div>
+                            <div class="col-md-6">
+                                    <div id='citydeprmentmap'  style='position: relative; width: auto; height:auto'></div>
                             </div>
                         </div>
                         <div class="row">
@@ -173,6 +190,7 @@ block js
         //city
         var vizcityselectordashboard;
         var vizcitidashboardinfo;
+        var vizcitydeprmentmap;
         var vizcityprogreovsabsoluto;
         var vizcityindicadoresciudad;
         var vizcityprogresohistorico;
@@ -363,6 +381,7 @@ block js
                         $("#cityatajos").css('display', 'block');
 
                         console.log('ya inici ciudades');
+                        initvizcitydeprmentmap();
                         initvizcitidashboardinfo();
 
 
@@ -386,6 +405,19 @@ block js
                 };
             vizcitidashboardinfo = new tableau.Viz(containerDiv, url, options);
         }
+        function initvizcitydeprmentmap() {
+            var containerDiv = document.getElementById("citydeprmentmap"),
+                url = "https://public.tableau.com/views/Ciudatos/Departmentmap?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive:function(){
+                      //  console.log('inicio lo demas de ciuades');
+
+
+                    }
+                };
+            vizcitydeprmentmap = new tableau.Viz(containerDiv, url, options);
+        }
 
         function initvizcityprogreovsabsoluto() {
             var containerDiv = document.getElementById("cityprogreovsabsoluto"),
@@ -396,37 +428,7 @@ block js
                         initvizcityindicadoresciudad();
 
 
-                        vizcityprogreovsabsoluto.addEventListener('filterchange', function (event) {
 
-                            var fieldname = event.getFieldName();
-                            console.log(fieldname);
-                            if(fieldname == 'AÑO(Date From)') {
-                                event.getFilterAsync().then(function (field) {
-
-                                    var filtervalue = field.getAppliedValues();
-                                    console.log(filtervalue);
-                                    console.log(filtervalue[0].value);
-
-                                    /*jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-
-                                        if (filtervalue[0].value != "") {
-
-                                            sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
-                                        }
-                                    })*/
-
-                                    /*var sheet = vizcityindicadorestrazadores.getWorkbook().getActiveSheet();
-                                    if (filtervalue[0].value != "") {
-
-                                        sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
-                                    }*/
-
-                                });
-                            }
-
-
-
-                        });
                     }
 
                 };
@@ -470,6 +472,38 @@ block js
                     hideTabs: true,
                     onFirstInteractive: function () {
                         initvizcitymapadecalorporciudad();
+
+                        vizcityprogreovsabsoluto.addEventListener('filterchange', function (event) {
+
+                            var fieldname = event.getFieldName();
+                            console.log(fieldname);
+                            if (fieldname == 'AÑO(Date From)') {
+                                event.getFilterAsync().then(function (field) {
+
+                                    var filtervalue = field.getAppliedValues();
+                                    console.log(filtervalue);
+                                    console.log(filtervalue[0].value);
+
+                                    jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                                     if (filtervalue[0].value != "") {
+
+                                     sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                     }
+                                     })
+
+                                     var sheet = vizcityindicadorestrazadores.getWorkbook().getActiveSheet();
+                                     if (filtervalue[0].value != "") {
+
+                                     sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                     }
+
+                                });
+                            }
+
+
+                        });
+
                     }
                 };
                 vizcityindicadorestrazadores = new tableau.Viz(containerDiv, url, options);
@@ -514,6 +548,11 @@ block js
                                      })
 
                                      var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
+                                     if (filtervalue[0].value != "") {
+
+                                         sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                     }
+                                    var sheet = vizcitydeprmentmap.getWorkbook().getActiveSheet();
                                      if (filtervalue[0].value != "") {
 
                                          sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
