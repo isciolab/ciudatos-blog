@@ -17,8 +17,8 @@ block content
             <div class="col-md-12">
                 <div class="tab-content clearfix">
                     <div id="ODS" class="tab-pane fade in active" >
-                        <div class="row"><div class="col-md-12">Seleccione un ODS, una meta y un indicador para ver su información</div></div>
-                        <div class="row">
+                        <div class="row" style="display:none"><div class="col-md-12">Seleccione un ODS, una meta y un indicador para ver su información</div></div>
+                        <div class="row" style="display:none">
                             <div class="col-md-4">
                                 <label>ODS:</label>
                                 <select id="changeOdsConcat" class="form-control" onchange="odsConcatFilter(value);">
@@ -43,13 +43,18 @@ block content
                                 </select>
                             </div>
                         </div>
-
+                        <div class="row">
+                            <div class="col-md-12">
+                                 <div id='odsdashboardselector'  style='position: relative; width: auto; height:auto'></div>
+                            </div>
+                        </div>
 
                         <div class="row">
                             <div class="col-md-12">
                                  <div id='odsdashboardinfo'  style='position: relative; width: auto; height:auto'></div>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col-md-12">
                                  <div id='dashboardodsgrupociudades'  style='position: relative; width: auto; height:auto'></div>
@@ -126,6 +131,7 @@ block js
     script(src="/js/margin.js")
     script.
         //ods
+        var vizodsdashboardselector;
         var vizdashboardodsgrupociudades;
         var vizodsdashboardinfo;
         var vizdashboardodstrazador;
@@ -140,7 +146,7 @@ block js
         var vizcitymapadecalorporciudad;
         $(document).ready(function () {
             //ods
-            initodsdashboardinfo();
+            initodsdashboardselector();
 
 
 
@@ -149,6 +155,19 @@ block js
         })
 
         //ods
+        function initodsdashboardselector() {
+            var containerDiv = document.getElementById("odsdashboardselector"),
+                url = "https://public.tableau.com/shared/4JCNN6JRS?:toolbar=no&:display_count=yes",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        initodsdashboardinfo();
+
+                    }
+                };
+            vizodsdashboardinfo = new tableau.Viz(containerDiv, url, options);
+        }
+
         function initodsdashboardinfo() {
             var containerDiv = document.getElementById("odsdashboardinfo"),
                 url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-info?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
