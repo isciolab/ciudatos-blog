@@ -366,43 +366,7 @@ block js
                         initvizcitidashboardinfo();
 
 
-                        vizcityselectordashboard.addEventListener('filterchange', function (event) {
 
-                            var fieldname = event.getFieldName();
-                            console.log(fieldname);
-                            if (fieldname == 'Ciudad') {
-                                event.getFilterAsync().then(function (field) {
-
-                                    /* var filtervalue = field.getAppliedValues();
-                                     console.log(filtervalue);
-                                     console.log(filtervalue[0].value);
-
-                                     jQuery.each(vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-
-                                     if (filtervalue[0].value != "") {
-
-                                     sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
-                                     }
-                                     })
-
-                                     jQuery.each(vizcitidashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-
-                                     if (filtervalue[0].value != "") {
-
-                                     sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
-                                     }
-                                     })
-
-                                     var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
-                                     if (filtervalue[0].value != "") {
-
-                                     sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
-                                     }*/
-                                });
-                            }
-
-
-                        });
                     }
                 };
             vizcityselectordashboard = new tableau.Viz(containerDiv, url, options);
@@ -521,6 +485,45 @@ block js
                     onFirstInteractive: function () {
 
                         console.log('cargo mapa de calor ciudad');
+
+                        vizcityselectordashboard.addEventListener('filterchange', function (event) {
+
+                            var fieldname = event.getFieldName();
+                            console.log(fieldname);
+                            if (fieldname == 'Ciudad') {
+                                event.getFilterAsync().then(function (field) {
+
+                                     var filtervalue = field.getAppliedValues();
+                                     console.log(filtervalue);
+                                     console.log(filtervalue[0].value);
+
+                                     jQuery.each(vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                                     if (filtervalue[0].value != "") {
+
+                                         sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                         }
+                                     })
+
+                                     jQuery.each(vizcitidashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                                     if (filtervalue[0].value != "") {
+
+                                             sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                             }
+                                     })
+
+                                     var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
+                                     if (filtervalue[0].value != "") {
+
+                                         sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                     }
+                                });
+                            }
+
+
+                        });
+
                     }
                 };
 
