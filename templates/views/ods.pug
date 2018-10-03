@@ -5,12 +5,677 @@ block vars
 
 block content
 	<img style="width:100%" src="https://res.cloudinary.com/randommonkey/image/upload/v1531505257/ciudatos/cities/zcolwitwfetgjset3bfu.png"/>
-	<center><div class='tableauPlaceholder' id='viz1536014369985' style='position: relative'><noscript><a href='#'><img alt='DASHBOARD VISUALIZADOR CIUDATOS ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ci&#47;Ciudatos&#47;NAVEGAR&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Ciudatos&#47;NAVEGAR' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ci&#47;Ciudatos&#47;NAVEGAR&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1536014369985');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1116px';vizElement.style.height='4264px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></center>
+	<div class="container">
+
+	<br>
+	<div class="row">
+	<div class="col-md-3 col-md-offset-5">
+	<ul class="nav nav-pills">
+	<li role="presentation"  class="active"><a href="#ODS" data-toggle="tab">ODS</a></li>
+	<li role="presentation"><a href="#CIUDADES" data-toggle="tab">CIUDADES</a></li>
+	</ul>
+	</div>
+	<div class="col-md-12">
+	<div class="tab-content clearfix">
+	<div id="ODS" class="tab-pane fade in active" >
+	<div class="row" style="display:none"><div class="col-md-12">Seleccione un ODS, una meta y un indicador para ver su información</div></div>
+	<div class="row" style="display:none">
+	<div class="col-md-4">
+	<label>ODS:</label>
+	<select id="changeOdsConcat" class="form-control" onchange="odsConcatFilter(value);">
+	<option value="">All</option>
+	<option value="01 PONER FIN A LA POBREZA EN TODAS SUS FORMAS EN TODO EL MUNDOODS1- .">01 PONER FIN A LA POBREZA EN TODAS SUS FORMAS EN TODO EL MUNDOODS1- .</option>
+	</select>
+	</div>
+	<div class="col-md-4">
+	<label>META:</label>
+	<select class="form-control" id="changeTarget" onchange="targetFilter(value);">
+
+	<option value="">All</option>
+	<option value="Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día">Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día</option>
+	<option value="Para 2030 reducir al menos a la mitad la proporción de hombres, mujeres y niños de todas las edades que viven en la POBREZA EN TODAS SUS DIMENSIONES con arreglo a las definiciones nacionales">Para 2030 reducir al menos a la mitad la proporción de hombres, mujeres y niños de todas las edades que viven en la POBREZA EN TODAS SUS DIMENSIONES con arreglo a las definiciones nacionales</option>
+	</select>
+	</div>
+	<div class="col-md-4">
+	<label>INDICADOR:</label>
+	<select class="form-control" id="changeTarget" onchange="indicadorFilter(value)">
+	<option value="">All</option>
+	<option value="Incidencia de pobreza monetaria extrema">Incidencia de pobreza monetaria extrema</option>
+	</select>
+	</div>
+	</div>
+	<div class="row" id="" style="z-index:999">
+	<div class="col-md-3">
+	<img src="http://www.co.undp.org/content/dam/colombia/img/Pobreza/ODS%20Colombia/xundp_co_pobreza_ODSCol2.png.pagespeed.ic.mrqdFDgHxQ.webp"/>
+	</div>
+	<div class="col-md-9">
+	<h2>¿Que son los objetivos de desarrollo sostenible?</h2>
+	<p>Los ODS nos invitan a priorizar acciones con una visión de futuro ambiciosa y transformativa. Contemplamos un mundo sin pobreza, hambre, enfermedades ni privaciones, donde todas las formas de vida puedan prosperar; un mundo sin temor ni violencia; un mundo en el que la alfabetización sea universal, con acceso equitativo y universal a una educación de calidad en todos los niveles, a la atención sanitaria y la protección social, y donde esté garantizado el bienestar físico, mental y social; un mundo en el que reafirmemos nuestros compromisos al acceso al agua potable y al saneamiento, donde los alimentos sean suficientes, asequibles y nutritivos; un mundo cuyos hábitats humanos sean seguros, resilientes y sostenibles, y donde haya acceso universal a suministros de energía asequible, fiable y sostenible.
+	</p>
+	</div>
+	</div>
+	<div class="row" id="odsdashboardselectorcontainer" style="z-index:999">
+	<div class="col-md-12" style="z-index:999">
+	<div id='odsdashboardselector'  style='position: relative; width: auto; height:auto'></div>
+	</div>
+	</div>
+
+	<div class="row">
+	<div class="col-md-12">
+	<div id='odsdashboardinfo'  style='position: relative; width: auto; height:auto'></div>
+	</div>
+	</div>
+
+	<div class="row">
+	<div class="col-md-12">
+	<div id='dashboardodsgrupociudades'  style='position: relative; width: auto; height:auto'></div>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-md-12">
+	<div id='dashboardodstrazador'  style='position: relative; width: auto; height:auto'></div>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-md-12">
+	<div id='mapadecalorporods'  style='position: relative; width: auto; height:auto'></div>
+	</div>
+	</div>
+	</div>
+	<div class="tab-pane fade" id="CIUDADES">
+	<div class="row" style="display:none">
+	<div class="col-md-12">Seleccione una ciudad para ver su información</div>
+	</div>
+
+	<div class="row" style="display:none">
+	<div  class="col-md-3 col-md-offset-5">
+	<label>Ciudad:</label>
+	<select id="changeCity" class="form-control" onchange="cityFilter(value);">
+	<option value="">All</option>
+	<option value="Bogotá">Bogotá</option>
+	</select>
+	</div>
+	</div>
+	<div class="row" id="" style="z-index:999">
+	<div class="col-md-3">
+	<img src="http://www.co.undp.org/content/dam/colombia/img/Pobreza/ODS%20Colombia/xundp_co_pobreza_ODSCol2.png.pagespeed.ic.mrqdFDgHxQ.webp"/>
+	</div>
+	<div class="col-md-9">
+	<h2>¿Que son los objetivos de desarrollo sostenible?</h2>
+	<p>Los ODS nos invitan a priorizar acciones con una visión de futuro ambiciosa y transformativa. Contemplamos un mundo sin pobreza, hambre, enfermedades ni privaciones, donde todas las formas de vida puedan prosperar; un mundo sin temor ni violencia; un mundo en el que la alfabetización sea universal, con acceso equitativo y universal a una educación de calidad en todos los niveles, a la atención sanitaria y la protección social, y donde esté garantizado el bienestar físico, mental y social; un mundo en el que reafirmemos nuestros compromisos al acceso al agua potable y al saneamiento, donde los alimentos sean suficientes, asequibles y nutritivos; un mundo cuyos hábitats humanos sean seguros, resilientes y sostenibles, y donde haya acceso universal a suministros de energía asequible, fiable y sostenible.
+	</p>
+	</div>
+	</div>
+	<div class="row" style="z-index:999">
+	<div class="col-md-12" style="z-index:999">
+	<div id='cityselectordashboard'  style='position: relative; width: auto; height:auto'></div>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-md-6">
+	<img src="https://www.elheraldo.co/sites/default/files/styles/width_860/public/articulo/2016/04/18/panoramicas_de_barranquilla_5.jpg?itok=v1Md9Ykg"/>
+	</div>
+	<div class="col-md-6">
+	<div id='citydeprmentmap'  style='position: relative; width: auto; height:auto'></div>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-md-12">
+	<div id='citidashboardinfo'  style='position: relative; width: auto; height:auto'></div>
+	</div>
+	</div>
+	<div class="row" id="cityatajos" style="display:none">
+	<div class="col-md-12">
+	<nav class="navbar navbar-default">
+	<div class="container-fluid">
+	<div class="navbar-header">
+
+	<a class="navbar-brand" href="#">Enlaces rápidos</a>
+	</div>
+	<div id="navbar" class="navbar-collapse collapse">
+	<ul class="nav navbar-nav">
+	<li class="active"><a href="#">Trazadores por ods</a></li>
+	<li><a href="#cityindicadoresciudad">Indicadores de ODS por ciudad</a></li>
+	<li><a href="#cityprogresohistorico">Histórico del indicador</a></li>
+	<li><a href="#cityindicadorestrazadores">Trazadores por ODS</a></li>
+	<li><a href="#citymapadecalorporciudad">Mapa de calor</a></li>
+
+	</div><!--/.nav-collapse -->
+	</div><!--/.container-fluid -->
+	</nav>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-md-12">
+	<div id='cityprogreovsabsoluto' style='position: relative; width: auto; height:auto'></div>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-md-12">
+	<div id='cityindicadoresciudad'  style='position: relative; width: auto; height:auto'></div>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-md-12">
+	<div id='cityprogresohistorico'  style='position: relative; width: auto; height:auto'></div>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-md-12">
+	<div id='cityindicadorestrazadores' style='position: relative; width: auto; height:auto'></div>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-md-12">
+	<div id='citymapadecalorporciudad' style='position: relative; width: auto; height:auto'></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
 
 block js
-	script(src="/vendors/iframeResizer.min.js")
+	script(src="https://public.tableau.com/javascripts/api/tableau-2.min.js")
 	script(src="/js/margin.js")
+	script(src="/js/jquery.sticky.js")
 	script.
-		$(document).ready(function () {
-			$('iframe').iFrameResize({ checkOrigin: false })
-		})
+        //ods
+        var vizodsdashboardselector;
+        var vizdashboardodsgrupociudades;
+        var vizodsdashboardinfo;
+        var vizdashboardodstrazador;
+        var vizmapadecalorporods;
+        //city
+        var vizcityselectordashboard;
+        var vizcitidashboardinfo;
+        var vizcitydeprmentmap;
+        var vizcityprogreovsabsoluto;
+        var vizcityindicadoresciudad;
+        var vizcityprogresohistorico;
+        var vizcityindicadorestrazadores;
+        var vizcitymapadecalorporciudad;
+        $(document).ready(function () {
+            //ods
+            initodsdashboardselector();
+
+
+
+            //$('iframe').iFrameResize({checkOrigin: false})
+
+        })
+
+        //ods
+        function initodsdashboardselector() {
+            var containerDiv = document.getElementById("odsdashboardselector"),
+                url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-selector?:embed=y&:display_count=no&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        // $("#odsdashboardselector").sticky({topSpacing: 40});
+                        $(".tab-toolbar").css('display', 'none');
+                        initodsdashboardinfo();
+
+                    }
+                };
+            vizodsdashboardselector = new tableau.Viz(containerDiv, url, options);
+        }
+
+        function initodsdashboardinfo() {
+            var containerDiv = document.getElementById("odsdashboardinfo"),
+                url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-info?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        initdashboardodsgrupociudades();
+
+                    }
+                };
+            vizodsdashboardinfo = new tableau.Viz(containerDiv, url, options);
+        }
+
+
+        function initmapadecalorporods() {
+            var containerDiv = document.getElementById("mapadecalorporods"),
+                url = "https://public.tableau.com/views/Ciudatos/Mapadecalorporods?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    //"Indicador": "",
+                    hideTabs: true,
+                    onFirstInteractive: function(){
+                        //city
+                        console.log('iniciando ciudae');
+
+
+                        vizodsdashboardselector.addEventListener('filterchange', function (event) {
+
+                            var fieldname = event.getFieldName();
+                            console.log(fieldname);
+                            if (fieldname == 'ods concat') {
+                                event.getFilterAsync().then(function (field) {
+
+                                    var filtervalue = field.getAppliedValues();
+                                    console.log(filtervalue);
+                                    console.log(filtervalue[0].value);
+
+                                    jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                                        if (filtervalue[0].value != "") {
+
+                                            sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                        }
+                                    })
+
+                                    jQuery.each(vizdashboardodstrazador.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                                        if (filtervalue[0].value != "") {
+
+                                            sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                        }
+                                    })
+
+
+                                });
+                            }
+
+                            if (fieldname == 'Name (Targets)') {
+                                event.getFilterAsync().then(function (field) {
+
+                                    var filtervalue = field.getAppliedValues();
+                                    console.log(filtervalue);
+                                    console.log(filtervalue[0].value);
+
+                                    jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                                        if (filtervalue[0].value != "") {
+
+                                            sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                        }
+                                    })
+
+                                    jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                                        if (filtervalue[0].value != "") {
+
+                                            sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                        }
+                                    })
+
+
+                                });
+                            }
+                            if (fieldname == 'Indicador') {
+                                event.getFilterAsync().then(function (field) {
+
+                                    var filtervalue = field.getAppliedValues();
+                                    console.log(filtervalue);
+                                    console.log(filtervalue[0].value);
+
+                                    jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                                        if (filtervalue[0].value != "") {
+
+                                            sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                        }
+                                    })
+
+                                    jQuery.each(vizmapadecalorporods.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                                        if (filtervalue[0].value != "") {
+
+                                            sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                        }
+                                    })
+
+
+                                });
+                            }
+
+
+
+                        });
+
+
+
+
+                        initvizcityselectordashboard();
+                    }
+                };
+            vizmapadecalorporods = new tableau.Viz(containerDiv, url, options);
+        }
+
+        function initdashboardodsgrupociudades() {
+            var containerDiv = document.getElementById("dashboardodsgrupociudades"),
+                url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-grupociudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function(){
+                        initdashboardodstrazador();
+
+                    }
+                };
+            vizdashboardodsgrupociudades = new tableau.Viz(containerDiv, url, options);
+        }
+        function initdashboardodstrazador() {
+            var containerDiv = document.getElementById("dashboardodstrazador"),
+                url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-trazadorporgrupo?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        initmapadecalorporods();
+                    }
+                };
+            vizdashboardodstrazador = new tableau.Viz(containerDiv, url, options);
+        }
+
+        //city
+
+        function initvizcityselectordashboard() {
+            var containerDiv = document.getElementById("cityselectordashboard"),
+                url = "https://public.tableau.com/views/Ciudatos/CityDashboard-selector?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+
+                        // $("#cityselectordashboard").sticky({topSpacing: 40});
+                        $("#cityatajos").css('display', 'block');
+
+                        console.log('ya inici ciudades');
+                        initvizcitydeprmentmap();
+
+
+
+
+                    }
+                };
+            vizcityselectordashboard = new tableau.Viz(containerDiv, url, options);
+        }
+
+
+        function initvizcitidashboardinfo() {
+            var containerDiv = document.getElementById("citidashboardinfo"),
+                url = "https://public.tableau.com/views/Ciudatos/CityDashboardinfo?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive:function(){
+                        console.log('inicio lo demas de ciuades');
+                        initvizcityprogreovsabsoluto();
+
+                    }
+                };
+            vizcitidashboardinfo = new tableau.Viz(containerDiv, url, options);
+        }
+        function initvizcitydeprmentmap() {
+            var containerDiv = document.getElementById("citydeprmentmap"),
+                url = "https://public.tableau.com/views/Ciudatos/Departmentmap?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive:function(){
+                        //  console.log('inicio lo demas de ciuades');
+                        initvizcitidashboardinfo();
+
+                    }
+                };
+            vizcitydeprmentmap = new tableau.Viz(containerDiv, url, options);
+        }
+
+        function initvizcityprogreovsabsoluto() {
+            var containerDiv = document.getElementById("cityprogreovsabsoluto"),
+                url = "https://public.tableau.com/views/Ciudatos/CityDashboardprogresovsindicador?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        initvizcityindicadoresciudad();
+
+
+
+                    }
+
+                };
+            vizcityprogreovsabsoluto = new tableau.Viz(containerDiv, url, options);
+
+
+        }
+
+        function initvizcityindicadoresciudad() {
+            var containerDiv = document.getElementById("cityindicadoresciudad"),
+                url = "https://public.tableau.com/views/Ciudatos/CityDashboardindicadoresporciudad?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        initvizcityprogresohistorico();
+
+                    }
+                };
+            vizcityindicadoresciudad = new tableau.Viz(containerDiv, url, options);
+        }
+
+        function initvizcityprogresohistorico() {
+            var containerDiv = document.getElementById("cityprogresohistorico"),
+                url = "https://public.tableau.com/views/Ciudatos/CityDashboard-progresohistorico?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        initvizcityindicadorestrazadores();
+
+                    }
+                };
+            vizcityprogresohistorico = new tableau.Viz(containerDiv, url, options);
+        }
+
+        function initvizcityindicadorestrazadores() {
+
+
+            var containerDiv = document.getElementById("cityindicadorestrazadores"),
+                url = "https://public.tableau.com/views/Ciudatos/IndicadorestrazadoresporODS?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        initvizcitymapadecalorporciudad();
+
+                        vizcityprogreovsabsoluto.addEventListener('filterchange', function (event) {
+
+                            var fieldname = event.getFieldName();
+                            console.log(fieldname);
+                            if (fieldname == 'AÑO(Date From)') {
+                                event.getFilterAsync().then(function (field) {
+
+                                    var filtervalue = field.getAppliedValues();
+                                    console.log(filtervalue);
+                                    console.log(filtervalue[0].value);
+
+                                    jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                                        if (filtervalue[0].value != "") {
+
+                                            sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                        }
+                                    })
+
+                                    var sheet = vizcityindicadorestrazadores.getWorkbook().getActiveSheet();
+                                    if (filtervalue[0].value != "") {
+
+                                        sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                    }
+
+                                });
+                            }
+
+
+                        });
+
+                    }
+                };
+            vizcityindicadorestrazadores = new tableau.Viz(containerDiv, url, options);
+
+        }
+
+        function initvizcitymapadecalorporciudad() {
+
+            var containerDiv = document.getElementById("citymapadecalorporciudad"),
+                url = "https://public.tableau.com/views/Ciudatos/Mapadecalorbycity?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+
+                        console.log('cargo mapa de calor ciudad');
+
+                        vizcityselectordashboard.addEventListener('filterchange', function (event) {
+
+                            var fieldname = event.getFieldName();
+                            console.log(fieldname);
+                            if (fieldname == 'Ciudad') {
+                                event.getFilterAsync().then(function (field) {
+
+                                    var filtervalue = field.getAppliedValues();
+                                    console.log(filtervalue);
+                                    console.log(filtervalue[0].value);
+
+                                    jQuery.each(vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                                        if (filtervalue[0].value != "") {
+
+                                            sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                        }
+                                    })
+
+                                    jQuery.each(vizcitidashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                                        if (filtervalue[0].value != "") {
+
+                                            sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                        }
+                                    })
+
+                                    var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
+                                    if (filtervalue[0].value != "") {
+
+                                        sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                    }
+                                    var sheet = vizcitydeprmentmap.getWorkbook().getActiveSheet();
+                                    if (filtervalue[0].value != "") {
+
+                                        sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                    }
+                                });
+                            }
+
+
+                        });
+
+                    }
+                };
+
+            vizcitymapadecalorporciudad = new tableau.Viz(containerDiv, url, options);
+
+
+        }
+
+
+        //filters
+
+        //ods
+        function odsConcatFilter(ods) {
+
+            jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                console.log(sheet);
+                console.log(ods);
+                if (ods === "") {
+                    //sheet.clearFilterAsync("ods concat");
+
+                } else {
+                    sheet.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);
+                }
+            })
+            jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                if (ods === "") {
+                    //sheet.clearFilterAsync("Indicador");
+
+                } else {
+                    sheet.applyFilterAsync("ods concat", ods, tableau.FilterUpdateType.REPLACE);
+                }
+            })
+
+        }
+        function targetFilter(target) {
+            //  var sheet = vizMetas.getWorkbook().getActiveSheet();
+
+            //cuando quiero seleccinar una hoja de un dashboard
+            //vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets().get("Indicador de ODS por grupo de ciudades").applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
+
+            jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                console.log(sheet);
+                console.log(target);
+                if (target === "") {
+                    //sheet.clearFilterAsync("Name (Targets)");
+
+                } else {
+                    sheet.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
+                }
+            })
+            jQuery.each(vizdashboardodstrazador.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                console.log(sheet);
+                console.log(target);
+                if (target === "") {
+                    //sheet.clearFilterAsync("Name (Targets)");
+
+                } else {
+                    sheet.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
+                }
+            })
+            jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                if (target === "") {
+                    //sheet.clearFilterAsync("Indicador");
+
+                } else {
+                    sheet.applyFilterAsync("Name (Targets)", target, tableau.FilterUpdateType.REPLACE);
+                }
+            })
+
+
+        }
+        function indicadorFilter(indicador) {
+            //cuando quiero una hoja de un shet
+            //var sheet = vizIndicadores.getWorkbook().getActiveSheet();
+            jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                if (indicador === "") {
+                    //sheet.clearFilterAsync("Indicador");
+
+                } else {
+                    sheet.applyFilterAsync("Indicador", indicador, tableau.FilterUpdateType.REPLACE);
+                }
+            })
+            jQuery.each(vizdashboardodstrazador.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                if (indicador === "") {
+                    //sheet.clearFilterAsync("Indicador");
+
+                } else {
+                    sheet.applyFilterAsync("Indicador", indicador, tableau.FilterUpdateType.REPLACE);
+                }
+            })
+
+
+        }
+
+        //city
+        function cityFilter(ciudad) {
+            //var sheet = vizIndicadores.getWorkbook().getActiveSheet();
+            jQuery.each(vizcitidashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                if (ciudad === "") {
+                    //sheet.clearFilterAsync("Indicador");
+
+                } else {
+                    sheet.applyFilterAsync("Ciudad", ciudad, tableau.FilterUpdateType.REPLACE);
+                }
+            })
+            jQuery.each(vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                if (ciudad === "") {
+                    //sheet.clearFilterAsync("Indicador");
+
+                } else {
+                    sheet.applyFilterAsync("Ciudad", ciudad, tableau.FilterUpdateType.REPLACE);
+                }
+            })
+
+
+        }
