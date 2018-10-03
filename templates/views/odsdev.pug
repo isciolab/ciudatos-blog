@@ -157,8 +157,7 @@ block js
                     hideTabs: true,
                     onFirstInteractive: function () {
                         initdashboardodsgrupociudades();
-                        initdashboardodstrazador();
-                        initmapadecalorporods();
+
                     }
                 };
             vizodsdashboardinfo = new tableau.Viz(containerDiv, url, options);
@@ -179,7 +178,11 @@ block js
             var containerDiv = document.getElementById("dashboardodsgrupociudades"),
                 url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-grupociudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                 options = {
-                    hideTabs: true
+                    hideTabs: true,
+                    onFirstInteractive: function(){
+                        initdashboardodstrazador();
+                        initmapadecalorporods();
+                    }
                 };
             vizdashboardodsgrupociudades = new tableau.Viz(containerDiv, url, options);
         }
