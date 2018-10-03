@@ -164,7 +164,9 @@ block js
                     hideTabs: true,
                     onFirstInteractive: function () {
                         $("#odsdashboardselector").sticky({topSpacing: 50});
+                        $(".public .tab-toolbar").css('display', 'none');
                         initodsdashboardinfo();
+
 
 
                     }
