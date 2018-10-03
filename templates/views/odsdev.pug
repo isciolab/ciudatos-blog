@@ -163,7 +163,7 @@ block js
                 options = {
                     hideTabs: true,
                     onFirstInteractive: function () {
-                        $("#odsdashboardselector").sticky({topSpacing: 50});
+                        $("#odsdashboardselector").sticky({topSpacing: 0});
                         $(".tab-toolbar").css('display', 'none');
                         initodsdashboardinfo();
 
@@ -327,7 +327,7 @@ block js
                     hideTabs: true,
                     onFirstInteractive: function () {
 
-                        $("#cityselectordashboard").sticky({topSpacing: 50});
+                        $("#cityselectordashboard").sticky({topSpacing: 40});
 
                         console.log('ya inici ciudades');
                         initvizcitidashboardinfo();
