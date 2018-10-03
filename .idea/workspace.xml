@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery.sticky.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/odsdev.pug" afterPath="$PROJECT_DIR$/templates/views/odsdev.pug" />
     </list>
@@ -49,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/templates/views/odsdev.pug">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="229">
-              <caret line="156" column="41" lean-forward="false" selection-start-line="156" selection-start-column="41" selection-end-line="156" selection-end-column="41" />
+              <caret line="162" column="27" lean-forward="true" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -59,18 +60,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>visualize</find>
-      <find>vi</find>
-      <find>visu</find>
-      <find>visuliza</find>
-      <find>visulizar</find>
-      <find>visualizar</find>
-      <find>randommonkey</find>
-      <find>ofd</find>
-      <find>of</find>
-      <find>o</find>
-      <find>ods</find>
-      <find>mock</find>
       <find>odsName</find>
       <find>vizdashboardods</find>
       <find>dashboardodsgrupociudades</find>
@@ -82,13 +71,25 @@
       <find>MAPA</find>
       <find>vizcitidashboardinfo</find>
       <find>vizcityindicadoresciudad</find>
-      <find>vizmapadecalorporods</find>
-      <find>vizcitymapadecalorporciudad</find>
-      <find>initvizcitymapadecalorporciudad</find>
       <find>cityDashboardp</find>
       <find>CityDashboardprogresovsindicador</find>
       <find>cityprogreovsabsoluto</find>
       <find>initvizcityprogreovsabsoluto</find>
+      <find>vizcityprogresohistorico</find>
+      <find>cityprogresohistorico</find>
+      <find>cityindicadoresciudad</find>
+      <find>Ciudad</find>
+      <find>initvizcityindicadorestrazadores</find>
+      <find>mapa</find>
+      <find>mapade</find>
+      <find>citymapadecalorporciudad</find>
+      <find>cityindicadorestrazadores</find>
+      <find>initvizcitymapadecalorporciudad</find>
+      <find>mapadecalorporods</find>
+      <find>vizmapadecalorporods</find>
+      <find>vizcityindicadorestrazadores</find>
+      <find>vizcitymapadecalorporciudad</find>
+      <find>vizodsdashboardselector</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -180,8 +181,18 @@
               <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="ciudatos-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ciudatos-blog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -195,46 +206,18 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ciudatos-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ciudatos-blog" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ciudatos-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ciudatos-blog" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -353,217 +336,8 @@
       <workItem from="1538057286617" duration="11017000" />
       <workItem from="1538400203013" duration="21928000" />
       <workItem from="1538499377223" duration="10182000" />
-      <workItem from="1538518411967" duration="432000" />
-    </task>
-    <task id="LOCAL-00033" summary="visualize ods">
-      <created>1536014675775</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1536014675775</updated>
-    </task>
-    <task id="LOCAL-00034" summary="visualize ods">
-      <created>1536014902254</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1536014902254</updated>
-    </task>
-    <task id="LOCAL-00035" summary="visualize ods">
-      <created>1536015003795</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1536015003795</updated>
-    </task>
-    <task id="LOCAL-00036" summary="visualize ods">
-      <created>1536015139012</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1536015139012</updated>
-    </task>
-    <task id="LOCAL-00037" summary="visualize ods">
-      <created>1536328816098</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1536328816098</updated>
-    </task>
-    <task id="LOCAL-00038" summary="visualize ods">
-      <created>1536344496456</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1536344496456</updated>
-    </task>
-    <task id="LOCAL-00039" summary="visualize ods">
-      <created>1536344603722</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1536344603722</updated>
-    </task>
-    <task id="LOCAL-00040" summary="visualize ods">
-      <created>1536344644447</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1536344644447</updated>
-    </task>
-    <task id="LOCAL-00041" summary="visualize ods">
-      <created>1536344813584</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1536344813584</updated>
-    </task>
-    <task id="LOCAL-00042" summary="visualize ods">
-      <created>1538080169325</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1538080169325</updated>
-    </task>
-    <task id="LOCAL-00043" summary="visualize ods">
-      <created>1538422179932</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1538422179932</updated>
-    </task>
-    <task id="LOCAL-00044" summary="visualize ods">
-      <created>1538422862179</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1538422862179</updated>
-    </task>
-    <task id="LOCAL-00045" summary="visualize ods">
-      <created>1538423374900</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1538423374900</updated>
-    </task>
-    <task id="LOCAL-00046" summary="visualize ods">
-      <created>1538423420150</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1538423420150</updated>
-    </task>
-    <task id="LOCAL-00047" summary="visualize ods">
-      <created>1538423844244</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1538423844244</updated>
-    </task>
-    <task id="LOCAL-00048" summary="visualize ods">
-      <created>1538424391653</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1538424391653</updated>
-    </task>
-    <task id="LOCAL-00049" summary="visualize ods">
-      <created>1538424485753</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1538424485753</updated>
-    </task>
-    <task id="LOCAL-00050" summary="visualize ods">
-      <created>1538424550075</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1538424550076</updated>
-    </task>
-    <task id="LOCAL-00051" summary="visualize ods">
-      <created>1538424891139</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1538424891139</updated>
-    </task>
-    <task id="LOCAL-00052" summary="visualize ods">
-      <created>1538425823322</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1538425823322</updated>
-    </task>
-    <task id="LOCAL-00053" summary="visualize ods">
-      <created>1538425984866</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1538425984866</updated>
-    </task>
-    <task id="LOCAL-00054" summary="visualize ods">
-      <created>1538426254056</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1538426254056</updated>
-    </task>
-    <task id="LOCAL-00055" summary="visualize ods">
-      <created>1538426498878</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1538426498878</updated>
-    </task>
-    <task id="LOCAL-00056" summary="visualize ods">
-      <created>1538427022076</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1538427022076</updated>
-    </task>
-    <task id="LOCAL-00057" summary="visualize ods">
-      <created>1538428101551</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1538428101551</updated>
-    </task>
-    <task id="LOCAL-00058" summary="visualize ods">
-      <created>1538428295705</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1538428295705</updated>
-    </task>
-    <task id="LOCAL-00059" summary="visualize ods">
-      <created>1538430528171</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1538430528171</updated>
-    </task>
-    <task id="LOCAL-00060" summary="visualize ods">
-      <created>1538430980932</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1538430980932</updated>
-    </task>
-    <task id="LOCAL-00061" summary="visualize ods">
-      <created>1538507659344</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1538507659345</updated>
-    </task>
-    <task id="LOCAL-00062" summary="visualize ods">
-      <created>1538508600357</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1538508600358</updated>
+      <workItem from="1538518411967" duration="6202000" />
+      <workItem from="1538574326699" duration="6399000" />
     </task>
     <task id="LOCAL-00063" summary="visualize ods">
       <created>1538509512511</created>
@@ -698,23 +472,233 @@
       <option name="project" value="LOCAL" />
       <updated>1538518850549</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="visualize ods">
+      <created>1538519077765</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1538519077765</updated>
+    </task>
+    <task id="LOCAL-00083" summary="visualize ods">
+      <created>1538520676127</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1538520676127</updated>
+    </task>
+    <task id="LOCAL-00084" summary="visualize ods">
+      <created>1538520771679</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1538520771680</updated>
+    </task>
+    <task id="LOCAL-00085" summary="visualize ods">
+      <created>1538520855480</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1538520855481</updated>
+    </task>
+    <task id="LOCAL-00086" summary="visualize ods">
+      <created>1538520954563</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1538520954563</updated>
+    </task>
+    <task id="LOCAL-00087" summary="visualize ods">
+      <created>1538521520390</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1538521520390</updated>
+    </task>
+    <task id="LOCAL-00088" summary="visualize ods">
+      <created>1538522446008</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1538522446008</updated>
+    </task>
+    <task id="LOCAL-00089" summary="visualize ods">
+      <created>1538522704838</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1538522704838</updated>
+    </task>
+    <task id="LOCAL-00090" summary="visualize ods">
+      <created>1538522782854</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1538522782854</updated>
+    </task>
+    <task id="LOCAL-00091" summary="visualize ods">
+      <created>1538522925794</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1538522925794</updated>
+    </task>
+    <task id="LOCAL-00092" summary="visualize ods">
+      <created>1538523008637</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1538523008637</updated>
+    </task>
+    <task id="LOCAL-00093" summary="visualize ods">
+      <created>1538523516557</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1538523516557</updated>
+    </task>
+    <task id="LOCAL-00094" summary="visualize ods">
+      <created>1538523665363</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1538523665363</updated>
+    </task>
+    <task id="LOCAL-00095" summary="visualize ods">
+      <created>1538523746294</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1538523746294</updated>
+    </task>
+    <task id="LOCAL-00096" summary="visualize ods">
+      <created>1538523807627</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1538523807627</updated>
+    </task>
+    <task id="LOCAL-00097" summary="visualize ods">
+      <created>1538523969424</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1538523969424</updated>
+    </task>
+    <task id="LOCAL-00098" summary="visualize ods">
+      <created>1538524391962</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1538524391962</updated>
+    </task>
+    <task id="LOCAL-00099" summary="visualize ods">
+      <created>1538524541937</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1538524541937</updated>
+    </task>
+    <task id="LOCAL-00100" summary="visualize ods">
+      <created>1538524706231</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1538524706231</updated>
+    </task>
+    <task id="LOCAL-00101" summary="visualize ods">
+      <created>1538524870545</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1538524870545</updated>
+    </task>
+    <task id="LOCAL-00102" summary="visualize ods">
+      <created>1538585141590</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1538585141591</updated>
+    </task>
+    <task id="LOCAL-00103" summary="visualize ods">
+      <created>1538590873131</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1538590873132</updated>
+    </task>
+    <task id="LOCAL-00104" summary="visualize ods">
+      <created>1538591501786</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1538591501786</updated>
+    </task>
+    <task id="LOCAL-00105" summary="visualize ods">
+      <created>1538593398917</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1538593398917</updated>
+    </task>
+    <task id="LOCAL-00106" summary="visualize ods">
+      <created>1538595713969</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1538595713969</updated>
+    </task>
+    <task id="LOCAL-00107" summary="visualize ods">
+      <created>1538595825984</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1538595825984</updated>
+    </task>
+    <task id="LOCAL-00108" summary="visualize ods">
+      <created>1538595956057</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1538595956057</updated>
+    </task>
+    <task id="LOCAL-00109" summary="visualize ods">
+      <created>1538596025651</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1538596025652</updated>
+    </task>
+    <task id="LOCAL-00110" summary="visualize ods">
+      <created>1538596113510</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1538596113510</updated>
+    </task>
+    <task id="LOCAL-00111" summary="visualize ods">
+      <created>1538596330856</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1538596330856</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69904000" />
+    <option name="totallyTimeSpent" value="82073000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2673716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2673716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1102,7 +1086,7 @@
     <entry file="file://$PROJECT_DIR$/templates/views/odsdev.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
-          <caret line="156" column="41" lean-forward="false" selection-start-line="156" selection-start-column="41" selection-end-line="156" selection-end-column="41" />
+          <caret line="162" column="27" lean-forward="true" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
           <folding />
         </state>
       </provider>
