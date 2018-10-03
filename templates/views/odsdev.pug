@@ -130,6 +130,7 @@ block content
 block js
     script(src="https://public.tableau.com/javascripts/api/tableau-2.min.js")
     script(src="/js/margin.js")
+    script(src="/js/jquery.sticky.js")
     script.
         //ods
         var vizodsdashboardselector;
@@ -162,7 +163,9 @@ block js
                 options = {
                     hideTabs: true,
                     onFirstInteractive: function () {
+                        $("#odsdashboardselector").sticky({topSpacing: 200});
                         initodsdashboardinfo();
+
 
                     }
                 };
