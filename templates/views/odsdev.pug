@@ -86,8 +86,8 @@ block content
                                 </select>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
+                        <div class="row" style="z-index:999">
+                            <div class="col-md-12" style="z-index:999">
                                     <div id='cityselectordashboard'  style='position: relative; width: auto; height:auto'></div>
                             </div>
                         </div>
@@ -163,7 +163,7 @@ block js
                 options = {
                     hideTabs: true,
                     onFirstInteractive: function () {
-                        $("#odsdashboardselector").sticky({topSpacing: 100});
+                        $("#odsdashboardselector").sticky({topSpacing: 50});
                         initodsdashboardinfo();
 
 
@@ -326,6 +326,8 @@ block js
                 options = {
                     hideTabs: true,
                     onFirstInteractive: function () {
+
+                        $("#cityselectordashboard").sticky({topSpacing: 50});
 
                         console.log('ya inici ciudades');
                         initvizcitidashboardinfo();
