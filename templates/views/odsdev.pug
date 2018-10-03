@@ -7,6 +7,7 @@ block content
     <img style="width:100%" src="https://res.cloudinary.com/randommonkey/image/upload/v1531505257/ciudatos/cities/zcolwitwfetgjset3bfu.png"/>
     <div class="container">
 
+    <br>
         <div class="row">
             <div class="col-md-3 col-md-offset-5">
                 <ul class="nav nav-pills">
@@ -43,7 +44,7 @@ block content
                                 </select>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" data-spy="affix" data-offset-top="197">
                             <div class="col-md-12">
                                  <div id='odsdashboardselector'  style='position: relative; width: auto; height:auto'></div>
                             </div>
@@ -191,6 +192,99 @@ block js
                     onFirstInteractive: function(){
                     //city
                         console.log('iniciando ciudae');
+
+
+                        vizodsdashboardselector.addEventListener('filterchange', function (event) {
+
+                            var fieldname = event.getFieldName();
+                            console.log(fieldname);
+                            if (fieldname == 'ods concat') {
+                                event.getFilterAsync().then(function (field) {
+
+                                     var filtervalue = field.getAppliedValues();
+                                     console.log(filtervalue);
+                                     console.log(filtervalue[0].value);
+
+                                     jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                                     if (filtervalue[0].value != "") {
+
+                                        sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                     }
+                                     })
+
+                                     jQuery.each(vizdashboardodstrazador.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                                     if (filtervalue[0].value != "") {
+
+                                        sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                        }
+                                     })
+
+
+                                });
+                            }
+
+                            if (fieldname == 'Name (Targets)') {
+                                event.getFilterAsync().then(function (field) {
+
+                                    var filtervalue = field.getAppliedValues();
+                                    console.log(filtervalue);
+                                    console.log(filtervalue[0].value);
+
+                                    jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                                        if (filtervalue[0].value != "") {
+
+                                            sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                        }
+                                    })
+
+                                    jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                                        if (filtervalue[0].value != "") {
+
+                                            sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                        }
+                                    })
+
+
+                                });
+                            }
+                            if (fieldname == 'Indicador') {
+                                event.getFilterAsync().then(function (field) {
+
+                                    var filtervalue = field.getAppliedValues();
+                                    console.log(filtervalue);
+                                    console.log(filtervalue[0].value);
+
+                                    jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                                        if (filtervalue[0].value != "") {
+
+                                            sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                        }
+                                    })
+
+                                    jQuery.each(vizmapadecalorporods.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                                        if (filtervalue[0].value != "") {
+
+                                            sheet.applyFilterAsync(fieldname, filtervalue[0].value, tableau.FilterUpdateType.REPLACE);
+                                        }
+                                    })
+
+
+                                });
+                            }
+
+
+
+                        });
+
+
+
+
                           initvizcityselectordashboard();
                     }
                 };
