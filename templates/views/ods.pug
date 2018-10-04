@@ -573,33 +573,36 @@ block js
         function odsConcatFilter(ods) {
 
             var fieldname = "ods concat";
-            jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-                console.log(sheet);
-                console.log(ods);
-                if (ods === "") {
-                    //sheet.clearFilterAsync("ods concat");
 
-                } else {
-                      sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
-                }
-            })
+            if (activetab == 'ODS') {
+                jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                    console.log(sheet);
+                    console.log(ods);
+                    if (ods === "") {
+                        //sheet.clearFilterAsync("ods concat");
+
+                    } else {
+                        sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
+                    }
+                })
 
 
-            jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                if (ods != "") {
+                    if (ods != "") {
 
-                    sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
-                }
-            })
+                        sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
+                    }
+                })
 
-            jQuery.each(vizdashboardodstrazador.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                jQuery.each(vizdashboardodstrazador.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                if (ods != "") {
+                    if (ods != "") {
 
-                    sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
-                }
-            })
+                        sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
+                    }
+                })
+            }
 
 
         }
@@ -609,39 +612,42 @@ block js
         function cityFilter(ciudad) {
             fieldname = "Ciudad";
             //var sheet = vizIndicadores.getWorkbook().getActiveSheet();
-            if (vizcityprogreovsabsoluto != null) {
-                jQuery.each(vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                    if (ciudad != "") {
+            if (activetab == 'ODS') {
+                if (vizcityprogreovsabsoluto != null) {
+                    jQuery.each(vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                        sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
-                    }
-                })
-            }
+                        if (ciudad != "") {
 
-
-            if (vizcitidashboardinfo != null) {
-                jQuery.each(vizcitidashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-
-                    if (ciudad != "") {
-
-                        sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
-                    }
-                })
-            }
-
-            if(vizcitymapadecalorporciudad!=null) {
-                var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
-                if (ciudad != "") {
-
-                    sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
+                            sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
+                        }
+                    })
                 }
-            }
-            if (vizcitydeprmentmap != null) {
-                var sheet = vizcitydeprmentmap.getWorkbook().getActiveSheet();
-                if (ciudad != "") {
 
-                    sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
+
+                if (vizcitidashboardinfo != null) {
+                    jQuery.each(vizcitidashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                        if (ciudad != "") {
+
+                            sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
+                        }
+                    })
+                }
+
+                if(vizcitymapadecalorporciudad!=null) {
+                    var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
+                    if (ciudad != "") {
+
+                        sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
+                    }
+                }
+                if (vizcitydeprmentmap != null) {
+                    var sheet = vizcitydeprmentmap.getWorkbook().getActiveSheet();
+                    if (ciudad != "") {
+
+                        sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
+                    }
                 }
             }
 
@@ -649,54 +655,71 @@ block js
         }
 
         function anoFilter(ano){
-            fieldname="AÑO(Date From)";
-            jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+            var fieldname="AÑO(Date From)";
+            if (activetab == 'CIUDADES') {
+                jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                if (ano != "") {
+                    if (ano != "") {
 
-                    sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
-                }
-            })
+                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                    }
+                })
 
-            if (vizcityindicadorestrazadores != null) {
-                var sheet = vizcityindicadorestrazadores.getWorkbook().getActiveSheet();
-                if (ano != "") {
+                if (vizcityindicadorestrazadores != null) {
+                    var sheet = vizcityindicadorestrazadores.getWorkbook().getActiveSheet();
+                    if (ano != "") {
 
-                    sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                    }
                 }
             }
+
+            if (activetab == 'ODS') {
+                if (vizmapadecalorporods != null) {
+                    jQuery.each(vizmapadecalorporods.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                        if (indicador != "") {
+
+                            sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                        }
+                    })
+                }
+            }
+
 
         }
 
         function inicadorFIlter(indicador){
             var fieldname = "Indicador";
-            jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-
-                if (indicador != "") {
-
-                    sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
-                }
-            })
-
-            if (vizmapadecalorporods != null) {
-                jQuery.each(vizmapadecalorporods.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+            if (activetab == 'ODS') {
+                jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
                     if (indicador != "") {
 
                         sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
                     }
                 })
-            }
 
+                if (vizmapadecalorporods != null) {
+                    jQuery.each(vizmapadecalorporods.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-            jQuery.each(vizdashboardodstrazador.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-                if (indicador === "") {
-                    //sheet.clearFilterAsync("Indicador");
+                        if (indicador != "") {
 
-                } else {
-                    sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
+                            sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
+                        }
+                    })
                 }
-            })
+
+
+                jQuery.each(vizdashboardodstrazador.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                    if (indicador === "") {
+                        //sheet.clearFilterAsync("Indicador");
+
+                    } else {
+                        sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
+                    }
+                })
+            }
 
         }
 
