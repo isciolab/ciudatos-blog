@@ -228,6 +228,20 @@ block js
             //ods
             initodsdashboardselector();
 
+            $.ajax({
+                url: 'http://ciudatos.com:8080/api/cities/getCities/',
+                dataType: 'json',
+                type: 'GET',
+                success: function (data) {
+                    var html = '';
+                    jQuery.each(data, function (i, value) {
+                        html += '<option value=' + value.name + '>' + value.name + '</option>';
+
+                    })
+                    $("#changeCity").html(html);
+
+                }
+            })
             $('.nav-pills a').on('shown.bs.tab', function (event) {
                 console.log('cambie de pestaña');
                  activetab = $(event.target).text();         // active tab
@@ -331,20 +345,6 @@ block js
                     //city
                         console.log('iniciando ciudae');
 
-                        $.ajax({
-                            url:'http://ciudatos.com:8080/api/cities/getCities/',
-                            dataType:'json',
-                            type:'GET',
-                            success:function (data) {
-                                var html ='';
-                                jQuery.each(data, function (i, value) {
-                                    html+='<option value='+value.name+'>'+value.name+'</option>';
-
-                                })
-                                $("#changeCity").html(html);
-
-                            }
-                        })
 
 
                         initvizcitydeprmentmap();
