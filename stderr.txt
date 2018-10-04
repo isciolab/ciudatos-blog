@@ -1,0 +1,20 @@
+------------------------------------------------
+Mongoose connection "error" event fired with:
+{ MongoError: Authentication failed.
+    at Function.MongoError.create (/home/ciudatos-blog/node_modules/mongodb-core/lib/error.js:31:11)
+    at /home/ciudatos-blog/node_modules/mongodb-core/lib/connection/pool.js:485:72
+    at authenticateStragglers (/home/ciudatos-blog/node_modules/mongodb-core/lib/connection/pool.js:431:16)
+    at Connection.messageHandler (/home/ciudatos-blog/node_modules/mongodb-core/lib/connection/pool.js:465:5)
+    at Socket.<anonymous> (/home/ciudatos-blog/node_modules/mongodb-core/lib/connection/connection.js:319:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+  name: 'MongoError',
+  message: 'Authentication failed.',
+  ok: 0,
+  errmsg: 'Authentication failed.',
+  code: 18,
+  codeName: 'AuthenticationFailed' }

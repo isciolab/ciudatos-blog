@@ -1,0 +1,8 @@
+Error: KeystoneJS (Ciudatos) failed to start - Check that you are running `mongod` in a separate process.
+    at NativeConnection.<anonymous> (/home/ciudatos-blog/node_modules/keystone/lib/core/openDatabaseConnection.js:59:10)
+    at emitOne (events.js:116:13)
+    at NativeConnection.emit (events.js:211:7)
+    at Immediate._onImmediate (/home/ciudatos-blog/node_modules/mongoose/lib/connection.js:296:19)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
