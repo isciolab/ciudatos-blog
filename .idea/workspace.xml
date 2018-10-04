@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/ods.pug" afterPath="$PROJECT_DIR$/templates/views/ods.pug" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,8 +37,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="380" column="49" lean-forward="false" selection-start-line="380" selection-start-column="49" selection-end-line="380" selection-end-column="49" />
+            <state relative-caret-position="348">
+              <caret line="419" column="32" lean-forward="true" selection-start-line="419" selection-start-column="32" selection-end-line="419" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -89,15 +88,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>initvizcityindicadorestrazadores</find>
-      <find>mapa</find>
-      <find>mapade</find>
-      <find>citymapadecalorporciudad</find>
-      <find>cityindicadorestrazadores</find>
-      <find>initvizcitymapadecalorporciudad</find>
-      <find>mapadecalorporods</find>
-      <find>vizmapadecalorporods</find>
-      <find>vizcityindicadorestrazadores</find>
       <find>vizcitymapadecalorporciudad</find>
       <find>vizodsdashboardselector</find>
       <find>odsdashboardselectorcontainer</find>
@@ -109,16 +99,25 @@
       <find>citydeprmentmap</find>
       <find>sticky</find>
       <find>map</find>
-      <find>stick</find>
       <find>enlaces</find>
       <find>ciudad</find>
       <find>cityS</find>
-      <find>changeCity</find>
       <find>STICK</find>
       <find>cityselectordashboard</find>
       <find>initvizcitidashboardinfo</find>
       <find>initvizcitydeprmentmap</find>
       <find>initvizcityselectordashboard</find>
+      <find>changeCity</find>
+      <find>Query.each(vizcitidashboardinfo.g</find>
+      <find>cityFilter</find>
+      <find>anoFilter</find>
+      <find>AÑO(Date From</find>
+      <find>indicad</find>
+      <find>metaFIlter</find>
+      <find>metaFi</find>
+      <find>odsC</find>
+      <find>ieldname == 'Name (</find>
+      <find>stick</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -508,21 +507,7 @@
       <workItem from="1538499377223" duration="10182000" />
       <workItem from="1538518411967" duration="6202000" />
       <workItem from="1538574326699" duration="14537000" />
-      <workItem from="1538667124962" duration="5948000" />
-    </task>
-    <task id="LOCAL-00091" summary="visualize ods">
-      <created>1538522925794</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1538522925794</updated>
-    </task>
-    <task id="LOCAL-00092" summary="visualize ods">
-      <created>1538523008637</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1538523008637</updated>
+      <workItem from="1538667124962" duration="8152000" />
     </task>
     <task id="LOCAL-00093" summary="visualize ods">
       <created>1538523516557</created>
@@ -853,11 +838,25 @@
       <option name="project" value="LOCAL" />
       <updated>1538681676459</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="visualize ods">
+      <created>1538684124593</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1538684124593</updated>
+    </task>
+    <task id="LOCAL-00141" summary="visualize ods">
+      <created>1538684295235</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1538684295235</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96159000" />
+    <option name="totallyTimeSpent" value="98363000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -901,13 +900,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/City.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/keystone.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1258,10 +1250,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jquery.sticky.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="380" column="49" lean-forward="false" selection-start-line="380" selection-start-column="49" selection-end-line="380" selection-end-column="49" />
+        <state relative-caret-position="348">
+          <caret line="419" column="32" lean-forward="true" selection-start-line="419" selection-start-column="32" selection-end-line="419" selection-end-column="32" />
           <folding />
         </state>
       </provider>
