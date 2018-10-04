@@ -224,7 +224,8 @@ block js
             //ods
             initodsdashboardselector();
 
-            $('.nav-tabs a').on('shown.bs.tab', function (event) {
+            $('.nav-pills a').on('shown.bs.tab', function (event) {
+                console.log('cambie de pestaña');
                  activetab = $(event.target).text();         // active tab
                 var y = $(event.relatedTarget).text();  // previous tab
                 if (activetab == 'CIUDADES') {
