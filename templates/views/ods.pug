@@ -108,8 +108,13 @@ block content
                              <div class="col-md-12">Seleccione una ciudad para ver su información</div>
                         </div>
 
+
+
+
+
                         <div class="row">
                             <div  class="col-md-3 col-md-offset-5">
+                              <h3>Selecione una ciudad para ver su información</h3>
                                 <label>Ciudad:</label>
                                 <select id="changeCity" class="form-control" onchange="cityFilter(value);">
 
@@ -359,8 +364,9 @@ block js
                         console.log('iniciando ciudae');
 
                         $.ajax({
-                            url:'http://ciudatos.com:8080/api/cities/getCities',
+                            url:'http://ciudatos.com:8080/api/cities/getCities/',
                             dataType:'json',
+                            type:'GET',
                             success:function (data) {
                                 var html ='';
                                 jQuery.each(data, function (i, value) {
