@@ -104,22 +104,15 @@ block content
                         </div>
                     </div>
                     <div class="tab-pane fade" id="CIUDADES">
-                        <div class="row" style="display:none">
-                             <div class="col-md-12">Seleccione una ciudad para ver su información</div>
-                        </div>
 
 
-
-
-
-                        <div class="row">
+                        <div class="row" id="cityselectordashboard2">
                             <div class="col-md-12 text-center">
                                 <h5 class="text-center">Selecione una ciudad para ver su información</h3>
                             </div>
                             <div  class="col-md-3 col-md-offset-5">
 
-                                <label>Ciudad:</label>
-                                <select id="changeCity" class="form-control" onchange="cityFilter(value);">
+                                <label>Ciudad:</label><select id="changeCity" class="form-control" onchange="cityFilter(value);">
 
                                 </select>
                             </div>
@@ -133,6 +126,9 @@ block content
                                     <p style="font-size:12px">Los ODS nos invitan a priorizar acciones con una visión de futuro ambiciosa y transformativa. Contemplamos un mundo sin pobreza, hambre, enfermedades ni privaciones, donde todas las formas de vida puedan prosperar; un mundo sin temor ni violencia; un mundo en el que la alfabetización sea universal, con acceso equitativo y universal a una educación de calidad en todos los niveles, a la atención sanitaria y la protección social, y donde esté garantizado el bienestar físico, mental y social; un mundo en el que reafirmemos nuestros compromisos al acceso al agua potable y al saneamiento, donde los alimentos sean suficientes, asequibles y nutritivos; un mundo cuyos hábitats humanos sean seguros, resilientes y sostenibles, y donde haya acceso universal a suministros de energía asequible, fiable y sostenible.
                                 </p>
                             </div>
+                        </div>
+                        <div class="row" style="display:none">
+                            <div class="col-md-12">Seleccione una ciudad para ver su información</div>
                         </div>
                         <div class="row" style="z-index:999" style="display:none">
                             <div class="col-md-12" style="z-index:999">
@@ -377,10 +373,12 @@ block js
 
                                 })
                                 $("#changeCity").html(html);
+                                $("#cityselectordashboard2").sticky({topSpacing: 40});
                             }
                         })
 
 
+                        initvizcitydeprmentmap();
                           //initvizcityselectordashboard();
                     }
                 };
@@ -420,7 +418,7 @@ block js
                     hideTabs: true,
                     onFirstInteractive: function () {
 
-                       // $("#cityselectordashboard").sticky({topSpacing: 40});
+                        //$("#cityselectordashboard").sticky({topSpacing: 40});
                         $("#cityatajos").css('display', 'block');
 
                         console.log('ya inici ciudades');
