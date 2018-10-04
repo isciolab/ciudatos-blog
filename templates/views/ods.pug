@@ -587,7 +587,7 @@ block js
 
             jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                if (filtervalue[0].value != "") {
+                if (ods != "") {
 
                     sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
                 }
@@ -595,7 +595,7 @@ block js
 
             jQuery.each(vizdashboardodstrazador.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                if (filtervalue[0].value != "") {
+                if (ods != "") {
 
                     sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
                 }
@@ -612,7 +612,7 @@ block js
             if (vizcityprogreovsabsoluto != null) {
                 jQuery.each(vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                    if (filtervalue[0].value != "") {
+                    if (ciudad != "") {
 
                         sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
                     }
@@ -622,19 +622,19 @@ block js
 
             jQuery.each(vizcitidashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                if (filtervalue[0].value != "") {
+                if (ciudad != "") {
 
                     sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
                 }
             })
 
             var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
-            if (filtervalue[0].value != "") {
+            if (ciudad != "") {
 
                 sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
             }
             var sheet = vizcitydeprmentmap.getWorkbook().getActiveSheet();
-            if (filtervalue[0].value != "") {
+            if (ciudad != "") {
 
                 sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
             }
@@ -646,7 +646,7 @@ block js
             fieldname="AÑO(Date From)";
             jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                if (filtervalue[0].value != "") {
+                if (ano != "") {
 
                     sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
                 }
@@ -654,7 +654,7 @@ block js
 
             if (vizcityindicadorestrazadores != null) {
                 var sheet = vizcityindicadorestrazadores.getWorkbook().getActiveSheet();
-                if (filtervalue[0].value != "") {
+                if (ano != "") {
 
                     sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
                 }
