@@ -364,8 +364,9 @@ block js
                         console.log('iniciando ciudae');
 
                         $.ajax({
-                            url:'http://ciudatos.com:8080/api/cities/getCities',
+                            url:'http://ciudatos.com:8080/api/cities/getCities/',
                             dataType:'json',
+                            type:'GET',
                             success:function (data) {
                                 var html ='';
                                 jQuery.each(data, function (i, value) {
