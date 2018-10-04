@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/site.min.css" afterPath="$PROJECT_DIR$/public/styles/site.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/site/general.less" afterPath="$PROJECT_DIR$/public/styles/site/general.less" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ods.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="419" column="32" lean-forward="true" selection-start-line="419" selection-start-column="32" selection-end-line="419" selection-end-column="32" />
+            <state relative-caret-position="297">
+              <caret line="110" column="75" lean-forward="false" selection-start-line="110" selection-start-column="53" selection-end-line="110" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -64,21 +66,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="general.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="general.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/styles/site/general.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1513">
-              <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+            <state relative-caret-position="450">
+              <caret line="93" column="42" lean-forward="false" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="site.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/styles/site.css">
+      <file leaf-file-name="site.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/styles/site.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="450">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -88,8 +90,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>vizcitymapadecalorporciudad</find>
-      <find>vizodsdashboardselector</find>
       <find>odsdashboardselectorcontainer</find>
       <find>odsdashboardselector</find>
       <find>stic</find>
@@ -118,6 +118,8 @@
       <find>odsC</find>
       <find>ieldname == 'Name (</find>
       <find>stick</find>
+      <find>nav-tabs</find>
+      <find>nav-t</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -145,12 +147,12 @@
         <option value="$PROJECT_DIR$/templates/views/mock.pug" />
         <option value="$PROJECT_DIR$/routes/views/odsdev.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/public/styles/site/general.less" />
-        <option value="$PROJECT_DIR$/public/styles/site.min.css" />
         <option value="$PROJECT_DIR$/public/styles/site.less" />
         <option value="$PROJECT_DIR$/templates/views/odsdev.pug" />
         <option value="$PROJECT_DIR$/routes/views/ods.js" />
         <option value="$PROJECT_DIR$/templates/views/ods.pug" />
+        <option value="$PROJECT_DIR$/public/styles/site.min.css" />
+        <option value="$PROJECT_DIR$/public/styles/site/general.less" />
       </list>
     </option>
   </component>
@@ -507,49 +509,7 @@
       <workItem from="1538499377223" duration="10182000" />
       <workItem from="1538518411967" duration="6202000" />
       <workItem from="1538574326699" duration="14537000" />
-      <workItem from="1538667124962" duration="8152000" />
-    </task>
-    <task id="LOCAL-00093" summary="visualize ods">
-      <created>1538523516557</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1538523516557</updated>
-    </task>
-    <task id="LOCAL-00094" summary="visualize ods">
-      <created>1538523665363</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1538523665363</updated>
-    </task>
-    <task id="LOCAL-00095" summary="visualize ods">
-      <created>1538523746294</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1538523746294</updated>
-    </task>
-    <task id="LOCAL-00096" summary="visualize ods">
-      <created>1538523807627</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1538523807627</updated>
-    </task>
-    <task id="LOCAL-00097" summary="visualize ods">
-      <created>1538523969424</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1538523969424</updated>
-    </task>
-    <task id="LOCAL-00098" summary="visualize ods">
-      <created>1538524391962</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1538524391962</updated>
+      <workItem from="1538667124962" duration="10331000" />
     </task>
     <task id="LOCAL-00099" summary="visualize ods">
       <created>1538524541937</created>
@@ -852,17 +812,58 @@
       <option name="project" value="LOCAL" />
       <updated>1538684295235</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="visualize ods">
+      <created>1538684693337</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1538684693337</updated>
+    </task>
+    <task id="LOCAL-00143" summary="visualize ods">
+      <created>1538684797886</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1538684797886</updated>
+    </task>
+    <task id="LOCAL-00144" summary="visualize ods">
+      <created>1538685515272</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1538685515272</updated>
+    </task>
+    <task id="LOCAL-00145" summary="visualize ods">
+      <created>1538685720577</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1538685720577</updated>
+    </task>
+    <task id="LOCAL-00146" summary="visualize ods">
+      <created>1538685845335</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1538685845335</updated>
+    </task>
+    <task id="LOCAL-00147" summary="visualize ods">
+      <created>1538686339709</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1538686339709</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98363000" />
+    <option name="totallyTimeSpent" value="100542000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2673716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2673716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1180,22 +1181,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/styles/site/general.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/styles/site.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
@@ -1207,21 +1192,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/styles/site.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/styles/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1260,8 +1230,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="419" column="32" lean-forward="true" selection-start-line="419" selection-start-column="32" selection-end-line="419" selection-end-column="32" />
+        <state relative-caret-position="297">
+          <caret line="110" column="75" lean-forward="false" selection-start-line="110" selection-start-column="53" selection-end-line="110" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/styles/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/styles/site.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/styles/site.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/styles/site/general.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="93" column="42" lean-forward="false" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="42" />
           <folding />
         </state>
       </provider>
