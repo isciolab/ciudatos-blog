@@ -108,16 +108,15 @@ block content
                              <div class="col-md-12">Seleccione una ciudad para ver su información</div>
                         </div>
 
-                        <div class="row" style="display:none">
+                        <div class="row">
                             <div  class="col-md-3 col-md-offset-5">
                                 <label>Ciudad:</label>
                                 <select id="changeCity" class="form-control" onchange="cityFilter(value);">
-                                <option value="">All</option>
-                                <option value="Bogotá">Bogotá</option>
+
                                 </select>
                             </div>
                         </div>
-                        <div class="row" id="" style="z-index:999">
+                        <div class="row" id="" >
                             <div class="col-md-3">
                                 <img src="http://www.co.undp.org/content/dam/colombia/img/Pobreza/ODS%20Colombia/xundp_co_pobreza_ODSCol2.png.pagespeed.ic.mrqdFDgHxQ.webp"/>
                                 </div>
@@ -127,7 +126,7 @@ block content
                                 </p>
                             </div>
                         </div>
-                        <div class="row" style="z-index:999">
+                        <div class="row" style="z-index:999" style="display:none">
                             <div class="col-md-12" style="z-index:999">
                                     <div id='cityselectordashboard'  style='position: relative; width: auto; height:auto'></div>
                             </div>
@@ -359,11 +358,21 @@ block js
                     //city
                         console.log('iniciando ciudae');
 
+                        $.ajax({
+                            url:'http://ciudatos.com:8080/api/cities/getCities',
+                            dataType:'json',
+                            success:function (data) {
+                                var html ='';
+                                jQuery.each(data, function (i, value) {
+                                    html+='<option value='+value.name+'>'+value.name+'</option>';
+
+                                })
+                                $("#changeCity").html(html);
+                            }
+                        })
 
 
-
-
-                          initvizcityselectordashboard();
+                          //initvizcityselectordashboard();
                     }
                 };
             vizmapadecalorporods = new tableau.Viz(containerDiv, url, options);
