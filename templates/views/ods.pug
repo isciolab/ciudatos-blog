@@ -756,6 +756,7 @@ block js
 
             var indicador = $("#changeIndicador option:selected").text();
 
+            console.log(indicador);
             var fieldname = "Indicador";
             if (activetab == 'ODS') {
                 if(vizodsdashboardinfo!=null) {
@@ -766,6 +767,15 @@ block js
                     }
                 }
 
+
+                if (vizdashboardodstrazador != null) {
+                    jQuery.each(vizdashboardodstrazador.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                        if (indicador != "") {
+
+                            sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
+                        }
+                    })
+                }
 
                 if (vizmapadecalorporods != null) {
                     jQuery.each(vizmapadecalorporods.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
@@ -778,14 +788,7 @@ block js
                 }
 
 
-                if(vizdashboardodstrazador!=null) {
-                    jQuery.each(vizdashboardodstrazador.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-                        if (indicador != "") {
 
-                            sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
-                        }
-                    })
-                }
             }
 
         }
