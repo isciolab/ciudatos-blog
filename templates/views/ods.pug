@@ -732,7 +732,7 @@ block js
                 if (vizmapadecalorporods != null) {
                     var sheet = vizmapadecalorporods.getWorkbook().getActiveSheet()
 
-                        if (indicador != "") {
+                        if (ano != "") {
 
                             sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
                         }
@@ -770,13 +770,13 @@ block js
                 }
 
                 if (vizmapadecalorporods != null) {
-                    jQuery.each(vizmapadecalorporods.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                    var vizmapadecalorporods = vizmapadecalorporods.getWorkbook().getActiveSheet();
 
                         if (indicador != "") {
 
                             sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
                         }
-                    })
+
                 }
 
 
