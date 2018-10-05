@@ -239,9 +239,7 @@ block js
 
                     })
                     $("#changeCity").html(html);
-                    $("#changeCity").on('change', function () {
-                        cityFilter($(this).value);
-                    });
+
 
                 }
             })
@@ -616,7 +614,7 @@ block js
             fieldname = "Ciudad";
             //var sheet = vizIndicadores.getWorkbook().getActiveSheet();
 
-            if (activetab == 'ODS') {
+            if (activetab == 'CIUDADES') {
                 if (vizcityprogreovsabsoluto != null) {
                     jQuery.each(vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
