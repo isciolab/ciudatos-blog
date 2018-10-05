@@ -778,7 +778,7 @@ block js
                 url: 'http://ciudatos.com:8080/api/indicators/getIndicators/',
                 dataType: 'json',
                 type: 'GET',
-                data: {goal_id: $("#changeMeta").val()},
+                data: {target_id: $("#changeMeta").val()},
                 success: function (data) {
                     var html = '<option value="">SELECCIONE UN INDICADOR</option>';
                     jQuery.each(data, function (i, value) {
