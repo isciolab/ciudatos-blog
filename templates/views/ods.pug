@@ -637,15 +637,7 @@ block js
                     })
                 }
 
-                if (vizdashboardodstrazador != null) {
-                    jQuery.each(vizdashboardodstrazador.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                        if (ods != "") {
-
-                            sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
-                        }
-                    })
-                }
             }
 
 
@@ -832,6 +824,16 @@ block js
                         if (value != "") {
 
                             sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+                        }
+                    })
+                }
+
+                if (vizdashboardodstrazador != null) {
+                    jQuery.each(vizdashboardodstrazador.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                        if (ods != "") {
+
+                            sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
                         }
                     })
                 }
