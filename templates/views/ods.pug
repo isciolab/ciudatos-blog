@@ -590,7 +590,8 @@ block js
         function odsConcatFilter() {
 
 
-           var  ods = $("#changeOdsConcat:selected").html();
+           var  ods = $("#changeOdsConcat option:selected").text();
+            console.log(ods);
             $.ajax({
                 url: 'http://ciudatos.com:8080/api/targets/getTargets/',
                 dataType: 'json',
@@ -730,7 +731,7 @@ block js
         function inicadorFIlter(){
 
 
-            var indicador = $("#changeIndicador:selected").html();
+            var indicador = $("#changeIndicador option:selected").text();
 
             var fieldname = "Indicador";
             if (activetab == 'ODS') {
@@ -767,7 +768,7 @@ block js
 
         function metaFIlter(){
 
-            var value = $("#changeMeta:selected").html();
+            var value = $("#changeMeta option:selected").text();
 
             $.ajax({
                 url: 'http://ciudatos.com:8080/api/indicators/getIndicators/',
