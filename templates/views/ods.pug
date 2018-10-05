@@ -18,30 +18,27 @@ block content
             <div class="col-md-12">
                 <div class="tab-content clearfix">
                     <div id="ODS" class="tab-pane fade in active" >
-                        <div class="row" style="display:none"><div class="col-md-12">Seleccione un ODS, una meta y un indicador para ver su información</div></div>
-                        <div class="row" style="display:none">
-                            <div class="col-md-4">
-                                <label>ODS:</label>
-                                <select id="changeOdsConcat" class="form-control" onchange="odsConcatFilter(value);">
-                                <option value="">All</option>
-                                <option value="01 PONER FIN A LA POBREZA EN TODAS SUS FORMAS EN TODO EL MUNDOODS1- .">01 PONER FIN A LA POBREZA EN TODAS SUS FORMAS EN TODO EL MUNDOODS1- .</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4">
-                                <label>META:</label>
-                                <select class="form-control" id="changeTarget" onchange="targetFilter(value);">
+                        <div class="row"><div class="col-md-12">Seleccione un ODS, una meta y un indicador para ver su información</div></div>
+                        <div class="row" style="z-index:999">
+                            <div class="col-md-12"  style="z-index:999">
+                                <div class="row" id="odsselectordashboard2" style="z-index:999">
+                                    <div class="col-md-4">
+                                        <label>ODS:</label>
+                                        <select id="changeOdsConcat" class="form-control" onchange="odsConcatFilter(value);">
+                                       </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>META:</label>
 
-                                <option value="">All</option>
-                                <option value="Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día">Para 2030, ERRADICAR LA POBREZA EXTREMA para todas las personas en el mundo. Actualmente, se considera que viven en la pobreza extrema a las personas que subsisten con menos de 1,25 $ al día</option>
-                                <option value="Para 2030 reducir al menos a la mitad la proporción de hombres, mujeres y niños de todas las edades que viven en la POBREZA EN TODAS SUS DIMENSIONES con arreglo a las definiciones nacionales">Para 2030 reducir al menos a la mitad la proporción de hombres, mujeres y niños de todas las edades que viven en la POBREZA EN TODAS SUS DIMENSIONES con arreglo a las definiciones nacionales</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4">
-                                <label>INDICADOR:</label>
-                                <select class="form-control" id="changeTarget" onchange="indicadorFilter(value)">
-                                <option value="">All</option>
-                                <option value="Incidencia de pobreza monetaria extrema">Incidencia de pobreza monetaria extrema</option>
-                                </select>
+                                        <select id="changeMeta" class="form-control" onchange="metaFIlter(value);">
+                                         </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>INDICADOR:</label>
+                                         <select id="changeIndicador" class="form-control" onchange="inicadorFIlter(value);">
+                                       </select>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row" id="" style="z-index:999">
@@ -54,7 +51,7 @@ block content
                                 </p>
                             </div>
                         </div>
-                        <div class="row" id="odsdashboardselectorcontainer" style="z-index:999">
+                        <div class="row" id="odsdashboardselectorcontainer" style="display:none" style="z-index:999">
                             <div class="col-md-12" style="z-index:999">
                                  <div id='odsdashboardselector'  style='position: relative; width: auto; height:auto'></div>
                             </div>
@@ -226,8 +223,8 @@ block js
         var activetab;
         $(document).ready(function () {
             //ods
-            initodsdashboardselector();
-
+            //initodsdashboardselector();
+            initodsdashboardinfo();
             $.ajax({
                 url: 'http://ciudatos.com:8080/api/cities/getCities/',
                 dataType: 'json',
@@ -243,14 +240,39 @@ block js
 
                 }
             })
+            $.ajax({
+                url: 'http://ciudatos.com:8080/api/goals/getGoals/',
+                dataType: 'json',
+                type: 'GET',
+                success: function (data) {
+                    var html = '';
+                    jQuery.each(data, function (i, value) {
+                        html += '<option value=' + value.name + '>' + value.name + '</option>';
+
+                    })
+                    $("#changeOdsConcat").html(html);
+
+
+                }
+            })
+
+
+
+
+
+
+
             $('.nav-pills a').on('shown.bs.tab', function (event) {
                 console.log('cambie de pestaña');
                  activetab = $(event.target).text();         // active tab
                 var y = $(event.relatedTarget).text();  // previous tab
                 if (activetab == 'CIUDADES') {
                     $("#cityselectordashboard2").sticky({topSpacing: 40});
+                    $("#odsselectordashboard2").unstick();
+
                 }else{
                     $("#cityselectordashboard2").unstick();
+                    $("#odsselectordashboard2").sticky({topSpacing: 40});
                 }
             });
 
@@ -284,7 +306,7 @@ block js
                         initdashboardodsgrupociudades();
 
 
-                        vizodsdashboardselector.addEventListener('filterchange', function (event) {
+                        /*vizodsdashboardselector.addEventListener('filterchange', function (event) {
 
                             var fieldname = event.getFieldName();
                             console.log(fieldname);
@@ -327,7 +349,7 @@ block js
                             }
 
 
-                        });
+                        });*/
 
 
                     }
@@ -573,6 +595,25 @@ block js
         //ods
         function odsConcatFilter(ods) {
 
+
+            $.ajax({
+                url: 'http://ciudatos.com:8080/api/targets/getTargets/',
+                dataType: 'json',
+                type: 'GET',
+                success: function (data) {
+                    var html = '';
+                    jQuery.each(data, function (i, value) {
+                        html += '<option value=' + value.name + '>' + value.name + '</option>';
+
+                    })
+                    $("#changeMeta").html(html);
+
+
+                }
+            })
+
+
+
             var fieldname = "ods concat";
 
             if (activetab == 'ODS') {
@@ -725,6 +766,26 @@ block js
         }
 
         function metaFIlter(value){
+
+
+            $.ajax({
+                url: 'http://ciudatos.com:8080/api/indicators/getIndicators/',
+                dataType: 'json',
+                type: 'GET',
+                success: function (data) {
+                    var html = '';
+                    jQuery.each(data, function (i, value) {
+                        html += '<option value=' + value.name + '>' + value.name + '</option>';
+
+                    })
+                    $("#changeIndicador").html(html);
+
+
+                }
+            })
+
+
+
             var fieldname = "Name (Targets)";
             if (activetab == 'ODS') {
                 jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
