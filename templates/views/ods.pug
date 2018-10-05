@@ -239,6 +239,9 @@ block js
 
                     })
                     $("#changeCity").html(html);
+                    $("#changeCity").on('change', function () {
+                        cityFilter($(this).value);
+                    });
 
                 }
             })
