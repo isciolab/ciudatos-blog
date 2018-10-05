@@ -245,7 +245,7 @@ block js
                 dataType: 'json',
                 type: 'GET',
                 success: function (data) {
-                    var html = '';
+                    var html = '<option value="">ODS</option>';
                     jQuery.each(data, function (i, value) {
                         html += '<option value=' + value.name + '>' + value.name + '</option>';
 
@@ -595,7 +595,7 @@ block js
                 dataType: 'json',
                 type: 'GET',
                 success: function (data) {
-                    var html = '';
+                    var html = '<option value="">META</option>';
                     jQuery.each(data, function (i, value) {
                         html += '<option value=' + value.name + '>' + value.name + '</option>';
 
@@ -768,7 +768,7 @@ block js
                 dataType: 'json',
                 type: 'GET',
                 success: function (data) {
-                    var html = '';
+                    var html = '<option value="">INDICADOR</option>';
                     jQuery.each(data, function (i, value) {
                         html += '<option value=' + value.name + '>' + value.name + '</option>';
 
