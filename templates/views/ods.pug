@@ -256,12 +256,7 @@ block js
                 }
             })
 
-
-
-
-
-
-
+            $("#odsselectordashboard2").sticky({topSpacing: 40});
             $('.nav-pills a').on('shown.bs.tab', function (event) {
                 console.log('cambie de pestaña');
                  activetab = $(event.target).text();         // active tab
@@ -275,7 +270,6 @@ block js
                     $("#odsselectordashboard2").sticky({topSpacing: 40});
                 }
             });
-
 
             //$('iframe').iFrameResize({checkOrigin: false})
 
