@@ -111,7 +111,7 @@ block content
                                     </div>
                                     <div  class="col-md-5 col-md-offset-3">
 
-                                        <label>Ciudad:</label><select id="changeCity" class="form-control"  onchange="cityFilter(value);">
+                                        <label>Ciudad:</label><select id="changeCity" class="form-control"  onchange="cityFilter();">
 
                                         </select>
                                     </div>
@@ -658,6 +658,8 @@ block js
             var ciudad = $("#changeCity option:selected").text();
             var grupo = $("#changeCity option:selected").attr('data-group');
 
+            console.log(ciudad);
+            console.log(grupo);
 
             fieldname = "Ciudad";
             //var sheet = vizIndicadores.getWorkbook().getActiveSheet();
