@@ -730,13 +730,13 @@ block js
 
             if (activetab == 'ODS') {
                 if (vizmapadecalorporods != null) {
-                    jQuery.each(vizmapadecalorporods.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                    var sheet = vizmapadecalorporods.getWorkbook().getActiveSheet()
 
                         if (indicador != "") {
 
                             sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
                         }
-                    })
+
                 }
             }
 
