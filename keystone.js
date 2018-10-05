@@ -38,4 +38,7 @@ keystone.set('nav', {
 	users: 'users',
 });
 
+keystone.set('port',80);
+
 keystone.start();
+
