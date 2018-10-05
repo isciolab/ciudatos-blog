@@ -23,18 +23,18 @@ block content
                             <div class="col-md-12"  style="z-index:999">
                                 <div class="row" id="odsselectordashboard2" style="z-index:999">
                                     <div class="col-md-4">
-                                        <label>ODS:</label>
+                                        <label>SELECCIONE UN ODS:</label>
                                         <select id="changeOdsConcat" class="form-control" onchange="odsConcatFilter(value);">
                                         </select>
                                     </div>
                                     <div class="col-md-4">
-                                        <label>META:</label>
+                                        <label>SELECCIONE UNA META:</label>
 
                                          <select id="changeMeta" class="form-control" onchange="metaFIlter(value);">
                                          </select>
                                     </div>
                                     <div class="col-md-4">
-                                        <label>INDICADOR:</label>
+                                        <label>SELECCIONE UN INDICADOR:</label>
                                          <select id="changeIndicador" class="form-control" onchange="inicadorFIlter(value);">
                                         </select>
                                     </div>
@@ -595,13 +595,12 @@ block js
                 dataType: 'json',
                 type: 'GET',
                 success: function (data) {
-                    var html = '<option value="">META</option>';
+                    var html = '<option value="">SELECCIONE UNA META</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option value=' + value.name + '>' + value.name + '</option>';
+                        html += '<option value=' + value.name + ' '+value.number+'>' + value.name + '</option>';
 
                     })
                     $("#changeMeta").html(html);
-
 
                 }
             })
@@ -768,7 +767,7 @@ block js
                 dataType: 'json',
                 type: 'GET',
                 success: function (data) {
-                    var html = '<option value="">INDICADOR</option>';
+                    var html = '<option value="">SELECCIONE UN INDICADOR</option>';
                     jQuery.each(data, function (i, value) {
                         html += '<option value=' + value.name + '>' + value.name + '</option>';
 
