@@ -232,7 +232,7 @@ block js
                 success: function (data) {
                     var html = '<option value="">SELECCIONE UNA CIUDAD</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option value=' + value.name + '>' + value.name + '</option>';
+                        html += '<option data-group='+value.group_cities_id+' value=' + value.name + '>' + value.name + '</option>';
 
                     })
                     $("#changeCity").html(html);
@@ -652,20 +652,36 @@ block js
         }
 
 
+
         //city
-        function cityFilter(ciudad) {
+        function cityFilter() {
+            var ciudad = $("#changeCity option:selected").text();
+            var grupo = $("#changeCity option:selected").attr('data-group');
+
+
             fieldname = "Ciudad";
             //var sheet = vizIndicadores.getWorkbook().getActiveSheet();
 
             if (activetab == 'CIUDADES') {
+
+
+
                 if (vizcityprogreovsabsoluto != null) {
-                    jQuery.each(vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                    var sheet = vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets().get("Index Score Por indicador");
 
                         if (ciudad != "") {
 
                             sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
                         }
-                    })
+
+                    var sheet = vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets().get("Indicador de progreso absoluto ciudad");
+
+                    if (ciudad != "") {
+
+                        sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+                    }
+
                 }
 
 
