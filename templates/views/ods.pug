@@ -740,13 +740,12 @@ block js
 
             var fieldname = "Indicador";
             if (activetab == 'ODS') {
-                jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                var sheet = vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets().get("indicadr");
+                if (value != "") {
 
-                    if (indicador != "") {
+                    sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+                }
 
-                        sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
-                    }
-                })
 
                 if (vizmapadecalorporods != null) {
                     jQuery.each(vizmapadecalorporods.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
@@ -796,13 +795,13 @@ block js
 
             var fieldname = "Name (Targets)";
             if (activetab == 'ODS') {
-                jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                    if (value != "") {
+                var sheet = vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets().get("metas");
+                if (value != "") {
 
-                        sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-                    }
-                })
+                    sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+                }
+
 
                 if (vizdashboardodsgrupociudades != null) {
                     jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
