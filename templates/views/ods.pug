@@ -122,7 +122,7 @@ block content
                         </div>
                         <div class="row" id="" >
                             <div class="col-md-3">
-                                <img src="http://www.co.undp.org/content/dam/colombia/img/Pobreza/ODS%20Colombia/xundp_co_pobreza_ODSCol2.png.pagespeed.ic.mrqdFDgHxQ.webp"/>
+                                <img id="imagen_city" src="http://www.co.undp.org/content/dam/colombia/img/Pobreza/ODS%20Colombia/xundp_co_pobreza_ODSCol2.png.pagespeed.ic.mrqdFDgHxQ.webp"/>
                                 </div>
                                 <div class="col-md-9">
                                 <h2>¿Que son los objetivos de desarrollo sostenible?</h2>
@@ -234,7 +234,7 @@ block js
                 success: function (data) {
                     var html = '<option value="">SELECCIONE UNA CIUDAD</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option data-group='+value.group_cities_id+' value=' + value.name + '>' + value.name + '</option>';
+                        html += '<option data-img='+value.avatar.url+' data-group='+value.group_cities_id+' value=' + value.name + '>' + value.name + '</option>';
 
                     })
                     $("#changeCity").html(html);
@@ -651,6 +651,8 @@ block js
         function cityFilter() {
             var ciudad = $("#changeCity option:selected").text();
             var grupo = $("#changeCity option:selected").attr('data-group');
+            var imagen = $("#changeCity option:selected").attr('data-img');
+            $("#imagen_city").attr('src', imagen);
 
             console.log(ciudad);
             console.log(grupo);
