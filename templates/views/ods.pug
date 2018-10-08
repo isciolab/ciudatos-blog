@@ -810,27 +810,6 @@ block js
 
             }
 
-            if(activetab == 'CIUDADES'){
-                if (vizcityprogresohistorico != null) {
-                    jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-
-                        if (value != "") {
-
-                            sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-                        }
-                    })
-                }
-
-                if (vizcityprogresohistorico != null) {
-                    jQuery.each(vizcityprogresohistorico.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-
-                        if (value != "") {
-
-                            sheet.applyFilterAsync(fieldname, valuee, tableau.FilterUpdateType.REPLACE);
-                        }
-                    })
-                }
-            }
 
         }
 
