@@ -505,7 +505,7 @@ block js
 
                             var fieldname = event.getFieldName();
                             console.log(fieldname);
-                            if (fieldname == 'AÑO(Date From)') {
+                            if (fieldname == 'Año') {
                                 event.getFilterAsync().then(function (field) {
 
                                     var filtervalue = field.getAppliedValues();
@@ -719,7 +719,7 @@ block js
         }
 
         function anoFilter(ano){
-            var fieldname="AÑO(Date From)";
+            var fieldname="Año";
             if (activetab == 'CIUDADES') {
                 jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
