@@ -847,7 +847,7 @@ block js
                 if (vizdashboardodstrazador != null) {
                     jQuery.each(vizdashboardodstrazador.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                        if (ods != "") {
+                        if (value != "") {
 
                             sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
                         }
