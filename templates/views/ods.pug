@@ -850,7 +850,7 @@ block js
 
                         if (value != "") {
 
-                            sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
+                            sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
                         }
                     })
                 }
