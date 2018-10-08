@@ -148,7 +148,7 @@ block content
                                  <img  id="imagen_city"  src="https://www.elheraldo.co/sites/default/files/styles/width_860/public/articulo/2016/04/18/panoramicas_de_barranquilla_5.jpg?itok=v1Md9Ykg"/>
                             </div>
                             <div class="col-md-6">
-                                    <div id='citydeprmentmap'  style='position: relative; width: auto; height:350px'></div>
+                                    <div id='citydeprmentmap'  style='position: relative; width: auto; height:3auto'></div>
                             </div>
                         </div>
                         <div class="row">
@@ -810,6 +810,28 @@ block js
 
             }
 
+            if(activetab == 'CIUDADES'){
+                if (vizcityprogresohistorico != null) {
+                    jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                        if (value != "") {
+
+                            sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+                        }
+                    })
+                }
+
+                if (vizcityprogresohistorico != null) {
+                    jQuery.each(vizcityprogresohistorico.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                        if (value != "") {
+
+                            sheet.applyFilterAsync(fieldname, valuee, tableau.FilterUpdateType.REPLACE);
+                        }
+                    })
+                }
+            }
+
         }
 
         function metaFIlter(){
@@ -870,16 +892,18 @@ block js
             //los de ciudad
 
             if(activetab=='CIUDADES') {
-                jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                if (vizcityindicadoresciudad != null) {
+                    jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                    if (value != "") {
+                        if (value != "") {
 
-                        sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-                    }
-                })
+                            sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+                        }
+                    })
+                }
 
                 if (vizcityprogresohistorico != null) {
-                    jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                    jQuery.each(vizcityprogresohistorico.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
                         if (value != "") {
 
@@ -887,6 +911,9 @@ block js
                         }
                     })
                 }
+
+
+
             }
 
 
