@@ -272,10 +272,12 @@ block js
                 if (activetab == 'CIUDADES') {
                     $("#cityselectordashboard2").sticky({topSpacing: 40});
                     $("#odsselectordashboard2").unstick();
+                    initodsdashboardinfo();
 
                 }else{
                     $("#cityselectordashboard2").unstick();
                     $("#odsselectordashboard2").sticky({topSpacing: 40});
+                    initvizcitydeprmentmap();
                 }
             });
 
@@ -377,7 +379,7 @@ block js
 
 
 
-                        initvizcitydeprmentmap();
+                        //initvizcitydeprmentmap();
                           //initvizcityselectordashboard();
                     }
                 };
