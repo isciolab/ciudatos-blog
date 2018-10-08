@@ -240,7 +240,7 @@ block js
                 success: function (data) {
                     var html = '<option value="">SELECCIONE UNA CIUDAD</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option data-img='+value.avatar.url+' data-group='+value.group_city_id+' value=' + value.name + '>' + value.name + '</option>';
+                        html += '<option data-img='+value.avatar.url+' data-group='+value.group_cities_id+' value=' + value.name + '>' + value.name + '</option>';
 
                     })
                     $("#changeCity").html(html);
