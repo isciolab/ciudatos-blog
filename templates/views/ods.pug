@@ -303,11 +303,11 @@ block js
                         initdashboardodsgrupociudades();
 
 
-                        var head = jQuery("iframe").contents().find("head");
+                        var head = $("iframe").contents().find("head");
                         var css = '<style type="text/css">' +
-                            '.tab-toolbar{display:none}; ' +
+                            '.tab-toolbar{display:none!important}; ' +
                             '</style>';
-                        jQuery(head).append(css);
+                        $(head).append(css);
                         /*vizodsdashboardselector.addEventListener('filterchange', function (event) {
 
                             var fieldname = event.getFieldName();
