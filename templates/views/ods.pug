@@ -765,7 +765,7 @@ block js
 
 
                 if (vizdashboardodsgrupociudades != null) {
-                    jQuery.each(vizdashboardodstrazador.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                    jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
                         if (indicador != "") {
 
                             sheet.applyFilterAsync("Indicador (copia 2)", indicador, tableau.FilterUpdateType.REPLACE);
