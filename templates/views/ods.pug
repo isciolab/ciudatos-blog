@@ -248,7 +248,7 @@ block js
                 dataType: 'json',
                 type: 'GET',
                 success: function (data) {
-                    var html = '<option value="">Seleccione aquí:S</option>';
+                    var html = '<option value="">Seleccione aquí:</option>';
                     jQuery.each(data, function (i, value) {
                         html += '<option value=' + value.id+'>' + value.number + ' ' + value.name + '</option>';
 
