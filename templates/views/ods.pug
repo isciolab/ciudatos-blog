@@ -391,6 +391,9 @@ block js
                         }
                     };
                 vizmapadecalorporods = new tableau.Viz(containerDiv, url, options);
+            }else{
+                vizmapadecalorporods.dispose()();
+                initmapadecalorporods();
             }
         }
 
