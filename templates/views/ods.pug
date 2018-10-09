@@ -451,165 +451,187 @@ block js
 
 
         function initvizcitidashboardinfo() {
-            var containerDiv = document.getElementById("citidashboardinfo"),
-                url = "https://public.tableau.com/views/Ciudatos/CityDashboardinfo?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                options = {
-                    hideTabs: true,
-                    onFirstInteractive:function(){
-                        console.log('inicio lo demas de ciuades');
-                        initvizcityprogreovsabsoluto();
+            if(vizcitidashboardinfo==null) {
+                var containerDiv = document.getElementById("citidashboardinfo"),
+                    url = "https://public.tableau.com/views/Ciudatos/CityDashboardinfo?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+                            console.log('inicio lo demas de ciuades');
 
 
-                       /* vizcityselectordashboard.addEventListener('filterchange', function (event) {
 
-                            var fieldname = event.getFieldName();
-                            console.log(fieldname);
-                            if (fieldname == 'Ciudad') {
-                                event.getFilterAsync().then(function (field) {
+                            /* vizcityselectordashboard.addEventListener('filterchange', function (event) {
 
-                                    var filtervalue = field.getAppliedValues();
-                                    console.log(filtervalue);
-                                    console.log(filtervalue[0].value);
-                                    cityFilter(filtervalue[0].value);
+                             var fieldname = event.getFieldName();
+                             console.log(fieldname);
+                             if (fieldname == 'Ciudad') {
+                             event.getFilterAsync().then(function (field) {
 
-
-                                });
-                            }
+                             var filtervalue = field.getAppliedValues();
+                             console.log(filtervalue);
+                             console.log(filtervalue[0].value);
+                             cityFilter(filtervalue[0].value);
 
 
-                        });*/
+                             });
+                             }
 
-                    }
-                };
-            vizcitidashboardinfo = new tableau.Viz(containerDiv, url, options);
+
+                             });*/
+
+                        }
+                    };
+                vizcitidashboardinfo = new tableau.Viz(containerDiv, url, options);
+            }else{
+                initvizcityprogreovsabsoluto();
+            }
         }
         function initvizcitydeprmentmap() {
-            var containerDiv = document.getElementById("citydeprmentmap"),
-                url = "https://public.tableau.com/views/Ciudatos/Departmentmap?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                options = {
-                    hideTabs: true,
-                    onFirstInteractive:function(){
-                      //  console.log('inicio lo demas de ciuades');
-                        initvizcitidashboardinfo();
+            if(vizcitydeprmentmap==null) {
+                var containerDiv = document.getElementById("citydeprmentmap"),
+                    url = "https://public.tableau.com/views/Ciudatos/Departmentmap?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+                            //  console.log('inicio lo demas de ciuades');
+                           initvizcitidashboardinfo();
 
-                    }
-                };
-            vizcitydeprmentmap = new tableau.Viz(containerDiv, url, options);
+                        }
+                    };
+                vizcitydeprmentmap = new tableau.Viz(containerDiv, url, options);
+            }else{
+                initvizcitidashboardinfo();
+            }
         }
 
         function initvizcityprogreovsabsoluto() {
-            var containerDiv = document.getElementById("cityprogreovsabsoluto"),
-                url = "https://public.tableau.com/views/Ciudatos/CityDashboardprogresovsindicador?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                options = {
-                    hideTabs: true,
-                    onFirstInteractive: function () {
-                        initvizcityindicadoresciudad();
+            if(vizcityprogreovsabsoluto==null) {
+                var containerDiv = document.getElementById("cityprogreovsabsoluto"),
+                    url = "https://public.tableau.com/views/Ciudatos/CityDashboardprogresovsindicador?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
 
+                            initvizcityindicadoresciudad();
+                        }
 
+                    };
+                vizcityprogreovsabsoluto = new tableau.Viz(containerDiv, url, options);
 
-
-                    }
-
-                };
-            vizcityprogreovsabsoluto = new tableau.Viz(containerDiv, url, options);
-
+            }
+            else{
+                initvizcityindicadoresciudad();
+            }
 
         }
 
         function initvizcityindicadoresciudad() {
-            var containerDiv = document.getElementById("cityindicadoresciudad"),
-                url = "https://public.tableau.com/views/Ciudatos/CityDashboardindicadoresporciudad?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                options = {
-                    hideTabs: true,
-                    onFirstInteractive: function () {
-                        initvizcityprogresohistorico();
+            if(vizcityindicadoresciudad==null) {
+                var containerDiv = document.getElementById("cityindicadoresciudad"),
+                    url = "https://public.tableau.com/views/Ciudatos/CityDashboardindicadoresporciudad?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+                            initvizcityprogresohistorico();
 
-                        vizcityprogreovsabsoluto.addEventListener('filterchange', function (event) {
+                            vizcityprogreovsabsoluto.addEventListener('filterchange', function (event) {
 
-                            var fieldname = event.getFieldName();
-                            console.log(fieldname);
-                            if (fieldname == 'Date From') {
-                                event.getFilterAsync().then(function (field) {
+                                var fieldname = event.getFieldName();
+                                console.log(fieldname);
+                                if (fieldname == 'Date From') {
+                                    event.getFilterAsync().then(function (field) {
 
-                                    var filtervalue = field.getAppliedValues();
-                                    console.log(filtervalue);
-                                    console.log(filtervalue[0].value);
+                                        var filtervalue = field.getAppliedValues();
+                                        console.log(filtervalue);
+                                        console.log(filtervalue[0].value);
 
-                                    anoFilter(filtervalue[0].value);
-                                });
-                            }
-
-
-                            if (fieldname == 'Name (Targets)') {
-                                event.getFilterAsync().then(function (field) {
-
-                                    var filtervalue = field.getAppliedValues();
-                                    console.log(filtervalue);
-                                    console.log(filtervalue[0].value);
-                                    metaFIlter(filtervalue[0].value);
+                                        anoFilter(filtervalue[0].value);
+                                    });
+                                }
 
 
-                                });
-                            }
+                                if (fieldname == 'Name (Targets)') {
+                                    event.getFilterAsync().then(function (field) {
+
+                                        var filtervalue = field.getAppliedValues();
+                                        console.log(filtervalue);
+                                        console.log(filtervalue[0].value);
+                                        metaFIlter(filtervalue[0].value);
 
 
+                                    });
+                                }
 
-                        });
+
+                            });
 
 
-
-                    }
-                };
-            vizcityindicadoresciudad = new tableau.Viz(containerDiv, url, options);
+                        }
+                    };
+                vizcityindicadoresciudad = new tableau.Viz(containerDiv, url, options);
+            }else{
+                initvizcityprogresohistorico();
+            }
         }
 
         function initvizcityprogresohistorico() {
-            var containerDiv = document.getElementById("cityprogresohistorico"),
-                url = "https://public.tableau.com/views/Ciudatos/CityDashboard-progresohistorico?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                options = {
-                    hideTabs: true,
-                    onFirstInteractive: function () {
-                        initvizcityindicadorestrazadores();
+            if(vizcityprogresohistorico==null) {
+                var containerDiv = document.getElementById("cityprogresohistorico"),
+                    url = "https://public.tableau.com/views/Ciudatos/CityDashboard-progresohistorico?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+                            initvizcityindicadorestrazadores();
 
-                    }
-                };
-            vizcityprogresohistorico = new tableau.Viz(containerDiv, url, options);
+                        }
+                    };
+                vizcityprogresohistorico = new tableau.Viz(containerDiv, url, options);
+            }else{
+                initvizcityindicadorestrazadores();
+            }
         }
 
         function initvizcityindicadorestrazadores() {
 
+            if(vizcityindicadorestrazadores==null) {
 
-            var containerDiv = document.getElementById("cityindicadorestrazadores"),
-                url = "https://public.tableau.com/views/Ciudatos/IndicadorestrazadoresporODS?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                options = {
-                    hideTabs: true,
-                    onFirstInteractive: function () {
-                        initvizcitymapadecalorporciudad();
+                var containerDiv = document.getElementById("cityindicadorestrazadores"),
+                    url = "https://public.tableau.com/views/Ciudatos/IndicadorestrazadoresporODS?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+                            initvizcitymapadecalorporciudad();
 
 
-
-                    }
-                };
+                        }
+                    };
                 vizcityindicadorestrazadores = new tableau.Viz(containerDiv, url, options);
+            }else{
+                initvizcitymapadecalorporciudad();
+            }
 
          }
 
         function initvizcitymapadecalorporciudad() {
+            if(vizcitymapadecalorporciudad==null) {
 
-            var containerDiv = document.getElementById("citymapadecalorporciudad"),
-                url = "https://public.tableau.com/views/Ciudatos/Mapadecalorbycity?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                options = {
-                    hideTabs: true,
-                    onFirstInteractive: function () {
+                var containerDiv = document.getElementById("citymapadecalorporciudad"),
+                    url = "https://public.tableau.com/views/Ciudatos/Mapadecalorbycity?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
 
-                        console.log('cargo mapa de calor ciudad');
+                            console.log('cargo mapa de calor ciudad');
 
 
+                        }
+                    };
 
-                    }
-                };
+                vizcitymapadecalorporciudad = new tableau.Viz(containerDiv, url, options);
+            }else{
 
-            vizcitymapadecalorporciudad = new tableau.Viz(containerDiv, url, options);
+            }
 
 
         }
