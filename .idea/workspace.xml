@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +15,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-25">
-              <caret line="770" column="37" lean-forward="false" selection-start-line="770" selection-start-column="37" selection-end-line="770" selection-end-column="37" />
+            <state relative-caret-position="144">
+              <caret line="791" column="0" lean-forward="true" selection-start-line="791" selection-start-column="0" selection-end-line="791" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -127,7 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>changeCity</find>
       <find>imagen_city</find>
       <find>vizdashboardodsgrupociudades</find>
       <find>sheet.applyFilterAsync(fieldname, od</find>
@@ -157,6 +154,7 @@
       <find>Seleccione aquí</find>
       <find>citydeprmentmap</find>
       <find>cityFI</find>
+      <find>vizcityindicadorestrazadores</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -461,14 +459,7 @@
       <workItem from="1538853821785" duration="3721000" />
       <workItem from="1539012580953" duration="14927000" />
       <workItem from="1539095351338" duration="5691000" />
-      <workItem from="1539180786682" duration="1749000" />
-    </task>
-    <task id="LOCAL-00180" summary="visualize ods">
-      <created>1538774792786</created>
-      <option name="number" value="00180" />
-      <option name="presentableId" value="LOCAL-00180" />
-      <option name="project" value="LOCAL" />
-      <updated>1538774792786</updated>
+      <workItem from="1539180786682" duration="2302000" />
     </task>
     <task id="LOCAL-00181" summary="visualize ods">
       <created>1538774851306</created>
@@ -806,14 +797,21 @@
       <option name="project" value="LOCAL" />
       <updated>1539181789545</updated>
     </task>
-    <option name="localTasksCounter" value="229" />
+    <task id="LOCAL-00229" summary="visualize ods">
+      <created>1539183275655</created>
+      <option name="number" value="00229" />
+      <option name="presentableId" value="LOCAL-00229" />
+      <option name="project" value="LOCAL" />
+      <updated>1539183275655</updated>
+    </task>
+    <option name="localTasksCounter" value="230" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146339000" />
+    <option name="totallyTimeSpent" value="146892000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="732" extended-state="7" />
+    <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23489426" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1212,8 +1210,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="770" column="37" lean-forward="false" selection-start-line="770" selection-start-column="37" selection-end-line="770" selection-end-column="37" />
+        <state relative-caret-position="144">
+          <caret line="791" column="0" lean-forward="true" selection-start-line="791" selection-start-column="0" selection-end-line="791" selection-end-column="0" />
           <folding />
         </state>
       </provider>
