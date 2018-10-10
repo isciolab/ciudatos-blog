@@ -466,13 +466,21 @@ block js
             }
         }
 
+        function changeGrupoodsgrupociudades1() {
+            var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet();
+            var fieldname = "Grupo";
+            var value = $("#changeGrupoodsgrupociudades1 option:selected").text();
+            if (value != "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+        }
         function initdashboardodsgrupociudades() {
             /* if(vizdashboardodsgrupociudades==null) {
                 /*var containerDiv = document.getElementById("dashboardodsgrupociudades"),
                     url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-grupociudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
                         hideTabs: true,
-                        onFirstInteractive: function () {
+                        onFirstInteractive: wqqqqqqqqqqqqqqqqqqqqqqqfunction () {
                             initdashboardodstrazador();
 
                         }
@@ -1032,28 +1040,28 @@ block js
 
                 if (vizodsgrupoodsgrupociudades1 != null) {
                     var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet();
-                    if (ods != "") {
+                    if (indicador != "") {
 
                         sheet.applyFilterAsync("Indicador (copia 2)", indicador, tableau.FilterUpdateType.REPLACE);
                     }
                 }
                 if (vizodsgrupoodsgrupociudades2 != null) {
                     var sheet = vizodsgrupoodsgrupociudades2.getWorkbook().getActiveSheet();
-                    if (ods != "") {
+                    if (indicador != "") {
 
                         sheet.applyFilterAsync("Indicador (copia 2)", indicador, tableau.FilterUpdateType.REPLACE);
                     }
                 }
                 if (vizodsgrupoodsgrupociudades3 != null) {
                     var sheet = vizodsgrupoodsgrupociudades3.getWorkbook().getActiveSheet();
-                    if (ods != "") {
+                    if (indicador != "") {
 
                         sheet.applyFilterAsync("Indicador (copia 2)", indicador, tableau.FilterUpdateType.REPLACE);
                     }
                 }
                 if (vizodsgrupoodsgrupociudades4 != null) {
                     var sheet = vizodsgrupoodsgrupociudades4.getWorkbook().getActiveSheet();
-                    if (ods != "") {
+                    if (indicador != "") {
 
                         sheet.applyFilterAsync("Indicador (copia 2)", indicador, tableau.FilterUpdateType.REPLACE);
                     }
@@ -1135,28 +1143,28 @@ block js
 
                 if (vizodsgrupoodsgrupociudades1 != null) {
                     var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet();
-                    if (ods != "") {
+                    if (value != "") {
 
                         sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
                     }
                 }
                 if (vizodsgrupoodsgrupociudades2 != null) {
                     var sheet = vizodsgrupoodsgrupociudades2.getWorkbook().getActiveSheet();
-                    if (ods != "") {
+                    if (value != "") {
 
                         sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
                     }
                 }
                 if (vizodsgrupoodsgrupociudades3 != null) {
                     var sheet = vizodsgrupoodsgrupociudades3.getWorkbook().getActiveSheet();
-                    if (ods != "") {
+                    if (value != "") {
 
                         sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
                     }
                 }
                 if (vizodsgrupoodsgrupociudades4 != null) {
                     var sheet = vizodsgrupoodsgrupociudades4.getWorkbook().getActiveSheet();
-                    if (ods != "") {
+                    if (value != "") {
 
                         sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
                     }
