@@ -474,6 +474,33 @@ block js
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
         }
+
+        function changeGrupoodsgrupociudades2() {
+            var sheet = vizodsgrupoodsgrupociudades2.getWorkbook().getActiveSheet();
+            var fieldname = "Grupo";
+            var value = $("#changeGrupoodsgrupociudades2 option:selected").text();
+            if (value != "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+        }
+
+        function changeGrupoodsgrupociudades3() {
+            var sheet = vizodsgrupoodsgrupociudades3.getWorkbook().getActiveSheet();
+            var fieldname = "Grupo";
+            var value = $("#changeGrupoodsgrupociudades3 option:selected").text();
+            if (value != "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+        }
+
+        function changeGrupoodsgrupociudades4() {
+            var sheet = vizodsgrupoodsgrupociudades4.getWorkbook().getActiveSheet();
+            var fieldname = "Grupo";
+            var value = $("#changeGrupoodsgrupociudades4 option:selected").text();
+            if (value != "") {
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+            }
+        }
         function initdashboardodsgrupociudades() {
             /* if(vizdashboardodsgrupociudades==null) {
                 /*var containerDiv = document.getElementById("dashboardodsgrupociudades"),
