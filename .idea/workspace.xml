@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/ods.pug" afterPath="$PROJECT_DIR$/templates/views/ods.pug" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +17,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="478" column="42" lean-forward="false" selection-start-line="478" selection-start-column="42" selection-end-line="478" selection-end-column="42" />
+            <state relative-caret-position="161">
+              <caret line="572" column="0" lean-forward="true" selection-start-line="572" selection-start-column="0" selection-end-line="572" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -128,10 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>metafi</find>
-      <find>initodsdashboardinfo();</find>
-      <find>tab</find>
-      <find>initvizcitydeprmentmap</find>
       <find>depar</find>
       <find>mapadecalorporods</find>
       <find>Selecione una ciudad para ver su información</find>
@@ -150,7 +145,6 @@
       <find>vizcityindicadorestrazadores</find>
       <find>dashboardodsgrupociudades</find>
       <find>odsgrupoc</find>
-      <find>changeGrupoodsgrupociudades1</find>
       <find>odsgrupoodsgrupociudades1</find>
       <find>vizdashboardodsgrupociudades</find>
       <find>var sheet = vizodsgrupoodsgrupociudades1.g</find>
@@ -158,6 +152,11 @@
       <find>if (vizodsgrupoodsgrupociudades1 != null</find>
       <find>vizodsgrupoodsgrupociudades1</find>
       <find>grupoodsgrupociudades1</find>
+      <find>initdashboardodsgrupociudades</find>
+      <find>changeGrupoodsgrupociudades1</find>
+      <find>initoodsgrupociudades1</find>
+      <find>changeGrupoodsgrupociudades2</find>
+      <find>initoodsgrupociudades4</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -462,14 +461,7 @@
       <workItem from="1538853821785" duration="3721000" />
       <workItem from="1539012580953" duration="14927000" />
       <workItem from="1539095351338" duration="5691000" />
-      <workItem from="1539180786682" duration="5433000" />
-    </task>
-    <task id="LOCAL-00183" summary="visualize ods">
-      <created>1538855443507</created>
-      <option name="number" value="00183" />
-      <option name="presentableId" value="LOCAL-00183" />
-      <option name="project" value="LOCAL" />
-      <updated>1538855443507</updated>
+      <workItem from="1539180786682" duration="6414000" />
     </task>
     <task id="LOCAL-00184" summary="visualize ods">
       <created>1538855525940</created>
@@ -807,11 +799,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539186475253</updated>
     </task>
-    <option name="localTasksCounter" value="232" />
+    <task id="LOCAL-00232" summary="visualize ods">
+      <created>1539187692481</created>
+      <option name="number" value="00232" />
+      <option name="presentableId" value="LOCAL-00232" />
+      <option name="project" value="LOCAL" />
+      <updated>1539187692496</updated>
+    </task>
+    <option name="localTasksCounter" value="233" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150023000" />
+    <option name="totallyTimeSpent" value="151004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1213,8 +1212,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="478" column="42" lean-forward="false" selection-start-line="478" selection-start-column="42" selection-end-line="478" selection-end-column="42" />
+        <state relative-caret-position="161">
+          <caret line="572" column="0" lean-forward="true" selection-start-line="572" selection-start-column="0" selection-end-line="572" selection-end-column="0" />
           <folding />
         </state>
       </provider>
