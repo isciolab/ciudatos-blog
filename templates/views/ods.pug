@@ -99,28 +99,28 @@ block content
                             </div>
                             <div class="col-md-3">
                                 <div class="select_box">
-                                    <select id="changeGrupoodsgrupociudades1" class="form-control" onchange="changeGrupoodsgrupociudades1();">
+                                    <select id="changeGrupoodsgrupociudades1" class="form-control" onchange="initoodsgrupociudades1();">
                                         <option value="">Grupos de ciudades:</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="select_box">
-                                    <select id="changeGrupoodsgrupociudades2" class="form-control" onchange="changeGrupoodsgrupociudades2();">
+                                    <select id="changeGrupoodsgrupociudades2" class="form-control" onchange="initoodsgrupociudades2();">
                                          <option value="">Grupos de ciudades:</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="select_box">
-                                    <select id="changeGrupoodsgrupociudades3" class="form-control" onchange="changeGrupoodsgrupociudades3();">
+                                    <select id="changeGrupoodsgrupociudades3" class="form-control" onchange="initoodsgrupociudades3();">
                                         <option value="">Grupos de ciudades:</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="select_box">
-                                    <select id="changeGrupoodsgrupociudades4" class="form-control" onchange="changeGrupoodsgrupociudades4();">
+                                    <select id="changeGrupoodsgrupociudades4" class="form-control" onchange="initoodsgrupociudades4();">
                                         <option value="">Grupos de ciudades:</option>
                                     </select>
                                 </div>
@@ -375,7 +375,7 @@ block js
                     options = {
                         hideTabs: true,
                         onFirstInteractive: function () {
-                            initdashboardodsgrupociudades();
+                            initdashboardodstrazador();
 
 
                             var head = $("#odsdashboardinfo iframe").contents().find("head");
@@ -433,7 +433,8 @@ block js
                     };
                 vizodsdashboardinfo = new tableau.Viz(containerDiv, url, options);
             }else{
-                initdashboardodsgrupociudades();
+
+                initdashboardodstrazador();
             }
         }
 
@@ -467,6 +468,7 @@ block js
         }
 
         function changeGrupoodsgrupociudades1() {
+
             var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet();
             var fieldname = "Grupo";
             var value = $("#changeGrupoodsgrupociudades1 option:selected").text();
@@ -501,18 +503,7 @@ block js
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
         }
-        function initdashboardodsgrupociudades() {
-            /* if(vizdashboardodsgrupociudades==null) {
-                /*var containerDiv = document.getElementById("dashboardodsgrupociudades"),
-                    url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-grupociudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                    options = {
-                        hideTabs: true,
-                        onFirstInteractive: wqqqqqqqqqqqqqqqqqqqqqqqfunction () {
-                            initdashboardodstrazador();
-
-                        }
-                    };
-                vizdashboardodsgrupociudades = new tableau.Viz(containerDiv, url, options);*/
+        function initoodsgrupociudades1() {
 
                 if (vizodsgrupoodsgrupociudades1 == null) {
                     var containerDiv = document.getElementById("odsgrupoodsgrupociudades1"),
@@ -521,58 +512,88 @@ block js
                             hideTabs: true,
                             onFirstInteractive: function () {
 
+                                changeGrupoodsgrupociudades1();
 
                             }
                         };
                     vizodsgrupoodsgrupociudades1 = new tableau.Viz(containerDiv, url, options);
-                }
-                if (vizodsgrupoodsgrupociudades2 == null) {
-                    var containerDiv = document.getElementById("odsgrupoodsgrupociudades2"),
-                        url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades2?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                        options = {
-                            hideTabs: true,
-                            onFirstInteractive: function () {
-
-
-                            }
-                        };
-                    vizodsgrupoodsgrupociudades2 = new tableau.Viz(containerDiv, url, options);
-                }
-
-                if (vizodsgrupoodsgrupociudades3 == null) {
-                    var containerDiv = document.getElementById("odsgrupoodsgrupociudades3"),
-                        url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades3?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                        options = {
-                            hideTabs: true,
-                            onFirstInteractive: function () {
-
-
-                            }
-                        };
-                    vizodsgrupoodsgrupociudades3 = new tableau.Viz(containerDiv, url, options);
-                }
-
-                if (vizodsgrupoodsgrupociudades4 == null) {
-                    var containerDiv = document.getElementById("odsgrupoodsgrupociudades4"),
-                        url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades4?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                        options = {
-                            hideTabs: true,
-                            onFirstInteractive: function () {
-
-
-                            }
-                        };
-                    vizodsgrupoodsgrupociudades4 = new tableau.Viz(containerDiv, url, options);
+                }else{
+                    changeGrupoodsgrupociudades1();
                 }
 
 
-                initdashboardodstrazador();
 
-
-           /* }else{
-                initdashboardodstrazador();
-            }*/
         }
+
+        function initoodsgrupociudades2() {
+
+
+            if (vizodsgrupoodsgrupociudades2 == null) {
+                var containerDiv = document.getElementById("odsgrupoodsgrupociudades2"),
+                    url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades2?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+
+                            changeGrupoodsgrupociudades2();
+                        }
+                    };
+                vizodsgrupoodsgrupociudades2 = new tableau.Viz(containerDiv, url, options);
+            }else{
+                changeGrupoodsgrupociudades2();
+            }
+
+
+
+
+        }
+
+
+        function initoodsgrupociudades3() {
+
+
+
+            if (vizodsgrupoodsgrupociudades3 == null) {
+                var containerDiv = document.getElementById("odsgrupoodsgrupociudades3"),
+                    url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades3?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+                            changeGrupoodsgrupociudades3();
+
+                        }
+                    };
+                vizodsgrupoodsgrupociudades3 = new tableau.Viz(containerDiv, url, options);
+            }else{
+                changeGrupoodsgrupociudades3();
+            }
+
+
+        }
+
+
+        function initoodsgrupociudades4() {
+
+
+
+            if (vizodsgrupoodsgrupociudades4 == null) {
+                var containerDiv = document.getElementById("odsgrupoodsgrupociudades4"),
+                    url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades4?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+                            changeGrupoodsgrupociudades4();
+
+                        }
+                    };
+                vizodsgrupoodsgrupociudades4 = new tableau.Viz(containerDiv, url, options);
+            } else {
+                changeGrupoodsgrupociudades4();
+            }
+
+
+        }
+
         function initdashboardodstrazador() {
             if(vizdashboardodstrazador==null) {
                 var containerDiv = document.getElementById("dashboardodstrazador"),
