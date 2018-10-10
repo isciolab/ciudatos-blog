@@ -792,13 +792,11 @@ block js
 
 
                 if (vizcityindicadorestrazadores != null) {
-                    jQuery.each(vizcityindicadorestrazadores.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                    var sheet = vizcityindicadorestrazadores.getWorkbook().getActiveSheet();
+                    if (ciudad != "") {
 
-                        if (ciudad != "") {
-
-                            sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
-                        }
-                    })
+                        sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
+                    }
                 }
 
 
