@@ -524,6 +524,7 @@ block js
             var sheet = vizodsgrupoodsgrupociudades2.getWorkbook().getActiveSheet();
             var fieldname = "Grupo";
             var value = $("#changeGrupoodsgrupociudades2 option:selected").text();
+            console.log(value);
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
