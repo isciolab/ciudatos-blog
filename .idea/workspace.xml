@@ -17,8 +17,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="134" column="49" lean-forward="false" selection-start-line="134" selection-start-column="49" selection-end-line="134" selection-end-column="49" />
+            <state relative-caret-position="315">
+              <caret line="634" column="46" lean-forward="true" selection-start-line="634" selection-start-column="46" selection-end-line="634" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -127,10 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Seleccione un ODS, una meta y un indicador para ver su información</find>
-      <find>metaFIlter</find>
-      <find>seleccione una</find>
-      <find>select id=&quot;changeIndicador&quot; class=</find>
       <find>Seleccione a</find>
       <find>se</find>
       <find>seleccio</find>
@@ -140,7 +136,6 @@
       <find>vizcityindicadorestrazadores</find>
       <find>dashboardodsgrupociudades</find>
       <find>odsgrupoc</find>
-      <find>odsgrupoodsgrupociudades1</find>
       <find>vizdashboardodsgrupociudades</find>
       <find>var sheet = vizodsgrupoodsgrupociudades1.g</find>
       <find>grupo</find>
@@ -149,7 +144,6 @@
       <find>grupoodsgrupociudades1</find>
       <find>initdashboardodsgrupociudades</find>
       <find>changeGrupoodsgrupociudades1</find>
-      <find>initoodsgrupociudades1</find>
       <find>changeGrupoodsgrupociudades2</find>
       <find>initoodsgrupociudades4</find>
       <find>dipose</find>
@@ -157,6 +151,12 @@
       <find>undefined</find>
       <find>ndicador de ODS por grupo de ciudade</find>
       <find>Indicador de ODS por grupo de ciudades</find>
+      <find>initoodsgrupociudades1</find>
+      <find>initoodtrazadorsgrupociudades1</find>
+      <find>initdashboardodstrazador</find>
+      <find>odsgrupoodsgrupociudades1</find>
+      <find>odsgrupoodstrazadorgrupociudades1</find>
+      <find>changeGrupoodstrazadorgrupociudades1</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -461,7 +461,7 @@
       <workItem from="1538853821785" duration="3721000" />
       <workItem from="1539012580953" duration="14927000" />
       <workItem from="1539095351338" duration="5691000" />
-      <workItem from="1539180786682" duration="8069000" />
+      <workItem from="1539180786682" duration="10506000" />
     </task>
     <task id="LOCAL-00187" summary="visualize ods">
       <created>1539013624575</created>
@@ -810,7 +810,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152659000" />
+    <option name="totallyTimeSpent" value="155096000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1212,8 +1212,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="134" column="49" lean-forward="false" selection-start-line="134" selection-start-column="49" selection-end-line="134" selection-end-column="49" />
+        <state relative-caret-position="315">
+          <caret line="634" column="46" lean-forward="true" selection-start-line="634" selection-start-column="46" selection-end-line="634" selection-end-column="46" />
           <folding />
         </state>
       </provider>
