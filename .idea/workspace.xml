@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/ods.pug" afterPath="$PROJECT_DIR$/templates/views/ods.pug" />
-    </list>
+    <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +15,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="549" column="36" lean-forward="true" selection-start-line="549" selection-start-column="36" selection-end-line="549" selection-end-column="36" />
+            <state relative-caret-position="59">
+              <caret line="521" column="0" lean-forward="true" selection-start-line="521" selection-start-column="0" selection-end-line="521" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -461,14 +459,7 @@
       <workItem from="1538853821785" duration="3721000" />
       <workItem from="1539012580953" duration="14927000" />
       <workItem from="1539095351338" duration="5691000" />
-      <workItem from="1539180786682" duration="7138000" />
-    </task>
-    <task id="LOCAL-00186" summary="visualize ods">
-      <created>1539013109332</created>
-      <option name="number" value="00186" />
-      <option name="presentableId" value="LOCAL-00186" />
-      <option name="project" value="LOCAL" />
-      <updated>1539013109336</updated>
+      <workItem from="1539180786682" duration="7299000" />
     </task>
     <task id="LOCAL-00187" summary="visualize ods">
       <created>1539013624575</created>
@@ -806,11 +797,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539188417115</updated>
     </task>
-    <option name="localTasksCounter" value="235" />
+    <task id="LOCAL-00235" summary="visualize ods">
+      <created>1539188573638</created>
+      <option name="number" value="00235" />
+      <option name="presentableId" value="LOCAL-00235" />
+      <option name="project" value="LOCAL" />
+      <updated>1539188573638</updated>
+    </task>
+    <option name="localTasksCounter" value="236" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151728000" />
+    <option name="totallyTimeSpent" value="151889000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1212,8 +1210,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="549" column="36" lean-forward="true" selection-start-line="549" selection-start-column="36" selection-end-line="549" selection-end-column="36" />
+        <state relative-caret-position="59">
+          <caret line="521" column="0" lean-forward="true" selection-start-line="521" selection-start-column="0" selection-end-line="521" selection-end-column="0" />
           <folding />
         </state>
       </provider>
