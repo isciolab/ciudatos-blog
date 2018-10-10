@@ -753,6 +753,38 @@ block js
                     })
                 }
 
+
+                if (vizcityindicadoresciudad != null) {
+                    jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                        if (ciudad != "") {
+
+                            sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
+                        }
+                    })
+                }
+
+                if (vizcityprogresohistorico != null) {
+                    jQuery.each(vizcityprogresohistorico.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                        if (ciudad != "") {
+
+                            sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
+                        }
+                    })
+                }
+
+                if (vizcityindicadorestrazadores != null) {
+                    jQuery.each(vizcityindicadorestrazadores.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                        if (ciudad != "") {
+
+                            sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
+                        }
+                    })
+                }
+
+
                 if(vizcitymapadecalorporciudad!=null) {
                     var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
                     if (ciudad != "") {
