@@ -511,9 +511,10 @@ block js
 
             var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet();
             var fieldname = "Grupo";
-            var value = $("#changeGrupoodsgrupociudades1 option:selected").text();
+            var text = $("#changeGrupoodsgrupociudades1 option:selected").text();
+            var value = $("#changeGrupoodsgrupociudades1 option:selected").val();
             if (value != "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+                sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
             }
             else {
                 vizodsgrupoodsgrupociudades1.dispose();
@@ -523,10 +524,11 @@ block js
         function changeGrupoodsgrupociudades2() {
             var sheet = vizodsgrupoodsgrupociudades2.getWorkbook().getActiveSheet();
             var fieldname = "Grupo";
-            var value = $("#changeGrupoodsgrupociudades2 option:selected").text();
+            var text = $("#changeGrupoodsgrupociudades2 option:selected").text();
+            var value = $("#changeGrupoodsgrupociudades2 option:selected").val();
             console.log(value);
             if (value != "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+                sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
             }
             else {
                 vizodsgrupoodsgrupociudades2.dispose();
@@ -536,9 +538,10 @@ block js
         function changeGrupoodsgrupociudades3() {
             var sheet = vizodsgrupoodsgrupociudades3.getWorkbook().getActiveSheet();
             var fieldname = "Grupo";
-            var value = $("#changeGrupoodsgrupociudades3 option:selected").text();
+            var text = $("#changeGrupoodsgrupociudades3 option:selected").text();
+            var value = $("#changeGrupoodsgrupociudades3 option:selected").val();
             if (value != "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+                sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
             }
             else {
                 vizodsgrupoodsgrupociudades3.dispose();
@@ -548,9 +551,10 @@ block js
         function changeGrupoodsgrupociudades4() {
             var sheet = vizodsgrupoodsgrupociudades4.getWorkbook().getActiveSheet();
             var fieldname = "Grupo";
-            var value = $("#changeGrupoodsgrupociudades4 option:selected").text();
+            var text = $("#changeGrupoodsgrupociudades4 option:selected").text();
+            var value = $("#changeGrupoodsgrupociudades4 option:selected").val();
             if (value != "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+                sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
             }else{
                 vizodsgrupoodsgrupociudades4.dispose();
             }
