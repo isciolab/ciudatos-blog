@@ -435,7 +435,7 @@ block js
                     options = {
                         hideTabs: true,
                         onFirstInteractive: function () {
-                            //initdashboardodstrazador();
+                            initmapadecalorporods();
 
 
                             var head = $("#odsdashboardinfo iframe").contents().find("head");
@@ -443,50 +443,7 @@ block js
                                 '.tab-toolbar{display:none!important}; ' +
                                 '</style>';
                             $(head).append(css);
-                            /*vizodsdashboardselector.addEventListener('filterchange', function (event) {
 
-                             var fieldname = event.getFieldName();
-                             console.log(fieldname);
-                             if (fieldname == 'ods concat') {
-                             event.getFilterAsync().then(function (field) {
-
-                             var filtervalue = field.getAppliedValues();
-                             console.log(filtervalue);
-                             console.log(filtervalue[0].value);
-
-                             odsConcatFilter(filtervalue[0].value);
-
-
-                             });
-                             }
-
-                             if (fieldname == 'Name (Targets)') {
-                             event.getFilterAsync().then(function (field) {
-
-                             var filtervalue = field.getAppliedValues();
-                             console.log(filtervalue);
-                             console.log(filtervalue[0].value);
-                             metaFIlter(filtervalue[0].value);
-
-
-
-                             });
-                             }
-                             if (fieldname == 'Indicador') {
-                             event.getFilterAsync().then(function (field) {
-
-                             var filtervalue = field.getAppliedValues();
-                             console.log(filtervalue);
-                             console.log(filtervalue[0].value);
-
-                             inicadorFIlter(filtervalue[0].value);
-
-
-                             });
-                             }
-
-
-                             });*/
 
 
                         }
@@ -494,7 +451,7 @@ block js
                 vizodsdashboardinfo = new tableau.Viz(containerDiv, url, options);
             }else{
 
-               // initdashboardodstrazador();
+                initmapadecalorporods();
             }
         }
 
