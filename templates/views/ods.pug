@@ -617,7 +617,13 @@ block js
                     };
                 vizcityindicadorestrazadores = new tableau.Viz(containerDiv, url, options);
             }else{
-                initvizcitymapadecalorporciudad();
+
+                vizcityindicadorestrazadores.dispose();
+                $("#cityindicadorestrazadores").html('');
+                vizcityindicadorestrazadores = undefined;
+                initvizcityindicadorestrazadores();
+
+
             }
 
          }
@@ -639,6 +645,12 @@ block js
 
                 vizcitymapadecalorporciudad = new tableau.Viz(containerDiv, url, options);
             }else{
+
+
+                vizcitymapadecalorporciudad.dispose();
+                $("#citymapadecalorporciudad").html('');
+                vizcitymapadecalorporciudad = undefined;
+                initvizcitymapadecalorporciudad();
 
             }
 
