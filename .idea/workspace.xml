@@ -17,8 +17,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="634" column="46" lean-forward="true" selection-start-line="634" selection-start-column="46" selection-end-line="634" selection-end-column="46" />
+            <state relative-caret-position="408">
+              <caret line="453" column="40" lean-forward="true" selection-start-line="453" selection-start-column="40" selection-end-line="453" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -153,10 +153,10 @@
       <find>Indicador de ODS por grupo de ciudades</find>
       <find>initoodsgrupociudades1</find>
       <find>initoodtrazadorsgrupociudades1</find>
-      <find>initdashboardodstrazador</find>
       <find>odsgrupoodsgrupociudades1</find>
       <find>odsgrupoodstrazadorgrupociudades1</find>
       <find>changeGrupoodstrazadorgrupociudades1</find>
+      <find>initdashboardodstrazador</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -461,14 +461,7 @@
       <workItem from="1538853821785" duration="3721000" />
       <workItem from="1539012580953" duration="14927000" />
       <workItem from="1539095351338" duration="5691000" />
-      <workItem from="1539180786682" duration="10506000" />
-    </task>
-    <task id="LOCAL-00187" summary="visualize ods">
-      <created>1539013624575</created>
-      <option name="number" value="00187" />
-      <option name="presentableId" value="LOCAL-00187" />
-      <option name="project" value="LOCAL" />
-      <updated>1539013624575</updated>
+      <workItem from="1539180786682" duration="10745000" />
     </task>
     <task id="LOCAL-00188" summary="visualize ods">
       <created>1539013718555</created>
@@ -806,11 +799,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539188573638</updated>
     </task>
-    <option name="localTasksCounter" value="236" />
+    <task id="LOCAL-00236" summary="visualize ods">
+      <created>1539192850420</created>
+      <option name="number" value="00236" />
+      <option name="presentableId" value="LOCAL-00236" />
+      <option name="project" value="LOCAL" />
+      <updated>1539192850420</updated>
+    </task>
+    <option name="localTasksCounter" value="237" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155096000" />
+    <option name="totallyTimeSpent" value="155335000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1212,8 +1212,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="634" column="46" lean-forward="true" selection-start-line="634" selection-start-column="46" selection-end-line="634" selection-end-column="46" />
+        <state relative-caret-position="408">
+          <caret line="453" column="40" lean-forward="true" selection-start-line="453" selection-start-column="40" selection-end-line="453" selection-end-column="40" />
           <folding />
         </state>
       </provider>
