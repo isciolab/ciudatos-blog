@@ -401,6 +401,17 @@ block content
                                     </select>
                                 </div>
                             </div>
+
+
+                            <div class="col-md-3 col-md-offset-3"> Seleccione año ver información en ODS
+                            </div>
+                            <div class="col-md-3">
+                                <div class="select_box">
+                                    <select id="changeYearcityindicadoresciudad" class="form-control changeYear" onchange="changeYearcityindicadoresciudad();">
+
+                                    </select>
+                                </div>
+                            </div>
                             <div class="col-md-12" >
                                 <h4 class="text-center">Indicadores de ODS mas Grupos de ciudades  </h3>
                             </div>
@@ -1282,6 +1293,48 @@ block js
             }
             if (vizodsgrupoodsgrupociudades4 != null) {
                 var sheet = vizodsgrupoodsgrupociudades4.getWorkbook().getActiveSheet()
+
+                if (ano != "") {
+
+                    sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                }
+
+            }
+        }
+
+        function changeYearcityindicadoresciudad() {
+            var ano = $("#changeYearcityindicadoresciudad").val();
+            var fieldname = "Date From";
+
+            if (vizcityindicadoresciudad1 != null) {
+                var sheet = vizcityindicadoresciudad1.getWorkbook().getActiveSheet()
+
+                if (ano != "") {
+
+                    sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                }
+
+            }
+            if (vizcityindicadoresciudad2 != null) {
+                var sheet = vizcityindicadoresciudad2.getWorkbook().getActiveSheet()
+
+                if (ano != "") {
+
+                    sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                }
+
+            }
+            if (vizcityindicadoresciudad3 != null) {
+                var sheet = vizcityindicadoresciudad3.getWorkbook().getActiveSheet()
+
+                if (ano != "") {
+
+                    sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                }
+
+            }
+            if (vizcityindicadoresciudad4 != null) {
+                var sheet = vizcityindicadoresciudad4.getWorkbook().getActiveSheet()
 
                 if (ano != "") {
 
