@@ -312,21 +312,21 @@ block content
                                 <div class="row" id="">
                                     <div class="col-md-4">
                                         <div class="select_box">
-                                            <select id="changeOdsConcat" class="form-control" onchange="odsConcatFilter();">
+                                            <select id="changeOdsConcat2" class="form-control" onchange="odsConcatFilterCity();">
                                                 <option value="">Seleccione aquí:</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="select_box">
-                                            <select id="changeMeta" class="form-control" onchange="metaFIlter();">
+                                            <select id="changeMeta2" class="form-control" onchange="metaFIlterCity();">
                                                 <option value="">Seleccione aquí:</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="select_box">
-                                            <select id="changeIndicador" class="form-control" onchange="inicadorFIlter();">
+                                            <select id="changeIndicador2" class="form-control" onchange="inicadorFIlterCity();">
                                                 <option value="">Seleccione aquí:</option>
                                             </select>
                                         </div>
@@ -464,6 +464,7 @@ block js
 
                     })
                     $("#changeOdsConcat").html(html);
+                    $("#changeOdsConcat2").html(html);
 
 
                 }
@@ -1273,6 +1274,42 @@ block js
 
 
 
+
+        function odsConcatFilterCity() {
+
+
+            var ods = $("#changeOdsConcat2 option:selected").text();
+            console.log(ods);
+            $.ajax({
+                url: 'http://ciudatos.com:8080/api/targets/getTargets/',
+                dataType: 'json',
+                type: 'GET',
+                data: {goal_id: $("#changeOdsConcat2").val()},
+                success: function (data) {
+                    var html = '<option value="">Seleccione aquí:</option>';
+                    jQuery.each(data, function (i, value) {
+                        html += '<option value=' + value.id + '>' + value.name + '</option>';
+
+                    })
+                    $("#changeMeta2").html(html);
+
+                }
+            })
+
+
+            var fieldname = "ods concat";
+
+
+
+
+
+        }
+
+
+
+
+
+
         //city
         function cityFilter() {
             var ciudad = $("#changeCity option:selected").text();
@@ -1501,6 +1538,33 @@ block js
 
 
         }
+        function inicadorFIlterCity(){
+
+
+            var indicador = $("#changeIndicador2 option:selected").text();
+
+            console.log(indicador);
+            var fieldname = "Indicador";
+            if (activetab == 'CIUDADES') {
+                if(vizcitivabsoluto!=null) {
+                    var sheet = vizcitivabsoluto.getWorkbook().getActiveSheet().getWorksheets().get("indicadr");
+                    if (indicador != "") {
+
+                        sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
+                    }
+                }
+                if(vizcitiprogreso!=null) {
+                    var sheet = vizcitiprogreso.getWorkbook().getActiveSheet().getWorksheets().get("indicadr");
+                    if (indicador != "") {
+
+                        sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
+                    }
+                }
+
+            }
+
+
+        }
 
         function metaFIlter(){
 
@@ -1615,6 +1679,31 @@ block js
 
             }
 
+
+
+
+        }
+
+        function metaFIlterCity() {
+
+            var value = $("#changeMeta2 option:selected").text();
+
+            $.ajax({
+                url: 'http://ciudatos.com:8080/api/indicators/getIndicators/',
+                dataType: 'json',
+                type: 'GET',
+                data: {target_id: $("#changeMeta2").val()},
+                success: function (data) {
+                    var html = '<option value="">Seleccione aquí:</option>';
+                    jQuery.each(data, function (i, value) {
+                        html += '<option value=' + value.id + '>' + value.name + '</option>';
+
+                    })
+                    $("#changeIndicador2").html(html);
+
+
+                }
+            })
 
 
 
