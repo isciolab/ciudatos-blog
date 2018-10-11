@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="visualize ods">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/ods.pug" afterPath="$PROJECT_DIR$/templates/views/ods.pug" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +17,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="375" column="46" lean-forward="false" selection-start-line="375" selection-start-column="46" selection-end-line="375" selection-end-column="46" />
+            <state relative-caret-position="467">
+              <caret line="1103" column="46" lean-forward="false" selection-start-line="1103" selection-start-column="46" selection-end-line="1103" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -128,7 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>indicador de ods por grup</find>
       <find>changeyea</find>
       <find>odsgrupo</find>
       <find>changeYear</find>
@@ -139,7 +137,6 @@
       <find>cityDep</find>
       <find>changeGrupoodsgrupociudades1</find>
       <find>changeYearodsgrupociudades</find>
-      <find>initoodtrazadorsgrupociudades4</find>
       <find>changeYearodstrazadorgrupociudades</find>
       <find>changemapadecalorciudades</find>
       <find>indicador de ods</find>
@@ -154,10 +151,12 @@
       <find>change</find>
       <find>changeye</find>
       <find>elecicone un año para ver la información de este indicador</find>
-      <find>vizcityindicadoresciudad1</find>
       <find>vizcityindicadoresciudad</find>
       <find>cityindicadoresciudad1</find>
       <find>cityindicadoresciudad</find>
+      <find>initoodtrazadorsgrupociudades4</find>
+      <find>vizcityindicadoresciudad1</find>
+      <find>vizcityindicadoresciudad2</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -360,7 +359,7 @@
       <workItem from="1539012580953" duration="14927000" />
       <workItem from="1539095351338" duration="5691000" />
       <workItem from="1539180786682" duration="11757000" />
-      <workItem from="1539264719701" duration="11442000" />
+      <workItem from="1539264719701" duration="11951000" />
     </task>
     <task id="LOCAL-00190" summary="visualize ods">
       <created>1539015614904</created>
@@ -709,7 +708,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167789000" />
+    <option name="totallyTimeSpent" value="168298000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1111,8 +1110,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="375" column="46" lean-forward="false" selection-start-line="375" selection-start-column="46" selection-end-line="375" selection-end-column="46" />
+        <state relative-caret-position="467">
+          <caret line="1103" column="46" lean-forward="false" selection-start-line="1103" selection-start-column="46" selection-end-line="1103" selection-end-column="46" />
           <folding />
         </state>
       </provider>

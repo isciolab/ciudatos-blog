@@ -369,21 +369,49 @@ block content
 
                         </div>
                         <div class="row" id='cityindicadoresciudad' >
+
+                            <div class="col-md-3">
+                                <div class="select_box">
+                                    <select id="changecityindicadoresciudad1" class="form-control" onchange="initcityindicadoresciudad1();">
+                                     <option value="">ODS:</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="select_box">
+                                    <select id="changecityindicadoresciudad2" class="form-control" onchange="initcityindicadoresciudad2();">
+                                     <option value="">ODS:</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="select_box">
+                                    <select id="changecityindicadoresciudad3" class="form-control" onchange="initcityindicadoresciudad3();">
+                                        <option value="">ODS:</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="select_box">
+                                    <select id="changecityindicadoresciudad4" class="form-control" onchange="initcityindicadoresciudad4();">
+                                         <option value="">ODS:</option>
+                                    </select>
+                                </div>
+                            </div>
                             <div class="col-md-12" >
-                                <h4 class="text-center">Indicadores de ODS por ciudad + Grupos de ciudades  </h3>
-                                <br><p class="text-center">En este grupo de gráficas puede ver la ciudad selecionada comparada con las demás ciudades de su grupo y con los indicadores de la ODS seleccionada</p>
+                                <h4 class="text-center">Indicadores de ODS mas Grupos de ciudades  </h3>
+                                   </div>
+                            <div class="col-md-6">
+                                <div  id='cityindicadoresciudad1'  style='position: relative; width: auto; max-height:300px'></div>
                             </div>
                             <div class="col-md-6">
-                                <div  id='cityindicadoresciudad1'  style='position: relative; width: auto; height:auto'></div>
+                                <div  id='cityindicadoresciudad2'  style='position: relative; width: auto; max-heigh:300px'></div>
                             </div>
                             <div class="col-md-6">
-                                <div  id='cityindicadoresciudad2'  style='position: relative; width: auto; height:auto'></div>
+                                <div  id='cityindicadoresciudad3'  style='position: relative; width: auto; max-heigh:300px'></div>
                             </div>
                             <div class="col-md-6">
-                                <div  id='cityindicadoresciudad3'  style='position: relative; width: auto; height:auto'></div>
-                            </div>
-                            <div class="col-md-6">
-                                <div  id='cityindicadoresciudad4'  style='position: relative; width: auto; height:auto'></div>
+                                <div  id='cityindicadoresciudad4'  style='position: relative; width: auto; max-heigh:300px'></div>
                             </div>
                         </div>
                         <div class="row">
@@ -905,6 +933,71 @@ block js
         }
 
 
+        function initcityindicadoresciudad1() {
+
+            if (vizcityindicadoresciudad1 == null) {
+                var containerDiv = document.getElementById("cityindicadoresciudad1"),
+                    url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+
+                        }
+                    };
+                vizcityindicadoresciudad1 = new tableau.Viz(containerDiv, url, options);
+            }
+
+        }
+
+        function initcityindicadoresciudad2() {
+
+            if (vizcityindicadoresciudad2 == null) {
+                var containerDiv = document.getElementById("cityindicadoresciudad2"),
+                    url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades2?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+
+                        }
+                    };
+                vizcityindicadoresciudad2 = new tableau.Viz(containerDiv, url, options);
+            }
+
+        }
+
+
+        function initcityindicadoresciudad3() {
+
+            if (vizcityindicadoresciudad3 == null) {
+                var containerDiv = document.getElementById("cityindicadoresciudad3"),
+                    url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades3?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+
+                        }
+                    };
+                vizcityindicadoresciudad3 = new tableau.Viz(containerDiv, url, options);
+            }
+
+        }
+
+        function initcityindicadoresciudad4() {
+
+            if (vizcityindicadoresciudad4 == null) {
+                var containerDiv = document.getElementById("cityindicadoresciudad4"),
+                    url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades4?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+
+                        }
+                    };
+                vizcityindicadoresciudad4 = new tableau.Viz(containerDiv, url, options);
+            }
+
+        }
+
         function initdashboardodstrazador() {
             if (vizdashboardodstrazador == null) {
                 var containerDiv = document.getElementById("dashboardodstrazador"),
@@ -1016,64 +1109,11 @@ block js
             }
 
 
-            initvizcityindicadoresciudad();
-
-
-        }
-
-        function initvizcityindicadoresciudad() {
-            if (vizcityindicadoresciudad1 == null) {
-                var containerDiv = document.getElementById("cityindicadoresciudad1"),
-                    url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                    options = {
-                        hideTabs: true,
-                        onFirstInteractive: function () {
-
-                        }
-                    };
-                vizcityindicadoresciudad1 = new tableau.Viz(containerDiv, url, options);
-            }
-
-
-            if (vizcityindicadoresciudad2 == null) {
-                var containerDiv = document.getElementById("cityindicadoresciudad2"),
-                    url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades2?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                    options = {
-                        hideTabs: true,
-                        onFirstInteractive: function () {
-
-                        }
-                    };
-                vizcityindicadoresciudad2 = new tableau.Viz(containerDiv, url, options);
-            }
-
-
-            if (vizcityindicadoresciudad3 == null) {
-                var containerDiv = document.getElementById("cityindicadoresciudad3"),
-                    url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades3?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                    options = {
-                        hideTabs: true,
-                        onFirstInteractive: function () {
-
-                        }
-                    };
-                vizcityindicadoresciudad3 = new tableau.Viz(containerDiv, url, options);
-            }
-            if (vizcityindicadoresciudad4 == null) {
-                var containerDiv = document.getElementById("cityindicadoresciudad4"),
-                    url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades4?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                    options = {
-                        hideTabs: true,
-                        onFirstInteractive: function () {
-
-                        }
-                    };
-                vizcityindicadoresciudad4 = new tableau.Viz(containerDiv, url, options);
-            }
-
-
             initvizcityprogresohistorico();
+
+
         }
+
 
         function initvizcityprogresohistorico() {
             if (vizcityprogresohistorico == null) {
