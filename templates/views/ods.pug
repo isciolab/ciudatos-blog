@@ -368,13 +368,22 @@ block content
                             </div>
 
                         </div>
-                        <div class="row">
+                        <div class="row" id='cityindicadoresciudad' >
                             <div class="col-md-12" >
                                 <h4 class="text-center">Indicadores de ODS por ciudad + Grupos de ciudades  </h3>
                                 <br><p class="text-center">En este grupo de gráficas puede ver la ciudad selecionada comparada con las demás ciudades de su grupo y con los indicadores de la ODS seleccionada</p>
                             </div>
-                            <div class="col-md-12">
-                                <div id='cityindicadoresciudad'  style='position: relative; width: auto; height:auto'></div>
+                            <div class="col-md-6">
+                                <div  id='cityindicadoresciudad1'  style='position: relative; width: auto; height:auto'></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div  id='cityindicadoresciudad2'  style='position: relative; width: auto; height:auto'></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div  id='cityindicadoresciudad3'  style='position: relative; width: auto; height:auto'></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div  id='cityindicadoresciudad4'  style='position: relative; width: auto; height:auto'></div>
                             </div>
                         </div>
                         <div class="row">
@@ -435,11 +444,15 @@ block js
         var vizcitiprogreso;
         var vizcitydeprmentmap;
 
-        var vizcityindicadoresciudad;
+
+        var vizcityindicadoresciudad1;
+        var vizcityindicadoresciudad2;
+        var vizcityindicadoresciudad3;
+        var vizcityindicadoresciudad4;
         var vizcityprogresohistorico;
         var vizcityindicadorestrazadores;
         var vizcitymapadecalorporciudad;
-        var activetab ="ODS";
+        var activetab = "ODS";
         $(document).ready(function () {
             //ods
             //initodsdashboardselector();
@@ -452,7 +465,7 @@ block js
                 success: function (data) {
                     var html = '<option value="">Seleccione aquí:</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option data-img='+value.avatar.url+' data-group='+value.group_cities_id+' value=' + value.name + '>' + value.name + '</option>';
+                        html += '<option data-img=' + value.avatar.url + ' data-group=' + value.group_cities_id + ' value=' + value.name + '>' + value.name + '</option>';
 
                     })
                     $("#changeCity").html(html);
@@ -468,7 +481,7 @@ block js
                 success: function (data) {
                     var html = '<option value="">Seleccione aquí:</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option value=' + value.id+'>' + value.number + ' ' + value.name + '</option>';
+                        html += '<option value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
 
                     })
                     $("#changeOdsConcat").html(html);
@@ -485,7 +498,7 @@ block js
                 success: function (data) {
                     var html = '<option value="">Grupos de ciudades:</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option value=' + value.id+'>'+ value.name + '</option>';
+                        html += '<option value=' + value.id + '>' + value.name + '</option>';
 
                     })
                     $("#changeGrupoodsgrupociudades1").html(html);
@@ -504,7 +517,7 @@ block js
             $("#odsselectordashboard2").sticky({topSpacing: 40});
             $('.nav-pills a').on('shown.bs.tab', function (event) {
                 console.log('cambie de pestaña');
-                 activetab = $(event.target).text();         // active tab
+                activetab = $(event.target).text();         // active tab
                 var y = $(event.relatedTarget).text();  // previous tab
                 if (activetab == 'CIUDADES') {
                     $("#cityselectordashboard2").sticky({topSpacing: 40});
@@ -512,7 +525,7 @@ block js
 
                     initvizcitydeprmentmap();
 
-                }else{
+                } else {
                     $("#cityselectordashboard2").unstick();
                     $("#odsselectordashboard2").sticky({topSpacing: 40});
                     initodsdashboardinfo();
@@ -539,7 +552,7 @@ block js
                 options = {
                     hideTabs: true,
                     onFirstInteractive: function () {
-                       // $("#odsdashboardselector").sticky({topSpacing: 40});
+                        // $("#odsdashboardselector").sticky({topSpacing: 40});
                         $(".tab-toolbar").css('display', 'none');
                         initodsdashboardinfo();
 
@@ -550,7 +563,7 @@ block js
 
         function initodsdashboardinfo() {
 
-            if(vizodsdashboardinfo==null) {
+            if (vizodsdashboardinfo == null) {
                 var containerDiv = document.getElementById("odsdashboardinfo"),
                     url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-info?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
@@ -566,11 +579,10 @@ block js
                             $(head).append(css);
 
 
-
                         }
                     };
                 vizodsdashboardinfo = new tableau.Viz(containerDiv, url, options);
-            }else{
+            } else {
 
                 initmapadecalorporods();
             }
@@ -578,7 +590,7 @@ block js
 
 
         function initmapadecalorporods() {
-            if(vizmapadecalorporods==null) {
+            if (vizmapadecalorporods == null) {
                 console.log(vizmapadecalorporods);
                 var containerDiv = document.getElementById("mapadecalorporods"),
                     url = "https://public.tableau.com/views/Ciudatos/Mapadecalorporods?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
@@ -596,11 +608,11 @@ block js
                     };
                 vizmapadecalorporods = new tableau.Viz(containerDiv, url, options);
                 console.log(vizmapadecalorporods);
-            }else{
+            } else {
 
                 vizmapadecalorporods.dispose();
                 $("#mapadecalorporods").html('');
-                vizmapadecalorporods=undefined;
+                vizmapadecalorporods = undefined;
                 initmapadecalorporods();
             }
         }
@@ -616,7 +628,7 @@ block js
             }
             else {
                 vizodsgrupoodsgrupociudades1.dispose();
-                vizodsgrupoodsgrupociudades1= undefined;
+                vizodsgrupoodsgrupociudades1 = undefined;
             }
         }
 
@@ -631,7 +643,7 @@ block js
             }
             else {
                 vizodsgrupoodsgrupociudades2.dispose();
-                vizodsgrupoodsgrupociudades2= undefined;
+                vizodsgrupoodsgrupociudades2 = undefined;
             }
         }
 
@@ -645,7 +657,7 @@ block js
             }
             else {
                 vizodsgrupoodsgrupociudades3.dispose();
-                vizodsgrupoodsgrupociudades3= undefined;
+                vizodsgrupoodsgrupociudades3 = undefined;
             }
         }
 
@@ -656,9 +668,9 @@ block js
             var value = $("#changeGrupoodsgrupociudades4").val();
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
-            }else{
+            } else {
                 vizodsgrupoodsgrupociudades4.dispose();
-                vizodsgrupoodsgrupociudades4= undefined;
+                vizodsgrupoodsgrupociudades4 = undefined;
             }
         }
 
@@ -726,24 +738,23 @@ block js
 
         function initoodsgrupociudades1() {
 
-                if (vizodsgrupoodsgrupociudades1 == null) {
-                    var containerDiv = document.getElementById("odsgrupoodsgrupociudades1"),
-                        url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                        options = {
-                            hideTabs: true,
-                            onFirstInteractive: function () {
+            if (vizodsgrupoodsgrupociudades1 == null) {
+                var containerDiv = document.getElementById("odsgrupoodsgrupociudades1"),
+                    url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
 
-                                changeGrupoodsgrupociudades1();
-                                changeYearodsgrupociudades();
+                            changeGrupoodsgrupociudades1();
+                            changeYearodsgrupociudades();
 
-                            }
-                        };
-                    vizodsgrupoodsgrupociudades1 = new tableau.Viz(containerDiv, url, options);
-                }else{
-                    changeGrupoodsgrupociudades1();
-                    changeYearodsgrupociudades();
-                }
-
+                        }
+                    };
+                vizodsgrupoodsgrupociudades1 = new tableau.Viz(containerDiv, url, options);
+            } else {
+                changeGrupoodsgrupociudades1();
+                changeYearodsgrupociudades();
+            }
 
 
         }
@@ -764,19 +775,16 @@ block js
                         }
                     };
                 vizodsgrupoodsgrupociudades2 = new tableau.Viz(containerDiv, url, options);
-            }else{
+            } else {
                 changeGrupoodsgrupociudades2();
                 changeYearodsgrupociudades();
             }
-
-
 
 
         }
 
 
         function initoodsgrupociudades3() {
-
 
 
             if (vizodsgrupoodsgrupociudades3 == null) {
@@ -791,7 +799,7 @@ block js
                         }
                     };
                 vizodsgrupoodsgrupociudades3 = new tableau.Viz(containerDiv, url, options);
-            }else{
+            } else {
                 changeGrupoodsgrupociudades3();
                 changeYearodsgrupociudades();
             }
@@ -898,7 +906,7 @@ block js
 
 
         function initdashboardodstrazador() {
-            if(vizdashboardodstrazador==null) {
+            if (vizdashboardodstrazador == null) {
                 var containerDiv = document.getElementById("dashboardodstrazador"),
                     url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-trazadorporgrupo?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
@@ -908,7 +916,7 @@ block js
                         }
                     };
                 vizdashboardodstrazador = new tableau.Viz(containerDiv, url, options);
-            }else{
+            } else {
                 initmapadecalorporods();
             }
         }
@@ -929,8 +937,6 @@ block js
                         initvizcitydeprmentmap();
 
 
-
-
                     }
                 };
             vizcityselectordashboard = new tableau.Viz(containerDiv, url, options);
@@ -938,7 +944,7 @@ block js
 
 
         function initvizcitidashboardinfo() {
-            if(vizcitidashboardinfo==null) {
+            if (vizcitidashboardinfo == null) {
                 var containerDiv = document.getElementById("citidashboardinfo"),
                     url = "https://public.tableau.com/views/Ciudatos/CityDashboardinfo?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
@@ -953,7 +959,7 @@ block js
                         }
                     };
                 vizcitidashboardinfo = new tableau.Viz(containerDiv, url, options);
-            }else{
+            } else {
                 initvizcityprogreovsabsoluto();
             }
 
@@ -996,7 +1002,6 @@ block js
             }
 
 
-
             if (vizcitiprogreso == null) {
                 var containerDiv = document.getElementById("cityprogreso"),
                     url = "https://public.tableau.com/views/Ciudatos/IndexScorePorindicador?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
@@ -1011,34 +1016,67 @@ block js
             }
 
 
-
             initvizcityindicadoresciudad();
-
 
 
         }
 
         function initvizcityindicadoresciudad() {
-            if(vizcityindicadoresciudad==null) {
-                var containerDiv = document.getElementById("cityindicadoresciudad"),
-                    url = "https://public.tableau.com/views/Ciudatos/CityDashboardindicadoresporciudad?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+            if (vizcityindicadoresciudad1 == null) {
+                var containerDiv = document.getElementById("cityindicadoresciudad1"),
+                    url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
                         hideTabs: true,
                         onFirstInteractive: function () {
-                            initvizcityprogresohistorico();
-
-
 
                         }
                     };
-                vizcityindicadoresciudad = new tableau.Viz(containerDiv, url, options);
-            }else{
-                initvizcityprogresohistorico();
+                vizcityindicadoresciudad1 = new tableau.Viz(containerDiv, url, options);
             }
+
+
+            if (vizcityindicadoresciudad2 == null) {
+                var containerDiv = document.getElementById("cityindicadoresciudad2"),
+                    url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades2?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+
+                        }
+                    };
+                vizcityindicadoresciudad2 = new tableau.Viz(containerDiv, url, options);
+            }
+
+
+            if (vizcityindicadoresciudad3 == null) {
+                var containerDiv = document.getElementById("cityindicadoresciudad3"),
+                    url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades3?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+
+                        }
+                    };
+                vizcityindicadoresciudad3 = new tableau.Viz(containerDiv, url, options);
+            }
+            if (vizcityindicadoresciudad4 == null) {
+                var containerDiv = document.getElementById("cityindicadoresciudad4"),
+                    url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades4?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+
+                        }
+                    };
+                vizcityindicadoresciudad4 = new tableau.Viz(containerDiv, url, options);
+            }
+
+
+            initvizcityprogresohistorico();
         }
 
         function initvizcityprogresohistorico() {
-            if(vizcityprogresohistorico==null) {
+            if (vizcityprogresohistorico == null) {
                 var containerDiv = document.getElementById("cityprogresohistorico"),
                     url = "https://public.tableau.com/views/Ciudatos/CityDashboard-progresohistorico?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
@@ -1049,7 +1087,7 @@ block js
                         }
                     };
                 vizcityprogresohistorico = new tableau.Viz(containerDiv, url, options);
-            }else{
+            } else {
                 initvizcityindicadorestrazadores();
             }
         }
@@ -1137,7 +1175,7 @@ block js
 
         function initvizcityindicadorestrazadores() {
 
-            if(vizcityindicadorestrazadores==null) {
+            if (vizcityindicadorestrazadores == null) {
 
                 var containerDiv = document.getElementById("cityindicadorestrazadores"),
                     url = "https://public.tableau.com/views/Ciudatos/IndicadorestrazadoresporODS?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
@@ -1150,7 +1188,7 @@ block js
                         }
                     };
                 vizcityindicadorestrazadores = new tableau.Viz(containerDiv, url, options);
-            }else{
+            } else {
 
                 vizcityindicadorestrazadores.dispose();
                 $("#cityindicadorestrazadores").html('');
@@ -1160,10 +1198,10 @@ block js
 
             }
 
-         }
+        }
 
         function initvizcitymapadecalorporciudad() {
-            if(vizcitymapadecalorporciudad==null) {
+            if (vizcitymapadecalorporciudad == null) {
 
                 var containerDiv = document.getElementById("citymapadecalorporciudad"),
                     url = "https://public.tableau.com/views/Ciudatos/Mapadecalorbycity?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
@@ -1178,7 +1216,7 @@ block js
                     };
 
                 vizcitymapadecalorporciudad = new tableau.Viz(containerDiv, url, options);
-            }else{
+            } else {
 
 
                 vizcitymapadecalorporciudad.dispose();
@@ -1198,17 +1236,17 @@ block js
         function odsConcatFilter() {
 
 
-           var  ods = $("#changeOdsConcat option:selected").text();
+            var ods = $("#changeOdsConcat option:selected").text();
             console.log(ods);
             $.ajax({
                 url: 'http://ciudatos.com:8080/api/targets/getTargets/',
                 dataType: 'json',
                 type: 'GET',
-                data:{goal_id: $("#changeOdsConcat").val()},
+                data: {goal_id: $("#changeOdsConcat").val()},
                 success: function (data) {
                     var html = '<option value="">Seleccione aquí:</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option value=' + value.id+'>' + value.name + '</option>';
+                        html += '<option value=' + value.id + '>' + value.name + '</option>';
 
                     })
                     $("#changeMeta").html(html);
@@ -1217,26 +1255,26 @@ block js
             })
 
 
-
             var fieldname = "ods concat";
 
 
             if (activetab == 'ODS') {
                 /*if(vizdashboardodsgrupociudades!=null) {
-                    jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-                        console.log(sheet);
-                        console.log(ods);
-                        if (ods === "") {
-                            //sheet.clearFilterAsync("ods concat");
+                 jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                 console.log(sheet);
+                 console.log(ods);
+                 if (ods === "") {
+                 //sheet.clearFilterAsync("ods concat");
 
-                        } else {
-                            sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
-                        }
-                    })
-                }*/
+                 } else {
+                 sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
+                 }
+                 })
+                 }*/
 
-                if(vizodsgrupoodsgrupociudades1!=null){
-                    var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet();                    if (ods != "") {
+                if (vizodsgrupoodsgrupociudades1 != null) {
+                    var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet();
+                    if (ods != "") {
 
                         sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
                     }
@@ -1264,7 +1302,7 @@ block js
                 }
 
 
-                if(vizodsdashboardinfo != null) {
+                if (vizodsdashboardinfo != null) {
                     jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
                         if (ods != "") {
@@ -1308,9 +1346,6 @@ block js
             var fieldname = "ods concat";
 
 
-
-
-
         }
 
 
@@ -1332,7 +1367,6 @@ block js
             //var sheet = vizIndicadores.getWorkbook().getActiveSheet();
 
             if (activetab == 'CIUDADES') {
-
 
 
                 if (vizcitiprogreso != null) {
@@ -1357,14 +1391,39 @@ block js
                 }
 
 
-                if (vizcityindicadoresciudad != null) {
-                    jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                if (vizcityindicadoresciudad1 != null) {
+                    var sheet = vizcityindicadoresciudad1.getWorkbook().getActiveSheet();
 
-                        if (ciudad != "") {
+                    if (ciudad != "") {
 
-                            sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
-                        }
-                    })
+                        sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+                    }
+                }
+                if (vizcityindicadoresciudad2 != null) {
+                    var sheet = vizcityindicadoresciudad2.getWorkbook().getActiveSheet();
+
+                    if (ciudad != "") {
+
+                        sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+                    }
+                }
+
+                if (vizcityindicadoresciudad3 != null) {
+                    var sheet = vizcityindicadoresciudad3.getWorkbook().getActiveSheet();
+
+                    if (ciudad != "") {
+
+                        sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+                    }
+                }
+                if (vizcityindicadoresciudad4 != null) {
+                    var sheet = vizcityindicadoresciudad4.getWorkbook().getActiveSheet();
+
+                    if (ciudad != "") {
+
+                        sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+                    }
+
                 }
 
                 if (vizcityprogresohistorico != null) {
@@ -1378,8 +1437,6 @@ block js
                 }
 
 
-
-
                 if (vizcitidashboardinfo != null) {
                     jQuery.each(vizcitidashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
@@ -1391,8 +1448,6 @@ block js
                 }
 
 
-
-
                 if (vizcityindicadorestrazadores != null) {
                     var sheet = vizcityindicadorestrazadores.getWorkbook().getActiveSheet();
                     if (ciudad != "") {
@@ -1402,7 +1457,7 @@ block js
                 }
 
 
-                if(vizcitymapadecalorporciudad!=null) {
+                if (vizcitymapadecalorporciudad != null) {
                     var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
                     if (ciudad != "") {
 
@@ -1421,17 +1476,46 @@ block js
 
         }
 
-        function anoFilter(ano){
+        function anoFilter(ano) {
             console.log(ano);
-            var fieldname="Date From";
+            var fieldname = "Date From";
             if (activetab == 'CIUDADES') {
-                jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                if(vizcityindicadoresciudad1!=null) {
+                    var sheet = vizcityindicadoresciudad1.getWorkbook().getActiveSheet()
 
                     if (ano != "") {
 
                         sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
                     }
-                })
+                }
+
+                if (vizcityindicadoresciudad2 != null) {
+                    var sheet = vizcityindicadoresciudad2.getWorkbook().getActiveSheet()
+
+                    if (ano != "") {
+
+                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                    }
+                }
+
+                if (vizcityindicadoresciudad3 != null) {
+                    var sheet = vizcityindicadoresciudad3.getWorkbook().getActiveSheet()
+
+                    if (ano != "") {
+
+                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                    }
+                }
+
+                if (vizcityindicadoresciudad4 != null) {
+                    var sheet = vizcityindicadoresciudad4.getWorkbook().getActiveSheet()
+
+                    if (ano != "") {
+
+                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                    }
+                }
+
 
                 if (vizcityindicadorestrazadores != null) {
                     var sheet = vizcityindicadorestrazadores.getWorkbook().getActiveSheet();
@@ -1448,10 +1532,10 @@ block js
                 if (vizmapadecalorporods != null) {
                     var sheet = vizmapadecalorporods.getWorkbook().getActiveSheet()
 
-                        if (ano != "") {
+                    if (ano != "") {
 
-                            sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
-                        }
+                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                    }
 
                 }
             }
@@ -1460,7 +1544,7 @@ block js
         }
 
 
-        function inicadorFIlter(){
+        function inicadorFIlter() {
 
 
             var indicador = $("#changeIndicador option:selected").text();
@@ -1468,7 +1552,7 @@ block js
             console.log(indicador);
             var fieldname = "Indicador";
             if (activetab == 'ODS') {
-                if(vizodsdashboardinfo!=null) {
+                if (vizodsdashboardinfo != null) {
                     var sheet = vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets().get("indicadr");
                     if (indicador != "") {
 
@@ -1478,14 +1562,14 @@ block js
 
 
                 /*
-                if (vizdashboardodsgrupociudades != null) {
-                    jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-                        if (indicador != "") {
+                 if (vizdashboardodsgrupociudades != null) {
+                 jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                 if (indicador != "") {
 
-                            sheet.applyFilterAsync("Indicador (copia 2)", indicador, tableau.FilterUpdateType.REPLACE);
-                        }
-                    })
-                }*/
+                 sheet.applyFilterAsync("Indicador (copia 2)", indicador, tableau.FilterUpdateType.REPLACE);
+                 }
+                 })
+                 }*/
 
 
                 if (vizodsgrupoodsgrupociudades1 != null) {
@@ -1518,7 +1602,6 @@ block js
                 }
 
 
-
                 if (vizdashboardodstrazador != null) {
                     jQuery.each(vizdashboardodstrazador.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
                         if (indicador != "") {
@@ -1529,24 +1612,22 @@ block js
                 }
 
 
-
                 if (vizmapadecalorporods != null) {
                     var vizmapadecalorporods = vizmapadecalorporods.getWorkbook().getActiveSheet();
 
-                        if (indicador != "") {
+                    if (indicador != "") {
 
-                            sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
-                        }
+                        sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
+                    }
 
                 }
-
 
 
             }
 
 
         }
-        function inicadorFIlterCity(){
+        function inicadorFIlterCity() {
 
 
             var indicador = $("#changeIndicador2 option:selected").text();
@@ -1554,14 +1635,14 @@ block js
             console.log(indicador);
             var fieldname = "Indicador";
             if (activetab == 'CIUDADES') {
-                if(vizcitivabsoluto!=null) {
+                if (vizcitivabsoluto != null) {
                     var sheet = vizcitivabsoluto.getWorkbook().getActiveSheet();
                     if (indicador != "") {
 
                         sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
                     }
                 }
-                if(vizcitiprogreso!=null) {
+                if (vizcitiprogreso != null) {
                     var sheet = vizcitiprogreso.getWorkbook().getActiveSheet();
                     if (indicador != "") {
 
@@ -1574,7 +1655,7 @@ block js
 
         }
 
-        function metaFIlter(){
+        function metaFIlter() {
 
             var value = $("#changeMeta option:selected").text();
 
@@ -1596,7 +1677,6 @@ block js
             })
 
 
-
             var fieldname = "Name (Targets)";
             if (activetab == 'ODS') {
 
@@ -1608,14 +1688,14 @@ block js
 
 
                 /*if (vizdashboardodsgrupociudades != null) {
-                    jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                 jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
-                        if (value != "") {
+                 if (value != "") {
 
-                            sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-                        }
-                    })
-                }*/
+                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+                 }
+                 })
+                 }*/
 
 
                 if (vizodsgrupoodsgrupociudades1 != null) {
@@ -1662,32 +1742,6 @@ block js
 
             //los de ciudad
 
-            if(activetab=='CIUDADES') {
-                if (vizcityindicadoresciudad != null) {
-                    jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-
-                        if (value != "") {
-
-                            sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-                        }
-                    })
-                }
-
-                if (vizcityprogresohistorico != null) {
-                    jQuery.each(vizcityprogresohistorico.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-
-                        if (value != "") {
-
-                            sheet.applyFilterAsync(fieldname, valuee, tableau.FilterUpdateType.REPLACE);
-                        }
-                    })
-                }
-
-
-
-            }
-
-
 
 
         }
@@ -1712,7 +1766,6 @@ block js
 
                 }
             })
-
 
 
         }
