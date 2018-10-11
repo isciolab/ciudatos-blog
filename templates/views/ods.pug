@@ -1011,10 +1011,11 @@ block js
                     url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
                         hideTabs: true,
-                        "Id (Group Cities)":grupo,
+
                         "ods concat": ods
                     };
                 vizcityindicadoresciudad1 = new tableau.Viz(containerDiv, url, options);
+                vizcityindicadoresciudad1.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
             }else{
                 changecityodsindicadoresciudad1();
             }
@@ -1030,11 +1031,13 @@ block js
                     url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades2?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
                         hideTabs: true,
-                        "Id (Group Cities)": grupo,
+
+
                         "ods concat": ods
 
                     };
                 vizcityindicadoresciudad2 = new tableau.Viz(containerDiv, url, options);
+                vizcityindicadoresciudad2.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
             }else{
                 changecityodsindicadoresciudad2();
             }
@@ -1055,6 +1058,7 @@ block js
                         "ods concat":ods
                     };
                 vizcityindicadoresciudad3 = new tableau.Viz(containerDiv, url, options);
+                vizcityindicadoresciudad3.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
             }
             else{
                 changecityodsindicadoresciudad3();
@@ -1076,6 +1080,7 @@ block js
 
                     };
                 vizcityindicadoresciudad4 = new tableau.Viz(containerDiv, url, options);
+                vizcityindicadoresciudad4.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
             }
             else {
                 changecityodsindicadoresciudad4();
