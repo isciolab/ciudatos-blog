@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="" />
+    <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/ods.pug" afterPath="$PROJECT_DIR$/templates/views/ods.pug" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +17,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="706" column="31" lean-forward="false" selection-start-line="706" selection-start-column="31" selection-end-line="706" selection-end-column="31" />
+            <state relative-caret-position="331">
+              <caret line="1036" column="89" lean-forward="false" selection-start-line="1036" selection-start-column="89" selection-end-line="1036" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -125,8 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dispose</find>
-      <find>undefined</find>
       <find>ndicador de ODS por grupo de ciudade</find>
       <find>Indicador de ODS por grupo de ciudades</find>
       <find>initoodsgrupociudades1</find>
@@ -150,11 +150,13 @@
       <find>changeYear</find>
       <find>changeYearCityProgresoVsabsoluto</find>
       <find>odsgrupoodstrazadorgrupociudades1</find>
-      <find>changeYearodsgrupociudades</find>
       <find>initvizcityindicadoresciudad</find>
       <find>anoFilter</find>
       <find>cityDep</find>
       <find>changeGrupoodsgrupociudades1</find>
+      <find>changeYearodsgrupociudades</find>
+      <find>initoodtrazadorsgrupociudades4</find>
+      <find>changeYearodstrazadorgrupociudades</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -357,7 +359,7 @@
       <workItem from="1539012580953" duration="14927000" />
       <workItem from="1539095351338" duration="5691000" />
       <workItem from="1539180786682" duration="11757000" />
-      <workItem from="1539264719701" duration="5149000" />
+      <workItem from="1539264719701" duration="5400000" />
     </task>
     <task id="LOCAL-00190" summary="visualize ods">
       <created>1539015614904</created>
@@ -706,7 +708,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161496000" />
+    <option name="totallyTimeSpent" value="161747000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1108,8 +1110,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="706" column="31" lean-forward="false" selection-start-line="706" selection-start-column="31" selection-end-line="706" selection-end-column="31" />
+        <state relative-caret-position="331">
+          <caret line="1036" column="89" lean-forward="false" selection-start-line="1036" selection-start-column="89" selection-end-line="1036" selection-end-column="89" />
           <folding />
         </state>
       </provider>

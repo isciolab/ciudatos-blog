@@ -132,7 +132,7 @@ block content
 
                             <div class="col-md-12">
                                 <div class="select_box">
-                                    <select id="changeYearodsgrupociudades" class="form-control changeYear" onchange="changeYearodsgrupociudades(value);">
+                                    <select id="changeYearodsgrupociudades" class="form-control changeYear" onchange="changeYearodsgrupociudades();">
 
                                     </select>
                                 </div>
@@ -195,7 +195,7 @@ block content
 
                             <div class="col-md-12">
                                 <div class="select_box">
-                                <select id="" class="form-control changeYear" onchange="changeYearodstrazadorgrupociudades(value);">
+                                <select id="changeYearodstrazadorgrupociudades" class="form-control changeYear" onchange="changeYearodstrazadorgrupociudades(value);">
 
                                 </select>
                                 </div>
@@ -730,11 +730,13 @@ block js
                         onFirstInteractive: function () {
 
                             changeGrupoodsgrupociudades2();
+                            changeYearodsgrupociudades();
                         }
                     };
                 vizodsgrupoodsgrupociudades2 = new tableau.Viz(containerDiv, url, options);
             }else{
                 changeGrupoodsgrupociudades2();
+                changeYearodsgrupociudades();
             }
 
 
@@ -754,12 +756,14 @@ block js
                         hideTabs: true,
                         onFirstInteractive: function () {
                             changeGrupoodsgrupociudades3();
+                            changeYearodsgrupociudades();
 
                         }
                     };
                 vizodsgrupoodsgrupociudades3 = new tableau.Viz(containerDiv, url, options);
             }else{
                 changeGrupoodsgrupociudades3();
+                changeYearodsgrupociudades();
             }
 
 
@@ -778,12 +782,14 @@ block js
                         onFirstInteractive: function () {
 
                             changeGrupoodstrazadorgrupociudades1();
+                            changeYearodstrazadorgrupociudades();
 
                         }
                     };
                 vizodsgrupoodstrazadorgrupociudades1 = new tableau.Viz(containerDiv, url, options);
             } else {
                 changeGrupoodstrazadorgrupociudades1();
+                changeYearodstrazadorgrupociudades();
             }
 
 
@@ -799,12 +805,14 @@ block js
                         onFirstInteractive: function () {
 
                             changeGrupoodstrazadorgrupociudades2();
+                            changeYearodstrazadorgrupociudades();
 
                         }
                     };
                 vizodsgrupoodstrazadorgrupociudades2 = new tableau.Viz(containerDiv, url, options);
             } else {
                 changeGrupoodstrazadorgrupociudades2();
+                changeYearodstrazadorgrupociudades();
             }
 
 
@@ -821,12 +829,14 @@ block js
                         onFirstInteractive: function () {
 
                             changeGrupoodstrazadorgrupociudades3();
+                            changeYearodstrazadorgrupociudades();
 
                         }
                     };
                 vizodsgrupoodstrazadorgrupociudades3 = new tableau.Viz(containerDiv, url, options);
             } else {
                 changeGrupoodstrazadorgrupociudades3();
+                changeYearodstrazadorgrupociudades();
             }
 
 
@@ -843,12 +853,14 @@ block js
                         onFirstInteractive: function () {
 
                             changeGrupoodstrazadorgrupociudades4();
+                            changeYearodstrazadorgrupociudades();
 
                         }
                     };
                 vizodsgrupoodstrazadorgrupociudades4 = new tableau.Viz(containerDiv, url, options);
             } else {
                 changeGrupoodstrazadorgrupociudades4();
+                changeYearodstrazadorgrupociudades();
             }
 
 
@@ -1013,7 +1025,8 @@ block js
         }
 
 
-        function changeYearodstrazadorgrupociudades(ano) {
+        function changeYearodstrazadorgrupociudades() {
+            var ano = $("#changeYearodstrazadorgrupociudades").val();
             var fieldname = "Date From";
 
             if (vizodsgrupoodstrazadorgrupociudades1 != null) {
@@ -1053,7 +1066,8 @@ block js
 
             }
         }
-        function changeYearodsgrupociudades(ano) {
+        function changeYearodsgrupociudades() {
+            var ano = $("#changeYearodsgrupociudades").val();
             var fieldname = "Date From";
 
             if (vizodsgrupoodsgrupociudades1 != null) {
