@@ -343,7 +343,7 @@ block content
 
                         <div class="row">
 
-                            <div class="col-md-12"></div>
+                            <div class="col-md-12"><br></div>
 
                             <div class="col-md-3  col-md-offset-4 text-center">
                                  <h5>Selecicone un año para ver la información </h5>
@@ -1554,14 +1554,14 @@ block js
             var fieldname = "Indicador";
             if (activetab == 'CIUDADES') {
                 if(vizcitivabsoluto!=null) {
-                    var sheet = vizcitivabsoluto.getWorkbook().getActiveSheet().getWorksheets().get("indicadr");
+                    var sheet = vizcitivabsoluto.getWorkbook().getActiveSheet();
                     if (indicador != "") {
 
                         sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
                     }
                 }
                 if(vizcitiprogreso!=null) {
-                    var sheet = vizcitiprogreso.getWorkbook().getActiveSheet().getWorksheets().get("indicadr");
+                    var sheet = vizcitiprogreso.getWorkbook().getActiveSheet();
                     if (indicador != "") {
 
                         sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
