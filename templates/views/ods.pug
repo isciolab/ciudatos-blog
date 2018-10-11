@@ -138,7 +138,7 @@ block content
                                 </div>
                             </div>
                             <div class="col-md-12" >
-                                <h5 class="text-center">Indicador de ODS por grupo de ciudades</h3>
+                                <h4 class="text-center">Indicador de ODS por grupo de ciudades</h3>
                             </div>
                             <div class="col-md-6">
                                  <div  style='position: relative; width: auto; max-height:300px' id="odsgrupoodsgrupociudades1"></div>
@@ -193,7 +193,7 @@ block content
 
 
                             <div class="col-md-12" >
-                                <h5 class="text-center">Indicador trazador de ODS por grupo de ciudades</h3>
+                                <h4 class="text-center">Indicador trazador de ODS por grupo de ciudades</h3>
                             </div>
                             <div class="col-md-6">
                                 <div  style='position: relative; width: auto; max-height:300px' id="odsgrupoodstrazadorgrupociudades1"></div>
@@ -215,11 +215,16 @@ block content
 
                         </div>
 
-                        <div class="col-md-12">
-                            <div class="select_box">
-                                <select id="changemapadecalorods" class="form-control changeYear" onchange="changemapadecalorods();">
+                        <div class="row">
+                            <div class="col-md-12" >
+                                <h4 class="text-center">Mapa de calor por ODS</h3>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="select_box">
+                                    <select id="changemapadecalorods" class="form-control changeYear" onchange="changemapadecalorods();">
 
-                                </select>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
@@ -335,6 +340,7 @@ block content
                             </div>
                         </div>
                         <div class="row">
+
                             <div class="col-md-12">
                                 <div class="select_box">
                                 <select id="" class="form-control changeYear" onchange="changeYearCityProgresoVsabsoluto(value);">
@@ -343,6 +349,10 @@ block content
                             </div>
                         </div>
                         <div class="row">
+
+                            <div class="col-md-12" >
+                                  <h4 class="text-center">Progreso VS Absoluto del indicador</h3>
+                            </div>
                             <div class="col-md-6">
                                  <div id='cityvsabsoluto' style='position: relative; width: auto; height:auto'></div>
                             </div>
@@ -352,21 +362,33 @@ block content
 
                         </div>
                         <div class="row">
+                            <div class="col-md-12" >
+                                <h4 class="text-center">Indicadores de ODS por ciudad + Grupos de ciudades  </h3><br>En este grupo de gráficas puede ver la ciudad selecionada comparada con las demás ciudades de su grupo y con los indicadores de la ODS seleccionada
+                            </div>
                             <div class="col-md-12">
                                 <div id='cityindicadoresciudad'  style='position: relative; width: auto; height:auto'></div>
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col-md-12" >
+                                <h4 class="text-center">Progreso histórico del indicador  </h3>
+                            </div>
                             <div class="col-md-12">
                                 <div id='cityprogresohistorico'  style='position: relative; width: auto; height:auto'></div>
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col-md-12" >
+                                 <h4 class="text-center">Indicadores trazadores por ODS</h3>
+                            </div>
                             <div class="col-md-12">
                                  <div id='cityindicadorestrazadores' style='position: relative; width: auto; height:auto'></div>
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col-md-12" >
+                                    <h4 class="text-center">Mapa de calor por ciudad</h3>
+                            </div>
                             <div class="col-md-12">
                                  <div id='citymapadecalorporciudad' style='position: relative; width: auto; height:auto'></div>
                             </div>
@@ -494,7 +516,7 @@ block js
             var start_year = new Date().getFullYear();
 
 
-            for (var i = start_year; i > start_year - 3; i--) {
+            for (var i = start_year; i > start_year - 4; i--) {
                 $('.changeYear').append('<option value="' + i + '">' + i + '</option>');
             }
 
