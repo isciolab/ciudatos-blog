@@ -125,6 +125,18 @@ block content
                                     </select>
                                 </div>
                             </div>
+
+                            <div class="col-md-12 text-center">
+                                    <h5>Selecicone un año para ver la información de este indicador</h5>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="select_box">
+                                    <select id="changeYearodsgrupociudades" class="form-control changeYear" onchange="changeYearodsgrupociudades(value);">
+
+                                    </select>
+                                </div>
+                            </div>
                             <div class="col-md-12" >
                                 <h5 class="text-center">Indicador de ODS por grupo de ciudades</h3>
                             </div>
@@ -175,6 +187,17 @@ block content
                                     <select id="changeGrupoodstrazadorgrupociudades4" class="form-control" onchange="initoodtrazadorsgrupociudades4();">
                                           <option value="">Grupos de ciudades:</option>
                                     </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <h5>Selecicone un año para ver la información de este indicador</h5>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="select_box">
+                                <select id="" class="form-control changeYear" onchange="changeYearodstrazadorgrupociudades(value);">
+
+                                </select>
                                 </div>
                             </div>
 
@@ -243,7 +266,7 @@ block content
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                 <img  id="imagen_city"  src="https://www.elheraldo.co/sites/default/files/styles/width_860/public/articulo/2016/04/18/panoramicas_de_barranquilla_5.jpg?itok=v1Md9Ykg"/>
+                                 <img  id="imagen_city"  src=""/>
                             </div>
                             <div class="col-md-6">
                                     <div id='citydeprmentmap'  style='position: relative; width: auto; height:300px'></div>
@@ -275,10 +298,59 @@ block content
                                 </nav>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-md-12 text-center">Seleccione un ODS, una meta y un indicador para ver su informacion
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <div id='cityprogreovsabsoluto' style='position: relative; width: auto; height:auto'></div>
+                                <div class="row" id="">
+                                    <div class="col-md-4">
+                                        <div class="select_box">
+                                            <select id="changeOdsConcat" class="form-control" onchange="odsConcatFilter();">
+                                                <option value="">Seleccione aquí:</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="select_box">
+                                            <select id="changeMeta" class="form-control" onchange="metaFIlter();">
+                                                <option value="">Seleccione aquí:</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="select_box">
+                                            <select id="changeIndicador" class="form-control" onchange="inicadorFIlter();">
+                                                <option value="">Seleccione aquí:</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                    <h5>Selecicone un año para ver la información de este indicador</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="select_box">
+                                <select id="" class="form-control changeYear" onchange="changeYearCityProgresoVsabsoluto(value);">
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                 <div id='cityvsabsoluto' style='position: relative; width: auto; height:auto'></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div id='cityprogreso' style='position: relative; width: auto; height:auto'></div>
+                            </div>
+
                         </div>
                         <div class="row">
                             <div class="col-md-12">
@@ -313,7 +385,7 @@ block js
     script.
         //ods
         var vizodsdashboardselector;
-        var vizdashboardodsgrupociudades;
+
         var vizodsgrupoodsgrupociudades1;
         var vizodsgrupoodsgrupociudades2;
         var vizodsgrupoodsgrupociudades3;
@@ -330,8 +402,10 @@ block js
         //city
         var vizcityselectordashboard;
         var vizcitidashboardinfo;
+        var vizcitivabsoluto;
+        var vizcitiprogreso;
         var vizcitydeprmentmap;
-        var vizcityprogreovsabsoluto;
+
         var vizcityindicadoresciudad;
         var vizcityprogresohistorico;
         var vizcityindicadorestrazadores;
@@ -416,6 +490,14 @@ block js
             });
 
             //$('iframe').iFrameResize({checkOrigin: false})
+
+
+            var start_year = new Date().getFullYear();
+
+
+            for (var i = start_year; i > start_year - 3; i--) {
+                $('.changeYear').append('<option value="' + i + '">' + i + '</option>');
+            }
 
         })
 
@@ -828,24 +910,7 @@ block js
 
 
                             initvizcityprogreovsabsoluto();
-                            /* vizcityselectordashboard.addEventListener('filterchange', function (event) {
 
-                             var fieldname = event.getFieldName();
-                             console.log(fieldname);
-                             if (fieldname == 'Ciudad') {
-                             event.getFilterAsync().then(function (field) {
-
-                             var filtervalue = field.getAppliedValues();
-                             console.log(filtervalue);
-                             console.log(filtervalue[0].value);
-                             cityFilter(filtervalue[0].value);
-
-
-                             });
-                             }
-
-
-                             });*/
 
                         }
                     };
@@ -853,43 +918,47 @@ block js
             }else{
                 initvizcityprogreovsabsoluto();
             }
+
+
         }
         function initvizcitydeprmentmap() {
-            if(vizcitydeprmentmap==null) {
-                var containerDiv = document.getElementById("citydeprmentmap"),
-                    url = "https://public.tableau.com/views/Ciudatos/Departmentmap?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                    options = {
-                        hideTabs: true,
-                        onFirstInteractive: function () {
-                            //  console.log('inicio lo demas de ciuades');
-                           initvizcitidashboardinfo();
 
-                        }
-                    };
-                vizcitydeprmentmap = new tableau.Viz(containerDiv, url, options);
-            }else{
-                initvizcitidashboardinfo();
-            }
-        }
 
         function initvizcityprogreovsabsoluto() {
-            if(vizcityprogreovsabsoluto==null) {
-                var containerDiv = document.getElementById("cityprogreovsabsoluto"),
-                    url = "https://public.tableau.com/views/Ciudatos/CityDashboardprogresovsindicador?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+
+
+            if (vizcitivabsoluto == null) {
+                var containerDiv = document.getElementById("cityvsabsoluto"),
+                    url = "https://public.tableau.com/views/Ciudatos/Indicadordeprogresoabsolutociudad?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
                         hideTabs: true,
                         onFirstInteractive: function () {
 
-                            initvizcityindicadoresciudad();
                         }
-
                     };
-                vizcityprogreovsabsoluto = new tableau.Viz(containerDiv, url, options);
+                vizcitivabsoluto = new tableau.Viz(containerDiv, url, options);
+            }
 
+
+
+            if (vizcitiprogreso == null) {
+                var containerDiv = document.getElementById("cityprogreso"),
+                    url = "https://public.tableau.com/views/Ciudatos/IndexScorePorindicador?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+                            console.log('inicio lo demas de ciuades');
+
+                        }
+                    };
+                vizcitiprogreso = new tableau.Viz(containerDiv, url, options);
             }
-            else{
-                initvizcityindicadoresciudad();
-            }
+
+
+
+            initvizcityindicadoresciudad();
+
+
 
         }
 
@@ -902,36 +971,6 @@ block js
                         onFirstInteractive: function () {
                             initvizcityprogresohistorico();
 
-                            vizcityprogreovsabsoluto.addEventListener('filterchange', function (event) {
-
-                                var fieldname = event.getFieldName();
-                                console.log(fieldname);
-                                if (fieldname == 'Date From') {
-                                    event.getFilterAsync().then(function (field) {
-
-                                        var filtervalue = field.getAppliedValues();
-                                        console.log(filtervalue);
-                                        console.log(filtervalue[0].value);
-
-                                        anoFilter(filtervalue[0].value);
-                                    });
-                                }
-
-
-                                if (fieldname == 'Name (Targets)') {
-                                    event.getFilterAsync().then(function (field) {
-
-                                        var filtervalue = field.getAppliedValues();
-                                        console.log(filtervalue);
-                                        console.log(filtervalue[0].value);
-                                        metaFIlter(filtervalue[0].value);
-
-
-                                    });
-                                }
-
-
-                            });
 
 
                         }
@@ -1123,16 +1162,19 @@ block js
 
 
 
-                if (vizcityprogreovsabsoluto != null) {
+                if (vizcitiprogreso != null) {
 
-                    var sheet = vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets().get("Index Score Por indicador");
+                    var sheet = vizcitiprogreso.getWorkbook().getActiveSheet();
 
-                        if (ciudad != "") {
+                    if (ciudad != "") {
 
-                            sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
-                        }
+                        sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
+                    }
+                }
 
-                    var sheet = vizcityprogreovsabsoluto.getWorkbook().getActiveSheet().getWorksheets().get("Indicador de progreso absoluto ciudad");
+                if (vizcitivabsoluto != null) {
+
+                    var sheet = vizcitivabsoluto.getWorkbook().getActiveSheet();
 
                     if (ciudad != "") {
 
@@ -1207,6 +1249,7 @@ block js
         }
 
         function anoFilter(ano){
+            console.log(ano);
             var fieldname="Date From";
             if (activetab == 'CIUDADES') {
                 jQuery.each(vizcityindicadoresciudad.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
@@ -1224,6 +1267,8 @@ block js
                         sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
                     }
                 }
+
+
             }
 
             if (activetab == 'ODS') {
@@ -1240,6 +1285,110 @@ block js
 
 
         }
+            function changeYearodstrazadorgrupociudades(ano){
+                var fieldname = "Date From";
+
+                if (vizodsgrupoodstrazadorgrupociudades1 != null) {
+                    var sheet = vizodsgrupoodstrazadorgrupociudades1.getWorkbook().getActiveSheet()
+
+                    if (ano != "") {
+
+                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                    }
+
+                }
+                if (vizodsgrupoodstrazadorgrupociudades2 != null) {
+                    var sheet = vizodsgrupoodstrazadorgrupociudades2.getWorkbook().getActiveSheet()
+
+                    if (ano != "") {
+
+                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                    }
+
+                }
+                if (vizodsgrupoodstrazadorgrupociudades3 != null) {
+                    var sheet = vizodsgrupoodstrazadorgrupociudades3.getWorkbook().getActiveSheet()
+
+                    if (ano != "") {
+
+                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                    }
+
+                }
+                if (vizodsgrupoodstrazadorgrupociudades4 != null) {
+                    var sheet = vizodsgrupoodstrazadorgrupociudades4.getWorkbook().getActiveSheet()
+
+                    if (ano != "") {
+
+                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                    }
+
+                }
+            }
+            function changeYearodsgrupociudades(ano){
+                var fieldname = "Date From";
+
+                if (vizodsgrupoodsgrupociudades1 != null) {
+                    var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet()
+
+                    if (ano != "") {
+
+                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                    }
+
+                }
+                if (vizodsgrupoodsgrupociudades2 != null) {
+                    var sheet = vizodsgrupoodsgrupociudades2.getWorkbook().getActiveSheet()
+
+                    if (ano != "") {
+
+                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                    }
+
+                }
+                if (vizodsgrupoodsgrupociudades3 != null) {
+                    var sheet = vizodsgrupoodsgrupociudades3.getWorkbook().getActiveSheet()
+
+                    if (ano != "") {
+
+                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                    }
+
+                }
+                if (vizodsgrupoodsgrupociudades4 != null) {
+                    var sheet = vizodsgrupoodsgrupociudades4.getWorkbook().getActiveSheet()
+
+                    if (ano != "") {
+
+                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                    }
+
+                }
+            }
+            function changeYearCityProgresoVsabsoluto(ano){
+                var fieldname = "Date From";
+
+                if (vizcitivabsoluto != null) {
+                    var sheet = vizcitivabsoluto.getWorkbook().getActiveSheet()
+
+                    if (ano != "") {
+
+                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                    }
+
+                }
+                if (vizcitiprogreso != null) {
+                    var sheet = vizcitiprogreso.getWorkbook().getActiveSheet()
+
+                    if (ano != "") {
+
+                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                    }
+
+                }
+
+            }
+
 
         function inicadorFIlter(){
 
