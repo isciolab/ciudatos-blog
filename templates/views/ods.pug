@@ -1006,17 +1006,21 @@ block js
 
             var ods = $("#changecityindicadoresciudad1 option:selected").text();
             var grupo = $("#changeCity option:selected").attr('data-group');
-            if (vizcityindicadoresciudad1 == null) {
-                var containerDiv = document.getElementById("cityindicadoresciudad1"),
-                    url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                    options = {
-                        hideTabs: true,
-                        "Id (Group Cities)":grupo,
-                        "ods concat": ods
-                    };
-                vizcityindicadoresciudad1 = new tableau.Viz(containerDiv, url, options);
-            }else{
-                changecityodsindicadoresciudad1();
+            if (grupo == '' || grupo == undefined) {
+                alert('Debe seleccionar la ciudad');
+            } else {
+                if (vizcityindicadoresciudad1 == null) {
+                    var containerDiv = document.getElementById("cityindicadoresciudad1"),
+                        url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                        options = {
+                            hideTabs: true,
+                            "Id (Group Cities)": grupo,
+                            "ods concat": ods
+                        };
+                    vizcityindicadoresciudad1 = new tableau.Viz(containerDiv, url, options);
+                } else {
+                    changecityodsindicadoresciudad1();
+                }
             }
 
         }
