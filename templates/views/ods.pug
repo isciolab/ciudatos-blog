@@ -1015,7 +1015,7 @@ block js
                         "ods concat": ods
                     };
                 vizcityindicadoresciudad1 = new tableau.Viz(containerDiv, url, options);
-                vizcityindicadoresciudad1.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+                vizcityindicadoresciudad1.getWorkbook().getActiveSheet().applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
             }else{
                 changecityodsindicadoresciudad1();
             }
@@ -1037,7 +1037,7 @@ block js
 
                     };
                 vizcityindicadoresciudad2 = new tableau.Viz(containerDiv, url, options);
-                vizcityindicadoresciudad2.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+                vizcityindicadoresciudad2.getWorkbook().getActiveSheet().applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
             }else{
                 changecityodsindicadoresciudad2();
             }
@@ -1058,7 +1058,7 @@ block js
                         "ods concat":ods
                     };
                 vizcityindicadoresciudad3 = new tableau.Viz(containerDiv, url, options);
-                vizcityindicadoresciudad3.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+                vizcityindicadoresciudad3.getWorkbook().getActiveSheet().applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
             }
             else{
                 changecityodsindicadoresciudad3();
@@ -1080,7 +1080,7 @@ block js
 
                     };
                 vizcityindicadoresciudad4 = new tableau.Viz(containerDiv, url, options);
-                vizcityindicadoresciudad4.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+                vizcityindicadoresciudad4.getWorkbook().getActiveSheet().applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
             }
             else {
                 changecityodsindicadoresciudad4();
