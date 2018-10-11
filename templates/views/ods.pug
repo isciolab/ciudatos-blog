@@ -370,6 +370,9 @@ block content
                         </div>
                         <div class="row" id='cityindicadoresciudad' >
 
+                            <div class="col-md-12" >
+                                 <h4 class="text-center">Seleccione uno o varios ODS para ver su información</h3>
+                            </div>
                             <div class="col-md-3">
                                 <div class="select_box">
                                     <select id="changecityindicadoresciudad1" class="form-control" onchange="initcityindicadoresciudad1();">
@@ -400,7 +403,7 @@ block content
                             </div>
                             <div class="col-md-12" >
                                 <h4 class="text-center">Indicadores de ODS mas Grupos de ciudades  </h3>
-                                   </div>
+                            </div>
                             <div class="col-md-6">
                                 <div  id='cityindicadoresciudad1'  style='position: relative; width: auto; max-height:300px'></div>
                             </div>
@@ -514,6 +517,10 @@ block js
                     })
                     $("#changeOdsConcat").html(html);
                     $("#changeOdsConcat2").html(html);
+                    $("#changecityindicadoresciudad1").html(html);
+                    $("#changecityindicadoresciudad2").html(html);
+                    $("#changecityindicadoresciudad3").html(html);
+                    $("#changecityindicadoresciudad4").html(html);
 
 
                 }
@@ -764,6 +771,68 @@ block js
         }
 
 
+
+        function changecityodsindicadoresciudad4() {
+
+            var sheet = vizcityindicadoresciudad4.getWorkbook().getActiveSheet();
+            var fieldname = "ods concat";
+            var text = $("#changecityindicadoresciudad4 option:selected").text();
+            var value = $("#changecityindicadoresciudad4").val();
+            if (value != "") {
+                sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
+            }
+            else {
+                vizcityindicadoresciudad4.dispose();
+                vizcityindicadoresciudad4 = undefined;
+            }
+        }
+
+
+        function changecityodsindicadoresciudad3() {
+
+            var sheet = vizcityindicadoresciudad3.getWorkbook().getActiveSheet();
+            var fieldname = "ods concat";
+            var text = $("#changecityindicadoresciudad3 option:selected").text();
+            var value = $("#changecityindicadoresciudad3").val();
+            if (value != "") {
+                sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
+            }
+            else {
+                vizcityindicadoresciudad3.dispose();
+                vizcityindicadoresciudad3 = undefined;
+            }
+        }
+
+        function changecityodsindicadoresciudad2() {
+
+            var sheet = vizcityindicadoresciudad2.getWorkbook().getActiveSheet();
+            var fieldname = "ods concat";
+            var text = $("#changecityindicadoresciudad2 option:selected").text();
+            var value = $("#changecityindicadoresciudad2").val();
+            if (value != "") {
+                sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
+            }
+            else {
+                vizcityindicadoresciudad2.dispose();
+                vizcityindicadoresciudad2 = undefined;
+            }
+        }
+
+        function changecityodsindicadoresciudad1() {
+
+            var sheet = vizcityindicadoresciudad1.getWorkbook().getActiveSheet();
+            var fieldname = "ods concat";
+            var text = $("#changecityindicadoresciudad1 option:selected").text();
+            var value = $("#changecityindicadoresciudad1").val();
+            if (value != "") {
+                sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
+            }
+            else {
+                vizcityindicadoresciudad1.dispose();
+                vizcityindicadoresciudad1 = undefined;
+            }
+        }
+
         function initoodsgrupociudades1() {
 
             if (vizodsgrupoodsgrupociudades1 == null) {
@@ -935,32 +1004,39 @@ block js
 
         function initcityindicadoresciudad1() {
 
+            var ods = $("#changecityindicadoresciudad1 option:selected").text();
+            var grupo = $("#changeCity option:selected").attr('data-group');
             if (vizcityindicadoresciudad1 == null) {
                 var containerDiv = document.getElementById("cityindicadoresciudad1"),
                     url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
                         hideTabs: true,
-                        onFirstInteractive: function () {
-
-                        }
+                        "Id (Group Cities)":grupo,
+                        "ods concat": ods
                     };
                 vizcityindicadoresciudad1 = new tableau.Viz(containerDiv, url, options);
+            }else{
+                changecityodsindicadoresciudad1();
             }
 
         }
 
         function initcityindicadoresciudad2() {
 
+            var grupo = $("#changeCity option:selected").attr('data-group');
+            var ods = $("#changecityindicadoresciudad1 option:selected").text();
             if (vizcityindicadoresciudad2 == null) {
                 var containerDiv = document.getElementById("cityindicadoresciudad2"),
                     url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades2?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
                         hideTabs: true,
-                        onFirstInteractive: function () {
+                        "Id (Group Cities)": grupo,
+                        "ods concat": ods
 
-                        }
                     };
                 vizcityindicadoresciudad2 = new tableau.Viz(containerDiv, url, options);
+            }else{
+                changecityodsindicadoresciudad2();
             }
 
         }
@@ -968,32 +1044,41 @@ block js
 
         function initcityindicadoresciudad3() {
 
+            var grupo = $("#changeCity option:selected").attr('data-group');
+            var ods = $("#changecityindicadoresciudad1 option:selected").text();
             if (vizcityindicadoresciudad3 == null) {
                 var containerDiv = document.getElementById("cityindicadoresciudad3"),
                     url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades3?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
                         hideTabs: true,
-                        onFirstInteractive: function () {
-
-                        }
+                        "Id (Group Cities)": grupo,
+                        "ods concat":ods
                     };
                 vizcityindicadoresciudad3 = new tableau.Viz(containerDiv, url, options);
+            }
+            else{
+                changecityodsindicadoresciudad3();
             }
 
         }
 
         function initcityindicadoresciudad4() {
 
+            var grupo = $("#changeCity option:selected").attr('data-group');
+            var ods = $("#changecityindicadoresciudad1 option:selected").text();
             if (vizcityindicadoresciudad4 == null) {
                 var containerDiv = document.getElementById("cityindicadoresciudad4"),
                     url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades4?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
                         hideTabs: true,
-                        onFirstInteractive: function () {
+                        "Id (Group Cities)": grupo,
+                        "ods concat": ods
 
-                        }
                     };
                 vizcityindicadoresciudad4 = new tableau.Viz(containerDiv, url, options);
+            }
+            else {
+                changecityodsindicadoresciudad4();
             }
 
         }
