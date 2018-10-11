@@ -766,9 +766,6 @@ block js
 
 
 
-
-
-
         function initoodtrazadorsgrupociudades1() {
 
             if (vizodsgrupoodstrazadorgrupociudades1 == null) {
@@ -856,9 +853,6 @@ block js
         }
 
 
-
-
-
         function initdashboardodstrazador() {
             if(vizdashboardodstrazador==null) {
                 var containerDiv = document.getElementById("dashboardodstrazador"),
@@ -921,8 +915,26 @@ block js
 
 
         }
-        function initvizcitydeprmentmap() {
 
+
+
+        function initvizcitydeprmentmap() {
+            if (vizcitydeprmentmap == null) {
+                var containerDiv = document.getElementById("citydeprmentmap"),
+                    url = "https://public.tableau.com/views/Ciudatos/Departmentmap?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+                            //  console.log('inicio lo demas de ciuades');
+                            initvizcitidashboardinfo();
+
+                        }
+                    };
+                vizcitydeprmentmap = new tableau.Viz(containerDiv, url, options);
+            } else {
+                initvizcitidashboardinfo();
+            }
+        }
 
         function initvizcityprogreovsabsoluto() {
 
@@ -996,6 +1008,111 @@ block js
             }else{
                 initvizcityindicadorestrazadores();
             }
+        }
+
+
+        function changeYearodstrazadorgrupociudades(ano) {
+            var fieldname = "Date From";
+
+            if (vizodsgrupoodstrazadorgrupociudades1 != null) {
+                var sheet = vizodsgrupoodstrazadorgrupociudades1.getWorkbook().getActiveSheet()
+
+                if (ano != "") {
+
+                    sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                }
+
+            }
+            if (vizodsgrupoodstrazadorgrupociudades2 != null) {
+                var sheet = vizodsgrupoodstrazadorgrupociudades2.getWorkbook().getActiveSheet()
+
+                if (ano != "") {
+
+                    sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                }
+
+            }
+            if (vizodsgrupoodstrazadorgrupociudades3 != null) {
+                var sheet = vizodsgrupoodstrazadorgrupociudades3.getWorkbook().getActiveSheet()
+
+                if (ano != "") {
+
+                    sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                }
+
+            }
+            if (vizodsgrupoodstrazadorgrupociudades4 != null) {
+                var sheet = vizodsgrupoodstrazadorgrupociudades4.getWorkbook().getActiveSheet()
+
+                if (ano != "") {
+
+                    sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                }
+
+            }
+        }
+        function changeYearodsgrupociudades(ano) {
+            var fieldname = "Date From";
+
+            if (vizodsgrupoodsgrupociudades1 != null) {
+                var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet()
+
+                if (ano != "") {
+
+                    sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                }
+
+            }
+            if (vizodsgrupoodsgrupociudades2 != null) {
+                var sheet = vizodsgrupoodsgrupociudades2.getWorkbook().getActiveSheet()
+
+                if (ano != "") {
+
+                    sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                }
+
+            }
+            if (vizodsgrupoodsgrupociudades3 != null) {
+                var sheet = vizodsgrupoodsgrupociudades3.getWorkbook().getActiveSheet()
+
+                if (ano != "") {
+
+                    sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                }
+
+            }
+            if (vizodsgrupoodsgrupociudades4 != null) {
+                var sheet = vizodsgrupoodsgrupociudades4.getWorkbook().getActiveSheet()
+
+                if (ano != "") {
+
+                    sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                }
+
+            }
+        }
+        function changeYearCityProgresoVsabsoluto(ano) {
+            var fieldname = "Date From";
+
+            if (vizcitivabsoluto != null) {
+                var sheet = vizcitivabsoluto.getWorkbook().getActiveSheet()
+
+                if (ano != "") {
+
+                    sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                }
+
+            }
+            if (vizcitiprogreso != null) {
+                var sheet = vizcitiprogreso.getWorkbook().getActiveSheet()
+
+                if (ano != "") {
+
+                    sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                }
+
+            }
+
         }
 
         function initvizcityindicadorestrazadores() {
@@ -1285,109 +1402,6 @@ block js
 
 
         }
-            function changeYearodstrazadorgrupociudades(ano){
-                var fieldname = "Date From";
-
-                if (vizodsgrupoodstrazadorgrupociudades1 != null) {
-                    var sheet = vizodsgrupoodstrazadorgrupociudades1.getWorkbook().getActiveSheet()
-
-                    if (ano != "") {
-
-                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }
-                if (vizodsgrupoodstrazadorgrupociudades2 != null) {
-                    var sheet = vizodsgrupoodstrazadorgrupociudades2.getWorkbook().getActiveSheet()
-
-                    if (ano != "") {
-
-                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }
-                if (vizodsgrupoodstrazadorgrupociudades3 != null) {
-                    var sheet = vizodsgrupoodstrazadorgrupociudades3.getWorkbook().getActiveSheet()
-
-                    if (ano != "") {
-
-                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }
-                if (vizodsgrupoodstrazadorgrupociudades4 != null) {
-                    var sheet = vizodsgrupoodstrazadorgrupociudades4.getWorkbook().getActiveSheet()
-
-                    if (ano != "") {
-
-                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }
-            }
-            function changeYearodsgrupociudades(ano){
-                var fieldname = "Date From";
-
-                if (vizodsgrupoodsgrupociudades1 != null) {
-                    var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet()
-
-                    if (ano != "") {
-
-                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }
-                if (vizodsgrupoodsgrupociudades2 != null) {
-                    var sheet = vizodsgrupoodsgrupociudades2.getWorkbook().getActiveSheet()
-
-                    if (ano != "") {
-
-                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }
-                if (vizodsgrupoodsgrupociudades3 != null) {
-                    var sheet = vizodsgrupoodsgrupociudades3.getWorkbook().getActiveSheet()
-
-                    if (ano != "") {
-
-                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }
-                if (vizodsgrupoodsgrupociudades4 != null) {
-                    var sheet = vizodsgrupoodsgrupociudades4.getWorkbook().getActiveSheet()
-
-                    if (ano != "") {
-
-                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }
-            }
-            function changeYearCityProgresoVsabsoluto(ano){
-                var fieldname = "Date From";
-
-                if (vizcitivabsoluto != null) {
-                    var sheet = vizcitivabsoluto.getWorkbook().getActiveSheet()
-
-                    if (ano != "") {
-
-                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }
-                if (vizcitiprogreso != null) {
-                    var sheet = vizcitiprogreso.getWorkbook().getActiveSheet()
-
-                    if (ano != "") {
-
-                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }
-
-            }
 
 
         function inicadorFIlter(){
@@ -1594,3 +1608,5 @@ block js
 
 
         }
+
+

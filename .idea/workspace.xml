@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="visualize ods">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/ods.pug" afterPath="$PROJECT_DIR$/templates/views/ods.pug" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +17,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="1364" column="0" lean-forward="true" selection-start-line="1364" selection-start-column="0" selection-end-line="1364" selection-end-column="0" />
+            <state relative-caret-position="213">
+              <caret line="1099" column="32" lean-forward="true" selection-start-line="1099" selection-start-column="32" selection-end-line="1099" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -128,7 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>initoodsgrupociudades4</find>
       <find>dipose</find>
       <find>dispose</find>
       <find>undefined</find>
@@ -158,6 +156,7 @@
       <find>changeYearodsgrupociudades</find>
       <find>initvizcityindicadoresciudad</find>
       <find>anoFilter</find>
+      <find>cityDep</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -360,14 +359,7 @@
       <workItem from="1539012580953" duration="14927000" />
       <workItem from="1539095351338" duration="5691000" />
       <workItem from="1539180786682" duration="11757000" />
-      <workItem from="1539264719701" duration="4606000" />
-    </task>
-    <task id="LOCAL-00188" summary="visualize ods">
-      <created>1539013718555</created>
-      <option name="number" value="00188" />
-      <option name="presentableId" value="LOCAL-00188" />
-      <option name="project" value="LOCAL" />
-      <updated>1539013718555</updated>
+      <workItem from="1539264719701" duration="4914000" />
     </task>
     <task id="LOCAL-00189" summary="visualize ods">
       <created>1539013910393</created>
@@ -705,11 +697,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539192850420</updated>
     </task>
-    <option name="localTasksCounter" value="237" />
+    <task id="LOCAL-00237" summary="visualize ods">
+      <created>1539269750042</created>
+      <option name="number" value="00237" />
+      <option name="presentableId" value="LOCAL-00237" />
+      <option name="project" value="LOCAL" />
+      <updated>1539269750044</updated>
+    </task>
+    <option name="localTasksCounter" value="238" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160953000" />
+    <option name="totallyTimeSpent" value="161261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -953,7 +952,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="126" column="41" lean-forward="false" selection-start-line="126" selection-start-column="41" selection-end-line="126" selection-end-column="41" />
-          <folding />
+          <folding>
+            <marker date="1539270058046" expanded="true" signature="23923:68710" ph="..." />
+            <marker date="1539270058046" expanded="true" signature="24086:68710" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1111,9 +1113,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="1364" column="0" lean-forward="true" selection-start-line="1364" selection-start-column="0" selection-end-line="1364" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="213">
+          <caret line="1099" column="32" lean-forward="true" selection-start-line="1099" selection-start-column="32" selection-end-line="1099" selection-end-column="32" />
+          <folding>
+            <marker date="1539270058046" expanded="true" signature="23923:68710" ph="..." />
+            <marker date="1539270058046" expanded="true" signature="24086:68710" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
