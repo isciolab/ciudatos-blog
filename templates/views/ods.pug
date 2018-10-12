@@ -731,7 +731,7 @@ block js
 
                 vizmapadecalorporods.dispose();
                 $("#mapadecalorporods").html('');
-                //vizmapadecalorporods = undefined;
+                 vizmapadecalorporods = undefined;
                 initmapadecalorporods();
             }
         }
@@ -2087,7 +2087,7 @@ block js
                 console.log(vizmapadecalorporods);
                 if (vizmapadecalorporods != null) {
                     console.log(vizmapadecalorporods);
-                    var vizmapadecalorporods = vizmapadecalorporods.getWorkbook().getActiveSheet();
+                    var sheet = vizmapadecalorporods.getWorkbook().getActiveSheet();
 
                     if (indicador != "") {
 
