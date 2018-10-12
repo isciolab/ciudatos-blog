@@ -2046,16 +2046,6 @@ block js
                 }
 
 
-                /*
-                 if (vizdashboardodsgrupociudades != null) {
-                 jQuery.each(vizdashboardodsgrupociudades.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
-                 if (indicador != "") {
-
-                 sheet.applyFilterAsync("Indicador (copia 2)", indicador, tableau.FilterUpdateType.REPLACE);
-                 }
-                 })
-                 }*/
-
 
                 if (vizodsgrupoodsgrupociudades1 != null) {
                     var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet();
@@ -2097,7 +2087,9 @@ block js
                 }
 
 
+                console.log(vizmapadecalorporods);
                 if (vizmapadecalorporods != null) {
+                    console.log(vizmapadecalorporods);
                     var vizmapadecalorporods = vizmapadecalorporods.getWorkbook().getActiveSheet();
 
                     if (indicador != "") {
