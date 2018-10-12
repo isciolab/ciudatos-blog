@@ -691,7 +691,7 @@ block js
                     options = {
                         hideTabs: true,
                         onFirstInteractive: function () {
-                            initmapadecalorporods();
+                          //  initmapadecalorporods();
 
 
                             var head = $("#odsdashboardinfo iframe").contents().find("head");
@@ -706,13 +706,14 @@ block js
                 vizodsdashboardinfo = new tableau.Viz(containerDiv, url, options);
             } else {
 
-                initmapadecalorporods();
+               //initmapadecalorporods();
             }
         }
 
 
         function initmapadecalorporods() {
             var indicador = $("#changeIndicador").val();
+            var ano = $("#changemapadecalorods").val();
             if (indicador != "") {
                 if (vizmapadecalorporods == null || vizmapadecalorporods == undefined) {
                     console.log(vizmapadecalorporods);
@@ -720,6 +721,7 @@ block js
                         url = "https://public.tableau.com/views/Ciudatos/Mapadecalorporods?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
                             "Indicador": indicador,
+                            "Date From": ano,
                             hideTabs: true,
                             onFirstInteractive: function () {
                                 //city
@@ -1251,12 +1253,12 @@ block js
                     options = {
                         hideTabs: true,
                         onFirstInteractive: function () {
-                            initmapadecalorporods();
+                          //  initmapadecalorporods();
                         }
                     };
                 vizdashboardodstrazador = new tableau.Viz(containerDiv, url, options);
             } else {
-                initmapadecalorporods();
+               // initmapadecalorporods();
             }
         }
 
@@ -1462,6 +1464,8 @@ block js
                     sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
                 }
 
+            }else{
+                initmapadecalorporods();
             }
 
         }
@@ -1961,72 +1965,6 @@ block js
 
         }
 
-        function anoFilter(ano) {
-            console.log(ano);
-            var fieldname = "Date From";
-            if (activetab == 'CIUDADES') {
-                if (vizcityindicadoresciudad1 != null) {
-                    var sheet = vizcityindicadoresciudad1.getWorkbook().getActiveSheet()
-
-                    if (ano != "") {
-
-                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
-                    }
-                }
-
-                if (vizcityindicadoresciudad2 != null) {
-                    var sheet = vizcityindicadoresciudad2.getWorkbook().getActiveSheet()
-
-                    if (ano != "") {
-
-                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
-                    }
-                }
-
-                if (vizcityindicadoresciudad3 != null) {
-                    var sheet = vizcityindicadoresciudad3.getWorkbook().getActiveSheet()
-
-                    if (ano != "") {
-
-                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
-                    }
-                }
-
-                if (vizcityindicadoresciudad4 != null) {
-                    var sheet = vizcityindicadoresciudad4.getWorkbook().getActiveSheet()
-
-                    if (ano != "") {
-
-                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
-                    }
-                }
-
-
-                if (vizcityindicadorestrazadores != null) {
-                    var sheet = vizcityindicadorestrazadores.getWorkbook().getActiveSheet();
-                    if (ano != "") {
-
-                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
-                    }
-                }
-
-
-            }
-
-            if (activetab == 'ODS') {
-                if (vizmapadecalorporods != null) {
-                    var sheet = vizmapadecalorporods.getWorkbook().getActiveSheet()
-
-                    if (ano != "") {
-
-                        sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }
-            }
-
-
-        }
 
 
         function inicadorFIlter() {
@@ -2086,7 +2024,7 @@ block js
                 }
 
 
-                console.log(vizmapadecalorporods);
+
                 if (vizmapadecalorporods != null) {
                     console.log(vizmapadecalorporods);
                     var sheet = vizmapadecalorporods.getWorkbook().getActiveSheet();
@@ -2096,6 +2034,8 @@ block js
                         sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
                     }
 
+                }else{
+                    initmapadecalorporods();
                 }
 
 
