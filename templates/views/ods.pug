@@ -493,9 +493,22 @@ block content
                             </div>
                         </div>
                         <div class="row">
+
+
                             <div class="col-md-12" >
-                                 <h4 class="text-center">Indicadores trazadores por ODS</h3>
+                                <h4 class="text-center">Mapa de calor por ODS</h3>
                             </div>
+                            <div class="col-md-3 col-md-offset-4  >
+                                <h4 class="text-center">Indicadores trazadores por ODS</h3>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="select_box">
+                                    <select id="changeyearindicadorestrazadoresporods" class="form-control changeYear" onchange="changeyearindicadorestrazadoresporods();">
+
+                                    </select>
+                                </div>
+                            </div>
+
                             <div class="col-md-12">
                                  <div id='cityindicadorestrazadores' style='position: relative; width: auto; height:auto'></div>
                             </div>
@@ -581,20 +594,22 @@ block js
                 type: 'GET',
                 success: function (data) {
                     var html = '<option value="">Seleccione aquí:</option>';
+                    var html2 = '<option value="">ODS:</option>';
                     jQuery.each(data, function (i, value) {
                         html += '<option value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
+                        html2 += '<option value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
 
                     })
                     $("#changeOdsConcat").html(html);
                     $("#changeOdsConcat2").html(html);
-                    $("#changecityindicadoresciudad1").html(html);
-                    $("#changecityindicadoresciudad2").html(html);
-                    $("#changecityindicadoresciudad3").html(html);
-                    $("#changecityindicadoresciudad4").html(html);
-                    $("#changecityprogresohistorico1").html(html);
-                    $("#changecityprogresohistorico2").html(html);
-                    $("#changecityprogresohistorico3").html(html);
-                    $("#changecityprogresohistorico4").html(html);
+                    $("#changecityindicadoresciudad1").html(html2);
+                    $("#changecityindicadoresciudad2").html(html2);
+                    $("#changecityindicadoresciudad3").html(html2);
+                    $("#changecityindicadoresciudad4").html(html2);
+                    $("#changecityprogresohistorico1").html(html2);
+                    $("#changecityprogresohistorico2").html(html2);
+                    $("#changecityprogresohistorico3").html(html2);
+                    $("#changecityprogresohistorico4").html(html2);
 
 
                 }
@@ -1443,6 +1458,21 @@ block js
 
             if (vizmapadecalorporods != null) {
                 var sheet = vizmapadecalorporods.getWorkbook().getActiveSheet()
+
+                if (ano != "") {
+
+                    sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+                }
+
+            }
+
+        }
+        function changeyearindicadorestrazadoresporods() {
+            var ano = $("#changeyearindicadorestrazadoresporods").val();
+            var fieldname = "Date From";
+
+            if (vizcityindicadorestrazadores != null) {
+                var sheet = vizcityindicadorestrazadores.getWorkbook().getActiveSheet()
 
                 if (ano != "") {
 
