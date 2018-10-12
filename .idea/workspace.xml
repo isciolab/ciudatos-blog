@@ -361,7 +361,7 @@
       <workItem from="1539180786682" duration="11757000" />
       <workItem from="1539264719701" duration="20805000" />
       <workItem from="1539307822787" duration="27000" />
-      <workItem from="1539359765144" duration="1523000" />
+      <workItem from="1539359765144" duration="1556000" />
     </task>
     <task id="LOCAL-00190" summary="visualize ods">
       <created>1539015614904</created>
@@ -710,7 +710,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178702000" />
+    <option name="totallyTimeSpent" value="178735000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
