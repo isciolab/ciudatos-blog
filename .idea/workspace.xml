@@ -17,8 +17,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="404" column="55" lean-forward="false" selection-start-line="404" selection-start-column="55" selection-end-line="404" selection-end-column="55" />
+            <state relative-caret-position="178">
+              <caret line="1375" column="44" lean-forward="false" selection-start-line="1375" selection-start-column="20" selection-end-line="1375" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -127,23 +127,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>changeOdsConcat</find>
-      <find>odsConcatFilterCity</find>
-      <find>metaFIlter</find>
-      <find>metaFIlterCity</find>
-      <find>inicadorFIlte</find>
-      <find>change</find>
-      <find>changeye</find>
-      <find>elecicone un año para ver la información de este indicador</find>
-      <find>vizcityindicadoresciudad</find>
-      <find>cityindicadoresciudad1</find>
-      <find>cityindicadoresciudad</find>
       <find>initoodtrazadorsgrupociudades4</find>
       <find>vizcityindicadoresciudad1</find>
       <find>vizcityindicadoresciudad2</find>
       <find>initvizci</find>
-      <find>initcityindicadoresciudad1</find>
-      <find>changecityodsindicadoresciudad1</find>
       <find>changeCity</find>
       <find>var grupo = $(&quot;#changeCity option:selected&quot;).attr('data-group');</find>
       <find>&quot;ods concat&quot;</find>
@@ -155,8 +142,21 @@
       <find>lecicone un año para ver la inform</find>
       <find>lecicone un año</find>
       <find>initcityindicadoresciudad4</find>
-      <find>changeYearodsgrupociudades</find>
+      <find>vizcityprogresohistorico1</find>
+      <find>initcityprogresohistorico</find>
+      <find>cityprogresohistorico</find>
+      <find>cityprogresohistorico1</find>
+      <find>changeYearcityprogresohistorico</find>
+      <find>changeYe</find>
       <find>changeYearcityindicadoresciudad</find>
+      <find>changeYearodsgrupociudades</find>
+      <find>initc</find>
+      <find>initcityindicadoresciudad1</find>
+      <find>initci</find>
+      <find>initcityprogresohistorico1</find>
+      <find>changecityodsindicadoresciudad1</find>
+      <find>changecityprogresohistorico1</find>
+      <find>vizcityprogresohistorico</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -359,7 +359,7 @@
       <workItem from="1539012580953" duration="14927000" />
       <workItem from="1539095351338" duration="5691000" />
       <workItem from="1539180786682" duration="11757000" />
-      <workItem from="1539264719701" duration="17855000" />
+      <workItem from="1539264719701" duration="19026000" />
     </task>
     <task id="LOCAL-00190" summary="visualize ods">
       <created>1539015614904</created>
@@ -708,7 +708,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174202000" />
+    <option name="totallyTimeSpent" value="175373000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1110,8 +1110,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="404" column="55" lean-forward="false" selection-start-line="404" selection-start-column="55" selection-end-line="404" selection-end-column="55" />
+        <state relative-caret-position="178">
+          <caret line="1375" column="44" lean-forward="false" selection-start-line="1375" selection-start-column="20" selection-end-line="1375" selection-end-column="44" />
           <folding />
         </state>
       </provider>
