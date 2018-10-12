@@ -713,8 +713,10 @@ block js
 
         function initmapadecalorporods() {
             var indicador = $("#changeIndicador").val();
+           
             var ano = $("#changemapadecalorods").val();
             if (indicador != "") {
+                var indicador = $("#changeIndicador option:selected").text();
                 if (vizmapadecalorporods == null || vizmapadecalorporods == undefined) {
                     console.log(vizmapadecalorporods);
                     var containerDiv = document.getElementById("mapadecalorporods"),
@@ -2025,8 +2027,9 @@ block js
 
 
 
+                console.log(vizmapadecalorporods);
                 if (vizmapadecalorporods != null) {
-                    console.log(vizmapadecalorporods);
+
                     var sheet = vizmapadecalorporods.getWorkbook().getActiveSheet();
 
                     if (indicador != "") {
