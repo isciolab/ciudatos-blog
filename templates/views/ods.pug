@@ -712,7 +712,7 @@ block js
 
 
         function initmapadecalorporods() {
-            if (vizmapadecalorporods == null) {
+            if (vizmapadecalorporods == null || vizmapadecalorporods == undefined) {
                 console.log(vizmapadecalorporods);
                 var containerDiv = document.getElementById("mapadecalorporods"),
                     url = "https://public.tableau.com/views/Ciudatos/Mapadecalorporods?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
@@ -723,9 +723,6 @@ block js
                             //city
                             console.log('iniciando ciudae');
 
-
-                            //initvizcitydeprmentmap();
-                            //initvizcityselectordashboard();
                         }
                     };
                 vizmapadecalorporods = new tableau.Viz(containerDiv, url, options);
