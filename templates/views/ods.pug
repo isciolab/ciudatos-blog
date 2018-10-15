@@ -980,11 +980,14 @@ block js
 
         function initoodsgrupociudades1() {
 
+            var changeGrupoodsgrupociudades1 = $("#changeGrupoodsgrupociudades1").val();
             var valuemeta = $("#changeMeta").val();
-            if(valuemeta==''){
-                alert('Deebe seleccionar una meta');
-            }else {
-                if (vizodsgrupoodsgrupociudades1 == null) {
+            if (valuemeta == '') {
+                if (changeGrupoodsgrupociudades1 != '') {
+                    alert('Debe seleccionar una meta');
+                }
+            }
+            if (vizodsgrupoodsgrupociudades1 == null) {
                     var containerDiv = document.getElementById("odsgrupoodsgrupociudades1"),
                         url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
@@ -1010,11 +1013,14 @@ block js
         function initoodsgrupociudades2() {
 
 
+            var changeGrupoodsgrupociudades2 = $("#changeGrupoodsgrupociudades2").val();
             var valuemeta = $("#changeMeta").val();
             if (valuemeta == '') {
-                alert('Deebe seleccionar una meta');
-            } else {
-                if (vizodsgrupoodsgrupociudades2 == null) {
+                if (changeGrupoodsgrupociudades2 != '') {
+                    alert('Debe seleccionar una meta');
+                }
+            }
+            if (vizodsgrupoodsgrupociudades2 == null) {
                     var containerDiv = document.getElementById("odsgrupoodsgrupociudades2"),
                         url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades2?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
@@ -1039,11 +1045,14 @@ block js
         function initoodsgrupociudades3() {
 
 
+            var changeGrupoodsgrupociudades3 = $("#changeGrupoodsgrupociudades3").val();
             var valuemeta = $("#changeMeta").val();
             if (valuemeta == '') {
-                alert('Deebe seleccionar una meta');
-            } else {
-                if (vizodsgrupoodsgrupociudades3 == null) {
+                if (changeGrupoodsgrupociudades3 != '') {
+                    alert('Debe seleccionar una meta');
+                }
+            }
+            if (vizodsgrupoodsgrupociudades3 == null) {
                     var containerDiv = document.getElementById("odsgrupoodsgrupociudades3"),
                         url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades3?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
@@ -1067,9 +1076,12 @@ block js
         function initoodsgrupociudades4() {
 
 
+            var changeGrupoodsgrupociudades4 = $("#changeGrupoodsgrupociudades4").val();
             var valuemeta = $("#changeMeta").val();
             if (valuemeta == '') {
-                alert('Deebe seleccionar una meta');
+                if(changeGrupoodsgrupociudades4!='') {
+                    alert('Debe seleccionar una meta');
+                }
             } else {
                 if (vizodsgrupoodsgrupociudades4 == null) {
                     var containerDiv = document.getElementById("odsgrupoodsgrupociudades4"),
