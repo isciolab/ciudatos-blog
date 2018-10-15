@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/ods.pug" afterPath="$PROJECT_DIR$/templates/views/ods.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -516,7 +516,7 @@
       <workItem from="1539307822787" duration="27000" />
       <workItem from="1539359765144" duration="3838000" />
       <workItem from="1539607869730" duration="172000" />
-      <workItem from="1539628828108" duration="6338000" />
+      <workItem from="1539628828108" duration="6439000" />
     </task>
     <task id="LOCAL-00191" summary="visualize ods">
       <created>1539015923307</created>
@@ -865,7 +865,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187527000" />
+    <option name="totallyTimeSpent" value="187628000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
