@@ -48,7 +48,7 @@ block content
     </div>
     <div class="row" id="" style="z-index:999">
         <div class="col-md-12  text-center">
-        <h2>¿Que son los objetivos de desarrollo sostenible?</h2>
+        <h4>¿Que son los objetivos de desarrollo sostenible?</h4>
         </div>
         <div class="col-md-3">
         <img src="http://www.co.undp.org/content/dam/colombia/img/Pobreza/ODS%20Colombia/xundp_co_pobreza_ODSCol2.png.pagespeed.ic.mrqdFDgHxQ.webp"/>
@@ -260,7 +260,7 @@ block content
     </div>
     <div class="row" id="" style="z-index:999">
         <div class="col-md-12  text-center">
-             <h2>¿Que son los objetivos de desarrollo sostenible?</h2>
+             <h4>¿Que son los objetivos de desarrollo sostenible?</h4>
         </div>
         <div class="col-md-3">
              <img src="http://www.co.undp.org/content/dam/colombia/img/Pobreza/ODS%20Colombia/xundp_co_pobreza_ODSCol2.png.pagespeed.ic.mrqdFDgHxQ.webp"/>
@@ -1885,6 +1885,9 @@ block js
 
         //city
         function cityFilter() {
+
+            initvizcitydeprmentmap();
+
             var ciudad = $("#changeCity option:selected").text();
             var grupo = $("#changeCity option:selected").attr('data-group');
             var imagen = $("#changeCity option:selected").attr('data-img');

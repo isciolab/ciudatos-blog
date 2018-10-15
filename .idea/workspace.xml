@@ -17,8 +17,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="269" column="12" lean-forward="false" selection-start-line="269" selection-start-column="12" selection-end-line="269" selection-end-column="12" />
+            <state relative-caret-position="297">
+              <caret line="269" column="17" lean-forward="true" selection-start-line="269" selection-start-column="17" selection-end-line="269" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -127,8 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>changecityindicadoresciudad1</find>
-      <find>initcityprogresohistorico2();</find>
       <find>initcityprogresohistorico2()</find>
       <find>changeYear</find>
       <find>CHANGEYEAR</find>
@@ -149,7 +147,6 @@
       <find>Selecicone un año para ver la información de este indicador</find>
       <find>initvizcitidashboardinfo</find>
       <find>info</find>
-      <find>initvizcitydeprmentmap</find>
       <find>initodsdashboardinfo</find>
       <find>odsconcatF</find>
       <find>initoodsgrupociudades4</find>
@@ -157,6 +154,9 @@
       <find>year</find>
       <find>vizodsgrupoodsgrupociudades1</find>
       <find>Que son los objetivos de desarrollo sostenibl</find>
+      <find>initvizcitydeprmentmap</find>
+      <find>changeC</find>
+      <find>Que son los objetivos de desarrollo sostenible?</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -516,7 +516,7 @@
       <workItem from="1539307822787" duration="27000" />
       <workItem from="1539359765144" duration="3838000" />
       <workItem from="1539607869730" duration="172000" />
-      <workItem from="1539628828108" duration="5428000" />
+      <workItem from="1539628828108" duration="6179000" />
     </task>
     <task id="LOCAL-00191" summary="visualize ods">
       <created>1539015923307</created>
@@ -865,7 +865,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186617000" />
+    <option name="totallyTimeSpent" value="187368000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1268,8 +1268,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="269" column="12" lean-forward="false" selection-start-line="269" selection-start-column="12" selection-end-line="269" selection-end-column="12" />
+        <state relative-caret-position="297">
+          <caret line="269" column="17" lean-forward="true" selection-start-line="269" selection-start-column="17" selection-end-line="269" selection-end-column="17" />
           <folding />
         </state>
       </provider>
