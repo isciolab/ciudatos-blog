@@ -660,7 +660,7 @@ block js
             var start_year = new Date().getFullYear();
 
 
-            for (var i = start_year; i > start_year - 4; i--) {
+            for (var i = start_year-1; i > start_year - 4; i--) {
                 $('.changeYear').append('<option value="' + i + '">' + i + '</option>');
             }
 
