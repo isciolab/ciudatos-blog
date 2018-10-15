@@ -72,82 +72,84 @@ block content
                     </div>
                 </div>
 
-        <div class="row">
-    <div class="col-md-12">
-    <div id='odsdashboardinfo'  style='position: relative; width: auto; height:auto'></div>
-    </div>
-    </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id='odsdashboardinfo'  style='position: relative; width: auto; height:auto'></div>
+                    </div>
+                </div>
 
 
-    <div class="row" id="odsatajos" style="display:none">
-    <div class="col-md-12">
-    <nav class="navbar navbar-default">
-    <div class="container-fluid">
-    <div class="navbar-header">
+            <div class="row" id="odsatajos" style="display:none">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                    <div class="navbar-header">
 
-    <a class="navbar-brand" href="#">Enlaces rápidos</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-    <ul class="nav navbar-nav">
-    <li class="active"><a href="#dashboardodsgrupociudades">Indicador de ods por grupo de ciudades</a></li>
-    <li><a href="#dashboardodstrazador">Indicador trazador de ods por grupo de ciudade</a></li>
-    <li><a href="#mapadecalorporods">Mapa de calor</a></li>
-    </ul>
+                    <a class="navbar-brand" href="#">Enlaces rápidos</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                    <li class="active"><a href="#dashboardodsgrupociudades">Indicador de ods por grupo de ciudades</a></li>
+                    <li><a href="#dashboardodstrazador">Indicador trazador de ods por grupo de ciudade</a></li>
+                    <li><a href="#mapadecalorporods">Mapa de calor</a></li>
+                    </ul>
 
-    </div><!--/.nav-collapse -->
-    </div><!--/.container-fluid -->
-    </nav>
-    </div>
-    </div>
+                    </div><!--/.nav-collapse -->
+                    </div><!--/.container-fluid -->
+                    </nav>
+                </div>
+            </div>
 
 
-    <div class="row" id='dashboardodsgrupociudades'>
-    <div class="col-md-12" >
-    <h5 class="text-center">Hemos agrupado las ciudades que comparten ciertas características , puede seleccionar hasta  de esos grupos para compararlos, seleccione varios grupos de ciudades para ver la información comparada</h3>
-    </div>
-    <div class="col-md-3">
-    <div class="select_box">
-    <select id="changeGrupoodsgrupociudades1" class="form-control" onchange="initoodsgrupociudades1();">
-    <option value="">Grupos de ciudades:</option>
-    </select>
-    </div>
-    </div>
-    <div class="col-md-3">
-    <div class="select_box">
-    <select id="changeGrupoodsgrupociudades2" class="form-control" onchange="initoodsgrupociudades2();">
-    <option value="">Grupos de ciudades:</option>
-    </select>
-    </div>
-    </div>
-    <div class="col-md-3">
-    <div class="select_box">
-    <select id="changeGrupoodsgrupociudades3" class="form-control" onchange="initoodsgrupociudades3();">
-    <option value="">Grupos de ciudades:</option>
-    </select>
-    </div>
-    </div>
-    <div class="col-md-3">
-    <div class="select_box">
-    <select id="changeGrupoodsgrupociudades4" class="form-control" onchange="initoodsgrupociudades4();">
-    <option value="">Grupos de ciudades:</option>
-    </select>
-    </div>
-    </div>
-    <div class="col-md-12">
-    <br>
-    </div>
+            <div class="row" id='dashboardodsgrupociudades'>
+                <div class="col-md-6 col-md-offset-3 text-center" >
+                    <p class="text-center titleselector">Seleccione uno o varios grupos de ciudades para ver su información</p>
+                </div>
+            </div>
+            <div class="row" id=''>
+                <div class="col-md-3">
+                <div class="select_box">
+                <select id="changeGrupoodsgrupociudades1" class="form-control" onchange="initoodsgrupociudades1();">
+                <option value="">Grupos de ciudades:</option>
+                </select>
+                </div>
+                </div>
+                <div class="col-md-3">
+                <div class="select_box">
+                <select id="changeGrupoodsgrupociudades2" class="form-control" onchange="initoodsgrupociudades2();">
+                <option value="">Grupos de ciudades:</option>
+                </select>
+                </div>
+                </div>
+                <div class="col-md-3">
+                <div class="select_box">
+                <select id="changeGrupoodsgrupociudades3" class="form-control" onchange="initoodsgrupociudades3();">
+                <option value="">Grupos de ciudades:</option>
+                </select>
+                </div>
+                </div>
+                <div class="col-md-3">
+                <div class="select_box">
+                <select id="changeGrupoodsgrupociudades4" class="form-control" onchange="initoodsgrupociudades4();">
+                <option value="">Grupos de ciudades:</option>
+                </select>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br>
+            </div>
 
-    <div class="col-md-5 col-md-offset-2  text-center">
-    <h5>Selecicone un año para ver la información de este indicador</h5>
-    </div>
+            <div class="col-md-5 col-md-offset-2  text-center">
+              <p class="titleselector text-center">Selecicone un año para ver la información de este indicador</p>
+            </div>
 
-    <div class="col-md-3">
-    <div class="select_box">
-    <select id="changeYearodsgrupociudades" class="form-control changeYear" onchange="changeYearodsgrupociudades();">
+            <div class="col-md-3">
+                <div class="select_box">
+                    <select id="changeYearodsgrupociudades" class="form-control changeYear" onchange="changeYearodsgrupociudades();">
 
-    </select>
-    </div>
-    </div>
+                    </select>
+                </div>
+            </div>
     </div>
     <div class="row">
     <div class="col-md-4 col-md-offset-4" >
@@ -166,70 +168,72 @@ block content
     <div  style='position: relative; width: auto; max-height:300px' id="odsgrupoodsgrupociudades4"></div>
     </div>
     </div>
+        <div class="row">
+        <hr />
+
+        </div>
+        <div class="row" id="dashboardodstrazador">
+            <div class="col-md-6 col-md-offset-3 text-center" >
+                <p class="text-center titleselector">Seleccione uno o varios grupos de ciudades para ver su información</p>
+            </div>
+        </div>
+        <div class="row" id="">
+            <div class="col-md-3">
+            <div class="select_box">
+            <select id="changeGrupoodstrazadorgrupociudades1" class="form-control" onchange="initoodtrazadorsgrupociudades1();">
+            <option value="">Grupos de ciudades:</option>
+            </select>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="select_box">
+            <select id="changeGrupoodstrazadorgrupociudades2" class="form-control" onchange="initoodtrazadorsgrupociudades2();">
+            <option value="">Grupos de ciudades:</option>
+            </select>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="select_box">
+            <select id="changeGrupoodstrazadorgrupociudades3" class="form-control" onchange="initoodtrazadorsgrupociudades3();">
+            <option value="">Grupos de ciudades:</option>
+            </select>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="select_box">
+            <select id="changeGrupoodstrazadorgrupociudades4" class="form-control" onchange="initoodtrazadorsgrupociudades4();">
+            <option value="">Grupos de ciudades:</option>
+            </select>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-md-offset-4" >
+                <h4 class="text-center">Indicador trazador de ODS por grupo de ciudades</h3>
+            </div>
+            <div class="col-md-6">
+                 <div  style='position: relative; width: auto; max-height:300px' id="odsgrupoodstrazadorgrupociudades1"></div>
+            </div>
+            <div class="col-md-6">
+                <div  style='position: relative; width: auto; max-height:300px' id="odsgrupoodstrazadorgrupociudades2"></div>
+            </div>
+            <div class="col-md-6">
+                <div  style='position: relative; width: auto; max-height:300px' id="odsgrupoodstrazadorgrupociudades3"></div>
+            </div>
+            <div class="col-md-6">
+                <div  style='position: relative; width: auto; max-height:300px' id="odsgrupoodstrazadorgrupociudades4"></div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <hr />
+
+        </div>
+
     <div class="row">
-    <hr />
-
-    </div>
-    <div class="row" id="dashboardodstrazador">
-    <div class="col-md-12" >
-    <h5 class="text-center">Hemos agrupado las ciudades que comparten ciertas características , puede seleccionar hasta  de esos grupos para compararlos, seleccione varios grupos de ciudades para ver la información comparada</h3>
-    </div>
-    <div class="col-md-3">
-    <div class="select_box">
-    <select id="changeGrupoodstrazadorgrupociudades1" class="form-control" onchange="initoodtrazadorsgrupociudades1();">
-    <option value="">Grupos de ciudades:</option>
-    </select>
-    </div>
-    </div>
-    <div class="col-md-3">
-    <div class="select_box">
-    <select id="changeGrupoodstrazadorgrupociudades2" class="form-control" onchange="initoodtrazadorsgrupociudades2();">
-    <option value="">Grupos de ciudades:</option>
-    </select>
-    </div>
-    </div>
-    <div class="col-md-3">
-    <div class="select_box">
-    <select id="changeGrupoodstrazadorgrupociudades3" class="form-control" onchange="initoodtrazadorsgrupociudades3();">
-    <option value="">Grupos de ciudades:</option>
-    </select>
-    </div>
-    </div>
-    <div class="col-md-3">
-    <div class="select_box">
-    <select id="changeGrupoodstrazadorgrupociudades4" class="form-control" onchange="initoodtrazadorsgrupociudades4();">
-    <option value="">Grupos de ciudades:</option>
-    </select>
-    </div>
-    </div>
-    </div>
-    <div class="row">
-    <div class="col-md-5 col-md-offset-4" >
-    <h4 class="text-center">Indicador trazador de ODS por grupo de ciudades</h3>
-    </div>
-    <div class="col-md-6">
-    <div  style='position: relative; width: auto; max-height:300px' id="odsgrupoodstrazadorgrupociudades1"></div>
-    </div>
-    <div class="col-md-6">
-    <div  style='position: relative; width: auto; max-height:300px' id="odsgrupoodstrazadorgrupociudades2"></div>
-    </div>
-    <div class="col-md-6">
-    <div  style='position: relative; width: auto; max-height:300px' id="odsgrupoodstrazadorgrupociudades3"></div>
-    </div>
-    <div class="col-md-6">
-    <div  style='position: relative; width: auto; max-height:300px' id="odsgrupoodstrazadorgrupociudades4"></div>
-    </div>
-
-    </div>
-
-    <div class="row">
-    <hr />
-
-    </div>
-
-    <div class="row">
-    <div class="col-md-5 col-md-offset-3" >
-    <h4 class="text-center">Mapa de calor por CIUDAD</h3>
+         <div class="col-md-5 col-md-offset-3" >
+             <h4 class="text-center">Mapa de calor por CIUDAD</h3>
     </div>
     <div class="col-md-3 col-md-offset-4  >
     <h4 class="text-center">Seleccione un año</h3>
