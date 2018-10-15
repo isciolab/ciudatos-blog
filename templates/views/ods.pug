@@ -645,12 +645,12 @@ block js
                     $("#cityselectordashboard2").sticky({topSpacing: 40});
                     $("#odsselectordashboard2").unstick();
 
-                    initvizcitydeprmentmap();
+                    //initvizcitydeprmentmap();
 
                 } else {
                     $("#cityselectordashboard2").unstick();
                     $("#odsselectordashboard2").sticky({topSpacing: 40});
-                    initodsdashboardinfo();
+                   // initodsdashboardinfo();
                 }
             });
 
@@ -1700,6 +1700,7 @@ block js
         function odsConcatFilter() {
 
 
+            initodsdashboardinfo();
             var ods = $("#changeOdsConcat option:selected").text();
             console.log(ods);
             $.ajax({
