@@ -980,7 +980,7 @@ block js
 
         function initoodsgrupociudades1() {
 
-            var ano = $("#changeYearodsgrupociudades").val();
+
             var Grupoodsgrupociudades1 = $("#changeGrupoodsgrupociudades1").val();
             var valuemeta = $("#changeMeta").val();
             if (valuemeta == '') {
@@ -994,7 +994,7 @@ block js
                             options = {
                                 hideTabs: true,
                                 "name (Targets)":$("#changeMeta option:selected").html(),
-                                "Date From":$("#ano").val(),
+                                "Date From":$("#changeYearodsgrupociudades").val(),
                                 onFirstInteractive: function () {
 
                                     changeGrupoodsgrupociudades1();
@@ -1031,7 +1031,7 @@ block js
                         options = {
                             hideTabs: true,
                             "name (Targets)": $("#changeMeta option:selected").html(),
-                            "Date From": $("#ano").val(),
+                            "Date From": $("#changeYearodsgrupociudades").val(),
                             onFirstInteractive: function () {
 
 
@@ -1068,7 +1068,7 @@ block js
                         options = {
                             hideTabs: true,
                             "name (Targets)": $("#changeMeta option:selected").html(),
-                            "Date From": $("#ano").val(),
+                            "Date From": $("#changeYearodsgrupociudades").val(),
                             onFirstInteractive: function () {
                                 changeGrupoodsgrupociudades3();
                                 changeYearodsgrupociudades();
@@ -1102,7 +1102,7 @@ block js
                         options = {
                             hideTabs: true,
                             "name (Targets)": $("#changeMeta option:selected").html(),
-                            "Date From": $("#ano").val(),
+                            "Date From": $("#changeYearodsgrupociudades").val(),
                             onFirstInteractive: function () {
                                 changeGrupoodsgrupociudades4();
                                 changeYearodsgrupociudades();
