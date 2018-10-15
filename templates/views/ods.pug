@@ -569,7 +569,7 @@ block js
             //ods
             //initodsdashboardselector();
             //ciudaddes
-            initodsdashboardinfo();
+            //initodsdashboardinfo();
             $.ajax({
                 url: 'http://ciudatos.com:8080/api/cities/getCities/',
                 dataType: 'json',
@@ -690,6 +690,8 @@ block js
                     url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-info?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
                         hideTabs: true,
+                        'ods concat':$("#changeOdsConcat option:selected").html(),
+                        'name (Targets)':$("#changeMeta option:selected").html(),
                         onFirstInteractive: function () {
                           //  initmapadecalorporods();
 
