@@ -9,54 +9,54 @@ block content
 
     <br>
     <div class="row">
-    <div class="col-md-3 col-md-offset-5">
-    <ul class="nav nav-pills">
-    <li role="presentation"  class="active"><a href="#ODS" data-toggle="tab">ODS</a></li>
-    <li role="presentation"><a href="#CIUDADES" data-toggle="tab">CIUDADES</a></li>
-    </ul>
-    </div>
-    <div class="col-md-12">
-    <div class="tab-content clearfix">
-        <div id="ODS" class="tab-pane fade in active" >
-                <div class="row">
-                  <div class="col-md-6 col-md-offset-3 text-center">
-                    <p class="titleselector">Seleccione un ODS, una meta y un indicador para ver su información</p>
+        <div class="col-md-3 col-md-offset-5">
+            <ul class="nav nav-pills">
+                <li role="presentation"  class="active"><a href="#ODS" data-toggle="tab">ODS</a></li>
+                <li role="presentation"><a href="#CIUDADES" data-toggle="tab">CIUDADES</a></li>
+            </ul>
+        </div>
+        <div class="col-md-12">
+            <div class="tab-content clearfix">
+                <div id="ODS" class="tab-pane fade in active" >
+                    <div class="row">
+                      <div class="col-md-6 col-md-offset-3 text-center">
+                            <p class="titleselector">Seleccione un ODS, una meta y un indicador para ver su información</p>
+                        </div>
                     </div>
-                </div>
-                <div class="row" style="z-index:999">
-                    <div class="col-md-12"  style="z-index:999">
-                        <div class="row border-botom" id="odsselectordashboard2" style="z-index:999">
-                            <div class="col-md-4">
-                                <div class="select_box">
-                                    <select id="changeOdsConcat" class="form-control" onchange="odsConcatFilter();">
+                    <div class="row" style="z-index:999">
+                        <div class="col-md-12"  style="z-index:999">
+                            <div class="row border-botom" id="odsselectordashboard2" style="z-index:999">
+                                <div class="col-md-4">
+                                    <div class="select_box">
+                                        <select id="changeOdsConcat" class="form-control" onchange="odsConcatFilter();">
+                                        <option value="">Seleccione aquí:</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="select_box">
+                                    <select id="changeMeta" class="form-control" onchange="metaFIlter();">
                                     <option value="">Seleccione aquí:</option>
                                     </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="select_box">
-                                <select id="changeMeta" class="form-control" onchange="metaFIlter();">
-                                <option value="">Seleccione aquí:</option>
-                                </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="select_box">
-                                <select id="changeIndicador" class="form-control" onchange="inicadorFIlter();">
-                                <option value="">Seleccione aquí:</option>
-                                </select>
+                                <div class="col-md-4">
+                                    <div class="select_box">
+                                    <select id="changeIndicador" class="form-control" onchange="inicadorFIlter();">
+                                    <option value="">Seleccione aquí:</option>
+                                    </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row" id="" >
+                    <div class="row" id="" >
                     <div class="col-md-5  col-md-offset-4  text-center">
                     <h4 >¿Que son los objetivos de desarrollo sostenible?</h4>
                     </div>
 
-                </div>
-                <div class="row" id="" >
+                     </div>
+                    <div class="row" id="" >
 
                     <div class="col-md-3">
                     <img src="http://www.co.undp.org/content/dam/colombia/img/Pobreza/ODS%20Colombia/xundp_co_pobreza_ODSCol2.png.pagespeed.ic.mrqdFDgHxQ.webp"/>
@@ -82,20 +82,18 @@ block content
             <div class="row" id="odsatajos" style="display:none">
                 <div class="col-md-12">
                     <nav class="navbar navbar-default">
-                    <div class="container-fluid">
-                    <div class="navbar-header">
-
-                    <a class="navbar-brand" href="#">Enlaces rápidos</a>
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                    <li class="active"><a href="#dashboardodsgrupociudades">Indicador de ods por grupo de ciudades</a></li>
-                    <li><a href="#dashboardodstrazador">Indicador trazador de ods por grupo de ciudade</a></li>
-                    <li><a href="#mapadecalorporods">Mapa de calor</a></li>
-                    </ul>
-
-                    </div><!--/.nav-collapse -->
-                    </div><!--/.container-fluid -->
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#">Enlaces rápidos</a>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="#dashboardodsgrupociudades">Indicador de ods por grupo de ciudades</a></li>
+                                    <li><a href="#dashboardodstrazador">Indicador trazador de ods por grupo de ciudade</a></li>
+                                    <li><a href="#mapadecalorporods">Mapa de calor</a></li>
+                                </ul>
+                            </div><!--/.nav-collapse -->
+                        </div><!--/.container-fluid -->
                     </nav>
                 </div>
             </div>
@@ -231,26 +229,26 @@ block content
 
         </div>
 
-    <div class="row">
-         <div class="col-md-5 col-md-offset-3" >
-             <h4 class="text-center">Mapa de calor por CIUDAD</h3>
-    </div>
-    <div class="col-md-3 col-md-offset-4  >
-    <h4 class="text-center">Seleccione un año</h3>
-    </div>
-    <div class="col-md-3">
-    <div class="select_box">
-    <select id="changemapadecalorods" class="form-control changeYear" onchange="changemapadecalorods();">
+        <div class="row">
+             <div class="col-md-5 col-md-offset-3" >
+                 <h4 class="text-center">Mapa de calor por CIUDAD</h3>
+        </div>
+        <div class="col-md-3 col-md-offset-4  >
+        <h4 class="text-center">Seleccione un año</h3>
+        </div>
+        <div class="col-md-3">
+        <div class="select_box">
+        <select id="changemapadecalorods" class="form-control changeYear" onchange="changemapadecalorods();">
 
-    </select>
-    </div>
-    </div>
-    </div>
-    <div class="row">
-    <div class="col-md-12">
-    <div id='mapadecalorporods'  style='position: relative; width: auto; height:auto'></div>
-    </div>
-    </div>
+        </select>
+        </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-12">
+        <div id='mapadecalorporods'  style='position: relative; width: auto; height:auto'></div>
+        </div>
+        </div>
     </div>
     <div class="tab-pane fade" id="CIUDADES">
 
