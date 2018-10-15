@@ -1400,6 +1400,7 @@ block js
                         onFirstInteractive: function () {
                             //  console.log('inicio lo demas de ciuades');
                             initvizcitidashboardinfo();
+                            cityFilter();
 
                         }
                     };
@@ -1892,153 +1893,157 @@ block js
         //city
         function cityFilter() {
 
-            initvizcitydeprmentmap();
-
-            var ciudad = $("#changeCity option:selected").text();
-            var grupo = $("#changeCity option:selected").attr('data-group');
-            var imagen = $("#changeCity option:selected").attr('data-img');
-            $("#imagen_city").attr('src', imagen);
-
-            console.log(ciudad);
-            console.log(grupo);
-
-            var fieldname = "Ciudad";
-            //var sheet = vizIndicadores.getWorkbook().getActiveSheet();
-
-            if (activetab == 'CIUDADES') {
 
 
-                if (vizcitiprogreso != null) {
+            if(vizcitydeprmentmap!=null) {
+                var ciudad = $("#changeCity option:selected").text();
+                var grupo = $("#changeCity option:selected").attr('data-group');
+                var imagen = $("#changeCity option:selected").attr('data-img');
+                $("#imagen_city").attr('src', imagen);
 
-                    var sheet = vizcitiprogreso.getWorkbook().getActiveSheet();
+                console.log(ciudad);
+                console.log(grupo);
 
-                    if (ciudad != "") {
+                var fieldname = "Ciudad";
+                //var sheet = vizIndicadores.getWorkbook().getActiveSheet();
 
-                        sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
-                    }
-                }
-
-                if (vizcitivabsoluto != null) {
-
-                    var sheet = vizcitivabsoluto.getWorkbook().getActiveSheet();
-
-                    if (ciudad != "") {
-
-                        sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }
+                if (activetab == 'CIUDADES') {
 
 
-                if (vizcityindicadoresciudad1 != null) {
-                    var sheet = vizcityindicadoresciudad1.getWorkbook().getActiveSheet();
+                    if (vizcitiprogreso != null) {
 
-                    if (ciudad != "") {
-
-                        sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
-                    }
-                }
-                if (vizcityindicadoresciudad2 != null) {
-                    var sheet = vizcityindicadoresciudad2.getWorkbook().getActiveSheet();
-
-                    if (ciudad != "") {
-
-                        sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
-                    }
-                }
-
-                if (vizcityindicadoresciudad3 != null) {
-                    var sheet = vizcityindicadoresciudad3.getWorkbook().getActiveSheet();
-
-                    if (ciudad != "") {
-
-                        sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
-                    }
-                }
-                if (vizcityindicadoresciudad4 != null) {
-                    var sheet = vizcityindicadoresciudad4.getWorkbook().getActiveSheet();
-
-                    if (ciudad != "") {
-
-                        sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }
-
-                if (vizcityprogresohistorico1 != null) {
-                    var sheet = vizcityprogresohistorico1.getWorkbook().getActiveSheet();
-
-                    if (ciudad != "") {
-
-                        sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }
-
-                if (vizcityprogresohistorico2 != null) {
-                    var sheet = vizcityprogresohistorico2.getWorkbook().getActiveSheet();
-
-                    if (ciudad != "") {
-
-                        sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }
-
-                if (vizcityprogresohistorico3 != null) {
-                    var sheet = vizcityprogresohistorico3.getWorkbook().getActiveSheet();
-
-                    if (ciudad != "") {
-
-                        sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }
-                if (vizcityprogresohistorico4 != null) {
-                    var sheet = vizcityprogresohistorico4.getWorkbook().getActiveSheet();
-
-                    if (ciudad != "") {
-
-                        sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }
-
-
-                if (vizcitidashboardinfo != null) {
-                    jQuery.each(vizcitidashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                        var sheet = vizcitiprogreso.getWorkbook().getActiveSheet();
 
                         if (ciudad != "") {
 
                             sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
                         }
-                    })
-                }
+                    }
+
+                    if (vizcitivabsoluto != null) {
+
+                        var sheet = vizcitivabsoluto.getWorkbook().getActiveSheet();
+
+                        if (ciudad != "") {
+
+                            sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+                        }
+
+                    }
 
 
-                if (vizcityindicadorestrazadores != null) {
-                    var sheet = vizcityindicadorestrazadores.getWorkbook().getActiveSheet();
-                    if (ciudad != "") {
+                    if (vizcityindicadoresciudad1 != null) {
+                        var sheet = vizcityindicadoresciudad1.getWorkbook().getActiveSheet();
 
-                        sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
+                        if (ciudad != "") {
+
+                            sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+                        }
+                    }
+                    if (vizcityindicadoresciudad2 != null) {
+                        var sheet = vizcityindicadoresciudad2.getWorkbook().getActiveSheet();
+
+                        if (ciudad != "") {
+
+                            sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+                        }
+                    }
+
+                    if (vizcityindicadoresciudad3 != null) {
+                        var sheet = vizcityindicadoresciudad3.getWorkbook().getActiveSheet();
+
+                        if (ciudad != "") {
+
+                            sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+                        }
+                    }
+                    if (vizcityindicadoresciudad4 != null) {
+                        var sheet = vizcityindicadoresciudad4.getWorkbook().getActiveSheet();
+
+                        if (ciudad != "") {
+
+                            sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+                        }
+
+                    }
+
+                    if (vizcityprogresohistorico1 != null) {
+                        var sheet = vizcityprogresohistorico1.getWorkbook().getActiveSheet();
+
+                        if (ciudad != "") {
+
+                            sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+                        }
+
+                    }
+
+                    if (vizcityprogresohistorico2 != null) {
+                        var sheet = vizcityprogresohistorico2.getWorkbook().getActiveSheet();
+
+                        if (ciudad != "") {
+
+                            sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+                        }
+
+                    }
+
+                    if (vizcityprogresohistorico3 != null) {
+                        var sheet = vizcityprogresohistorico3.getWorkbook().getActiveSheet();
+
+                        if (ciudad != "") {
+
+                            sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+                        }
+
+                    }
+                    if (vizcityprogresohistorico4 != null) {
+                        var sheet = vizcityprogresohistorico4.getWorkbook().getActiveSheet();
+
+                        if (ciudad != "") {
+
+                            sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+                        }
+
+                    }
+
+
+                    if (vizcitidashboardinfo != null) {
+                        jQuery.each(vizcitidashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                            if (ciudad != "") {
+
+                                sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
+                            }
+                        })
+                    }
+
+
+                    if (vizcityindicadorestrazadores != null) {
+                        var sheet = vizcityindicadorestrazadores.getWorkbook().getActiveSheet();
+                        if (ciudad != "") {
+
+                            sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
+                        }
+                    }
+
+
+                    if (vizcitymapadecalorporciudad != null) {
+                        var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
+                        if (ciudad != "") {
+
+                            sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
+                        }
+                    }
+                    if (vizcitydeprmentmap != null) {
+                        var sheet = vizcitydeprmentmap.getWorkbook().getActiveSheet();
+                        if (ciudad != "") {
+
+                            sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
+                        }
                     }
                 }
-
-
-                if (vizcitymapadecalorporciudad != null) {
-                    var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
-                    if (ciudad != "") {
-
-                        sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
-                    }
-                }
-                if (vizcitydeprmentmap != null) {
-                    var sheet = vizcitydeprmentmap.getWorkbook().getActiveSheet();
-                    if (ciudad != "") {
-
-                        sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
-                    }
-                }
+            }else{
+                initvizcitydeprmentmap();
             }
 
 
