@@ -980,22 +980,27 @@ block js
 
         function initoodsgrupociudades1() {
 
-            if (vizodsgrupoodsgrupociudades1 == null) {
-                var containerDiv = document.getElementById("odsgrupoodsgrupociudades1"),
-                    url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                    options = {
-                        hideTabs: true,
-                        onFirstInteractive: function () {
+            var valuemeta = $("#changeMeta").val();
+            if(valuemeta==''){
+                alert('Deebe seleccionar una meta');
+            }else {
+                if (vizodsgrupoodsgrupociudades1 == null) {
+                    var containerDiv = document.getElementById("odsgrupoodsgrupociudades1"),
+                        url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                        options = {
+                            hideTabs: true,
+                            onFirstInteractive: function () {
 
-                            changeGrupoodsgrupociudades1();
-                            changeYearodsgrupociudades();
+                                changeGrupoodsgrupociudades1();
+                                changeYearodsgrupociudades();
 
-                        }
-                    };
-                vizodsgrupoodsgrupociudades1 = new tableau.Viz(containerDiv, url, options);
-            } else {
-                changeGrupoodsgrupociudades1();
-                changeYearodsgrupociudades();
+                            }
+                        };
+                    vizodsgrupoodsgrupociudades1 = new tableau.Viz(containerDiv, url, options);
+                } else {
+                    changeGrupoodsgrupociudades1();
+                    changeYearodsgrupociudades();
+                }
             }
 
 
@@ -1711,6 +1716,7 @@ block js
 
                         })
                         $("#changeMeta").html(html);
+                        $("#changeIndicador").html("");
 
                     }
                 })
