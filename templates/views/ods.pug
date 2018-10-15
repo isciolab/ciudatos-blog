@@ -693,14 +693,8 @@ block js
                         'ods concat':$("#changeOdsConcat option:selected").html(),
                         'name (Targets)':$("#changeMeta option:selected").html(),
                         onFirstInteractive: function () {
-                          //  initmapadecalorporods();
 
-
-                            var head = $("#odsdashboardinfo iframe").contents().find("head");
-                            var css = '<style type="text/css">' +
-                                '.tab-toolbar{display:none!important}; ' +
-                                '</style>';
-                            $(head).append(css);
+                            odsConcatFilter();
 
 
                         }
@@ -1702,73 +1696,74 @@ block js
 
             if (vizodsdashboardinfo == null || vizodsdashboardinfo ===undefined) {
                 initodsdashboardinfo();
-            }
-            var ods = $("#changeOdsConcat option:selected").text();
-            console.log(ods);
-            $.ajax({
-                url: 'http://ciudatos.com:8080/api/targets/getTargets/',
-                dataType: 'json',
-                type: 'GET',
-                data: {goal_id: $("#changeOdsConcat").val()},
-                success: function (data) {
-                    var html = '<option value="">Seleccione aquí:</option>';
-                    jQuery.each(data, function (i, value) {
-                        html += '<option value=' + value.id + '>' + value.name + '</option>';
+            }else {
+                var ods = $("#changeOdsConcat option:selected").text();
+                console.log(ods);
+                $.ajax({
+                    url: 'http://ciudatos.com:8080/api/targets/getTargets/',
+                    dataType: 'json',
+                    type: 'GET',
+                    data: {goal_id: $("#changeOdsConcat").val()},
+                    success: function (data) {
+                        var html = '<option value="">Seleccione aquí:</option>';
+                        jQuery.each(data, function (i, value) {
+                            html += '<option value=' + value.id + '>' + value.name + '</option>';
 
-                    })
-                    $("#changeMeta").html(html);
+                        })
+                        $("#changeMeta").html(html);
 
-                }
-            })
-
-
-            var fieldname = "ods concat";
-
-
-            if (activetab == 'ODS') {
-
-
-                if (vizodsgrupoodsgrupociudades1 != null) {
-                    var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet();
-                    if (ods != "") {
-
-                        sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
                     }
-                }
-                if (vizodsgrupoodsgrupociudades2 != null) {
-                    var sheet = vizodsgrupoodsgrupociudades2.getWorkbook().getActiveSheet();
-                    if (ods != "") {
-
-                        sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
-                    }
-                }
-                if (vizodsgrupoodsgrupociudades3 != null) {
-                    var sheet = vizodsgrupoodsgrupociudades3.getWorkbook().getActiveSheet();
-                    if (ods != "") {
-
-                        sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
-                    }
-                }
-                if (vizodsgrupoodsgrupociudades4 != null) {
-                    var sheet = vizodsgrupoodsgrupociudades4.getWorkbook().getActiveSheet();
-                    if (ods != "") {
-
-                        sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
-                    }
-                }
+                })
 
 
-                if (vizodsdashboardinfo != null) {
-                    jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+                var fieldname = "ods concat";
 
+
+                if (activetab == 'ODS') {
+
+
+                    if (vizodsgrupoodsgrupociudades1 != null) {
+                        var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet();
                         if (ods != "") {
 
                             sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
                         }
-                    })
+                    }
+                    if (vizodsgrupoodsgrupociudades2 != null) {
+                        var sheet = vizodsgrupoodsgrupociudades2.getWorkbook().getActiveSheet();
+                        if (ods != "") {
+
+                            sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
+                        }
+                    }
+                    if (vizodsgrupoodsgrupociudades3 != null) {
+                        var sheet = vizodsgrupoodsgrupociudades3.getWorkbook().getActiveSheet();
+                        if (ods != "") {
+
+                            sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
+                        }
+                    }
+                    if (vizodsgrupoodsgrupociudades4 != null) {
+                        var sheet = vizodsgrupoodsgrupociudades4.getWorkbook().getActiveSheet();
+                        if (ods != "") {
+
+                            sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
+                        }
+                    }
+
+
+                    if (vizodsdashboardinfo != null) {
+                        jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
+
+                            if (ods != "") {
+
+                                sheet.applyFilterAsync(fieldname, ods, tableau.FilterUpdateType.REPLACE);
+                            }
+                        })
+                    }
+
+
                 }
-
-
             }
 
 
