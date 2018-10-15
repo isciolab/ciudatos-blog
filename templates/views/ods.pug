@@ -986,25 +986,26 @@ block js
                 if (changeGrupoodsgrupociudades1 != '') {
                     alert('Debe seleccionar una meta');
                 }
-            }
-            if (vizodsgrupoodsgrupociudades1 == null) {
-                    var containerDiv = document.getElementById("odsgrupoodsgrupociudades1"),
-                        url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                        options = {
-                            hideTabs: true,
-                            onFirstInteractive: function () {
+            }else{
+                if (vizodsgrupoodsgrupociudades1 == null) {
+                        var containerDiv = document.getElementById("odsgrupoodsgrupociudades1"),
+                            url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                            options = {
+                                hideTabs: true,
+                                onFirstInteractive: function () {
 
-                                changeGrupoodsgrupociudades1();
-                                changeYearodsgrupociudades();
+                                    changeGrupoodsgrupociudades1();
+                                    changeYearodsgrupociudades();
 
-                            }
-                        };
-                    vizodsgrupoodsgrupociudades1 = new tableau.Viz(containerDiv, url, options);
-                } else {
+                                }
+                            };
+                        vizodsgrupoodsgrupociudades1 = new tableau.Viz(containerDiv, url, options);
+                    } else {
                     changeGrupoodsgrupociudades1();
                     changeYearodsgrupociudades();
                 }
             }
+
 
 
         }
@@ -1020,7 +1021,8 @@ block js
                     alert('Debe seleccionar una meta');
                 }
             }
-            if (vizodsgrupoodsgrupociudades2 == null) {
+             else {
+                if (vizodsgrupoodsgrupociudades2 == null) {
                     var containerDiv = document.getElementById("odsgrupoodsgrupociudades2"),
                         url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades2?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
@@ -1039,6 +1041,7 @@ block js
             }
 
 
+
         }
 
 
@@ -1051,8 +1054,9 @@ block js
                 if (changeGrupoodsgrupociudades3 != '') {
                     alert('Debe seleccionar una meta');
                 }
-            }
-            if (vizodsgrupoodsgrupociudades3 == null) {
+
+            } else {
+                if (vizodsgrupoodsgrupociudades3 == null) {
                     var containerDiv = document.getElementById("odsgrupoodsgrupociudades3"),
                         url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades3?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
@@ -1069,6 +1073,7 @@ block js
                     changeYearodsgrupociudades();
                 }
             }
+
 
 
         }
