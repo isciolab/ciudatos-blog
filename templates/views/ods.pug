@@ -980,10 +980,11 @@ block js
 
         function initoodsgrupociudades1() {
 
-            var changeGrupoodsgrupociudades1 = $("#changeGrupoodsgrupociudades1").val();
+            var ano = $("#changeYearodsgrupociudades").val();
+            var Grupoodsgrupociudades1 = $("#changeGrupoodsgrupociudades1").val();
             var valuemeta = $("#changeMeta").val();
             if (valuemeta == '') {
-                if (changeGrupoodsgrupociudades1 != '') {
+                if (Grupoodsgrupociudades1 != '') {
                     alert('Debe seleccionar una meta');
                 }
             }else{
@@ -992,6 +993,8 @@ block js
                             url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                             options = {
                                 hideTabs: true,
+                                "name (Targets)":$("#changeMeta option:selected").html(),
+                                "Date From":$("#ano").val(),
                                 onFirstInteractive: function () {
 
                                     changeGrupoodsgrupociudades1();
@@ -1013,11 +1016,11 @@ block js
 
         function initoodsgrupociudades2() {
 
-
-            var changeGrupoodsgrupociudades2 = $("#changeGrupoodsgrupociudades2").val();
+            var ano = $("#changeYearodsgrupociudades").val();
+            var Grupoodsgrupociudades2 = $("#changeGrupoodsgrupociudades2").val();
             var valuemeta = $("#changeMeta").val();
             if (valuemeta == '') {
-                if (changeGrupoodsgrupociudades2 != '') {
+                if (Grupoodsgrupociudades2 != '') {
                     alert('Debe seleccionar una meta');
                 }
             }
@@ -1027,7 +1030,10 @@ block js
                         url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades2?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
                             hideTabs: true,
+                            "name (Targets)": $("#changeMeta option:selected").html(),
+                            "Date From": $("#ano").val(),
                             onFirstInteractive: function () {
+
 
                                 changeGrupoodsgrupociudades2();
                                 changeYearodsgrupociudades();
@@ -1047,11 +1053,11 @@ block js
 
         function initoodsgrupociudades3() {
 
-
-            var changeGrupoodsgrupociudades3 = $("#changeGrupoodsgrupociudades3").val();
+            var ano = $("#changeYearodsgrupociudades").val();
+            var Grupoodsgrupociudades3 = $("#changeGrupoodsgrupociudades3").val();
             var valuemeta = $("#changeMeta").val();
             if (valuemeta == '') {
-                if (changeGrupoodsgrupociudades3 != '') {
+                if (Grupoodsgrupociudades3 != '') {
                     alert('Debe seleccionar una meta');
                 }
 
@@ -1061,6 +1067,8 @@ block js
                         url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades3?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
                             hideTabs: true,
+                            "name (Targets)": $("#changeMeta option:selected").html(),
+                            "Date From": $("#ano").val(),
                             onFirstInteractive: function () {
                                 changeGrupoodsgrupociudades3();
                                 changeYearodsgrupociudades();
@@ -1080,11 +1088,11 @@ block js
 
         function initoodsgrupociudades4() {
 
-
-            var changeGrupoodsgrupociudades4 = $("#changeGrupoodsgrupociudades4").val();
+            var ano = $("#changeYearodsgrupociudades").val();
+            var Grupoodsgrupociudades4 = $("#changeGrupoodsgrupociudades4").val();
             var valuemeta = $("#changeMeta").val();
             if (valuemeta == '') {
-                if(changeGrupoodsgrupociudades4!='') {
+                if(Grupoodsgrupociudades4!='') {
                     alert('Debe seleccionar una meta');
                 }
             } else {
@@ -1093,6 +1101,8 @@ block js
                         url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades4?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
                             hideTabs: true,
+                            "name (Targets)": $("#changeMeta option:selected").html(),
+                            "Date From": $("#ano").val(),
                             onFirstInteractive: function () {
                                 changeGrupoodsgrupociudades4();
                                 changeYearodsgrupociudades();
