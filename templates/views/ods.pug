@@ -9,8 +9,9 @@ block content
     <div class="row" id="navcontainer">
         <div class="col-md-3 col-md-offset-5">
             <ul class="nav nav-pills">
+            <li role="presentation"  class="active"><a href="#ODS" data-toggle="tab">Mapa de calor ODS</a></li>
             <li role="presentation"  class="active"><a href="#ODS" data-toggle="tab">ODS</a></li>
-            <li role="presentation"><a href="#CIUDADES" data-toggle="tab">CIUDADES</a></li>
+            <li role="presentation"><a href="#CIUDADES" data-toggle="tab">Mapa de calor Ciudades</a></li>
             </ul>
         </div>
     </div>
@@ -1928,7 +1929,7 @@ block js
                 var ciudad = $("#changeCity option:selected").text();
                 var grupo = $("#changeCity option:selected").attr('data-group');
                 var imagen = $("#changeCity option:selected").attr('data-img');
-                $("#imagen_city").attr('src', imagen);
+                $("#imagen_city").attr('src', "http://ciudatos.com:8080"+imagen);
 
                 console.log(ciudad);
                 console.log(grupo);
@@ -2036,7 +2037,7 @@ block js
                     }
 
 
-                    if (vizcitidashboardinfo != null) {
+                    if (vizcitidashboardinfo != null && vizcitidashboardinfo!=undefined) {
                         jQuery.each(vizcitidashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
                             if (ciudad != "") {
