@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/ods.pug" afterPath="$PROJECT_DIR$/templates/views/ods.pug" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +18,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="1926" column="0" lean-forward="true" selection-start-line="1926" selection-start-column="0" selection-end-line="1926" selection-end-column="0" />
+            <state relative-caret-position="178">
+              <caret line="1929" column="45" lean-forward="false" selection-start-line="1929" selection-start-column="45" selection-end-line="1929" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -102,9 +103,9 @@
             <state relative-caret-position="289">
               <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
-                <marker date="1539717613818" expanded="true" signature="702:856" ph="{...}" />
-                <marker date="1539717613818" expanded="true" signature="967:993" ph="{...}" />
-                <marker date="1539717613818" expanded="true" signature="1427:1477" ph="{...}" />
+                <marker date="1539723964842" expanded="true" signature="702:856" ph="{...}" />
+                <marker date="1539723964842" expanded="true" signature="967:993" ph="{...}" />
+                <marker date="1539723964842" expanded="true" signature="1427:1450" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -521,7 +522,7 @@
       <workItem from="1539359765144" duration="3838000" />
       <workItem from="1539607869730" duration="172000" />
       <workItem from="1539628828108" duration="11163000" />
-      <workItem from="1539713891329" duration="7867000" />
+      <workItem from="1539713891329" duration="8010000" />
     </task>
     <task id="LOCAL-00191" summary="visualize ods">
       <created>1539015923307</created>
@@ -870,7 +871,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200219000" />
+    <option name="totallyTimeSpent" value="200362000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1267,17 +1268,17 @@
         <state relative-caret-position="289">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <marker date="1539717613818" expanded="true" signature="702:856" ph="{...}" />
-            <marker date="1539717613818" expanded="true" signature="967:993" ph="{...}" />
-            <marker date="1539717613818" expanded="true" signature="1427:1477" ph="{...}" />
+            <marker date="1539723964842" expanded="true" signature="702:856" ph="{...}" />
+            <marker date="1539723964842" expanded="true" signature="967:993" ph="{...}" />
+            <marker date="1539723964842" expanded="true" signature="1427:1450" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="1926" column="0" lean-forward="true" selection-start-line="1926" selection-start-column="0" selection-end-line="1926" selection-end-column="0" />
+        <state relative-caret-position="178">
+          <caret line="1929" column="45" lean-forward="false" selection-start-line="1929" selection-start-column="45" selection-end-line="1929" selection-end-column="45" />
           <folding />
         </state>
       </provider>

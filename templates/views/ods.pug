@@ -1927,8 +1927,8 @@ block js
 
 
             var ods = $("#changeOdsConcat2 option:selected").text();
-            var imagen = $("#changeCity option:selected").attr('data-img');
-            $("#changeOdsConcat2").attr('src', "http://ciudatos.com:8080"+imagen);
+            var imagen = $("#changeOdsConcat2 option:selected").attr('data-img');
+            $("#imagen_ods").attr('src', "http://ciudatos.com:8080"+imagen);
             console.log(ods);
             $.ajax({
                 url: 'http://ciudatos.com:8080/api/targets/getTargets/',
