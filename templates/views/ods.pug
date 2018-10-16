@@ -1844,6 +1844,9 @@ block js
         function odsConcatFilter() {
 
 
+            var imagen = $("#changeOdsConcat option:selected").attr('data-img');
+            $("#imagen_ods").attr('src', "http://ciudatos.com:8080" + imagen);
+
             if (vizodsdashboardinfo == null || vizodsdashboardinfo ===undefined) {
                 initodsdashboardinfo();
             }else {
@@ -1927,8 +1930,7 @@ block js
 
 
             var ods = $("#changeOdsConcat2 option:selected").text();
-            var imagen = $("#changeOdsConcat2 option:selected").attr('data-img');
-            $("#imagen_ods").attr('src', "http://ciudatos.com:8080"+imagen);
+
             console.log(ods);
             $.ajax({
                 url: 'http://ciudatos.com:8080/api/targets/getTargets/',
