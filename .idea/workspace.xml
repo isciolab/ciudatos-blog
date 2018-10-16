@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/ods.pug" afterPath="$PROJECT_DIR$/templates/views/ods.pug" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +18,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="127" lean-forward="false" selection-start-line="14" selection-start-column="127" selection-end-line="14" selection-end-column="127" />
+            <state relative-caret-position="-570">
+              <caret line="509" column="126" lean-forward="false" selection-start-line="509" selection-start-column="126" selection-end-line="509" selection-end-column="126" />
               <folding />
             </state>
           </provider>
@@ -131,7 +132,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Indicador trazador de ODS por grupo de ciudade</find>
       <find>inicadorFIlter</find>
       <find>initvizcitidashboardinfo</find>
       <find>info</find>
@@ -161,6 +161,7 @@
       <find>eleccione un ODS, una me</find>
       <find>Que son los objetivos de de</find>
       <find>image</find>
+      <find>Progreso VS Absoluto del indicador</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -521,7 +522,7 @@
       <workItem from="1539359765144" duration="3838000" />
       <workItem from="1539607869730" duration="172000" />
       <workItem from="1539628828108" duration="11163000" />
-      <workItem from="1539713891329" duration="4662000" />
+      <workItem from="1539713891329" duration="5150000" />
     </task>
     <task id="LOCAL-00191" summary="visualize ods">
       <created>1539015923307</created>
@@ -870,10 +871,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197014000" />
+    <option name="totallyTimeSpent" value="197502000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="732" extended-state="7" />
+    <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24093656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1276,8 +1277,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="127" lean-forward="false" selection-start-line="14" selection-start-column="127" selection-end-line="14" selection-end-column="127" />
+        <state relative-caret-position="-570">
+          <caret line="509" column="126" lean-forward="false" selection-start-line="509" selection-start-column="126" selection-end-line="509" selection-end-column="126" />
           <folding />
         </state>
       </provider>
