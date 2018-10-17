@@ -321,106 +321,107 @@ block content
                     <div class="tab-pane fade" id="CIUDADES">
 
 
-                            <div class="row odsrowbw  odspt" style="z-index:999">
-                                <div class="col-md-12"  style="z-index:999">
-                                    <div class="row  odsrowbw border-botom " id="cityselectordashboard2"  style="z-index:999">
+                                <div class="row odsrowbw  odspt" style="z-index:999">
+                                    <div class="col-md-12"  style="z-index:999">
+                                        <div class="row  odsrowbw border-botom " id="cityselectordashboard2"  style="z-index:999">
 
-                                        <div class="col-md-4 col-md-offset-1">
-                                            <p class="titleselector text-center">Seleccione una ciudad para ver su información:</p>
-                                        </div>
-                                        <div  class="col-md-3">
-                                            <div class="select_box">
-                                                <select id="changeCity" class="form-control"  onchange="cityFilter();">
-                                                </select>
+                                            <div class="col-md-4 col-md-offset-1">
+                                                <p class="titleselector text-center">Seleccione una ciudad para ver su información:</p>
+                                            </div>
+                                            <div  class="col-md-3">
+                                                <div class="select_box">
+                                                    <select id="changeCity" class="form-control"  onchange="cityFilter();">
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img  id="imagen_city"  src=""/>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img  id="imagen_city"  src=""/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div id='citydeprmentmap'  style='position: relative; width: auto; height:300px'></div>
+                                    </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div id='citydeprmentmap'  style='position: relative; width: auto; height:300px'></div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id='citidashboardinfo'  style='position: relative; width: auto; height:auto'></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                            <div class="col-md-12">
-                            <div id='citidashboardinfo'  style='position: relative; width: auto; height:auto'></div>
-                            </div>
-                            </div>
-                            <div class="row" id="cityatajos" style="display:none">
-                            <div class="col-md-12">
-                            <nav class="navbar navbar-default">
-                            <div class="container-fluid">
-                            <div class="navbar-header">
+                                <div class="row" id="cityatajos" style="display:none">
+                                    <div class="col-md-12">
+                                        <nav class="navbar navbar-default">
+                                             <div class="container-fluid">
+                                                <div class="navbar-header">
 
-                            <a class="navbar-brand" href="#">Enlaces rápidos</a>
-                            </div>
-                            <div id="navbar" class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav">
-                            <li class="active"><a href="#cityindicadoresciudad">Indicadores de ODS por ciudad</a></li>
-                            <li><a href="#cityprogresohistorico">Histórico del indicador</a></li>
-                            <li><a href="#cityindicadorestrazadores">Trazadores por ODS</a></li>
-                            <li><a href="#citymapadecalorporciudad">Mapa de calor</a></li>
-                            </ul>
+                                                     <a class="navbar-brand" href="#">Enlaces rápidos</a>
+                                                </div>
+                                                <div id="navbar" class="navbar-collapse collapse">
+                                                    <ul class="nav navbar-nav">
+                                                    <li class="active"><a href="#cityindicadoresciudad">Indicadores de ODS por ciudad</a></li>
+                                                    <li><a href="#cityprogresohistorico">Histórico del indicador</a></li>
+                                                    <li><a href="#cityindicadorestrazadores">Trazadores por ODS</a></li>
+                                                    <li><a href="#citymapadecalorporciudad">Mapa de calor</a></li>
+                                                    </ul>
 
-                            </div><!--/.nav-collapse -->
-                            </div><!--/.container-fluid -->
-                            </nav>
-                            </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-12 text-center"><hr>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 col-md-offset-3 text-center"><p class="titleselector">Seleccione un ODS, una meta y un indicador para ver su informacion</p>
-                            </div>
-                            </div>
-                            <div class="row">
-                            <div class="col-md-12">
-                            <div class="row" id="">
-                            <div class="col-md-4">
-                            <div class="select_box">
-                            <select id="changeOdsConcat2" class="form-control" onchange="odsConcatFilterCity();">
-                            <option value="">Seleccione aquí:</option>
-                            </select>
-                            </div>
-                            </div>
-                            <div class="col-md-4">
-                            <div class="select_box">
-                            <select id="changeMeta2" class="form-control" onchange="metaFIlterCity();">
-                            <option value="">Seleccione aquí:</option>
-                            </select>
-                            </div>
-                            </div>
-                            <div class="col-md-4">
-                            <div class="select_box">
-                            <select id="changeIndicador2" class="form-control" onchange="inicadorFIlterCity();">
-                            <option value="">Seleccione aquí:</option>
-                            </select>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-
-                            <div class="row">
-
-                                <div class="col-md-12"><br></div>
-
-                                <div class="col-md-3  col-md-offset-4 text-center">
-                                    <p class="titleselector">Seleccione un año para ver la información </p>
+                                                </div><!--/.nav-collapse -->
+                                             </div><!--/.container-fluid -->
+                                        </nav>
+                                    </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="select_box">
-                                    <select id="changeYearCityProgresoVsabsoluto" class="form-control changeYear" onchange="changeYearCityProgresoVsabsoluto(value);">
 
-                                    </select>
+                                <div class="row">
+                                    <div class="col-md-12 text-center"><hr>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-md-offset-3 text-center"><p class="titleselector">Seleccione un ODS, una meta y un indicador para ver su informacion</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row" id="">
+                                            <div class="col-md-4">
+                                                <div class="select_box">
+                                                <select id="changeOdsConcat2" class="form-control" onchange="odsConcatFilterCity();">
+                                                <option value="">Seleccione aquí:</option>
+                                                </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="select_box">
+                                                <select id="changeMeta2" class="form-control" onchange="metaFIlterCity();">
+                                                <option value="">Seleccione aquí:</option>
+                                                </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="select_box">
+                                                <select id="changeIndicador2" class="form-control" onchange="inicadorFIlterCity();">
+                                                <option value="">Seleccione aquí:</option>
+                                                </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-md-12"><br></div>
+
+                                    <div class="col-md-3  col-md-offset-4 text-center">
+                                        <p class="titleselector">Seleccione un año para ver la información </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="select_box">
+                                        <select id="changeYearCityProgresoVsabsoluto" class="form-control changeYear" onchange="changeYearCityProgresoVsabsoluto(value);">
+
+                                        </select>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -435,11 +436,13 @@ block content
                                          <div id='cityprogreso' style='position: relative; width: auto; height:300px'></div>
                                     </div>
 
+                                    <div class="col-md-12">
+                                    <hr>
+                                    </div>
+
                                 </div>
 
-                                <div class="col-md-12">
-                                     <hr>
-                                </div>
+
                                 <div class="row" id='cityindicadoresciudad' >
 
                                     <div class="col-md-12" >
@@ -603,7 +606,7 @@ block content
                                     <hr>
                                     </div>
                                 </div>
-                            </div>
+
                     </div>
             </div>
 
