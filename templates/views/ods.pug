@@ -2145,6 +2145,13 @@ block js
                         sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
                     }
                 }
+                if (vizodsdashboardinfo != null) {
+                    var sheet = vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets().get("Indicador description");
+                    if (indicador != "") {
+
+                        sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
+                    }
+                }
 
 
                 if (vizodsgrupoodsgrupociudades1 != null) {
