@@ -831,7 +831,7 @@ block js
             var text = $("#changeGrupoodsgrupociudades1 option:selected").text();
             var value = $("#changeGrupoodsgrupociudades1").val();
             if (value != "") {
-                sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
             else {
                 vizodsgrupoodsgrupociudades1.dispose();
@@ -846,7 +846,7 @@ block js
             var value = $("#changeGrupoodsgrupociudades2").val();
             console.log(value);
             if (value != "") {
-                sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
             else {
                 vizodsgrupoodsgrupociudades2.dispose();
@@ -860,7 +860,7 @@ block js
             var text = $("#changeGrupoodsgrupociudades3 option:selected").text();
             var value = $("#changeGrupoodsgrupociudades3").val();
             if (value != "") {
-                sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             }
             else {
                 vizodsgrupoodsgrupociudades3.dispose();
@@ -874,7 +874,7 @@ block js
             var text = $("#changeGrupoodsgrupociudades4 option:selected").text();
             var value = $("#changeGrupoodsgrupociudades4").val();
             if (value != "") {
-                sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
+                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
             } else {
                 vizodsgrupoodsgrupociudades4.dispose();
                 vizodsgrupoodsgrupociudades4 = undefined;
