@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/ods.pug" afterPath="$PROJECT_DIR$/templates/views/ods.pug" />
-    </list>
+    <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +15,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-247">
-              <caret line="1082" column="50" lean-forward="false" selection-start-line="1082" selection-start-column="43" selection-end-line="1082" selection-end-column="50" />
+            <state relative-caret-position="229">
+              <caret line="829" column="46" lean-forward="false" selection-start-line="829" selection-start-column="29" selection-end-line="829" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -370,7 +368,7 @@
       <workItem from="1539628828108" duration="11163000" />
       <workItem from="1539713891329" duration="9547000" />
       <workItem from="1539809513359" duration="6213000" />
-      <workItem from="1539816949474" duration="2391000" />
+      <workItem from="1539816949474" duration="2450000" />
     </task>
     <task id="LOCAL-00191" summary="visualize ods">
       <created>1539015923307</created>
@@ -719,7 +717,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210503000" />
+    <option name="totallyTimeSpent" value="210562000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1125,8 +1123,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-247">
-          <caret line="1082" column="50" lean-forward="false" selection-start-line="1082" selection-start-column="43" selection-end-line="1082" selection-end-column="50" />
+        <state relative-caret-position="229">
+          <caret line="829" column="46" lean-forward="false" selection-start-line="829" selection-start-column="29" selection-end-line="829" selection-end-column="46" />
           <folding />
         </state>
       </provider>
