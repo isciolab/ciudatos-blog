@@ -208,16 +208,16 @@ block content
                         <h4 class="text-center">Indicador de ODS por grupo de ciudades</h3>
                         </div>
                         <div class="col-md-6">
-                        <div  style='position: relative; width: auto; height:300px' id="odsgrupoodsgrupociudades1"></div>
+                        <div  style='position: relative; width: auto; max-height:300px' id="odsgrupoodsgrupociudades1"></div>
                         </div>
                         <div class="col-md-6">
-                        <div  style='position: relative; width: auto; height:300px' id="odsgrupoodsgrupociudades2"></div>
+                        <div  style='position: relative; width: auto; max-height:300px' id="odsgrupoodsgrupociudades2"></div>
                         </div>
                         <div class="col-md-6">
-                        <div  style='position: relative; width: auto; height:300px' id="odsgrupoodsgrupociudades3"></div>
+                        <div  style='position: relative; width: auto; max-height:300px' id="odsgrupoodsgrupociudades3"></div>
                         </div>
                         <div class="col-md-6">
-                        <div  style='position: relative; width: auto; height:300px' id="odsgrupoodsgrupociudades4"></div>
+                        <div  style='position: relative; width: auto; max-height:300px' id="odsgrupoodsgrupociudades4"></div>
                         </div>
                         </div>
                         <div class="row" id=''>
@@ -418,7 +418,7 @@ block content
                                 </div>
                                 <div class="col-md-3">
                                     <div class="select_box">
-                                    <select id="" class="form-control changeYear" onchange="changeYearCityProgresoVsabsoluto(value);">
+                                    <select id="changeYearCityProgresoVsabsoluto" class="form-control changeYear" onchange="changeYearCityProgresoVsabsoluto(value);">
 
                                     </select>
                                     </div>
@@ -827,7 +827,7 @@ block js
         function changeGrupoodsgrupociudades1() {
 
             var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet();
-            var fieldname = "Grupo";
+            var fieldname = "Id (Group Cities)";
             var text = $("#changeGrupoodsgrupociudades1 option:selected").text();
             var value = $("#changeGrupoodsgrupociudades1").val();
             if (value != "") {
@@ -841,7 +841,7 @@ block js
 
         function changeGrupoodsgrupociudades2() {
             var sheet = vizodsgrupoodsgrupociudades2.getWorkbook().getActiveSheet();
-            var fieldname = "Grupo";
+            var fieldname = "Id (Group Cities)";
             var text = $("#changeGrupoodsgrupociudades2 option:selected").text();
             var value = $("#changeGrupoodsgrupociudades2").val();
             console.log(value);
@@ -856,7 +856,7 @@ block js
 
         function changeGrupoodsgrupociudades3() {
             var sheet = vizodsgrupoodsgrupociudades3.getWorkbook().getActiveSheet();
-            var fieldname = "Grupo";
+            var fieldname = "Id (Group Cities)";
             var text = $("#changeGrupoodsgrupociudades3 option:selected").text();
             var value = $("#changeGrupoodsgrupociudades3").val();
             if (value != "") {
@@ -1080,11 +1080,11 @@ block js
                                 hideTabs: true,
                                 "Name (Targets)":$("#changeMeta option:selected").text(),
                                 "Date From":$("#changeYearodsgrupociudades").val(),
-                                "Indicador (Copia)": $("#changeIndicador option:selected").text(),
+                                "Indicador (copia)": $("#changeIndicador option:selected").text(),
                                 onFirstInteractive: function () {
 
                                     changeGrupoodsgrupociudades1();
-                                    changeYearodsgrupociudades();
+                                    //changeYearodsgrupociudades();
 
                                 }
                             };
@@ -1113,17 +1113,17 @@ block js
              else {
                 if (vizodsgrupoodsgrupociudades2 == null) {
                     var containerDiv = document.getElementById("odsgrupoodsgrupociudades2"),
-                        url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades2?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                        url = "https://public.tableau.com/profile/jhainey.perez#!/vizhome/Ciudatos/Indicadortrazadordeodsporgrupodeciudades?publish=yes",
                         options = {
                             hideTabs: true,
                             "Name (Targets)": $("#changeMeta option:selected").text(),
                             "Date From": $("#changeYearodsgrupociudades").val(),
-                            "Indicador (Copia)": $("#changeIndicador option:selected").text(),
+                            "Indicador": $("#changeIndicador option:selected").text(),
                             onFirstInteractive: function () {
 
 
                                 changeGrupoodsgrupociudades2();
-                                changeYearodsgrupociudades();
+                                //changeYearodsgrupociudades();
                             }
                         };
                     vizodsgrupoodsgrupociudades2 = new tableau.Viz(containerDiv, url, options);
@@ -1156,10 +1156,10 @@ block js
                             hideTabs: true,
                             "Name (Targets)": $("#changeMeta option:selected").text(),
                             "Date From": $("#changeYearodsgrupociudades").val(),
-                            "Indicador (Copia)": $("#changeIndicador option:selected").text(),
+                            "Indicador (copia)": $("#changeIndicador option:selected").text(),
                             onFirstInteractive: function () {
                                 changeGrupoodsgrupociudades3();
-                                changeYearodsgrupociudades();
+                               // changeYearodsgrupociudades();
 
                             }
                         };
@@ -1191,10 +1191,10 @@ block js
                             hideTabs: true,
                             "Name (Targets)": $("#changeMeta option:selected").text(),
                             "Date From": $("#changeYearodsgrupociudades").val(),
-                            "Indicador (Copia)": $("#changeIndicador option:selected").text(),
+                            "Indicador (copia)": $("#changeIndicador option:selected").text(),
                             onFirstInteractive: function () {
                                 changeGrupoodsgrupociudades4();
-                                changeYearodsgrupociudades();
+                               // changeYearodsgrupociudades();
 
                             }
                         };
@@ -1309,6 +1309,7 @@ block js
         function initcityindicadoresciudad1() {
 
             var ods = $("#changecityindicadoresciudad1 option:selected").text();
+            var indicador = $("#changecityindicadoresciudad1 option:selected").text();
             var grupo = $("#changeCity option:selected").attr('data-group');
             if (grupo == '' || grupo == undefined) {
                 alert('Debe seleccionar la ciudad');
@@ -1319,7 +1320,8 @@ block js
                         options = {
                             hideTabs: true,
                             "Id (Group Cities)": grupo,
-                            "ods concat": ods
+                            "ods concat": ods,
+                            "Date From": $("#changeYearCityProgresoVsabsoluto").val(),
                         };
                     vizcityindicadoresciudad1 = new tableau.Viz(containerDiv, url, options);
                 } else {
@@ -1342,7 +1344,8 @@ block js
                         options = {
                             hideTabs: true,
                             "Id (Group Cities)": grupo,
-                            "ods concat": ods
+                            "ods concat": ods,
+                            "Date From": $("#changeYearCityProgresoVsabsoluto").val(),
 
                         };
                     vizcityindicadoresciudad2 = new tableau.Viz(containerDiv, url, options);
@@ -1367,7 +1370,8 @@ block js
                         options = {
                             hideTabs: true,
                             "Id (Group Cities)": grupo,
-                            "ods concat": ods
+                            "ods concat": ods,
+                            "Date From": $("#changeYearCityProgresoVsabsoluto").val(),
                         };
                     vizcityindicadoresciudad3 = new tableau.Viz(containerDiv, url, options);
                 }
@@ -1391,7 +1395,8 @@ block js
                         options = {
                             hideTabs: true,
                             "Id (Group Cities)": grupo,
-                            "ods concat": ods
+                            "ods concat": ods,
+                            "Date From": $("#changeYearCityProgresoVsabsoluto").val(),
 
                         };
                     vizcityindicadoresciudad4 = new tableau.Viz(containerDiv, url, options);
