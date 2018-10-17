@@ -744,6 +744,7 @@ block js
             var start_year = new Date().getFullYear();
 
 
+            $('.changeYear').append('<option value="">Años</option>');
             for (var i = start_year-1; i > start_year - 4; i--) {
                 $('.changeYear').append('<option value="' + i + '">' + i + '</option>');
             }
@@ -802,7 +803,7 @@ block js
                     var containerDiv = document.getElementById("mapadecalorporods"),
                         url = "https://public.tableau.com/views/Ciudatos/Mapadecalorporods?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
-                            "Indicador": indicador,
+
                             "Date From": ano,
                             hideTabs: true,
                             onFirstInteractive: function () {
@@ -2187,19 +2188,7 @@ block js
 
 
 
-                console.log(vizmapadecalorporods);
-                if (vizmapadecalorporods != null) {
 
-                    var sheet = vizmapadecalorporods.getWorkbook().getActiveSheet();
-
-                    if (indicador != "") {
-
-                        sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }else{
-                    initmapadecalorporods();
-                }
 
 
             }
