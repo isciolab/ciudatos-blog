@@ -1088,7 +1088,7 @@ block js
                                 "Id (Group Cities)": Grupoodsgrupociudades1,
                                 "ods concat":$("#changeOdsConcat option:selected").text(),
                                 "Id (Targets)":$("#changeMeta").val(),
-                                "Indicador (copia)": $("#changeIndicador option:selected").text(),
+                                "Indicador": $("#changeIndicador option:selected").text(),
 
 
 
@@ -1135,7 +1135,7 @@ block js
                             "Id (Group Cities)": Grupoodsgrupociudades2,
                             "ods concat": $("#changeOdsConcat option:selected").text(),
                             "Id (Targets)": $("#changeMeta").val(),
-                            "Indicador (copia)": $("#changeIndicador option:selected").text(),
+                            "Indicador": $("#changeIndicador option:selected").text(),
 
 
                             onFirstInteractive: function () {
@@ -1176,7 +1176,7 @@ block js
                             "ods concat": $("#changeOdsConcat option:selected").text(),
                             "Id (Targets)": $("#changeMeta").val(),
                             "Date From": $("#changeYearodsgrupociudades").val(),
-                            "Indicador (copia)": $("#changeIndicador option:selected").text(),
+                            "Indicador": $("#changeIndicador option:selected").text(),
                             "Id (Group Cities)": Grupoodsgrupociudades3,
                             onFirstInteractive: function () {
                                // changeGrupoodsgrupociudades3();
@@ -1214,7 +1214,7 @@ block js
                             "ods concat": $("#changeOdsConcat option:selected").text(),
                             "Id (Targets)": $("#changeMeta").val(),
                             "Date From": $("#changeYearodsgrupociudades").val(),
-                            "Indicador (copia)": $("#changeIndicador option:selected").text(),
+                            "Indicador": $("#changeIndicador option:selected").text(),
                             "Id (Group Cities)": Grupoodsgrupociudades4,
                             onFirstInteractive: function () {
                               //  changeGrupoodsgrupociudades4();
@@ -2201,28 +2201,28 @@ block js
                     var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet();
                     if (indicador != "") {
 
-                        sheet.applyFilterAsync("Indicador (copia)", indicador, tableau.FilterUpdateType.REPLACE);
+                        sheet.applyFilterAsync("Indicador", indicador, tableau.FilterUpdateType.REPLACE);
                     }
                 }
                 if (vizodsgrupoodsgrupociudades2 != null) {
                     var sheet = vizodsgrupoodsgrupociudades2.getWorkbook().getActiveSheet();
                     if (indicador != "") {
 
-                        sheet.applyFilterAsync("Indicador (copia)", indicador, tableau.FilterUpdateType.REPLACE);
+                        sheet.applyFilterAsync("Indicador", indicador, tableau.FilterUpdateType.REPLACE);
                     }
                 }
                 if (vizodsgrupoodsgrupociudades3 != null) {
                     var sheet = vizodsgrupoodsgrupociudades3.getWorkbook().getActiveSheet();
                     if (indicador != "") {
 
-                        sheet.applyFilterAsync("Indicador (copia)", indicador, tableau.FilterUpdateType.REPLACE);
+                        sheet.applyFilterAsync("Indicador", indicador, tableau.FilterUpdateType.REPLACE);
                     }
                 }
                 if (vizodsgrupoodsgrupociudades4 != null) {
                     var sheet = vizodsgrupoodsgrupociudades4.getWorkbook().getActiveSheet();
                     if (indicador != "") {
 
-                        sheet.applyFilterAsync("Indicador (copia)", indicador, tableau.FilterUpdateType.REPLACE);
+                        sheet.applyFilterAsync("Indicador", indicador, tableau.FilterUpdateType.REPLACE);
                     }
                 }
 
