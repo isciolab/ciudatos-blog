@@ -1585,13 +1585,20 @@ block js
         function initvizcityprogreovsabsoluto() {
 
 
+            var indicador = $("#changeIndicador2 option:selected").text();
+            var anio = $("#changeYearCityProgresoVsabsoluto").val();
+
+            if(anio == '' || indicador == ''){
+                alert('Debe seleccionar un indicador y un año');
+                return false;
+            }
             if (vizcitivabsoluto == null) {
                 var containerDiv = document.getElementById("cityvsabsoluto"),
                     url = "https://public.tableau.com/views/Ciudatos/Indicadordeprogresoabsolutociudad?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
                         hideTabs: true,
-                        "Date From": $("#changeYearCityProgresoVsabsoluto").val() ,
-                        "Indicador": $("#changeIndicador2 option:selected").text() ,
+                        "Date From": anio ,
+                        "Indicador": indicador ,
                         onFirstInteractive: function () {
 
                         }
@@ -1877,7 +1884,7 @@ block js
             if (vizcitivabsoluto != null) {
                 initvizcityprogreovsabsoluto();
             }
-           
+
 
             if (vizcitivabsoluto != null) {
                 var sheet = vizcitivabsoluto.getWorkbook().getActiveSheet()
