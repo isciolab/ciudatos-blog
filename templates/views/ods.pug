@@ -408,21 +408,21 @@ block content
                                             <div class="col-md-4">
                                                 <div class="select_box">
                                                 <select id="changeOdsConcat2" class="form-control" onchange="odsConcatFilterCity();">
-                                                <option value="">Seleccione aquí:</option>
+                                                <option value="">ODS:</option>
                                                 </select>
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="select_box">
                                                 <select id="changeMeta2" class="form-control" onchange="metaFIlterCity();">
-                                                <option value="">Seleccione aquí:</option>
+                                                <option value="">META:</option>
                                                 </select>
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="select_box">
                                                 <select id="changeIndicador2" class="form-control" onchange="inicadorFIlterCity();">
-                                                <option value="">Seleccione aquí:</option>
+                                                <option value="">INDICADOR:</option>
                                                 </select>
                                                 </div>
                                             </div>
@@ -1588,7 +1588,7 @@ block js
             var indicador = $("#changeIndicador2 option:selected").text();
             var anio = $("#changeYearCityProgresoVsabsoluto").val();
 
-            if(anio == '' || indicador == ''){
+            if(anio == '' && indicador == ''){
                 alert('Debe seleccionar un indicador y un año');
                 return false;
             }
