@@ -349,8 +349,27 @@ block content
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12">
-                                        <div id='citidashboardinfo'  style='position: relative; width: auto; height:auto'></div>
+                                    <div class="col-md-6">
+                                        <div id='citidashboardinfo'  class="row">
+                                            <div class="col-md-12">
+                                                 <p class="titleselector">Datos demográficos y geográficos</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <p class="">Departamento: <spand="departamento"></span></p>
+                                                <p class="">Población total: <spand="pobtotal"></span></p>
+                                                <p class="">Población urbana: <spand="poburbana"></span></p>
+                                                <p class="">Población rural: <spand="pobrural"></span></p>
+                                                <p class="">Área total: <spand="areatot"></span></p>
+                                                <p class="">Año de fundación: <spand="aniofundacion"></span></p>
+
+                                            </div>
+                                            <div class="col-md-12"><p id="descripcion"></p></div>
+                                            <div class="col-md-12"><a href="http://redcomovamos.org/ciudatosenvivo/">http://redcomovamos.org/ciudatos/</a></div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div id='citymap'  style='position: relative; width: auto; height:auto'></div>
                                     </div>
                                 </div>
                                 <div class="row" id="cityatajos" style="display:none">
@@ -665,7 +684,10 @@ block js
                 success: function (data) {
                     var html = '<option value="">Seleccione aquí:</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option data-img=' + value.avatar.url + ' data-group=' + value.group_cities_id + ' value=' + value.name + '>' + value.name + '</option>';
+                        html += '<option data-img=' + value.avatar.url + ' data-group=' + value.group_cities_id + ' value='
+                            + value.name + ' data-total_area='+value.total_area+' data-total_population='+value.total_population+'' +
+                            'data-urban_population='+value.urban_population+' data-rural_population='+value.rural_population+' ' +
+                            'data-description='+value.description+' data-department='+value.department+'>' + value.name + '</option>';
 
                     })
                     $("#changeCity").html(html);
@@ -1521,16 +1543,36 @@ block js
                         hideTabs: true,
                         onFirstInteractive: function () {
                             //  console.log('inicio lo demas de ciuades');
-                            initvizcitidashboardinfo();
+                            initvizcitymap();
                             cityFilter();
 
                         }
                     };
                 vizcitydeprmentmap = new tableau.Viz(containerDiv, url, options);
             } else {
-                initvizcitidashboardinfo();
+                initvizcitymap();
             }
         }
+
+        function initvizcitymap() {
+            if (vizcitydeprmentmap == null) {
+                var containerDiv = document.getElementById("citymap"),
+                    url = "https://public.tableau.com/views/Ciudatos/Citymap?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+                            //  console.log('inicio lo demas de ciuades');
+                           // initvizcitidashboardinfo();
+                            cityFilter();
+
+                        }
+                    };
+                vizcitydeprmentmap = new tableau.Viz(containerDiv, url, options);
+            } else {
+                //initvizcitidashboardinfo();
+            }
+        }
+
 
         function initvizcityprogreovsabsoluto() {
 
@@ -2031,6 +2073,12 @@ block js
                 var ciudad = $("#changeCity option:selected").text();
                 var grupo = $("#changeCity option:selected").attr('data-group');
                 var imagen = $("#changeCity option:selected").attr('data-img');
+                var urban_population = $("#changeCity option:selected").attr('urban_population');
+                var total_population = $("#changeCity option:selected").attr('total_population');
+                var total_area = $("#changeCity option:selected").attr('total_area');
+                var rural_population = $("#changeCity option:selected").attr('rural_population');
+                var department = $("#changeCity option:selected").attr('department');
+
                 $("#imagen_city").attr('src', "http://ciudatos.com:8080"+imagen);
 
                 console.log(ciudad);
