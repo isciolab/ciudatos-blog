@@ -18,7 +18,7 @@
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="161">
-              <caret line="690" column="111" lean-forward="false" selection-start-line="690" selection-start-column="111" selection-end-line="690" selection-end-column="111" />
+              <caret line="690" column="106" lean-forward="false" selection-start-line="690" selection-start-column="106" selection-end-line="690" selection-end-column="106" />
               <folding />
             </state>
           </provider>
@@ -368,7 +368,7 @@
       <workItem from="1539809513359" duration="6213000" />
       <workItem from="1539816949474" duration="4596000" />
       <workItem from="1539822332879" duration="5106000" />
-      <workItem from="1539888160265" duration="9748000" />
+      <workItem from="1539888160265" duration="9803000" />
     </task>
     <task id="LOCAL-00192" summary="visualize ods">
       <created>1539016085255</created>
@@ -717,7 +717,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227562000" />
+    <option name="totallyTimeSpent" value="227617000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1120,7 +1120,7 @@
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
-          <caret line="690" column="111" lean-forward="false" selection-start-line="690" selection-start-column="111" selection-end-line="690" selection-end-column="111" />
+          <caret line="690" column="106" lean-forward="false" selection-start-line="690" selection-start-column="106" selection-end-line="690" selection-end-column="106" />
           <folding />
         </state>
       </provider>
