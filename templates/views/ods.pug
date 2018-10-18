@@ -464,11 +464,15 @@ block content
                                 </div>
 
 
+                                <div class="row"><div class="col-md-12"><br></div></div>
                                 <div class="row odsrowbw odspt" id='cityindicadoresciudad' >
 
-                                    <div class="col-md-6 col-md-offset-4 odsrowbw  odspt border-bottom" >
+                                    <div class="col-md-6 col-md-offset-3 odsrowbw  odspt border-bottom" >
                                         <p class="text-center titleselector">Seleccione uno o varios ODS para ver su información</p>
                                     </div>
+                                </div>
+                                <div class="row odsrowbw" id='' >
+
                                     <div class="col-md-3">
                                         <div class="select_box">
                                         <select id="changecityindicadoresciudad1" class="form-control" onchange="initcityindicadoresciudad1();">
@@ -1588,9 +1592,12 @@ block js
             var indicador = $("#changeIndicador2 option:selected").text();
             var anio = $("#changeYearCityProgresoVsabsoluto").val();
 
-            if(anio == '' && indicador == ''){
-                alert('Debe seleccionar un indicador y un año');
-                return false;
+            if(anio == '' || indicador == ''){
+
+                if(anio == '' && indicador == '') {
+                    alert('Debe seleccionar un indicador y un año');
+                    return false;
+                }
             }
             if (vizcitivabsoluto == null) {
                 var containerDiv = document.getElementById("cityvsabsoluto"),
