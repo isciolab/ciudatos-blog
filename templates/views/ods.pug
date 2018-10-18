@@ -1891,7 +1891,7 @@ block js
                     success: function (data) {
                         var html = '<option value="">Seleccione aquí:</option>';
                         jQuery.each(data, function (i, value) {
-                            html += '<option value=' + value.id + '>'+value.name+'</option>';
+                            html += '<option value="' + value.id + '">'+value.name+'</option>';
 
                         })
                         $("#changeMeta").html(html);
