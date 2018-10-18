@@ -2281,7 +2281,7 @@ block js
                 var sheet = vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets().get("metas");
                 if (value != "") {
 
-                    sheet.applyFilterAsync("Id (Targets)", valuenumber, tableau.FilterUpdateType.REPLACE);
+                    sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
                 }
 
 
@@ -2304,7 +2304,7 @@ block js
                     var sheet = vizodsgrupoodsgrupociudades3.getWorkbook().getActiveSheet();
                     if (value != "") {
 
-                        sheet.applyFilterAsync(f"Id (Targets)", valuenumber, tableau.FilterUpdateType.REPLACE);
+                        sheet.applyFilterAsync("Id (Targets)", valuenumber, tableau.FilterUpdateType.REPLACE);
                     }
                 }
                 if (vizodsgrupoodsgrupociudades4 != null) {
