@@ -659,6 +659,7 @@ block js
         var vizcitivabsoluto;
         var vizcitiprogreso;
         var vizcitydeprmentmap;
+        var vizcitymap;
 
 
         var vizcityindicadoresciudad1;
@@ -1556,7 +1557,7 @@ block js
         }
 
         function initvizcitymap() {
-            if (vizcitydeprmentmap == null) {
+            if (vizcitymap == null) {
                 var containerDiv = document.getElementById("citymap"),
                     url = "https://public.tableau.com/views/Ciudatos/Citymap?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
@@ -1568,7 +1569,7 @@ block js
 
                         }
                     };
-                vizcitydeprmentmap = new tableau.Viz(containerDiv, url, options);
+                vizcitymap = new tableau.Viz(containerDiv, url, options);
             } else {
                 //initvizcitidashboardinfo();
             }
