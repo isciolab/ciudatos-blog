@@ -1663,9 +1663,10 @@ block js
         function changeYearodsgrupociudades() {
             var ano = $("#changeYearodsgrupociudades").val();
             var fieldname = "Date From";
-
+            console.log(vizodsgrupoodsgrupociudades1);
             if (vizodsgrupoodsgrupociudades1 != null) {
-                var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet()
+                console.log(ano);
+                var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet();
 
                 if (ano != "") {
 
