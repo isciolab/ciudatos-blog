@@ -204,26 +204,26 @@ block content
                         </div>
 
                         <div class="row">
-                        <div class="col-md-5 col-md-offset-4" >
-                        <h4 class="text-center">Indicador de ODS por grupo de ciudades</h3>
-                        </div>
-                        <div class="col-md-6">
-                        <div  style='position: relative; width: auto; max-height:370px' id="odsgrupoodsgrupociudades1"></div>
-                        </div>
-                        <div class="col-md-6">
-                        <div  style='position: relative; width: auto; max-height:370px' id="odsgrupoodsgrupociudades2"></div>
-                        </div>
-                        <div class="col-md-6">
-                        <div  style='position: relative; width: auto; max-height:370px' id="odsgrupoodsgrupociudades3"></div>
-                        </div>
-                        <div class="col-md-6">
-                        <div  style='position: relative; width: auto; max-height:370px' id="odsgrupoodsgrupociudades4"></div>
-                        </div>
+                            <div class="col-md-5 col-md-offset-4" >
+                            <h4 class="text-center">Indicador de ODS por grupo de ciudades</h3>
+                            </div>
+                            <div class="col-md-6">
+                                 <div  style='position: relative; width: auto; max-height:370px' id="odsgrupoodsgrupociudades1"></div>
+                            </div>
+                            <div class="col-md-6">
+                                 <div  style='position: relative; width: auto; max-height:370px' id="odsgrupoodsgrupociudades2"></div>
+                            </div>
+                            <div class="col-md-6">
+                                 <div  style='position: relative; width: auto; max-height:370px' id="odsgrupoodsgrupociudades3"></div>
+                            </div>
+                            <div class="col-md-6">
+                                 <div  style='position: relative; width: auto; max-height:370px' id="odsgrupoodsgrupociudades4"></div>
+                            </div>
                         </div>
                         <div class="row" id=''>
-                        <div class="col-md-12 text-center" >
-                         <br>
-                        </div>
+                            <div class="col-md-12 text-center" >
+                              <br>
+                                </div>
                         </div>
                         <div class="row odsrowbw odspt" id="dashboardodstrazador">
                             <div class="col-md-6 col-md-offset-3 text-center" >
@@ -1123,6 +1123,8 @@ block js
                     $("#changeGrupoodsgrupociudades").val("");
                 }
             } else {
+
+                console.log(vizodsgrupoodsgrupociudades2);
                 if (vizodsgrupoodsgrupociudades2 == null || vizodsgrupoodsgrupociudades2 == undefined) {
                     var containerDiv = document.getElementById("odsgrupoodsgrupociudades2"),
                         url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades2?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
