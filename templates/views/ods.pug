@@ -466,7 +466,7 @@ block content
 
                                 <div class="row odsrowbw odspt" id='cityindicadoresciudad' >
 
-                                    <div class="col-md-5 col-md-offset-4 odsrowbw  odspt border-bottom" >
+                                    <div class="col-md-6 col-md-offset-4 odsrowbw  odspt border-bottom" >
                                         <p class="text-center titleselector">Seleccione uno o varios ODS para ver su información</p>
                                     </div>
                                     <div class="col-md-3">
@@ -1590,6 +1590,8 @@ block js
                     url = "https://public.tableau.com/views/Ciudatos/Indicadordeprogresoabsolutociudad?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
                         hideTabs: true,
+                        "Date From": $("#changeYearCityProgresoVsabsoluto").val() ,
+                        "Indicador": $("#changeIndicador2 option:selected").text() ,
                         onFirstInteractive: function () {
 
                         }
@@ -1871,6 +1873,11 @@ block js
         }
         function changeYearCityProgresoVsabsoluto(ano) {
             var fieldname = "Date From";
+
+            if (vizcitivabsoluto != null) {
+                initvizcityprogreovsabsoluto();
+            }
+           
 
             if (vizcitivabsoluto != null) {
                 var sheet = vizcitivabsoluto.getWorkbook().getActiveSheet()
@@ -2358,6 +2365,12 @@ block js
 
 
             var indicador = $("#changeIndicador2 option:selected").text();
+
+
+            if (vizcitivabsoluto == null) {
+                initvizcityprogreovsabsoluto();
+            }
+
 
             console.log(indicador);
             var fieldname = "Indicador";
