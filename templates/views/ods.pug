@@ -2300,6 +2300,7 @@ block js
             var value = $("#changeMeta option:selected").text();
             var valuenumber = $("#changeMeta").val();
 
+            console.log(valuenumber);
             $.ajax({
                 url: 'http://ciudatos.com:8080/api/indicators/getIndicators/',
                 dataType: 'json',
@@ -2350,6 +2351,8 @@ block js
                         sheet.applyFilterAsync("Id (Targets)", valuenumber, tableau.FilterUpdateType.REPLACE);
                     }
                 }
+
+
                 if (vizodsgrupoodsgrupociudades4 != null) {
                     var sheet = vizodsgrupoodsgrupociudades4.getWorkbook().getActiveSheet();
                     if (value != "") {
@@ -2358,6 +2361,9 @@ block js
                     }
                 }
 
+
+                console.log(vizodsgrupoodstrazadorgrupociudades1);
+                console.log(valuenumber);
 
                 if (vizodsgrupoodstrazadorgrupociudades1 != null) {
                     var sheet = vizodsgrupoodstrazadorgrupociudades1.getWorkbook().getActiveSheet();
