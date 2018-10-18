@@ -889,11 +889,11 @@ block js
         function changeGrupoodstrazadorgrupociudades1() {
 
             var sheet = vizodsgrupoodstrazadorgrupociudades1.getWorkbook().getActiveSheet();
-            var fieldname = "Id (Group Cities)";
+            var fieldname = "Grupo";
             var text = $("#changeGrupoodstrazadorgrupociudades1 option:selected").text();
             var value = $("#changeGrupoodstrazadorgrupociudades1").val();
             if (value != "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+                sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
             }
             else {
                 vizodsgrupoodstrazadorgrupociudades1.dispose();
@@ -903,11 +903,11 @@ block js
         function changeGrupoodstrazadorgrupociudades2() {
 
             var sheet = vizodsgrupoodstrazadorgrupociudades2.getWorkbook().getActiveSheet();
-            var fieldname = "Id (Group Cities)";
+            var fieldname = "Grupo";
             var text = $("#changeGrupoodstrazadorgrupociudades2 option:selected").text();
             var value = $("#changeGrupoodstrazadorgrupociudades2").val();
             if (value != "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+                sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
             }
             else {
                 vizodsgrupoodstrazadorgrupociudades2.dispose();
@@ -918,11 +918,11 @@ block js
         function changeGrupoodstrazadorgrupociudades3() {
 
             var sheet = vizodsgrupoodstrazadorgrupociudades3.getWorkbook().getActiveSheet();
-            var fieldname = "Id (Group Cities)";
+            var fieldname = "Grupo";
             var text = $("#changeGrupoodstrazadorgrupociudades3 option:selected").text();
             var value = $("#changeGrupoodstrazadorgrupociudades3").val();
             if (value != "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+                sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
             }
             else {
                 vizodsgrupoodstrazadorgrupociudades3.dispose();
@@ -933,11 +933,11 @@ block js
         function changeGrupoodstrazadorgrupociudades4() {
 
             var sheet = vizodsgrupoodstrazadorgrupociudades4.getWorkbook().getActiveSheet();
-            var fieldname = "Id (Group Cities)";
+            var fieldname = "Grupo";
             var text = $("#changeGrupoodstrazadorgrupociudades4 option:selected").text();
             var value = $("#changeGrupoodstrazadorgrupociudades4").val();
             if (value != "") {
-                sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
+                sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
             }
             else {
                 vizodsgrupoodstrazadorgrupociudades4.dispose();
@@ -2176,6 +2176,7 @@ block js
                 }
 
 
+
                 if (vizodsgrupoodsgrupociudades1 != null) {
                     var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet();
                     if (indicador != "") {
@@ -2202,6 +2203,36 @@ block js
                     if (indicador != "") {
 
                         sheet.applyFilterAsync("Indicador (copia)", indicador, tableau.FilterUpdateType.REPLACE);
+                    }
+                }
+
+
+                if (vizodsgrupoodstrazadorgrupociudades1 != null) {
+                    var sheet = vizodsgrupoodstrazadorgrupociudades1.getWorkbook().getActiveSheet();
+                    if (indicador != "") {
+
+                        sheet.applyFilterAsync("Indicador", indicador, tableau.FilterUpdateType.REPLACE);
+                    }
+                }
+                if (vizodsgrupoodstrazadorgrupociudades2 != null) {
+                    var sheet = vizodsgrupoodstrazadorgrupociudades2.getWorkbook().getActiveSheet();
+                    if (indicador != "") {
+
+                        sheet.applyFilterAsync("Indicador", indicador, tableau.FilterUpdateType.REPLACE);
+                    }
+                }
+                if (vizodsgrupoodstrazadorgrupociudades3 != null) {
+                    var sheet = vizodsgrupoodstrazadorgrupociudades3.getWorkbook().getActiveSheet();
+                    if (indicador != "") {
+
+                        sheet.applyFilterAsync("Indicador", indicador, tableau.FilterUpdateType.REPLACE);
+                    }
+                }
+                if (vizodsgrupoodstrazadorgrupociudades4 != null) {
+                    var sheet = vizodsgrupoodstrazadorgrupociudades4.getWorkbook().getActiveSheet();
+                    if (indicador != "") {
+
+                        sheet.applyFilterAsync("Indicador", indicador, tableau.FilterUpdateType.REPLACE);
                     }
                 }
 

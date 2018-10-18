@@ -17,8 +17,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="939" column="55" lean-forward="false" selection-start-line="939" selection-start-column="55" selection-end-line="939" selection-end-column="55" />
+            <state relative-caret-position="467">
+              <caret line="2234" column="57" lean-forward="false" selection-start-line="2234" selection-start-column="57" selection-end-line="2234" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -127,8 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Mapa de calor por CIUDAD</find>
-      <find>Indicador de ODS por grupo de ciuda</find>
       <find>hr</find>
       <find>eleccione año ver información en ODS</find>
       <find>imagen_city</find>
@@ -157,6 +155,8 @@
       <find>initoodsgrupociudades1</find>
       <find>Indicador de ODS por grupo de ciudades</find>
       <find>initoodtrazadorsgrupociudades1</find>
+      <find>inicadorFIlter</find>
+      <find>odsConcatFilter</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -367,7 +367,7 @@
       <workItem from="1539713891329" duration="9547000" />
       <workItem from="1539809513359" duration="6213000" />
       <workItem from="1539816949474" duration="4596000" />
-      <workItem from="1539822332879" duration="2625000" />
+      <workItem from="1539822332879" duration="2944000" />
     </task>
     <task id="LOCAL-00192" summary="visualize ods">
       <created>1539016085255</created>
@@ -716,7 +716,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215333000" />
+    <option name="totallyTimeSpent" value="215652000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1118,8 +1118,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="939" column="55" lean-forward="false" selection-start-line="939" selection-start-column="55" selection-end-line="939" selection-end-column="55" />
+        <state relative-caret-position="467">
+          <caret line="2234" column="57" lean-forward="false" selection-start-line="2234" selection-start-column="57" selection-end-line="2234" selection-end-column="57" />
           <folding />
         </state>
       </provider>
