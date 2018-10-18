@@ -1895,31 +1895,31 @@ block js
         function odsConcatFilter() {
 
 
-            var ods = $("#changeOdsConcat option:selected").text();
-            console.log(ods);
-            $.ajax({
-                url: 'http://ciudatos.com:8080/api/targets/getTargets/',
-                dataType: 'json',
-                type: 'GET',
-                data: {goal_id: $("#changeOdsConcat").val()},
-                success: function (data) {
-                    var html = '<option value="">Seleccione aquí:</option>';
-                    jQuery.each(data, function (i, value) {
-                        html += '<option value="' + value.id + '">' + value.name + '</option>';
+                var ods = $("#changeOdsConcat option:selected").text();
+                console.log(ods);
+                $.ajax({
+                    url: 'http://ciudatos.com:8080/api/targets/getTargets/',
+                    dataType: 'json',
+                    type: 'GET',
+                    data: {goal_id: $("#changeOdsConcat").val()},
+                    success: function (data) {
+                        var html = '<option value="">META:</option>';
+                        jQuery.each(data, function (i, value) {
+                            html += '<option value="' + value.id + '">' + value.name + '</option>';
 
-                    })
-                    $("#changeMeta").html(html);
-                    inicadorFIlter();
+                        })
+                        $("#changeMeta").html(html);
+                        inicadorFIlter();
 
+                    }
+                });
+
+                var imagen = $("#changeOdsConcat option:selected").attr('data-img');
+                $("#imagen_ods").attr('src', "http://ciudatos.com:8080" + imagen);
+
+                if (vizodsdashboardinfo == null || vizodsdashboardinfo ===undefined) {
+                    initodsdashboardinfo();
                 }
-            });
-
-            var imagen = $("#changeOdsConcat option:selected").attr('data-img');
-            $("#imagen_ods").attr('src', "http://ciudatos.com:8080" + imagen);
-
-            if (vizodsdashboardinfo == null || vizodsdashboardinfo ===undefined) {
-                initodsdashboardinfo();
-            }
 
 
                 var fieldname = "ods concat";
@@ -1958,7 +1958,7 @@ block js
                     }
 
 
-                    if (vizodsdashboardinfo != null) {
+                    if (vizodsdashboardinfo != null && vizodsdashboardinfo != undefined ) {
                         jQuery.each(vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets(), function (index, sheet) {
 
                             if (ods != "") {
