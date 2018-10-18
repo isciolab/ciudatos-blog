@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/ods.pug" afterPath="$PROJECT_DIR$/templates/views/ods.pug" />
-    </list>
+    <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +15,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="2207" column="23" lean-forward="true" selection-start-line="2207" selection-start-column="23" selection-end-line="2207" selection-end-column="23" />
+            <state relative-caret-position="178">
+              <caret line="1074" column="41" lean-forward="false" selection-start-line="1074" selection-start-column="41" selection-end-line="1074" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -155,9 +152,9 @@
       <find>initoodsg</find>
       <find>IndicadordeODS</find>
       <find>changeYearCityProgresoVsabsoluto</find>
-      <find>initoodsgrupociudades1</find>
       <find>initoodsgrupociudades3</find>
       <find>changeYearodsgrupociudades</find>
+      <find>initoodsgrupociudades1</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -368,14 +365,7 @@
       <workItem from="1539713891329" duration="9547000" />
       <workItem from="1539809513359" duration="6213000" />
       <workItem from="1539816949474" duration="4596000" />
-      <workItem from="1539822332879" duration="21000" />
-    </task>
-    <task id="LOCAL-00191" summary="visualize ods">
-      <created>1539015923307</created>
-      <option name="number" value="00191" />
-      <option name="presentableId" value="LOCAL-00191" />
-      <option name="project" value="LOCAL" />
-      <updated>1539015923307</updated>
+      <workItem from="1539822332879" duration="468000" />
     </task>
     <task id="LOCAL-00192" summary="visualize ods">
       <created>1539016085255</created>
@@ -713,11 +703,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539635180922</updated>
     </task>
-    <option name="localTasksCounter" value="240" />
+    <task id="LOCAL-00240" summary="visualize ods">
+      <created>1539822800003</created>
+      <option name="number" value="00240" />
+      <option name="presentableId" value="LOCAL-00240" />
+      <option name="project" value="LOCAL" />
+      <updated>1539822800003</updated>
+    </task>
+    <option name="localTasksCounter" value="241" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212729000" />
+    <option name="totallyTimeSpent" value="213176000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1119,8 +1116,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="2207" column="23" lean-forward="true" selection-start-line="2207" selection-start-column="23" selection-end-line="2207" selection-end-column="23" />
+        <state relative-caret-position="178">
+          <caret line="1074" column="41" lean-forward="false" selection-start-line="1074" selection-start-column="41" selection-end-line="1074" selection-end-column="41" />
           <folding />
         </state>
       </provider>
