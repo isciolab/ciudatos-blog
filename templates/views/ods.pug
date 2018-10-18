@@ -1071,9 +1071,12 @@ block js
 
             var Grupoodsgrupociudades1 = $("#changeGrupoodsgrupociudades1").val();
             var valuemeta = $("#changeMeta").val();
+
+            console.log($("#changeMeta option:selected").text());
+            console.log($("#changeMeta option:selected").html());
             if (valuemeta == '') {
                 if (Grupoodsgrupociudades1 != '') {
-                    alert('Debe seleccionar un grupo');
+                    alert('Debe seleccionar una meta');
                 }
             }else{
                 if (vizodsgrupoodsgrupociudades1 == null) {
