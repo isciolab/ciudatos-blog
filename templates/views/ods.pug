@@ -1113,35 +1113,34 @@ block js
 
         function initoodsgrupociudades2() {
 
-            var ano = $("#changeYearodsgrupociudades").val();
+
             var Grupoodsgrupociudades2 = $("#changeGrupoodsgrupociudades2").val();
             var valuemeta = $("#changeMeta").val();
+
             if (valuemeta == '') {
                 if (Grupoodsgrupociudades2 != '') {
                     alert('Debe seleccionar una meta');
-                    $("#changeGrupoodsgrupociudades2").val("");
+                    $("#changeGrupoodsgrupociudades").val("");
                 }
-            }
-             else {
-                console.log('iniciando el 2..');
-                console.log(vizodsgrupoodsgrupociudades2);
+            } else {
                 if (vizodsgrupoodsgrupociudades2 == null) {
-
-
                     var containerDiv = document.getElementById("odsgrupoodsgrupociudades2"),
-                        url = "https://public.tableau.com/profile/jhainey.perez#!/vizhome/Ciudatos/IndicadordeODSporgrupodeciudades2?publish=yes",
+                        url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades2?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
                             hideTabs: true,
+
+                            "Date From": $("#changeYearodsgrupociudades").val(),
+                            "Id (Group Cities)": Grupoodsgrupociudades1,
                             "ods concat": $("#changeOdsConcat option:selected").text(),
                             "Id (Targets)": $("#changeMeta").val(),
-                            "Date From": $("#changeYearodsgrupociudades").val(),
-                            "Indicador": $("#changeIndicador option:selected").text(),
-                            "Id (Group Cities)": Grupoodsgrupociudades2,
+                            "Indicador (copia)": $("#changeIndicador option:selected").text(),
+
+
                             onFirstInteractive: function () {
 
-
-                                //changeGrupoodsgrupociudades2();
+                                //changeGrupoodsgrupociudades1();
                                 //changeYearodsgrupociudades();
+
                             }
                         };
                     vizodsgrupoodsgrupociudades2 = new tableau.Viz(containerDiv, url, options);
@@ -1150,7 +1149,6 @@ block js
                     changeYearodsgrupociudades();
                 }
             }
-
 
 
         }
