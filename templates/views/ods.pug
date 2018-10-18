@@ -1073,7 +1073,7 @@ block js
             var valuemeta = $("#changeMeta").val();
             if (valuemeta == '') {
                 if (Grupoodsgrupociudades1 != '') {
-                    alert('Debe seleccionar una meta');
+                    alert('Debe seleccionar un grupo');
                 }
             }else{
                 if (vizodsgrupoodsgrupociudades1 == null) {
@@ -1081,11 +1081,13 @@ block js
                             url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                             options = {
                                 hideTabs: true,
+
+                                "Date From": $("#changeYearodsgrupociudades").val(),
+                                "Id (Group Cities)": Grupoodsgrupociudades1,
                                 "ods concat":$("#changeOdsConcat option:selected").text(),
                                 "Name (Targets)":$("#changeMeta option:selected").text(),
                                 "Indicador (copia)": $("#changeIndicador option:selected").text(),
-                                "Id (Group Cities)": Grupoodsgrupociudades1,
-                                "Date From":$("#changeYearodsgrupociudades").val(),
+
 
 
                                 onFirstInteractive: function () {
