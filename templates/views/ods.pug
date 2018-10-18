@@ -2071,7 +2071,7 @@ block js
 
 
 
-            if(vizcitydeprmentmap!=null) {
+
                 var ciudad = $("#changeCity option:selected").text();
                 var grupo = $("#changeCity option:selected").attr('data-group');
                 var imagen = $("#changeCity option:selected").attr('data-img');
@@ -2236,7 +2236,7 @@ block js
                         }
                     }
                 }
-            }else{
+            if (vizcitydeprmentmap == null) {
                 initvizcitydeprmentmap();
             }
 
