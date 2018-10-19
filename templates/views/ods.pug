@@ -1610,13 +1610,16 @@ block js
                         "Indicador": indicador ,
                         onFirstInteractive: function () {
 
+
+                            var ciudad = $("#changeCity").val();
+                            var sheet = vizcitivabsoluto.getWorkbook().getActiveSheet();
+                            sheet.selectMarksAsync("Ciudad", ciudad, tableau.SelectionUpdateType.REPLACE);
+
                         }
                     };
                 vizcitivabsoluto = new tableau.Viz(containerDiv, url, options);
 
 
-                var ciudad = $("#changeCity").val();
-                vizcitivabsoluto.selectMarksAsync("Ciudad", ciudad, tableau.SelectionUpdateType.REPLACE);
 
             }
 
@@ -1906,6 +1909,10 @@ block js
                 if (ano != "") {
 
                     sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
+
+                    var ciudad = $("#changeCity").val();
+                   
+                    sheet.selectMarksAsync("Ciudad", ciudad, tableau.SelectionUpdateType.REPLACE);
                 }
 
             }
@@ -2156,8 +2163,8 @@ block js
 
                             sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
 
-                            
-                            vizcitivabsoluto.selectMarksAsync("Ciudad", ciudad, tableau.SelectionUpdateType.REPLACE);
+
+                            sheet.selectMarksAsync("Ciudad", ciudad, tableau.SelectionUpdateType.REPLACE);
                         }
 
                     }
