@@ -17,8 +17,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="542" column="42" lean-forward="true" selection-start-line="542" selection-start-column="42" selection-end-line="542" selection-end-column="42" />
+            <state relative-caret-position="161">
+              <caret line="572" column="43" lean-forward="false" selection-start-line="572" selection-start-column="43" selection-end-line="572" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -127,7 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>initoodtrazadorsgrupociudades1</find>
       <find>metaFIlter</find>
       <find>initoodsgrupociudades2</find>
       <find>ndicador de ODS por grupo de ciudades</find>
@@ -157,6 +156,7 @@
       <find>changeIndicador2</find>
       <find>DEBE SELECCION</find>
       <find>Seleccione uno o varios ODS para ver su información</find>
+      <find>Seleccione año ver información en ODS</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -369,7 +369,7 @@
       <workItem from="1539816949474" duration="4596000" />
       <workItem from="1539822332879" duration="5106000" />
       <workItem from="1539888160265" duration="12245000" />
-      <workItem from="1539978240836" duration="743000" />
+      <workItem from="1539978240836" duration="840000" />
     </task>
     <task id="LOCAL-00192" summary="visualize ods">
       <created>1539016085255</created>
@@ -718,7 +718,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230802000" />
+    <option name="totallyTimeSpent" value="230899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1120,8 +1120,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="542" column="42" lean-forward="true" selection-start-line="542" selection-start-column="42" selection-end-line="542" selection-end-column="42" />
+        <state relative-caret-position="161">
+          <caret line="572" column="43" lean-forward="false" selection-start-line="572" selection-start-column="43" selection-end-line="572" selection-end-column="43" />
           <folding />
         </state>
       </provider>
