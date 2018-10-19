@@ -1574,10 +1574,11 @@ block js
                     url = "https://public.tableau.com/views/Ciudatos/Citymap?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
                         hideTabs: true,
+                        "Ciudad":$("#changeCity").val(),
                         onFirstInteractive: function () {
                             //  console.log('inicio lo demas de ciuades');
                            // initvizcitidashboardinfo();
-                            cityFilter();
+                           
 
                         }
                     };
