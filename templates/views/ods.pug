@@ -299,7 +299,7 @@ block content
                              </div>
                         </div>
                         <div class="row odsrowbw border-botom odspt odspb">
-                            <div class="col-md-3 col-md-offset-4">
+                            <div class="col-md-3 col-md-offset-3">
                                <p class="titleselector text-center">Seleccione un año</p>
                             </div>
                             <div class="col-md-3">
@@ -1570,14 +1570,14 @@ block js
                             //  console.log('inicio lo demas de ciuades');
                            // initvizcitidashboardinfo();
 
-                            initvizcityprogreovsabsoluto();
+                            initvizcityindicadorestrazadores();
 
                         }
                     };
                 vizcitymap = new tableau.Viz(containerDiv, url, options);
             } else {
                 //initvizcitidashboardinfo();
-                initvizcityprogreovsabsoluto();
+                initvizcityindicadorestrazadores();
             }
         }
 
@@ -1585,7 +1585,7 @@ block js
         function initvizcityprogreovsabsoluto() {
 
 
-            initvizcityindicadorestrazadores();
+
             var indicador = $("#changeIndicador2 option:selected").text();
             var anio = $("#changeYearCityProgresoVsabsoluto").val();
 
