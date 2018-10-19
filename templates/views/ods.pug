@@ -455,12 +455,12 @@ block content
                                     <div class="col-md-4 col-md-offset-2">
                                         <div id='cityvsabsoluto' style='position: relative; width: auto; height:300px'></div>
                                         <br>
-                                        <p class="blue">Progreso de la meta hoy</p>
+                                        <p class="blue text-center">Progreso de la meta hoy</p>
                                     </div>
                                     <div class="col-md-4 ">
                                         <div id='cityprogreso' style='position: relative; width: auto; height:300px'></div>
                                         <br>
-                                        <p class="blue">Porcentaje de cumplimiento de la meta</p>
+                                        <p class="blue text-center">Porcentaje de cumplimiento de la meta</p>
                                     </div>
 
 
@@ -1593,6 +1593,7 @@ block js
             var indicador = $("#changeIndicador2 option:selected").text();
             var anio = $("#changeYearCityProgresoVsabsoluto").val();
 
+
             if(anio == '' || indicador == ''){
 
                 if(anio == '' && indicador == '') {
@@ -1612,6 +1613,11 @@ block js
                         }
                     };
                 vizcitivabsoluto = new tableau.Viz(containerDiv, url, options);
+
+
+                var ciudad = $("#changeCity").val();
+                vizcitivabsoluto.selectMarksAsync("Ciudad", ciudad, tableau.SelectionUpdateType.REPLACE);
+
             }
 
 
@@ -2149,6 +2155,9 @@ block js
                         if (ciudad != "") {
 
                             sheet.applyFilterAsync("Id (Group Cities)", grupo, tableau.FilterUpdateType.REPLACE);
+
+                            
+                            vizcitivabsoluto.selectMarksAsync("Ciudad", ciudad, tableau.SelectionUpdateType.REPLACE);
                         }
 
                     }
