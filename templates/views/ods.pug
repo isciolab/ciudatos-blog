@@ -454,9 +454,13 @@ block content
                                     </div>
                                     <div class="col-md-4 col-md-offset-2">
                                         <div id='cityvsabsoluto' style='position: relative; width: auto; height:300px'></div>
+                                        <br>
+                                        <p class="blue">Progreso de la meta hoy</p>
                                     </div>
-                                    <div class="col-md-4 col-md-offset-2">
+                                    <div class="col-md-4 ">
                                          <div id='cityprogreso' style='position: relative; width: auto; height:300px'></div>
+                                        <br>
+                                        <p class="blue">Porcentaje de cumplimiento de la meta</p>
                                     </div>
 
 
@@ -1592,8 +1596,8 @@ block js
             if(anio == '' || indicador == ''){
 
                 if(anio == '' && indicador == '') {
-                    alert('Debe seleccionar un indicador y un año');
-                    return false;
+                   // alert('Debe seleccionar un indicador y un año');
+                    //return false;
                 }
             }
             if (vizcitivabsoluto == null) {
