@@ -17,8 +17,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="1938" column="17" lean-forward="false" selection-start-line="1938" selection-start-column="17" selection-end-line="1938" selection-end-column="17" />
+            <state relative-caret-position="450">
+              <caret line="1579" column="32" lean-forward="false" selection-start-line="1579" selection-start-column="32" selection-end-line="1579" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -127,7 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>odsConcatFilter</find>
       <find>seleccio</find>
       <find>seleccione a</find>
       <find>changeYearodsgrupociudades(</find>
@@ -144,7 +143,6 @@
       <find>cityFI</find>
       <find>Seleccione un ODS, una meta y un indicador para ver su informacion</find>
       <find>inicadorFIlterCity</find>
-      <find>initvizcityprogreovsabsoluto</find>
       <find>changeYearCityProgresoVsabsoluto</find>
       <find>changeIndicador2</find>
       <find>DEBE SELECCION</find>
@@ -156,7 +154,9 @@
       <find>cityindicadoresciudad</find>
       <find>eleccione un ODS, una meta y un indicador para ver su informacion</find>
       <find>cityindicadorestrazadores</find>
+      <find>initvizcitymapadecalorporciudad</find>
       <find>initvizcityindicadorestrazadores</find>
+      <find>initvizcityprogreovsabsoluto</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -369,7 +369,7 @@
       <workItem from="1539816949474" duration="4596000" />
       <workItem from="1539822332879" duration="5106000" />
       <workItem from="1539888160265" duration="12245000" />
-      <workItem from="1539978240836" duration="2261000" />
+      <workItem from="1539978240836" duration="2384000" />
     </task>
     <task id="LOCAL-00192" summary="visualize ods">
       <created>1539016085255</created>
@@ -718,7 +718,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="232320000" />
+    <option name="totallyTimeSpent" value="232443000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1120,8 +1120,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="1938" column="17" lean-forward="false" selection-start-line="1938" selection-start-column="17" selection-end-line="1938" selection-end-column="17" />
+        <state relative-caret-position="450">
+          <caret line="1579" column="32" lean-forward="false" selection-start-line="1579" selection-start-column="32" selection-end-line="1579" selection-end-column="32" />
           <folding />
         </state>
       </provider>
