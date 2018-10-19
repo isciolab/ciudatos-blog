@@ -536,7 +536,7 @@ block content
                                         <div  id='cityindicadoresciudad4'  style='position: relative; width: auto; max-height:300px'></div>
                                     </div>
                                 </div>
-                                <div class="row" id="cityprogresohistorico">
+                                <div class="row row odsrowbw odspt" id="cityprogresohistorico">
 
                                     <div class="col-md-12" >
                                         <hr>
@@ -575,7 +575,9 @@ block content
                                     <div class="col-md-12">
                                         <br>
                                     </div>
-                                    <div class="col-md-3 col-md-offset-2"> <p class="titleselector text-center"> Seleccione año ver información en ODS</p>
+                                </div>
+                                <div class="row odsrowbw odspb border-bottom">
+                                    <div class="col-md-3 col-md-offset-3"> <p class="titleselector text-center"> Seleccione año ver información en ODS</p>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="select_box">
@@ -608,7 +610,7 @@ block content
                                         <h4 class="text-center">Indicadores trazadores por ODS</h3>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row odsrowbw odspb border-bottom">
                                     <div class="col-md-3 col-md-offset-2"> <p class="titleselector text-center"> Seleccione año ver información en ODS</p>
                                     </div>
                                     <div class="col-md-3">
@@ -698,7 +700,7 @@ block js
                         html += '<option data-img=' + value.avatar.url + ' data-group=' + value.group_cities_id + ' value='
                             + value.name + ' data-total_area='+value.total_area+' data-total_population="'+value.total_population+'" ' +
                             'data-urban_population='+value.urban_population+' data-rural_population='+value.rural_population+' ' +
-                             'data-description="'+value.description+'" data-department="'+value.department+'" ' +
+                             'data-description="'+value.description+'" data-department="'+value.department.name+'" ' +
                             'data-foundation_year='+value.foundation_year+'>' + value.name + '</option>';
 
                     })
@@ -2257,6 +2259,13 @@ block js
                     }
                     if (vizcitydeprmentmap != null) {
                         var sheet = vizcitydeprmentmap.getWorkbook().getActiveSheet();
+                        if (ciudad != "") {
+
+                            sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
+                        }
+                    }
+                    if (vizcitymap != null) {
+                        var sheet = vizcitymap.getWorkbook().getActiveSheet();
                         if (ciudad != "") {
 
                             sheet.applyFilterAsync(fieldname, ciudad, tableau.FilterUpdateType.REPLACE);
