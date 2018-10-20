@@ -842,6 +842,7 @@ block js
                         options = {
 
                             "Date From": ano,
+                            "Indicador": $("#changeIndicador option:selected").val(),
                             hideTabs: true,
                             onFirstInteractive: function () {
                                 //city
@@ -2393,6 +2394,15 @@ block js
                             sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
                         }
                     })
+                }
+
+                if (vizmapadecalorporods != null) {
+                    var sheet = vizmapadecalorporods.getWorkbook().getActiveSheet();
+                        if (indicador != "") {
+
+                            sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
+                        }
+
                 }
 
 
