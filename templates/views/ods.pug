@@ -270,7 +270,7 @@ block content
                         </div>
                         <div class="row">
                             <div class="col-md-5 col-md-offset-4" >
-                                <h4 class="text-center">Histórico del indicador por grupo de ciudades</h3>
+                                <h4 class="text-center">Indicador trazador de ODS por grupo de ciudades</h3>
                             </div>
                             <div class="col-md-6">
                                  <div  style='position: relative; width: auto; max-height:300px' id="odsgrupoodstrazadorgrupociudades1"></div>
@@ -1106,7 +1106,7 @@ block js
 
             var Grupoodsgrupociudades1 = $("#changeGrupoodsgrupociudades1").val();
             var valuemeta = $("#changeMeta").val();
-            var anio = $("#changeYearcityindicadoresciudad").val();
+            var anio = $("#changeYearodsgrupociudades").val();
 
 
                 if (vizodsgrupoodsgrupociudades1 == null) {
@@ -1123,7 +1123,7 @@ block js
                             options = {
                                 hideTabs: true,
 
-                                "Date From": $("#changeYearcityindicadoresciudad").val(),
+                                "Date From": $("#changeYearodsgrupociudades").val(),
                                 "Id (Group Cities)": Grupoodsgrupociudades1,
                                 "ods concat":$("#changeOdsConcat option:selected").text(),
                                 "Id (Targets)":$("#changeMeta").val(),
@@ -1157,7 +1157,7 @@ block js
 
             var Grupoodsgrupociudades2 = $("#changeGrupoodsgrupociudades2").val();
             var valuemeta = $("#changeMeta").val();
-            var anio = $("#changeYearcityindicadoresciudad").val();
+            var anio = $("#changeYearodsgrupociudades").val();
 
 
                 console.log(vizodsgrupoodsgrupociudades2);
@@ -1175,7 +1175,7 @@ block js
                         options = {
                             hideTabs: true,
 
-                            "Date From": $("#changeYearcityindicadoresciudad").val(),
+                            "Date From": $("#changeYearodsgrupociudades").val(),
                             "Id (Group Cities)": Grupoodsgrupociudades2,
                             "ods concat": $("#changeOdsConcat option:selected").text(),
                             "Id (Targets)": $("#changeMeta").val(),
@@ -1206,7 +1206,7 @@ block js
 
             var Grupoodsgrupociudades3 = $("#changeGrupoodsgrupociudades3").val();
             var valuemeta = $("#changeMeta").val();
-            var anio = $("#changeYearcityindicadoresciudad").val();
+            var anio = $("#changeYearodsgrupociudades").val();
 
                 if (vizodsgrupoodsgrupociudades3 == null) {
                     if (valuemeta == '' || anio == '') {
@@ -1222,7 +1222,7 @@ block js
                                 hideTabs: true,
                                 "ods concat": $("#changeOdsConcat option:selected").text(),
                                 "Id (Targets)": $("#changeMeta").val(),
-                                "Date From": $("#changeYearcityindicadoresciudad").val(),
+                                "Date From": $("#changeYearodsgrupociudades").val(),
                                 "Indicador": $("#changeIndicador option:selected").text(),
                                 "Id (Group Cities)": Grupoodsgrupociudades3,
                                 onFirstInteractive: function () {
@@ -1249,7 +1249,7 @@ block js
 
             var Grupoodsgrupociudades4 = $("#changeGrupoodsgrupociudades4").val();
             var valuemeta = $("#changeMeta").val();
-            var anio = $("#changeYearcityindicadoresciudad").val();
+            var anio = $("#changeYearodsgrupociudades").val();
 
                 if (vizodsgrupoodsgrupociudades4 == null) {
 
@@ -1266,7 +1266,7 @@ block js
                             hideTabs: true,
                             "ods concat": $("#changeOdsConcat option:selected").text(),
                             "Id (Targets)": $("#changeMeta").val(),
-                            "Date From": $("#changeYearcityindicadoresciudad").val(),
+                            "Date From": $("#changeYearodsgrupociudades").val(),
                             "Indicador": $("#changeIndicador option:selected").text(),
                             "Id (Group Cities)": Grupoodsgrupociudades4,
                             onFirstInteractive: function () {
@@ -1402,9 +1402,9 @@ block js
             var anio = $("#changeYearcityindicadoresciudad").val();
             var indicador = $("#changecityindicadoresciudad1 option:selected").text();
             var grupo = $("#changeCity option:selected").attr('data-group');
-            /*if (ods == '' || ods == undefined || anio=='') {
-                alert('Debe seleccionar la ciudad');
-            } else {*/
+            if (ods == '' || ods == undefined || anio=='') {
+               // alert('Debe seleccionar la ciudad');
+            } else {
                 if (vizcityindicadoresciudad1 == null) {
                     var containerDiv = document.getElementById("cityindicadoresciudad1"),
                         url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
@@ -1418,16 +1418,16 @@ block js
                 } else {
                     changecityodsindicadoresciudad1();
                 }
-           // }
+            }
 
         }
 
         function initcityindicadoresciudad2() {
 
             var grupo = $("#changeCity option:selected").attr('data-group');
-           /* if (grupo == '' || grupo == undefined) {
-                alert('Debe seleccionar la ciudad');
-            } else {*/
+            if (grupo == '' || grupo == undefined) {
+                //alert('Debe seleccionar la ciudad');
+            } else {
                 var ods = $("#changecityindicadoresciudad2 option:selected").text();
                 if (vizcityindicadoresciudad2 == null) {
                     var containerDiv = document.getElementById("cityindicadoresciudad2"),
@@ -1443,7 +1443,7 @@ block js
                 } else {
                     changecityodsindicadoresciudad2();
                 }
-            //}
+            }
 
         }
 
@@ -1452,9 +1452,9 @@ block js
 
             var grupo = $("#changeCity option:selected").attr('data-group');
             var ods = $("#changecityindicadoresciudad3 option:selected").text();
-            /*if (grupo == '' || grupo == undefined) {
-                alert('Debe seleccionar la ciudad');
-            } else {*/
+            if (grupo == '' || grupo == undefined) {
+              //alert('Debe seleccionar la ciudad');
+            } else {
                 if (vizcityindicadoresciudad3 == null) {
                     var containerDiv = document.getElementById("cityindicadoresciudad3"),
                         url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades3?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
@@ -1469,7 +1469,7 @@ block js
                 else {
                     changecityodsindicadoresciudad3();
                 }
-            //}
+            }
 
         }
 
@@ -1477,9 +1477,9 @@ block js
 
             var grupo = $("#changeCity option:selected").attr('data-group');
             var ods = $("#changecityindicadoresciudad4 option:selected").text();
-           /* if (grupo == '' || grupo == undefined) {
-                alert('Debe seleccionar la ciudad');
-            } else {*/
+            if (grupo == '' || grupo == undefined) {
+                //alert('Debe seleccionar la ciudad');
+            } else {
                 if (vizcityindicadoresciudad4 == null) {
                     var containerDiv = document.getElementById("cityindicadoresciudad4"),
                         url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades4?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
@@ -1495,7 +1495,7 @@ block js
                 else {
                     changecityodsindicadoresciudad4();
                 }
-            //}
+            }
 
         }
 
@@ -1843,6 +1843,8 @@ block js
                     sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
                 }
 
+            }else{
+                initcityindicadoresciudad1();
             }
             if (vizcityindicadoresciudad2 != null) {
                 var sheet = vizcityindicadoresciudad2.getWorkbook().getActiveSheet()
@@ -1852,6 +1854,8 @@ block js
                     sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
                 }
 
+            } else {
+                initcityindicadoresciudad2();
             }
             if (vizcityindicadoresciudad3 != null) {
                 var sheet = vizcityindicadoresciudad3.getWorkbook().getActiveSheet()
@@ -1861,6 +1865,8 @@ block js
                     sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
                 }
 
+            } else {
+                initcityindicadoresciudad3();
             }
             if (vizcityindicadoresciudad4 != null) {
                 var sheet = vizcityindicadoresciudad4.getWorkbook().getActiveSheet()
@@ -1870,6 +1876,8 @@ block js
                     sheet.applyFilterAsync(fieldname, ano, tableau.FilterUpdateType.REPLACE);
                 }
 
+            } else {
+                initcityindicadoresciudad4();
             }
         }
 
