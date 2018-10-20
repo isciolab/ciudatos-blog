@@ -1417,7 +1417,8 @@ block js
         function initcityindicadoresciudad2() {
 
             var grupo = $("#changeCity option:selected").attr('data-group');
-            if (grupo == '' || grupo == undefined) {
+            var anio = $("#changeYearcityindicadoresciudad").val();
+            if (grupo == '' || grupo == undefined || anio == '') {
                 //alert('Debe seleccionar la ciudad');
             } else {
                 var ods = $("#changecityindicadoresciudad2 option:selected").text();
@@ -1442,9 +1443,10 @@ block js
 
         function initcityindicadoresciudad3() {
 
+            var anio = $("#changeYearcityindicadoresciudad").val();
             var grupo = $("#changeCity option:selected").attr('data-group');
             var ods = $("#changecityindicadoresciudad3 option:selected").text();
-            if (grupo == '' || grupo == undefined) {
+            if (grupo == '' || grupo == undefined || anio == '') {
                 //alert('Debe seleccionar la ciudad');
             } else {
                 if (vizcityindicadoresciudad3 == null) {
@@ -1467,9 +1469,10 @@ block js
 
         function initcityindicadoresciudad4() {
 
+            var anio = $("#changeYearcityindicadoresciudad").val();
             var grupo = $("#changeCity option:selected").attr('data-group');
             var ods = $("#changecityindicadoresciudad4 option:selected").text();
-            if (grupo == '' || grupo == undefined) {
+            if (grupo == '' || grupo == undefined || anio == '') {
                 //alert('Debe seleccionar la ciudad');
             } else {
                 if (vizcityindicadoresciudad4 == null) {
