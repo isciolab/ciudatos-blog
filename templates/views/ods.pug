@@ -114,13 +114,23 @@ block content
 
 
     <div class="row">
-    <div class="col-md-2">
-    <br>
-    <img  id="imagen_ods"   width="100%" src=""/>
-    </div>
-    <div class="col-md-10">
-    <div id='odsdashboardinfo'  style='position: relative; width: auto; height:auto'></div>
-    </div>
+        <div class="col-md-2">
+        <br>
+        <img  id="imagen_ods"   width="100%" src=""/>
+        </div>
+        <div class="col-md-3">
+           <p id="odsname"></p>
+           <p id="odsdesc"></p>
+        </div>
+        <div class="col-md-3">
+            <p id="metaname"></p>
+            <p id="metadesc"></p>
+        </div>
+
+        <div class="col-md-3">
+            <p id="indicadorname"></p>
+            <p id="indicadordesc"></p>
+        </div>
     </div>
 
 
@@ -716,7 +726,7 @@ block js
                     var html = '<option value="">ODS:</option>';
                     var html2 = '<option value="">ODS:</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
+                        html += '<option data-description="'+data.description+'" data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
                         html2 += '<option data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
 
                     })
@@ -2020,7 +2030,11 @@ block js
 
 
             var ods = $("#changeOdsConcat option:selected").text();
-            console.log(ods);
+            var odsdescription = $("#changeOdsConcat").attr("data-description");
+
+            $("#odsname").text(ods);
+            $("#odsdesc").text(odsdescription);
+
             $.ajax({
                 url: 'http://ciudatos.com:8080/api/targets/getTargets/',
                 dataType: 'json',
@@ -2029,7 +2043,7 @@ block js
                 success: function (data) {
                     var html = '<option value="">META:</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option value="' + value.id + '">' + value.name + '</option>';
+                        html += '<option data-description="'+data.description+'" value="' + value.id + '">' + value.name + '</option>';
 
                     })
                     $("#changeMeta").html(html);
@@ -2042,7 +2056,7 @@ block js
             $("#imagen_ods").attr('src', "http://ciudatos.com:8080" + imagen);
 
             if (vizodsdashboardinfo == null || vizodsdashboardinfo === undefined) {
-                initodsdashboardinfo();
+               // initodsdashboardinfo();
             }
 
 
@@ -2326,6 +2340,13 @@ block js
 
             var indicador = $("#changeIndicador option:selected").text();
 
+            var indicadordescription = $("#changeIndicador").attr("data-description");
+
+            $("#indicadorname").text(indicador);
+            $("#indicadordesc").text(indicadordescription);
+
+
+
             console.log(indicador);
             var fieldname = "Indicador";
             if (activetab == 'ODS') {
@@ -2467,6 +2488,14 @@ block js
             var value = $("#changeMeta option:selected").text();
             var valuenumber = $("#changeMeta").val();
 
+
+            var metadescription = $("#changeMeta").attr("data-description");
+
+            $("#metaname").text(value);
+            $("#metadesc").text(metadescription);
+
+
+
             console.log(valuenumber);
             $.ajax({
                 url: 'http://ciudatos.com:8080/api/indicators/getIndicators/',
@@ -2476,7 +2505,7 @@ block js
                 success: function (data) {
                     var html = '<option value="">Indicadores:</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option value=' + value.id + '>' + value.name + '</option>';
+                        html += '<option data-description="'+data.description+'" value=' + value.id + '>' + value.name + '</option>';
 
                     })
                     $("#changeIndicador").html(html);
