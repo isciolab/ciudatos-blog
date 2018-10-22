@@ -223,13 +223,13 @@ block content
     <div class="col-md-5 col-md-offset-4" >
     <h4 class="text-center">Indicador de ODS por grupo de ciudades</h3>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 border-right-dashed">
     <div  style='position: relative; width: 100%; max-height:400px' id="odsgrupoodsgrupociudades1"></div>
     </div>
     <div class="col-md-6">
     <div  style='position: relative; width: 100%; max-height:400px' id="odsgrupoodsgrupociudades2"></div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 border-right-dashed">
     <div  style='position: relative; width: 100%; max-height:400px' id="odsgrupoodsgrupociudades3"></div>
     </div>
     <div class="col-md-6">
@@ -1809,7 +1809,10 @@ block js
                 }
 
             } else {
-                initoodsgrupociudades1()
+                if($("#changeGrupoodsgrupociudades1").val()!='')
+                {
+                    initoodsgrupociudades1()
+                }
             }
 
             if (vizodsgrupoodsgrupociudades2 != null) {
@@ -1821,7 +1824,9 @@ block js
                 }
 
             } else {
-                initoodsgrupociudades2()
+                if ($("#changeGrupoodsgrupociudades2").val() != '') {
+                    initoodsgrupociudades2()
+                }
             }
 
             if (vizodsgrupoodsgrupociudades3 != null) {
@@ -1833,7 +1838,9 @@ block js
                 }
 
             } else {
-                initoodsgrupociudades3()
+                if ($("#changeGrupoodsgrupociudades3").val() != '') {
+                    initoodsgrupociudades3()
+                }
             }
 
             if (vizodsgrupoodsgrupociudades4 != null) {
@@ -1845,7 +1852,9 @@ block js
                 }
 
             } else {
-                initoodsgrupociudades4()
+                if ($("#changeGrupoodsgrupociudades4").val() != '') {
+                    initoodsgrupociudades4()
+                }
             }
 
         }
