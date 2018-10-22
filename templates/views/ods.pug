@@ -2350,20 +2350,6 @@ block js
             console.log(indicador);
             var fieldname = "Indicador";
             if (activetab == 'ODS') {
-                if (vizodsdashboardinfo != null) {
-                    var sheet = vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets().get("indicadr");
-                    if (indicador != "") {
-
-                        sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
-                    }
-                }
-                if (vizodsdashboardinfo != null) {
-                    var sheet = vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets().get("Indicador description");
-                    if (indicador != "") {
-
-                        sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
-                    }
-                }
 
 
                 if (vizodsgrupoodsgrupociudades1 != null) {
@@ -2518,13 +2504,7 @@ block js
             var fieldname = "Name (Targets)";
             if (activetab == 'ODS') {
 
-                var sheet = vizodsdashboardinfo.getWorkbook().getActiveSheet().getWorksheets().get("metas");
-                if (value != "") {
-
-                    sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-                }
-
-
+              
                 if (vizodsgrupoodsgrupociudades1 != null) {
                     var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet();
                     if (value != "") {
