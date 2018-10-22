@@ -766,54 +766,52 @@ block js
                     odsConcatFilter();
 
 
-                    var start_year = new Date().getFullYear();
-
-
-                    $('.changeYear').append('<option value="">Años</option>');
-                    for (var i = start_year - 1; i > start_year - 4; i--) {
-                        $('.changeYear').append('<option selected value="' + i + '">' + i + '</option>');
-                    }
-
-
-                    //grupos de ciudades
-                    $.ajax({
-                        url: 'http://ciudatos.com:8080/api/group_cities/getGrupos',
-                        dataType: 'json',
-                        type: 'GET',
-                        success: function (data) {
-                            var html = '<option value="">Grupos de ciudades:</option>';
-                            jQuery.each(data, function (i, value) {
-
-                                var selected = '';
-                                if (i == 0) {
-                                    selected = 'selected';
-                                }
-
-
-                                html += '<option ' + selected + ' value=' + value.id + '>' + value.name + '</option>';
-
-                            })
-                            $("#changeGrupoodsgrupociudades1").html(html);
-                            $("#changeGrupoodsgrupociudades2").html(html);
-                            $("#changeGrupoodsgrupociudades3").html(html);
-                            $("#changeGrupoodsgrupociudades4").html(html);
-
-
-                            $("#changeGrupoodstrazadorgrupociudades1").html(html);
-                            $("#changeGrupoodstrazadorgrupociudades2").html(html);
-                            $("#changeGrupoodstrazadorgrupociudades3").html(html);
-                            $("#changeGrupoodstrazadorgrupociudades4").html(html);
-
-
-                            changeYearodsgrupociudades();
-                        }
-                    })
-
                 }
             })
 
 
+            var start_year = new Date().getFullYear();
 
+
+            $('.changeYear').append('<option value="">Años</option>');
+            for (var i = start_year - 1; i > start_year - 4; i--) {
+                $('.changeYear').append('<option selected value="' + i + '">' + i + '</option>');
+            }
+
+
+            //grupos de ciudades
+            $.ajax({
+                url: 'http://ciudatos.com:8080/api/group_cities/getGrupos',
+                dataType: 'json',
+                type: 'GET',
+                success: function (data) {
+                    var html = '<option value="">Grupos de ciudades:</option>';
+                    jQuery.each(data, function (i, value) {
+
+                        var selected = '';
+                        if (i == 0) {
+                            selected = 'selected';
+                        }
+
+
+                        html += '<option '+selected+' value=' + value.id + '>' + value.name + '</option>';
+
+                    })
+                    $("#changeGrupoodsgrupociudades1").html(html);
+                    $("#changeGrupoodsgrupociudades2").html(html);
+                    $("#changeGrupoodsgrupociudades3").html(html);
+                    $("#changeGrupoodsgrupociudades4").html(html);
+
+
+                    $("#changeGrupoodstrazadorgrupociudades1").html(html);
+                    $("#changeGrupoodstrazadorgrupociudades2").html(html);
+                    $("#changeGrupoodstrazadorgrupociudades3").html(html);
+                    $("#changeGrupoodstrazadorgrupociudades4").html(html);
+
+
+                    changeYearodsgrupociudades();
+                }
+            })
 
             $("#odsselectordashboard2").sticky({topSpacing: 57});
             $('.nav-pills a').on('shown.bs.tab', function (event) {
@@ -2644,6 +2642,7 @@ block js
                 }
             }
 
+            changeYearodsgrupociudades();
 
             //los de ciudad
 
