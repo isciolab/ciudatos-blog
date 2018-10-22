@@ -720,7 +720,12 @@ block js
                 success: function (data) {
                     var html = '<option value="">Seleccione aquí:</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option data-img=' + value.avatar.url + ' data-group=' + value.group_cities_id + ' value='
+
+                        var selected ='';
+                        if(i==0){
+                            selected='selected';
+                        }
+                        html += '<option '+selected+' data-img=' + value.avatar.url + ' data-group=' + value.group_cities_id + ' value='
                             + value.name + ' data-total_area=' + value.total_area + ' data-total_population="' + value.total_population + '" ' +
                             'data-urban_population=' + value.urban_population + ' data-rural_population=' + value.rural_population + ' ' +
                             'data-description="' + value.description + '" data-department="' + value.department.name + '" ' +
@@ -728,6 +733,7 @@ block js
 
                     })
                     $("#changeCity").html(html);
+                    cityFilter();
 
 
                 }
