@@ -742,7 +742,7 @@ block js
                     var html2 = '<option value="">ODS:</option>';
                     jQuery.each(data, function (i, value) {
                         var selected = '';
-                        if(value.number=='1'){
+                        if(value.number=='01'){
                             selected=='selected';
                         }
                         html += '<option '+selected+' data-description="'+value.description+'" data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
