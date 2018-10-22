@@ -1,7 +1,12 @@
 extends ../layouts/default
 
+block css
+    link(rel="stylesheet", href="vendors/chosen_v1.8.7/chosen.min.css")
+
 block vars
     - inner_padding = "padding: 0 15px"
+
+
 
 block content
     <img style="width:100%" src="https://res.cloudinary.com/randommonkey/image/upload/v1531505257/ciudatos/cities/zcolwitwfetgjset3bfu.png"/>
@@ -655,6 +660,7 @@ block content
 
 block js
     script(src="https://public.tableau.com/javascripts/api/tableau-2.min.js")
+    script(src="/vendors/chosen_v1.8.7/chosen.jquery.min.js")
     script(src="/js/margin.js")
     script(src="/js/jquery.sticky.js")
     script.
@@ -695,6 +701,9 @@ block js
         var vizcitymapadecalorporciudad;
         var activetab = "ODS";
         $(document).ready(function () {
+
+            $("select").chosen({});
+
             //ods
             //initodsdashboardselector();
             //ciudaddes
