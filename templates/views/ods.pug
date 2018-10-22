@@ -774,7 +774,14 @@ block js
                 success: function (data) {
                     var html = '<option value="">Grupos de ciudades:</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option value=' + value.id + '>' + value.name + '</option>';
+
+                        var selected = '';
+                        if (i == 0) {
+                            selected = 'selected';
+                        }
+
+
+                        html += '<option '+selected+' value=' + value.id + '>' + value.name + '</option>';
 
                     })
                     $("#changeGrupoodsgrupociudades1").html(html);
@@ -2081,8 +2088,15 @@ block js
                 data: {goal_id: $("#changeOdsConcat").val()},
                 success: function (data) {
                     var html = '<option value="">META:</option>';
+
                     jQuery.each(data, function (i, value) {
-                        html += '<option data-description="'+value.description+'" value="' + value.id + '">' + value.name + '</option>';
+
+                        var selected ='';
+                        if (i == 0) {
+                            selected = 'selected';
+                        }
+
+                        html += '<option '+selected+' data-description="'+value.description+'" value="' + value.id + '">' + value.name + '</option>';
 
                     })
                     $("#changeMeta").html(html);
@@ -2530,7 +2544,13 @@ block js
                 success: function (data) {
                     var html = '<option value="">Indicadores:</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option data-description="'+value.description+'" value=' + value.id + '>' + value.name + '</option>';
+                        var selected = '';
+                        if (i == 0) {
+                            selected = 'selected';
+                        }
+
+
+                        html += '<option '+selected+' data-description="'+value.description+'" value=' + value.id + '>' + value.name + '</option>';
 
                     })
                     $("#changeIndicador").html(html);
