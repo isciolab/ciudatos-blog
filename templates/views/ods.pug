@@ -2030,7 +2030,7 @@ block js
 
 
             var ods = $("#changeOdsConcat option:selected").text();
-            var odsdescription = $("#changeOdsConcat").attr("data-description");
+            var odsdescription = $("#changeOdsConcat option:selected").attr("data-description");
 
             $("#odsname").text(ods);
             $("#odsdesc").text(odsdescription);
@@ -2340,7 +2340,7 @@ block js
 
             var indicador = $("#changeIndicador option:selected").text();
 
-            var indicadordescription = $("#changeIndicador").attr("data-description");
+            var indicadordescription = $("#changeIndicador option:selected").attr("data-description");
 
             $("#indicadorname").text(indicador);
             $("#indicadordesc").text(indicadordescription);
@@ -2475,7 +2475,7 @@ block js
             var valuenumber = $("#changeMeta").val();
 
 
-            var metadescription = $("#changeMeta").attr("data-description");
+            var metadescription = $("#changeMeta option:selected").attr("data-description");
 
             $("#metaname").text(value);
             $("#metadesc").text(metadescription);
