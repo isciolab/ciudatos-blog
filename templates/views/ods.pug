@@ -1878,7 +1878,9 @@ block js
                 }
 
             } else {
-                initcityindicadoresciudad1();
+                if($("#changecityindicadoresciudad1").val!='') {
+                    initcityindicadoresciudad1();
+                }
             }
             if (vizcityindicadoresciudad2 != null) {
                 var sheet = vizcityindicadoresciudad2.getWorkbook().getActiveSheet()
@@ -1889,7 +1891,9 @@ block js
                 }
 
             } else {
-                initcityindicadoresciudad2();
+                if ($("#changecityindicadoresciudad2").val != '') {
+                    initcityindicadoresciudad2();
+                }
             }
             if (vizcityindicadoresciudad3 != null) {
                 var sheet = vizcityindicadoresciudad3.getWorkbook().getActiveSheet()
@@ -1900,7 +1904,9 @@ block js
                 }
 
             } else {
-                initcityindicadoresciudad3();
+                if ($("#changecityindicadoresciudad3").val != '') {
+                    initcityindicadoresciudad3();
+                }
             }
             if (vizcityindicadoresciudad4 != null) {
                 var sheet = vizcityindicadoresciudad4.getWorkbook().getActiveSheet()
@@ -1911,7 +1917,9 @@ block js
                 }
 
             } else {
-                initcityindicadoresciudad4();
+                if ($("#changecityindicadoresciudad4").val != '') {
+                    initcityindicadoresciudad4();
+                }
             }
         }
 
