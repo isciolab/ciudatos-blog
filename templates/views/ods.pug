@@ -740,16 +740,16 @@ block js
                 success: function (data) {
                     var html = '<option value="">ODS:</option>';
                     var html2 = '<option value="">ODS:</option>';
-                    var i =0;
+
                     jQuery.each(data, function (i, value) {
                         var selected = '';
                         if(i==0){
                             selected=='selected';
                         }
                         html += '<option '+selected+' data-description="'+value.description+'" data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
-                        html2 += '<option data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
+                        html2 += '<option '+selected+' data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
 
-                        i++;
+                       
                     })
                     $("#changeOdsConcat").html(html);
                     $("#changeOdsConcat2").html(html);
