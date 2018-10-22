@@ -741,7 +741,11 @@ block js
                     var html = '<option value="">ODS:</option>';
                     var html2 = '<option value="">ODS:</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option data-description="'+value.description+'" data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
+                        var selected = '';
+                        if(value.number=='1'){
+                            selected=='selected';
+                        }
+                        html += '<option '+selected+' data-description="'+value.description+'" data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
                         html2 += '<option data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
 
                     })
