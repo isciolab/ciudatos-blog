@@ -119,17 +119,17 @@ block content
         <img  id="imagen_ods"   width="100%" src=""/>
         </div>
         <div class="col-md-3">
-           <p id="odsname"></p>
-           <p id="odsdesc"></p>
+           <p class="odstext" id="odsname"></p>
+           <p class="odstext" id="odsdesc"></p>
         </div>
         <div class="col-md-3">
-            <p id="metaname"></p>
-            <p id="metadesc"></p>
+            <p class="odstext" id="metaname"></p>
+            <p class="odstext" id="metadesc"></p>
         </div>
 
         <div class="col-md-3">
-            <p id="indicadorname"></p>
-            <p id="indicadordesc"></p>
+            <p class="odstext" id="indicadorname"></p>
+            <p class="odstext" id="indicadordesc"></p>
         </div>
     </div>
 
@@ -726,7 +726,7 @@ block js
                     var html = '<option value="">ODS:</option>';
                     var html2 = '<option value="">ODS:</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option data-description="'+data.description+'" data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
+                        html += '<option data-description="'+value.description+'" data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
                         html2 += '<option data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
 
                     })
@@ -2043,7 +2043,7 @@ block js
                 success: function (data) {
                     var html = '<option value="">META:</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option data-description="'+data.description+'" value="' + value.id + '">' + value.name + '</option>';
+                        html += '<option data-description="'+value.description+'" value="' + value.id + '">' + value.name + '</option>';
 
                     })
                     $("#changeMeta").html(html);
@@ -2491,7 +2491,7 @@ block js
                 success: function (data) {
                     var html = '<option value="">Indicadores:</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option data-description="'+data.description+'" value=' + value.id + '>' + value.name + '</option>';
+                        html += '<option data-description="'+value.description+'" value=' + value.id + '>' + value.name + '</option>';
 
                     })
                     $("#changeIndicador").html(html);
@@ -2504,7 +2504,7 @@ block js
             var fieldname = "Name (Targets)";
             if (activetab == 'ODS') {
 
-              
+
                 if (vizodsgrupoodsgrupociudades1 != null) {
                     var sheet = vizodsgrupoodsgrupociudades1.getWorkbook().getActiveSheet();
                     if (value != "") {
