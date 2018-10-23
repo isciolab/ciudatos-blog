@@ -751,9 +751,12 @@ block js
 
                     })
                     $("#changeCity").html(html);
-                    cityFilter();
-                    odsConcatFilterCity();
+                    if(activetab=='CIUDADES') {
+                        cityFilter();
 
+                    }
+
+                    odsConcatFilterCity();
                 }
             })
             //ods
@@ -853,7 +856,9 @@ block js
 
 
                     if (vizcitydeprmentmap == null && $("#changeCity").val()!='') {
-                        initvizcitydeprmentmap();
+                        cityFilter();
+                       // initvizcitydeprmentmap();
+
                     }
 
 
