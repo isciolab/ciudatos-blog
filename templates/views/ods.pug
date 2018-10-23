@@ -718,17 +718,14 @@ block js
             $('.nav a').filter('a[href="#' + target[1] + '"]').tab('show');
 
             // Change hash for page-reload
-            $('.nav-pills a').on('shown.bs.tab', function (e) {
-                window.location.hash = e.target.hash.replace("#", "#" + prefix);
-            });
-
+           
 
             $('#status').fadeOut(); // will first fade out the loading animation
             $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
             $('body').delay(350).css({'overflow': 'visible'});
 
 
-            
+
 
             $("select").select2();
 
