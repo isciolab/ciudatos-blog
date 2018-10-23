@@ -41,7 +41,8 @@ block content
         .home-fb-left.Column
           img(src="http://greennetwork.dk/wp-content/uploads/2018/08/SDG-Wheel_Transparent-300x300.png", alt="", width="120px")
           p= "Consulte los indicadores de los Objetivos de Desarrollo Sostenible en 36 ciudades de Colombia."
-
+        .home-fb-left.Column
+          <select id="changeCity" class="form-control"  onchange=""></select>
         .home-fb-right.Column.center-vertical.center-horizontal
           a.hind.section-title(href="/visualizacion")= "Objetivos de Desarollo Sostenible"
 
@@ -179,3 +180,36 @@ block content
 block js
   script(src="/vendors/owl.carousel.min.js")
   script(src="/js/home.js")
+  script.
+      $(document).ready(function () {
+        $("select").select2();
+
+          //ods
+          //initodsdashboardselector();
+          //ciudaddes
+          //initodsdashboardinfo();
+          $.ajax({
+          url: 'http://ciudatos.com:8080/api/cities/getCities/',
+          dataType: 'json',
+          type: 'GET',
+          success: function (data) {
+          var html = '<option value="">Seleccione aquí:</option>';
+          jQuery.each(data, function (i, value) {
+
+          var selected ='';
+          if(i == 0){
+          selected='selected';
+          }
+          html += '<option '+selected+' data-img=' + value.avatar.url + ' data-group=' + value.group_cities_id + ' value='
+          + value.name + ' data-total_area=' + value.total_area + ' data-total_population="' + value.total_population + '" ' +
+          'data-urban_population=' + value.urban_population + ' data-rural_population=' + value.rural_population + ' ' +
+          'data-description="' + value.description + '" data-department="' + value.department.name + '" ' +
+          'data-foundation_year=' + value.foundation_year + '>' + value.name + '</option>';
+
+          })
+          $("#changeCity").html(html);
+
+
+          }
+        })
+      })
