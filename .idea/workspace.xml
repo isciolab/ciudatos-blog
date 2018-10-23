@@ -17,8 +17,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="943" column="0" lean-forward="true" selection-start-line="943" selection-start-column="0" selection-end-line="943" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="2120" column="35" lean-forward="false" selection-start-line="2120" selection-start-column="31" selection-end-line="2120" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -129,7 +129,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cityindicadorestrazadores</find>
       <find>changeyearindicadorestrazadoresporods</find>
       <find>Mapa de calor por CIUDAD</find>
       <find>Mapa de calor por</find>
@@ -159,6 +158,7 @@
       <find>ready</find>
       <find>citydas</find>
       <find>mapadecalorporod</find>
+      <find>preload</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -477,7 +477,7 @@
       <workItem from="1540054147994" duration="4666000" />
       <workItem from="1540239501500" duration="7763000" />
       <workItem from="1540306466637" duration="11718000" />
-      <workItem from="1540325351241" duration="3639000" />
+      <workItem from="1540325351241" duration="3871000" />
     </task>
     <task id="LOCAL-00192" summary="visualize ods">
       <created>1539016085255</created>
@@ -826,7 +826,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268799000" />
+    <option name="totallyTimeSpent" value="269031000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1232,8 +1232,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="943" column="0" lean-forward="true" selection-start-line="943" selection-start-column="0" selection-end-line="943" selection-end-column="0" />
+        <state relative-caret-position="195">
+          <caret line="2120" column="35" lean-forward="false" selection-start-line="2120" selection-start-column="31" selection-end-line="2120" selection-end-column="35" />
           <folding />
         </state>
       </provider>

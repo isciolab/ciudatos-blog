@@ -14,7 +14,7 @@ block content
 
 
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="contenedor">
 
 
     <div class="row" id="navcontainer">
@@ -672,7 +672,7 @@ block js
     script(src="/js/jquery.sticky.js")
     script.
         //ods
-        $( "body" ).prepend( '<div id="preloader"><div class="spinner-sm spinner-sm-1" id="status"> </div></div>' );
+        $( "#contenedor" ).prepend( '<div id="preloader"><div class="spinner-sm spinner-sm-1" id="status"> </div></div>' );
         var vizodsdashboardselector;
 
         var vizodsgrupoodsgrupociudades1;
