@@ -934,7 +934,6 @@ block js
                             onFirstInteractive: function () {
                                 //city
                                 console.log('iniciando ciudae');
-
                                 $('#status').fadeOut(); // will first fade out the loading animation
                                 $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
                                 $('body').delay(350).css({'overflow': 'visible'});
@@ -2089,9 +2088,6 @@ block js
                             initvizcitymapadecalorporciudad();
 
 
-                            $('#status').fadeOut(); // will first fade out the loading animation
-                            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-                            $('body').delay(350).css({'overflow': 'visible'});
 
 
 
@@ -2123,7 +2119,9 @@ block js
 
 
 
-
+                            $('#status').fadeOut(); // will first fade out the loading animation
+                            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+                            $('body').delay(350).css({'overflow': 'visible'});
 
 
                         }
@@ -2574,7 +2572,8 @@ block js
             initoodtrazadorsgrupociudades2();
             initoodtrazadorsgrupociudades3();
             initoodtrazadorsgrupociudades4();
-            initvizcityindicadorestrazadores();
+            changemapadecalorods();
+
 
         }
         function inicadorFIlterCity() {
