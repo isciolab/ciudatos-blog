@@ -734,6 +734,13 @@ block js
                     })
                     $("#changeCity").html(html);
                     cityFilter();
+                    initvizcityprogreovsabsoluto();
+                    changeYearcityindicadoresciudad();
+                    initcityprogresohistorico1();
+                    initcityprogresohistorico2();
+                    initcityprogresohistorico3();
+                    initcityprogresohistorico4();
+                    changeyearindicadorestrazadoresporods();
 
 
                 }
@@ -1620,10 +1627,11 @@ block js
                     url = "https://public.tableau.com/views/Ciudatos/Departmentmap?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
                         hideTabs: true,
+                        'Ciudad':$("#changeCity").val(),
                         onFirstInteractive: function () {
                             //  console.log('inicio lo demas de ciuades');
                             initvizcitymap();
-                            cityFilter();
+
 
                         }
                     };
@@ -2510,6 +2518,7 @@ block js
             initoodtrazadorsgrupociudades3();
             initoodtrazadorsgrupociudades4();
             changemapadecalorods();
+            initvizcityindicadorestrazadores();
 
         }
         function inicadorFIlterCity() {
