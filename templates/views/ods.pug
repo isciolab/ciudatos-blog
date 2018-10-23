@@ -856,10 +856,13 @@ block js
                             odsConcatFilterCity();
                         }
                     })
-                    
+
 
 
                 } else {
+
+                    $("select").select2();
+                    
                     $("#cityselectordashboard2").unstick();
                     $("#odsselectordashboard2").sticky({topSpacing: 57});
                     // initodsdashboardinfo();
