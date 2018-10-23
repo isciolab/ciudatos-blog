@@ -852,13 +852,9 @@ block js
                     $("#odsselectordashboard2").unstick();
 
 
-                    cityFilter();
-                   
-
-
-
-
-
+                    if (vizcitydeprmentmap == null && $("#changeCity").val()!='') {
+                        initvizcitydeprmentmap();
+                    }
 
 
                 } else {
