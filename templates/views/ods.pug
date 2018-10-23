@@ -2223,11 +2223,18 @@ block js
                 success: function (data) {
                     var html = '<option value="">Seleccione aquí:</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option value=' + value.id + '>' + value.name + '</option>';
+
+                        var selected = '';
+                        if (i == 0) {
+                            selected = 'selected';
+                        }
+
+
+                        html += '<option '+selected+' value=' + value.id + '>' + value.name + '</option>';
 
                     })
                     $("#changeMeta2").html(html);
-                    metaFIlterCity();
+
 
                 }
             })
@@ -2698,7 +2705,13 @@ block js
                 success: function (data) {
                     var html = '<option value="">Seleccione aquí:</option>';
                     jQuery.each(data, function (i, value) {
-                        html += '<option value=' + value.id + '>' + value.name + '</option>';
+
+                        var selected = '';
+                        if (i == 0) {
+                            selected = 'selected';
+                        }
+
+                        html += '<option '+selected+' value=' + value.id + '>' + value.name + '</option>';
 
                     })
                     $("#changeIndicador2").html(html);
