@@ -18,7 +18,7 @@
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="178">
-              <caret line="22" column="64" lean-forward="false" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+              <caret line="645" column="23" lean-forward="false" selection-start-line="645" selection-start-column="23" selection-end-line="645" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -127,7 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>data-des</find>
       <find>odsna</find>
       <find>initdas</find>
       <find>initodsdashboardinfo</find>
@@ -157,6 +156,7 @@
       <find>Mapa de calor por CIUDAD</find>
       <find>Mapa de calor por</find>
       <find>mapa de ca</find>
+      <find>mapadecalorporciudad</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -473,7 +473,7 @@
       <workItem from="1540043509165" duration="2413000" />
       <workItem from="1540054147994" duration="4666000" />
       <workItem from="1540239501500" duration="7763000" />
-      <workItem from="1540306466637" duration="1342000" />
+      <workItem from="1540306466637" duration="1505000" />
     </task>
     <task id="LOCAL-00192" summary="visualize ods">
       <created>1539016085255</created>
@@ -822,7 +822,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254784000" />
+    <option name="totallyTimeSpent" value="254947000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1226,7 +1226,7 @@
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
-          <caret line="22" column="64" lean-forward="false" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+          <caret line="645" column="23" lean-forward="false" selection-start-line="645" selection-start-column="23" selection-end-line="645" selection-end-column="23" />
           <folding />
         </state>
       </provider>
