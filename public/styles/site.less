@@ -12,56 +12,96 @@
 @import "site/home.less";
 @import "site/about.less";
 
-.public .tab-toolbar {
-  display:none;
+
+
+
+
+.imgback{ 
+background-image: 
+url("https://res.cloudinary.com/randommonkey/image/upload/v1531505257/ciudatos/cities/zcolwitwfetgjset3bfu.png"); 
+ background-repeat: no-repeat;
+    background-size: cover;
+}
+.select2-container--default .select2-selection--single {
+  z-index: 99; background-color: #D2D75F!important;
+  /* makes sure it stays on top */ border: 1px solid #F0EFC4!important;
+    border-radius: 0px!important;
 }
 
+.select2-container--default.select2-container--open 
+.select2-selection--single .select2-selection__arrow b
+{
+border-color: #263773 transparent transparent transparent;
+
+}
+.select2-container--default .select2-selection--single 
+.select2-selection__arrow b{ border-color: #263773 transparent transparent transparent!important;
+ 
+}
+
+
+.select2-container--default .select2-results>.select2-results__options {
+   
+    border: 1px solid #F0EFC4!important;
+}
+select2-container--open .select2-dropdown--below {
+    border-top: none;
+background: #F6F7DE!important;
+border:1px solid #F0EFC4!important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+color:#444!important;
+
+}
+
+.select2-container--default .select2-results>.select2-results__options {
+   
+    background: #F6F7DE!important;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] 
+{
+    background-color: white!important;
+color:#444!important;
+}
+
+.select2-container--default  .select2-results__option--highlighted[aria-selected] { background-color: 
+white!important;
+ 
+
+}
+.public .tab-toolbar {
+  background-repeat: no-repeat; display:none;
+  background-color: #214577;
+  border-radius: 50%;
+}
+.border-right-dashed{ border-right:1px dashed   #4487da;
+}
 #odsselectordashboard2{
 width:100%!important;
 }
-.tabToolbarButtonImg{display:none} 
 
+.tabToolbarButtonImg{display:none}
+ 
 #cityselectordashboard2{padding: 12px;background: #f0f3ee;}
+
 #odsselectordashboard2{ padding: 12px;}
-
+ 
 .border-botom{
-  border-bottom: 1px solid green;
+  border-bottom: 2px solid #DCE3CB;
 }
 
-.form-control{
-    color: black;
-    /*background-color: #c2d84a;*/
-    background-image: none;
-    border: 2px solid #afc536;
-    border-radius: 0px;
-    width: 105%; 
-    height: 28px;
-}
-
-.select_box{
-  overflow: hidden;
-    border: 2px solid #a1b534;
-    position: relative;
-    background: #c2d84a;
-}
-.select_box:after{
-  width: 0; 
-  height: 0; 
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid #26327e;
-  position: absolute;
-  top: 40%;
-  right: 5px;
-  content: "";
-  z-index: 98;
- }
-.select_box select{
- /* width: 220px;*/
-  border: 0;
-  position: relative;
-  z-index: 99;
-  background: none;
+.form-control{ color: black;
+ /*background-color: #c2d84a;*/
+ 
+   border: 2px solid #afc536;
+  border: 4px solid transparent; border-radius: 0px;
+  border-top-color: #214577; width: 105%;
+  border-bottom-color: #214577; height: 28px;
+  
 }
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
@@ -102,7 +142,7 @@ width:100%!important;
 }
 
 h4{
-background: #4487da;
+background: #3C7CB4;
     color: white;
     padding: 6px
 }
@@ -110,8 +150,8 @@ background: #4487da;
 
 
 .titleselector{
-    border-right: 4px solid #4fb7de;
-    border-left: 4px solid #4fb7de;
+    border-right: 4px solid #A5C1DB;
+    border-left: 4px solid #A5C1DB;
     font-size: 14px;
 }
 #navcontainer{
@@ -133,7 +173,7 @@ background: #4487da;
 }
 
 .odsrowbw{
-    background: #f0f3ee;
+    background: #F5F4F8;
     
 }
 
@@ -155,3 +195,8 @@ header nav.medium-devices-nav{
 padding-top:8px;
 padding-bottom:8px
 }
+.blue{
+    color: #26327e;
+	font-size:14px;
+}
+.odstext{font-size:12px;}
