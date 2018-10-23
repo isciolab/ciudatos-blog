@@ -827,42 +827,44 @@ block js
                     $("#cityselectordashboard2").sticky({topSpacing: 57});
                     $("#odsselectordashboard2").unstick();
 
+                    if (vizcitydeprmentmap == null) {
 
-                    $.ajax({
-                        url: 'http://ciudatos.com:8080/api/cities/getCities/',
-                        dataType: 'json',
-                        type: 'GET',
-                        success: function (data) {
-                            var html = '<option value="">Seleccione aquí:</option>';
-                            jQuery.each(data, function (i, value) {
+                        $.ajax({
+                            url: 'http://ciudatos.com:8080/api/cities/getCities/',
+                            dataType: 'json',
+                            type: 'GET',
+                            success: function (data) {
+                                var html = '<option value="">Seleccione aquí:</option>';
+                                jQuery.each(data, function (i, value) {
 
-                                var selected = '';
-                                if (i == 0) {
-                                    selected = 'selected';
+                                    var selected = '';
+                                    if (i == 0) {
+                                        selected = 'selected';
+                                    }
+                                    html += '<option ' + selected + ' data-img=' + value.avatar.url + ' data-group=' + value.group_cities_id + ' value='
+                                        + value.name + ' data-total_area=' + value.total_area + ' data-total_population="' + value.total_population + '" ' +
+                                        'data-urban_population=' + value.urban_population + ' data-rural_population=' + value.rural_population + ' ' +
+                                        'data-description="' + value.description + '" data-department="' + value.department.name + '" ' +
+                                        'data-foundation_year=' + value.foundation_year + '>' + value.name + '</option>';
+
+                                })
+                                $("#changeCity").html(html);
+                                if (activetab == 'CIUDADES') {
+                                    cityFilter();
+
                                 }
-                                html += '<option ' + selected + ' data-img=' + value.avatar.url + ' data-group=' + value.group_cities_id + ' value='
-                                    + value.name + ' data-total_area=' + value.total_area + ' data-total_population="' + value.total_population + '" ' +
-                                    'data-urban_population=' + value.urban_population + ' data-rural_population=' + value.rural_population + ' ' +
-                                    'data-description="' + value.description + '" data-department="' + value.department.name + '" ' +
-                                    'data-foundation_year=' + value.foundation_year + '>' + value.name + '</option>';
 
-                            })
-                            $("#changeCity").html(html);
-                            if (activetab == 'CIUDADES') {
-                                cityFilter();
-
+                                odsConcatFilterCity();
                             }
-
-                            odsConcatFilterCity();
-                        }
-                    })
+                        })
+                    }
 
 
 
                 } else {
 
                     $("select").select2();
-                    
+
                     $("#cityselectordashboard2").unstick();
                     $("#odsselectordashboard2").sticky({topSpacing: 57});
                     // initodsdashboardinfo();
