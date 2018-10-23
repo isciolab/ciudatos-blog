@@ -17,8 +17,8 @@
       <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="839" column="20" lean-forward="false" selection-start-line="839" selection-start-column="20" selection-end-line="839" selection-end-column="20" />
+            <state relative-caret-position="246">
+              <caret line="829" column="45" lean-forward="false" selection-start-line="829" selection-start-column="45" selection-end-line="829" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -473,7 +473,7 @@
       <workItem from="1540043509165" duration="2413000" />
       <workItem from="1540054147994" duration="4666000" />
       <workItem from="1540239501500" duration="7763000" />
-      <workItem from="1540306466637" duration="514000" />
+      <workItem from="1540306466637" duration="658000" />
     </task>
     <task id="LOCAL-00192" summary="visualize ods">
       <created>1539016085255</created>
@@ -822,7 +822,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253956000" />
+    <option name="totallyTimeSpent" value="254100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1225,8 +1225,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="839" column="20" lean-forward="false" selection-start-line="839" selection-start-column="20" selection-end-line="839" selection-end-column="20" />
+        <state relative-caret-position="246">
+          <caret line="829" column="45" lean-forward="false" selection-start-line="829" selection-start-column="45" selection-end-line="829" selection-end-column="45" />
           <folding />
         </state>
       </provider>
