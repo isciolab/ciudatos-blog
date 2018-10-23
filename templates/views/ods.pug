@@ -2087,13 +2087,9 @@ block js
                     url = "https://public.tableau.com/views/Ciudatos/IndicadorestrazadoresporODS?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
                         hideTabs: true,
+                        'Date From':$("#changeyearindicadorestrazadoresporods").val(),
                         onFirstInteractive: function () {
                             initvizcitymapadecalorporciudad();
-
-
-
-
-
                         }
                     };
                 vizcityindicadorestrazadores = new tableau.Viz(containerDiv, url, options);
