@@ -1682,7 +1682,7 @@ block js
             var indicador = $("#changeIndicador2 option:selected").text();
             var anio = $("#changeYearCityProgresoVsabsoluto").val();
 
-
+            var grupo = $("#changeCity option:selected").attr('data-group');
             if (anio == '' || indicador == '') {
 
                 if (anio == '' && indicador == '') {
@@ -1697,7 +1697,7 @@ block js
                             hideTabs: true,
                             "Date From": anio,
                             "Indicador": indicador,
-                            "Id (Group Cities)": $("#changeCity").attr('data-group'),
+                            "Id (Group Cities)": grupo,
                             onFirstInteractive: function () {
 
 
