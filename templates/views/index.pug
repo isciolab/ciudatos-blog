@@ -196,5 +196,8 @@ block js
 
       });
       function anclaatajos() {
-          window.location.href="ODS#"+$("#anclaatajos").val();
+          var value = $("#atajos").val();;
+          if(value!='') {
+              window.location.href = "ODS#" + value;
+          }
       }
