@@ -35,34 +35,36 @@ block content
           a.hind.section-title(href="/visualizacion")= data.info.exploreTitle
           p= data.info.exploreLabel
 
+  .half-height.home-first-banner.lato
+    .banner-overlay-image
+      img.img-responsive(src="/images/site/app.gif", alt="")
+    .container-fluid
+      .home-fb-content
+        .home-fb-left.Column
+          img(src="/images/logos/logociudatoscolor.png", alt="")
+          p= data.info.description
+          .home-fb-social
+            <a class="fa-layers fa-fw" href="https://www.facebook.com/FundCorona/" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-circle facebook"></i>
+            <i class="fab fa-facebook-f" data-fa-transform="shrink-6"></i>
+            </a>
+            <a class="fa-layers fa-fw" href="https://twitter.com/fundcorona" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-circle twitter"></i>
+            <i class="fab fa-twitter" data-fa-transform="shrink-6"></i>
+            </a>
+            <a class="fa-layers fa-fw" href="https://www.linkedin.com/company/6411892/" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-circle linkedin"></i>
+            <i class="fab fa-linkedin-in" data-fa-transform="shrink-6"></i>
+            </a>
+            <a class="fa-layers fa-fw" href="https://www.youtube.com/user/fundacioncorona" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-circle youtube"></i>
+            <i class="fab fa-youtube" data-fa-transform="shrink-6"></i>
+            </a>
+        .home-fb-right.Column.center-vertical.center-horizontal
+          a.hind.section-title(href="/visualizacion")= data.info.exploreTitle
+          p= data.info.exploreLabel
 
-          .banner-overlay-image
-            img.img-responsive(src="/images/site/app.gif", alt="")
-          .container-fluid
-            .home-fb-content
-              .home-fb-left.Column
-                img(src="/images/logos/logociudatoscolor.png", alt="")
-                p= data.info.description
-                .home-fb-social
-                  <a class="fa-layers fa-fw" href="https://www.facebook.com/FundCorona/" target="_blank" rel="noopener noreferrer">
-                  <i class="fas fa-circle facebook"></i>
-                  <i class="fab fa-facebook-f" data-fa-transform="shrink-6"></i>
-                  </a>
-                  <a class="fa-layers fa-fw" href="https://twitter.com/fundcorona" target="_blank" rel="noopener noreferrer">
-                  <i class="fas fa-circle twitter"></i>
-                  <i class="fab fa-twitter" data-fa-transform="shrink-6"></i>
-                  </a>
-                  <a class="fa-layers fa-fw" href="https://www.linkedin.com/company/6411892/" target="_blank" rel="noopener noreferrer">
-                  <i class="fas fa-circle linkedin"></i>
-                  <i class="fab fa-linkedin-in" data-fa-transform="shrink-6"></i>
-                  </a>
-                  <a class="fa-layers fa-fw" href="https://www.youtube.com/user/fundacioncorona" target="_blank" rel="noopener noreferrer">
-                  <i class="fas fa-circle youtube"></i>
-                  <i class="fab fa-youtube" data-fa-transform="shrink-6"></i>
-                  </a>
-              .home-fb-right.Column.center-vertical.center-horizontal
-                a.hind.section-title(href="/visualizacion")= data.info.exploreTitle
-                p= data.info.exploreLabel
+
 
   .bg-dark-blue.text-center.visible-xs.text-white.home-fb-aux
     a.hind.section-title(href="/explora")= data.info.exploreTitle
