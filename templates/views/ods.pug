@@ -852,7 +852,7 @@ block js
                     odsConcatFilterCity();
                     cityFilter();
                     initvizcitydeprmentmap();
-                    initvizcitymap();
+
                     initvizcityprogreovsabsoluto();
                     changeYearcityindicadoresciudad();
                     initcityprogresohistorico1();
@@ -1655,7 +1655,7 @@ block js
 
 
         function initvizcitydeprmentmap() {
-            if (vizcitydeprmentmap == null) {
+            if (vizcitydeprmentmap == null && $($("#changeCity").val())!='') {
                 var containerDiv = document.getElementById("citydeprmentmap"),
                     url = "https://public.tableau.com/views/Ciudatos/Departmentmap?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                     options = {
@@ -2460,7 +2460,7 @@ block js
                 }
             }
             if (vizcitydeprmentmap == null) {
-               // initvizcitydeprmentmap();
+                initvizcitydeprmentmap();
             }
 
 
