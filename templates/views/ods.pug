@@ -712,9 +712,9 @@ block js
 
 
             // Javascript to enable link to tab
-            var target = this.href.split('#');
+            var target = document.location.toString().split('#');
             $('.nav a').filter('a[href="#' + target[1] + '"]').tab('show');
-            
+
             // Change hash for page-reload
             $('.nav-pills a').on('shown.bs.tab', function (e) {
                 window.location.hash = e.target.hash.replace("#", "#" + prefix);
