@@ -750,7 +750,7 @@ block js
 
                     })
                     $("#changeCity").html(html);
-
+                    cityFilter();
 
                 }
             })
@@ -841,6 +841,7 @@ block js
                 console.log('cambie de pestaña');
                 activetab = $(event.target).text();         // active tab
                 var y = $(event.relatedTarget).text();  // previous tab
+                console.log(activetab);
                 if (activetab == 'CIUDADES') {
 
                     $("select").select2();
