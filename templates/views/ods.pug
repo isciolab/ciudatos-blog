@@ -2407,7 +2407,7 @@ block js
                 }
 
 
-                if (vizcitymapadecalorporciudad != null) {
+                if (vizcitymapadecalorporciudad != null && vizcitymapadecalorporciudad!=undefined) {
                     var sheet = vizcitymapadecalorporciudad.getWorkbook().getActiveSheet();
                     if (ciudad != "") {
 
@@ -2560,6 +2560,7 @@ block js
             var fieldname = "Indicador";
             if (activetab == 'CIUDADES') {
                 if (vizcitivabsoluto != null && vizcitivabsoluto!=undefined) {
+                    console.log(vizcitivabsoluto);
                     var sheet = vizcitivabsoluto.getWorkbook().getActiveSheet();
                     if (indicador != "") {
 
