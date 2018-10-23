@@ -672,6 +672,7 @@ block js
     script(src="/js/jquery.sticky.js")
     script.
         //ods
+        $( "body" ).prepend( '<div id="preloader"><div class="spinner-sm spinner-sm-1" id="status"> </div></div>' );
         var vizodsdashboardselector;
 
         var vizodsgrupoodsgrupociudades1;
@@ -711,6 +712,7 @@ block js
 
 
 
+
             // Javascript to enable link to tab
             var target = document.location.toString().split('#');
             $('.nav a').filter('a[href="#' + target[1] + '"]').tab('show');
@@ -721,7 +723,12 @@ block js
             });
 
 
+            $('#status').fadeOut(); // will first fade out the loading animation
+            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+            $('body').delay(350).css({'overflow': 'visible'});
 
+
+            
 
             $("select").select2();
 
