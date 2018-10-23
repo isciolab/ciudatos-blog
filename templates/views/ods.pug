@@ -826,6 +826,9 @@ block js
                 activetab = $(event.target).text();         // active tab
                 var y = $(event.relatedTarget).text();  // previous tab
                 if (activetab == 'CIUDADES') {
+
+                    $("select").select2();
+                    
                     $("#cityselectordashboard2").sticky({topSpacing: 57});
                     $("#odsselectordashboard2").unstick();
 
@@ -838,6 +841,7 @@ block js
                     initcityprogresohistorico3();
                     initcityprogresohistorico4();
                     initvizcityindicadorestrazadores();
+
 
 
 
