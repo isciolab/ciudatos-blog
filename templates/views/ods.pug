@@ -789,32 +789,6 @@ block js
                         $("#changeCity").html(html);
 
 
-                        //ods
-                        $.ajax({
-                            url: 'http://ciudatos.com:8080/api/goals/getGoals/',
-                            dataType: 'json',
-                            type: 'GET',
-                            success: function (data) {
-                                 var html2 = '<option value="">ODS:</option>';
-
-                                jQuery.each(data, function (i, value) {
-                                    var selected = '';
-                                    console.log(i);
-                                    if (i == 0) {
-                                        selected = 'selected';
-                                    }
-                                    html2 += '<option ' + selected + ' data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
-
-
-                                })
-
-                                $("#changeOdsConcat2").html(html);
-
-                                odsConcatFilterCity();
-
-
-                            }
-                        })
 
 
                         //if (activetab == 'CIUDADES') {
@@ -823,6 +797,35 @@ block js
                        // }
                     }
                 })
+
+
+                //ods
+                $.ajax({
+                    url: 'http://ciudatos.com:8080/api/goals/getGoals/',
+                    dataType: 'json',
+                    type: 'GET',
+                    success: function (data) {
+                        var html2 = '<option value="">ODS:</option>';
+
+                        jQuery.each(data, function (i, value) {
+                            var selected = '';
+                            console.log(i);
+                            if (i == 0) {
+                                selected = 'selected';
+                            }
+                            html2 += '<option ' + selected + ' data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
+
+
+                        })
+
+                        $("#changeOdsConcat2").html(html2);
+
+                        odsConcatFilterCity();
+
+
+                    }
+                })
+
             }
         }
         function renderOdsTab() {
