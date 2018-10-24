@@ -612,16 +612,20 @@ block content
     <h4 class="text-center">Progreso histórico del indicador  </h3>
     </div>
     <div class="col-md-6 border-right-dashed">
+    <img style="float:right" width="50px" src="" id="cityprogresohistorico1img">
     <div id='cityprogresohistorico1'  style='position: relative; width: auto; max-height:400px'></div>
     </div>
     <div class="col-md-6">
+    <img style="float:right" width="50px" src="" id="cityprogresohistorico2img">
     <div id='cityprogresohistorico2'  style='position: relative; width: auto; max-height:400px'></div>
     </div>
-    <div class="col-md-12"><br></div>
+    <div class="col-md-12"><br><br><br></div>
     <div class="col-md-6 border-right-dashed">
+    <img style="float:right" width="50px" src="" id="cityprogresohistorico3img">
     <div id='cityprogresohistorico3'  style='position: relative; width: auto; max-height:400px'></div>
     </div>
     <div class="col-md-6">
+    <img style="float:right" width="50px" src="" id="cityprogresohistorico4img">
     <div id='cityprogresohistorico4'  style='position: relative; width: auto; max-height:400px'></div>
     </div>
     </div>
@@ -1160,6 +1164,8 @@ block js
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
 
+                var img = $("#cityprogresohistorico1img option:selected").attr('data-img');
+                $("#cityprogresohistorico1img").attr('src', 'http://ciudatos.com:8080/' + img);
             }
             else {
                 vizcityprogresohistorico1.dispose();
@@ -1174,7 +1180,8 @@ block js
             var value = $("#changecityprogresohistorico2").val();
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
-
+                var img = $("#cityprogresohistorico2img option:selected").attr('data-img');
+                $("#cityprogresohistorico2img").attr('src', 'http://ciudatos.com:8080/' + img);
 
             }
             else {
@@ -1191,6 +1198,8 @@ block js
             var value = $("#changecityprogresohistorico3").val();
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
+                var img = $("#cityprogresohistorico3img option:selected").attr('data-img');
+                $("#cityprogresohistorico3img").attr('src', 'http://ciudatos.com:8080/' + img);
             }
             else {
                 vizcityprogresohistorico3.dispose();
@@ -1206,6 +1215,8 @@ block js
             var value = $("#changecityprogresohistorico4").val();
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
+                var img = $("#cityprogresohistorico4img option:selected").attr('data-img');
+                $("#cityprogresohistorico4img").attr('src', 'http://ciudatos.com:8080/' + img);
 
 
             }
@@ -1784,7 +1795,11 @@ block js
                         options = {
                             hideTabs: true,
                             "Id (Group Cities)": grupo,
-                            "ods concat": ods
+                            "ods concat": ods,
+                            onFirstInteractive: function () {
+                                changecityprogresohistorico1();
+
+                            }
                         };
                     vizcityprogresohistorico1 = new tableau.Viz(containerDiv, url, options);
                 } else {
@@ -1806,7 +1821,11 @@ block js
                         options = {
                             hideTabs: true,
                             "Id (Group Cities)": grupo,
-                            "ods concat": ods
+                            "ods concat": ods,
+                            onFirstInteractive: function () {
+                                changecityprogresohistorico2();
+
+                            }
                         };
                     vizcityprogresohistorico2 = new tableau.Viz(containerDiv, url, options);
                 } else {
@@ -1828,7 +1847,11 @@ block js
                         options = {
                             hideTabs: true,
                             "Id (Group Cities)": grupo,
-                            "ods concat": ods
+                            "ods concat": ods,
+                            onFirstInteractive: function () {
+                                changecityprogresohistorico3();
+
+                            }
                         };
                     vizcityprogresohistorico3 = new tableau.Viz(containerDiv, url, options);
                 } else {
@@ -1850,7 +1873,11 @@ block js
                         options = {
                             hideTabs: true,
                             "Id (Group Cities)": grupo,
-                            "ods concat": ods
+                            "ods concat": ods,
+                            onFirstInteractive: function () {
+                                changecityprogresohistorico4();
+
+                            }
                         };
                     vizcityprogresohistorico4 = new tableau.Viz(containerDiv, url, options);
                 } else {
