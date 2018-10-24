@@ -835,7 +835,7 @@ block js
 
 
                     }
-                })
+                });
 
             }
         }
@@ -844,68 +844,69 @@ block js
             $("select").select2();
 
 
-            //ods
-            $.ajax({
-                url: 'http://ciudatos.com:8080/api/goals/getGoals/',
-                dataType: 'json',
-                type: 'GET',
-                success: function (data) {
-                    var html = '<option value="">ODS:</option>';
+            if (vizodsgrupoodsgrupociudades1 == null) {
+                //ods
+                $.ajax({
+                    url: 'http://ciudatos.com:8080/api/goals/getGoals/',
+                    dataType: 'json',
+                    type: 'GET',
+                    success: function (data) {
+                        var html = '<option value="">ODS:</option>';
 
-                    jQuery.each(data, function (i, value) {
-                        var selected = '';
-                        console.log(i);
-                        if (i == 0) {
-                            selected = 'selected';
-                        }
-                        html += '<option ' + selected + ' data-description="' + value.description + '" data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
-
-
-                    })
-                    $("#changeOdsConcat").html(html);
+                        jQuery.each(data, function (i, value) {
+                            var selected = '';
+                            console.log(i);
+                            if (i == 0) {
+                                selected = 'selected';
+                            }
+                            html += '<option ' + selected + ' data-description="' + value.description + '" data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
 
 
-                    odsConcatFilter();
+                        })
+                        $("#changeOdsConcat").html(html);
 
 
-                }
-            })
+                        odsConcatFilter();
 
 
-
-            //grupos de ciudades
-            $.ajax({
-                url: 'http://ciudatos.com:8080/api/group_cities/getGrupos',
-                dataType: 'json',
-                type: 'GET',
-                success: function (data) {
-                    var html = '<option value="">Grupos de ciudades:</option>';
-                    jQuery.each(data, function (i, value) {
-
-                        var selected = '';
-                        if (i == 0) {
-                            selected = 'selected';
-                        }
+                    }
+                })
 
 
-                        html += '<option ' + selected + ' value=' + value.id + '>' + value.name + '</option>';
+                //grupos de ciudades
+                $.ajax({
+                    url: 'http://ciudatos.com:8080/api/group_cities/getGrupos',
+                    dataType: 'json',
+                    type: 'GET',
+                    success: function (data) {
+                        var html = '<option value="">Grupos de ciudades:</option>';
+                        jQuery.each(data, function (i, value) {
 
-                    })
-                    $("#changeGrupoodsgrupociudades1").html(html);
-                    $("#changeGrupoodsgrupociudades2").html(html);
-                    $("#changeGrupoodsgrupociudades3").html(html);
-                    $("#changeGrupoodsgrupociudades4").html(html);
+                            var selected = '';
+                            if (i == 0) {
+                                selected = 'selected';
+                            }
 
 
-                    $("#changeGrupoodstrazadorgrupociudades1").html(html);
-                    $("#changeGrupoodstrazadorgrupociudades2").html(html);
-                    $("#changeGrupoodstrazadorgrupociudades3").html(html);
-                    $("#changeGrupoodstrazadorgrupociudades4").html(html);
+                            html += '<option ' + selected + ' value=' + value.id + '>' + value.name + '</option>';
+
+                        })
+                        $("#changeGrupoodsgrupociudades1").html(html);
+                        $("#changeGrupoodsgrupociudades2").html(html);
+                        $("#changeGrupoodsgrupociudades3").html(html);
+                        $("#changeGrupoodsgrupociudades4").html(html);
 
 
-                    changeYearodsgrupociudades();
-                }
-            })
+                        $("#changeGrupoodstrazadorgrupociudades1").html(html);
+                        $("#changeGrupoodstrazadorgrupociudades2").html(html);
+                        $("#changeGrupoodstrazadorgrupociudades3").html(html);
+                        $("#changeGrupoodstrazadorgrupociudades4").html(html);
+
+
+                        changeYearodsgrupociudades();
+                    }
+                })
+            }
 
             $("#cityselectordashboard2").unstick();
             $("#odsselectordashboard2").sticky({topSpacing: 57});
@@ -2068,7 +2069,7 @@ block js
                             $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
                             $('body').delay(350).css({'overflow': 'visible'});
 
-                            
+
                             initvizcitymapadecalorporciudad();
                         }
                     };
