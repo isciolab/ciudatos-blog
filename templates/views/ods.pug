@@ -805,6 +805,7 @@ block js
                     dataType: 'json',
                     type: 'GET',
                     success: function (data) {
+                        var html = '<option value="">ODS:</option>';
                         var html2 = '<option value="">ODS:</option>';
 
                         jQuery.each(data, function (i, value) {
@@ -813,12 +814,22 @@ block js
                             if (i == 0) {
                                 selected = 'selected';
                             }
+                            html += '<option ' + selected + ' data-description="' + value.description + '" data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
+
                             html2 += '<option ' + selected + ' data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
 
 
                         })
 
-                        $("#changeOdsConcat2").html(html2);
+                        $("#changeOdsConcat2").html(html);
+                        $("#changecityindicadoresciudad1").html(html2);
+                        $("#changecityindicadoresciudad2").html(html2);
+                        $("#changecityindicadoresciudad3").html(html2);
+                        $("#changecityindicadoresciudad4").html(html2);
+                        $("#changecityprogresohistorico1").html(html2);
+                        $("#changecityprogresohistorico2").html(html2);
+                        $("#changecityprogresohistorico3").html(html2);
+                        $("#changecityprogresohistorico4").html(html2);
 
                         odsConcatFilterCity();
 
@@ -853,14 +864,6 @@ block js
                     })
                     $("#changeOdsConcat").html(html);
 
-                    $("#changecityindicadoresciudad1").html(html2);
-                    $("#changecityindicadoresciudad2").html(html2);
-                    $("#changecityindicadoresciudad3").html(html2);
-                    $("#changecityindicadoresciudad4").html(html2);
-                    $("#changecityprogresohistorico1").html(html2);
-                    $("#changecityprogresohistorico2").html(html2);
-                    $("#changecityprogresohistorico3").html(html2);
-                    $("#changecityprogresohistorico4").html(html2);
 
                     odsConcatFilter();
 
