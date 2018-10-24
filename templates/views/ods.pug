@@ -732,7 +732,7 @@ block js
 
 
 
-            
+
             // Change hash for page-reload
 
 
@@ -788,9 +788,38 @@ block js
                         })
                         $("#changeCity").html(html);
 
+
+                        //ods
+                        $.ajax({
+                            url: 'http://ciudatos.com:8080/api/goals/getGoals/',
+                            dataType: 'json',
+                            type: 'GET',
+                            success: function (data) {
+                                 var html2 = '<option value="">ODS:</option>';
+
+                                jQuery.each(data, function (i, value) {
+                                    var selected = '';
+                                    console.log(i);
+                                    if (i == 0) {
+                                        selected = 'selected';
+                                    }
+                                    html2 += '<option ' + selected + ' data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
+
+
+                                })
+
+                                $("#changeOdsConcat2").html(html);
+
+                                odsConcatFilterCity();
+
+
+                            }
+                        })
+
+
                         //if (activetab == 'CIUDADES') {
                             cityFilter();
-                            odsConcatFilterCity();
+
                        // }
                     }
                 })
@@ -808,7 +837,6 @@ block js
                 type: 'GET',
                 success: function (data) {
                     var html = '<option value="">ODS:</option>';
-                    var html2 = '<option value="">ODS:</option>';
 
                     jQuery.each(data, function (i, value) {
                         var selected = '';
@@ -817,12 +845,11 @@ block js
                             selected = 'selected';
                         }
                         html += '<option ' + selected + ' data-description="' + value.description + '" data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
-                        html2 += '<option ' + selected + ' data-img=' + value.avatar.url + ' value=' + value.id + '>' + value.number + ' ' + value.name + '</option>';
 
 
                     })
                     $("#changeOdsConcat").html(html);
-                    $("#changeOdsConcat2").html(html);
+
                     $("#changecityindicadoresciudad1").html(html2);
                     $("#changecityindicadoresciudad2").html(html2);
                     $("#changecityindicadoresciudad3").html(html2);
@@ -878,42 +905,9 @@ block js
             $("#odsselectordashboard2").sticky({topSpacing: 57});
         }
 
-        //ods
-        function initodsdashboardselector() {
-            var containerDiv = document.getElementById("odsdashboardselector"),
-                url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-selector?:embed=y&:display_count=no&publish=yes&:toolbar=no",
-                options = {
-                    hideTabs: true,
-                    onFirstInteractive: function () {
-                        // $("#odsdashboardselector").sticky({topSpacing: 40});
-                        $(".tab-toolbar").css('display', 'none');
-                        initodsdashboardinfo();
-
-                    }
-                };
-            vizodsdashboardselector = new tableau.Viz(containerDiv, url, options);
-        }
-
-        function initodsdashboardinfo() {
-
-            if (vizodsdashboardinfo == null) {
-                var containerDiv = document.getElementById("odsdashboardinfo"),
-                    url = "https://public.tableau.com/views/Ciudatos/ODSDASHBOARD-info?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                    options = {
-                        hideTabs: true,
-                        'ods concat': $("#changeOdsConcat option:selected").html(),
-                        'name (Targets)': $("#changeMeta option:selected").html(),
-                        onFirstInteractive: function () {
 
 
-                        }
-                    };
-                vizodsdashboardinfo = new tableau.Viz(containerDiv, url, options);
-            } else {
 
-                //initmapadecalorporods();
-            }
-        }
 
 
         function initmapadecalorporods() {
