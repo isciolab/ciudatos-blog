@@ -750,6 +750,8 @@ block js
             if(target.length>0){
                 $('.nav a').filter('a[href="#' + target[1] + '"]').tab('show');
 
+
+                console.log(target[1]);
                 if(target[1]=='ODS'){
                     renderOdsTab;
                 }
@@ -859,6 +861,7 @@ block js
         }
         function renderOdsTab() {
 
+            console.log('inicando esto');
             $("select").select2();
 
 
