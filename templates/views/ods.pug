@@ -739,7 +739,7 @@ block js
                 } else {
 
 
-                    
+
                     renderOdsTab();
                 }
             });
@@ -749,6 +749,10 @@ block js
             console.log(target.length);
             if(target.length>0){
                 $('.nav a').filter('a[href="#' + target[1] + '"]').tab('show');
+
+                if(target[1]=='ODS'){
+                    renderOdsTab;
+                }
             }else{
                 renderOdsTab();
             }
