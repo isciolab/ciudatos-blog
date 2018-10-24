@@ -723,6 +723,7 @@ block js
             // Javascript to enable link to tab
 
             var target = document.location.toString().split('#');
+            console.log(target.length);
             if(target.length>0){
                 $('.nav a').filter('a[href="#' + target[1] + '"]').tab('show');
             }else{
