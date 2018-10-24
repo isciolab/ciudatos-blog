@@ -1129,11 +1129,12 @@ block js
             var sheet = vizcityindicadoresciudad1.getWorkbook().getActiveSheet();
             var fieldname = "ods concat";
             var text = $("#changecityindicadoresciudad1 option:selected").text();
-            var img = $("#changecityindicadoresciudad1 option:selected").attr('data-img');
+
             var value = $("#changecityindicadoresciudad1").val();
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
 
+                var img = $("#changecityindicadoresciudad1 option:selected").attr('data-img');
                 $("#cityindicadoresciudad1img").attr('src', 'http://ciudatos.com:8080/'+img);
             }
             else {
@@ -1149,6 +1150,8 @@ block js
             var value = $("#changecityprogresohistorico1").val();
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
+                var img = $("#changecityindicadoresciudad2 option:selected").attr('data-img');
+                $("#cityindicadoresciudad2img").attr('src', 'http://ciudatos.com:8080/' + img);
             }
             else {
                 vizcityprogresohistorico1.dispose();
@@ -1163,6 +1166,9 @@ block js
             var value = $("#changecityprogresohistorico2").val();
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
+
+                var img = $("#changecityindicadoresciudad3 option:selected").attr('data-img');
+                $("#cityindicadoresciudad3img").attr('src', 'http://ciudatos.com:8080/' + img);
             }
             else {
                 vizcityprogresohistorico2.dispose();
@@ -1193,6 +1199,9 @@ block js
             var value = $("#changecityprogresohistorico4").val();
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
+
+                var img = $("#changecityindicadoresciudad4 option:selected").attr('data-img');
+                $("#cityindicadoresciudad4img").attr('src', 'http://ciudatos.com:8080/' + img);
             }
             else {
                 vizcityprogresohistorico4.dispose();
@@ -1505,8 +1514,12 @@ block js
                             "Id (Group Cities)": grupo,
                             "ods concat": ods,
                             "Date From": $("#changeYearcityindicadoresciudad").val(),
+                            onFirstInteractive: function () {
+                                changecityodsindicadoresciudad1();
+                            }
                         };
                     vizcityindicadoresciudad1 = new tableau.Viz(containerDiv, url, options);
+
                 } else {
                     changecityodsindicadoresciudad1();
                 }
@@ -1530,6 +1543,9 @@ block js
                             "Id (Group Cities)": grupo,
                             "ods concat": ods,
                             "Date From": $("#changeYearcityindicadoresciudad").val(),
+                            onFirstInteractive: function () {
+                                changecityodsindicadoresciudad2();
+                            }
 
                         };
                     vizcityindicadoresciudad2 = new tableau.Viz(containerDiv, url, options);
@@ -1557,6 +1573,9 @@ block js
                             "Id (Group Cities)": grupo,
                             "ods concat": ods,
                             "Date From": $("#changeYearcityindicadoresciudad").val(),
+                            onFirstInteractive: function () {
+                                changecityodsindicadoresciudad3();
+                            }
                         };
                     vizcityindicadoresciudad3 = new tableau.Viz(containerDiv, url, options);
                 }
@@ -1583,6 +1602,9 @@ block js
                             "Id (Group Cities)": grupo,
                             "ods concat": ods,
                             "Date From": $("#changeYearcityindicadoresciudad").val(),
+                            onFirstInteractive: function () {
+                                changecityodsindicadoresciudad4();
+                            }
 
                         };
                     vizcityindicadoresciudad4 = new tableau.Viz(containerDiv, url, options);
