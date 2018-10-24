@@ -722,6 +722,29 @@ block js
 
             // Javascript to enable link to tab
 
+
+            // Change hash for page-reload
+
+
+            $('.nav-pills a').on('shown.bs.tab', function (event) {
+                console.log('cambie de pestaña');
+                activetab = $(event.target).text();         // active tab
+                var y = $(event.relatedTarget).text();  // previous tab
+                console.log(activetab);
+                if (activetab == 'CIUDADES') {
+
+                    renderCItyTab();
+
+
+                } else {
+
+
+                    
+                    renderOdsTab();
+                }
+            });
+
+
             var target = document.location.toString().split('#');
             console.log(target.length);
             if(target.length>0){
@@ -742,25 +765,7 @@ block js
 
 
 
-            // Change hash for page-reload
 
-
-            $('.nav-pills a').on('shown.bs.tab', function (event) {
-                console.log('cambie de pestaña');
-                activetab = $(event.target).text();         // active tab
-                var y = $(event.relatedTarget).text();  // previous tab
-                console.log(activetab);
-                if (activetab == 'CIUDADES') {
-
-                   renderCItyTab();
-
-
-                } else {
-
-
-                    renderOdsTab();
-                }
-            });
 
             //$('iframe').iFrameResize({checkOrigin: false})
 
