@@ -722,6 +722,17 @@ block js
             }
 
 
+            var start_year = new Date().getFullYear();
+
+
+            $('.changeYear').append('<option value="">Años</option>');
+            for (var i = start_year - 1; i > start_year - 4; i--) {
+                $('.changeYear').append('<option selected value="' + i + '">' + i + '</option>');
+            }
+
+
+
+            
             // Change hash for page-reload
 
 
@@ -827,14 +838,6 @@ block js
                 }
             })
 
-
-            var start_year = new Date().getFullYear();
-
-
-            $('.changeYear').append('<option value="">Años</option>');
-            for (var i = start_year - 1; i > start_year - 4; i--) {
-                $('.changeYear').append('<option selected value="' + i + '">' + i + '</option>');
-            }
 
 
             //grupos de ciudades
@@ -1654,8 +1657,8 @@ block js
                             //  console.log('inicio lo demas de ciuades');
                             // initvizcitidashboardinfo();
 
-                            //initvizcityprogreovsabsoluto();
-                           // changeYearcityindicadoresciudad();
+                            initvizcityprogreovsabsoluto();
+                            changeYearcityindicadoresciudad();
                             initcityprogresohistorico1();
                             initcityprogresohistorico2();
                             initcityprogresohistorico3();
