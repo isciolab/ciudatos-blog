@@ -930,7 +930,7 @@ block js
                         options = {
 
                             "Date From": ano,
-                           
+
                             hideTabs: true,
                             onFirstInteractive: function () {
                                 //city
@@ -2532,14 +2532,6 @@ block js
                     })
                 }
 
-                if (vizmapadecalorporods != null) {
-                    var sheet = vizmapadecalorporods.getWorkbook().getActiveSheet();
-                    if (indicador != "") {
-
-                        sheet.applyFilterAsync(fieldname, indicador, tableau.FilterUpdateType.REPLACE);
-                    }
-
-                }
 
 
             }
