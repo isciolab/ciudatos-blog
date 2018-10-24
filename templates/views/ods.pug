@@ -1086,6 +1086,9 @@ block js
             var value = $("#changecityindicadoresciudad4").val();
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
+
+                var img = $("#changecityindicadoresciudad4 option:selected").attr('data-img');
+                $("#cityindicadoresciudad4img").attr('src', 'http://ciudatos.com:8080/' + img);
             }
             else {
                 vizcityindicadoresciudad4.dispose();
@@ -1102,6 +1105,9 @@ block js
             var value = $("#changecityindicadoresciudad3").val();
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
+
+                var img = $("#changecityindicadoresciudad3 option:selected").attr('data-img');
+                $("#cityindicadoresciudad3img").attr('src', 'http://ciudatos.com:8080/' + img);
             }
             else {
                 vizcityindicadoresciudad3.dispose();
@@ -1117,6 +1123,9 @@ block js
             var value = $("#changecityindicadoresciudad2").val();
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
+
+                var img = $("#changecityindicadoresciudad2 option:selected").attr('data-img');
+                $("#cityindicadoresciudad2img").attr('src', 'http://ciudatos.com:8080/' + img);
             }
             else {
                 vizcityindicadoresciudad2.dispose();
@@ -1150,8 +1159,7 @@ block js
             var value = $("#changecityprogresohistorico1").val();
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
-                var img = $("#changecityindicadoresciudad2 option:selected").attr('data-img');
-                $("#cityindicadoresciudad2img").attr('src', 'http://ciudatos.com:8080/' + img);
+
             }
             else {
                 vizcityprogresohistorico1.dispose();
@@ -1167,8 +1175,7 @@ block js
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
 
-                var img = $("#changecityindicadoresciudad3 option:selected").attr('data-img');
-                $("#cityindicadoresciudad3img").attr('src', 'http://ciudatos.com:8080/' + img);
+
             }
             else {
                 vizcityprogresohistorico2.dispose();
@@ -1200,8 +1207,7 @@ block js
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
 
-                var img = $("#changecityindicadoresciudad4 option:selected").attr('data-img');
-                $("#cityindicadoresciudad4img").attr('src', 'http://ciudatos.com:8080/' + img);
+
             }
             else {
                 vizcityprogresohistorico4.dispose();
