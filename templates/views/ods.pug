@@ -1133,7 +1133,8 @@ block js
             var value = $("#changecityindicadoresciudad1").val();
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
-                $("#initcityindicadoresciudad1image").attr('img', 'http://ciudatos.com:8080/'+img);
+
+                $("#cityindicadoresciudad1img").attr('src', 'http://ciudatos.com:8080/'+img);
             }
             else {
                 vizcityindicadoresciudad1.dispose();
