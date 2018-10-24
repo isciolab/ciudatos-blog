@@ -776,13 +776,11 @@ block js
 
                         })
                         $("#changeCity").html(html);
-                        if (activetab == 'CIUDADES') {
+
+                        //if (activetab == 'CIUDADES') {
                             cityFilter();
-
                             odsConcatFilterCity();
-                        }
-
-
+                       // }
                     }
                 })
             }
@@ -2256,6 +2254,7 @@ block js
         //city
         function cityFilter() {
 
+            console.log('ejecutando city filter');
 
             var ciudad = $("#changeCity option:selected").text();
             var grupo = $("#changeCity option:selected").attr('data-group');
