@@ -779,9 +779,10 @@ block js
                         if (activetab == 'CIUDADES') {
                             cityFilter();
 
+                            odsConcatFilterCity();
                         }
 
-                        odsConcatFilterCity();
+
                     }
                 })
             }
@@ -1622,29 +1623,6 @@ block js
         }
 
 
-        function initvizcitidashboardinfo() {
-            if (vizcitidashboardinfo == null) {
-                var containerDiv = document.getElementById("citidashboardinfo"),
-                    url = "https://public.tableau.com/views/Ciudatos/CityDashboardinfo?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
-                    options = {
-                        hideTabs: true,
-                        onFirstInteractive: function () {
-                            console.log('inicio lo demas de ciuades');
-
-
-                            initvizcityprogreovsabsoluto();
-
-
-                        }
-                    };
-                vizcitidashboardinfo = new tableau.Viz(containerDiv, url, options);
-            } else {
-                initvizcityprogreovsabsoluto();
-            }
-
-
-        }
-
 
 
         function initvizcitydeprmentmap() {
@@ -1691,7 +1669,7 @@ block js
                 vizcitymap = new tableau.Viz(containerDiv, url, options);
             } else {
                 //initvizcitidashboardinfo();
-                initvizcityindicadorestrazadores();
+                //initvizcityindicadorestrazadores();
             }
         }
 
@@ -1703,6 +1681,7 @@ block js
             var anio = $("#changeYearCityProgresoVsabsoluto").val();
 
             var grupo = $("#changeCity option:selected").attr('data-group');
+            console.log(grupo);
             if (anio == '' || indicador == '' || grupo=='') {
 
                 if (anio == '' && indicador == '') {
