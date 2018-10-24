@@ -1703,7 +1703,7 @@ block js
             var anio = $("#changeYearCityProgresoVsabsoluto").val();
 
             var grupo = $("#changeCity option:selected").attr('data-group');
-            if (anio == '' || indicador == '') {
+            if (anio == '' || indicador == '' || grupo=='') {
 
                 if (anio == '' && indicador == '') {
                     // alert('Debe seleccionar un indicador y un año');
