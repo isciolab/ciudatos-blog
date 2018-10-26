@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="visualize ods">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/ods.pug" afterPath="$PROJECT_DIR$/templates/views/ods.pug" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
-              <caret line="755" column="50" lean-forward="false" selection-start-line="755" selection-start-column="50" selection-end-line="755" selection-end-column="50" />
+              <caret line="760" column="33" lean-forward="false" selection-start-line="760" selection-start-column="33" selection-end-line="760" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -384,7 +385,7 @@
       <workItem from="1540423993463" duration="767000" />
       <workItem from="1540426126302" duration="35000" />
       <workItem from="1540506682846" duration="86000" />
-      <workItem from="1540565929920" duration="2296000" />
+      <workItem from="1540565929920" duration="2584000" />
     </task>
     <task id="LOCAL-00192" summary="visualize ods">
       <created>1539016085255</created>
@@ -733,7 +734,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283945000" />
+    <option name="totallyTimeSpent" value="284233000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1130,7 +1131,7 @@
     <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="755" column="50" lean-forward="false" selection-start-line="755" selection-start-column="50" selection-end-line="755" selection-end-column="50" />
+          <caret line="760" column="33" lean-forward="false" selection-start-line="760" selection-start-column="33" selection-end-line="760" selection-end-column="33" />
           <folding />
         </state>
       </provider>

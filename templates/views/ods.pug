@@ -745,16 +745,21 @@ block js
 
                     $('.nav a').filter('a[href="#CIUDADES"]').tab('show');
 
-                    $('body,html').stop(true, true).animate({
-                        scrollTop: $(activetabattr).offset().top
-                    }, 1000);
+                    setTimeout(function(){
+                        $('body,html').stop(true, true).animate({
+                            scrollTop: $(activetabattr).offset().top
+                        }, 1000); }, 3000);
+
                 }
 
                 if (activetabattr == '#anclamapadecalorporciudad') {
                     $('.nav a').filter('a[href="#ODS"]').tab('show');
-                    $('body,html').stop(true, true).animate({
-                        scrollTop: $(activetabattr).offset().top
-                    }, 1000);
+
+                    setTimeout(function(){
+                        $('body,html').stop(true, true).animate({
+                            scrollTop: $(activetabattr).offset().top
+                        }, 1000); }, 3000);
+
                 }
             });
 
