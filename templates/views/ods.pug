@@ -730,6 +730,7 @@ block js
             $('.nav-pills a').on('shown.bs.tab', function (event) {
                 console.log('cambie de pestaña');
                 activetab = $(event.target).text();         // active tab
+                var activetabattr = $(event.target).attr('href');         // active tab
                 var y = $(event.relatedTarget).text();  // previous tab
                 console.log(activetab);
                 if (activetab == 'CIUDADES') {
@@ -740,12 +741,12 @@ block js
                     renderOdsTab();
                 }
 
-                if (activetab == 'anclamapadecalorporods') {
+                if (activetabattr == 'anclamapadecalorporods') {
 
                     $('.nav a').filter('a[href="#CIUDADES"]').tab('show');
                 }
 
-                if (activetab == 'anclamapadecalorporciudad') {
+                if (activetabattr == 'anclamapadecalorporciudad') {
                     $('.nav a').filter('a[href="#ODS"]').tab('show');
                 }
             });
