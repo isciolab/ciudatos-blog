@@ -744,10 +744,17 @@ block js
                 if (activetabattr == '#anclamapadecalorporods') {
 
                     $('.nav a').filter('a[href="#CIUDADES"]').tab('show');
+
+                    $('body,html').stop(true, true).animate({
+                        scrollTop: $(activetabattr).offset().top
+                    }, 1000);
                 }
 
                 if (activetabattr == '#anclamapadecalorporciudad') {
                     $('.nav a').filter('a[href="#ODS"]').tab('show');
+                    $('body,html').stop(true, true).animate({
+                        scrollTop: $(activetabattr).offset().top
+                    }, 1000);
                 }
             });
 
