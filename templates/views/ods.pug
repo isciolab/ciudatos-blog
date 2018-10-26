@@ -747,7 +747,7 @@ block js
 
             var target = document.location.toString().split('#');
             console.log(target.length);
-            if(target.length>0){
+            if(target.length>1){
                 $('.nav a').filter('a[href="#' + target[1] + '"]').tab('show');
 
 
