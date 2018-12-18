@@ -36,10 +36,10 @@ block content
           a.hind.section-title(href="/visualizacion")= data.info.exploreTitle
           p= data.info.exploreLabel
   <br><br>
-  a.hind.section-title(href="#")= data.info.citiesTitle
-  pre.lato.
-    #{data.info.citiesLineOne}
-    #{data.info.citiesLineTwo}
+  .container-fluid
+    .row
+      .col-md-2(style="padding-top:80px")
+         a.hind.section-title(href="#")= data.info.citiesTitle
   .half-height.home-first-banner.lato.imgback(style="display:none")
     .container-fluid
       .row
