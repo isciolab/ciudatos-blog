@@ -18,6 +18,7 @@ Home.add(
 		citiesLineOne: { type: String },
 		citiesLineTwo: { type: String },
 	},
+
 	'Temas',
 	{
 		topicsTitle: { type: String },

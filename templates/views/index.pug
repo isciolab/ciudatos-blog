@@ -36,7 +36,11 @@ block content
           a.hind.section-title(href="/visualizacion")= data.info.exploreTitle
           p= data.info.exploreLabel
   <br><br>
-  .half-height.home-first-banner.lato.imgback
+  a.hind.section-title(href="#")= data.info.citiesTitle
+  pre.lato.
+    #{data.info.citiesLineOne}
+    #{data.info.citiesLineTwo}
+  .half-height.home-first-banner.lato.imgback(style="display:none")
     .container-fluid
       .row
         .col-md-2(style="padding-top:80px")
