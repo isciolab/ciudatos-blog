@@ -411,7 +411,7 @@ block content
 
     </div>
     <div class="col-md-12"><p id="descripcion"></p></div>
-    <div class="col-md-12"><a href="http://redcomovamos.org/ciudatosenvivo/">http://redcomovamos.org/ciudatos/</a></div>
+    <div class="col-md-12"><a id="web_page" href="http://redcomovamos.org/ciudatosenvivo/">http://redcomovamos.org/ciudatos/</a></div>
 
     </div>
     </div>
@@ -2392,6 +2392,7 @@ block js
             var department = $("#changeCity option:selected").attr('data-department');
             var description = $("#changeCity option:selected").attr('data-description');
             var foundation_year = $("#changeCity option:selected").attr('data-foundation_year');
+            var web_page = $("#changeCity option:selected").attr('data-web_page');
 
 
             $("#departamento").text(department);
@@ -2400,6 +2401,7 @@ block js
             $("#pobrural").text(rural_population);
             $("#areatot").text(total_area);
             $("#aniofundacion").text(foundation_year);
+            $("#web_page").text(web_page);
             $("#descripcion").text(description);
 
 
