@@ -48,7 +48,7 @@ html
 						//- a(href="/ciudades") Ciudades
 						//- a(href="/temas") Temas
 						a(href="/publicaciones") Publicaciones
-						a(href="/datos") Bases de datos
+						a(href="/datos?data=pc") Bases de datos
 						a(href="/about") Quiénes somos
 						a.open-overlay(href="") Explora los datos abiertos
 				.container-fluid
@@ -62,7 +62,7 @@ html
 						.nav-link(class=(section === 'ciudades' ? 'active' : null)): a(href="/ciudades") Ciudades
 						//- .nav-link(class=(section === 'temas' ? 'active' : null)): a(href="/temas") Temas
 						.nav-link(class=(section === 'publicaciones' ? 'active' : null)): a(href="/publicaciones") Publicaciones
-						.nav-link(class=(section === 'base-de-datos' ? 'active' : null)): a(href="/datos") Bases de datos
+						.nav-link(class=(section === 'base-de-datos' ? 'active' : null)): a(href="/datos?data=pc") Bases de datos
 						.nav-link(class=(section === 'about' ? 'active' : null)): a(href="/about") Quiénes somos
 						.nav-link(class=(section === '' ? 'active' : null)): a.open-overlay.text-light-blue(href="") Explora los datos abiertos
 			main

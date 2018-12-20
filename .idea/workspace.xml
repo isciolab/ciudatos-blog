@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/ods.pug" afterPath="$PROJECT_DIR$/templates/views/ods.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layouts/default.pug" afterPath="$PROJECT_DIR$/templates/layouts/default.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/index.pug" afterPath="$PROJECT_DIR$/templates/views/index.pug" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ods.pug" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ods.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="2403" column="40" lean-forward="false" selection-start-line="2403" selection-start-column="32" selection-end-line="2403" selection-end-column="40" />
+            <state relative-caret-position="212">
+              <caret line="918" column="0" lean-forward="true" selection-start-line="918" selection-start-column="0" selection-end-line="918" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -47,18 +48,18 @@
       <file leaf-file-name="data.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/views/data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="153">
+              <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
+      <file leaf-file-name="default.pug" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="188">
+              <caret line="64" column="112" lean-forward="false" selection-start-line="64" selection-start-column="112" selection-end-line="64" selection-end-column="112" />
               <folding />
             </state>
           </provider>
@@ -87,8 +88,8 @@
       <file leaf-file-name="index.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/views/index.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="58" column="129" lean-forward="false" selection-start-line="58" selection-start-column="129" selection-end-line="58" selection-end-column="129" />
+            <state relative-caret-position="188">
+              <caret line="154" column="47" lean-forward="false" selection-start-line="154" selection-start-column="47" selection-end-line="154" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -125,20 +126,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>185.186.245.150:3000</find>
-      <find>http://88.208.3.175</find>
-      <find>ciudatos.</find>
-      <find>ciudatos.co</find>
-      <find>odsgrupoodsgrupociudades1</find>
-      <find>vizodsgrupoodsgrupociudades1</find>
-      <find>.leng</find>
-      <find>88.208.3.175</find>
-      <find>c</find>
-      <find>ciu</find>
-      <find>ciuda</find>
-      <find>ciudatos.com2</find>
-      <find>ciudatos.com</find>
-      <find>ciudatos.com:200</find>
       <find>ciudatos.com:20</find>
       <find>ciudatos.com:23</find>
       <find>ciudatos.com:230</find>
@@ -155,6 +142,20 @@
       <find>Objetivos de desarrollo sostenible</find>
       <find>tableau</find>
       <find>aniofundacion</find>
+      <find>base</find>
+      <find>bases</find>
+      <find>bases de d</find>
+      <find>department</find>
+      <find>bases de datos</find>
+      <find>B</find>
+      <find>Ba</find>
+      <find>Bas</find>
+      <find>Bases de de</find>
+      <find>Bases de d</find>
+      <find>Bases de da</find>
+      <find>Bases de dato</find>
+      <find>Bases de datos</find>
+      <find>href=&quot;/datos</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -186,13 +187,13 @@
         <option value="$PROJECT_DIR$/public/styles/site.min.css" />
         <option value="$PROJECT_DIR$/public/styles/site/custom.css" />
         <option value="$PROJECT_DIR$/routes/views/ods.js" />
-        <option value="$PROJECT_DIR$/templates/layouts/default.pug" />
         <option value="$PROJECT_DIR$/public/styles/site.less" />
         <option value="$PROJECT_DIR$/routes/views/data.js" />
         <option value="$PROJECT_DIR$/templates/views/visualize.pug" />
         <option value="$PROJECT_DIR$/models/Home.js" />
-        <option value="$PROJECT_DIR$/templates/views/index.pug" />
         <option value="$PROJECT_DIR$/templates/views/ods.pug" />
+        <option value="$PROJECT_DIR$/templates/views/index.pug" />
+        <option value="$PROJECT_DIR$/templates/layouts/default.pug" />
       </list>
     </option>
   </component>
@@ -496,7 +497,7 @@
       <workItem from="1544628890396" duration="61000" />
       <workItem from="1545061349394" duration="694000" />
       <workItem from="1545151009246" duration="7109000" />
-      <workItem from="1545251311618" duration="745000" />
+      <workItem from="1545251311618" duration="3233000" />
     </task>
     <task id="LOCAL-00193" summary="visualize ods">
       <created>1539033422233</created>
@@ -845,16 +846,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="310372000" />
+    <option name="totallyTimeSpent" value="312860000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="732" extended-state="7" />
+    <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25226587" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -867,7 +869,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1157,13 +1158,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="13" column="45" lean-forward="false" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/jquery.sticky.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4335">
@@ -1191,14 +1185,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="50" column="47" lean-forward="false" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/views/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1235,18 +1221,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/views/index.pug">
+    <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="58" column="129" lean-forward="false" selection-start-line="58" selection-start-column="129" selection-end-line="58" selection-end-column="129" />
+        <state relative-caret-position="212">
+          <caret line="918" column="0" lean-forward="true" selection-start-line="918" selection-start-column="0" selection-end-line="918" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/views/ods.pug">
+    <entry file="file://$PROJECT_DIR$/routes/views/data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="2403" column="40" lean-forward="false" selection-start-line="2403" selection-start-column="32" selection-end-line="2403" selection-end-column="40" />
+        <state relative-caret-position="153">
+          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/views/index.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="154" column="47" lean-forward="false" selection-start-line="154" selection-start-column="47" selection-end-line="154" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="64" column="112" lean-forward="false" selection-start-line="64" selection-start-column="112" selection-end-line="64" selection-end-column="112" />
           <folding />
         </state>
       </provider>
