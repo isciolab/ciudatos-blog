@@ -1,0 +1,105 @@
+include ../mixins/flash-messages
+
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+
+		title= title || 'Ciudatos'
+		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+
+		script(defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js")
+		link(href="/styles/site.min.css?v=1.2", rel="stylesheet")
+
+
+		if user && user.canAccessKeystone
+			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
+
+		//- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		//- Safely remove this block if you are not targeting IE8
+		//-[if lt IE 9]
+			script(src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js")
+			script(src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js")
+		//-[endif]
+		block vars
+		block css
+		block head
+
+	body
+		#wrapper.Column
+			header
+				.overlay-mask
+					.overlay-content
+						.overlay-nav
+							a.close-overlay(href="") Cerrar
+						.overlay-content
+							each profile in profiles
+								.overlay-profile
+									img(src=`${profile.image.secure_url}`, alt="")
+									.overlay-profile-body
+										h3.karla !{profile.name}
+										.lato.text-white!= profile.description 
+					.overlay
+
+				.container-fluid
+					nav.small-devices-nav
+						a.nav-logo(href="/"): img(src="/images/logos/logociudatosmenu.png", alt="Logo ciudatos")
+						.burger-box: .burger: span
+								main
+				block content
+			footer
+				.container-fluid.Row.center-vertical
+					.footer-info
+						p Fundación Corona
+						br
+						p Calle 70 # 7-30 Bogotá, Colombia
+						p Tel: (57 +1) 4000031
+						p Información:
+						p comunicaciones@fcorona.org
+						p Línea Ética
+						p seamosintregrosfundacion@fcorona.org
+					.footer-contact
+						<a class="fa-layers fa-fw fa-2x" href="https://www.facebook.com/FundCorona/" target="_blank" rel="noopener noreferrer">
+							<i class="fas fa-circle" style="color: white"></i>
+							<i class="fab fa-facebook-f" data-fa-transform="shrink-6"></i>
+						</a>
+						<a class="fa-layers fa-fw fa-2x" href="https://twitter.com/fundcorona" target="_blank" rel="noopener noreferrer">
+							<i class="fas fa-circle" style="color: white"></i>
+							<i class="fab fa-twitter" data-fa-transform="shrink-6"></i>
+						</a>
+						<a class="fa-layers fa-fw fa-2x" href="https://www.linkedin.com/company/6411892/" target="_blank" rel="noopener noreferrer">
+							<i class="fas fa-circle" style="color: white"></i>
+							<i class="fab fa-linkedin-in" data-fa-transform="shrink-6"></i>
+						</a>
+						<a class="fa-layers fa-fw fa-2x" href="https://www.youtube.com/user/fundacioncorona" target="_blank" rel="noopener noreferrer">
+							<i class="fas fa-circle" style="color: white"></i>
+							<i class="fab fa-youtube" data-fa-transform="shrink-6"></i>
+						</a>
+		script(src='/js/jquery/jquery-2.1.4.min.js')
+		script(src='/js/bootstrap/bootstrap-3.3.5.min.js')
+		if user && user.canAccessKeystone
+			script(src='/keystone/js/content/editor.js')
+		script.
+			$('.burger-box').click(function (event) {
+				$(this).toggleClass('burger-open')
+				$('.small-devices-menu').toggleClass('menu-opened')
+			})
+
+			$('.open-overlay').click(function (event) {
+				event.preventDefault()
+				const menuOpened = $('.small-devices-menu').hasClass('menu-opened')
+				if (menuOpened) {
+					$('.small-devices-menu').removeClass('menu-opened')
+				}
+				$('body').toggleClass('no-scroll')
+				$('.overlay-mask').toggleClass('opened')
+			})
+
+			$('.close-overlay').click(function (event) {
+				event.preventDefault()
+				$('body').toggleClass('no-scroll')
+				$('.overlay-mask').toggleClass('opened')
+			})
+		block js
