@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layouts/default.pug" afterPath="$PROJECT_DIR$/templates/layouts/default.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/index.pug" afterPath="$PROJECT_DIR$/templates/views/index.pug" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,7 +44,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.pug" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="530">
@@ -64,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.pug" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/index.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="73" lean-forward="false" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
+            <state relative-caret-position="-116">
+              <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -193,8 +193,8 @@
         <option value="$PROJECT_DIR$/public/styles/site.css" />
         <option value="$PROJECT_DIR$/public/styles/site.less" />
         <option value="$PROJECT_DIR$/templates/layouts/default-back.pug" />
-        <option value="$PROJECT_DIR$/templates/views/index.pug" />
         <option value="$PROJECT_DIR$/templates/layouts/default.pug" />
+        <option value="$PROJECT_DIR$/templates/views/index.pug" />
       </list>
     </option>
   </component>
@@ -469,7 +469,7 @@
       <workItem from="1545151009246" duration="7109000" />
       <workItem from="1545251311618" duration="6124000" />
       <workItem from="1545427530233" duration="3815000" />
-      <workItem from="1548805848606" duration="607000" />
+      <workItem from="1548805848606" duration="647000" />
     </task>
     <task id="LOCAL-00193" summary="visualize ods">
       <created>1539033422233</created>
@@ -818,7 +818,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="320173000" />
+    <option name="totallyTimeSpent" value="320213000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1201,6 +1201,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="67" column="4" lean-forward="true" selection-start-line="57" selection-start-column="20" selection-end-line="67" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/index-back.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1211,16 +1219,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/index.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="73" lean-forward="false" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="67" column="4" lean-forward="true" selection-start-line="57" selection-start-column="20" selection-end-line="67" selection-end-column="4" />
+        <state relative-caret-position="-116">
+          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding />
         </state>
       </provider>
