@@ -43,11 +43,14 @@ html
 										.lato.text-white!= profile.description 
 					.overlay
 				.small-devices-menu
-					
+					.container-fluid.small-devices-menu-container.Column.center-vertical
+						
 				.container-fluid
 					nav.small-devices-nav
 						a.nav-logo(href="/"): img(src="/images/logos/logociudatosmenu.png", alt="Logo ciudatos")
 						.burger-box: .burger: span
+					nav.medium-devices-nav
+						a.nav-logo(href="/"): img(src="/images/logos/logociudatosmenu.png", alt="Logo ciudatos")
 
 			main
 				block content
