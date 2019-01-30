@@ -1,16 +1,18 @@
 extends ../layouts/default
 
 block css
-  link(rel="stylesheet", href="vendors/owl.carousel.min.css")
-  link(rel="stylesheet", href="vendors/owl.theme.default.min.css")
-  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css")
+    link(rel="stylesheet", href="vendors/owl.carousel.min.css")
+    link(rel="stylesheet", href="vendors/owl.theme.default.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css")
 
 block content
-
-  .container-fluid
-    .row
-      .col-md-12(style="text-align:center; margin-bottom:10px")
-         a.hind.section-title(href="#")= "Este sitio se encuentra temporalmente en mantenimiento"
+.half-height.home-first-banner.lato
+    .banner-overlay-image
+        img.img-responsive(src="/images/site/app.gif", alt="")
+    .container-fluid
+        .row
+            .col-md-12(style="text-align:center; margin-bottom:10px")
+                a.hind.section-title(href="#")= "Este sitio se encuentra temporalmente en mantenimiento"
 
 
 
@@ -19,24 +21,25 @@ block content
 
 
 block js
-  script(src="/vendors/owl.carousel.min.js")
-  script(src="/js/home.js")
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js")
-  script.
-      $(document).ready(function () {
-        $("select").select2();
+    script(src="/vendors/owl.carousel.min.js")
+    script(src="/js/home.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js")
+    script.
+        $(document).ready(function () {
+            $("select").select2();
 
 
-          $(".titledrop").on('click', function () {
-              $(".imgback").slideToggle("slow", function () {
-                  // Animation complete.
-              });
-          });
+            $(".titledrop").on('click', function () {
+                $(".imgback").slideToggle("slow", function () {
+                    // Animation complete.
+                });
+            });
 
-      });
-      function anclaatajos() {
-          var value = $("#atajos").val();;
-          if(value!='') {
-              window.location.href = "ODS#" + value;
-          }
-      }
+        });
+        function anclaatajos() {
+            var value = $("#atajos").val();
+            ;
+            if (value != '') {
+                window.location.href = "ODS#" + value;
+            }
+        }
