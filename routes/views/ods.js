@@ -8,6 +8,6 @@ exports = module.exports = function (req, res) {
 	const { section } = req.query;
 	locals.data = {};
 	locals.data.section = section;
-	//view.render('ods');
-	view.render('index');
+	view.render('ods');
+	
 };
