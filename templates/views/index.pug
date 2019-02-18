@@ -1,41 +1,213 @@
 extends ../layouts/default
 
 block css
-    link(rel="stylesheet", href="vendors/owl.carousel.min.css")
-    link(rel="stylesheet", href="vendors/owl.theme.default.min.css")
-    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css")
+  link(rel="stylesheet", href="vendors/owl.carousel.min.css")
+  link(rel="stylesheet", href="vendors/owl.theme.default.min.css")
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css")
 
 block content
-    .half-height.lato
-        <br><br>
-        <br><br>
-        <br><br>
-        .container-fluid
-            .row
-                .col-md-12(style="text-align:center; margin-bottom:10px")
-                    a.hind.section-title(href="#")= "Este sitio se encuentra temporalmente en mantenimiento"
 
-                    
+  .half-height.home-first-banner.lato
+    .banner-overlay-image
+      img.img-responsive(src="/images/site/app.gif", alt="")
+    .container-fluid
+      .home-fb-content
+        .home-fb-left.Column
+          img(src="/images/logos/logociudatoscolor.png", alt="")
+          p= data.info.description
+          .home-fb-social
+            <a class="fa-layers fa-fw" href="https://www.facebook.com/FundCorona/" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-circle facebook"></i>
+              <i class="fab fa-facebook-f" data-fa-transform="shrink-6"></i>
+            </a>
+            <a class="fa-layers fa-fw" href="https://twitter.com/fundcorona" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-circle twitter"></i>
+              <i class="fab fa-twitter" data-fa-transform="shrink-6"></i>
+            </a>
+            <a class="fa-layers fa-fw" href="https://www.linkedin.com/company/6411892/" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-circle linkedin"></i>
+              <i class="fab fa-linkedin-in" data-fa-transform="shrink-6"></i>
+            </a>
+            <a class="fa-layers fa-fw" href="https://www.youtube.com/user/fundacioncorona" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-circle youtube"></i>
+              <i class="fab fa-youtube" data-fa-transform="shrink-6"></i>
+            </a>
+        .home-fb-right.Column.center-vertical.center-horizontal
+          a.hind.section-title(href="/visualizacion")= data.info.exploreTitle
+          p= data.info.exploreLabel
+  <br><br>
+  .container-fluid
+    .row
+      .col-md-12(style="text-align:center; margin-bottom:10px")
+         a.hind.section-title.titledrop(href="#")= "Objetivos de desarrollo sostenible"
+  .half-height.home-first-banner.lato.imgback(style="display:none")
+    .container-fluid
+      .row
+        .col-md-2(style="padding-top:80px")
+          img(src="http://greennetwork.dk/wp-content/uploads/2018/08/SDG-Wheel_Transparent-300x300.png", alt="", width="200px")
+        .col-md-3(style="padding-top:110px")
+          p= "Consulte los indicadores de los Objetivos de Desarrollo Sostenible en 36 ciudades de Colombia."
+        .col-md-2(style="padding-top:110px")
+          <select id="atajos" style="width:200px" class="form-control"  onchange="anclaatajos()">
+            <option>Atajo gráfica ODS </option>
+            <option value="ODS">ODS</option>
+            <option value="CIUDADES">CIUDADES</option>
+          </select>
+        .col-md-2.col-md-offset-1.center-vertical.center-horizontal
+          .row
+            .col-md-12(style="border-right: 5px solid #d2d75f;border-left: 5px solid #d2d75f; margin-top:110px")
+              a.hind(style="color:white; font-size: 24px; font-weight: bold; margin-bottom: 10px; text-aling:justify", href="/ods")= "Objetivos de Desarollo Sostenible"
+
+
+
+  .bg-dark-blue.text-center.visible-xs.text-white.home-fb-aux
+    a.hind.section-title(href="/explora")= data.info.exploreTitle
+    p.lato= data.info.exploreLabel
+
+
+  .home-second-banner.text-center
+    .container-fluid
+      a.hind.section-title(href="/ciudades")= data.info.citiesTitle
+      pre.lato.
+        #{data.info.citiesLineOne}
+        #{data.info.citiesLineTwo}
+      .owl-carousel.karla
+        each city in data.cities
+          .carousel-item
+            a(href=`/ciudades/${city.slug}`)
+              img(src=city.thumbnail.secure_url, alt="")
+              span #{city.title}
+
+  .background(style="background: url(/images/site/transicion_temas.png); height: 125px")
+
+  .home-third-banner.text-center
+    .container-fluid
+      a.hind.section-title= data.info.topicsTitle
+      pre.lato.
+        #{data.info.topicsLineOne}
+        #{data.info.topicsLineTwo}
+      .topics-container
+        a.topic.Column.center-vertical.center-horizontal(href="/visualizacion?section=bienestar_subjetivo")
+          img(src="/images/icons/bienestarejecutivo.png", alt="Tema")
+          pre.lato.
+            Bienestar
+            subjetivo
+        a.topic.Column.center-vertical.center-horizontal(href="/visualizacion?section=buen_gobierno_y_ciudadania")
+          img(src="/images/icons/buengobiernoyciudadania.png", alt="Tema")
+          pre.lato.
+            Gobierno y
+            ciudadanía
+        a.topic.Column.center-vertical.center-horizontal(href="/visualizacion?section=educacion")
+          img(src="/images/icons/educacion.png", alt="Tema")
+          pre.lato.
+            Educación
+        a.topic.Column.center-vertical.center-horizontal(href="/visualizacion?section=entorno_economico")
+          img(src="/images/icons/entornomacroeconomico.png", alt="Tema")
+          pre.lato.
+            Entorno
+            económico
+        a.topic.Column.center-vertical.center-horizontal(href="/visualizacion?section=habitat_urbano")
+          img(src="/images/icons/habitaturbano.png", alt="Tema")
+          pre.lato.
+            Hábitat
+            urbano
+        a.topic.Column.center-vertical.center-horizontal(href="/visualizacion")
+          img(src="/images/icons/medioambiente.png", alt="Tema")
+          pre.lato.
+            Medio
+            ambiente
+        a.topic.Column.center-vertical.center-horizontal(href="/visualizacion?section=medio_ambiente")
+          img(src="/images/icons/movilidad.png", alt="Tema")
+          pre.lato.
+            Movilidad
+        a.topic.Column.center-vertical.center-horizontal(href="/visualizacion?section=pobreza_y_equidad")
+          img(src="/images/icons/pobrezayequidad.png", alt="Tema")
+          pre.lato.
+            Pobreza y
+            equidad
+        a.topic.Column.center-vertical.center-horizontal(href="/visualizacion?section=salud")
+          img(src="/images/icons/salud.png", alt="Tema")
+          pre.lato.
+            Salud
+        a.topic.Column.center-vertical.center-horizontal(href="/visualizacion?section=seguridad_y_convivencia")
+          img(src="/images/icons/seguridadyconvivenciaciudadana.png", alt="Tema")
+          pre.lato.
+            Seguridad y
+            convivencia ciudadana
+
+  .home-fourth-banner.text-center
+    .container-fluid
+      a.hind.section-title(href="/publicaciones")= data.info.publicationsTitle
+      pre.lato.
+        #{data.info.publicationsLineOne}
+        #{data.info.publicationsLineTwo}
+      .documents__home
+        each document in data.documents
+          .document__home(style=`background-image: url(${document.image.secure_url})`)
+            .document__home--info.hind
+              .document__home--info-title= document.title
+              a.document__home--info-url(href=`${document.file.url || '/'}` target="_blank") PDF
+
+  .background(style="background: url(/images/site/transicion_basesdedatos.png); height: 110px")
+
+  .home-fifth-banner.text-center.bg-dark-blue
+    .container-fluid
+      a.hind.section-title(href="/datos?data=pc")= data.info.dbTitle
+      pre.lato.
+        #{data.info.dbLineOne}
+        #{data.info.dbLineTwo}
+      .home-fifth-banner-body
+        .home-fifth-banner-description.Column
+          p.hind
+            span.text-light-blue Sí,
+            |  los 
+            span.text-light-blue datos
+            |  son 
+            span.text-light-blue abiertos, accede
+            |  a las bases de datos y 
+            span.text-light-blue descarga
+            |  la información en los 
+            span.text-light-blue formatos
+            |  que más te convienen
+        .home-fifth-banner-image
+          img(src="/images/site/basesdedatos.png", alt="Bases de datos")
+
+  .container-fluid: .allies
+    .associate
+      .media
+        img(src="/images/allies/fundacion-corona.png", alt="Fundación Corona" width="300px")
+        p.text-center: small En alianza con: 
+    .allie
+      .media
+        img(src="/images/allies/avina.png", alt="Fundación Avina" width="150px")
+      .media
+        img(src="/images/allies/rm.png", alt="Random Monkey" width="150px")
+      .media
+        img(src="/images/allies/codeando.png", alt="Codeando México" width="200px")
+      .media
+        img(src="/images/allies/app-civico.png", alt="App Cívico" width="100px")
+      .media
+        img(src="/images/allies/como-vamos.png", alt="Cómo Vamos" width="150px")
+
 block js
-    script(src="/vendors/owl.carousel.min.js")
-    script(src="/js/home.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js")
-    script.
-        $(document).ready(function () {
-            $("select").select2();
+  script(src="/vendors/owl.carousel.min.js")
+  script(src="/js/home.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js")
+  script.
+      $(document).ready(function () {
+        $("select").select2();
 
 
-            $(".titledrop").on('click', function () {
-                $(".imgback").slideToggle("slow", function () {
-                    // Animation complete.
-                });
-            });
+          $(".titledrop").on('click', function () {
+              $(".imgback").slideToggle("slow", function () {
+                  // Animation complete.
+              });
+          });
 
-        });
-        function anclaatajos() {
-            var value = $("#atajos").val();
-            ;
-            if (value != '') {
-                window.location.href = "ODS#" + value;
-            }
-        }
+      });
+      function anclaatajos() {
+          var value = $("#atajos").val();;
+          if(value!='') {
+              window.location.href = "ODS#" + value;
+          }
+      }
