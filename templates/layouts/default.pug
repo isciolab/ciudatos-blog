@@ -44,17 +44,29 @@ html
 					.overlay
 				.small-devices-menu
 					.container-fluid.small-devices-menu-container.Column.center-vertical
-
+						a(href="/visualizacion") Visualizar
+						//- a(href="/ciudades") Ciudades
+						//- a(href="/temas") Temas
+						a(href="/publicaciones") Publicaciones
+						a(href="/datos?data=pc") Bases de datos
+						a(href="/about") Quiénes somos
+						a.open-overlay(href="") Explora los datos abiertos
 				.container-fluid
 					nav.small-devices-nav
 						a.nav-logo(href="/"): img(src="/images/logos/logociudatosmenu.png", alt="Logo ciudatos")
 						.burger-box: .burger: span
 					nav.medium-devices-nav
 						a.nav-logo(href="/"): img(src="/images/logos/logociudatosmenu.png", alt="Logo ciudatos")
-
+						.nav-link(class=(section === 'visualizacion' ? 'active' : null)): a(href="/visualizacion") Visualizar
+						.nav-link(class=(section === 'ods' ? 'active' : null)): a(href="/ods") ODS
+						.nav-link(class=(section === 'ciudades' ? 'active' : null)): a(href="/ciudades") Ciudades
+						//- .nav-link(class=(section === 'temas' ? 'active' : null)): a(href="/temas") Temas
+						.nav-link(class=(section === 'publicaciones' ? 'active' : null)): a(href="/publicaciones") Publicaciones
+						.nav-link(class=(section === 'base-de-datos' ? 'active' : null)): a(href="/datos?data=pc") Bases de datos
+						.nav-link(class=(section === 'about' ? 'active' : null)): a(href="/about") Quiénes somos
+						.nav-link(class=(section === '' ? 'active' : null)): a.open-overlay.text-light-blue(href="") Explora los datos abiertos
 			main
 				block content
-
 			footer
 				.container-fluid.Row.center-vertical
 					.footer-info
