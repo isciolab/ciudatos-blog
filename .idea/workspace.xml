@@ -77,9 +77,11 @@
       <file leaf-file-name="mock.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="229" column="40" lean-forward="false" selection-start-line="229" selection-start-column="40" selection-end-line="229" selection-end-column="40" />
-              <folding />
+            <state relative-caret-position="135">
+              <caret line="227" column="4" lean-forward="false" selection-start-line="227" selection-start-column="4" selection-end-line="228" selection-end-column="10" />
+              <folding>
+                <marker date="1551916616244" expanded="true" signature="211:7546" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -523,7 +525,7 @@
       <workItem from="1550607517275" duration="684000" />
       <workItem from="1551539015682" duration="692000" />
       <workItem from="1551907906044" duration="595000" />
-      <workItem from="1551915674224" duration="864000" />
+      <workItem from="1551915674224" duration="933000" />
     </task>
     <task id="LOCAL-00193" summary="visualize ods">
       <created>1539033422233</created>
@@ -872,7 +874,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="325091000" />
+    <option name="totallyTimeSpent" value="325160000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="0" />
@@ -1292,9 +1294,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="229" column="40" lean-forward="false" selection-start-line="229" selection-start-column="40" selection-end-line="229" selection-end-column="40" />
-          <folding />
+        <state relative-caret-position="135">
+          <caret line="227" column="4" lean-forward="false" selection-start-line="227" selection-start-column="4" selection-end-line="228" selection-end-column="10" />
+          <folding>
+            <marker date="1551916616244" expanded="true" signature="211:7546" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
