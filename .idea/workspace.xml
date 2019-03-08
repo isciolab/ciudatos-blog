@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/mock.pug" afterPath="$PROJECT_DIR$/templates/views/mock.pug" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,8 +77,8 @@
       <file leaf-file-name="mock.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="513" column="10" lean-forward="false" selection-start-line="513" selection-start-column="10" selection-end-line="513" selection-end-column="10" />
+            <state relative-caret-position="253">
+              <caret line="409" column="3" lean-forward="true" selection-start-line="409" selection-start-column="3" selection-end-line="409" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -126,7 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>href=&quot;/datos</find>
       <find>.des</find>
       <find>data-description</find>
       <find>indicadordescription</find>
@@ -156,6 +154,7 @@
       <find>Progreso de ODS por grupo de ciudade</find>
       <find>Progreso ODS todas las ciudades por indicador trazado</find>
       <find>progreso de ciudad por ods</find>
+      <find>progreso históric</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -527,7 +526,7 @@
       <workItem from="1551915674224" duration="2756000" />
       <workItem from="1552061935678" duration="5033000" />
       <workItem from="1552077303257" duration="1607000" />
-      <workItem from="1552086448517" duration="534000" />
+      <workItem from="1552086448517" duration="878000" />
     </task>
     <task id="LOCAL-00193" summary="visualize ods">
       <created>1539033422233</created>
@@ -876,7 +875,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="334157000" />
+    <option name="totallyTimeSpent" value="334501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="0" />
@@ -1295,8 +1294,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="513" column="10" lean-forward="false" selection-start-line="513" selection-start-column="10" selection-end-line="513" selection-end-column="10" />
+        <state relative-caret-position="253">
+          <caret line="409" column="3" lean-forward="true" selection-start-line="409" selection-start-column="3" selection-end-line="409" selection-end-column="3" />
           <folding />
         </state>
       </provider>
