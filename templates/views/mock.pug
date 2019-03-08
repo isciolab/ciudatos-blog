@@ -666,21 +666,21 @@ block content
     <div class="row border-botom odsrowbw" id="odsselectordashboard2" style="z-index:999">
     <div class="col-md-3 col-md-offset-2">
 
-    <select id="changeOdsConcat3" class="form-control" onchange="odsConcatFilter();">
+    <select id="changeOdsConcat3" class="form-control" onchange="odsConcatFilter3();">
     <option value="">ODS:</option>
     </select>
 
     </div>
     <div class="col-md-3">
 
-    <select id="changeMeta3" class="form-control" onchange="metaFIlter();">
+    <select id="changeMeta3" class="form-control" onchange="metaFIlter3();">
     <option value="">META:</option>
     </select>
 
     </div>
     <div class="col-md-3">
 
-    <select id="changeIndicador3" class="form-control" onchange="inicadorFIlter();">
+    <select id="changeIndicador3" class="form-control" onchange="inicadorFIlter3();">
     <option value="">INDICADOR:</option>
     </select>
 
@@ -690,6 +690,12 @@ block content
     </div>
 
 
+    <div class="row">
+        <div class="col-md-12">
+            <div  style='position: relative; width: 100%; max-height:400px' id="progresohistoricodeciudadporods"></div>
+            </div>
+        </div>
+    </div>
 
 
     <div class="row background" style="background: url(/images/site/transicion_temas.png); height: 110px"></div>
@@ -839,6 +845,7 @@ block js
         var vizodsgrupoodsgrupociudades3;
         var vizodsgrupoodsgrupociudades4;
 
+        var vizprogresohistoricodeciudadporods;
         var vizodsgrupoodstrazadorgrupociudades1;
         var vizodsgrupoodstrazadorgrupociudades2;
         var vizodsgrupoodstrazadorgrupociudades3;
@@ -982,6 +989,7 @@ block js
 
                         //if (activetab == 'CIUDADES') {
                             cityFilter();
+                             odsConcatFilter3();
 
                        // }
                     }
@@ -1203,6 +1211,20 @@ block js
 
 
 
+        function changeinitprogresohistoricodeciudadporods() {
+
+            var sheet = vizprogresohistoricodeciudadporods.getWorkbook().getActiveSheet();
+            var fieldname = "Indicador";
+            var text = $("#changeIndicador3 option:selected").text()
+            var value = $("#changeIndicador3").val();
+            if (value != "") {
+                sheet.applyFilterAsync(fieldname, text, tableau.FilterUpdateType.REPLACE);
+            }
+            else {
+                vizprogresohistoricodeciudadporods.dispose();
+                vizprogresohistoricodeciudadporods = undefined;
+            }
+        }
         function changeGrupoodstrazadorgrupociudades1() {
 
             var sheet = vizodsgrupoodstrazadorgrupociudades1.getWorkbook().getActiveSheet();
@@ -1589,6 +1611,30 @@ block js
 
 
 
+        function initprogresohistoricodeciudadporods() {
+
+            if (vizprogresohistoricodeciudadporods == null) {
+                var containerDiv = document.getElementById("progresohistoricodeciudadporods"),
+                    url = "https://public.tableau.com/views/Ciudatos/Progresohistoricodeciudadporods?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
+                    options = {
+                        hideTabs: true,
+                        'Id (Targets)': $("#changeMeta3").val(),
+                        'Indicador': $("#changeIndicador3 option:selected").text(),
+                        onFirstInteractive: function () {
+
+                            changeinitprogresohistoricodeciudadporods();
+
+
+                        }
+                    };
+                vizprogresohistoricodeciudadporods = new tableau.Viz(containerDiv, url, options);
+            } else {
+                changeinitprogresohistoricodeciudadporods();
+
+            }
+
+
+        }
         function initoodtrazadorsgrupociudades1() {
 
             if (vizodsgrupoodstrazadorgrupociudades1 == null) {
@@ -2366,6 +2412,42 @@ block js
         //filters
 
         //ods
+        function odsConcatFilter3() {
+
+
+            var ods = $("#changeOdsConcat3 option:selected").text();
+            var odsdescription = $("#changeOdsConcat3 option:selected").attr("data-description");
+
+
+
+            $.ajax({
+                url: 'http://ciudatos.com:8080/api/targets/getTargets/',
+                dataType: 'json',
+                type: 'GET',
+                data: {goal_id: $("#changeOdsConcat3").val()},
+                success: function (data) {
+                    var html = '<option value="">META:</option>';
+
+                    jQuery.each(data, function (i, value) {
+
+                        var selected = '';
+                        if (i == 0) {
+                            selected = 'selected';
+                        }
+
+                        html += '<option ' + selected + ' data-description="' + value.description + '" value="' + value.id + '">' + value.name + '</option>';
+
+                    })
+                    $("#changeMeta3").html(html);
+                    metaFIlter3();
+
+                }
+            });
+
+
+
+        }
+
         function odsConcatFilter() {
 
 
@@ -2792,6 +2874,31 @@ block js
 
 
         }
+
+        function inicadorFIlter3() {
+
+
+            var indicador = $("#changeIndicador3 option:selected").text();
+
+            var fieldname = "Indicador";
+            if (activetab == 'CIUDAD') {
+
+
+                if (progresohistoricodeciudadporods != null) {
+                    var sheet = progresohistoricodeciudadporods.getWorkbook().getActiveSheet();
+                    if (indicador != "") {
+
+                        sheet.applyFilterAsync("Indicador", indicador, tableau.FilterUpdateType.REPLACE);
+                    }
+                }
+
+            }
+
+            initprogresohistoricodeciudadporods();
+
+
+
+        }
         function inicadorFIlterCity() {
 
 
@@ -2827,6 +2934,37 @@ block js
 
         }
 
+        function metaFIlter3() {
+
+            var value = $("#changeMeta3 option:selected").text();
+            var valuenumber = $("#changeMeta3").val();
+
+            $.ajax({
+                url: 'http://ciudatos.com:8080/api/indicators/getIndicators/',
+                dataType: 'json',
+                type: 'GET',
+                data: {target_id: $("#changeMeta").val()},
+                success: function (data) {
+                    var html = '<option value="">Indicadores:</option>';
+                    jQuery.each(data, function (i, value) {
+                        var selected = '';
+                        if (i == 0) {
+                            selected = 'selected';
+                        }
+
+
+                        html += '<option ' + selected + ' data-description="' + value.description + '" value=' + value.id + '>' + value.name + '</option>';
+
+                    })
+                    $("#changeIndicador3").html(html);
+
+                    inicadorFIlter3();
+
+                }
+            })
+
+
+        }
         function metaFIlter() {
 
             var value = $("#changeMeta option:selected").text();
