@@ -2601,7 +2601,7 @@ block js
 
 
 
-            $("#departamento").text(department.charAt(0).toUpperCase() + department.slice(1));
+            $("#departamento").text(department.charAt(0).toUpperCase() + department.slice(1).toLowerCase());
             if (total_population != 'null') {
                 $("#pobtotal").text(total_population);
             }
