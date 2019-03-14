@@ -2580,9 +2580,7 @@ block js
 
 
         function numberWithCommas(x) {
-            var parts = x.toString().split(".");
-            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            return parts.join(".");
+           return  x.toLocaleString()
         }
 
 
@@ -2607,16 +2605,16 @@ block js
 
             $("#departamento").text(department.charAt(0).toUpperCase() + department.slice(1).toLowerCase());
             if (total_population != 'null') {
-                $("#pobtotal").text(numberWithCommas(total_population));
+                $("#pobtotal").text(numberWithCommas(total_population.toFixed(2)));
             }
             if (urban_population != 'null') {
-                $("#poburbana").text(numberWithCommas(urban_population));
+                $("#poburbana").text(numberWithCommas(urban_population.toFixed(2)));
             }
             if(rural_population!='null'){
-                $("#pobrural").text(numberWithCommas(rural_population));
+                $("#pobrural").text(numberWithCommas(rural_population.toFixed(2)));
             }
             if(total_area!='null') {
-                $("#areatot").text(numberWithCommas(total_area));
+                $("#areatot").text(numberWithCommas(total_area.toFixed(2)));
             }
             if (foundation_year != 'null') {
                 $("#aniofundacion").text(foundation_year);
