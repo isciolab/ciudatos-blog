@@ -2600,14 +2600,29 @@ block js
             var web_page = $("#changeCity option:selected").attr('data-web_page');
 
 
-            $("#departamento").text(department);
-            $("#pobtotal").text(total_population);
-            $("#poburbana").text(urban_population);
-            $("#pobrural").text(rural_population);
-            $("#areatot").text(total_area);
-            $("#aniofundacion").text(foundation_year);
-            $("#web_page").text(web_page);
-            $("#descripcion").text(description);
+
+            $("#departamento").text(department.charAt(0).toUpperCase() + department.slice(1));
+            if (total_population != 'null') {
+                $("#pobtotal").text(total_population);
+            }
+            if (urban_population != 'null') {
+                $("#poburbana").text(urban_population);
+            }
+            if(rural_population!='null'){
+                $("#pobrural").text(rural_population);
+            }
+            if(total_area!='null') {
+                $("#areatot").text(total_area);
+            }
+            if (foundation_year != 'null') {
+                $("#aniofundacion").text(foundation_year);
+            }
+            if (web_page != 'null') {
+                $("#web_page").text(web_page);
+            }
+            if (description != 'null') {
+                $("#descripcion").text(description);
+            }
 
 
             $("#imagen_city").attr('src', "http://ciudatos.com:8080" + imagen);
