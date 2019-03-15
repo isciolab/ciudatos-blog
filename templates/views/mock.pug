@@ -476,7 +476,7 @@ block content
 
 
     <div class="row home-fifth-banner text-center bg-dark-blue" style="height: 110px">
-    <div class="container-fluid"><a class="hind section-title" href="/datos?data=pc">Progreso de ciudad por ODS</a>
+    <div class="container-fluid"><a class="hind section-title" href="#">Progreso de ciudad por ODS</a>
 
 
     </div>
@@ -543,12 +543,12 @@ block content
 
     <div class="row">
 
-    <div class="col-md-4 col-md-offset-2">
+    <div class="col-md-5 col-md-offset-1">
     <div id='cityvsabsoluto' style='position: relative; width: auto; height:450px'></div>
     <br>
     <p class="blue text-center">Progreso de la meta hoy</p>
     </div>
-    <div class="col-md-4 ">
+    <div class="col-md-5 ">
     <div id='cityprogreso' style='position: relative; width: auto; height:450px'></div>
     <br>
     <p class="blue text-center">Porcentaje de cumplimiento de la meta</p>
@@ -1976,17 +1976,12 @@ block js
                             "Indicador": indicador,
                             "Id (Group Cities)": grupo,
                             onFirstInteractive: function () {
-
-
                                 var ciudad = $("#changeCity").val();
                                 var sheet = vizcitivabsoluto.getWorkbook().getActiveSheet();
                                 sheet.selectMarksAsync("Ciudad", ciudad, tableau.SelectionUpdateType.REPLACE);
-
                             }
                         };
                     vizcitivabsoluto = new tableau.Viz(containerDiv, url, options);
-
-
                 }
 
 
