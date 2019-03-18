@@ -1460,15 +1460,19 @@ block js
             $("#odsgrupoodsgrupociudades1cont").removeClass('col-md-12');
             $("#odsgrupoodsgrupociudades1cont").removeClass('col-md-offset-2');
             $("#odsgrupoodsgrupociudades1cont").addClass('col-md-6');
+            $("#odsgrupoodsgrupociudades1cont").css('size:450px');
             $("#odsgrupoodsgrupociudades2cont").removeClass('col-md-12');
             $("#odsgrupoodsgrupociudades2cont").removeClass('col-md-offset-2');
             $("#odsgrupoodsgrupociudades2cont").addClass('col-md-6');
+            $("#odsgrupoodsgrupociudades2cont").css('size:450px');
             $("#odsgrupoodsgrupociudades3cont").removeClass('col-md-12');
             $("#odsgrupoodsgrupociudades3cont").removeClass('col-md-offset-2');
             $("#odsgrupoodsgrupociudades3cont").addClass('col-md-6');
+            $("#odsgrupoodsgrupociudades3cont").css('size:450px');
             $("#odsgrupoodsgrupociudades4cont").removeClass('col-md-12');
             $("#odsgrupoodsgrupociudades4cont").removeClass('col-md-offset-2');
             $("#odsgrupoodsgrupociudades4cont").addClass('col-md-6');
+            $("#odsgrupoodsgrupociudades4cont").css('size:450px');
 
 
 
@@ -1476,6 +1480,7 @@ block js
             if ($("#changeGrupoodsgrupociudades2").val() == '' && $("#changeGrupoodsgrupociudades3").val() == '' && $("#changeGrupoodsgrupociudades4").val() == '') {
                 $("#odsgrupoodsgrupociudades1cont").removeClass('col-md-6');
                 $("#odsgrupoodsgrupociudades1cont").addClass('col-md-9 col-md-offset-2');
+                $("#odsgrupoodsgrupociudades1cont").css('size:550px');
 
 
             }
@@ -1485,22 +1490,24 @@ block js
             if ($("#changeGrupoodsgrupociudades1").val() == '' && $("#changeGrupoodsgrupociudades3").val() == '' && $("#changeGrupoodsgrupociudades4").val() == '') {
                 $("#odsgrupoodsgrupociudades2cont").removeClass('col-md-6');
                 $("#odsgrupoodsgrupociudades2cont").addClass('col-md-9 col-md-offset-2');
+                $("#odsgrupoodsgrupociudades2cont").css('size:550px');
 
             }
 
             if ($("#changeGrupoodsgrupociudades1").val() == '' && $("#changeGrupoodsgrupociudades2").val() == '' && $("#changeGrupoodsgrupociudades4").val() == '') {
                 $("#odsgrupoodsgrupociudades3cont").removeClass('col-md-6');
                 $("#odsgrupoodsgrupociudades3cont").addClass('col-md-9 col-md-offset-2');
-
+                $("#odsgrupoodsgrupociudades3cont").css('size:550px');
 
 
             }
 
 
             if ($("#changeGrupoodsgrupociudades1").val() == '' && $("#changeGrupoodsgrupociudades2").val() == '' && $("#changeGrupoodsgrupociudades3").val() == '') {
-                console.log('el 4');
+
                 $("#odsgrupoodsgrupociudades4cont").removeClass('col-md-6');
                 $("#odsgrupoodsgrupociudades4cont").addClass('col-md-9 col-md-offset-2');
+                $("#odsgrupoodsgrupociudades4cont").css('size:550px');
 
 
 
@@ -1510,10 +1517,11 @@ block js
                     .then(vizodsgrupoodsgrupociudades4.setFrameSize(parseInt(width, 10), parseInt(height, 10)));*/
             }
 
+
             if (vizodsgrupoodsgrupociudades1 != undefined) {
-                    var width = document.getElementById('odsgrupoodsgrupociudades1cont').clientWidth;
-                    var height = document.getElementById('odsgrupoodsgrupociudades1cont').clientHeight;
-                    vizodsgrupoodsgrupociudades1.setFrameSize(width, height);
+                var width = document.getElementById('odsgrupoodsgrupociudades1cont').clientWidth;
+                var height = document.getElementById('odsgrupoodsgrupociudades1cont').clientHeight;
+                vizodsgrupoodsgrupociudades1.setFrameSize(width, height);
             }
 
             if (vizodsgrupoodsgrupociudades2 != undefined) {
@@ -1526,14 +1534,11 @@ block js
                 var height = document.getElementById('odsgrupoodsgrupociudades3cont').clientHeight;
                 vizodsgrupoodsgrupociudades3.setFrameSize(width, height);
             }
-            if(vizodsgrupoodsgrupociudades4 != undefined){
-                    var width = document.getElementById('odsgrupoodsgrupociudades4cont').clientWidth;
-                    var height = document.getElementById('odsgrupoodsgrupociudades4cont').clientHeight;
-                    vizodsgrupoodsgrupociudades4.setFrameSize(width, height);
+            if (vizodsgrupoodsgrupociudades4 != undefined) {
+                var width = document.getElementById('odsgrupoodsgrupociudades4cont').clientWidth;
+                var height = document.getElementById('odsgrupoodsgrupociudades4cont').clientHeight;
+                vizodsgrupoodsgrupociudades4.setFrameSize(width, height);
             }
-
-
-
 
 
         }
