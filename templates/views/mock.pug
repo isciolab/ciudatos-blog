@@ -1482,11 +1482,13 @@ block js
 
                 var width = document.getElementById('odsgrupoodsgrupociudades4cont').clientWidth;
 
-                var height = document.getElementById('odsgrupoodsgrupociudades4cont').clientHeight;
+                var height = document.getElementById('').clientHeight;
 
-                vizodsgrupoodsgrupociudades4.setFrameSize(width, height);
-
-               // $("#odsgrupoodsgrupociudades4").width
+               /// vizodsgrupoodsgrupociudades4.setFrameSize(width, height);
+                var sheet = vizodsgrupoodsgrupociudades4.getWorkbook().getActiveSheet();
+                sheet.changeSizeAsync(
+                    {"behavior": "EXACTLY", "maxSize": {"height": height, "width": width}})
+                    .then(vizodsgrupoodsgrupociudades4.setFrameSize(parseInt(width, 10), parseInt(height, 10)));
             }
         }
         function initoodsgrupociudades1() {
