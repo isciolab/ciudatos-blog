@@ -1544,12 +1544,14 @@ block js
                 if ($("#changeGrupoodsgrupociudades4").val() != '') {
                     $("#odsgrupoodsgrupociudades4cont").css('height', '450px');
                 }*/
-            }else{
+            }else if(sum==0){
+                    $("#odsgrupoodsgrupociudades1cont").css('height', 'auto');
 
-                 if ($("#changeGrupoodsgrupociudades1").val() != '') {
-                     $("#odsgrupoodsgrupociudades1cont").css('height', '450px');
-                 }
-             }
+            }else{
+                if ($("#changeGrupoodsgrupociudades1").val() != '') {
+                    $("#odsgrupoodsgrupociudades1cont").css('height', '450px');
+                }
+            }
 
             if (vizodsgrupoodsgrupociudades1 != undefined) {
                 var width = document.getElementById('odsgrupoodsgrupociudades1cont').clientWidth;
