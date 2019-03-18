@@ -1712,6 +1712,7 @@ block js
 
                     var width = document.getElementById('odsgrupoodsgrupociudades4cont').clientWidth;
                     var height = document.getElementById('odsgrupoodsgrupociudades4cont').clientHeight;
+
                     var containerDiv = document.getElementById("odsgrupoodsgrupociudades4"),
                         url = "https://public.tableau.com/views/Ciudatos/IndicadordeODSporgrupodeciudades4?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
@@ -1721,9 +1722,7 @@ block js
                             "Date From": $("#changeYearodsgrupociudades").val(),
                             "Indicador": $("#changeIndicador option:selected").text(),
                             "Id (Group Cities)": Grupoodsgrupociudades4,
-                            "width": width,
-
-                            "height": height,
+                          
                             onFirstInteractive: function () {
                                 //  changeGrupoodsgrupociudades4();
                                 // changeYearodsgrupociudades();
