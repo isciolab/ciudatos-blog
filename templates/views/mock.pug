@@ -1459,6 +1459,8 @@ block js
             $("#odsgrupoodsgrupociudades4cont").addClass('col-md-6');
 
 
+
+
             if ($("#changeGrupoodsgrupociudades2").val() == '' && $("#changeGrupoodsgrupociudades3").val() == '' && $("#changeGrupoodsgrupociudades4").val() == '') {
                 $("#odsgrupoodsgrupociudades1cont").removeClass('col-md-6');
                 $("#odsgrupoodsgrupociudades1cont").addClass('col-md-9 col-md-offset-2');
@@ -1480,16 +1482,29 @@ block js
                 $("#odsgrupoodsgrupociudades4cont").removeClass('col-md-6');
                 $("#odsgrupoodsgrupociudades4cont").addClass('col-md-9 col-md-offset-2');
 
-                var width = document.getElementById('odsgrupoodsgrupociudades4cont').clientWidth;
 
-                var height = document.getElementById('odsgrupoodsgrupociudades4cont').clientHeight;
-
-                vizodsgrupoodsgrupociudades4.setFrameSize(width, height);
                /* var sheet = vizodsgrupoodsgrupociudades4.getWorkbook().getActiveSheet();
                 sheet.changeSizeAsync(
                     {"behavior": "EXACTLY", "maxSize": {"height": height, "width": width}})
                     .then(vizodsgrupoodsgrupociudades4.setFrameSize(parseInt(width, 10), parseInt(height, 10)));*/
             }
+
+
+            var width = document.getElementById('odsgrupoodsgrupociudades4cont').clientWidth;
+            var height = document.getElementById('odsgrupoodsgrupociudades4cont').clientHeight;
+            vizodsgrupoodsgrupociudades4.setFrameSize(width, height);
+
+            width = document.getElementById('odsgrupoodsgrupociudades3cont').clientWidth;
+            height = document.getElementById('odsgrupoodsgrupociudades3cont').clientHeight;
+            vizodsgrupoodsgrupociudades3.setFrameSize(width, height);
+
+            width = document.getElementById('odsgrupoodsgrupociudades2cont').clientWidth;
+            height = document.getElementById('odsgrupoodsgrupociudades2cont').clientHeight;
+            vizodsgrupoodsgrupociudades2.setFrameSize(width, height);
+
+            width = document.getElementById('odsgrupoodsgrupociudades1cont').clientWidth;
+            height = document.getElementById('odsgrupoodsgrupociudades1cont').clientHeight;
+            vizodsgrupoodsgrupociudades1.setFrameSize(width, height);
         }
         function initoodsgrupociudades1() {
 
