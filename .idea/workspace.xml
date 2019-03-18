@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/mock.pug" afterPath="$PROJECT_DIR$/templates/views/mock.pug" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,8 +67,8 @@
       <file leaf-file-name="mock.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="1607" column="12" lean-forward="false" selection-start-line="1607" selection-start-column="12" selection-end-line="1607" selection-end-column="12" />
+            <state relative-caret-position="475">
+              <caret line="1460" column="45" lean-forward="false" selection-start-line="1460" selection-start-column="45" selection-end-line="1460" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -532,7 +531,7 @@
       <workItem from="1552086448517" duration="3461000" />
       <workItem from="1552574426394" duration="5932000" />
       <workItem from="1552661350144" duration="1444000" />
-      <workItem from="1552916417829" duration="3449000" />
+      <workItem from="1552916417829" duration="3681000" />
     </task>
     <task id="LOCAL-00193" summary="visualize ods">
       <created>1539033422233</created>
@@ -881,7 +880,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347909000" />
+    <option name="totallyTimeSpent" value="348141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="0" />
@@ -1301,8 +1300,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="1607" column="12" lean-forward="false" selection-start-line="1607" selection-start-column="12" selection-end-line="1607" selection-end-column="12" />
+        <state relative-caret-position="475">
+          <caret line="1460" column="45" lean-forward="false" selection-start-line="1460" selection-start-column="45" selection-end-line="1460" selection-end-column="45" />
           <folding />
         </state>
       </provider>
