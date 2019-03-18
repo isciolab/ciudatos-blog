@@ -1479,6 +1479,13 @@ block js
                 console.log('el 4');
                 $("#odsgrupoodsgrupociudades4cont").removeClass('col-md-6');
                 $("#odsgrupoodsgrupociudades4cont").addClass('col-md-9 col-md-offset-2');
+
+                var width = document.getElementById('odsgrupoodsgrupociudades4cont').clientWidth;
+
+                var height = document.getElementById('odsgrupoodsgrupociudades4cont').clientHeight;
+
+                vizodsgrupoodsgrupociudades4.setFrameSize(width, height);
+
                // $("#odsgrupoodsgrupociudades4").width
             }
         }
