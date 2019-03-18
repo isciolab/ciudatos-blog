@@ -1170,9 +1170,7 @@ block js
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
 
-                var width = document.getElementById('odsgrupoodsgrupociudades1cont').clientWidth;
-                var height = document.getElementById('odsgrupoodsgrupociudades1cont').clientHeight;
-                vizodsgrupoodsgrupociudades1.setFrameSize(width, height);
+
             }
             else {
                 vizodsgrupoodsgrupociudades1.dispose();
@@ -1191,9 +1189,7 @@ block js
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
 
-                var width = document.getElementById('odsgrupoodsgrupociudades2cont').clientWidth;
-                var height = document.getElementById('odsgrupoodsgrupociudades2cont').clientHeight;
-                vizodsgrupoodsgrupociudades2.setFrameSize(width, height);
+
             }
             else {
                 vizodsgrupoodsgrupociudades2.dispose();
@@ -1211,9 +1207,7 @@ block js
             var value = $("#changeGrupoodsgrupociudades3").val();
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
-                var width = document.getElementById('odsgrupoodsgrupociudades3cont').clientWidth;
-                var height = document.getElementById('odsgrupoodsgrupociudades3cont').clientHeight;
-                vizodsgrupoodsgrupociudades3.setFrameSize(width, height);
+
             }
             else {
                 vizodsgrupoodsgrupociudades3.dispose();
@@ -1229,9 +1223,7 @@ block js
             if (value != "") {
                 sheet.applyFilterAsync(fieldname, value, tableau.FilterUpdateType.REPLACE);
 
-                var width = document.getElementById('odsgrupoodsgrupociudades4cont').clientWidth;
-                var height = document.getElementById('odsgrupoodsgrupociudades4cont').clientHeight;
-                vizodsgrupoodsgrupociudades4.setFrameSize(width, height);
+
             } else {
                 vizodsgrupoodsgrupociudades4.dispose();
                 vizodsgrupoodsgrupociudades4 = undefined;
@@ -1484,16 +1476,35 @@ block js
             if ($("#changeGrupoodsgrupociudades2").val() == '' && $("#changeGrupoodsgrupociudades3").val() == '' && $("#changeGrupoodsgrupociudades4").val() == '') {
                 $("#odsgrupoodsgrupociudades1cont").removeClass('col-md-6');
                 $("#odsgrupoodsgrupociudades1cont").addClass('col-md-9 col-md-offset-2');
+
+                if (vizodsgrupoodsgrupociudades1 != undefined) {
+                    var width = document.getElementById('odsgrupoodsgrupociudades1cont').clientWidth;
+                    var height = document.getElementById('odsgrupoodsgrupociudades1cont').clientHeight;
+                    vizodsgrupoodsgrupociudades1.setFrameSize(width, height);
+                }
             }
+
 
             if ($("#changeGrupoodsgrupociudades1").val() == '' && $("#changeGrupoodsgrupociudades3").val() == '' && $("#changeGrupoodsgrupociudades4").val() == '') {
                 $("#odsgrupoodsgrupociudades2cont").removeClass('col-md-6');
                 $("#odsgrupoodsgrupociudades2cont").addClass('col-md-9 col-md-offset-2');
+                if (vizodsgrupoodsgrupociudades2 != undefined) {
+                    var width = document.getElementById('odsgrupoodsgrupociudades2cont').clientWidth;
+                    var height = document.getElementById('odsgrupoodsgrupociudades2cont').clientHeight;
+                    vizodsgrupoodsgrupociudades2.setFrameSize(width, height);
+                }
             }
 
             if ($("#changeGrupoodsgrupociudades1").val() == '' && $("#changeGrupoodsgrupociudades2").val() == '' && $("#changeGrupoodsgrupociudades4").val() == '') {
                 $("#odsgrupoodsgrupociudades3cont").removeClass('col-md-6');
                 $("#odsgrupoodsgrupociudades3cont").addClass('col-md-9 col-md-offset-2');
+
+                if(vizodsgrupoodsgrupociudades3 != undefined) {
+                    var width = document.getElementById('odsgrupoodsgrupociudades3cont').clientWidth;
+                    var height = document.getElementById('odsgrupoodsgrupociudades3cont').clientHeight;
+                    vizodsgrupoodsgrupociudades3.setFrameSize(width, height);
+                }
+
             }
 
 
@@ -1502,6 +1513,11 @@ block js
                 $("#odsgrupoodsgrupociudades4cont").removeClass('col-md-6');
                 $("#odsgrupoodsgrupociudades4cont").addClass('col-md-9 col-md-offset-2');
 
+                if(vizodsgrupoodsgrupociudades4!=undefined){
+                    var width = document.getElementById('odsgrupoodsgrupociudades4cont').clientWidth;
+                    var height = document.getElementById('odsgrupoodsgrupociudades4cont').clientHeight;
+                    vizodsgrupoodsgrupociudades4.setFrameSize(width, height);
+                }
 
                /* var sheet = vizodsgrupoodsgrupociudades4.getWorkbook().getActiveSheet();
                 sheet.changeSizeAsync(
