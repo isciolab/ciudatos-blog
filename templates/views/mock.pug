@@ -1529,12 +1529,12 @@ block js
 
             console.log(sum);
              if(sum==1){
-                /*
+
                 console.log($("#changeGrupoodsgrupociudades1").val() );
                 if ($("#changeGrupoodsgrupociudades1").val() != '') {
                     $("#odsgrupoodsgrupociudades1cont").css('height', '550px');
                 }
-
+                /*
                 if ($("#changeGrupoodsgrupociudades2").val() != '') {
                     $("#odsgrupoodsgrupociudades2cont").css('height', '450px');
                 }
@@ -1544,7 +1544,12 @@ block js
                 if ($("#changeGrupoodsgrupociudades4").val() != '') {
                     $("#odsgrupoodsgrupociudades4cont").css('height', '450px');
                 }*/
-            }
+            }else{
+
+                 if ($("#changeGrupoodsgrupociudades1").val() != '') {
+                     $("#odsgrupoodsgrupociudades1cont").css('height', '450px');
+                 }
+             }
 
             if (vizodsgrupoodsgrupociudades1 != undefined) {
                 var width = document.getElementById('odsgrupoodsgrupociudades1cont').clientWidth;
@@ -1605,7 +1610,7 @@ block js
                             "Indicador": $("#changeIndicador option:selected").text(),
                             "width": width + "px",
 
-                            "height": "450px",
+                            "height": height+"px",
 
 
                             onFirstInteractive: function () {
