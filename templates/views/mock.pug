@@ -1476,8 +1476,6 @@ block js
 
 
 
-
-
             if ($("#changeGrupoodsgrupociudades2").val() == '' && $("#changeGrupoodsgrupociudades3").val() == '' && $("#changeGrupoodsgrupociudades4").val() == '') {
                 $("#odsgrupoodsgrupociudades1cont").removeClass('col-md-6');
                 $("#odsgrupoodsgrupociudades1cont").addClass('col-md-9 col-md-offset-2');
@@ -1530,14 +1528,14 @@ block js
             }
 
             console.log(sum);
-            if(sum>1){
+            /* if(sum>1){
 
                 console.log($("#changeGrupoodsgrupociudades1").val() );
-                if ($("#changeGrupoodsgrupociudades1").val() !== "") {
+                if ($("#changeGrupoodsgrupociudades1").val() != '') {
                     $("#odsgrupoodsgrupociudades1cont").css('height', '450px');
                 }
 
-                /*if ($("#changeGrupoodsgrupociudades2").val() != '') {
+                if ($("#changeGrupoodsgrupociudades2").val() != '') {
                     $("#odsgrupoodsgrupociudades2cont").css('height', '450px');
                 }
                 if ($("#changeGrupoodsgrupociudades3").val() != '') {
@@ -1545,8 +1543,8 @@ block js
                 }
                 if ($("#changeGrupoodsgrupociudades4").val() != '') {
                     $("#odsgrupoodsgrupociudades4cont").css('height', '450px');
-                }*/
-            }
+                }
+            }*/
 
             if (vizodsgrupoodsgrupociudades1 != undefined) {
                 var width = document.getElementById('odsgrupoodsgrupociudades1cont').clientWidth;
