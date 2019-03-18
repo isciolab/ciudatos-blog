@@ -68,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="1726" column="50" lean-forward="false" selection-start-line="1726" selection-start-column="50" selection-end-line="1726" selection-end-column="50" />
+              <caret line="1726" column="44" lean-forward="false" selection-start-line="1726" selection-start-column="44" selection-end-line="1726" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -532,7 +532,7 @@
       <workItem from="1552574426394" duration="5932000" />
       <workItem from="1552661350144" duration="1444000" />
       <workItem from="1552916417829" duration="6843000" />
-      <workItem from="1552929824080" duration="2631000" />
+      <workItem from="1552929824080" duration="2732000" />
     </task>
     <task id="LOCAL-00193" summary="visualize ods">
       <created>1539033422233</created>
@@ -881,7 +881,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="353934000" />
+    <option name="totallyTimeSpent" value="354035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="0" />
@@ -1300,7 +1300,7 @@
     <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="1726" column="50" lean-forward="false" selection-start-line="1726" selection-start-column="50" selection-end-line="1726" selection-end-column="50" />
+          <caret line="1726" column="44" lean-forward="false" selection-start-line="1726" selection-start-column="44" selection-end-line="1726" selection-end-column="44" />
           <folding />
         </state>
       </provider>
