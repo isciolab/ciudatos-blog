@@ -67,8 +67,8 @@
       <file leaf-file-name="mock.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-444">
-              <caret line="1474" column="13" lean-forward="false" selection-start-line="1474" selection-start-column="13" selection-end-line="1474" selection-end-column="13" />
+            <state relative-caret-position="66">
+              <caret line="1531" column="17" lean-forward="false" selection-start-line="1531" selection-start-column="17" selection-end-line="1531" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -532,7 +532,7 @@
       <workItem from="1552574426394" duration="5932000" />
       <workItem from="1552661350144" duration="1444000" />
       <workItem from="1552916417829" duration="6843000" />
-      <workItem from="1552929824080" duration="5349000" />
+      <workItem from="1552929824080" duration="5557000" />
     </task>
     <task id="LOCAL-00193" summary="visualize ods">
       <created>1539033422233</created>
@@ -881,7 +881,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="356652000" />
+    <option name="totallyTimeSpent" value="356860000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="0" />
@@ -1299,8 +1299,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-444">
-          <caret line="1474" column="13" lean-forward="false" selection-start-line="1474" selection-start-column="13" selection-end-line="1474" selection-end-column="13" />
+        <state relative-caret-position="66">
+          <caret line="1531" column="17" lean-forward="false" selection-start-line="1531" selection-start-column="17" selection-end-line="1531" selection-end-column="17" />
           <folding />
         </state>
       </provider>

@@ -1460,22 +1460,36 @@ block js
             $("#odsgrupoodsgrupociudades1cont").removeClass('col-md-12');
             $("#odsgrupoodsgrupociudades1cont").removeClass('col-md-offset-2');
             $("#odsgrupoodsgrupociudades1cont").addClass('col-md-6');
-            //$("#odsgrupoodsgrupociudades1cont").css('height', '450px');
+
             $("#odsgrupoodsgrupociudades2cont").removeClass('col-md-12');
             $("#odsgrupoodsgrupociudades2cont").removeClass('col-md-offset-2');
             $("#odsgrupoodsgrupociudades2cont").addClass('col-md-6');
-           // $("#odsgrupoodsgrupociudades2cont").css('height', '450px');
+
             $("#odsgrupoodsgrupociudades3cont").removeClass('col-md-12');
             $("#odsgrupoodsgrupociudades3cont").removeClass('col-md-offset-2');
             $("#odsgrupoodsgrupociudades3cont").addClass('col-md-6');
-           // $("#odsgrupoodsgrupociudades3cont").css('height', '450px');
+
             $("#odsgrupoodsgrupociudades4cont").removeClass('col-md-12');
             $("#odsgrupoodsgrupociudades4cont").removeClass('col-md-offset-2');
             $("#odsgrupoodsgrupociudades4cont").addClass('col-md-6');
-           // $("#odsgrupoodsgrupociudades4cont").css('height', '450px');
 
 
 
+
+
+            var sum =0 ;
+            if($("#changeGrupoodsgrupociudades1").val() !=){
+                sum=sum+1;
+            }
+            if ($("#changeGrupoodsgrupociudades2").val() !=) {
+                sum = sum + 1;
+            }
+            if ($("#changeGrupoodsgrupociudades3").val() !=) {
+                sum = sum + 1;
+            }
+            if ($("#changeGrupoodsgrupociudades4").val() !=) {
+                sum = sum + 1;
+            }
 
             if ($("#changeGrupoodsgrupociudades2").val() == '' && $("#changeGrupoodsgrupociudades3").val() == '' && $("#changeGrupoodsgrupociudades4").val() == '') {
                 $("#odsgrupoodsgrupociudades1cont").removeClass('col-md-6');
@@ -1484,8 +1498,6 @@ block js
 
 
             }
-
-
 
             if ($("#changeGrupoodsgrupociudades1").val() == '' && $("#changeGrupoodsgrupociudades3").val() == '' && $("#changeGrupoodsgrupociudades4").val() == '') {
                 $("#odsgrupoodsgrupociudades2cont").removeClass('col-md-6');
@@ -1499,7 +1511,6 @@ block js
                 $("#odsgrupoodsgrupociudades3cont").addClass('col-md-9 col-md-offset-2');
                 $("#odsgrupoodsgrupociudades3cont").css('height','550px');
 
-
             }
 
 
@@ -1510,13 +1521,19 @@ block js
                 $("#odsgrupoodsgrupociudades4cont").css('height','550px');
 
 
-
                /* var sheet = vizodsgrupoodsgrupociudades4.getWorkbook().getActiveSheet();
                 sheet.changeSizeAsync(
                     {"behavior": "EXACTLY", "maxSize": {"height": height, "width": width}})
                     .then(vizodsgrupoodsgrupociudades4.setFrameSize(parseInt(width, 10), parseInt(height, 10)));*/
             }
 
+
+            if(sum>0){
+                 $("#odsgrupoodsgrupociudades1cont").css('height', '450px');
+                 $("#odsgrupoodsgrupociudades2cont").css('height', '450px');
+                 $("#odsgrupoodsgrupociudades3cont").css('height', '450px');
+                 $("#odsgrupoodsgrupociudades4cont").css('height', '450px');
+            }
 
             if (vizodsgrupoodsgrupociudades1 != undefined) {
                 var width = document.getElementById('odsgrupoodsgrupociudades1cont').clientWidth;
