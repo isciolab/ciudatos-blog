@@ -67,8 +67,8 @@
       <file leaf-file-name="mock.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="1546" column="15" lean-forward="false" selection-start-line="1546" selection-start-column="15" selection-end-line="1546" selection-end-column="15" />
+            <state relative-caret-position="33">
+              <caret line="1481" column="17" lean-forward="false" selection-start-line="1481" selection-start-column="17" selection-end-line="1481" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -115,7 +115,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>PROGRESO HISTORICO DE CIU</find>
       <find>select2</find>
       <find>progreso ciudad por</find>
       <find>changeOdsConcat</find>
@@ -145,6 +144,7 @@
       <find>vizodsgrupoodsgrupociudades1</find>
       <find>odsgrupoodsgrupociudades4cont</find>
       <find>Id('odsgrupoodsgrupociudades1cont').clientH</find>
+      <find>changeGrupoodsgrupociudades2</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -532,7 +532,7 @@
       <workItem from="1552574426394" duration="5932000" />
       <workItem from="1552661350144" duration="1444000" />
       <workItem from="1552916417829" duration="6843000" />
-      <workItem from="1552929824080" duration="7668000" />
+      <workItem from="1552929824080" duration="7814000" />
     </task>
     <task id="LOCAL-00193" summary="visualize ods">
       <created>1539033422233</created>
@@ -881,10 +881,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="358971000" />
+    <option name="totallyTimeSpent" value="359117000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="732" extended-state="0" />
+    <frame x="-4" y="-4" width="1374" height="732" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2591508" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1299,8 +1299,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="1546" column="15" lean-forward="false" selection-start-line="1546" selection-start-column="15" selection-end-line="1546" selection-end-column="15" />
+        <state relative-caret-position="33">
+          <caret line="1481" column="17" lean-forward="false" selection-start-line="1481" selection-start-column="17" selection-end-line="1481" selection-end-column="17" />
           <folding />
         </state>
       </provider>
