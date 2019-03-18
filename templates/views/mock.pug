@@ -243,18 +243,18 @@ block content
 
     <div class="row">
 
-        <div class="col-md-6 border-right-dashed">
+        <div class="col-md-6 border-right-dashed" id="odsgrupoodsgrupociudades1cont">
             <div  style='position: relative; width: 100%; max-height:400px' id="odsgrupoodsgrupociudades1"></div>
         </div>
-        <div class="col-md-6">
-        <div  style='position: relative; width: 100%; max-height:400px' id="odsgrupoodsgrupociudades2"></div>
+        <div class="col-md-6" id="odsgrupoodsgrupociudades2cont">
+            <div  style='position: relative; width: 100%; max-height:400px' id="odsgrupoodsgrupociudades2"></div>
         </div>
         <div class="col-md-12"><br></div>
-        <div class="col-md-6 border-right-dashed">
-        <div  style='position: relative; width: 100%; max-height:400px' id="odsgrupoodsgrupociudades3"></div>
+        <div class="col-md-6 border-right-dashed" id="odsgrupoodsgrupociudades3cont">
+             <div  style='position: relative; width: 100%; max-height:400px' id="odsgrupoodsgrupociudades3"></div>
         </div>
-        <div class="col-md-6">
-        <div  style='position: relative; width: 100%; max-height:400px' id="odsgrupoodsgrupociudades4"></div>
+        <div class="col-md-6" id="odsgrupoodsgrupociudades4cont">
+            <div  style='position: relative; width: 100%; max-height:400px' id="odsgrupoodsgrupociudades4"></div>
         </div>
     </div>
     <div class="row" id=''>
@@ -1439,6 +1439,28 @@ block js
             }
         }
 
+
+
+        function juegoodsgrupociudades() {
+            if ($("#changeGrupoodsgrupociudades2").val() == '' && $("#changeGrupoodsgrupociudades3").val() == '' && $("#changeGrupoodsgrupociudades4").val() == '') {
+                $("#odsgrupoodsgrupociudades1cont").removeClass('col-md-6');
+                $("#odsgrupoodsgrupociudades1cont").addClass('col-md-12');
+            }
+
+            if ($("#changeGrupoodsgrupociudades1").val() == '' && $("#changeGrupoodsgrupociudades3").val() == '' && $("#changeGrupoodsgrupociudades4").val() == '') {
+                $("#odsgrupoodsgrupociudades2cont").removeClass('col-md-6');
+                $("#odsgrupoodsgrupociudades2cont").addClass('col-md-12');
+            }
+
+            if ($("#changeGrupoodsgrupociudades1").val() == '' && $("#changeGrupoodsgrupociudades2").val() == '' && $("#changeGrupoodsgrupociudades4").val() == '') {
+                $("#odsgrupoodsgrupociudades3cont").removeClass('col-md-6');
+                $("#odsgrupoodsgrupociudades3cont").addClass('col-md-12');
+            }
+            if ($("#changeGrupoodsgrupociudades1").val() == '' && $("#changeGrupoodsgrupociudades2").val() == '' && $("#changeGrupoodsgrupociudades3").val() == '') {
+                $("#odsgrupoodsgrupociudades3cont").removeClass('col-md-6');
+                $("#odsgrupoodsgrupociudades3cont").addClass('col-md-12');
+            }
+        }
         function initoodsgrupociudades1() {
 
 
@@ -1446,6 +1468,7 @@ block js
             var valuemeta = $("#changeMeta").val();
             var anio = $("#changeYearodsgrupociudades").val();
 
+            juegoodsgrupociudades();
 
             if (vizodsgrupoodsgrupociudades1 == null) {
 
@@ -1494,7 +1517,7 @@ block js
             var valuemeta = $("#changeMeta").val();
             var anio = $("#changeYearodsgrupociudades").val();
 
-
+            juegoodsgrupociudades();
             console.log(vizodsgrupoodsgrupociudades2);
             if (vizodsgrupoodsgrupociudades2 == null || vizodsgrupoodsgrupociudades2 == undefined) {
 
@@ -1541,7 +1564,7 @@ block js
             var Grupoodsgrupociudades3 = $("#changeGrupoodsgrupociudades3").val();
             var valuemeta = $("#changeMeta").val();
             var anio = $("#changeYearodsgrupociudades").val();
-
+            juegoodsgrupociudades();
             if (vizodsgrupoodsgrupociudades3 == null) {
                 if (valuemeta == '' || anio == '') {
                     if (Grupoodsgrupociudades3 != '') {
@@ -1582,7 +1605,7 @@ block js
             var Grupoodsgrupociudades4 = $("#changeGrupoodsgrupociudades4").val();
             var valuemeta = $("#changeMeta").val();
             var anio = $("#changeYearodsgrupociudades").val();
-
+            juegoodsgrupociudades();
             if (vizodsgrupoodsgrupociudades4 == null) {
 
                 if (valuemeta == '' || anio == '') {
