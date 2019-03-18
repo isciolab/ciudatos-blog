@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="" />
+    <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/mock.pug" afterPath="$PROJECT_DIR$/templates/views/mock.pug" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,8 +67,8 @@
       <file leaf-file-name="mock.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="1579" column="44" lean-forward="false" selection-start-line="1579" selection-start-column="44" selection-end-line="1579" selection-end-column="44" />
+            <state relative-caret-position="253">
+              <caret line="1509" column="64" lean-forward="false" selection-start-line="1509" selection-start-column="64" selection-end-line="1509" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -530,7 +532,7 @@
       <workItem from="1552574426394" duration="5932000" />
       <workItem from="1552661350144" duration="1444000" />
       <workItem from="1552916417829" duration="6843000" />
-      <workItem from="1552929824080" duration="4116000" />
+      <workItem from="1552929824080" duration="4765000" />
     </task>
     <task id="LOCAL-00193" summary="visualize ods">
       <created>1539033422233</created>
@@ -879,7 +881,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="355419000" />
+    <option name="totallyTimeSpent" value="356068000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="0" />
@@ -1297,8 +1299,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="1579" column="44" lean-forward="false" selection-start-line="1579" selection-start-column="44" selection-end-line="1579" selection-end-column="44" />
+        <state relative-caret-position="253">
+          <caret line="1509" column="64" lean-forward="false" selection-start-line="1509" selection-start-column="64" selection-end-line="1509" selection-end-column="64" />
           <folding />
         </state>
       </provider>
