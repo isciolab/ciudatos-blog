@@ -67,8 +67,8 @@
       <file leaf-file-name="mock.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="776" column="77" lean-forward="false" selection-start-line="776" selection-start-column="77" selection-end-line="776" selection-end-column="77" />
+            <state relative-caret-position="50">
+              <caret line="1790" column="45" lean-forward="false" selection-start-line="1790" selection-start-column="45" selection-end-line="1790" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -142,9 +142,9 @@
       <find>juegoodsgrupociudades</find>
       <find>odsgrupoodstrazadorgrupociudades</find>
       <find>juegoodsgrupoodstrazadorgrupociudades</find>
-      <find>changecityindicadoresciudad1</find>
       <find>cityindicadoresciudad</find>
       <find>cityindicadoresciudad4cont</find>
+      <find>changecityindicadoresciudad1</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -411,7 +411,7 @@
       <workItem from="1553024471386" duration="5000" />
       <workItem from="1553024499032" duration="591000" />
       <workItem from="1553032573234" duration="13000" />
-      <workItem from="1553035388387" duration="2688000" />
+      <workItem from="1553035388387" duration="2921000" />
     </task>
     <task id="LOCAL-00193" summary="visualize ods">
       <created>1539033422233</created>
@@ -760,7 +760,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="363679000" />
+    <option name="totallyTimeSpent" value="363912000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="0" />
@@ -1178,8 +1178,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="776" column="77" lean-forward="false" selection-start-line="776" selection-start-column="77" selection-end-line="776" selection-end-column="77" />
+        <state relative-caret-position="50">
+          <caret line="1790" column="45" lean-forward="false" selection-start-line="1790" selection-start-column="45" selection-end-line="1790" selection-end-column="45" />
           <folding />
         </state>
       </provider>
