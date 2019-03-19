@@ -631,20 +631,20 @@ block content
 
     <div class="row">
 
-        <div class="col-md-6 border-right-dashed">
+        <div class="col-md-6 border-right-dashed" id="cityindicadoresciudad1cont">
             <img style="float:right" width="50px" src="" id="cityindicadoresciudad1img">
             <div  id='cityindicadoresciudad1'  style='position: relative; width: auto; max-height:400px'></div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" id="cityindicadoresciudad2cont">
             <img style="float:right" width="50px" src="" id="cityindicadoresciudad2img">
             <div  id='cityindicadoresciudad2'  style='position: relative; width: auto; max-height:400px'></div>
         </div>
-        <div class="col-md-12"><br><br><br></div>
-        <div class="col-md-6 border-right-dashed">
+
+        <div class="col-md-6 border-right-dashed" id="cityindicadoresciudad3cont">
             <img style="float:right" width="50px" src="" id="cityindicadoresciudad3img">
             <div  id='cityindicadoresciudad3'  style='position: relative; width: auto; max-height:400px'></div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" id="cityindicadoresciudad4cont">
             <img style="float:right" width="50px" src="" id="cityindicadoresciudad4img">
             <div  id='cityindicadoresciudad4'  style='position: relative; width: auto; max-height:400px'></div>
         </div>
@@ -1631,6 +1631,184 @@ block js
 
 
         }
+        function juegocityindicadoresciudad() {
+
+                console.log('juego');
+
+                $("#cityindicadoresciudad1cont").removeClass('col-md-12');
+                $("#cityindicadoresciudad1cont").removeClass('col-md-offset-2');
+                $("#cityindicadoresciudad1cont").addClass('col-md-6');
+
+                $("#cityindicadoresciudad2cont").removeClass('col-md-12');
+                $("#cityindicadoresciudad2cont").removeClass('col-md-offset-2');
+                $("#cityindicadoresciudad2cont").addClass('col-md-6');
+
+                $("#cityindicadoresciudad3cont").removeClass('col-md-12');
+                $("#cityindicadoresciudad3cont").removeClass('col-md-offset-2');
+                $("#cityindicadoresciudad3cont").addClass('col-md-6');
+
+                $("#cityindicadoresciudad4cont").removeClass('col-md-12');
+                $("#cityindicadoresciudad4cont").removeClass('col-md-offset-2');
+                $("#cityindicadoresciudad4cont").addClass('col-md-6');
+
+
+
+
+                if ($("#changecityindicadoresciudad2").val() == '' && $("#changecityindicadoresciudad3").val() == '' && $("#changecityindicadoresciudad4").val() == '') {
+                    $("#cityindicadoresciudad1cont").removeClass('col-md-6');
+                    $("#cityindicadoresciudad1cont").addClass('col-md-9 col-md-offset-2');
+                   // $("#odsgrupoodsgrupociudades1cont").css('height','550px');
+
+
+                }
+
+                if ($("#changecityindicadoresciudad1").val() == '' && $("#changecityindicadoresciudad3").val() == '' && $("#changecityindicadoresciudad4").val() == '') {
+                    $("#cityindicadoresciudad2cont").removeClass('col-md-6');
+                    $("#cityindicadoresciudad2cont").addClass('col-md-9 col-md-offset-2');
+                  //  $("#odsgrupoodsgrupociudades2cont").css('height','550px');
+
+                }
+
+                if ($("#changecityindicadoresciudad1").val() == '' && $("#changecityindicadoresciudad2").val() == '' && $("#changecityindicadoresciudad4").val() == '') {
+                    $("#cityindicadoresciudad3cont").removeClass('col-md-6');
+                    $("#cityindicadoresciudad3cont").addClass('col-md-9 col-md-offset-2');
+                  //  $("#odsgrupoodsgrupociudades3cont").css('height','550px');
+
+                }
+
+
+                if ($("#changecityindicadoresciudad1").val() == '' && $("#changecityindicadoresciudad2").val() == '' && $("#changecityindicadoresciudad3").val() == '') {
+
+                    $("#cityindicadoresciudad4cont").removeClass('col-md-6');
+                    $("#cityindicadoresciudad4cont").addClass('col-md-9 col-md-offset-2');
+                   // $("#odsgrupoodsgrupociudades4cont").css('height','550px');
+
+
+                   /* var sheet = vizodsgrupoodsgrupociudades4.getWorkbook().getActiveSheet();
+                    sheet.changeSizeAsync(
+                        {"behavior": "EXACTLY", "maxSize": {"height": height, "width": width}})
+                        .then(vizodsgrupoodsgrupociudades4.setFrameSize(parseInt(width, 10), parseInt(height, 10)));*/
+                }
+
+
+                var sum = 0;
+                if ($("#changecityindicadoresciudad1").val() != '') {
+                    sum = sum + 1;
+                }
+                if ($("#changecityindicadoresciudad2").val() != '') {
+                    sum = sum + 1;
+                }
+                if ($("#changecityindicadoresciudad3").val() != '') {
+                    sum = sum + 1;
+                }
+                if ($("#changecityindicadoresciudad4").val() != '') {
+                    sum = sum + 1;
+                }
+
+                console.log(sum);
+                 if(sum==1){
+
+
+                    if ($("#changecityindicadoresciudad1").val() != '') {
+                        $("#cityindicadoresciudad1cont").css('height', '550px');
+                        $("#cityindicadoresciudad1cont").css('display', 'block');
+
+                    }else{
+                        $("#cityindicadoresciudad1cont").css('height', 'auto');
+                        $("#cityindicadoresciudad1cont").css('display', 'none');
+                    }
+
+                    if ($("#changecityindicadoresciudad2").val() != '') {
+                        $("#cityindicadoresciudad2cont").css('height', '550px');
+                        $("#cityindicadoresciudad2cont").css('display', 'block');
+
+                    }else{
+                        $("#cityindicadoresciudad2cont").css('height', 'auto');
+                        $("#cityindicadoresciudad2cont").css('display', 'none');
+                    }
+                    if ($("#changecityindicadoresciudad3").val() != '') {
+                        $("#cityindicadoresciudad3cont").css('height', '550px');
+                        $("#cityindicadoresciudad3cont").css('display', 'block');
+
+                    }else{
+                        $("#cityindicadoresciudad3cont").css('height', 'auto');
+                        $("#cityindicadoresciudad3cont").css('display', 'none');
+                     }
+                    if ($("#changecityindicadoresciudad4").val() != '') {
+                        $("#cityindicadoresciudad4cont").css('height', '550px');
+                        $("#cityindicadoresciudad4cont").css('display', 'block');
+
+                    }else{
+                         $("#cityindicadoresciudad4cont").css('height', 'auto');
+                         $("#cityindicadoresciudad4cont").css('display', 'none');
+                     }
+
+                }else if(sum==0){
+                        $("#cityindicadoresciudad1cont").css('height', 'auto');
+                        $("#cityindicadoresciudad2cont").css('height', 'auto');
+                        $("#cityindicadoresciudad3cont").css('height', 'auto');
+                        $("#cityindicadoresciudad4cont").css('height', 'auto');
+                     $("#cityindicadoresciudad1cont").css('display', 'none');
+                     $("#cityindicadoresciudad2cont").css('display', 'none');
+                     $("#cityindicadoresciudad3cont").css('display', 'none');
+                     $("#cityindicadoresciudad4cont").css('display', 'none');
+
+
+                }else{
+                    if ($("#changecityindicadoresciudad1").val() != '') {
+                        $("#cityindicadoresciudad1cont").css('height', '450px');
+                        $("#cityindicadoresciudad1cont").css('display', 'block');
+                    }else{
+                        $("#cityindicadoresciudad1cont").css('height', 'auto');
+                        $("#cityindicadoresciudad1cont").css('display', 'none');
+                    }
+                     if ($("#changecityindicadoresciudad2").val() != '') {
+                         $("#cityindicadoresciudad2cont").css('height', '450px');
+                         $("#cityindicadoresciudad2cont").css('display', 'block');
+                     }else{
+                         $("#cityindicadoresciudad2cont").css('height', 'auto');
+                         $("#cityindicadoresciudad2cont").css('display', 'none');
+                     }
+                     if ($("#changecityindicadoresciudad3").val() != '') {
+                         $("#cityindicadoresciudad3cont").css('height', '450px');
+                         $("#cityindicadoresciudad3cont").css('display', 'block');
+                     }else{
+                         $("#cityindicadoresciudad3cont").css('height', 'auto');
+                         $("#cityindicadoresciudad3cont").css('display', 'none');
+                     }
+                     if ($("#changecityindicadoresciudad4").val() != '') {
+                         $("#cityindicadoresciudad4cont").css('height', '450px');
+                         $("#cityindicadoresciudad4cont").css('display', 'block');
+                     }else{
+                         $("#cityindicadoresciudad4cont").css('height', 'auto');
+                         $("#cityindicadoresciudad4cont").css('display', 'none');
+                     }
+                }
+
+                if (vizcityindicadoresciudad1 != undefined) {
+                    var width = document.getElementById('cityindicadoresciudad1cont').clientWidth;
+                    var height = document.getElementById('cityindicadoresciudad1cont').clientHeight;
+                    vizodsgrupoodsgrupociudades1.setFrameSize(width, height);
+                }
+
+                if (vizcityindicadoresciudad2 != undefined) {
+                    var width = document.getElementById('cityindicadoresciudad2cont').clientWidth;
+                    var height = document.getElementById('cityindicadoresciudad2cont').clientHeight;
+                    vizodsgrupoodsgrupociudades2.setFrameSize(width, height);
+                }
+                if (vizcityindicadoresciudad3 != undefined) {
+                    var width = document.getElementById('cityindicadoresciudad3cont').clientWidth;
+                    var height = document.getElementById('cityindicadoresciudad3cont').clientHeight;
+                    vizodsgrupoodsgrupociudades3.setFrameSize(width, height);
+                }
+                if (vizcityindicadoresciudad4 != undefined) {
+                    var width = document.getElementById('cityindicadoresciudad4cont').clientWidth;
+                    var height = document.getElementById('cityindicadoresciudad4cont').clientHeight;
+                    vizodsgrupoodsgrupociudades4.setFrameSize(width, height);
+                }
+
+
+        }
 
 
         function juegoodsgrupoodstrazadorgrupociudades() {
@@ -2116,7 +2294,7 @@ block js
             juegoodsgrupoodstrazadorgrupociudades();
 
             if (vizodsgrupoodstrazadorgrupociudades3 == null) {
-               
+
                 var width = document.getElementById('odsgrupoodstrazadorgrupociudades3cont').clientWidth;
                 var height = document.getElementById('odsgrupoodstrazadorgrupociudades3cont').clientHeight;
                 var containerDiv = document.getElementById("odsgrupoodstrazadorgrupociudades3"),
@@ -2181,6 +2359,7 @@ block js
 
         function initcityindicadoresciudad1() {
 
+            juegocityindicadoresciudad();
             var ods = $("#changecityindicadoresciudad1 option:selected").text();
             var anio = $("#changeYearcityindicadoresciudad").val();
             var indicador = $("#changecityindicadoresciudad1 option:selected").text();
@@ -2189,6 +2368,8 @@ block js
                 // alert('Debe seleccionar la ciudad');
             } else {
                 if (vizcityindicadoresciudad1 == null) {
+                    var width = document.getElementById('cityindicadoresciudad1cont').clientWidth;
+                    var height = document.getElementById('cityindicadoresciudad1cont').clientHeight;
                     var containerDiv = document.getElementById("cityindicadoresciudad1"),
                         url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
@@ -2196,6 +2377,9 @@ block js
                             "Id (Group Cities)": grupo,
                             "ods concat": ods,
                             "Date From": $("#changeYearcityindicadoresciudad").val(),
+                            "width": width + "px",
+
+                            "height": height + "px",
                             onFirstInteractive: function () {
                                 changecityodsindicadoresciudad1();
                             }
@@ -2211,6 +2395,7 @@ block js
 
         function initcityindicadoresciudad2() {
 
+            juegocityindicadoresciudad();
             var grupo = $("#changeCity option:selected").attr('data-group');
             var anio = $("#changeYearcityindicadoresciudad").val();
             if (grupo == '' || grupo == undefined || anio == '') {
@@ -2218,6 +2403,8 @@ block js
             } else {
                 var ods = $("#changecityindicadoresciudad2 option:selected").text();
                 if (vizcityindicadoresciudad2 == null) {
+                    var width = document.getElementById('cityindicadoresciudad2cont').clientWidth;
+                    var height = document.getElementById('cityindicadoresciudad2cont').clientHeight;
                     var containerDiv = document.getElementById("cityindicadoresciudad2"),
                         url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades2?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
@@ -2225,6 +2412,9 @@ block js
                             "Id (Group Cities)": grupo,
                             "ods concat": ods,
                             "Date From": $("#changeYearcityindicadoresciudad").val(),
+                            "width": width + "px",
+
+                            "height": height + "px",
                             onFirstInteractive: function () {
                                 changecityodsindicadoresciudad2();
                             }
@@ -2241,6 +2431,7 @@ block js
 
         function initcityindicadoresciudad3() {
 
+            juegocityindicadoresciudad();
             var anio = $("#changeYearcityindicadoresciudad").val();
             var grupo = $("#changeCity option:selected").attr('data-group');
             var ods = $("#changecityindicadoresciudad3 option:selected").text();
@@ -2248,6 +2439,8 @@ block js
                 //alert('Debe seleccionar la ciudad');
             } else {
                 if (vizcityindicadoresciudad3 == null) {
+                    var width = document.getElementById('cityindicadoresciudad3cont').clientWidth;
+                    var height = document.getElementById('cityindicadoresciudad3cont').clientHeight;
                     var containerDiv = document.getElementById("cityindicadoresciudad3"),
                         url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades3?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
@@ -2255,6 +2448,9 @@ block js
                             "Id (Group Cities)": grupo,
                             "ods concat": ods,
                             "Date From": $("#changeYearcityindicadoresciudad").val(),
+                            "width": width + "px",
+
+                            "height": height + "px",
                             onFirstInteractive: function () {
                                 changecityodsindicadoresciudad3();
                             }
@@ -2270,6 +2466,7 @@ block js
 
         function initcityindicadoresciudad4() {
 
+            juegocityindicadoresciudad();
             var anio = $("#changeYearcityindicadoresciudad").val();
             var grupo = $("#changeCity option:selected").attr('data-group');
             var ods = $("#changecityindicadoresciudad4 option:selected").text();
@@ -2277,6 +2474,8 @@ block js
                 //alert('Debe seleccionar la ciudad');
             } else {
                 if (vizcityindicadoresciudad4 == null) {
+                    var width = document.getElementById('cityindicadoresciudad4cont').clientWidth;
+                    var height = document.getElementById('cityindicadoresciudad4cont').clientHeight;
                     var containerDiv = document.getElementById("cityindicadoresciudad4"),
                         url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades4?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
@@ -2284,6 +2483,9 @@ block js
                             "Id (Group Cities)": grupo,
                             "ods concat": ods,
                             "Date From": $("#changeYearcityindicadoresciudad").val(),
+                            "width": width + "px",
+
+                            "height": height + "px",
                             onFirstInteractive: function () {
                                 changecityodsindicadoresciudad4();
                             }
