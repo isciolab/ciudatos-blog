@@ -249,7 +249,7 @@ block content
         <div class="col-md-6" id="odsgrupoodsgrupociudades2cont">
             <div  style='position: relative; width: 100%; height:auto' id="odsgrupoodsgrupociudades2"></div>
         </div>
-       
+        <div class="col-md-12"><br></div>
         <div class="col-md-6 border-right-dashed" id="odsgrupoodsgrupociudades3cont">
              <div  style='position: relative; width: 100%; height:auto' id="odsgrupoodsgrupociudades3"></div>
         </div>
@@ -1533,28 +1533,36 @@ block js
 
                 if ($("#changeGrupoodsgrupociudades1").val() != '') {
                     $("#odsgrupoodsgrupociudades1cont").css('height', '550px');
+                    $("#odsgrupoodsgrupociudades1cont").css('display', 'block');
 
                 }else{
                     $("#odsgrupoodsgrupociudades1cont").css('height', 'auto');
+                    $("#odsgrupoodsgrupociudades1cont").css('display', 'none');
                 }
 
                 if ($("#changeGrupoodsgrupociudades2").val() != '') {
                     $("#odsgrupoodsgrupociudades2cont").css('height', '550px');
+                    $("#odsgrupoodsgrupociudades2cont").css('display', 'block');
 
                 }else{
                     $("#odsgrupoodsgrupociudades2cont").css('height', 'auto');
+                    $("#odsgrupoodsgrupociudades2cont").css('display', 'none');
                 }
                 if ($("#changeGrupoodsgrupociudades3").val() != '') {
                     $("#odsgrupoodsgrupociudades3cont").css('height', '550px');
+                    $("#odsgrupoodsgrupociudades3cont").css('display', 'block');
 
                 }else{
-                    $("#odsgrupoodsgrupociudades3cont").css('height', '550px');
+                    $("#odsgrupoodsgrupociudades3cont").css('height', 'auto');
+                    $("#odsgrupoodsgrupociudades3cont").css('display', 'none');
                  }
                 if ($("#changeGrupoodsgrupociudades4").val() != '') {
                     $("#odsgrupoodsgrupociudades4cont").css('height', '550px');
+                    $("#odsgrupoodsgrupociudades4cont").css('display', 'block');
 
                 }else{
-                     $("#odsgrupoodsgrupociudades4cont").css('height', '550px');
+                     $("#odsgrupoodsgrupociudades4cont").css('height', 'auto');
+                     $("#odsgrupoodsgrupociudades4cont").css('display', 'none');
                  }
 
             }else if(sum==0){
@@ -1562,28 +1570,40 @@ block js
                     $("#odsgrupoodsgrupociudades2cont").css('height', 'auto');
                     $("#odsgrupoodsgrupociudades3cont").css('height', 'auto');
                     $("#odsgrupoodsgrupociudades4cont").css('height', 'auto');
+                 $("#odsgrupoodsgrupociudades1cont").css('display', 'none');
+                 $("#odsgrupoodsgrupociudades2cont").css('display', 'none');
+                 $("#odsgrupoodsgrupociudades3cont").css('display', 'none');
+                 $("#odsgrupoodsgrupociudades4cont").css('display', 'none');
 
 
             }else{
                 if ($("#changeGrupoodsgrupociudades1").val() != '') {
                     $("#odsgrupoodsgrupociudades1cont").css('height', '450px');
+                    $("#odsgrupoodsgrupociudades1cont").css('display', 'block');
                 }else{
                     $("#odsgrupoodsgrupociudades1cont").css('height', 'auto');
+                    $("#odsgrupoodsgrupociudades1cont").css('display', 'none');
                 }
                  if ($("#changeGrupoodsgrupociudades2").val() != '') {
                      $("#odsgrupoodsgrupociudades2cont").css('height', '450px');
+                     $("#odsgrupoodsgrupociudades2cont").css('display', 'block');
                  }else{
                      $("#odsgrupoodsgrupociudades2cont").css('height', 'auto');
+                     $("#odsgrupoodsgrupociudades2cont").css('display', 'none');
                  }
                  if ($("#changeGrupoodsgrupociudades3").val() != '') {
                      $("#odsgrupoodsgrupociudades3cont").css('height', '450px');
+                     $("#odsgrupoodsgrupociudades3cont").css('display', 'clock');
                  }else{
                      $("#odsgrupoodsgrupociudades3cont").css('height', 'auto');
+                     $("#odsgrupoodsgrupociudades3cont").css('display', 'none');
                  }
                  if ($("#changeGrupoodsgrupociudades4").val() != '') {
                      $("#odsgrupoodsgrupociudades4cont").css('height', '450px');
+                     $("#odsgrupoodsgrupociudades4cont").css('display', 'block');
                  }else{
                      $("#odsgrupoodsgrupociudades4cont").css('height', 'auto');
+                     $("#odsgrupoodsgrupociudades4cont").css('display', 'none');
                  }
             }
 
