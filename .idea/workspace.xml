@@ -67,8 +67,8 @@
       <file leaf-file-name="mock.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="1805" column="80" lean-forward="false" selection-start-line="1805" selection-start-column="80" selection-end-line="1805" selection-end-column="80" />
+            <state relative-caret-position="356">
+              <caret line="701" column="57" lean-forward="false" selection-start-line="701" selection-start-column="57" selection-end-line="701" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -411,7 +411,7 @@
       <workItem from="1553024471386" duration="5000" />
       <workItem from="1553024499032" duration="591000" />
       <workItem from="1553032573234" duration="13000" />
-      <workItem from="1553035388387" duration="2392000" />
+      <workItem from="1553035388387" duration="2596000" />
     </task>
     <task id="LOCAL-00193" summary="visualize ods">
       <created>1539033422233</created>
@@ -760,7 +760,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="363383000" />
+    <option name="totallyTimeSpent" value="363587000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="0" />
@@ -1178,8 +1178,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="1805" column="80" lean-forward="false" selection-start-line="1805" selection-start-column="80" selection-end-line="1805" selection-end-column="80" />
+        <state relative-caret-position="356">
+          <caret line="701" column="57" lean-forward="false" selection-start-line="701" selection-start-column="57" selection-end-line="701" selection-end-column="57" />
           <folding />
         </state>
       </provider>
