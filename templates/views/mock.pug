@@ -759,23 +759,23 @@ block content
 
     <div class="row ">
 
-    <div class="col-md-6 border-right-dashed">
-    <img style="float:right" width="50px" src="" id="cityprogresohistorico1img">
-    <div id='cityprogresohistorico1'  style='position: relative; width: auto; max-height:400px'></div>
+    <div class="col-md-6 border-right-dashed" id="cityprogresohistorico1cont">
+        <img style="float:right" width="50px" src="" id="cityprogresohistorico1img">
+        <div id='cityprogresohistorico1'  style='position: relative; width: auto; max-height:400px'></div>
+        </div>
+    <div class="col-md-6" id="cityprogresohistorico2cont">
+        <img style="float:right" width="50px" src="" id="cityprogresohistorico2img">
+        <div id='cityprogresohistorico2'  style='position: relative; width: auto; max-height:400px'></div>
     </div>
-    <div class="col-md-6">
-    <img style="float:right" width="50px" src="" id="cityprogresohistorico2img">
-    <div id='cityprogresohistorico2'  style='position: relative; width: auto; max-height:400px'></div>
-    </div>
-    <div class="col-md-12"><br><br><br></div>
-    <div class="col-md-6 border-right-dashed">
-    <img style="float:right" width="50px" src="" id="cityprogresohistorico3img">
-    <div id='cityprogresohistorico3'  style='position: relative; width: auto; max-height:400px'></div>
-    </div>
-    <div class="col-md-6">
-    <img style="float:right" width="50px" src="" id="cityprogresohistorico4img">
-    <div id='cityprogresohistorico4'  style='position: relative; width: auto; max-height:400px'></div>
-    </div>
+
+    <div class="col-md-6 border-right-dashed" id="cityprogresohistorico3cont">
+        <img style="float:right" width="50px" src="" id="cityprogresohistorico3img">
+        <div id='cityprogresohistorico3'  style='position: relative; width: auto; max-height:400px'></div>
+        </div>
+    <div class="col-md-6" id="cityprogresohistorico4cont">
+        <img style="float:right" width="50px" src="" id="cityprogresohistorico4img">
+        <div id='cityprogresohistorico4'  style='position: relative; width: auto; max-height:400px'></div>
+        </div>
     </div>
     <div class="row">
     <div class="col-md-12">
@@ -1627,6 +1627,184 @@ block js
                 var width = document.getElementById('odsgrupoodsgrupociudades4cont').clientWidth;
                 var height = document.getElementById('odsgrupoodsgrupociudades4cont').clientHeight;
                 vizodsgrupoodsgrupociudades4.setFrameSize(width, height);
+            }
+
+
+        }
+        function juegocityprogresohistorico() {
+
+            console.log('juego');
+
+            $("#cityprogresohistorico1cont").removeClass('col-md-12');
+            $("#cityprogresohistorico1cont").removeClass('col-md-offset-2');
+            $("#cityprogresohistorico1cont").addClass('col-md-6');
+
+            $("#cityprogresohistorico2cont").removeClass('col-md-12');
+            $("#cityprogresohistorico2cont").removeClass('col-md-offset-2');
+            $("#cityprogresohistorico2cont").addClass('col-md-6');
+
+            $("#cityprogresohistorico3cont").removeClass('col-md-12');
+            $("#cityprogresohistorico3cont").removeClass('col-md-offset-2');
+            $("#cityprogresohistorico3cont").addClass('col-md-6');
+
+            $("#cityprogresohistorico4cont").removeClass('col-md-12');
+            $("#cityprogresohistorico4cont").removeClass('col-md-offset-2');
+            $("#cityprogresohistorico4cont").addClass('col-md-6');
+
+
+
+
+            if ($("#changecityprogresohistorico2").val() == '' && $("#changecityprogresohistorico3").val() == '' && $("#changecityprogresohistorico4").val() == '') {
+                $("#cityprogresohistorico1cont").removeClass('col-md-6');
+                $("#cityprogresohistorico1cont").addClass('col-md-9 col-md-offset-2');
+               // $("#odsgrupoodsgrupociudades1cont").css('height','550px');
+
+
+            }
+
+            if ($("#changecityprogresohistorico1").val() == '' && $("#changecityprogresohistorico3").val() == '' && $("#changecityprogresohistorico4").val() == '') {
+                $("#cityprogresohistorico2cont").removeClass('col-md-6');
+                $("#cityprogresohistorico2cont").addClass('col-md-9 col-md-offset-2');
+              //  $("#odsgrupoodsgrupociudades2cont").css('height','550px');
+
+            }
+
+            if ($("#changecityprogresohistorico1").val() == '' && $("#changecityprogresohistorico2").val() == '' && $("#changecityprogresohistorico4").val() == '') {
+                $("#cityprogresohistorico3cont").removeClass('col-md-6');
+                $("#cityprogresohistorico3cont").addClass('col-md-9 col-md-offset-2');
+              //  $("#odsgrupoodsgrupociudades3cont").css('height','550px');
+
+            }
+
+
+            if ($("#changecityprogresohistorico1").val() == '' && $("#changecityprogresohistorico2").val() == '' && $("#changecityprogresohistorico3").val() == '') {
+
+                $("#cityprogresohistorico4cont").removeClass('col-md-6');
+                $("#cityprogresohistorico4cont").addClass('col-md-9 col-md-offset-2');
+               // $("#odsgrupoodsgrupociudades4cont").css('height','550px');
+
+
+               /* var sheet = vizodsgrupoodsgrupociudades4.getWorkbook().getActiveSheet();
+                sheet.changeSizeAsync(
+                    {"behavior": "EXACTLY", "maxSize": {"height": height, "width": width}})
+                    .then(vizodsgrupoodsgrupociudades4.setFrameSize(parseInt(width, 10), parseInt(height, 10)));*/
+            }
+
+
+            var sum = 0;
+            if ($("#changecityprogresohistorico1").val() != '') {
+                sum = sum + 1;
+            }
+            if ($("#changecityprogresohistorico2").val() != '') {
+                sum = sum + 1;
+            }
+            if ($("#changecityprogresohistorico3").val() != '') {
+                sum = sum + 1;
+            }
+            if ($("#changecityprogresohistorico4").val() != '') {
+                sum = sum + 1;
+            }
+
+            console.log(sum);
+             if(sum==1){
+
+
+                if ($("#changecityprogresohistorico1").val() != '') {
+                    $("#cityprogresohistorico1cont").css('height', '550px');
+                    $("#cityprogresohistorico1cont").css('display', 'block');
+
+                }else{
+                    $("#cityprogresohistorico1cont").css('height', 'auto');
+                    $("#cityprogresohistorico1cont").css('display', 'none');
+                }
+
+                if ($("#changecityprogresohistorico2").val() != '') {
+                    $("#cityprogresohistorico2cont").css('height', '550px');
+                    $("#cityprogresohistorico2cont").css('display', 'block');
+
+                }else{
+                    $("#cityprogresohistorico2cont").css('height', 'auto');
+                    $("#cityprogresohistorico2cont").css('display', 'none');
+                }
+                if ($("#changecityprogresohistorico3").val() != '') {
+                    $("#cityprogresohistorico3cont").css('height', '550px');
+                    $("#cityprogresohistorico3cont").css('display', 'block');
+
+                }else{
+                    $("#cityprogresohistorico3cont").css('height', 'auto');
+                    $("#cityprogresohistorico3cont").css('display', 'none');
+                 }
+                if ($("#changecityprogresohistorico4").val() != '') {
+                    $("#cityprogresohistorico4cont").css('height', '550px');
+                    $("#cityprogresohistorico4cont").css('display', 'block');
+
+                }else{
+                     $("#cityprogresohistorico4cont").css('height', 'auto');
+                     $("#cityprogresohistorico4cont").css('display', 'none');
+                 }
+
+            }else if(sum==0){
+                    $("#cityprogresohistorico1cont").css('height', 'auto');
+                    $("#cityprogresohistorico2cont").css('height', 'auto');
+                    $("#cityprogresohistorico3cont").css('height', 'auto');
+                    $("#cityprogresohistorico4cont").css('height', 'auto');
+                 $("#cityprogresohistorico1cont").css('display', 'none');
+                 $("#cityprogresohistorico2cont").css('display', 'none');
+                 $("#cityprogresohistorico3cont").css('display', 'none');
+                 $("#cityprogresohistorico4cont").css('display', 'none');
+
+
+            }else{
+                if ($("#changecityprogresohistorico1").val() != '') {
+                    $("#cityprogresohistorico1cont").css('height', '450px');
+                    $("#cityprogresohistorico1cont").css('display', 'block');
+                }else{
+                    $("#cityprogresohistorico1cont").css('height', 'auto');
+                    $("#cityprogresohistorico1cont").css('display', 'none');
+                }
+                 if ($("#changecityprogresohistorico2").val() != '') {
+                     $("#cityprogresohistorico2cont").css('height', '450px');
+                     $("#cityprogresohistorico2cont").css('display', 'block');
+                 }else{
+                     $("#cityprogresohistorico2cont").css('height', 'auto');
+                     $("#cityprogresohistorico2cont").css('display', 'none');
+                 }
+                 if ($("#changecityprogresohistorico3").val() != '') {
+                     $("#cityprogresohistorico3cont").css('height', '450px');
+                     $("#cityprogresohistorico3cont").css('display', 'block');
+                 }else{
+                     $("#cityprogresohistorico3cont").css('height', 'auto');
+                     $("#cityprogresohistorico3cont").css('display', 'none');
+                 }
+                 if ($("#changecityprogresohistorico4").val() != '') {
+                     $("#cityprogresohistorico4cont").css('height', '450px');
+                     $("#cityprogresohistorico4cont").css('display', 'block');
+                 }else{
+                     $("#cityprogresohistorico4cont").css('height', 'auto');
+                     $("#cityprogresohistorico4cont").css('display', 'none');
+                 }
+            }
+
+            if (vizcityprogresohistorico1 != undefined) {
+                var width = document.getElementById('cityprogresohistorico1cont').clientWidth;
+                var height = document.getElementById('cityprogresohistorico1cont').clientHeight;
+                vizcityprogresohistorico1.setFrameSize(width, height);
+            }
+
+            if (vizcityprogresohistorico2 != undefined) {
+                var width = document.getElementById('cityprogresohistorico2cont').clientWidth;
+                var height = document.getElementById('cityprogresohistorico2cont').clientHeight;
+                vizcityprogresohistorico2.setFrameSize(width, height);
+            }
+            if (vizcityprogresohistorico3 != undefined) {
+                var width = document.getElementById('cityprogresohistorico3cont').clientWidth;
+                var height = document.getElementById('cityprogresohistorico3cont').clientHeight;
+                vizcityprogresohistorico3.setFrameSize(width, height);
+            }
+            if (vizcityprogresohistorico4 != undefined) {
+                var width = document.getElementById('cityprogresohistorico4cont').clientWidth;
+                var height = document.getElementById('cityprogresohistorico4cont').clientHeight;
+                vizcityprogresohistorico4.setFrameSize(width, height);
             }
 
 
@@ -2645,6 +2823,7 @@ block js
 
         function initcityprogresohistorico1() {
 
+            juegocityprogresohistorico();
 
             var ods = $("#changecityindicadoresciudad1 option:selected").text();
             var grupo = $("#changeCity option:selected").attr('data-group');
@@ -2652,12 +2831,17 @@ block js
                 alert('Debe seleccionar la ciudad');
             } else {
                 if (vizcityprogresohistorico1 == null) {
+                    var width = document.getElementById('cityprogresohistorico1cont').clientWidth;
+                    var height = document.getElementById('cityprogresohistorico1cont').clientHeight;
                     var containerDiv = document.getElementById("cityprogresohistorico1"),
                         url = "https://public.tableau.com/views/Ciudatos/HistoricoODS?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
                             hideTabs: true,
                             "Id (Group Cities)": grupo,
                             "ods concat": ods,
+                            "width": width + "px",
+
+                            "height": height + "px",
                             onFirstInteractive: function () {
                                 changecityprogresohistorico1();
 
@@ -2672,18 +2856,24 @@ block js
         function initcityprogresohistorico2() {
 
 
+            juegocityprogresohistorico();
             var ods = $("#changecityindicadoresciudad2 option:selected").text();
             var grupo = $("#changeCity option:selected").attr('data-group');
             if (grupo == '' || grupo == undefined) {
                 alert('Debe seleccionar la ciudad');
             } else {
                 if (vizcityprogresohistorico2 == null) {
+                    var width = document.getElementById('cityprogresohistorico2cont').clientWidth;
+                    var height = document.getElementById('cityprogresohistorico2cont').clientHeight;
                     var containerDiv = document.getElementById("cityprogresohistorico2"),
                         url = "https://public.tableau.com/views/Ciudatos/HistoricoODS2?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
                             hideTabs: true,
                             "Id (Group Cities)": grupo,
                             "ods concat": ods,
+                            "width": width + "px",
+
+                            "height": height + "px",
                             onFirstInteractive: function () {
                                 changecityprogresohistorico2();
 
@@ -2697,19 +2887,24 @@ block js
         }
         function initcityprogresohistorico3() {
 
-
+            juegocityprogresohistorico();
             var ods = $("#changecityindicadoresciudad3 option:selected").text();
             var grupo = $("#changeCity option:selected").attr('data-group');
             if (grupo == '' || grupo == undefined) {
                 alert('Debe seleccionar la ciudad');
             } else {
                 if (vizcityprogresohistorico3 == null) {
+                    var width = document.getElementById('cityprogresohistorico3cont').clientWidth;
+                    var height = document.getElementById('cityprogresohistorico3cont').clientHeight;
                     var containerDiv = document.getElementById("cityprogresohistorico3"),
                         url = "https://public.tableau.com/views/Ciudatos/HistoricoODS3?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
                             hideTabs: true,
                             "Id (Group Cities)": grupo,
                             "ods concat": ods,
+                            "width": width + "px",
+
+                            "height": height + "px",
                             onFirstInteractive: function () {
                                 changecityprogresohistorico3();
 
@@ -2723,6 +2918,7 @@ block js
         }
         function initcityprogresohistorico4() {
 
+            juegocityprogresohistorico();
 
             var ods = $("#changecityindicadoresciudad4 option:selected").text();
             var grupo = $("#changeCity option:selected").attr('data-group');
@@ -2730,12 +2926,17 @@ block js
                 alert('Debe seleccionar la ciudad');
             } else {
                 if (vizcityprogresohistorico4 == null) {
+                    var width = document.getElementById('cityprogresohistorico4cont').clientWidth;
+                    var height = document.getElementById('cityprogresohistorico4cont').clientHeight;
                     var containerDiv = document.getElementById("cityprogresohistorico4"),
                         url = "https://public.tableau.com/views/Ciudatos/HistoricoODS4?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
                             hideTabs: true,
                             "Id (Group Cities)": grupo,
                             "ods concat": ods,
+                            "width": width + "px",
+
+                            "height": height + "px",
                             onFirstInteractive: function () {
                                 changecityprogresohistorico4();
 
