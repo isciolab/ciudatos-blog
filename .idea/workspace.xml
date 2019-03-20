@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/mock.pug" afterPath="$PROJECT_DIR$/templates/views/mock.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/site.less" afterPath="$PROJECT_DIR$/public/styles/site.less" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mock.pug" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mock.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="177">
@@ -75,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="site.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="site.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/styles/site.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="53" column="12" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+            <state relative-caret-position="177">
+              <caret line="87" column="37" lean-forward="false" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -126,7 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pobtotal</find>
       <find>progreso de ciudad por ods</find>
       <find>cityvsabsoluto</find>
       <find>year</find>
@@ -156,6 +154,7 @@
       <find>changecityprogresohistorico4</find>
       <find>cityindicadoresciudad1cont</find>
       <find>vizcityindicadoresciudad4</find>
+      <find>font-size:12px;</find>
     </findStrings>
     <replaceStrings>
       <replace>font-size:14px;</replace>
@@ -192,7 +191,6 @@
         <option value="$PROJECT_DIR$/models/Home.js" />
         <option value="$PROJECT_DIR$/templates/views/ods.pug" />
         <option value="$PROJECT_DIR$/public/styles/site.css" />
-        <option value="$PROJECT_DIR$/public/styles/site.less" />
         <option value="$PROJECT_DIR$/templates/layouts/default-back.pug" />
         <option value="$PROJECT_DIR$/templates/layouts/default.pug" />
         <option value="$PROJECT_DIR$/templates/views/index.pug" />
@@ -201,6 +199,7 @@
         <option value="$PROJECT_DIR$/routes/views/visualize.js" />
         <option value="$PROJECT_DIR$/routes/views/data.js" />
         <option value="$PROJECT_DIR$/templates/views/mock.pug" />
+        <option value="$PROJECT_DIR$/public/styles/site.less" />
       </list>
     </option>
   </component>
@@ -551,7 +550,7 @@
       <workItem from="1553024499032" duration="591000" />
       <workItem from="1553032573234" duration="13000" />
       <workItem from="1553035388387" duration="5723000" />
-      <workItem from="1553043629858" duration="194000" />
+      <workItem from="1553043629858" duration="285000" />
     </task>
     <task id="LOCAL-00193" summary="visualize ods">
       <created>1539033422233</created>
@@ -900,7 +899,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="366908000" />
+    <option name="totallyTimeSpent" value="366999000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="0" />
@@ -1303,6 +1302,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="401" column="29" lean-forward="false" selection-start-line="401" selection-start-column="29" selection-end-line="401" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/styles/site.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1313,16 +1320,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/styles/site.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="53" column="12" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
-          <caret line="401" column="29" lean-forward="false" selection-start-line="401" selection-start-column="29" selection-end-line="401" selection-end-column="29" />
+          <caret line="87" column="37" lean-forward="false" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="37" />
           <folding />
         </state>
       </provider>
