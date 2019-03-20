@@ -764,16 +764,16 @@ block content
         <div id='cityprogresohistorico1'  style='position: relative; width: auto; max-height:400px; height:100%'></div>
     </div>
     <div class="col-md-6" id="cityprogresohistorico2cont"  >
-        <img style="float:right; margin-top:100px" width="50px" src="" id="cityprogresohistorico2img">
-        <div id='cityprogresohistorico2'  style='position: relative; width: auto; max-height:400px'></div>
+        <img style="float:right; " width="50px" src="" id="cityprogresohistorico2img">
+        <div id='cityprogresohistorico2'  style='position: relative; width: auto; max-height:400px; height:100%'></div>
     </div>
     <div class="col-md-6 border-right-dashed"  id="cityprogresohistorico3cont">
-        <img style="float:right; margin-top:100px" width="50px" src="" id="cityprogresohistorico3img">
-        <div id='cityprogresohistorico3'  style='position: relative; width: auto; max-height:400px'></div>
+        <img style="float:right; " width="50px" src="" id="cityprogresohistorico3img">
+        <div id='cityprogresohistorico3'  style='position: relative; width: auto; max-height:400px; height:100%'></div>
         </div>
     <div class="col-md-6" id="cityprogresohistorico4cont" >
-        <img style="float:right; margin-top:100px" width="50px" src="" id="cityprogresohistorico4img">
-        <div id='cityprogresohistorico4'  style='position: relative; width: auto; max-height:400px'></div>
+        <img style="float:right; " width="50px" src="" id="cityprogresohistorico4img">
+        <div id='cityprogresohistorico4'  style='position: relative; width: auto; max-height:400px; height:100%'></div>
         </div>
     </div>
     <div class="row">
@@ -1791,18 +1791,18 @@ block js
             }
 
             if (vizcityprogresohistorico2 != undefined) {
-                var width = document.getElementById('cityprogresohistorico2cont').clientWidth;
-                var height = document.getElementById('cityprogresohistorico2cont').clientHeight;
+                var width = document.getElementById('cityprogresohistorico2').clientWidth;
+                var height = document.getElementById('cityprogresohistorico2').clientHeight;
                 vizcityprogresohistorico2.setFrameSize(width, height);
             }
             if (vizcityprogresohistorico3 != undefined) {
-                var width = document.getElementById('cityprogresohistorico3cont').clientWidth;
-                var height = document.getElementById('cityprogresohistorico3cont').clientHeight;
+                var width = document.getElementById('cityprogresohistorico3').clientWidth;
+                var height = document.getElementById('cityprogresohistorico3').clientHeight;
                 vizcityprogresohistorico3.setFrameSize(width, height);
             }
             if (vizcityprogresohistorico4 != undefined) {
-                var width = document.getElementById('cityprogresohistorico4cont').clientWidth;
-                var height = document.getElementById('cityprogresohistorico4cont').clientHeight;
+                var width = document.getElementById('cityprogresohistorico4').clientWidth;
+                var height = document.getElementById('cityprogresohistorico4').clientHeight;
                 vizcityprogresohistorico4.setFrameSize(width, height);
             }
 
@@ -2862,8 +2862,8 @@ block js
                 alert('Debe seleccionar la ciudad');
             } else {
                 if (vizcityprogresohistorico2 == null) {
-                    var width = document.getElementById('cityprogresohistorico2cont').clientWidth;
-                    var height = document.getElementById('cityprogresohistorico2cont').clientHeight;
+                    var width = document.getElementById('cityprogresohistorico2').clientWidth;
+                    var height = document.getElementById('cityprogresohistorico2').clientHeight;
                     var containerDiv = document.getElementById("cityprogresohistorico2"),
                         url = "https://public.tableau.com/views/Ciudatos/HistoricoODS2?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
@@ -2893,8 +2893,8 @@ block js
                 alert('Debe seleccionar la ciudad');
             } else {
                 if (vizcityprogresohistorico3 == null) {
-                    var width = document.getElementById('cityprogresohistorico3cont').clientWidth;
-                    var height = document.getElementById('cityprogresohistorico3cont').clientHeight;
+                    var width = document.getElementById('cityprogresohistorico3').clientWidth;
+                    var height = document.getElementById('cityprogresohistorico3').clientHeight;
                     var containerDiv = document.getElementById("cityprogresohistorico3"),
                         url = "https://public.tableau.com/views/Ciudatos/HistoricoODS3?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
@@ -2925,8 +2925,8 @@ block js
                 alert('Debe seleccionar la ciudad');
             } else {
                 if (vizcityprogresohistorico4 == null) {
-                    var width = document.getElementById('cityprogresohistorico4cont').clientWidth;
-                    var height = document.getElementById('cityprogresohistorico4cont').clientHeight;
+                    var width = document.getElementById('cityprogresohistorico4').clientWidth;
+                    var height = document.getElementById('cityprogresohistorico4').clientHeight;
                     var containerDiv = document.getElementById("cityprogresohistorico4"),
                         url = "https://public.tableau.com/views/Ciudatos/HistoricoODS4?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
