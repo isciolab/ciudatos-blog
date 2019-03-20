@@ -633,20 +633,20 @@ block content
 
         <div class="col-md-6 border-right-dashed" id="cityindicadoresciudad1cont">
             <img style="float:right" width="50px" src="" id="cityindicadoresciudad1img">
-            <div  id='cityindicadoresciudad1'  style='position: relative; width: auto; max-height:400px'></div>
+            <div  id='cityindicadoresciudad1'  style='position: relative; width: auto; max-height:400px; height:100%'></div>
         </div>
         <div class="col-md-6" id="cityindicadoresciudad2cont">
             <img style="float:right" width="50px" src="" id="cityindicadoresciudad2img">
-            <div  id='cityindicadoresciudad2'  style='position: relative; width: auto; max-height:400px'></div>
+            <div  id='cityindicadoresciudad2'  style='position: relative; width: auto; max-height:400px; height:100%'></div>
         </div>
 
         <div class="col-md-6 border-right-dashed" id="cityindicadoresciudad3cont">
             <img style="float:right" width="50px" src="" id="cityindicadoresciudad3img">
-            <div  id='cityindicadoresciudad3'  style='position: relative; width: auto; max-height:400px'></div>
+            <div  id='cityindicadoresciudad3'  style='position: relative; width: auto; max-height:400px; height:100%'></div>
         </div>
         <div class="col-md-6" id="cityindicadoresciudad4cont">
             <img style="float:right" width="50px" src="" id="cityindicadoresciudad4img">
-            <div  id='cityindicadoresciudad4'  style='position: relative; width: auto; max-height:400px'></div>
+            <div  id='cityindicadoresciudad4'  style='position: relative; width: auto; max-height:400px; height:100%'></div>
         </div>
         <div class="col-md-12"><br><br><br></div>
     </div>
@@ -1963,24 +1963,24 @@ block js
                 }
 
                 if (vizcityindicadoresciudad1 != undefined) {
-                    var width = document.getElementById('cityindicadoresciudad1cont').clientWidth;
-                    var height = document.getElementById('cityindicadoresciudad1cont').clientHeight;
+                    var width = document.getElementById('cityindicadoresciudad1').clientWidth;
+                    var height = document.getElementById('cityindicadoresciudad1').clientHeight;
                     vizcityindicadoresciudad1.setFrameSize(width, height);
                 }
 
                 if (vizcityindicadoresciudad2 != undefined) {
-                    var width = document.getElementById('cityindicadoresciudad2cont').clientWidth;
-                    var height = document.getElementById('cityindicadoresciudad2cont').clientHeight;
+                    var width = document.getElementById('cityindicadoresciudad2').clientWidth;
+                    var height = document.getElementById('cityindicadoresciudad2').clientHeight;
                     vizcityindicadoresciudad2.setFrameSize(width, height);
                 }
                 if (vizcityindicadoresciudad3 != undefined) {
-                    var width = document.getElementById('cityindicadoresciudad3cont').clientWidth;
-                    var height = document.getElementById('cityindicadoresciudad3cont').clientHeight;
+                    var width = document.getElementById('cityindicadoresciudad3').clientWidth;
+                    var height = document.getElementById('cityindicadoresciudad3').clientHeight;
                     vizcityindicadoresciudad3.setFrameSize(width, height);
                 }
                 if (vizcityindicadoresciudad4 != undefined) {
-                    var width = document.getElementById('cityindicadoresciudad4cont').clientWidth;
-                    var height = document.getElementById('cityindicadoresciudad4cont').clientHeight;
+                    var width = document.getElementById('cityindicadoresciudad4').clientWidth;
+                    var height = document.getElementById('cityindicadoresciudad4').clientHeight;
                     vizcityindicadoresciudad4.setFrameSize(width, height);
                 }
 
@@ -2545,8 +2545,8 @@ block js
                 // alert('Debe seleccionar la ciudad');
             } else {
                 if (vizcityindicadoresciudad1 == null) {
-                    var width = document.getElementById('cityindicadoresciudad1cont').clientWidth;
-                    var height = document.getElementById('cityindicadoresciudad1cont').clientHeight;
+                    var width = document.getElementById('cityindicadoresciudad1').clientWidth;
+                    var height = document.getElementById('cityindicadoresciudad1').clientHeight;
                     var containerDiv = document.getElementById("cityindicadoresciudad1"),
                         url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
@@ -2580,8 +2580,8 @@ block js
             } else {
                 var ods = $("#changecityindicadoresciudad2 option:selected").text();
                 if (vizcityindicadoresciudad2 == null) {
-                    var width = document.getElementById('cityindicadoresciudad2cont').clientWidth;
-                    var height = document.getElementById('cityindicadoresciudad2cont').clientHeight;
+                    var width = document.getElementById('cityindicadoresciudad2').clientWidth;
+                    var height = document.getElementById('cityindicadoresciudad2').clientHeight;
                     var containerDiv = document.getElementById("cityindicadoresciudad2"),
                         url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades2?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
@@ -2616,8 +2616,8 @@ block js
                 //alert('Debe seleccionar la ciudad');
             } else {
                 if (vizcityindicadoresciudad3 == null) {
-                    var width = document.getElementById('cityindicadoresciudad3cont').clientWidth;
-                    var height = document.getElementById('cityindicadoresciudad3cont').clientHeight;
+                    var width = document.getElementById('cityindicadoresciudad3').clientWidth;
+                    var height = document.getElementById('cityindicadoresciudad3').clientHeight;
                     var containerDiv = document.getElementById("cityindicadoresciudad3"),
                         url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades3?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {
@@ -2651,8 +2651,8 @@ block js
                 //alert('Debe seleccionar la ciudad');
             } else {
                 if (vizcityindicadoresciudad4 == null) {
-                    var width = document.getElementById('cityindicadoresciudad4cont').clientWidth;
-                    var height = document.getElementById('cityindicadoresciudad4cont').clientHeight;
+                    var width = document.getElementById('cityindicadoresciudad4').clientWidth;
+                    var height = document.getElementById('cityindicadoresciudad4').clientHeight;
                     var containerDiv = document.getElementById("cityindicadoresciudad4"),
                         url = "https://public.tableau.com/views/Ciudatos/IndicadoresdeODSporciudadgrupodeciudades4?:embed=y&:display_count=yes&publish=yes&:toolbar=no",
                         options = {

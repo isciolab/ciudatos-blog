@@ -67,8 +67,8 @@
       <file leaf-file-name="mock.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="764">
-              <caret line="2864" column="79" lean-forward="false" selection-start-line="2864" selection-start-column="79" selection-end-line="2864" selection-end-column="79" />
+            <state relative-caret-position="101">
+              <caret line="2548" column="80" lean-forward="false" selection-start-line="2548" selection-start-column="80" selection-end-line="2548" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -115,9 +115,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>changeMeta3</find>
-      <find>citymapadecalorporciudad</find>
-      <find>pobrural</find>
       <find>pobtotal</find>
       <find>progreso de ciudad por ods</find>
       <find>cityvsabsoluto</find>
@@ -145,6 +142,9 @@
       <find>progreso his</find>
       <find>cityprogresohistorico1cont</find>
       <find>vizcityprogresohistorico4</find>
+      <find>changecityprogresohistorico4</find>
+      <find>cityindicadoresciudad1cont</find>
+      <find>vizcityindicadoresciudad4</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Users\Jhainey\Documents\DISEGNATEC\ODS\ciudatos-blog</dir>
@@ -411,7 +411,7 @@
       <workItem from="1553024471386" duration="5000" />
       <workItem from="1553024499032" duration="591000" />
       <workItem from="1553032573234" duration="13000" />
-      <workItem from="1553035388387" duration="5266000" />
+      <workItem from="1553035388387" duration="5607000" />
     </task>
     <task id="LOCAL-00193" summary="visualize ods">
       <created>1539033422233</created>
@@ -760,7 +760,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="366257000" />
+    <option name="totallyTimeSpent" value="366598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="0" />
@@ -1178,8 +1178,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="764">
-          <caret line="2864" column="79" lean-forward="false" selection-start-line="2864" selection-start-column="79" selection-end-line="2864" selection-end-column="79" />
+        <state relative-caret-position="101">
+          <caret line="2548" column="80" lean-forward="false" selection-start-line="2548" selection-start-column="80" selection-end-line="2548" selection-end-column="80" />
           <folding />
         </state>
       </provider>
