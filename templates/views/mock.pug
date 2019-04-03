@@ -2816,6 +2816,7 @@ block js
                                 var ciudad = $("#changeCity").val();
                                 var sheet = vizcitivabsoluto.getWorkbook().getActiveSheet();
                                 sheet.selectMarksAsync("Ciudad", ciudad, tableau.SelectionUpdateType.REPLACE);
+                                sheet.selectMarksAsync("Indicador", indicador, tableau.SelectionUpdateType.REPLACE);
                             }
                         };
                     vizcitivabsoluto = new tableau.Viz(containerDiv, url, options);
@@ -3646,8 +3647,8 @@ block js
 
             }
 
-            setTimeout(initvizcityprogreovsabsoluto(), 9000);
-           
+            setTimeout(initvizcityprogreovsabsoluto(), 12000);
+
             changeYearcityindicadoresciudad();
             initcityprogresohistorico1();
             initcityprogresohistorico2();
