@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="228a0889-7f17-42e5-8e91-7c0ff80ce7fd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/mock.pug" afterPath="$PROJECT_DIR$/templates/views/mock.pug" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +38,8 @@
       <file leaf-file-name="mock.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="434" column="8" lean-forward="false" selection-start-line="434" selection-start-column="8" selection-end-line="434" selection-end-column="8" />
+            <state relative-caret-position="186">
+              <caret line="3643" column="40" lean-forward="false" selection-start-line="3643" selection-start-column="18" selection-end-line="3643" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -125,8 +126,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>changeGrupoodsgrupociudades1</find>
-      <find>odsgrupoodsgrupociudades4cont</find>
       <find>juegoodsgrupociudades</find>
       <find>odsgrupoodstrazadorgrupociudades</find>
       <find>juegoodsgrupoodstrazadorgrupociudades</find>
@@ -155,6 +154,8 @@
       <find>data-img</find>
       <find>imagen_city_mapa</find>
       <find>imagen_city</find>
+      <find>departm</find>
+      <find>initvizcitydeprmentmap</find>
     </findStrings>
     <replaceStrings>
       <replace>font-size:14px;</replace>
@@ -432,7 +433,8 @@
       <workItem from="1553990449677" duration="667000" />
       <workItem from="1554123262990" duration="603000" />
       <workItem from="1554307038272" duration="98000" />
-      <workItem from="1554308536460" duration="966000" />
+      <workItem from="1554308536460" duration="1210000" />
+      <workItem from="1554309906958" duration="54000" />
     </task>
     <task id="LOCAL-00193" summary="visualize ods">
       <created>1539033422233</created>
@@ -781,7 +783,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="375200000" />
+    <option name="totallyTimeSpent" value="375498000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="0" />
@@ -1174,14 +1176,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/styles/site.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/views/data.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1198,10 +1192,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/styles/site.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="434" column="8" lean-forward="false" selection-start-line="434" selection-start-column="8" selection-end-line="434" selection-end-column="8" />
+        <state relative-caret-position="186">
+          <caret line="3643" column="40" lean-forward="false" selection-start-line="3643" selection-start-column="18" selection-end-line="3643" selection-end-column="40" />
           <folding />
         </state>
       </provider>
