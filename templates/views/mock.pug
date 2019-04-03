@@ -432,12 +432,12 @@ block content
     <img  id="imagen_city"  style='position: relative; width: 100%; max-height:473px ' src=""/>
     </div>
     <div class="col-md-6">
-    <div id='citydeprmentmap'  style='position: relative; width: 100%; max-height:473px '></div>
+    <img id='imagen_city_mapa'  style='position: relative; width: 100%; max-height:473px ' src=""/>
     </div>
     </div>
     <div class="row">
     <div class="col-md-12"><br></div>
-    <div class="col-md-6">
+    <div class="col-md-12">
     <div id='citidashboardinfo'  class="row">
     <div class="col-md-12">
     <p class="titleselector text-center">Datos demográficos y geográficos</p>
@@ -456,9 +456,7 @@ block content
 
     </div>
     </div>
-    <div class="col-md-6">
-    <div id='citymap'  style='position: relative; width: auto; height:auto; max-height:473px'></div>
-    </div>
+
     </div>
     <div class="row" id="cityatajos" style="display:none">
     <div class="col-md-12">
@@ -1004,7 +1002,7 @@ block js
                             if (i == 0) {
                                 selected = 'selected';
                             }
-                            html += '<option ' + selected + ' data-img=' + value.avatar.url + ' data-group=' + value.group_cities_id + ' value='
+                            html += '<option ' + selected + ' data-img=' + value.avatar.url + ' data-imagen_city_mapa=' + value.image_mapa.url +' data-group=' + value.group_cities_id + ' value='
                                 + value.name + ' data-total_area=' + value.total_area + ' data-total_population="' + value.total_population + '" ' +
                                 'data-urban_population=' + value.urban_population + ' data-rural_population=' + value.rural_population + ' ' +
                                 'data-description="' + value.description + '" data-department="' + value.department.name + '" ' +
@@ -3451,6 +3449,7 @@ block js
             var ciudad = $("#changeCity option:selected").text();
             var grupo = $("#changeCity option:selected").attr('data-group');
             var imagen = $("#changeCity option:selected").attr('data-img');
+            var imagen_city_mapa = $("#changeCity option:selected").attr('data-imagen_city_mapa');
             var urban_population = $("#changeCity option:selected").attr('data-urban_population');
             var total_population = $("#changeCity option:selected").attr('data-total_population');
             var total_area = $("#changeCity option:selected").attr('data-total_area');
@@ -3487,6 +3486,7 @@ block js
 
 
             $("#imagen_city").attr('src', "http://ciudatos.com:8080" + imagen);
+            $("#imagen_city_mapa").attr('src', "http://ciudatos.com:8080" + imagen_city_mapa);
 
             console.log(ciudad);
             console.log(grupo);
