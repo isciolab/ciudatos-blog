@@ -37,8 +37,18 @@
       <file leaf-file-name="mock.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="3654" column="47" lean-forward="false" selection-start-line="3654" selection-start-column="47" selection-end-line="3654" selection-end-column="47" />
+            <state relative-caret-position="271">
+              <caret line="3648" column="20" lean-forward="false" selection-start-line="3648" selection-start-column="20" selection-end-line="3648" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DHTML.js" pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="1219" column="0" lean-forward="false" selection-start-line="1219" selection-start-column="0" selection-end-line="1219" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -84,16 +94,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ods.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/views/ods.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="bases-de-datos.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/views/bases-de-datos.pug">
           <provider selected="true" editor-type-id="text-editor">
@@ -125,10 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>juegoodsgrupociudades</find>
-      <find>odsgrupoodstrazadorgrupociudades</find>
-      <find>juegoodsgrupoodstrazadorgrupociudades</find>
-      <find>cityindicadoresciudad</find>
       <find>cityindicadoresciudad4cont</find>
       <find>juegocityindicadoresciudad</find>
       <find>changecityindicadoresciudad1</find>
@@ -155,6 +151,10 @@
       <find>imagen_city</find>
       <find>departm</find>
       <find>initvizcitydeprmentmap</find>
+      <find>inicadorFIlterCity</find>
+      <find>initvizcityprogreovsabsoluto()</find>
+      <find>initvizcitymap</find>
+      <find>initvizcitydeprmentmap()</find>
     </findStrings>
     <replaceStrings>
       <replace>font-size:14px;</replace>
@@ -433,7 +433,7 @@
       <workItem from="1554123262990" duration="603000" />
       <workItem from="1554307038272" duration="98000" />
       <workItem from="1554308536460" duration="1210000" />
-      <workItem from="1554309906958" duration="301000" />
+      <workItem from="1554309906958" duration="698000" />
     </task>
     <task id="LOCAL-00193" summary="visualize ods">
       <created>1539033422233</created>
@@ -782,7 +782,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="375745000" />
+    <option name="totallyTimeSpent" value="376142000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="0" />
@@ -846,13 +846,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/views/temas.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/post.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -1199,10 +1192,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="1219" column="0" lean-forward="false" selection-start-line="1219" selection-start-column="0" selection-end-line="1219" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/mock.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="3654" column="47" lean-forward="false" selection-start-line="3654" selection-start-column="47" selection-end-line="3654" selection-end-column="47" />
+        <state relative-caret-position="271">
+          <caret line="3648" column="20" lean-forward="false" selection-start-line="3648" selection-start-column="20" selection-end-line="3648" selection-end-column="20" />
           <folding />
         </state>
       </provider>
